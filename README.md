@@ -9,6 +9,14 @@ de spaced repetition plant per **naamvalsvorm** in plaats van per woord.
 
 ## Draaien
 
+Dubbelklik **`start.command`** in Finder. Dat is alles.
+
+Het script zoekt zelf een werkende node, installeert de pakketten als ze ontbreken,
+zet de leerstof klaar als er nog geen database is, start de server en opent de
+browser. Stoppen doe je met ctrl-C of door het venster te sluiten.
+
+Liever met de hand, of vanaf een andere machine:
+
 ```bash
 npm install
 ```
@@ -23,18 +31,21 @@ npm run dev
 
 Daarna staat het platform op <http://localhost:3000>.
 
+**Ook op je telefoon.** De dev-server luistert ook op je lokale netwerk — Next print
+bij het starten een tweede adres (`Network: http://192.168.x.x:3000`). Zit je telefoon
+op dezelfde wifi, dan werkt dat adres gewoon in Safari. De layout is daarop
+voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
+
 > **Let op — Node.js.** De Homebrew-node op deze machine (`/opt/homebrew/bin/node`,
 > v21.6.2) is defect: hij linkt tegen `icu4c 73`, terwijl er `icu4c@78` staat. Dat is
-> een bestaand probleem sinds de icu4c-upgrade van 14 juni, los van dit project.
-> Gebruik `/usr/local/bin/node` (v20.11.1), die wél werkt:
+> een bestaand probleem sinds de icu4c-upgrade, los van dit project. Omdat hij vooraan
+> in het PATH staat, valt een kale `npm run dev` om met een dyld-fout — vandaar
+> `start.command`, dat om het probleem heen werkt door `/usr/local/bin/node` (v20.11.1)
+> te kiezen.
 >
-> ```bash
-> export PATH="/usr/local/bin:$PATH"
-> ```
->
-> Wil je de Homebrew-node repareren, dan is `brew upgrade node` de ingreep — dat tilt
-> node van 21 naar de huidige versie. Dat is een keuze over je hele omgeving, dus die
-> is aan jou.
+> Wil je het bij de wortel aanpakken, dan is `brew upgrade node` de ingreep. Dat tilt
+> node van 21 naar de huidige versie en repareert de koppeling. Het raakt je hele
+> omgeving, dus die keuze is aan jou; `start.command` blijft daarna gewoon werken.
 
 ### Overige commando's
 
@@ -78,6 +89,7 @@ src/
 data/hrvatski.db    SQLite — je volledige voortgang, één bestand
 scripts/            seed en zelfcontrole
 public/fonts/       Zelf gehoste letters: Fraunces, Plus Jakarta Sans, Literata
+start.command       Dubbelklikken om te starten (zoekt zelf een werkende node)
 ```
 
 **Stack:** Next.js 15 · React 19 · TypeScript · Tailwind 4 · SQLite (better-sqlite3 +
