@@ -1,0 +1,475 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "title_hr": "Volim te!",
+  "title_nl": "Ik hou van je!",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "257-266", "vjezbenica_pages": "93-96" },
+  "can_do_nl": [
+    "Ik kan zeggen wat ik leuk vind met sviđati se.",
+    "Ik kan gevoelens en toestanden uitdrukken met de datief.",
+    "Ik ken het verschil tussen de korte en de beklemtoonde datief.",
+    "Ik kan angsten benoemen met bojati se plus genitief.",
+    "Ik kan zeggen op wie of wat ik verliefd ben.",
+    "Ik kan afleidingen op -ost verbuigen."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.19.svidati_se",
+      "title_nl": "sviđati se — wat je leuk vindt is het onderwerp",
+      "cefr": "A2.2",
+      "explanation_nl": "Net als bij boljeti draait het Kroatisch de zin om. Sviđa mi se Hrvatska betekent letterlijk 'Kroatië bevalt aan mij'. Het ding dat je leuk vindt is het onderwerp; de persoon staat in de datief. Is dat ding enkelvoud, dan sviđa; is het meervoud, dan sviđaju.",
+      "contrast_nl": "Wij zeggen 'ik vind Kroatië leuk' — de persoon is het onderwerp. Het Kroatisch keert dat om, precies zoals bij boljeti in les 18. Herken je die structuur eenmaal, dan krijg je een hele familie werkwoorden cadeau.",
+      "paradigm": {
+        "caption_nl": "sviđati se — enkelvoud en meervoud",
+        "columns": ["Kroatisch", "letterlijk", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Sviđa mi se Hrvatska.", "Kroatië bevalt aan mij", "Ik vind Kroatië leuk."] },
+          { "label": "2.", "cells": ["Sviđa joj se Zagreb.", "Zagreb bevalt aan haar", "Zij vindt Zagreb leuk."] },
+          { "label": "3.", "cells": ["Sviđaju mi se Plitvice.", "Plitvice bevallen aan mij", "Ik vind Plitvice mooi."] },
+          { "label": "4.", "cells": ["Sviđaju nam se hrvatska vina.", "de wijnen bevallen aan ons", "Wij vinden Kroatische wijnen lekker."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De persoon als onderwerp nemen: 'Ja sviđam Hrvatsku' betekent iets heel anders.",
+        "sviđa gebruiken bij een meervoudig onderwerp: het moet sviđaju zijn.",
+        "voljeti (houden van) werkt wél normaal: Volim Hrvatsku, met de accusatief."
+      ],
+      "prerequisites": ["g.13.red_klitika", "g.18.boljeti"],
+      "source": "udzbenik p.258"
+    },
+    {
+      "id": "g.19.dativ_dozivljavaca",
+      "title_nl": "Toestanden met de datief",
+      "cefr": "A2.2",
+      "explanation_nl": "Voor gevoelens en toestanden gebruikt het Kroatisch een onpersoonlijke zin met een bijwoord plus de datief: Hladno mi je (ik heb het koud), Dosadno nam je (wij vervelen ons), Lijepo joj je (zij heeft het naar haar zin). Er is geen onderwerp.",
+      "contrast_nl": "Het Nederlands maakt de persoon tot onderwerp: 'ik heb het koud'. Het Kroatisch zegt letterlijk 'koud is aan mij'. Dat je hier geen ja gebruikt maar meni of mi, is de grootste omschakeling van deze les.",
+      "paradigm": {
+        "caption_nl": "Bijwoord + datief + je",
+        "columns": ["Kroatisch", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Hladno mi je.", "Ik heb het koud."] },
+          { "label": "2.", "cells": ["Toplo ti je.", "Jij hebt het warm."] },
+          { "label": "3.", "cells": ["Dosadno mu je.", "Hij verveelt zich."] },
+          { "label": "4.", "cells": ["Teško joj je na poslu.", "Zij heeft het zwaar op het werk."] },
+          { "label": "5.", "cells": ["Zanimljivo nam je u centru.", "Wij vinden het interessant in het centrum."] },
+          { "label": "6.", "cells": ["Lijepo im je u društvu.", "Zij hebben het gezellig in gezelschap."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Een onderwerp toevoegen: 'Ja sam hladno' is fout — het is Hladno mi je.",
+        "Het bijwoord verbuigen: hladno blijft hladno, ongeacht wie het koud heeft.",
+        "je is hier het werkwoord biti in de derde persoon en blijft altijd staan."
+      ],
+      "prerequisites": ["g.19.svidati_se"],
+      "source": "vježbenica p.94"
+    },
+    {
+      "id": "g.19.dativ_dug_kratak",
+      "title_nl": "meni of mi — twee manieren om hetzelfde te zeggen",
+      "cefr": "A2.2",
+      "explanation_nl": "De datief heeft net als de accusatief een korte en een lange set. Kort: mi, ti, mu, joj, nam, vam, im. Lang: meni, tebi, njemu, njoj, nama, vama, njima. De korte vorm is de gewone keuze en staat nooit vooraan; de lange gebruik je aan het begin van de zin en bij nadruk.",
+      "contrast_nl": "Meni se sviđa Hrvatska en Sviđa mi se Hrvatska betekenen hetzelfde. Het verschil is nadruk: de eerste zegt 'ík vind Kroatië leuk (of jij het ook vindt weet ik niet)'.",
+      "paradigm": {
+        "caption_nl": "Dativ — kort en lang",
+        "columns": ["persoon", "kort", "lang"],
+        "rows": [
+          { "label": "ja", "cells": ["mi", "meni"] },
+          { "label": "ti", "cells": ["ti", "tebi"] },
+          { "label": "on/ono", "cells": ["mu", "njemu"] },
+          { "label": "ona", "cells": ["joj", "njoj"] },
+          { "label": "mi", "cells": ["nam", "nama"] },
+          { "label": "vi/Vi", "cells": ["vam", "vama"] },
+          { "label": "oni/one", "cells": ["im", "njima"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De korte vorm vooraan zetten: 'Mi se sviđa Hrvatska' is fout — begin met Meni.",
+        "De datief ti (aan jou) verwarren met het onderwerp ti (jij).",
+        "Na een voorzetsel altijd de lange vorm, net als bij de accusatief."
+      ],
+      "prerequisites": ["g.19.dativ_dozivljavaca"],
+      "source": "vježbenica p.93"
+    },
+    {
+      "id": "g.19.bojati_se",
+      "title_nl": "bojati se + GENITIEF",
+      "cefr": "A2.2",
+      "explanation_nl": "Waar je bang voor bent staat in de genitief: Bojim se mačke. Bojim se tramvaja. Het werkwoord vervoegt als bojim se, bojiš se, boji se, bojimo se, bojite se, boje se.",
+      "contrast_nl": "Het Nederlands gebruikt 'bang zijn voor', met een voorzetsel. Het Kroatisch heeft geen voorzetsel nodig — de genitief doet het werk.",
+      "paradigm": {
+        "caption_nl": "bojati se + genitief",
+        "columns": ["zin", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Bojim se mačke.", "Ik ben bang voor katten."] },
+          { "label": "2.", "cells": ["Boji se bolesti.", "Zij is bang voor ziekte."] },
+          { "label": "3.", "cells": ["Boje se rata.", "Zij zijn bang voor oorlog."] },
+          { "label": "4.", "cells": ["Bojite se gripe.", "U bent bang voor griep."] },
+          { "label": "5.", "cells": ["Bojim se tramvaja.", "Ik ben bang voor de tram."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Een voorzetsel toevoegen: 'Bojim se za mačku' betekent 'ik ben bezorgd óm de kat'.",
+        "Het se vergeten — bojati zonder se bestaat niet in deze betekenis.",
+        "Bij i-stamwoorden is de genitief -i: bojim se bolesti, noći."
+      ],
+      "prerequisites": ["g.14.genitiv", "g.14.povratni"],
+      "source": "vježbenica p.95"
+    },
+    {
+      "id": "g.19.zaljubljen_u",
+      "title_nl": "zaljubljen u + ACCUSATIEF",
+      "cefr": "A2.2",
+      "explanation_nl": "Verliefd zijn druk je uit met zaljubljen (m), zaljubljena (v), zaljubljeni / zaljubljene (mv) plus u met de accusatief: Pavle je zaljubljen u Doru. Het kan ook over dingen gaan: Zaljubljen je u svoj posao.",
+      "contrast_nl": "Bijna identiek aan het Nederlandse 'verliefd op'. Alleen buigt het bijvoeglijk naamwoord mee met wie verliefd is, en het woord erna staat in de accusatief.",
+      "paradigm": {
+        "caption_nl": "zaljubljen u + akuzativ",
+        "columns": ["wie", "voorbeeld"],
+        "rows": [
+          { "label": "man", "cells": ["Pavle je zaljubljen u Doru."] },
+          { "label": "vrouw", "cells": ["Ona je zaljubljena u filmove."] },
+          { "label": "mannen", "cells": ["Zoran i Branko su zaljubljeni u Martu."] },
+          { "label": "vrouwen", "cells": ["Mi smo zaljubljene u košarku."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het bijvoeglijk naamwoord niet aanpassen: een vrouw zegt zaljubljena.",
+        "De accusatief vergeten: u Doru, niet u Dora.",
+        "Vrouwennamen op -a krijgen gewoon -u: Marta → Martu."
+      ],
+      "prerequisites": ["g.05.akuzativ.zivo", "g.04.pridjevi"],
+      "source": "vježbenica p.95"
+    },
+    {
+      "id": "g.19.ost",
+      "title_nl": "Afleidingen op -ost",
+      "cefr": "A2.2",
+      "explanation_nl": "Van bijvoeglijke naamwoorden maak je abstracte zelfstandige naamwoorden met -ost: mogućnost (mogelijkheid), budućnost (toekomst), sadašnjost (heden), glupost (domheid), nezaposlenost (werkloosheid). Ze zijn allemaal vrouwelijk op een medeklinker en verbuigen dus als de groep uit les 18.",
+      "contrast_nl": "Het Nederlands doet hetzelfde met -heid en -teit. Het praktische voordeel is groot: ken je het bijvoeglijk naamwoord, dan heb je het zelfstandig naamwoord er gratis bij — mét de verbuiging, want die is voor de hele groep gelijk.",
+      "paradigm": {
+        "caption_nl": "Van bijvoeglijk naamwoord naar -ost",
+        "columns": ["pridjev", "imenica", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["moguć", "mogućnost", "mogelijkheid"] },
+          { "label": "2.", "cells": ["budući", "budućnost", "toekomst"] },
+          { "label": "3.", "cells": ["sadašnji", "sadašnjost", "heden"] },
+          { "label": "4.", "cells": ["glup", "glupost", "domheid"] },
+          { "label": "5.", "cells": ["nezaposlen", "nezaposlenost", "werkloosheid"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Ze als mannelijk behandelen — ze zijn vrouwelijk, net als bolest en riječ.",
+        "De genitief is -i: bojim se nezaposlenosti.",
+        "De accusatief is gelijk aan de nominatief: Ne želim raspravljati o gluposti."
+      ],
+      "prerequisites": ["g.18.zenski_suglasnik"],
+      "source": "vježbenica p.96"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.19.svidati_se", "hr": "sviđati se", "nl": "bevallen, leuk vinden", "pos": "verb", "aspect": "imperfective", "present_1sg": "sviđam se", "verb_class": "-ati", "tags": ["gevoel"], "source": "udzbenik p.258" },
+    { "id": "v.19.bojati_se", "hr": "bojati se", "nl": "bang zijn (+ genitief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "bojim se", "verb_class": "onregelmatig", "tags": ["gevoel"], "source": "vježbenica p.95" },
+    { "id": "v.19.zaljubljen", "hr": "zaljubljen", "nl": "verliefd", "pos": "adj", "tags": ["gevoel"], "source": "vježbenica p.95" },
+    { "id": "v.19.voljeti_liefde", "hr": "voljeti", "nl": "houden van (+ accusatief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "volim", "verb_class": "-jeti", "tags": ["gevoel"], "source": "udzbenik p.257" },
+    { "id": "v.19.ljutiti_se", "hr": "ljutiti se", "nl": "boos zijn", "pos": "verb", "aspect": "imperfective", "present_1sg": "ljutim se", "verb_class": "-iti", "tags": ["gevoel"], "source": "aangevuld" },
+    { "id": "v.19.oprostiti", "hr": "oprostiti", "nl": "vergeven", "pos": "verb", "aspect": "perfective", "present_1sg": "oprostim", "verb_class": "-iti", "tags": ["gevoel"], "source": "aangevuld" },
+
+    { "id": "v.19.hladno", "hr": "hladno", "nl": "koud", "pos": "adv", "tags": ["toestand"], "source": "vježbenica p.94" },
+    { "id": "v.19.toplo", "hr": "toplo", "nl": "warm", "pos": "adv", "tags": ["toestand"], "source": "aangevuld" },
+    { "id": "v.19.dosadno", "hr": "dosadno", "nl": "saai, vervelend", "pos": "adv", "tags": ["toestand"], "source": "vježbenica p.94" },
+    { "id": "v.19.zanimljivo", "hr": "zanimljivo", "nl": "interessant", "pos": "adv", "tags": ["toestand"], "source": "vježbenica p.94" },
+    { "id": "v.19.tesko", "hr": "teško", "nl": "zwaar, moeilijk", "pos": "adv", "tags": ["toestand"], "source": "vježbenica p.94" },
+    { "id": "v.19.lijepo", "hr": "lijepo", "nl": "mooi, fijn", "pos": "adv", "tags": ["toestand"], "source": "vježbenica p.94" },
+    { "id": "v.19.drago", "hr": "drago", "nl": "fijn, aangenaam", "pos": "adv", "tags": ["toestand"], "source": "aangevuld" },
+
+    { "id": "v.19.mogucnost", "hr": "mogućnost", "nl": "mogelijkheid", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "mogućnosti", "nom_pl": "mogućnosti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+    { "id": "v.19.buducnost", "hr": "budućnost", "nl": "toekomst", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "budućnosti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+    { "id": "v.19.sadasnjost", "hr": "sadašnjost", "nl": "heden", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "sadašnjosti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+    { "id": "v.19.glupost", "hr": "glupost", "nl": "domheid, onzin", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "gluposti", "nom_pl": "gluposti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+    { "id": "v.19.nezaposlenost", "hr": "nezaposlenost", "nl": "werkloosheid", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "nezaposlenosti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.95" },
+    { "id": "v.19.knjizevnost", "hr": "književnost", "nl": "literatuur", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "književnosti", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+    { "id": "v.19.misao", "hr": "misao", "nl": "gedachte", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "misli", "nom_pl": "misli", "tags": ["abstract", "i-stam"], "source": "vježbenica p.96" },
+
+    { "id": "v.19.strah", "hr": "strah", "nl": "angst", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "straha", "nom_pl": "strahovi", "tags": ["gevoel"], "source": "vježbenica p.95" },
+    { "id": "v.19.rat", "hr": "rat", "nl": "oorlog", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "rata", "nom_pl": "ratovi", "tags": ["abstract"], "source": "vježbenica p.95" },
+    { "id": "v.19.kukac", "hr": "kukac", "nl": "insect", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "kukca", "nom_pl": "kukci", "tags": ["dier"], "source": "vježbenica p.95" },
+    { "id": "v.19.drustvo", "hr": "društvo", "nl": "gezelschap, maatschappij", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "društva", "nom_pl": "društva", "tags": ["abstract"], "source": "vježbenica p.94" },
+    { "id": "v.19.vjencanica", "hr": "vjenčanica", "nl": "trouwjurk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "vjenčanice", "nom_pl": "vjenčanice", "tags": ["kleding"], "source": "vježbenica p.94" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.19.1",
+      "title_nl": "Wat vind je leuk?",
+      "kind": "input",
+      "text_hr": "Meni se sviđa Hrvatska. Sviđa mi se more i sviđaju mi se otoci.\nNjoj se sviđa Zagreb, a njemu se sviđa Split.\nDijani se sviđa novi stan. Sviđa joj se jer je svijetao i udoban.\nDjeci je dosadno kod kuće, ali nama je zanimljivo u centru.\nWilliamu je teško na poslu. Njemu je uvijek hladno u uredu.\nMeni je lijepo u društvu prijatelja.",
+      "translation_nl": "Ik vind Kroatië leuk. Ik vind de zee mooi en ik vind de eilanden mooi.\nZij vindt Zagreb leuk, en hij vindt Split leuk.\nDijana vindt het nieuwe appartement leuk. Ze vindt het fijn omdat het licht en comfortabel is.\nDe kinderen vervelen zich thuis, maar wij vinden het interessant in het centrum.\nWilliam heeft het zwaar op zijn werk. Hij heeft het altijd koud op kantoor.\nIk heb het fijn in het gezelschap van vrienden.",
+      "source": "vježbenica p.93",
+      "exercises": [
+        {
+          "id": "e.19.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Weer omgekeerd — net als boljeti",
+          "body_nl": "*Sviđa mi se Hrvatska* betekent letterlijk **'Kroatië bevalt aan mij'**.\n\nHet ding dat je leuk vindt is het **onderwerp**; de persoon staat in de **datief**.\n\nEnkelvoud → **sviđa** · meervoud → **sviđaju**\n*Sviđa mi se more.* — *Sviđaju mi se otoci.*\n\nDit is dezelfde omkering als bij *boli me glava* in les 18. Herken je die structuur, dan krijg je een hele familie constructies cadeau.\n\nLet op: **voljeti** werkt wél gewoon: *Volim Hrvatsku*, met de accusatief.",
+          "targets": ["g.19.svidati_se"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.19.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het datief-voornaamwoord in.",
+          "given": "Sviđa ___ se Zagreb. (ona)",
+          "answer": "joj",
+          "accepts": ["joj"],
+          "explain_nl": "Datief van ona is joj.",
+          "targets": ["g.19.svidati_se", "g.19.dativ_dug_kratak"],
+          "difficulty": 3,
+          "audio": "Sviđa joj se Zagreb.",
+          "source": "vježbenica p.93"
+        },
+        {
+          "id": "e.19.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het werkwoord in. Let op het aantal.",
+          "given": "___ mi se Plitvice.",
+          "answer": "Sviđaju",
+          "accepts": ["Sviđaju", "sviđaju"],
+          "explain_nl": "Plitvice is meervoud → sviđaju.",
+          "targets": ["g.19.svidati_se"],
+          "difficulty": 4,
+          "audio": "Sviđaju mi se Plitvice.",
+          "source": "vježbenica p.93"
+        },
+        {
+          "id": "e.19.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Begin de zin met de beklemtoonde vorm.",
+          "given": "___ se sviđa Hrvatska. (ja)",
+          "answer": "Meni",
+          "accepts": ["Meni", "meni"],
+          "explain_nl": "Aan het begin van de zin hoort de lange vorm: Meni. 'Mi se sviđa' kan niet.",
+          "targets": ["g.19.dativ_dug_kratak"],
+          "difficulty": 4,
+          "audio": "Meni se sviđa Hrvatska.",
+          "source": "vježbenica p.93"
+        }
+      ]
+    },
+    {
+      "id": "s.19.2",
+      "title_nl": "Hoe voel je je?",
+      "kind": "grammar",
+      "source": "vježbenica p.94",
+      "exercises": [
+        {
+          "id": "e.19.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Zinnen zonder onderwerp",
+          "body_nl": "Voor toestanden gebruikt het Kroatisch een zin **zonder onderwerp**: een bijwoord, de datief, en *je*.\n\n*Hladno **mi** je.* — Ik heb het koud.\n*Dosadno **nam** je.* — Wij vervelen ons.\n*Teško **joj** je na poslu.* — Zij heeft het zwaar op het werk.\n\nHet bijwoord verbuigt níét — hladno blijft hladno, wie het ook koud heeft.\n\nEn er staat nooit een *ja* of *ona* in: 'Ja sam hladno' is fout.",
+          "targets": ["g.19.dativ_dozivljavaca"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.19.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het datief-voornaamwoord in.",
+          "given": "Hladno ___ je ovdje. (mi)",
+          "answer": "nam",
+          "accepts": ["nam"],
+          "explain_nl": "Datief van mi (wij) is nam.",
+          "targets": ["g.19.dativ_dozivljavaca", "v.19.hladno"],
+          "difficulty": 3,
+          "audio": "Hladno nam je ovdje.",
+          "source": "vježbenica p.94"
+        },
+        {
+          "id": "e.19.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan met de datief.",
+          "given": "___ je dosadno kod kuće. (djeca)",
+          "answer": "Djeci",
+          "accepts": ["Djeci", "djeci"],
+          "explain_nl": "Datief van djeca is djeci.",
+          "targets": ["g.19.dativ_dozivljavaca", "v.03.dijete"],
+          "difficulty": 5,
+          "audio": "Djeci je dosadno kod kuće.",
+          "source": "vježbenica p.94"
+        },
+        {
+          "id": "e.19.013",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ja sam hladno.",
+          "answer": "Hladno mi je.",
+          "accepts": ["Hladno mi je.", "Meni je hladno."],
+          "explain_nl": "Deze zin heeft geen onderwerp: het bijwoord plus de datief plus je.",
+          "targets": ["g.19.dativ_dozivljavaca"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.19.014",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de korte aan de lange datiefvorm.",
+          "pairs": [
+            { "hr": "mi", "nl": "meni" },
+            { "hr": "mu", "nl": "njemu" },
+            { "hr": "joj", "nl": "njoj" },
+            { "hr": "im", "nl": "njima" }
+          ],
+          "targets": ["g.19.dativ_dug_kratak"],
+          "difficulty": 3,
+          "source": "vježbenica p.93"
+        }
+      ]
+    },
+    {
+      "id": "s.19.3",
+      "title_nl": "Angsten en verliefdheid",
+      "kind": "practice",
+      "source": "vježbenica p.95",
+      "exercises": [
+        {
+          "id": "e.19.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee vaste combinaties",
+          "body_nl": "**bojati se + genitief** — waar je bang voor bent:\n*Bojim se mačk**e**.* · *Boje se rat**a**.* · *Boji se bolest**i**.*\n\nGeen voorzetsel — de genitief doet het werk.\n\n**zaljubljen u + accusatief** — op wie je verliefd bent:\n*Pavle je zaljubljen u Dor**u**.* · *Ona je zaljubljena u film**ove**.*\n\nHet bijvoeglijk naamwoord buigt mee met wie verliefd is: *zaljubljen* (man), *zaljubljena* (vrouw), *zaljubljeni / zaljubljene* (meervoud).",
+          "targets": ["g.19.bojati_se", "g.19.zaljubljen_u"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.19.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Bojim se ___. (mačka)",
+          "answer": "mačke",
+          "accepts": ["mačke"],
+          "explain_nl": "bojati se vraagt de genitief: mačka → mačke.",
+          "targets": ["g.19.bojati_se", "v.03.macka"],
+          "difficulty": 3,
+          "audio": "Bojim se mačke.",
+          "source": "vježbenica p.95"
+        },
+        {
+          "id": "e.19.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Teta se boji ___. (bolest mn)",
+          "answer": "bolesti",
+          "accepts": ["bolesti"],
+          "explain_nl": "Vrouwelijk op een medeklinker → genitief op -i.",
+          "targets": ["g.19.bojati_se", "g.18.zenski_suglasnik", "v.18.bolest"],
+          "difficulty": 4,
+          "audio": "Teta se boji bolesti.",
+          "source": "vježbenica p.95"
+        },
+        {
+          "id": "e.19.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het bijvoeglijk naamwoord en de accusatief in.",
+          "given": "Pavle je ___ u ___. (zaljubljen, Dora)",
+          "answer": "zaljubljen u Doru",
+          "accepts": ["zaljubljen u Doru"],
+          "explain_nl": "Pavle is een man → zaljubljen; Dora → Doru in de accusatief.",
+          "targets": ["g.19.zaljubljen_u"],
+          "difficulty": 4,
+          "audio": "Pavle je zaljubljen u Doru.",
+          "source": "vježbenica p.95"
+        },
+        {
+          "id": "e.19.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan. Het onderwerp is 'ona'.",
+          "given": "Ona je ___ u ___. (zaljubljen, film mn)",
+          "answer": "zaljubljena u filmove",
+          "accepts": ["zaljubljena u filmove"],
+          "explain_nl": "Vrouwelijk → zaljubljena; accusatief meervoud → filmove.",
+          "targets": ["g.19.zaljubljen_u", "g.05.akuzativ.mnozina", "v.05.film"],
+          "difficulty": 5,
+          "audio": "Ona je zaljubljena u filmove.",
+          "source": "vježbenica p.95"
+        },
+        {
+          "id": "e.19.025",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief na bez.",
+          "given": "Ne želim raspravljati o ___. (glupost)",
+          "answer": "gluposti",
+          "accepts": ["gluposti"],
+          "explain_nl": "Afleiding op -ost, dus locatief op -i na o.",
+          "targets": ["g.19.ost", "v.19.glupost"],
+          "difficulty": 4,
+          "audio": "Ne želim raspravljati o gluposti.",
+          "source": "vježbenica p.96"
+        },
+        {
+          "id": "e.19.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Sviđa mi se Hrvatska, ali bojim se zime.",
+          "answer": "Sviđa mi se Hrvatska, ali bojim se zime.",
+          "accepts": ["Sviđa mi se Hrvatska, ali bojim se zime."],
+          "targets": ["g.19.svidati_se", "g.19.bojati_se"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.19.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.19.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik vind de zee mooi, maar ik ben bang voor insecten.",
+          "answer": "Sviđa mi se more, ali bojim se kukaca.",
+          "accepts": ["Sviđa mi se more, ali bojim se kukaca."],
+          "explain_nl": "sviđa mi se met more als onderwerp; bojati se met de genitief meervoud kukaca.",
+          "targets": ["g.19.svidati_se", "g.19.bojati_se", "v.19.kukac", "v.01.more"],
+          "difficulty": 5,
+          "audio": "Sviđa mi se more, ali bojim se kukaca.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.19.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što vam se sviđa u Hrvatskoj i čega se bojite?",
+          "given": "Što vam se sviđa u Hrvatskoj i čega se bojite?",
+          "model_answer": "Sviđa mi se more i sviđaju mi se otoci. Bojim se kukaca i bojim se zime.",
+          "rubric_nl": [
+            "sviđa of sviđaju klopt met het aantal",
+            "De persoon staat in de datief, niet als onderwerp",
+            "Na bojati se staat de genitief"
+          ],
+          "targets": ["g.19.svidati_se", "g.19.bojati_se", "g.19.dativ_dug_kratak"],
+          "difficulty": 5,
+          "source": "vježbenica p.95"
+        }
+      ]
+    }
+  ]
+}

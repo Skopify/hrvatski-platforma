@@ -1,0 +1,646 @@
+{
+  "id": "lesson-05",
+  "number": 5,
+  "title_hr": "Informacije o Hrvatskoj i Hrvatima",
+  "title_nl": "Informatie over Kroatië en de Kroaten",
+  "cefr": "A1.2",
+  "source": { "udzbenik_pages": "71-82", "vjezbenica_pages": "28-31" },
+  "can_do_nl": [
+    "Ik kan zeggen wat iemand of iets heeft, en wat niet.",
+    "Ik kan een lijdend voorwerp in de accusatief zetten.",
+    "Ik weet waarom 'Imam stan' onveranderd blijft maar 'Imam prijatelja' niet.",
+    "Ik kan de accusatief meervoud vormen voor alle drie de geslachten.",
+    "Ik kan werkwoorden op -ati en -irati vervoegen in de tegenwoordige tijd.",
+    "Ik kan bij een informatiebalie vragen wat een stad te bieden heeft.",
+    "Ik kan zeggen dat ik een reservering heb — of juist niet."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.05.imati",
+      "title_nl": "imati / nemati — hebben en niet hebben",
+      "cefr": "A1.2",
+      "explanation_nl": "imati vervoegt als een gewoon -ati werkwoord: imam, imaš, ima, imamo, imate, imaju. De ontkenning is één woord: nemati (nemam, nemaš, nema ...) — je zet dus nooit 'ne' los voor imati. Dat is dezelfde uitzondering als bij biti (nisam).",
+      "contrast_nl": "Nederlands: 'ik heb niet' in twee woorden. Kroatisch trekt het samen tot nemam. Bij alle andere werkwoorden staat ne wél los: ne čitam, ne gledam.",
+      "paradigm": {
+        "caption_nl": "imati en nemati — presens",
+        "columns": ["imati", "nemati"],
+        "rows": [
+          { "label": "ja", "cells": ["imam", "nemam"] },
+          { "label": "ti", "cells": ["imaš", "nemaš"] },
+          { "label": "on/ona", "cells": ["ima", "nema"] },
+          { "label": "mi", "cells": ["imamo", "nemamo"] },
+          { "label": "vi/Vi", "cells": ["imate", "nemate"] },
+          { "label": "oni/one", "cells": ["imaju", "nemaju"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*ne imam schrijven in plaats van nemam.",
+        "nema betekent ook 'er is niet': 'Nema problema.' — dat kwam al voorbij in les 1.",
+        "Na imati/nemati volgt altijd de accusatief."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.72"
+    },
+    {
+      "id": "g.05.akuzativ.nezivo",
+      "title_nl": "ACCUSATIEF — levenloze dingen",
+      "cefr": "A1.2",
+      "explanation_nl": "De accusatief is de naamval van het lijdend voorwerp: hij antwoordt op koga? (wie?) en što? (wat?). Voor levenloze dingen is hij verrassend goedkoop: mannelijk en onzijdig veranderen helemaal niet, alleen vrouwelijke woorden op -a krijgen -u. Dus: Imam stan (m, ongewijzigd), Imam kuću (v, -a → -u), Imam pismo (o, ongewijzigd).",
+      "contrast_nl": "Het Nederlands markeert het lijdend voorwerp helemaal niet — alleen de woordvolgorde verraadt het. Het Kroatisch doet het omgekeerd: de vorm draagt de informatie, en daardoor is de woordvolgorde veel vrijer. 'Kuću imam' betekent hetzelfde als 'Imam kuću'.",
+      "paradigm": {
+        "caption_nl": "Akuzativ jednine — neživo (koga? što?)",
+        "columns": ["nominativ", "akuzativ", "verandering"],
+        "rows": [
+          { "label": "muški", "cells": ["otok", "otok", "geen (-∅)"] },
+          { "label": "muški", "cells": ["stan", "stan", "geen (-∅)"] },
+          { "label": "ženski", "cells": ["kravata", "kravatu", "-a → -u"] },
+          { "label": "ženski", "cells": ["kuća", "kuću", "-a → -u"] },
+          { "label": "srednji", "cells": ["more", "more", "geen"] },
+          { "label": "srednji", "cells": ["pismo", "pismo", "geen"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Denken dat er 'niets gebeurt' omdat mannelijk en onzijdig gelijk blijven — bij vrouwelijke woorden is de -u verplicht.",
+        "De -u ook op vrouwelijke woorden zetten die niet op -a eindigen (noć, ljubav): die veranderen niet. Die groep komt in les 18.",
+        "Vergeten dat de accusatief ook na andere werkwoorden komt dan imati: čitati, gledati, čekati, kuhati."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg", "g.05.imati"],
+      "source": "udzbenik p.74"
+    },
+    {
+      "id": "g.05.akuzativ.zivo",
+      "title_nl": "ACCUSATIEF — levende wezens (mannelijk)",
+      "cefr": "A1.2",
+      "explanation_nl": "Hier zit de kern van de les. Mannelijke woorden die iets levends aanduiden — mensen en dieren — krijgen in de accusatief enkelvoud wél een uitgang: -a. Imam prijatelja. Čekam brata. Vidim psa. Levenloze mannelijke woorden blijven onveranderd. Het Kroatisch maakt dus grammaticaal onderscheid tussen 'ik heb een appartement' en 'ik heb een vriend'.",
+      "contrast_nl": "Geen enkele Nederlandse structuur werkt zo. Het dichtstbijzijnde is dat wij 'wie' en 'wat' onderscheiden in de vraag, maar niet in het antwoord. Hier moet je bij élk mannelijk woord weten of het levend is — daarom staat dat vanaf les 1 bij elk zelfstandig naamwoord in de woordenlijst.",
+      "paradigm": {
+        "caption_nl": "Akuzativ jednine — muški rod: živo versus neživo",
+        "columns": ["nominativ", "akuzativ", "levend?"],
+        "rows": [
+          { "label": "1.", "cells": ["stan", "stan", "neživo → geen uitgang"] },
+          { "label": "2.", "cells": ["otok", "otok", "neživo → geen uitgang"] },
+          { "label": "3.", "cells": ["prijatelj", "prijatelja", "živo → -a"] },
+          { "label": "4.", "cells": ["brat", "brata", "živo → -a"] },
+          { "label": "5.", "cells": ["Goran", "Gorana", "živo → -a"] },
+          { "label": "6.", "cells": ["pas", "psa", "živo → -a, met vluchtige a"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De -a vergeten bij personen: 'Imam brat' is fout, het moet brata zijn.",
+        "De -a toevoegen bij levenloze dingen: 'Imam stana' is fout.",
+        "Vrouwelijke en onzijdige woorden doen niet mee aan dit onderscheid — alleen mannelijke.",
+        "Mannelijke voornamen tellen als levend: Čekam Gorana, Vidim Marka."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo"],
+      "source": "udzbenik p.74"
+    },
+    {
+      "id": "g.05.akuzativ.mnozina",
+      "title_nl": "ACCUSATIEF — meervoud",
+      "cefr": "A1.2",
+      "explanation_nl": "In het meervoud verdwijnt het levend/levenloos-onderscheid volledig. Mannelijk en vrouwelijk krijgen allebei -e, onzijdig krijgt -a (gelijk aan de nominatief). Dus: Hrvatska ima otoke, planine i brda. Oni imaju prijatelje.",
+      "contrast_nl": "Dit is goed nieuws: één regel voor alles. Let wel op dat het mannelijk meervoud in de nominatief -i heeft (otoci) en in de accusatief -e (otoke) — dat verschil moet je horen.",
+      "paradigm": {
+        "caption_nl": "Akuzativ množine",
+        "columns": ["nominativ mn.", "akuzativ mn."],
+        "rows": [
+          { "label": "muški", "cells": ["otoci", "otoke"] },
+          { "label": "muški", "cells": ["prijatelji", "prijatelje"] },
+          { "label": "ženski", "cells": ["kravate", "kravate"] },
+          { "label": "ženski", "cells": ["planine", "planine"] },
+          { "label": "srednji", "cells": ["brda", "brda"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De nominatiefvorm op -i gebruiken: 'Hrvatska ima otoci' is fout, het is otoke.",
+        "Bij vrouwelijk en onzijdig is de accusatief meervoud gelijk aan de nominatief — daar valt niets te doen.",
+        "Sibilarisatie geldt alleen vóór -i, dus niet in de accusatief: otoci maar otoke."
+      ],
+      "prerequisites": ["g.05.akuzativ.zivo", "g.03.duga_mnozina"],
+      "source": "udzbenik p.74"
+    },
+    {
+      "id": "g.05.prezent.ati",
+      "title_nl": "Tegenwoordige tijd van werkwoorden op -ati",
+      "cefr": "A1.2",
+      "explanation_nl": "De grootste en makkelijkste groep. Haal -ti van de infinitief en plak de uitgangen erachter: -m, -š, -∅, -mo, -te, -ju. znati → znam, znaš, zna, znamo, znate, znaju. Zo gaan ook čitati, gledati, čekati, kuhati, pjevati, igrati, imati.",
+      "contrast_nl": "Vergeleken met het Nederlands is dit eenvoudig: één uitgangenset, geen sterke/zwakke werkwoorden. De moeilijkheid zit niet in het werkwoord maar in wat erachter komt — dat staat in de accusatief.",
+      "paradigm": {
+        "caption_nl": "znati (weten) — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["ja znam", "mi znamo"] },
+          { "label": "2.", "cells": ["ti znaš", "vi/Vi znate"] },
+          { "label": "3.", "cells": ["on, ona zna", "oni, one znaju"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De 3e persoon enkelvoud heeft géén uitgang: zna, čita, gleda — niet *znae.",
+        "De 3e persoon meervoud is -ju: znaju, čitaju. Bij de -iti/-jeti groep (les 9) is dat -e, en dat verschil is hoorbaar.",
+        "Vraag maken met li: Znaš li? Ontkennen met los ne: Ja ne znam."
+      ],
+      "prerequisites": ["g.05.imati"],
+      "source": "udzbenik p.77"
+    },
+    {
+      "id": "g.05.prezent.irati",
+      "title_nl": "Werkwoorden op -irati",
+      "cefr": "A1.2",
+      "explanation_nl": "Leenwoorden krijgen in het Kroatisch bijna altijd -irati: telefonirati, planirati, trenirati, reklamirati, parkirati, studirati. Ze vervoegen exact als de -ati groep. Dat maakt ze de goedkoopste woordenschat die er is: herken je het internationale woord, dan heb je het werkwoord.",
+      "contrast_nl": "Het Nederlands gebruikt -eren voor precies dezelfde groep (telefoneren, plannen, trainen). Je kunt dus vaak direct raden — een van de weinige plekken waar dat werkt.",
+      "paradigm": {
+        "caption_nl": "telefonirati — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["telefoniram", "telefoniramo"] },
+          { "label": "2.", "cells": ["telefoniraš", "telefonirate"] },
+          { "label": "3.", "cells": ["telefonira", "telefoniraju"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De -ir- weglaten: het is planiram, niet *planam.",
+        "Niet elk Nederlands -eren werkwoord bestaat in het Kroatisch; bij twijfel controleren."
+      ],
+      "prerequisites": ["g.05.prezent.ati"],
+      "source": "udzbenik p.77"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.05.imati", "hr": "imati", "nl": "hebben", "pos": "verb", "aspect": "imperfective", "present_1sg": "imam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "udzbenik p.72" },
+    { "id": "v.05.nemati", "hr": "nemati", "nl": "niet hebben", "pos": "verb", "aspect": "imperfective", "present_1sg": "nemam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "udzbenik p.72" },
+    { "id": "v.05.znati", "hr": "znati", "nl": "weten, kennen", "pos": "verb", "aspect": "imperfective", "present_1sg": "znam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "udzbenik p.77" },
+    { "id": "v.05.citati", "hr": "čitati", "nl": "lezen", "pos": "verb", "aspect": "imperfective", "present_1sg": "čitam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.cekati", "hr": "čekati", "nl": "wachten (op)", "pos": "verb", "aspect": "imperfective", "present_1sg": "čekam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.gledati", "hr": "gledati", "nl": "kijken, bekijken", "pos": "verb", "aspect": "imperfective", "present_1sg": "gledam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.svirati", "hr": "svirati", "nl": "bespelen (instrument)", "pos": "verb", "aspect": "imperfective", "present_1sg": "sviram", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.kuhati", "hr": "kuhati", "nl": "koken", "pos": "verb", "aspect": "imperfective", "present_1sg": "kuham", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.pjevati", "hr": "pjevati", "nl": "zingen", "pos": "verb", "aspect": "imperfective", "present_1sg": "pjevam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.igrati", "hr": "igrati", "nl": "spelen", "pos": "verb", "aspect": "imperfective", "present_1sg": "igram", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.crtati", "hr": "crtati", "nl": "tekenen", "pos": "verb", "aspect": "imperfective", "present_1sg": "crtam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.rucati", "hr": "ručati", "nl": "lunchen", "pos": "verb", "aspect": "imperfective", "present_1sg": "ručam", "verb_class": "-ati", "tags": ["werkwoord", "eten"], "source": "vježbenica p.30" },
+    { "id": "v.05.vecerati", "hr": "večerati", "nl": "avondeten", "pos": "verb", "aspect": "imperfective", "present_1sg": "večeram", "verb_class": "-ati", "tags": ["werkwoord", "eten"], "source": "vježbenica p.30" },
+    { "id": "v.05.razgovarati", "hr": "razgovarati", "nl": "praten, in gesprek zijn", "pos": "verb", "aspect": "imperfective", "present_1sg": "razgovaram", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.telefonirati", "hr": "telefonirati", "nl": "bellen", "pos": "verb", "aspect": "imperfective", "present_1sg": "telefoniram", "verb_class": "-irati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.planirati", "hr": "planirati", "nl": "plannen", "pos": "verb", "aspect": "imperfective", "present_1sg": "planiram", "verb_class": "-irati", "tags": ["werkwoord"], "source": "vježbenica p.30" },
+    { "id": "v.05.trenirati", "hr": "trenirati", "nl": "trainen", "pos": "verb", "aspect": "imperfective", "present_1sg": "treniram", "verb_class": "-irati", "tags": ["werkwoord", "sport"], "source": "udzbenik p.77" },
+    { "id": "v.05.skijati", "hr": "skijati", "nl": "skiën", "pos": "verb", "aspect": "imperfective", "present_1sg": "skijam", "verb_class": "-ati", "tags": ["werkwoord", "sport"], "source": "udzbenik p.77" },
+    { "id": "v.05.navijati", "hr": "navijati", "nl": "supporteren", "pos": "verb", "aspect": "imperfective", "present_1sg": "navijam", "verb_class": "-ati", "tags": ["werkwoord", "sport"], "source": "udzbenik p.77" },
+
+    { "id": "v.05.grb", "hr": "grb", "nl": "wapen (heraldisch)", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "grba", "nom_pl": "grbovi", "tags": ["land"], "source": "vježbenica p.28" },
+    { "id": "v.05.zastava", "hr": "zastava", "nl": "vlag", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "zastave", "nom_pl": "zastave", "tags": ["land"], "source": "vježbenica p.28" },
+    { "id": "v.05.himna", "hr": "himna", "nl": "volkslied", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "himne", "nom_pl": "himne", "tags": ["land"], "source": "vježbenica p.28" },
+    { "id": "v.05.otok", "hr": "otok", "nl": "eiland", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "otoka", "nom_pl": "otoci", "tags": ["natuur"], "source": "udzbenik p.74" },
+    { "id": "v.05.planina", "hr": "planina", "nl": "berg", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "planine", "nom_pl": "planine", "tags": ["natuur"], "source": "vježbenica p.28" },
+    { "id": "v.05.rijeka", "hr": "rijeka", "nl": "rivier", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "rijeke", "nom_pl": "rijeke", "tags": ["natuur"], "source": "vježbenica p.28" },
+    { "id": "v.05.predsjednik", "hr": "predsjednik", "nl": "president", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "predsjednika", "nom_pl": "predsjednici", "tags": ["persoon", "land"], "source": "vježbenica p.28" },
+    { "id": "v.05.grad", "hr": "grad", "nl": "stad", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "grada", "nom_pl": "gradovi", "tags": ["stad"], "source": "udzbenik p.74" },
+    { "id": "v.05.uspinjaca", "hr": "uspinjača", "nl": "kabelbaan, funiculaire", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "uspinjače", "nom_pl": "uspinjače", "tags": ["stad"], "source": "vježbenica p.28" },
+    { "id": "v.05.muzej", "hr": "muzej", "nl": "museum", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "muzeja", "nom_pl": "muzeji", "tags": ["stad"], "source": "vježbenica p.28" },
+    { "id": "v.05.park", "hr": "park", "nl": "park", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "parka", "nom_pl": "parkovi", "tags": ["stad"], "source": "vježbenica p.29" },
+    { "id": "v.05.katedrala", "hr": "katedrala", "nl": "kathedraal", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "katedrale", "nom_pl": "katedrale", "tags": ["stad"], "source": "vježbenica p.28" },
+    { "id": "v.05.vikendica", "hr": "vikendica", "nl": "vakantiehuisje", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "vikendice", "nom_pl": "vikendice", "tags": ["wonen"], "source": "vježbenica p.28" },
+    { "id": "v.05.turist", "hr": "turist", "nl": "toerist", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "turista", "nom_pl": "turisti", "tags": ["persoon", "reizen"], "source": "vježbenica p.28" },
+    { "id": "v.05.recepcionar", "hr": "recepcionar", "nl": "receptionist", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "recepcionara", "nom_pl": "recepcionari", "tags": ["persoon", "beroep"], "source": "vježbenica p.28" },
+    { "id": "v.05.novine", "hr": "novine", "nl": "krant", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "novina", "nom_pl": "novine", "tags": ["ding"], "source": "vježbenica p.29" },
+    { "id": "v.05.gitara", "hr": "gitara", "nl": "gitaar", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "gitare", "nom_pl": "gitare", "tags": ["ding"], "source": "vježbenica p.30" },
+    { "id": "v.05.televizija", "hr": "televizija", "nl": "televisie", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "televizije", "nom_pl": "televizije", "tags": ["ding"], "source": "vježbenica p.30" },
+    { "id": "v.05.nogomet", "hr": "nogomet", "nl": "voetbal", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "nogometa", "tags": ["sport"], "source": "vježbenica p.30" },
+    { "id": "v.05.rucak", "hr": "ručak", "nl": "lunch", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ručka", "nom_pl": "ručkovi", "tags": ["eten"], "source": "vježbenica p.30" },
+    { "id": "v.05.juha", "hr": "juha", "nl": "soep", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "juhe", "nom_pl": "juhe", "tags": ["eten"], "source": "vježbenica p.30" },
+    { "id": "v.05.film", "hr": "film", "nl": "film", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "filma", "nom_pl": "filmovi", "tags": ["ding"], "source": "vježbenica p.30" },
+
+    { "id": "v.05.rezervacija", "hr": "rezervacija", "nl": "reservering", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "rezervacije", "nom_pl": "rezervacije", "tags": ["reizen"], "source": "udzbenik p.72" },
+    { "id": "v.05.apartman", "hr": "apartman", "nl": "appartement (vakantie)", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "apartmana", "nom_pl": "apartmani", "tags": ["reizen"], "source": "udzbenik p.72" },
+    { "id": "v.05.plan_grada", "hr": "plan grada", "nl": "plattegrond van de stad", "pos": "phrase", "tags": ["reizen"], "source": "udzbenik p.72" },
+    { "id": "v.05.sluzbenica", "hr": "službenica", "nl": "baliemedewerkster", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "službenice", "nom_pl": "službenice", "tags": ["beroep"], "source": "udzbenik p.72" },
+    { "id": "v.05.nazalost", "hr": "nažalost", "nl": "helaas", "pos": "adv", "tags": ["reactie"], "source": "udzbenik p.72" },
+    { "id": "v.05.drzava", "hr": "država", "nl": "staat, land", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "države", "nom_pl": "države", "tags": ["land"], "source": "udzbenik p.73" },
+    { "id": "v.05.zupanija", "hr": "županija", "nl": "provincie", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "županije", "nom_pl": "županije", "tags": ["land"], "source": "udzbenik p.73" },
+    { "id": "v.05.valuta", "hr": "valuta", "nl": "munteenheid", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "valute", "nom_pl": "valute", "tags": ["land"], "source": "udzbenik p.73" },
+    { "id": "v.05.klima", "hr": "klima", "nl": "klimaat", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "klime", "nom_pl": "klime", "tags": ["land"], "source": "udzbenik p.73" },
+    { "id": "v.05.kralj", "hr": "kralj", "nl": "koning", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "kralja", "nom_pl": "kraljevi", "tags": ["persoon"], "source": "udzbenik p.73" },
+    { "id": "v.05.kraljica", "hr": "kraljica", "nl": "koningin", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "kraljice", "nom_pl": "kraljice", "tags": ["persoon"], "source": "udzbenik p.73" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.05.1",
+      "title_nl": "Wat heeft Kroatië?",
+      "kind": "input",
+      "text_hr": "Hrvatska je od 1991. samostalna država. Ima zastavu i grb.\nIma glavni grad Zagreb i dvadeset jednu županiju.\nIma predsjednika i premijera.\nHrvatska ima more, otoke, planine, brda, rijeke, jezera i nacionalne parkove.\nValuta je euro. Ima umjerenu mediteransku klimu.\nHrvatska ima i kravatu kao tipičan suvenir i autohton proizvod.\n\nA što Hrvatska nema? Hrvatska nema ni kralja ni kraljicu.\nHrvatska nema vulkane, gejzire, tajfune, pustinju. Nema ni metro.",
+      "translation_nl": "Kroatië is sinds 1991 een zelfstandige staat. Het heeft een vlag en een wapen.\nHet heeft Zagreb als hoofdstad en eenentwintig provincies.\nHet heeft een president en een premier.\nKroatië heeft een zee, eilanden, bergen, heuvels, rivieren, meren en nationale parken.\nDe munteenheid is de euro. Het heeft een gematigd mediterraan klimaat.\nKroatië heeft ook de stropdas als typisch souvenir en inheems product.\n\nEn wat heeft Kroatië niet? Kroatië heeft koning noch koningin.\nKroatië heeft geen vulkanen, geisers, tyfoons of woestijn. Het heeft ook geen metro.",
+      "source": "udzbenik p.73",
+      "exercises": [
+        {
+          "id": "e.05.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De eerste echte naamval",
+          "body_nl": "Tot nu toe stond alles in de nominatief. Nu komt de **accusatief** erbij: de vorm van het lijdend voorwerp. Hij antwoordt op *koga?* (wie?) en *što?* (wat?).\n\nBegin met het makkelijke deel — levenloze dingen:\n\n**mannelijk**: verandert niet · *Imam stan.*\n**onzijdig**: verandert niet · *Imam pismo.*\n**vrouwelijk op -a**: krijgt **-u** · kravata → *Imam kravatu.*\n\nEén uitgang om te onthouden dus. Het lastige deel komt zo.",
+          "targets": ["g.05.akuzativ.nezivo"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Hrvatska ima ___. (zastava)",
+          "answer": "zastavu",
+          "accepts": ["zastavu"],
+          "explain_nl": "Vrouwelijk op -a → -u.",
+          "targets": ["g.05.akuzativ.nezivo", "v.05.zastava"],
+          "difficulty": 2,
+          "audio": "Hrvatska ima zastavu.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Hrvatska ima ___. (grb)",
+          "answer": "grb",
+          "accepts": ["grb"],
+          "explain_nl": "Mannelijk en levenloos → onveranderd. Er is hier niets te doen, en dat is het antwoord.",
+          "targets": ["g.05.akuzativ.nezivo", "v.05.grb"],
+          "difficulty": 3,
+          "audio": "Hrvatska ima grb.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Zagreb ima ___. (uspinjača)",
+          "answer": "uspinjaču",
+          "accepts": ["uspinjaču"],
+          "explain_nl": "Vrouwelijk op -a → -u. Let op de č.",
+          "targets": ["g.05.akuzativ.nezivo", "v.05.uspinjaca"],
+          "difficulty": 3,
+          "audio": "Zagreb ima uspinjaču.",
+          "source": "vježbenica p.28"
+        }
+      ]
+    },
+    {
+      "id": "s.05.1b",
+      "title_nl": "Bij de informatiebalie",
+      "kind": "input",
+      "text_hr": "Turist: Dobar dan! Molim Vas, imate li plan grada?\nSlužbenica: Izvolite!\nTurist: Hvala! Ima li Zagreb metro?\nSlužbenica: Ne! Nažalost, nema. Ima tramvaje i autobuse.\nTurist: A ima li brdo ili planinu?\nSlužbenica: Imamo planinu Medvednicu. Nije velika.\nTurist: Odlično! Ja sam planinar. Hvala! Doviđenja!\nSlužbenica: Doviđenja!",
+      "translation_nl": "Toerist: Goedendag! Pardon, heeft u een plattegrond van de stad?\nBaliemedewerkster: Alstublieft!\nToerist: Dank u! Heeft Zagreb een metro?\nBaliemedewerkster: Nee! Helaas niet. Er zijn trams en bussen.\nToerist: En is er een heuvel of een berg?\nBaliemedewerkster: We hebben de berg Medvednica. Hij is niet groot.\nToerist: Uitstekend! Ik ben bergwandelaar. Dank u! Tot ziens!\nBaliemedewerkster: Tot ziens!",
+      "source": "udzbenik p.72",
+      "exercises": [
+        {
+          "id": "e.05.005",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de ontkennende vorm in.",
+          "given": "Ima li Zagreb metro? — Ne, nažalost, ___.",
+          "answer": "nema",
+          "accepts": ["nema"],
+          "explain_nl": "nema is zowel 'hij heeft niet' als 'er is niet'. Eén woord, nooit *ne ima.",
+          "targets": ["g.05.imati"],
+          "difficulty": 2,
+          "audio": "Ima li Zagreb metro? Ne, nažalost, nema.",
+          "source": "udzbenik p.72"
+        },
+        {
+          "id": "e.05.006",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief. Let op het getal.",
+          "given": "Zagreb nema metro, ali ima ___ i ___. (tramvaj mn, autobus mn)",
+          "answer": "tramvaje i autobuse",
+          "accepts": ["tramvaje i autobuse"],
+          "explain_nl": "Accusatief meervoud, mannelijk → -e. Niet tramvaji/autobusi, dat is de nominatief.",
+          "targets": ["g.05.akuzativ.mnozina", "v.01.tramvaj", "v.01.autobus"],
+          "difficulty": 4,
+          "audio": "Zagreb nema metro, ali ima tramvaje i autobuse.",
+          "source": "udzbenik p.72"
+        },
+        {
+          "id": "e.05.007",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik heb een reservering voor een kamer. Ik heb geen reservering voor een appartement.",
+          "answer": "Imam rezervaciju za sobu. Nemam rezervaciju za apartman.",
+          "accepts": ["Imam rezervaciju za sobu. Nemam rezervaciju za apartman."],
+          "explain_nl": "rezervacija → rezervaciju en soba → sobu (vrouwelijk, -a → -u). apartman is mannelijk en levenloos, dus onveranderd. Ook na het voorzetsel za staat de accusatief.",
+          "targets": ["g.05.imati", "g.05.akuzativ.nezivo", "v.05.rezervacija", "v.03.soba"],
+          "difficulty": 5,
+          "audio": "Imam rezervaciju za sobu. Nemam rezervaciju za apartman.",
+          "source": "udzbenik p.72"
+        }
+      ]
+    },
+    {
+      "id": "s.05.2",
+      "title_nl": "Levend of niet — het onderscheid dat telt",
+      "kind": "grammar",
+      "source": "udzbenik p.74",
+      "exercises": [
+        {
+          "id": "e.05.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Waarom 'Imam stan' maar 'Imam prijatelja'",
+          "body_nl": "Hier zit het hart van deze les. Bij **mannelijke** woorden maakt het Kroatisch verschil tussen levend en levenloos:\n\n*Imam stan.* — een appartement leeft niet → geen uitgang\n*Imam prijatelja.* — een vriend leeft → **-a**\n\nDat geldt voor mensen én dieren, en ook voor mannelijke voornamen: *Čekam Gorana.*\n\nVrouwelijke en onzijdige woorden doen hier niet aan mee. Het onderscheid bestaat alleen bij mannelijk enkelvoud.\n\nDit is de reden dat elk zelfstandig naamwoord in deze cursus met zijn geslacht **en** zijn levendheid genoteerd staat — zonder die twee kun je de accusatief niet maken.",
+          "targets": ["g.05.akuzativ.zivo"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Mi imamo ___. (brat)",
+          "answer": "brata",
+          "accepts": ["brata"],
+          "explain_nl": "brat is mannelijk en levend → -a.",
+          "targets": ["g.05.akuzativ.zivo", "v.03.brat"],
+          "difficulty": 3,
+          "audio": "Mi imamo brata.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Ti imaš novo ___. (računalo)",
+          "answer": "računalo",
+          "accepts": ["računalo"],
+          "explain_nl": "Onzijdig → onveranderd, ook al is er een lijdend voorwerp.",
+          "targets": ["g.05.akuzativ.nezivo", "v.04.racunalo"],
+          "difficulty": 3,
+          "audio": "Ti imaš novo računalo.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.013",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm is juist?",
+          "given": "Ja čekam ___. (prijatelj)",
+          "answer": "prijatelja",
+          "distractors": ["prijatelj", "prijatelju", "prijatelje"],
+          "explain_nl": "Mannelijk en levend, enkelvoud → prijatelja.",
+          "targets": ["g.05.akuzativ.zivo", "v.01.prijatelj", "v.05.cekati"],
+          "difficulty": 3,
+          "source": "udzbenik p.74"
+        },
+        {
+          "id": "e.05.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ja imam stana.",
+          "answer": "Ja imam stan.",
+          "accepts": ["Ja imam stan.", "Imam stan."],
+          "explain_nl": "stan is levenloos, dus geen -a. De uitgang hoort alleen bij levende mannelijke woorden.",
+          "targets": ["g.05.akuzativ.zivo", "g.05.akuzativ.nezivo", "v.04.stan"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.015",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Oni čekaju Goran.",
+          "answer": "Oni čekaju Gorana.",
+          "accepts": ["Oni čekaju Gorana."],
+          "explain_nl": "Een mannelijke voornaam telt als levend → Gorana.",
+          "targets": ["g.05.akuzativ.zivo"],
+          "difficulty": 4,
+          "source": "udzbenik p.74"
+        },
+        {
+          "id": "e.05.016",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "In het meervoud vervalt het onderscheid",
+          "body_nl": "Goed nieuws: in het meervoud maakt levendheid niets meer uit.\n\n**mannelijk**: -e · otoci → *Hrvatska ima otoke.* · prijatelji → *Imam prijatelje.*\n**vrouwelijk**: -e · planine → *Hrvatska ima planine.*\n**onzijdig**: -a · brda → *Hrvatska ima brda.*\n\nDe val zit hier: het mannelijk meervoud is in de nominatief **-i** (otoci) maar in de accusatief **-e** (otoke). Dat is een echt verschil, geen spellingkwestie.",
+          "targets": ["g.05.akuzativ.mnozina"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.017",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief meervoud.",
+          "given": "Hrvatska ima more i ___. (otok mn)",
+          "answer": "otoke",
+          "accepts": ["otoke"],
+          "explain_nl": "Mannelijk meervoud in de accusatief → -e. Niet otoci, dat is de nominatief.",
+          "targets": ["g.05.akuzativ.mnozina", "v.05.otok"],
+          "difficulty": 4,
+          "audio": "Hrvatska ima more i otoke.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.018",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief meervoud.",
+          "given": "Oni imaju ___. (prijatelj mn)",
+          "answer": "prijatelje",
+          "accepts": ["prijatelje"],
+          "explain_nl": "In het meervoud telt levendheid niet meer: gewoon -e.",
+          "targets": ["g.05.akuzativ.mnozina", "v.01.prijatelj"],
+          "difficulty": 4,
+          "audio": "Oni imaju prijatelje.",
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.019",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Hrvatska", "ima", "otoke", "planine", "i", "brda"],
+          "answer": "Hrvatska ima otoke, planine i brda.",
+          "accepts": ["Hrvatska ima otoke, planine i brda.", "Hrvatska ima otoke planine i brda"],
+          "explain_nl": "Drie geslachten achter elkaar in de accusatief meervoud: -e, -e, -a.",
+          "targets": ["g.05.akuzativ.mnozina", "v.05.otok", "v.05.planina", "v.03.brdo"],
+          "difficulty": 4,
+          "audio": "Hrvatska ima otoke, planine i brda.",
+          "source": "udzbenik p.74"
+        }
+      ]
+    },
+    {
+      "id": "s.05.3",
+      "title_nl": "Werkwoorden op -ati en -irati",
+      "kind": "practice",
+      "source": "udzbenik p.77",
+      "exercises": [
+        {
+          "id": "e.05.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De makkelijkste werkwoordsgroep",
+          "body_nl": "Haal **-ti** van de infinitief en plak erachter: **-m, -š, -∅, -mo, -te, -ju**.\n\nznati → *znam, znaš, zna, znamo, znate, znaju*\n\nZo gaan ook čitati, gledati, čekati, kuhati, pjevati, igrati, imati.\n\nTwee dingen om te onthouden: de derde persoon enkelvoud heeft **geen** uitgang (zna, čita), en de derde persoon meervoud eindigt op **-ju** (znaju). Bij de groep uit les 9 wordt dat -e, en dat verschil is hoorbaar.\n\nLeenwoorden krijgen **-irati** (telefonirati, planirati, trenirati) en volgen exact hetzelfde patroon.",
+          "targets": ["g.05.prezent.ati", "g.05.prezent.irati"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord en zet het object in de accusatief.",
+          "given": "Mi ___ knjigu. (čitati)",
+          "answer": "čitamo",
+          "accepts": ["čitamo"],
+          "explain_nl": "1e persoon meervoud → -mo. En knjigu staat al in de accusatief.",
+          "targets": ["g.05.prezent.ati", "v.05.citati"],
+          "difficulty": 2,
+          "audio": "Mi čitamo knjigu.",
+          "source": "vježbenica p.30"
+        },
+        {
+          "id": "e.05.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord.",
+          "given": "Djeca ___ nogomet. (igrati)",
+          "answer": "igraju",
+          "accepts": ["igraju"],
+          "explain_nl": "djeca telt als meervoud bij het werkwoord → igraju met -ju.",
+          "targets": ["g.05.prezent.ati", "v.05.igrati", "v.03.dijete"],
+          "difficulty": 4,
+          "audio": "Djeca igraju nogomet.",
+          "source": "vježbenica p.30"
+        },
+        {
+          "id": "e.05.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord.",
+          "given": "Oni ___ cijeli dan. (telefonirati)",
+          "answer": "telefoniraju",
+          "accepts": ["telefoniraju"],
+          "explain_nl": "-irati volgt hetzelfde patroon als -ati: 3e persoon meervoud op -ju.",
+          "targets": ["g.05.prezent.irati", "v.05.telefonirati"],
+          "difficulty": 3,
+          "audio": "Oni telefoniraju cijeli dan.",
+          "source": "vježbenica p.30"
+        },
+        {
+          "id": "e.05.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de ontkennende vorm van imati in.",
+          "given": "Mi ___ psa. (nemati)",
+          "answer": "nemamo",
+          "accepts": ["nemamo"],
+          "explain_nl": "nemati is één woord — nooit *ne imamo. En psa is de accusatief van pas (levend, met vluchtige a).",
+          "targets": ["g.05.imati", "v.03.pas", "g.05.akuzativ.zivo"],
+          "difficulty": 4,
+          "audio": "Mi nemamo psa.",
+          "source": "vježbenica p.29"
+        },
+        {
+          "id": "e.05.025",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik wacht op de bus en lees de krant.",
+          "answer": "Čekam autobus i čitam novine.",
+          "accepts": ["Čekam autobus i čitam novine.", "Ja čekam autobus i čitam novine."],
+          "explain_nl": "čekati vraagt in het Kroatisch geen voorzetsel: je wacht iets, niet op iets. autobus is mannelijk en levenloos, dus onveranderd; novine is meervoud en verandert ook niet.",
+          "targets": ["v.05.cekati", "g.05.akuzativ.nezivo", "v.01.autobus", "v.05.novine"],
+          "difficulty": 4,
+          "audio": "Čekam autobus i čitam novine.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Ivica pjeva i svira rock-glazbu.",
+          "answer": "Ivica pjeva i svira rock-glazbu.",
+          "accepts": ["Ivica pjeva i svira rock-glazbu.", "Ivica pjeva i svira rock glazbu."],
+          "targets": ["g.05.prezent.ati", "v.05.pjevati", "v.05.svirati"],
+          "difficulty": 4,
+          "source": "udzbenik p.77"
+        },
+        {
+          "id": "e.05.027",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de nominatief aan de accusatief.",
+          "pairs": [
+            { "hr": "kravata", "nl": "kravatu" },
+            { "hr": "prijatelj", "nl": "prijatelja" },
+            { "hr": "otok", "nl": "otok" },
+            { "hr": "more", "nl": "more" }
+          ],
+          "targets": ["g.05.akuzativ.nezivo", "g.05.akuzativ.zivo"],
+          "difficulty": 3,
+          "source": "udzbenik p.74"
+        }
+      ]
+    },
+    {
+      "id": "s.05.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.05.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik heb geen auto, maar ik heb een vriend.",
+          "answer": "Nemam auto, ali imam prijatelja.",
+          "accepts": [
+            "Nemam auto, ali imam prijatelja.",
+            "Ja nemam auto, ali imam prijatelja.",
+            "Nemam auto ali imam prijatelja."
+          ],
+          "explain_nl": "nemati is één woord; auto is mannelijk én levenloos, dus onveranderd; prijatelj is mannelijk én levend, dus prijatelja. Precies het onderscheid van deze les, in één zin.",
+          "targets": ["g.05.imati", "g.05.akuzativ.zivo", "g.05.akuzativ.nezivo", "v.01.prijatelj"],
+          "difficulty": 5,
+          "audio": "Nemam auto, ali imam dobrog prijatelja.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.05.031",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Zagreb ima tramvaji i autobuse.",
+          "answer": "Zagreb ima tramvaje i autobuse.",
+          "accepts": ["Zagreb ima tramvaje i autobuse."],
+          "explain_nl": "Accusatief meervoud is -e, niet -i. De -i is de nominatief.",
+          "targets": ["g.05.akuzativ.mnozina", "v.01.tramvaj", "v.01.autobus"],
+          "difficulty": 5,
+          "source": "vježbenica p.28"
+        },
+        {
+          "id": "e.05.032",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što imate u svojoj sobi?",
+          "given": "Što imate u svojoj sobi?",
+          "model_answer": "Imam krevet, stol i računalo. Nemam televiziju.",
+          "rubric_nl": [
+            "Gebruikt imati of nemati correct vervoegd",
+            "Alle objecten staan in de accusatief",
+            "Minimaal drie voorwerpen genoemd"
+          ],
+          "targets": ["g.05.imati", "g.05.akuzativ.nezivo"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

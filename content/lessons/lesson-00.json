@@ -1,0 +1,461 @@
+{
+  "id": "lesson-00",
+  "number": 0,
+  "title_hr": "Upoznajmo Hrvatsku i hrvatski jezik!",
+  "title_nl": "Kennismaken met Kroatië en het Kroatisch",
+  "cefr": "A1.1",
+  "source": { "udzbenik_pages": "13-18", "vjezbenica_pages": "7-10" },
+  "can_do_nl": [
+    "Ik ken het Kroatische alfabet van 30 letters.",
+    "Ik weet dat elke letter altijd dezelfde klank heeft.",
+    "Ik hoor het verschil tussen č en ć, en tussen dž en đ.",
+    "Ik kan lj, nj en de klinkende r uitspreken.",
+    "Ik kan tot tien tellen.",
+    "Ik ken de basisgegevens over Kroatië."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.00.abeceda",
+      "title_nl": "Het alfabet — 30 letters, 30 klanken",
+      "cefr": "A1.1",
+      "explanation_nl": "Het Kroatisch heeft 30 letters. Drie ervan bestaan uit twee tekens die samen één klank vormen: dž, lj en nj. De letters q, w, x en y bestaan niet. Het belangrijkste principe: elke letter heeft altijd precies één klank, en die verandert nooit door de omgeving.",
+      "contrast_nl": "Dit is veel eenvoudiger dan het Nederlands. Bij ons klinkt de 'e' anders in 'pen', 'meel', 'de' en 'beter'. In het Kroatisch is een e altijd dezelfde korte e. Kun je een woord lezen, dan kun je het uitspreken — zonder uitzonderingen.",
+      "paradigm": {
+        "caption_nl": "Hrvatska abeceda",
+        "columns": ["letters"],
+        "rows": [
+          { "label": "1–8", "cells": ["a  b  c  č  ć  d  dž  đ"] },
+          { "label": "9–16", "cells": ["e  f  g  h  i  j  k  l"] },
+          { "label": "17–24", "cells": ["lj  m  n  nj  o  p  r  s"] },
+          { "label": "25–30", "cells": ["š  t  u  v  z  ž"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "dž, lj en nj zijn één letter, geen twee. In het woordenboek staan ze op hun eigen plek.",
+        "Er is geen q, w, x of y — buitenlandse namen worden aangepast.",
+        "Er zijn geen stomme letters: alles wat er staat spreek je uit."
+      ],
+      "prerequisites": [],
+      "source": "udzbenik p.14"
+    },
+    {
+      "id": "g.00.palatali",
+      "title_nl": "De lastige paren: č/ć en dž/đ",
+      "cefr": "A1.1",
+      "explanation_nl": "Vier letters vormen twee paren die voor Nederlandstaligen bijna gelijk klinken. č en dž zijn hard: je tong ligt achter in de mond, de klank lijkt op het Engelse 'match' en 'jungle'. ć en đ zijn zacht: je tong ligt tegen het gehemelte, dichter bij het Nederlandse 'tja' en 'djembé'.",
+      "contrast_nl": "Het Nederlands kent dit onderscheid niet, dus je oor moet het leren. Het maakt wel betekenisverschil, en het is de fout waaraan een Kroaat je meteen herkent. Vuistregel: veel achternamen op -ić hebben de zachte ć, en woorden als čaj en čovjek de harde č.",
+      "paradigm": {
+        "caption_nl": "Hard tegenover zacht",
+        "columns": ["letter", "klank", "voorbeeld"],
+        "rows": [
+          { "label": "č", "cells": ["hard, als Engels 'match'", "čaj, čovjek, čokolada"] },
+          { "label": "ć", "cells": ["zacht, als 'tja'", "kuća, noć, Perić"] },
+          { "label": "dž", "cells": ["hard, als Engels 'jungle'", "džem, džemper"] },
+          { "label": "đ", "cells": ["zacht, als 'djembé'", "đak, doviđenja"] },
+          { "label": "š", "cells": ["als Nederlands 'sj'", "šešir, škola"] },
+          { "label": "ž", "cells": ["als Frans 'journal'", "žena, život"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "č en ć door elkaar schrijven — het zijn verschillende letters, geen varianten.",
+        "De accenttekens weglaten: caj en čaj zijn niet hetzelfde woord.",
+        "đ verwarren met dj: in het Kroatisch is đ één letter."
+      ],
+      "prerequisites": ["g.00.abeceda"],
+      "source": "udzbenik p.15"
+    },
+    {
+      "id": "g.00.izgovor",
+      "title_nl": "Uitspraakregels die altijd gelden",
+      "cefr": "A1.1",
+      "explanation_nl": "Enkele letters klinken anders dan een Nederlander verwacht. c is altijd 'ts' (cipela = tsipela), j is de Nederlandse j, h wordt echt uitgesproken, en u klinkt als 'oe'. Bijzonder is de r: die kan zelf een klinker zijn, zoals in prst (vinger), vrt (tuin) en krv (bloed) — woorden die op papier geen klinker lijken te hebben.",
+      "contrast_nl": "De grootste gewenning is dat er geen lange en korte klinkerspelling bestaat. Waar wij 'maan' en 'man' schrijven, heeft het Kroatisch één a. De lengte zit in de klemtoon, niet in de spelling — en de klemtoon valt nooit op de laatste lettergreep.",
+      "paradigm": {
+        "caption_nl": "Letters die anders klinken dan verwacht",
+        "columns": ["letter", "klank", "voorbeeld"],
+        "rows": [
+          { "label": "c", "cells": ["ts", "cipela, ulica"] },
+          { "label": "j", "cells": ["Nederlandse j", "jaje, jutro"] },
+          { "label": "u", "cells": ["oe", "kuća, ulica"] },
+          { "label": "e", "cells": ["altijd kort, als in 'pen'", "meso, jezero"] },
+          { "label": "h", "cells": ["wordt uitgesproken", "haljina, hvala"] },
+          { "label": "r", "cells": ["kan klinker zijn", "prst, vrt, krv"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "c als 'k' lezen — het is altijd 'ts'.",
+        "De h inslikken: in hvala hoor je hem echt.",
+        "Klemtoon op de laatste lettergreep leggen — dat gebeurt in het Kroatisch nooit."
+      ],
+      "prerequisites": ["g.00.abeceda"],
+      "source": "udzbenik p.15"
+    },
+    {
+      "id": "g.00.brojevi",
+      "title_nl": "Tellen tot tien",
+      "cefr": "A1.1",
+      "explanation_nl": "De eerste tien getallen: jedan, dva, tri, četiri, pet, šest, sedam, osam, devet, deset. Ze zijn meteen bruikbaar bij het bestellen, bij prijzen en bij tijd. Wat er ná een getal gebeurt met het zelfstandig naamwoord komt pas in les 17 — voorlopig hoef je alleen de getallen zelf te kennen.",
+      "contrast_nl": "Een paar zijn herkenbaar: tri lijkt op 'drie', šest op 'zes', devet op 'negen'. Dat komt doordat het Kroatisch en het Nederlands allebei Indo-Europese talen zijn.",
+      "paradigm": {
+        "caption_nl": "Brojevi do deset",
+        "columns": ["cijfer", "Kroatisch", "Nederlands"],
+        "rows": [
+          { "label": "1", "cells": ["jedan", "één"] },
+          { "label": "2", "cells": ["dva", "twee"] },
+          { "label": "3", "cells": ["tri", "drie"] },
+          { "label": "4", "cells": ["četiri", "vier"] },
+          { "label": "5", "cells": ["pet", "vijf"] },
+          { "label": "6", "cells": ["šest", "zes"] },
+          { "label": "7", "cells": ["sedam", "zeven"] },
+          { "label": "8", "cells": ["osam", "acht"] },
+          { "label": "9", "cells": ["devet", "negen"] },
+          { "label": "10", "cells": ["deset", "tien"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "četiri heeft de klemtoon vooraan: ČE-ti-ri.",
+        "šest begint met een sj-klank, niet met een s.",
+        "jedan en dva krijgen later aparte vrouwelijke vormen (jedna, dvije) — dat komt in les 17."
+      ],
+      "prerequisites": ["g.00.izgovor"],
+      "source": "udzbenik p.16"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.00.jedan", "hr": "jedan", "nl": "één", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.dva", "hr": "dva", "nl": "twee", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.tri", "hr": "tri", "nl": "drie", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.cetiri", "hr": "četiri", "nl": "vier", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.pet", "hr": "pet", "nl": "vijf", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.sest", "hr": "šest", "nl": "zes", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.sedam", "hr": "sedam", "nl": "zeven", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.osam", "hr": "osam", "nl": "acht", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.devet", "hr": "devet", "nl": "negen", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+    { "id": "v.00.deset", "hr": "deset", "nl": "tien", "pos": "num", "tags": ["getal"], "source": "udzbenik p.16" },
+
+    { "id": "v.00.auto", "hr": "auto", "nl": "auto", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "auta", "nom_pl": "auti", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.brod", "hr": "brod", "nl": "schip", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "broda", "nom_pl": "brodovi", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.cipela", "hr": "cipela", "nl": "schoen", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "cipele", "nom_pl": "cipele", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.cokolada", "hr": "čokolada", "nl": "chocolade", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "čokolade", "nom_pl": "čokolade", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.dvorac", "hr": "dvorac", "nl": "kasteel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "dvorca", "nom_pl": "dvorci", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.dzemper", "hr": "džemper", "nl": "trui", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "džempera", "nom_pl": "džemperi", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.dak", "hr": "đak", "nl": "leerling", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "đaka", "nom_pl": "đaci", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.gitara", "hr": "gitara", "nl": "gitaar", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "gitare", "nom_pl": "gitare", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.haljina", "hr": "haljina", "nl": "jurk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "haljine", "nom_pl": "haljine", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.igla", "hr": "igla", "nl": "naald", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "igle", "nom_pl": "igle", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.jaje", "hr": "jaje", "nl": "ei", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "jajeta", "nom_pl": "jaja", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.ljubav_a", "hr": "ljubav", "nl": "liefde", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "ljubavi", "nom_pl": "ljubavi", "tags": ["alfabet"], "source": "aangevuld" },
+    { "id": "v.00.njiva", "hr": "njiva", "nl": "akker", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "njive", "nom_pl": "njive", "tags": ["alfabet"], "source": "aangevuld" },
+    { "id": "v.00.oblak", "hr": "oblak", "nl": "wolk", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "oblaka", "nom_pl": "oblaci", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.papiga", "hr": "papiga", "nl": "papegaai", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "papige", "nom_pl": "papige", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.robot", "hr": "robot", "nl": "robot", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "robota", "nom_pl": "roboti", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.sunce_a", "hr": "sunce", "nl": "zon", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "sunca", "nom_pl": "sunca", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.sesir_a", "hr": "šešir", "nl": "hoed", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "šešira", "nom_pl": "šeširi", "tags": ["alfabet"], "source": "udzbenik p.14" },
+    { "id": "v.00.zaba", "hr": "žaba", "nl": "kikker", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "žabe", "nom_pl": "žabe", "tags": ["alfabet"], "source": "aangevuld" },
+    { "id": "v.00.prst_r", "hr": "prst", "nl": "vinger", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "prsta", "nom_pl": "prsti", "tags": ["alfabet", "klinkende-r"], "source": "aangevuld" },
+    { "id": "v.00.vrt_r", "hr": "vrt", "nl": "tuin", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "vrta", "nom_pl": "vrtovi", "tags": ["alfabet", "klinkende-r"], "source": "aangevuld" },
+    { "id": "v.00.krv_r", "hr": "krv", "nl": "bloed", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "krvi", "tags": ["alfabet", "klinkende-r"], "source": "aangevuld" },
+
+    { "id": "v.00.abeceda", "hr": "abeceda", "nl": "alfabet", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "abecede", "nom_pl": "abecede", "tags": ["taal"], "source": "udzbenik p.14" },
+    { "id": "v.00.slovo", "hr": "slovo", "nl": "letter", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "slova", "nom_pl": "slova", "tags": ["taal"], "source": "aangevuld" },
+    { "id": "v.00.glas", "hr": "glas", "nl": "klank, stem", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "glasa", "nom_pl": "glasovi", "tags": ["taal"], "source": "udzbenik p.14" },
+    { "id": "v.00.latinica", "hr": "latinica", "nl": "Latijns schrift", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "latinice", "tags": ["taal"], "source": "udzbenik p.13" },
+    { "id": "v.00.drzava_hr", "hr": "samostalna država", "nl": "zelfstandige staat", "pos": "phrase", "tags": ["land"], "source": "udzbenik p.13" },
+    { "id": "v.00.sahovnica", "hr": "šahovnica", "nl": "schaakbordpatroon (wapen)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "šahovnice", "tags": ["land"], "source": "udzbenik p.13" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.00.1",
+      "title_nl": "Republika Hrvatska",
+      "kind": "input",
+      "text_hr": "ZASTAVA: crvena, bijela, plava\nGRB: crvena i bijela polja — šahovnica\nGLAVNI GRAD: Zagreb\nJEZIK: hrvatski\nPISMO: latinica\nMORE: Jadransko more\nOTOCI: tisuću dvjesto četrdeset šest\nNACIONALNI PARKOVI: osam\nŽUPANIJE: dvadeset jedna\nVALUTA: euro",
+      "translation_nl": "VLAG: rood, wit, blauw\nWAPEN: rode en witte velden — de šahovnica\nHOOFDSTAD: Zagreb\nTAAL: Kroatisch\nSCHRIFT: Latijns alfabet\nZEE: de Adriatische Zee\nEILANDEN: twaalfhonderdzesenveertig\nNATIONALE PARKEN: acht\nPROVINCIES: eenentwintig\nMUNTEENHEID: de euro",
+      "source": "udzbenik p.13",
+      "exercises": [
+        {
+          "id": "e.00.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Dertig letters, dertig klanken",
+          "body_nl": "Het Kroatisch heeft **30 letters** en gebruikt het Latijnse alfabet — je hoeft dus geen nieuw schrift te leren.\n\nDrie letters bestaan uit twee tekens maar zijn één letter: **dž, lj, nj**. De letters **q, w, x en y bestaan niet**.\n\nHet belangrijkste principe maakt Kroatisch veel makkelijker dan Nederlands: **elke letter heeft altijd precies één klank**. Onze 'e' klinkt anders in *pen*, *meel* en *de*; de Kroatische e is altijd dezelfde korte e.\n\nKun je een woord lezen, dan kun je het uitspreken. Zonder uitzonderingen.",
+          "targets": ["g.00.abeceda"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.002",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke letter bestaat NIET in het Kroatisch?",
+          "given": "…",
+          "answer": "w",
+          "distractors": ["ž", "lj", "đ"],
+          "explain_nl": "q, w, x en y komen in het Kroatische alfabet niet voor.",
+          "targets": ["g.00.abeceda"],
+          "difficulty": 2,
+          "source": "udzbenik p.14"
+        },
+        {
+          "id": "e.00.003",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord.",
+          "audio": "šešir",
+          "answer": "šešir",
+          "accepts": ["šešir"],
+          "explain_nl": "Twee keer de š-klank, als het Nederlandse 'sj'.",
+          "targets": ["g.00.palatali", "v.00.sesir_a"],
+          "difficulty": 3,
+          "source": "udzbenik p.14"
+        },
+        {
+          "id": "e.00.004",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord.",
+          "audio": "čokolada",
+          "answer": "čokolada",
+          "accepts": ["čokolada"],
+          "explain_nl": "Harde č aan het begin — als het Engelse 'match'.",
+          "targets": ["g.00.palatali", "v.00.cokolada"],
+          "difficulty": 3,
+          "source": "udzbenik p.14"
+        }
+      ]
+    },
+    {
+      "id": "s.00.2",
+      "title_nl": "č of ć, dž of đ",
+      "kind": "grammar",
+      "source": "udzbenik p.15",
+      "exercises": [
+        {
+          "id": "e.00.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het paar dat je oor moet leren",
+          "body_nl": "Vier letters vormen twee paren die voor ons bijna gelijk klinken:\n\n**č** en **dž** zijn **hard** — tong achter in de mond. Als het Engelse *ma**tch*** en *jungle*.\n**ć** en **đ** zijn **zacht** — tong tegen het gehemelte. Dichter bij *tja* en *djembé*.\n\n*čaj* (thee) tegenover *kuća* (huis) · *džemper* (trui) tegenover *đak* (leerling)\n\nHet verschil is echt: **caj** en **čaj** zijn niet hetzelfde woord, en de accenttekens weglaten is dus geen kleinigheid. Dit is precies de fout waar dit platform je later apart op afrekent.",
+          "targets": ["g.00.palatali"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.011",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke letter hoort in dit woord? (huis)",
+          "given": "ku__a",
+          "answer": "ć",
+          "distractors": ["č", "c", "dž"],
+          "explain_nl": "kuća heeft de zachte ć. Veel woorden en achternamen op -ić hebben deze klank.",
+          "targets": ["g.00.palatali"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.012",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke letter hoort in dit woord? (thee)",
+          "given": "__aj",
+          "answer": "č",
+          "distractors": ["ć", "c", "dž"],
+          "explain_nl": "čaj heeft de harde č.",
+          "targets": ["g.00.palatali"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.013",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de letter aan de beschrijving.",
+          "pairs": [
+            { "hr": "č", "nl": "hard, als Engels 'match'" },
+            { "hr": "ć", "nl": "zacht, als 'tja'" },
+            { "hr": "š", "nl": "als Nederlands 'sj'" },
+            { "hr": "ž", "nl": "als Frans 'journal'" }
+          ],
+          "targets": ["g.00.palatali"],
+          "difficulty": 3,
+          "source": "udzbenik p.15"
+        },
+        {
+          "id": "e.00.014",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord.",
+          "audio": "đak",
+          "answer": "đak",
+          "accepts": ["đak"],
+          "explain_nl": "Zachte đ — één letter, geen dj.",
+          "targets": ["g.00.palatali", "v.00.dak"],
+          "difficulty": 4,
+          "source": "udzbenik p.14"
+        },
+        {
+          "id": "e.00.015",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord.",
+          "audio": "džemper",
+          "answer": "džemper",
+          "accepts": ["džemper"],
+          "explain_nl": "Harde dž aan het begin. In het alfabet is dž één letter.",
+          "targets": ["g.00.palatali", "v.00.dzemper"],
+          "difficulty": 4,
+          "source": "udzbenik p.14"
+        }
+      ]
+    },
+    {
+      "id": "s.00.3",
+      "title_nl": "Uitspraak en getallen",
+      "kind": "practice",
+      "source": "udzbenik p.15-16",
+      "exercises": [
+        {
+          "id": "e.00.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Letters die anders klinken dan je verwacht",
+          "body_nl": "**c** is altijd **ts**: *cipela* klinkt als 'tsipela'.\n**u** klinkt als **oe**: *kuća* is 'koetja'.\n**j** is onze j, **h** spreek je echt uit: *hvala*.\n**e** is altijd kort, als in *pen*.\n\nEn dan de r. Die kan **zelf een klinker zijn**:\n*p**r**st* (vinger) · *v**r**t* (tuin) · *k**r**v* (bloed)\n\nWoorden die op papier geen klinker lijken te hebben, zijn dus gewoon uitspreekbaar — de r doet het werk.\n\nTot slot: er is **geen lange en korte klinkerspelling** zoals onze aa/a, en de **klemtoon valt nooit op de laatste lettergreep**.",
+          "targets": ["g.00.izgovor"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.021",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord. Let op de klinkende r.",
+          "audio": "prst",
+          "answer": "prst",
+          "accepts": ["prst"],
+          "explain_nl": "Geen klinker in het woord — de r is de klinker.",
+          "targets": ["g.00.izgovor", "v.00.prst_r"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.022",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoe spreek je de c uit in 'cipela'?",
+          "given": "cipela",
+          "answer": "ts",
+          "distractors": ["k", "s", "tsj"],
+          "explain_nl": "De Kroatische c is altijd ts — nooit k of s.",
+          "targets": ["g.00.izgovor", "v.00.cipela"],
+          "difficulty": 2,
+          "source": "udzbenik p.15"
+        },
+        {
+          "id": "e.00.023",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ het woord.",
+          "audio": "hvala",
+          "answer": "hvala",
+          "accepts": ["hvala"],
+          "explain_nl": "De h wordt echt uitgesproken, niet ingeslikt.",
+          "targets": ["g.00.izgovor"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.024",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het getal aan het cijfer.",
+          "pairs": [
+            { "hr": "četiri", "nl": "4" },
+            { "hr": "šest", "nl": "6" },
+            { "hr": "sedam", "nl": "7" },
+            { "hr": "devet", "nl": "9" }
+          ],
+          "targets": ["g.00.brojevi", "v.00.cetiri", "v.00.sest", "v.00.sedam", "v.00.devet"],
+          "difficulty": 2,
+          "source": "udzbenik p.16"
+        },
+        {
+          "id": "e.00.025",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Schrijf het getal voluit.",
+          "given": "Hrvatska ima ___ nacionalnih parkova. (8)",
+          "answer": "osam",
+          "accepts": ["osam"],
+          "targets": ["g.00.brojevi", "v.00.osam"],
+          "difficulty": 2,
+          "audio": "Hrvatska ima osam nacionalnih parkova.",
+          "source": "udzbenik p.13"
+        },
+        {
+          "id": "e.00.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ de getallen die je hoort.",
+          "audio": "jedan, dva, tri, četiri, pet",
+          "answer": "jedan, dva, tri, četiri, pet",
+          "accepts": ["jedan, dva, tri, četiri, pet", "jedan dva tri četiri pet"],
+          "targets": ["g.00.brojevi"],
+          "difficulty": 3,
+          "source": "udzbenik p.16"
+        },
+        {
+          "id": "e.00.027",
+          "type": "translate_hr_nl",
+          "mode": "receptive",
+          "prompt_nl": "Vertaal naar het Nederlands.",
+          "given": "Pismo je latinica, a jezik je hrvatski.",
+          "answer": "Het schrift is het Latijnse alfabet, en de taal is Kroatisch.",
+          "accepts": [
+            "Het schrift is het Latijnse alfabet, en de taal is Kroatisch.",
+            "Het schrift is latinica en de taal is Kroatisch."
+          ],
+          "targets": ["v.00.latinica"],
+          "difficulty": 3,
+          "source": "udzbenik p.13"
+        }
+      ]
+    },
+    {
+      "id": "s.00.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.00.030",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ. Alle vier de lastige letters komen langs.",
+          "audio": "čaj, kuća, džemper, đak",
+          "answer": "čaj, kuća, džemper, đak",
+          "accepts": ["čaj, kuća, džemper, đak", "čaj kuća džemper đak"],
+          "explain_nl": "Hard-zacht-hard-zacht: č, ć, dž, đ. Dit is de reeks die je oor moet leren scheiden.",
+          "targets": ["g.00.palatali"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.00.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie Kroatische woorden op die je al kent, met de juiste diakritische tekens.",
+          "given": "Napišite tri hrvatske riječi.",
+          "model_answer": "šešir, kuća, čokolada",
+          "rubric_nl": [
+            "Drie woorden opgeschreven",
+            "De diakritische tekens staan erbij waar ze horen",
+            "De spelling klopt"
+          ],
+          "targets": ["g.00.abeceda", "g.00.palatali"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

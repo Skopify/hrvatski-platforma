@@ -1,0 +1,516 @@
+{
+  "id": "lesson-01",
+  "number": 1,
+  "title_hr": "Dobro došli!",
+  "title_nl": "Welkom!",
+  "cefr": "A1.1",
+  "source": { "udzbenik_pages": "19-30", "vjezbenica_pages": "11-14" },
+  "can_do_nl": [
+    "Ik kan iemand groeten, afscheid nemen en vragen hoe het gaat.",
+    "Ik kan mezelf voorstellen en reageren als iemand zich voorstelt.",
+    "Ik kan zeggen wie of wat iets is met het werkwoord biti.",
+    "Ik kan een ja/nee-vraag stellen en beantwoorden.",
+    "Ik herken of een zelfstandig naamwoord mannelijk, vrouwelijk of onzijdig is."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.pron.personal",
+      "title_nl": "Persoonlijke voornaamwoorden",
+      "cefr": "A1.1",
+      "explanation_nl": "Het Kroatisch heeft geen aparte vorm voor 'het' — onzijdige dingen zijn 'ono'. Belangrijker: het onderwerpsvoornaamwoord wordt meestal wéggelaten, omdat de werkwoordsuitgang al verraadt wie er handelt. 'Sam studentica' is normaal; 'Ja sam studentica' benadrukt juist 'ík'.",
+      "contrast_nl": "In het Nederlands is het onderwerp verplicht ('ik ben'). In het Kroatisch is het optioneel en dus betekenisvol: als je het toevoegt, leg je nadruk. Vi met hoofdletter is de beleefdheidsvorm voor één persoon, vi met kleine letter is meervoud.",
+      "paradigm": {
+        "caption_nl": "Persoonlijke voornaamwoorden — nominatief",
+        "columns": ["jednina (enkelvoud)", "množina (meervoud)"],
+        "rows": [
+          { "label": "1.", "cells": ["ja", "mi"] },
+          { "label": "2.", "cells": ["ti", "vi / Vi"] },
+          { "label": "3.", "cells": ["on, ona, ono", "oni, one, ona"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het voornaamwoord standaard toevoegen zoals in het Nederlands — dat klinkt nadrukkelijk of onnatuurlijk.",
+        "vi (jullie) verwarren met Vi (u). Bij Vi blijft het werkwoord meervoud, maar een naamwoord kan enkelvoud zijn: 'Vi ste student.'",
+        "oni = gemengde of mannelijke groep, one = uitsluitend vrouwelijke groep."
+      ],
+      "prerequisites": [],
+      "source": "udzbenik p.22"
+    },
+    {
+      "id": "g.biti.present.short",
+      "title_nl": "biti (zijn) — korte vorm",
+      "cefr": "A1.1",
+      "explanation_nl": "De korte vorm is de gewone vorm in mededelende zinnen. Hij is onbeklemtoond (een clitisch woordje) en kan daarom nooit als eerste woord in de zin staan.",
+      "contrast_nl": "Nederlands heeft één 'ben/bent/is'. Kroatisch heeft drie sets: kort (sam), lang (jesam) en ontkennend (nisam). Ze zijn niet uitwisselbaar — de keuze hangt af van de positie in de zin en van nadruk.",
+      "paradigm": {
+        "caption_nl": "biti — presens, onbeklemtoonde (korte) vorm",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["ja sam", "mi smo"] },
+          { "label": "2.", "cells": ["ti si", "vi/Vi ste"] },
+          { "label": "3.", "cells": ["on, ona je", "oni, one su"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De korte vorm vooraan zetten: 'Sam student' kan niet. Er moet iets vóór staan: 'Ja sam student' of 'Student sam'.",
+        "'je' uitspreken als het Nederlandse 'je' — het is [jɛ]."
+      ],
+      "prerequisites": ["g.pron.personal"],
+      "source": "udzbenik p.22"
+    },
+    {
+      "id": "g.biti.present.long",
+      "title_nl": "biti — lange vorm (in vragen en korte antwoorden)",
+      "cefr": "A1.1",
+      "explanation_nl": "De lange, beklemtoonde vorm gebruik je in ja/nee-vragen met het vraagpartikel li, en in korte antwoorden. Een ja/nee-vraag bouw je als: lange vorm + li + rest. 'Jesi li ti student?' Het antwoord is 'Da, jesam.' — niet 'Da, sam.'",
+      "contrast_nl": "Het Nederlands draait alleen de volgorde om ('Ben jij student?'). Het Kroatisch heeft daarvoor een apart woordje li én een aparte werkwoordsvorm.",
+      "paradigm": {
+        "caption_nl": "biti — presens, beklemtoonde (lange) vorm",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["ja jesam", "mi jesmo"] },
+          { "label": "2.", "cells": ["ti jesi", "vi/Vi jeste"] },
+          { "label": "3.", "cells": ["on, ona je(st)", "oni, one jesu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Antwoorden met de korte vorm: 'Da, sam.' bestaat niet — het moet 'Da, jesam.' zijn.",
+        "li vergeten: 'Ti si student?' kan als intonatievraag, maar 'Jesi li ti student?' is de neutrale vorm.",
+        "3e persoon enkelvoud: in de vraag 'Je li on student?' staat je vóór li."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.24"
+    },
+    {
+      "id": "g.biti.present.negative",
+      "title_nl": "biti — ontkennende vorm (nisam ...)",
+      "cefr": "A1.1",
+      "explanation_nl": "De ontkenning van biti is één woord: ne + sam is samengetrokken tot nisam. Je zet dus nooit 'ne' los vóór de korte vorm. Anders dan de korte vorm mág nisam wél vooraan staan, want hij is beklemtoond.",
+      "contrast_nl": "Nederlands: 'ik ben niet' (twee woorden). Kroatisch: 'nisam' (één woord). Bij alle andere werkwoorden is het wél los: 'ne radim' = 'ik werk niet'. biti is de uitzondering.",
+      "paradigm": {
+        "caption_nl": "biti — presens, ontkennend",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["ja nisam", "mi nismo"] },
+          { "label": "2.", "cells": ["ti nisi", "vi/Vi niste"] },
+          { "label": "3.", "cells": ["on, ona nije", "oni, one nisu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "'ne sam' schrijven in plaats van 'nisam'.",
+        "3e persoon: 'nije', niet 'neje'."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.26"
+    },
+    {
+      "id": "g.noun.gender.nom.sg",
+      "title_nl": "Zelfstandige naamwoorden — de drie geslachten",
+      "cefr": "A1.1",
+      "explanation_nl": "Het geslacht lees je bijna altijd af van de uitgang in de nominatief enkelvoud: medeklinker = mannelijk (avion, hotel), -a = vrouwelijk (kuća, knjiga), -o of -e = onzijdig (pismo, sunce). Dit is geen decoratie: het geslacht bepaalt álle latere naamvalsuitgangen, dus je leert een woord altijd mét zijn geslacht.",
+      "contrast_nl": "Nederlands heeft de/het en dat kun je nauwelijks afleiden. Kroatisch is voorspelbaarder — maar er zijn uitzonderingen: veel woorden op een medeklinker zijn tóch vrouwelijk (noć, ljubav, riječ), en sommige mannelijke persoonswoorden eindigen op -a (tata, kolega).",
+      "paradigm": {
+        "caption_nl": "Nominatief enkelvoud en meervoud",
+        "columns": ["rod (geslacht)", "jednina", "množina"],
+        "rows": [
+          { "label": "muški (m)", "cells": ["medeklinker", "poklon", "pokloni"] },
+          { "label": "ženski (v)", "cells": ["-a", "knjiga", "knjige"] },
+          { "label": "srednji (o)", "cells": ["-o / -e", "stablo, sunce", "stabla, sunca"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "tata en kolega zijn mannelijk, ondanks de -a.",
+        "Onzijdig meervoud eindigt op -a en lijkt daardoor op een vrouwelijk enkelvoud.",
+        "Sommige woorden op een medeklinker zijn vrouwelijk — die komen in les 18 uitgebreid terug."
+      ],
+      "prerequisites": [],
+      "source": "udzbenik p.27"
+    },
+    {
+      "id": "g.pron.demonstrative",
+      "title_nl": "Aanwijzend: ovo / to / ono",
+      "cefr": "A1.1",
+      "explanation_nl": "Om iets aan te wijzen gebruik je een onveranderlijke vorm: ovo (dit, hier bij mij), to (dat, bij jou), ono (dat daar, verderop). De zin is altijd 'Ovo je ...' of 'To su ...' — het werkwoord past zich aan het aantal aan, het aanwijswoord niet.",
+      "contrast_nl": "Nederlands onderscheidt twee afstanden (dit/dat), Kroatisch drie. En let op: 'To je knjiga' — bij meervoud wordt het 'To su knjige', maar 'to' blijft 'to'.",
+      "paradigm": {
+        "caption_nl": "Aanwijzen",
+        "columns": ["afstand", "vorm", "voorbeeld"],
+        "rows": [
+          { "label": "hier bij mij", "cells": ["ovo", "Ovo je poklon."] },
+          { "label": "bij jou", "cells": ["to", "To je autobus."] },
+          { "label": "daar", "cells": ["ono", "Ono je hotel."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "'To je knjige' — fout: bij meervoud hoort 'su': 'To su knjige.'",
+        "Het aanwijswoord verbuigen naar geslacht; in deze constructie blijft het onveranderd."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.27"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.01.bok", "hr": "Bok!", "nl": "Hoi! / Doei!", "pos": "phrase", "tags": ["groet", "informeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.dobar_dan", "hr": "Dobar dan!", "nl": "Goedendag!", "pos": "phrase", "tags": ["groet", "formeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.dobro_jutro", "hr": "Dobro jutro!", "nl": "Goedemorgen!", "pos": "phrase", "tags": ["groet"], "source": "udzbenik p.21" },
+    { "id": "v.01.dobra_vecer", "hr": "Dobra večer!", "nl": "Goedenavond!", "pos": "phrase", "tags": ["groet"], "source": "udzbenik p.21" },
+    { "id": "v.01.dovidenja", "hr": "Doviđenja!", "nl": "Tot ziens!", "pos": "phrase", "tags": ["afscheid", "formeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.vidimo_se", "hr": "Vidimo se!", "nl": "Tot ziens! / We zien elkaar!", "pos": "phrase", "tags": ["afscheid", "informeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.kako_si", "hr": "Kako si?", "nl": "Hoe gaat het (met je)?", "pos": "phrase", "tags": ["informeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.kako_ste", "hr": "Kako ste?", "nl": "Hoe gaat het (met u/jullie)?", "pos": "phrase", "tags": ["formeel"], "source": "udzbenik p.20" },
+    { "id": "v.01.odlicno", "hr": "Odlično.", "nl": "Uitstekend.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.izvrsno", "hr": "Izvrsno.", "nl": "Voortreffelijk.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.jako_dobro", "hr": "Jako dobro.", "nl": "Heel goed.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.dobro", "hr": "Dobro.", "nl": "Goed.", "pos": "adv", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.tako_tako", "hr": "Tako-tako.", "nl": "Gaat wel. / Zozo.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.nisam_bas_dobro", "hr": "Nisam baš dobro.", "nl": "Niet zo goed.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.lose", "hr": "Loše sam.", "nl": "Slecht.", "pos": "phrase", "tags": ["bevinden"], "source": "udzbenik p.20" },
+    { "id": "v.01.sto_je_novo", "hr": "Što je novo?", "nl": "Wat is er nieuw?", "pos": "phrase", "tags": ["smalltalk"], "source": "udzbenik p.20" },
+    { "id": "v.01.nista_novo", "hr": "Ništa novo.", "nl": "Niets nieuws.", "pos": "phrase", "tags": ["smalltalk"], "source": "udzbenik p.20" },
+    { "id": "v.01.drago_mi_je", "hr": "Drago mi je.", "nl": "Aangenaam.", "pos": "phrase", "tags": ["kennismaken"], "source": "udzbenik p.20" },
+    { "id": "v.01.hvala_na_pitanju", "hr": "Hvala na pitanju.", "nl": "Dank voor het vragen.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.ugodan_dan", "hr": "Ugodan dan!", "nl": "Prettige dag!", "pos": "phrase", "tags": ["afscheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.hvala", "hr": "Hvala.", "nl": "Dank je / dank u.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.molim", "hr": "Molim.", "nl": "Graag gedaan. / Alsjeblieft.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.nema_na_cemu", "hr": "Nema na čemu.", "nl": "Geen dank.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.izvoli", "hr": "Izvoli. / Izvolite.", "nl": "Alsjeblieft. / Alstublieft. (bij aanreiken)", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.zivjeli", "hr": "Živjeli!", "nl": "Proost!", "pos": "phrase", "tags": ["sociaal"], "source": "udzbenik p.21" },
+    { "id": "v.01.dobar_tek", "hr": "Dobar tek!", "nl": "Eet smakelijk!", "pos": "phrase", "tags": ["sociaal"], "source": "udzbenik p.21" },
+    { "id": "v.01.takoder", "hr": "također", "nl": "ook, eveneens", "pos": "adv", "tags": ["sociaal"], "source": "udzbenik p.21" },
+    { "id": "v.01.oprosti", "hr": "Oprosti. / Oprostite.", "nl": "Sorry. / Neemt u mij niet kwalijk.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.zao_mi_je", "hr": "Žao mi je.", "nl": "Het spijt me.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.nema_veze", "hr": "Nema veze.", "nl": "Geeft niet.", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.21" },
+    { "id": "v.01.sretan_put", "hr": "Sretan put!", "nl": "Goede reis!", "pos": "phrase", "tags": ["afscheid"], "source": "udzbenik p.21" },
+
+    { "id": "v.01.student", "hr": "student", "nl": "student", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "studenta", "nom_pl": "studenti", "tags": ["persoon"], "source": "udzbenik p.22" },
+    { "id": "v.01.studentica", "hr": "studentica", "nl": "studente", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "studentice", "nom_pl": "studentice", "tags": ["persoon"], "source": "udzbenik p.22" },
+    { "id": "v.01.profesor", "hr": "profesor", "nl": "docent, leraar", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "profesora", "nom_pl": "profesori", "tags": ["persoon", "beroep"], "source": "udzbenik p.23" },
+    { "id": "v.01.profesorica", "hr": "profesorica", "nl": "docente, lerares", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "profesorice", "nom_pl": "profesorice", "tags": ["persoon", "beroep"], "source": "udzbenik p.23" },
+    { "id": "v.01.lektor", "hr": "lektor", "nl": "taaldocent", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "lektora", "nom_pl": "lektori", "tags": ["persoon", "beroep"], "source": "udzbenik p.23" },
+    { "id": "v.01.lektorica", "hr": "lektorica", "nl": "taaldocente", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "lektorice", "nom_pl": "lektorice", "tags": ["persoon", "beroep"], "source": "udzbenik p.23" },
+    { "id": "v.01.prijatelj", "hr": "prijatelj", "nl": "vriend", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "prijatelja", "nom_pl": "prijatelji", "tags": ["persoon"], "source": "udzbenik p.22" },
+    { "id": "v.01.prijateljica", "hr": "prijateljica", "nl": "vriendin", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "prijateljice", "nom_pl": "prijateljice", "tags": ["persoon"], "source": "udzbenik p.22" },
+    { "id": "v.01.hrvat", "hr": "Hrvat", "nl": "Kroaat", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Hrvata", "nom_pl": "Hrvati", "tags": ["nationaliteit"], "source": "udzbenik p.24" },
+    { "id": "v.01.hrvatica", "hr": "Hrvatica", "nl": "Kroatische", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Hrvatice", "nom_pl": "Hrvatice", "tags": ["nationaliteit"], "source": "udzbenik p.24" },
+    { "id": "v.01.mama", "hr": "mama", "nl": "mama", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "mame", "nom_pl": "mame", "tags": ["familie"], "source": "udzbenik p.21" },
+    { "id": "v.01.tata", "hr": "tata", "nl": "papa", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "e", "gen_sg": "tate", "nom_pl": "tate", "tags": ["familie", "uitzondering"], "source": "udzbenik p.26" },
+    { "id": "v.01.sestra", "hr": "sestra", "nl": "zus", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "sestre", "nom_pl": "sestre", "tags": ["familie"], "source": "udzbenik p.26" },
+
+    { "id": "v.01.avion", "hr": "avion", "nl": "vliegtuig", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "aviona", "nom_pl": "avioni", "tags": ["vervoer", "ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.automobil", "hr": "automobil", "nl": "auto", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "automobila", "nom_pl": "automobili", "tags": ["vervoer", "ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.autobus", "hr": "autobus", "nl": "bus", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "autobusa", "nom_pl": "autobusi", "tags": ["vervoer", "ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.tramvaj", "hr": "tramvaj", "nl": "tram", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "tramvaja", "nom_pl": "tramvaji", "tags": ["vervoer", "ding"], "source": "udzbenik p.19" },
+    { "id": "v.01.telefon", "hr": "telefon", "nl": "telefoon", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "telefona", "nom_pl": "telefoni", "tags": ["ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.hotel", "hr": "hotel", "nl": "hotel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "hotela", "nom_pl": "hoteli", "tags": ["ding", "reizen"], "source": "udzbenik p.27" },
+    { "id": "v.01.poklon", "hr": "poklon", "nl": "cadeau", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "poklona", "nom_pl": "pokloni", "tags": ["ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.kofer", "hr": "kofer", "nl": "koffer", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kofera", "nom_pl": "koferi", "tags": ["ding", "reizen"], "source": "udzbenik p.27" },
+    { "id": "v.01.sladoled", "hr": "sladoled", "nl": "ijsje", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sladoleda", "nom_pl": "sladoledi", "tags": ["eten"], "source": "udzbenik p.27" },
+    { "id": "v.01.restoran", "hr": "restoran", "nl": "restaurant", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "restorana", "nom_pl": "restorani", "tags": ["ding", "eten"], "source": "udzbenik p.21" },
+    { "id": "v.01.sendvic", "hr": "sendvič", "nl": "boterham, sandwich", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sendviča", "nom_pl": "sendviči", "tags": ["eten"], "source": "udzbenik p.21" },
+    { "id": "v.01.caj", "hr": "čaj", "nl": "thee", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "čaja", "nom_pl": "čajevi", "tags": ["eten"], "source": "udzbenik p.21" },
+
+    { "id": "v.01.kuca", "hr": "kuća", "nl": "huis", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kuće", "nom_pl": "kuće", "tags": ["ding", "wonen"], "source": "udzbenik p.27" },
+    { "id": "v.01.knjiga", "hr": "knjiga", "nl": "boek", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "knjige", "nom_pl": "knjige", "tags": ["ding", "school"], "source": "udzbenik p.27" },
+    { "id": "v.01.biljeznica", "hr": "bilježnica", "nl": "schrift", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "bilježnice", "nom_pl": "bilježnice", "tags": ["ding", "school"], "source": "udzbenik p.27" },
+    { "id": "v.01.olovka", "hr": "olovka", "nl": "potlood", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "olovke", "nom_pl": "olovke", "tags": ["ding", "school"], "source": "udzbenik p.27" },
+    { "id": "v.01.torba", "hr": "torba", "nl": "tas", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "torbe", "nom_pl": "torbe", "tags": ["ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.karta", "hr": "karta", "nl": "kaart(je)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "karte", "nom_pl": "karte", "tags": ["ding", "reizen"], "source": "udzbenik p.19" },
+    { "id": "v.01.vecera", "hr": "večera", "nl": "avondeten", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "večere", "nom_pl": "večere", "tags": ["eten"], "source": "udzbenik p.21" },
+    { "id": "v.01.kava", "hr": "kava", "nl": "koffie", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kave", "nom_pl": "kave", "tags": ["eten"], "source": "udzbenik p.21" },
+
+    { "id": "v.01.pismo", "hr": "pismo", "nl": "brief", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "pisma", "nom_pl": "pisma", "tags": ["ding"], "source": "udzbenik p.27" },
+    { "id": "v.01.sunce", "hr": "sunce", "nl": "zon", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "sunca", "nom_pl": "sunca", "tags": ["natuur"], "source": "udzbenik p.27" },
+    { "id": "v.01.stablo", "hr": "stablo", "nl": "boom", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "stabla", "nom_pl": "stabla", "tags": ["natuur"], "source": "udzbenik p.27" },
+    { "id": "v.01.more", "hr": "more", "nl": "zee", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "mora", "nom_pl": "mora", "tags": ["natuur"], "source": "udzbenik p.19" },
+    { "id": "v.01.vino", "hr": "vino", "nl": "wijn", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "vina", "nom_pl": "vina", "tags": ["eten"], "source": "udzbenik p.19" },
+
+    { "id": "v.01.tko", "hr": "tko", "nl": "wie", "pos": "pron", "tags": ["vraagwoord"], "source": "udzbenik p.23" },
+    { "id": "v.01.sto", "hr": "što", "nl": "wat", "pos": "pron", "tags": ["vraagwoord"], "source": "udzbenik p.27" },
+    { "id": "v.01.da", "hr": "da", "nl": "ja", "pos": "adv", "tags": ["basis"], "source": "udzbenik p.24" },
+    { "id": "v.01.ne", "hr": "ne", "nl": "nee, niet", "pos": "adv", "tags": ["basis"], "source": "udzbenik p.26" },
+    { "id": "v.01.i", "hr": "i", "nl": "en, ook", "pos": "conj", "tags": ["basis"], "source": "udzbenik p.23" },
+    { "id": "v.01.a", "hr": "a", "nl": "en, maar (tegenstelling)", "pos": "conj", "tags": ["basis"], "source": "udzbenik p.20" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.01.1",
+      "title_nl": "Kennismaken",
+      "kind": "input",
+      "text_hr": "Mariano: Hej, Margareta! Bok! Kako si?\nMargareta: Bok, Mariano. Hvala, izvrsna sam. A kako si ti?\nMariano: Ja sam dobro. Što je novo?\nMargareta: Ništa novo.",
+      "translation_nl": "Mariano: Hé, Margareta! Hoi! Hoe gaat het?\nMargareta: Hoi, Mariano. Dank je, uitstekend. En hoe gaat het met jou?\nMariano: Met mij gaat het goed. Wat is er nieuw?\nMargareta: Niets nieuws.",
+      "source": "udzbenik p.20",
+      "exercises": [
+        {
+          "id": "e.01.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Merk op",
+          "body_nl": "Margareta zegt **izvrsna** sam, niet *izvrsno*. Het bijvoeglijk naamwoord past zich aan haar geslacht aan. Een man zou zeggen: izvrstan sam. Deze congruentie loopt door het hele Kroatisch heen — hou hem vanaf nu in de gaten.",
+          "targets": ["g.biti.present.short"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.002",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de begroeting aan de betekenis.",
+          "pairs": [
+            { "hr": "Bok!", "nl": "Hoi! / Doei!" },
+            { "hr": "Dobar dan!", "nl": "Goedendag!" },
+            { "hr": "Doviđenja!", "nl": "Tot ziens!" },
+            { "hr": "Drago mi je.", "nl": "Aangenaam." }
+          ],
+          "targets": ["v.01.bok", "v.01.dobar_dan", "v.01.dovidenja", "v.01.drago_mi_je"],
+          "difficulty": 1,
+          "source": "udzbenik p.20"
+        },
+        {
+          "id": "e.01.003",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Je komt om negen uur 's ochtends je buurvrouw tegen. Wat zeg je?",
+          "given": "___, gospođo Perković!",
+          "answer": "Dobro jutro",
+          "distractors": ["Dobra večer", "Laku noć", "Dobar tek"],
+          "explain_nl": "Dobro jutro gebruik je tot ongeveer 10 uur; daarna Dobar dan.",
+          "targets": ["v.01.dobro_jutro"],
+          "difficulty": 1,
+          "audio": "Dobro jutro, gospođo Perković!",
+          "source": "udzbenik p.21"
+        }
+      ]
+    },
+    {
+      "id": "s.01.2",
+      "title_nl": "Het werkwoord biti",
+      "kind": "grammar",
+      "source": "udzbenik p.22-26",
+      "exercises": [
+        {
+          "id": "e.01.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie vormen van één werkwoord",
+          "body_nl": "biti heeft drie presensvormen naast elkaar. **Kort** (sam) is de standaard in gewone zinnen en kan nooit vooraan staan. **Lang** (jesam) gebruik je in ja/nee-vragen met li en in korte antwoorden. **Ontkennend** (nisam) is één woord — je zet nooit ne los ervoor.\n\nJa sam student. → Jesi li ti student? → Da, jesam. / Ne, nisam.",
+          "targets": ["g.biti.present.short", "g.biti.present.long", "g.biti.present.negative"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de korte vorm van biti in.",
+          "given": "Ana ___ studentica.",
+          "answer": "je",
+          "accepts": ["je"],
+          "explain_nl": "Derde persoon enkelvoud, onbeklemtoond.",
+          "targets": ["g.biti.present.short"],
+          "difficulty": 1,
+          "audio": "Ana je studentica.",
+          "source": "vježbenica p.12"
+        },
+        {
+          "id": "e.01.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de korte vorm van biti in.",
+          "given": "Mi ___ Vaši studenti.",
+          "answer": "smo",
+          "accepts": ["smo"],
+          "targets": ["g.biti.present.short"],
+          "difficulty": 1,
+          "audio": "Mi smo Vaši studenti.",
+          "source": "vježbenica p.11"
+        },
+        {
+          "id": "e.01.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de ontkennende vorm van biti in.",
+          "given": "Marija ___ lektorica.",
+          "answer": "nije",
+          "accepts": ["nije"],
+          "explain_nl": "ne + je wordt nije — één woord.",
+          "targets": ["g.biti.present.negative"],
+          "difficulty": 2,
+          "audio": "Marija nije lektorica.",
+          "source": "vježbenica p.13"
+        },
+        {
+          "id": "e.01.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ja ne sam profesor.",
+          "answer": "Ja nisam profesor.",
+          "accepts": ["Ja nisam profesor.", "Nisam profesor.", "Ja nisam profesor"],
+          "explain_nl": "biti ontkent met één samengetrokken woord: nisam. Alleen bij andere werkwoorden staat ne los.",
+          "targets": ["g.biti.present.negative"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.015",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Sam student.",
+          "answer": "Ja sam student.",
+          "accepts": ["Ja sam student.", "Student sam.", "Ja sam student", "Student sam"],
+          "explain_nl": "De korte vorm sam is onbeklemtoond en kan niet als eerste woord staan. Zet er het voornaamwoord of het naamwoord vóór.",
+          "targets": ["g.biti.present.short"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.016",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde tot een vraag.",
+          "tokens": ["Jesi", "li", "ti", "studentica"],
+          "answer": "Jesi li ti studentica?",
+          "accepts": ["Jesi li ti studentica?", "Jesi li ti studentica"],
+          "explain_nl": "In een ja/nee-vraag staat de lange vorm voorop, direct gevolgd door li.",
+          "targets": ["g.biti.present.long"],
+          "difficulty": 2,
+          "audio": "Jesi li ti studentica?",
+          "source": "udzbenik p.23"
+        },
+        {
+          "id": "e.01.017",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Antwoord bevestigend in de korte vorm.",
+          "given": "A: Jesi li ti Hrvat?  B: Da, ___.",
+          "answer": "jesam",
+          "accepts": ["jesam"],
+          "explain_nl": "Een kort antwoord vraagt om de lange, beklemtoonde vorm. 'Da, sam' bestaat niet.",
+          "targets": ["g.biti.present.long"],
+          "difficulty": 3,
+          "audio": "Jesi li ti Hrvat? Da, jesam.",
+          "source": "udzbenik p.24"
+        },
+        {
+          "id": "e.01.018",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Zij (meervoud, alleen vrouwen) zijn geen studentes.",
+          "answer": "One nisu studentice.",
+          "accepts": ["One nisu studentice.", "One nisu studentice"],
+          "explain_nl": "one = uitsluitend vrouwelijke groep; nisu = ontkennend meervoud; studentice = nominatief meervoud.",
+          "targets": ["g.pron.personal", "g.biti.present.negative", "v.01.studentica"],
+          "difficulty": 4,
+          "audio": "One nisu studentice.",
+          "source": "udzbenik p.26"
+        }
+      ]
+    },
+    {
+      "id": "s.01.3",
+      "title_nl": "Wat is dat? — dingen en geslacht",
+      "kind": "practice",
+      "source": "udzbenik p.27",
+      "exercises": [
+        {
+          "id": "e.01.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Leer een woord nooit kaal",
+          "body_nl": "Het geslacht bepaalt élke latere naamvalsuitgang. Neem je een woord op zonder geslacht, dan moet je het bij de accusatief (les 5) en de locatief (les 10) opnieuw leren. Vuistregel: medeklinker = m, -a = v, -o/-e = o. Uitzonderingen worden apart gemarkeerd — tata is mannelijk.",
+          "targets": ["g.noun.gender.nom.sg"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.021",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft 'bilježnica'?",
+          "given": "bilježnica",
+          "answer": "ženski rod (vrouwelijk)",
+          "distractors": ["muški rod (mannelijk)", "srednji rod (onzijdig)"],
+          "explain_nl": "Uitgang -a → vrouwelijk.",
+          "targets": ["g.noun.gender.nom.sg", "v.01.biljeznica"],
+          "difficulty": 1,
+          "source": "udzbenik p.27"
+        },
+        {
+          "id": "e.01.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "To je autobus. To ___ ___.",
+          "answer": "su autobusi",
+          "accepts": ["su autobusi"],
+          "explain_nl": "Mannelijk meervoud op -i; het werkwoord wordt su, maar 'to' verandert niet.",
+          "targets": ["g.noun.gender.nom.sg", "g.pron.demonstrative"],
+          "difficulty": 2,
+          "audio": "To su autobusi.",
+          "source": "udzbenik p.27"
+        },
+        {
+          "id": "e.01.023",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Ovo je bilježnica, a ono je olovka.",
+          "answer": "Ovo je bilježnica, a ono je olovka.",
+          "accepts": ["Ovo je bilježnica, a ono je olovka.", "Ovo je bilježnica a ono je olovka."],
+          "targets": ["v.01.biljeznica", "v.01.olovka", "g.pron.demonstrative"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.024",
+          "type": "translate_hr_nl",
+          "mode": "receptive",
+          "prompt_nl": "Vertaal naar het Nederlands.",
+          "given": "Ovo nije poklon, to je knjiga.",
+          "answer": "Dit is geen cadeau, dat is een boek.",
+          "accepts": ["Dit is geen cadeau, dat is een boek.", "Dit is geen cadeau. Dat is een boek."],
+          "targets": ["v.01.poklon", "v.01.knjiga", "g.biti.present.negative"],
+          "difficulty": 2,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.01.025",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Tko si ti?",
+          "given": "Tko si ti?",
+          "model_answer": "Ja sam Antonio. Ja sam student.",
+          "rubric_nl": ["Gebruikt biti in de 1e persoon enkelvoud", "Nominatief bij het naamwoord", "Minimaal één volledige zin"],
+          "targets": ["g.biti.present.short", "g.pron.personal"],
+          "difficulty": 3,
+          "source": "udzbenik p.23"
+        }
+      ]
+    },
+    {
+      "id": "s.01.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "$comment": "Bij les 1 is er nog geen eerdere stof; vanaf les 2 trekt deze sectie items uit voorgaande lessen via de SRS-planner.",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.01.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Bent u de docente Ana Majić? — Ja, dat ben ik.",
+          "answer": "Jeste li Vi lektorica Ana Majić? Da, jesam.",
+          "accepts": ["Jeste li Vi lektorica Ana Majić? Da, jesam.", "Jeste li Vi lektorica Ana Majić? — Da, jesam."],
+          "explain_nl": "Beleefdheidsvorm Vi met werkwoord in het meervoud; kort antwoord met de lange vorm jesam.",
+          "targets": ["g.biti.present.long", "g.pron.personal", "v.01.lektorica"],
+          "difficulty": 4,
+          "audio": "Jeste li Vi lektorica Ana Majić? Da, jesam.",
+          "source": "udzbenik p.23"
+        }
+      ]
+    }
+  ]
+}

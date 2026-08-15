@@ -1,0 +1,490 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "title_hr": "Ovo nije zbogom",
+  "title_nl": "Dit is geen afscheid",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "267-280", "vjezbenica_pages": "97-100" },
+  "can_do_nl": [
+    "Ik kan iemand aanspreken met de vocatief.",
+    "Ik kan een bevel, verzoek of uitnodiging formuleren.",
+    "Ik kan een ontkennend bevel geven met nemoj.",
+    "Ik kan neka gebruiken voor een derde persoon.",
+    "Ik ken de onregelmatige imperatieven idi, dođi, budi, reci.",
+    "Ik kan op een natuurlijke manier afscheid nemen."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.20.imperativ",
+      "title_nl": "IMPERATIEF — bevelen en verzoeken",
+      "cefr": "A2.2",
+      "explanation_nl": "De imperatief maak je uit de stam van de derde persoon meervoud. Haal de uitgang eraf en plak -i, -imo, -ite (of -j, -jmo, -jte als de stam op een klinker eindigt). rade → radi, radimo, radite. čitaju → čitaj, čitajmo, čitajte.",
+      "contrast_nl": "Het Nederlands heeft alleen een tweede persoon ('lees!') en gebruikt 'laten we' voor de eerste persoon meervoud. Het Kroatisch heeft daar een echte werkwoordsvorm voor: čitajmo betekent 'laten we lezen'.",
+      "paradigm": {
+        "caption_nl": "Imperativ — drie vormen",
+        "columns": ["3. l. mn.", "ti", "mi", "vi"],
+        "rows": [
+          { "label": "čitaju", "cells": ["čitaj", "čitajmo", "čitajte"] },
+          { "label": "rade", "cells": ["radi", "radimo", "radite"] },
+          { "label": "piju", "cells": ["pij", "pijmo", "pijte"] },
+          { "label": "gledaju", "cells": ["gledaj", "gledajmo", "gledajte"] },
+          { "label": "kupuju", "cells": ["kupuj", "kupujmo", "kupujte"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De imperatief uit de infinitief afleiden — je hebt de derde persoon meervoud nodig.",
+        "De vi-vorm is gelijk aan het presens (radite), de ti-vorm niet (radi tegenover radiš).",
+        "Bij een wederkerend werkwoord blijft se staan: odmori se, vrati se."
+      ],
+      "prerequisites": ["g.09.treca_mnozina"],
+      "source": "udzbenik p.268"
+    },
+    {
+      "id": "g.20.imperativ_nepravilni",
+      "title_nl": "Onregelmatige imperatieven",
+      "cefr": "A2.2",
+      "explanation_nl": "Een handvol veelgebruikte werkwoorden heeft een eigen imperatief: ići → idi, doći → dođi, biti → budi, reći → reci, jesti → jedi, ući → uđi, izići → iziđi, vući → vuci, obući se → obuci se.",
+      "contrast_nl": "Zoals altijd zijn het juist de meest gebruikte werkwoorden die afwijken. Deze acht kom je dagelijks tegen, dus ze zijn de moeite van het uit je hoofd leren waard.",
+      "paradigm": {
+        "caption_nl": "Onregelmatige imperatieven",
+        "columns": ["infinitief", "ti", "vi"],
+        "rows": [
+          { "label": "1.", "cells": ["ići", "idi", "idite"] },
+          { "label": "2.", "cells": ["doći", "dođi", "dođite"] },
+          { "label": "3.", "cells": ["biti", "budi", "budite"] },
+          { "label": "4.", "cells": ["reći", "reci", "recite"] },
+          { "label": "5.", "cells": ["jesti", "jedi", "jedite"] },
+          { "label": "6.", "cells": ["ući", "uđi", "uđite"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*idji of *iđi — het is idi, met één d.",
+        "reci heeft een c, geen č: reci, recimo, recite.",
+        "budi (van biti) lijkt op buditi (wakker worden) — let op de context."
+      ],
+      "prerequisites": ["g.20.imperativ"],
+      "source": "udzbenik p.269"
+    },
+    {
+      "id": "g.20.imperativ_negacija",
+      "title_nl": "Niet doen: nemoj of ne",
+      "cefr": "A2.2",
+      "explanation_nl": "Er zijn twee manieren om iets te verbieden. De gewone: nemoj, nemojmo, nemojte plus de infinitief — Nemoj ići! De directere: ne plus de imperatief — Ne idi! De eerste klinkt vriendelijker en is de veiligste keuze.",
+      "contrast_nl": "Het Nederlands heeft één vorm ('ga niet!'). Het Kroatisch geeft je een beleefde en een directe optie, en dat verschil hoor je meteen. Gebruik bij twijfel nemoj.",
+      "paradigm": {
+        "caption_nl": "Twee ontkennende imperatieven",
+        "columns": ["persoon", "met nemoj", "met ne"],
+        "rows": [
+          { "label": "ti", "cells": ["Nemoj ići!", "Ne idi!"] },
+          { "label": "mi", "cells": ["Nemojmo ići!", "Ne idimo!"] },
+          { "label": "vi", "cells": ["Nemojte ići!", "Ne idite!"] },
+          { "label": "voorbeeld", "cells": ["Nemoj se ljutiti!", "Ne ljuti se!"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Na nemoj volgt de infinitief, niet de imperatief: Nemoj ići, niet *Nemoj idi.",
+        "nemoj lijkt op nemam en neću — het zijn drie verschillende woorden.",
+        "Bij een wederkerend werkwoord staat se ertussen: Nemoj se ljutiti."
+      ],
+      "prerequisites": ["g.20.imperativ"],
+      "source": "udzbenik p.270"
+    },
+    {
+      "id": "g.20.neka",
+      "title_nl": "neka — laat hem, laat haar",
+      "cefr": "A2.2",
+      "explanation_nl": "Voor een bevel aan een derde persoon gebruik je neka plus de gewone tegenwoordige tijd: Neka on radi! (Laat hem werken.) Neka dođu! (Laat ze komen.) Er bestaat geen aparte imperatiefvorm voor de derde persoon.",
+      "contrast_nl": "Het Nederlands gebruikt 'laat hem …' of 'moge hij …'. Het Kroatisch heeft daar één vast woordje voor, en er verandert niets aan het werkwoord — dat blijft gewoon presens.",
+      "paradigm": {
+        "caption_nl": "neka + presens",
+        "columns": ["Kroatisch", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Neka on radi!", "Laat hem werken!"] },
+          { "label": "2.", "cells": ["Neka oni idu u trgovinu!", "Laat ze naar de winkel gaan!"] },
+          { "label": "3.", "cells": ["Neka ona planira vikend!", "Laat haar het weekend plannen!"] },
+          { "label": "4.", "cells": ["Neka ne čekaju!", "Laat ze niet wachten!"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Een imperatiefvorm gebruiken na neka — het blijft gewoon presens.",
+        "De ontkenning komt na neka: Neka ne čekaju.",
+        "neka is niet hetzelfde als neki (sommige)."
+      ],
+      "prerequisites": ["g.20.imperativ"],
+      "source": "udzbenik p.271"
+    },
+    {
+      "id": "g.20.vokativ",
+      "title_nl": "VOCATIEF — iemand aanspreken",
+      "cefr": "A2.2",
+      "explanation_nl": "De vocatief is de vorm waarmee je iemand roept of aanspreekt. Mannelijk krijgt -e na een harde medeklinker (Ivan → Ivane, doktor → doktore) en -u na een zachte (prijatelj → prijatelju, mladić → mladiću). Vrouwelijk op -a krijgt -o (mama → mamo, gospođa → gospođo), maar woorden op -ica krijgen -e (Marica → Marice, kolegica → kolegice). Onzijdig verandert niet.",
+      "contrast_nl": "Het Nederlands heeft dit niet: wij roepen gewoon de naam. In het Kroatisch klinkt de nominatief bij aanspreken onnatuurlijk — vergelijkbaar met iemand aanspreken met zijn achternaam zonder meer.",
+      "paradigm": {
+        "caption_nl": "Vokativ",
+        "columns": ["nominativ", "vokativ", "regel"],
+        "rows": [
+          { "label": "1.", "cells": ["prijatelj", "prijatelju", "zachte medeklinker → -u"] },
+          { "label": "2.", "cells": ["doktor", "doktore", "harde medeklinker → -e"] },
+          { "label": "3.", "cells": ["čovjek", "čovječe", "k → č vóór -e"] },
+          { "label": "4.", "cells": ["Bog", "Bože", "g → ž vóór -e"] },
+          { "label": "5.", "cells": ["mama", "mamo", "vrouwelijk -a → -o"] },
+          { "label": "6.", "cells": ["prijateljica", "prijateljice", "op -ica → -e"] },
+          { "label": "7.", "cells": ["sunce", "sunce", "onzijdig blijft gelijk"] },
+          { "label": "8.", "cells": ["ljubav", "ljubavi", "i-stam → -i"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Woorden op -ica krijgen -e, niet -o: Marice, kolegice, gospođice.",
+        "Bij k, g en h treedt palatalisatie op: čovječe, Bože, duše.",
+        "Bij een aanspreekvorm met titel krijgt alleen het laatste woord de vocatief: gospodine Jankoviću."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.272"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.20.zbogom", "hr": "zbogom", "nl": "vaarwel", "pos": "phrase", "tags": ["afscheid"], "source": "udzbenik p.267" },
+    { "id": "v.20.pozdraviti", "hr": "pozdraviti", "nl": "groeten", "pos": "verb", "aspect": "perfective", "present_1sg": "pozdravim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.obecati", "hr": "obećati", "nl": "beloven", "pos": "verb", "aspect": "perfective", "present_1sg": "obećam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.uzivati", "hr": "uživati", "nl": "genieten", "pos": "verb", "aspect": "imperfective", "present_1sg": "uživam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.gurati", "hr": "gurati", "nl": "duwen", "pos": "verb", "aspect": "imperfective", "present_1sg": "guram", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.vuci", "hr": "vući", "nl": "trekken", "pos": "verb", "aspect": "imperfective", "present_1sg": "vučem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.99" },
+    { "id": "v.20.uci", "hr": "ući", "nl": "binnenkomen", "pos": "verb", "aspect": "perfective", "present_1sg": "uđem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.izici", "hr": "izići", "nl": "naar buiten gaan", "pos": "verb", "aspect": "perfective", "present_1sg": "iziđem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.prici", "hr": "prići", "nl": "naderbij komen", "pos": "verb", "aspect": "perfective", "present_1sg": "priđem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.98" },
+    { "id": "v.20.stedjeti", "hr": "štedjeti", "nl": "sparen", "pos": "verb", "aspect": "imperfective", "present_1sg": "štedim", "verb_class": "-jeti", "tags": ["werkwoord"], "source": "vježbenica p.99" },
+    { "id": "v.20.slaviti", "hr": "slaviti", "nl": "vieren", "pos": "verb", "aspect": "imperfective", "present_1sg": "slavim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "vježbenica p.99" },
+
+    { "id": "v.20.gospodin", "hr": "gospodin", "nl": "meneer", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "gospodina", "nom_pl": "gospoda", "tags": ["aanspreken"], "source": "vježbenica p.99" },
+    { "id": "v.20.gospoda", "hr": "gospođa", "nl": "mevrouw", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "gospođe", "nom_pl": "gospođe", "tags": ["aanspreken"], "source": "vježbenica p.99" },
+    { "id": "v.20.gospodica", "hr": "gospođica", "nl": "juffrouw", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "gospođice", "nom_pl": "gospođice", "tags": ["aanspreken"], "source": "vježbenica p.99" },
+    { "id": "v.20.mladic", "hr": "mladić", "nl": "jongeman", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "mladića", "nom_pl": "mladići", "tags": ["persoon"], "source": "vježbenica p.99" },
+    { "id": "v.20.doktor", "hr": "doktor", "nl": "dokter", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "doktora", "nom_pl": "doktori", "tags": ["beroep"], "source": "vježbenica p.99" },
+    { "id": "v.20.lektorica_v", "hr": "lektorica", "nl": "taaldocente", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "lektorice", "nom_pl": "lektorice", "tags": ["beroep"], "source": "vježbenica p.99" },
+    { "id": "v.20.bog", "hr": "Bog", "nl": "God", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Boga", "nom_pl": "bogovi", "tags": ["aanspreken"], "source": "vježbenica p.99" },
+    { "id": "v.20.ljepota", "hr": "ljepota", "nl": "schoonheid", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ljepote", "nom_pl": "ljepote", "tags": ["abstract"], "source": "vježbenica p.99" },
+    { "id": "v.20.himna_hr", "hr": "himna", "nl": "volkslied", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "himne", "nom_pl": "himne", "tags": ["land"], "source": "vježbenica p.99" },
+    { "id": "v.20.poslovica", "hr": "poslovica", "nl": "spreekwoord", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "poslovice", "nom_pl": "poslovice", "tags": ["taal"], "source": "vježbenica p.99" },
+    { "id": "v.20.sretan_put_20", "hr": "Sretan put!", "nl": "Goede reis!", "pos": "phrase", "tags": ["afscheid"], "source": "udzbenik p.267" },
+    { "id": "v.20.cuvaj_se", "hr": "Čuvaj se!", "nl": "Pas goed op jezelf!", "pos": "phrase", "tags": ["afscheid"], "source": "aangevuld" },
+    { "id": "v.20.javi_se", "hr": "Javi se!", "nl": "Laat iets van je horen!", "pos": "phrase", "tags": ["afscheid"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.20.1",
+      "title_nl": "Afscheid nemen",
+      "kind": "input",
+      "text_hr": "Dođi opet! Obećaj mi da ćeš opet doći!\nPozdravi svoje roditelje! Vrati se opet u Hrvatsku!\nMarice, dođi molim te! Prijatelju, čuvaj se!\nGospodine Jankoviću, doviđenja! Gospođo Janković, sve najbolje!\nDoktore, hvala Vam na pomoći!\nZagrebe, ljubavi moja — ovo nije zbogom!",
+      "translation_nl": "Kom nog eens! Beloof me dat je weer komt!\nDoe je ouders de groeten! Kom weer terug naar Kroatië!\nMarica, kom alsjeblieft! Vriend, pas goed op jezelf!\nMeneer Janković, tot ziens! Mevrouw Janković, het allerbeste!\nDokter, dank u voor uw hulp!\nZagreb, mijn liefde — dit is geen vaarwel!",
+      "source": "vježbenica p.98",
+      "exercises": [
+        {
+          "id": "e.20.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De imperatief komt uit het meervoud",
+          "body_nl": "De imperatief bouw je niet uit de infinitief maar uit de **derde persoon meervoud**. Haal de uitgang eraf en plak erachter:\n\n*rad**e*** → **radi, radimo, radite**\n*čita**ju*** → **čitaj, čitajmo, čitajte**\n*pi**ju*** → **pij, pijmo, pijte**\n\nDe **mi-vorm** is handig: *čitajmo* betekent 'laten we lezen' — het Nederlands heeft daar geen aparte werkwoordsvorm voor.\n\nLet op: de vi-vorm is gelijk aan het presens (*radite*), maar de ti-vorm niet (*radi* tegenover *radiš*).",
+          "targets": ["g.20.imperativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.20.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de imperatief (ti).",
+          "given": "___ opet! (doći)",
+          "answer": "Dođi",
+          "accepts": ["Dođi", "dođi"],
+          "explain_nl": "doći heeft een onregelmatige imperatief: dođi.",
+          "targets": ["g.20.imperativ_nepravilni", "v.06.doci"],
+          "difficulty": 3,
+          "audio": "Dođi opet!",
+          "source": "vježbenica p.98"
+        },
+        {
+          "id": "e.20.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de imperatief (ti).",
+          "given": "___ svoje roditelje! (pozdraviti)",
+          "answer": "Pozdravi",
+          "accepts": ["Pozdravi", "pozdravi"],
+          "explain_nl": "pozdrave → pozdravi.",
+          "targets": ["g.20.imperativ", "v.20.pozdraviti"],
+          "difficulty": 3,
+          "audio": "Pozdravi svoje roditelje!",
+          "source": "vježbenica p.98"
+        },
+        {
+          "id": "e.20.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de imperatief (mi).",
+          "given": "___ zajedno! (putovati)",
+          "answer": "Putujmo",
+          "accepts": ["Putujmo", "putujmo"],
+          "explain_nl": "putuju → putujmo, 'laten we reizen'.",
+          "targets": ["g.20.imperativ", "v.10.putovati"],
+          "difficulty": 4,
+          "audio": "Putujmo zajedno!",
+          "source": "vježbenica p.98"
+        },
+        {
+          "id": "e.20.005",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de imperatief (vi).",
+          "given": "Naprijed! ___! (ući)",
+          "answer": "Uđite",
+          "accepts": ["Uđite", "uđite"],
+          "explain_nl": "ući → uđi, uđite. Onregelmatig.",
+          "targets": ["g.20.imperativ_nepravilni", "v.20.uci"],
+          "difficulty": 4,
+          "audio": "Naprijed! Uđite!",
+          "source": "vježbenica p.98"
+        }
+      ]
+    },
+    {
+      "id": "s.20.2",
+      "title_nl": "Niet doen, en laat hem",
+      "kind": "grammar",
+      "source": "udzbenik p.270",
+      "exercises": [
+        {
+          "id": "e.20.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee manieren om nee te zeggen",
+          "body_nl": "**nemoj / nemojmo / nemojte + infinitief** — de vriendelijke manier:\n*Nemoj ići!* · *Nemojte čekati!* · *Nemoj se ljutiti!*\n\n**ne + imperatief** — directer:\n*Ne idi!* · *Ne čekajte!*\n\nBij twijfel: gebruik **nemoj**. Let op dat er een **infinitief** achter komt, geen imperatief — *Nemoj idi* bestaat niet.\n\nEn voor een derde persoon is er **neka** plus gewoon presens:\n*Neka on radi!* — Laat hem werken.",
+          "targets": ["g.20.imperativ_negacija", "g.20.neka"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.20.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een ontkennend bevel van met nemoj.",
+          "given": "Idi! → ___ ___!",
+          "answer": "Nemoj ići",
+          "accepts": ["Nemoj ići"],
+          "explain_nl": "Na nemoj volgt de infinitief: ići.",
+          "targets": ["g.20.imperativ_negacija", "v.07.ici"],
+          "difficulty": 4,
+          "audio": "Nemoj ići!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een ontkennend bevel van met ne.",
+          "given": "Gledajmo televiziju! → ___ ___ televiziju!",
+          "answer": "Ne gledajmo",
+          "accepts": ["Ne gledajmo", "ne gledajmo"],
+          "explain_nl": "Met ne blijft de imperatiefvorm staan.",
+          "targets": ["g.20.imperativ_negacija", "v.05.gledati"],
+          "difficulty": 4,
+          "audio": "Ne gledajmo televiziju!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.013",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Nemoj idi!",
+          "answer": "Nemoj ići!",
+          "accepts": ["Nemoj ići!"],
+          "explain_nl": "Na nemoj komt de infinitief, niet de imperatief.",
+          "targets": ["g.20.imperativ_negacija"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.20.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan met neka plus de juiste vorm.",
+          "given": "___ oni ___ u trgovinu! (neka, ići)",
+          "answer": "Neka idu",
+          "accepts": ["Neka idu", "neka idu"],
+          "explain_nl": "Na neka blijft het gewoon presens: idu.",
+          "targets": ["g.20.neka", "v.07.ici"],
+          "difficulty": 4,
+          "audio": "Neka oni idu u trgovinu!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.015",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de infinitief aan de imperatief (ti).",
+          "pairs": [
+            { "hr": "biti", "nl": "budi" },
+            { "hr": "reći", "nl": "reci" },
+            { "hr": "jesti", "nl": "jedi" },
+            { "hr": "doći", "nl": "dođi" }
+          ],
+          "targets": ["g.20.imperativ_nepravilni"],
+          "difficulty": 4,
+          "source": "udzbenik p.269"
+        }
+      ]
+    },
+    {
+      "id": "s.20.3",
+      "title_nl": "Iemand aanspreken",
+      "kind": "practice",
+      "source": "udzbenik p.272",
+      "exercises": [
+        {
+          "id": "e.20.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De zevende naamval",
+          "body_nl": "De **vocatief** is de vorm waarmee je iemand aanspreekt of roept.\n\n**mannelijk** → **-e** na een harde medeklinker: *Ivan → Ivane*, *doktor → doktore*\n**mannelijk** → **-u** na een zachte: *prijatelj → prijatelju*, *mladić → mladiću*\n**k, g, h** veranderen mee: *čovjek → čovječe*, *Bog → Bože*\n**vrouwelijk op -a** → **-o**: *mama → mamo*, *gospođa → gospođo*\n**maar op -ica** → **-e**: *Marica → Marice*, *kolegica → kolegice*\n**onzijdig** blijft gelijk: *sunce → sunce*\n\nDe nominatief gebruiken bij aanspreken klinkt in het Kroatisch onnatuurlijk — bijna onbeleefd.",
+          "targets": ["g.20.vokativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.20.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de vocatief.",
+          "given": "Bog, ___! (prijatelj)",
+          "answer": "prijatelju",
+          "accepts": ["prijatelju"],
+          "explain_nl": "Zachte medeklinker lj → -u.",
+          "targets": ["g.20.vokativ", "v.01.prijatelj"],
+          "difficulty": 3,
+          "audio": "Bog, prijatelju!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de vocatief.",
+          "given": "Draga ___, kako si? (prijateljica)",
+          "answer": "prijateljice",
+          "accepts": ["prijateljice"],
+          "explain_nl": "Woorden op -ica krijgen -e, niet -o.",
+          "targets": ["g.20.vokativ", "v.01.prijateljica"],
+          "difficulty": 4,
+          "audio": "Draga prijateljice, kako si?",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de vocatief.",
+          "given": "___, bole me leđa! (doktor)",
+          "answer": "Doktore",
+          "accepts": ["Doktore", "doktore"],
+          "explain_nl": "Harde medeklinker → -e.",
+          "targets": ["g.20.vokativ", "v.20.doktor", "g.18.boljeti"],
+          "difficulty": 3,
+          "audio": "Doktore, bole me leđa!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de vocatief. Let op de klankverandering.",
+          "given": "___, kako voziš?! (čovjek)",
+          "answer": "Čovječe",
+          "accepts": ["Čovječe", "čovječe"],
+          "explain_nl": "k wordt č vóór de -e: čovječe.",
+          "targets": ["g.20.vokativ", "v.03.covjek"],
+          "difficulty": 5,
+          "audio": "Čovječe, kako voziš?!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.025",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de vocatief.",
+          "given": "Doviđenja, ___! (gospođica)",
+          "answer": "gospođice",
+          "accepts": ["gospođice"],
+          "explain_nl": "Op -ica → -e.",
+          "targets": ["g.20.vokativ", "v.20.gospodica"],
+          "difficulty": 4,
+          "audio": "Doviđenja, gospođice!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Dođi večeras na zabavu! Obećaj mi da ćeš doći!",
+          "answer": "Dođi večeras na zabavu! Obećaj mi da ćeš doći!",
+          "accepts": ["Dođi večeras na zabavu! Obećaj mi da ćeš doći!"],
+          "targets": ["g.20.imperativ_nepravilni", "v.20.obecati"],
+          "difficulty": 5,
+          "source": "vježbenica p.98"
+        }
+      ]
+    },
+    {
+      "id": "s.20.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.20.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Vriend, kom terug naar Kroatië! Wees niet verdrietig!",
+          "answer": "Prijatelju, vrati se u Hrvatsku! Nemoj biti tužan!",
+          "accepts": ["Prijatelju, vrati se u Hrvatsku! Nemoj biti tužan!"],
+          "explain_nl": "Vocatief prijatelju, imperatief vrati se met het se erachter, accusatief u Hrvatsku, en nemoj plus infinitief.",
+          "targets": ["g.20.vokativ", "g.20.imperativ", "g.20.imperativ_negacija", "g.07.u_na_akuzativ"],
+          "difficulty": 5,
+          "audio": "Prijatelju, vrati se u Hrvatsku! Nemoj biti tužan!",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.20.031",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Uživajte", "u", "Hrvatskoj", "i", "javite", "se"],
+          "answer": "Uživajte u Hrvatskoj i javite se!",
+          "accepts": ["Uživajte u Hrvatskoj i javite se!", "Uživajte u Hrvatskoj i javite se"],
+          "explain_nl": "Twee imperatieven in de vi-vorm, met de locatief u Hrvatskoj.",
+          "targets": ["g.20.imperativ", "g.10.lokativ_ska", "v.20.uzivati"],
+          "difficulty": 5,
+          "audio": "Uživajte u Hrvatskoj i javite se!",
+          "source": "vježbenica p.99"
+        },
+        {
+          "id": "e.20.032",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Napišite kratak pozdrav prijatelju koji odlazi iz Hrvatske.",
+          "given": "Napišite kratak pozdrav prijatelju koji odlazi iz Hrvatske.",
+          "model_answer": "Dragi prijatelju, čuvaj se i javi se! Nemoj nas zaboraviti. Vrati se uskoro u Hrvatsku!",
+          "rubric_nl": [
+            "Gebruikt de vocatief bij het aanspreken",
+            "Minimaal twee imperatieven, correct gevormd",
+            "Minstens één ontkennend bevel met nemoj of ne"
+          ],
+          "targets": ["g.20.vokativ", "g.20.imperativ", "g.20.imperativ_negacija"],
+          "difficulty": 5,
+          "source": "vježbenica p.98"
+        }
+      ]
+    }
+  ]
+}

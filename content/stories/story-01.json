@@ -1,0 +1,672 @@
+{
+  "id": "story-01",
+  "slug": "ovo-je-nina",
+  "series": "Nina u Zagrebu",
+  "part": 1,
+  "title_hr": "Ovo je Nina",
+  "title_nl": "Dit is Nina",
+  "cefr": "A1.1",
+  "requires_lesson": 4,
+  "blurb_nl": "Nina stelt zichzelf en haar familie voor. Alles staat in de nominatief — er is nog geen enkele naamval nodig om dit te lezen.",
+  "motif": "obitelj",
+  "focus_nl": [
+    "biti",
+    "nominatief",
+    "bezittelijke voornaamwoorden",
+    "bijvoeglijke naamwoorden"
+  ],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "hr": "Bok! Ja sam Nina.",
+          "nl": "Hoi! Ik ben Nina."
+        },
+        {
+          "hr": "Zovem se Nina Vermeer.",
+          "nl": "Ik heet Nina Vermeer."
+        },
+        {
+          "hr": "Ja sam Nizozemka.",
+          "nl": "Ik ben Nederlandse."
+        },
+        {
+          "hr": "Nisam studentica — ja sam novinarka.",
+          "nl": "Ik ben geen studente — ik ben journaliste."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "hr": "Ovo je moja obitelj.",
+          "nl": "Dit is mijn familie."
+        },
+        {
+          "hr": "Moj otac je Jan. On je liječnik.",
+          "nl": "Mijn vader is Jan. Hij is arts."
+        },
+        {
+          "hr": "Moja majka je Ana. Ona je profesorica.",
+          "nl": "Mijn moeder is Ana. Zij is lerares."
+        },
+        {
+          "hr": "Ana je Hrvatica!",
+          "nl": "Ana is Kroatische!"
+        },
+        {
+          "hr": "Hrvatski je i moj jezik.",
+          "nl": "Kroatisch is ook mijn taal."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "hr": "Moj brat se zove Tim.",
+          "nl": "Mijn broer heet Tim."
+        },
+        {
+          "hr": "On je visok i mlad. Tim je student.",
+          "nl": "Hij is lang en jong. Tim is student."
+        },
+        {
+          "hr": "Njegova mačka je crna i vrlo lijena.",
+          "nl": "Zijn kat is zwart en erg lui."
+        },
+        {
+          "hr": "Mačka se zove Mrvica.",
+          "nl": "De kat heet Mrvica (Kruimeltje)."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "hr": "A tko je ovo?",
+          "nl": "En wie is dit?"
+        },
+        {
+          "hr": "To je Petra, moja dobra prijateljica.",
+          "nl": "Dat is Petra, mijn goede vriendin."
+        },
+        {
+          "hr": "Petra i ja smo dobre prijateljice.",
+          "nl": "Petra en ik zijn goede vriendinnen."
+        },
+        {
+          "hr": "Petra je Hrvatica. Zagreb je njezin grad.",
+          "nl": "Petra is Kroatische. Zagreb is haar stad."
+        },
+        {
+          "hr": "Sada je i moj.",
+          "nl": "Nu is het ook de mijne."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "bok": {
+      "hr": "bok",
+      "nl": "hoi, dag",
+      "info": "informele groet, zowel bij komen als bij gaan"
+    },
+    "ja": {
+      "hr": "ja",
+      "nl": "ik",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "ben",
+      "lemma": "biti",
+      "info": "1e persoon enkelvoud, korte vorm van biti"
+    },
+    "nina": {
+      "hr": "Nina",
+      "nl": "Nina",
+      "info": "eigennaam"
+    },
+    "zovem": {
+      "hr": "zovem",
+      "nl": "ik noem",
+      "lemma": "zvati",
+      "info": "1e persoon enkelvoud van zvati; met se: ik heet"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend partikel; zvati se = heten"
+    },
+    "vermeer": {
+      "hr": "Vermeer",
+      "nl": "Vermeer",
+      "info": "Nederlandse achternaam"
+    },
+    "nizozemka": {
+      "hr": "Nizozemka",
+      "nl": "Nederlandse",
+      "info": "vrouwelijk, nominatief enkelvoud; man: Nizozemac"
+    },
+    "nisam": {
+      "hr": "nisam",
+      "nl": "ik ben niet",
+      "lemma": "biti",
+      "info": "ontkenning van sam — één woord, niet 'ne sam'"
+    },
+    "studentica": {
+      "hr": "studentica",
+      "nl": "studente",
+      "info": "vrouwelijk; man: student"
+    },
+    "novinarka": {
+      "hr": "novinarka",
+      "nl": "journaliste",
+      "info": "vrouwelijk; man: novinar",
+      "item": "v.pr1.novinarka"
+    },
+    "ovo": {
+      "hr": "ovo",
+      "nl": "dit",
+      "info": "aanwijzend voornaamwoord, dichtbij"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "3e persoon enkelvoud, korte vorm"
+    },
+    "moja": {
+      "hr": "moja",
+      "nl": "mijn",
+      "lemma": "moj",
+      "info": "vrouwelijke vorm, nominatief enkelvoud"
+    },
+    "obitelj": {
+      "hr": "obitelj",
+      "nl": "familie",
+      "info": "vrouwelijk, i-stam; genitief: obitelji"
+    },
+    "moj": {
+      "hr": "moj",
+      "nl": "mijn",
+      "info": "mannelijke vorm, nominatief enkelvoud"
+    },
+    "otac": {
+      "hr": "otac",
+      "nl": "vader",
+      "info": "mannelijk; genitief: oca — de a valt weg"
+    },
+    "jan": {
+      "hr": "Jan",
+      "nl": "Jan",
+      "info": "eigennaam"
+    },
+    "on": {
+      "hr": "on",
+      "nl": "hij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "liječnik": {
+      "hr": "liječnik",
+      "nl": "arts",
+      "info": "mannelijk; vrouw: liječnica"
+    },
+    "majka": {
+      "hr": "majka",
+      "nl": "moeder",
+      "info": "vrouwelijk; genitief: majke"
+    },
+    "ana": {
+      "hr": "Ana",
+      "nl": "Ana",
+      "info": "eigennaam"
+    },
+    "ona": {
+      "hr": "ona",
+      "nl": "zij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "profesorica": {
+      "hr": "profesorica",
+      "nl": "lerares",
+      "info": "vrouwelijk; man: profesor"
+    },
+    "hrvatica": {
+      "hr": "Hrvatica",
+      "nl": "Kroatische",
+      "info": "vrouwelijk; man: Hrvat"
+    },
+    "hrvatski": {
+      "hr": "hrvatski",
+      "nl": "Kroatisch",
+      "info": "de taal; ook het bijvoeglijk naamwoord 'Kroatisch'"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en; ook",
+      "info": "voor een zelfstandig naamwoord betekent i vaak 'ook'"
+    },
+    "jezik": {
+      "hr": "jezik",
+      "nl": "taal; tong",
+      "info": "mannelijk; meervoud: jezici (k → c)",
+      "item": "v.pr1.jezik"
+    },
+    "brat": {
+      "hr": "brat",
+      "nl": "broer",
+      "info": "mannelijk; meervoud is onregelmatig: braća"
+    },
+    "zove": {
+      "hr": "zove",
+      "nl": "noemt",
+      "lemma": "zvati",
+      "info": "3e persoon enkelvoud; zove se = heet"
+    },
+    "tim": {
+      "hr": "Tim",
+      "nl": "Tim",
+      "info": "eigennaam"
+    },
+    "visok": {
+      "hr": "visok",
+      "nl": "lang, hoog",
+      "info": "mannelijke vorm; vrouwelijk: visoka"
+    },
+    "mlad": {
+      "hr": "mlad",
+      "nl": "jong",
+      "info": "mannelijke vorm; vrouwelijk: mlada"
+    },
+    "student": {
+      "hr": "student",
+      "nl": "student",
+      "info": "mannelijk; vrouw: studentica"
+    },
+    "njegova": {
+      "hr": "njegova",
+      "nl": "zijn",
+      "lemma": "njegov",
+      "info": "vrouwelijke vorm — richt zich naar mačka, niet naar Tim"
+    },
+    "mačka": {
+      "hr": "mačka",
+      "nl": "kat",
+      "info": "vrouwelijk; man/kater: mačak",
+      "item": "v.pr1.macka"
+    },
+    "crna": {
+      "hr": "crna",
+      "nl": "zwarte",
+      "lemma": "crn",
+      "info": "vrouwelijke vorm van crn"
+    },
+    "vrlo": {
+      "hr": "vrlo",
+      "nl": "erg, zeer",
+      "info": "bijwoord",
+      "item": "v.pr1.vrlo"
+    },
+    "lijena": {
+      "hr": "lijena",
+      "nl": "luie",
+      "lemma": "lijen",
+      "info": "vrouwelijke vorm van lijen",
+      "item": "v.pr1.lijen"
+    },
+    "mrvica": {
+      "hr": "Mrvica",
+      "nl": "Kruimeltje",
+      "info": "kattennaam; mrvica = kruimel"
+    },
+    "a": {
+      "hr": "a",
+      "nl": "en, maar",
+      "info": "zwak tegenstellend voegwoord — zachter dan ali"
+    },
+    "tko": {
+      "hr": "tko",
+      "nl": "wie",
+      "info": "vraagwoord voor personen"
+    },
+    "to": {
+      "hr": "to",
+      "nl": "dat",
+      "info": "aanwijzend voornaamwoord, neutraal"
+    },
+    "petra": {
+      "hr": "Petra",
+      "nl": "Petra",
+      "info": "eigennaam"
+    },
+    "dobra": {
+      "hr": "dobra",
+      "nl": "goede",
+      "lemma": "dobar",
+      "info": "vrouwelijk enkelvoud; mannelijk: dobar"
+    },
+    "prijateljica": {
+      "hr": "prijateljica",
+      "nl": "vriendin",
+      "info": "vrouwelijk; man: prijatelj"
+    },
+    "smo": {
+      "hr": "smo",
+      "nl": "zijn",
+      "lemma": "biti",
+      "info": "1e persoon meervoud, korte vorm"
+    },
+    "dobre": {
+      "hr": "dobre",
+      "nl": "goede",
+      "lemma": "dobar",
+      "info": "vrouwelijk meervoud"
+    },
+    "prijateljice": {
+      "hr": "prijateljice",
+      "nl": "vriendinnen",
+      "lemma": "prijateljica",
+      "info": "nominatief meervoud"
+    },
+    "zagreb": {
+      "hr": "Zagreb",
+      "nl": "Zagreb",
+      "info": "de hoofdstad van Kroatië"
+    },
+    "njezin": {
+      "hr": "njezin",
+      "nl": "haar",
+      "info": "bezittelijk; richt zich naar grad (mannelijk), niet naar Petra"
+    },
+    "grad": {
+      "hr": "grad",
+      "nl": "stad",
+      "info": "mannelijk; meervoud: gradovi (lange meervoudsvorm)"
+    },
+    "sada": {
+      "hr": "sada",
+      "nl": "nu",
+      "info": "bijwoord; kort ook: sad",
+      "item": "v.pr1.sada"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Bok",
+    "body_nl": "«Bok» is dé groet van Zagreb — je gebruikt hem bij binnenkomst én bij vertrek, net als het Italiaanse «ciao». Aan de kust hoor je vaker «ćao». Het formele «dobar dan» blijft voor onbekenden en winkels. Zeg je «bok» tegen je nieuwe buurvrouw, dan zeg je meteen: ik hoor hier een beetje bij."
+  },
+  "vocab": [
+    {
+      "id": "v.pr1.novinarka",
+      "hr": "novinarka",
+      "nl": "journaliste",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "animate",
+      "declension": "e",
+      "gen_sg": "novinarke",
+      "nom_pl": "novinarke",
+      "tags": [
+        "beroep",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr1.jezik",
+      "hr": "jezik",
+      "nl": "taal, tong",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "jezika",
+      "nom_pl": "jezici",
+      "tags": [
+        "taal",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr1.macka",
+      "hr": "mačka",
+      "nl": "kat",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "animate",
+      "declension": "e",
+      "gen_sg": "mačke",
+      "nom_pl": "mačke",
+      "tags": [
+        "dier",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr1.lijen",
+      "hr": "lijen",
+      "nl": "lui",
+      "pos": "adj",
+      "tags": [
+        "eigenschap",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr1.vrlo",
+      "hr": "vrlo",
+      "nl": "erg, zeer",
+      "pos": "adv",
+      "tags": [
+        "graad",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr1.sada",
+      "hr": "sada",
+      "nl": "nu",
+      "pos": "adv",
+      "tags": [
+        "tijd",
+        "verhaal-01"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr1.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Nina stelt zichzelf en de mensen om haar heen voor.",
+      "distractors": [
+        "Het leven van een zwarte kat in Zagreb.",
+        "Waarom Kroatisch een moeilijke taal is.",
+        "Een reis van Nederland naar Kroatië."
+      ],
+      "explain_nl": "Elke alinea introduceert iemand: Nina zelf, haar ouders, haar broer, haar vriendin. De kat is één zin en de reis komt helemaal niet voor. Bij een hoofdgedachtevraag kijk je wat álle alinea's gemeen hebben.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr1.002",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "Van wie is de kat?",
+      "given": "Moj brat se zove Tim. On je visok i mlad. Njegova mačka je crna i vrlo lijena.",
+      "answer": "Van Tim.",
+      "distractors": [
+        "Van Nina.",
+        "Van Petra.",
+        "Van haar vader Jan."
+      ],
+      "explain_nl": "«Njegova» betekent 'zijn' — dus van een man. De laatst genoemde man is Tim. Let op de valstrik: «njegova» eindigt op -a omdat het zich richt naar mačka (vrouwelijk), niet omdat de eigenaar een vrouw is.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr1.003",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wie in Nina's familie is Kroatisch?",
+      "answer": "Haar moeder Ana.",
+      "distractors": [
+        "Haar vader Jan.",
+        "Haar broer Tim.",
+        "Haar vriendin Petra."
+      ],
+      "explain_nl": "Er staat letterlijk «Moja majka je Ana. (…) Ana je Hrvatica!» Petra is óók Kroatische, maar die is haar vriendin, geen familie — een klassieke afleider die wél in de tekst staat maar de vraag niet beantwoordt.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr1.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom zegt Nina «Hrvatski je i moj jezik» — Kroatisch is óók mijn taal?",
+      "answer": "Omdat haar moeder Kroatische is.",
+      "distractors": [
+        "Omdat ze in Kroatië geboren is.",
+        "Omdat ze journaliste is.",
+        "Omdat haar vriendin Petra het haar leert."
+      ],
+      "explain_nl": "De tekst legt het verband niet uit. Maar de zin komt direct na «Ana je Hrvatica!», en Ana is haar moeder. Uit die volgorde leid je de reden af — schrijvers zetten oorzaak en gevolg vaak naast elkaar zonder «daarom» te gebruiken.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr1.005",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Het verhaal eindigt met: «Zagreb je njezin grad. Sada je i moj.» Wat zegt Nina hiermee?",
+      "answer": "Dat ze zich in Zagreb thuis begint te voelen.",
+      "distractors": [
+        "Dat ze een huis in Zagreb gekocht heeft.",
+        "Dat Petra bij haar is ingetrokken.",
+        "Dat ze Zagreb mooier vindt dan Petra."
+      ],
+      "explain_nl": "«Sada» (nu) zet iets tegenover vroeger, en «i moj» betekent 'ook de mijne'. Ze zegt niets over bezit — het gaat om ergens bij horen. Bij een conclusievraag ga je één stap verder dan de letterlijke woorden, maar niet verder dan de tekst toelaat.",
+      "difficulty": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr1.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Wat doet Nina?",
+      "answer": "Ona je novinarka.",
+      "distractors": [
+        "Ona je studentica.",
+        "Ona je profesorica.",
+        "Ona je liječnica."
+      ],
+      "explain_nl": "«Nisam studentica — ja sam novinarka.» De ontkenning nisam zet het meteen recht.",
+      "targets": [
+        "v.pr1.novinarka"
+      ],
+      "difficulty": 1,
+      "source": "verhaal-01"
+    },
+    {
+      "id": "e.pr1.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: 'Mijn broer heet Tim.'",
+      "given": "Moj brat ___ zove Tim.",
+      "answer": "se",
+      "accepts": [
+        "se"
+      ],
+      "explain_nl": "Zvati betekent 'noemen'; pas met se wordt het 'heten'. Zonder se zou er staan dat je broer iemand anders Tim noemt.",
+      "targets": [
+        "g.03.zvati_se"
+      ],
+      "difficulty": 2,
+      "audio": "Moj brat se zove Tim.",
+      "source": "verhaal-01"
+    },
+    {
+      "id": "e.pr1.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «njezin grad» en niet «njezina grad»?",
+      "answer": "Omdat het zich richt naar grad, dat mannelijk is.",
+      "distractors": [
+        "Omdat Petra vrouwelijk is.",
+        "Omdat njezin nooit verandert.",
+        "Omdat Zagreb een eigennaam is."
+      ],
+      "explain_nl": "Een bezittelijk voornaamwoord richt zich naar het bezít, niet naar de bezitter. Petra is vrouwelijk, maar grad is mannelijk — dus njezin.",
+      "targets": [
+        "v.pr1.jezik"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-01"
+    },
+    {
+      "id": "e.pr1.004",
+      "type": "translate_hr_nl",
+      "mode": "receptive",
+      "prompt_nl": "Vertaal naar het Nederlands.",
+      "given": "Njegova mačka je crna i vrlo lijena.",
+      "answer": "Zijn kat is zwart en erg lui.",
+      "accepts": [
+        "Zijn kat is zwart en erg lui.",
+        "Zijn kat is zwart en heel lui.",
+        "Zijn poes is zwart en erg lui.",
+        "Zijn kat is zwart en zeer lui."
+      ],
+      "targets": [
+        "v.pr1.macka",
+        "v.pr1.lijen"
+      ],
+      "difficulty": 2,
+      "audio": "Njegova mačka je crna i vrlo lijena.",
+      "source": "verhaal-01"
+    },
+    {
+      "id": "e.pr1.005",
+      "type": "listen_type",
+      "mode": "productive",
+      "prompt_nl": "Typ de zin die je hoort.",
+      "answer": "Hrvatski je i moj jezik.",
+      "accepts": [
+        "Hrvatski je i moj jezik.",
+        "Hrvatski je i moj jezik"
+      ],
+      "audio": "Hrvatski je i moj jezik.",
+      "explain_nl": "Hier betekent «i» niet 'en' maar 'ook' — een klein woordje dat de zin helemaal draait.",
+      "targets": [
+        "v.pr1.jezik"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-01"
+    },
+    {
+      "id": "e.pr1.006",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Schrijf drie zinnen over je eigen familie, in de stijl van Nina.",
+      "hint": "Moj / moja + familielid + je + beroep of eigenschap.",
+      "model_answer": "Moja majka je Nizozemka. Moj brat se zove Thomas. On je visok i vrlo simpatičan.",
+      "rubric_nl": [
+        "Drie volledige zinnen met biti (je / su / sam).",
+        "Moj bij mannelijke woorden, moja bij vrouwelijke.",
+        "Het bijvoeglijk naamwoord past bij het geslacht: visok / visoka."
+      ],
+      "targets": [
+        "v.pr1.sada"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-01"
+    }
+  ]
+}

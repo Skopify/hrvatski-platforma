@@ -1,0 +1,450 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "title_hr": "Male stvari koje život znače",
+  "title_nl": "Kleine dingen die het leven betekenis geven",
+  "cefr": "A2.1",
+  "source": { "udzbenik_pages": "175-184", "vjezbenica_pages": "64-68" },
+  "can_do_nl": [
+    "Ik kan zeggen aan wie ik iets geef of stuur.",
+    "Ik kan een lijdend en een meewerkend voorwerp in één zin combineren.",
+    "Ik ken de volgorde van clitica: datief vóór accusatief.",
+    "Ik kan slati en pisati vervoegen.",
+    "Ik kan me redden op het postkantoor.",
+    "Ik kan een ansichtkaart en een felicitatie schrijven."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.13.dativ_objekt",
+      "title_nl": "De datief als meewerkend voorwerp",
+      "cefr": "A2.1",
+      "explanation_nl": "Naast richting (les 12) heeft de datief een tweede taak: hij markeert de ontvanger. Dajem knjigu prijatelju. Šaljem pismo majci. De vraag is kome? (aan wie?). Hier staat de datief zonder voorzetsel — dat kan alleen de datief, de locatief nooit.",
+      "contrast_nl": "Het Nederlands gebruikt 'aan' of gewoon de woordvolgorde ('ik geef mijn vriend een boek'). Het Kroatisch markeert de ontvanger met een naamval, waardoor de volgorde vrij is: Dajem prijatelju knjigu en Knjigu dajem prijatelju betekenen hetzelfde.",
+      "paradigm": {
+        "caption_nl": "Twee objecten in één zin",
+        "columns": ["wat (akuzativ)", "aan wie (dativ)", "hele zin"],
+        "rows": [
+          { "label": "1.", "cells": ["knjigu", "prijatelju", "Dajem knjigu prijatelju."] },
+          { "label": "2.", "cells": ["pismo", "majci", "Šaljem pismo majci."] },
+          { "label": "3.", "cells": ["razglednicu", "bratu", "Pišem razglednicu bratu."] },
+          { "label": "4.", "cells": ["poklon", "sestri", "Kupujem poklon sestri."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De accusatief gebruiken voor de ontvanger: 'Dajem knjigu prijatelja' betekent iets heel anders.",
+        "Sibilarisatie geldt ook hier: majka → majci.",
+        "De datief van de ontvanger heeft géén voorzetsel nodig."
+      ],
+      "prerequisites": ["g.12.dativ", "g.05.akuzativ.zivo"],
+      "source": "udzbenik p.176"
+    },
+    {
+      "id": "g.13.red_klitika",
+      "title_nl": "De volgorde van clitica: datief vóór accusatief",
+      "cefr": "A2.1",
+      "explanation_nl": "Vervang je beide objecten door korte voornaamwoorden, dan is de volgorde vast: eerst de datief, dan de accusatief. Dajem mu je. (Ik geef het hem.) De datiefclitica zijn mi, ti, mu, joj, nam, vam, im.",
+      "contrast_nl": "Het Nederlands laat beide volgordes toe ('ik geef het hem' / 'ik geef hem het'). Het Kroatisch niet: datief eerst, altijd. En omdat clitica onbeklemtoond zijn, kunnen ze nooit vooraan de zin staan.",
+      "paradigm": {
+        "caption_nl": "Datief-clitica en de vaste volgorde",
+        "columns": ["persoon", "dativ kort", "voorbeeld"],
+        "rows": [
+          { "label": "ja", "cells": ["mi", "Daje mi knjigu."] },
+          { "label": "ti", "cells": ["ti", "Dajem ti poklon."] },
+          { "label": "on/ono", "cells": ["mu", "Šaljem mu pismo."] },
+          { "label": "ona", "cells": ["joj", "Pišem joj razglednicu."] },
+          { "label": "mi", "cells": ["nam", "Daju nam ključeve."] },
+          { "label": "vi", "cells": ["vam", "Šaljemo vam paket."] },
+          { "label": "oni/one", "cells": ["im", "Kupujem im poklone."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De accusatief vooropzetten: 'Dajem je mu' is fout, het is Dajem mu je.",
+        "Een clitisch woordje aan het begin van de zin zetten — dat kan nooit.",
+        "joj (aan haar) en je (haar, accusatief) verwarren."
+      ],
+      "prerequisites": ["g.13.dativ_objekt", "g.07.zamjenice_akuzativ"],
+      "source": "udzbenik p.177"
+    },
+    {
+      "id": "g.13.slati_pisati",
+      "title_nl": "slati en pisati — stam met een klankwisseling",
+      "cefr": "A2.1",
+      "explanation_nl": "Twee veelgebruikte werkwoorden veranderen hun stammedeklinker in het presens: slati → šaljem, pisati → pišem. Zo ook kazati → kažem en plakati → plačem. Het patroon heet jotacija; je hoeft het niet te kunnen uitleggen, wel te herkennen.",
+      "contrast_nl": "Vergelijk het Nederlandse 'zoeken → zocht': ook daar verandert de stam onvoorspelbaar. Leer de ik-vorm mee, dan heb je de rest.",
+      "paradigm": {
+        "caption_nl": "slati en pisati — presens",
+        "columns": ["slati", "pisati"],
+        "rows": [
+          { "label": "ja", "cells": ["šaljem", "pišem"] },
+          { "label": "ti", "cells": ["šalješ", "pišeš"] },
+          { "label": "on/ona", "cells": ["šalje", "piše"] },
+          { "label": "mi", "cells": ["šaljemo", "pišemo"] },
+          { "label": "vi/Vi", "cells": ["šaljete", "pišete"] },
+          { "label": "oni/one", "cells": ["šalju", "pišu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*slam of *pisam — de stam wisselt naar šalj- en piš-.",
+        "3e persoon meervoud: šalju en pišu, niet *šaljeju.",
+        "Het deelwoord blijft wél bij de infinitiefstam: slao, pisao."
+      ],
+      "prerequisites": ["g.09.prezent.iti"],
+      "source": "udzbenik p.178"
+    },
+    {
+      "id": "g.13.glagoli_dativ",
+      "title_nl": "Werkwoorden die een datief vragen",
+      "cefr": "A2.1",
+      "explanation_nl": "Sommige werkwoorden nemen geen accusatief maar een datief, ook al voelt dat voor ons als een lijdend voorwerp. De belangrijkste: pomoći (helpen), javiti se (contact opnemen), zahvaliti (bedanken), vjerovati (geloven), smetati (storen). Pomažem prijatelju. Vjerujem ti.",
+      "contrast_nl": "Dit is puur een kwestie van het werkwoord onthouden. 'Ik help mijn vriend' voelt als een lijdend voorwerp, maar in het Kroatisch is het pomažem prijatelju — datief. Er is geen regel die je dat voorspelt.",
+      "paradigm": {
+        "caption_nl": "Werkwoorden met datiefrectie",
+        "columns": ["werkwoord", "voorbeeld", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["pomoći", "Pomažem sestri.", "Ik help mijn zus."] },
+          { "label": "2.", "cells": ["javiti se", "Javit ću ti se.", "Ik neem contact met je op."] },
+          { "label": "3.", "cells": ["zahvaliti", "Zahvaljujem vam.", "Ik dank u."] },
+          { "label": "4.", "cells": ["vjerovati", "Vjerujem ti.", "Ik geloof je."] },
+          { "label": "5.", "cells": ["smetati", "Smeta mi buka.", "Het lawaai stoort me."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "'Pomažem sestru' — fout, het moet sestri zijn.",
+        "Bij smetati is het ding dat stoort het onderwerp, en de persoon staat in de datief.",
+        "Deze werkwoorden leer je met hun naamval erbij, net als bij Duitse werkwoorden."
+      ],
+      "prerequisites": ["g.13.dativ_objekt"],
+      "source": "udzbenik p.179"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.13.slati", "hr": "slati", "nl": "sturen", "pos": "verb", "aspect": "imperfective", "present_1sg": "šaljem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "udzbenik p.178" },
+    { "id": "v.13.pisati", "hr": "pisati", "nl": "schrijven", "pos": "verb", "aspect": "imperfective", "present_1sg": "pišem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "udzbenik p.178" },
+    { "id": "v.13.dati", "hr": "dati", "nl": "geven", "pos": "verb", "aspect": "perfective", "present_1sg": "dam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "udzbenik p.176" },
+    { "id": "v.13.davati", "hr": "davati", "nl": "geven (herhaald)", "pos": "verb", "aspect": "imperfective", "present_1sg": "dajem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.13.pomoci", "hr": "pomoći", "nl": "helpen (+ datief)", "pos": "verb", "aspect": "perfective", "present_1sg": "pomognem", "verb_class": "onregelmatig", "tags": ["werkwoord", "datief"], "source": "udzbenik p.179" },
+    { "id": "v.13.pomagati", "hr": "pomagati", "nl": "helpen (herhaald, + datief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "pomažem", "verb_class": "onregelmatig", "tags": ["werkwoord", "datief"], "source": "aangevuld" },
+    { "id": "v.13.javiti_se", "hr": "javiti se", "nl": "contact opnemen (+ datief)", "pos": "verb", "aspect": "perfective", "present_1sg": "javim se", "verb_class": "-iti", "tags": ["werkwoord", "datief"], "source": "aangevuld" },
+    { "id": "v.13.zahvaliti", "hr": "zahvaliti", "nl": "bedanken (+ datief)", "pos": "verb", "aspect": "perfective", "present_1sg": "zahvalim", "verb_class": "-iti", "tags": ["werkwoord", "datief"], "source": "aangevuld" },
+    { "id": "v.13.vjerovati", "hr": "vjerovati", "nl": "geloven (+ datief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "vjerujem", "verb_class": "-ovati", "tags": ["werkwoord", "datief"], "source": "aangevuld" },
+    { "id": "v.13.smetati", "hr": "smetati", "nl": "storen (+ datief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "smetam", "verb_class": "-ati", "tags": ["werkwoord", "datief"], "source": "aangevuld" },
+
+    { "id": "v.13.razglednica", "hr": "razglednica", "nl": "ansichtkaart", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "razglednice", "nom_pl": "razglednice", "tags": ["post"], "source": "udzbenik p.180" },
+    { "id": "v.13.paket", "hr": "paket", "nl": "pakket", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "paketa", "nom_pl": "paketi", "tags": ["post"], "source": "vježbenica p.38" },
+    { "id": "v.13.marka", "hr": "marka", "nl": "postzegel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "marke", "nom_pl": "marke", "tags": ["post"], "source": "aangevuld" },
+    { "id": "v.13.omotnica", "hr": "omotnica", "nl": "envelop", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "omotnice", "nom_pl": "omotnice", "tags": ["post"], "source": "aangevuld" },
+    { "id": "v.13.adresa", "hr": "adresa", "nl": "adres", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "adrese", "nom_pl": "adrese", "tags": ["post"], "source": "udzbenik p.19" },
+    { "id": "v.13.obrazac", "hr": "obrazac", "nl": "formulier", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "obrasca", "nom_pl": "obrasci", "tags": ["post"], "source": "udzbenik p.180" },
+    { "id": "v.13.suvenir", "hr": "suvenir", "nl": "souvenir", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "suvenira", "nom_pl": "suveniri", "tags": ["ding"], "source": "udzbenik p.175" },
+    { "id": "v.13.blagdan", "hr": "blagdan", "nl": "feestdag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "blagdana", "nom_pl": "blagdani", "tags": ["gelegenheid"], "source": "udzbenik p.182" },
+    { "id": "v.13.bozic", "hr": "Božić", "nl": "Kerstmis", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "Božića", "tags": ["gelegenheid"], "source": "udzbenik p.182" },
+    { "id": "v.13.uskrs", "hr": "Uskrs", "nl": "Pasen", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "Uskrsa", "tags": ["gelegenheid"], "source": "aangevuld" },
+    { "id": "v.13.cestitka", "hr": "čestitka", "nl": "felicitatiekaart", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "čestitke", "nom_pl": "čestitke", "tags": ["gelegenheid"], "source": "udzbenik p.182" },
+    { "id": "v.13.sretan_bozic", "hr": "Sretan Božić!", "nl": "Vrolijk kerstfeest!", "pos": "phrase", "tags": ["gelegenheid"], "source": "udzbenik p.182" },
+    { "id": "v.13.sretna_nova", "hr": "Sretna Nova godina!", "nl": "Gelukkig nieuwjaar!", "pos": "phrase", "tags": ["gelegenheid"], "source": "udzbenik p.182" },
+    { "id": "v.13.sve_najbolje", "hr": "Sve najbolje!", "nl": "Het allerbeste!", "pos": "phrase", "tags": ["gelegenheid"], "source": "aangevuld" },
+    { "id": "v.13.buka", "hr": "buka", "nl": "lawaai", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "buke", "tags": ["abstract"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.13.1",
+      "title_nl": "Op het postkantoor",
+      "kind": "input",
+      "text_hr": "Službenik: Izvolite?\nAna: Dobar dan. Šaljem paket u Nizozemsku. Kome dajem obrazac?\nSlužbenik: Meni. Napišite adresu ovdje.\nAna: Trebam i marke. Pišem razglednice prijateljima.\nSlužbenik: Koliko razglednica šaljete?\nAna: Pet. Tri šaljem sestri, a dvije bratu.\nSlužbenik: Evo marke. Mogu li Vam još pomoći?\nAna: Ne, hvala. Zahvaljujem Vam!",
+      "translation_nl": "Beambte: Zegt u het maar.\nAna: Goedendag. Ik verstuur een pakket naar Nederland. Aan wie geef ik het formulier?\nBeambte: Aan mij. Schrijft u het adres hier.\nAna: Ik heb ook postzegels nodig. Ik schrijf ansichtkaarten aan vrienden.\nBeambte: Hoeveel kaarten verstuurt u?\nAna: Vijf. Drie stuur ik naar mijn zus, en twee naar mijn broer.\nBeambte: Hier zijn de postzegels. Kan ik u nog helpen?\nAna: Nee, dank u. Ik dank u wel!",
+      "source": "udzbenik p.180",
+      "exercises": [
+        {
+          "id": "e.13.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De datief zonder voorzetsel",
+          "body_nl": "In les 12 gaf de datief richting aan, altijd met een voorzetsel. Nu krijgt hij zijn tweede taak: **de ontvanger**, en daar hoort géén voorzetsel bij.\n\n*Dajem knjigu **prijatelju**.* — Ik geef mijn vriend een boek.\n*Šaljem pismo **majci**.* — Ik stuur mijn moeder een brief.\n\nDe vraag is **kome?** (aan wie).\n\nOmdat de naamval de rol al verraadt, is de woordvolgorde vrij: *Dajem prijatelju knjigu* betekent precies hetzelfde.",
+          "targets": ["g.13.dativ_objekt"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet de ontvanger in de datief.",
+          "given": "Šaljem pismo ___. (majka)",
+          "answer": "majci",
+          "accepts": ["majci"],
+          "explain_nl": "Datief vrouwelijk → -i, met sibilarisatie k → c.",
+          "targets": ["g.13.dativ_objekt", "g.10.sibilarizacija_lokativ"],
+          "difficulty": 4,
+          "audio": "Šaljem pismo majci.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet de ontvanger in de datief.",
+          "given": "Dajem knjigu ___. (prijatelj)",
+          "answer": "prijatelju",
+          "accepts": ["prijatelju"],
+          "explain_nl": "Datief mannelijk → -u.",
+          "targets": ["g.13.dativ_objekt", "v.01.prijatelj"],
+          "difficulty": 3,
+          "audio": "Dajem knjigu prijatelju.",
+          "source": "udzbenik p.176"
+        },
+        {
+          "id": "e.13.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord. Let op de stamwisseling.",
+          "given": "Ja ___ razglednicu. (pisati)",
+          "answer": "pišem",
+          "accepts": ["pišem"],
+          "explain_nl": "pisati → pišem, met š in plaats van s.",
+          "targets": ["g.13.slati_pisati", "v.13.pisati"],
+          "difficulty": 3,
+          "audio": "Ja pišem razglednicu.",
+          "source": "udzbenik p.178"
+        },
+        {
+          "id": "e.13.005",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord. Let op de stamwisseling.",
+          "given": "Oni ___ pakete. (slati)",
+          "answer": "šalju",
+          "accepts": ["šalju"],
+          "explain_nl": "slati → šaljem, derde persoon meervoud šalju.",
+          "targets": ["g.13.slati_pisati", "v.13.slati"],
+          "difficulty": 4,
+          "audio": "Oni šalju pakete.",
+          "source": "udzbenik p.178"
+        }
+      ]
+    },
+    {
+      "id": "s.13.2",
+      "title_nl": "Twee objecten, vaste volgorde",
+      "kind": "grammar",
+      "source": "udzbenik p.177",
+      "exercises": [
+        {
+          "id": "e.13.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Datief eerst, accusatief daarna",
+          "body_nl": "Vervang je beide objecten door korte voornaamwoorden, dan is de volgorde **vast**:\n\n**datief → accusatief**\n\n*Dajem knjigu prijatelju.* → *Dajem **mu je**.*\n\nDe datiefclitica zijn: **mi, ti, mu, joj, nam, vam, im**.\n\nHet Nederlands laat beide volgordes toe ('ik geef het hem' / 'ik geef hem het'). Het Kroatisch niet — en net als alle clitica kunnen ze nooit vooraan de zin staan.",
+          "targets": ["g.13.red_klitika"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het datief-voornaamwoord in.",
+          "given": "Šaljem ___ pismo. (on)",
+          "answer": "mu",
+          "accepts": ["mu"],
+          "explain_nl": "Datief van on → mu.",
+          "targets": ["g.13.red_klitika"],
+          "difficulty": 3,
+          "audio": "Šaljem mu pismo.",
+          "source": "udzbenik p.177"
+        },
+        {
+          "id": "e.13.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het datief-voornaamwoord in.",
+          "given": "Pišem ___ razglednicu. (ona)",
+          "answer": "joj",
+          "accepts": ["joj"],
+          "explain_nl": "Datief van ona → joj. Niet je, dat is de accusatief.",
+          "targets": ["g.13.red_klitika", "v.13.razglednica"],
+          "difficulty": 4,
+          "audio": "Pišem joj razglednicu.",
+          "source": "udzbenik p.177"
+        },
+        {
+          "id": "e.13.013",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Dajem je mu.",
+          "answer": "Dajem mu je.",
+          "accepts": ["Dajem mu je."],
+          "explain_nl": "Datief vóór accusatief — die volgorde ligt vast.",
+          "targets": ["g.13.red_klitika"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.014",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Werkwoorden die je uit je hoofd leert",
+          "body_nl": "Sommige werkwoorden nemen een **datief** waar wij een lijdend voorwerp verwachten:\n\n*Pomažem **sestri**.* — Ik help mijn zus.\n*Vjerujem **ti**.* — Ik geloof je.\n*Zahvaljujem **vam**.* — Ik dank u.\n*Javit ću **ti** se.* — Ik neem contact met je op.\n\nEr is geen regel die dit voorspelt. Leer het werkwoord met zijn naamval erbij, precies zoals je dat bij Duitse werkwoorden zou doen.",
+          "targets": ["g.13.glagoli_dativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de juiste naamval.",
+          "given": "Pomažem ___. (sestra)",
+          "answer": "sestri",
+          "accepts": ["sestri"],
+          "explain_nl": "pomoći vraagt de datief, niet de accusatief.",
+          "targets": ["g.13.glagoli_dativ", "v.01.sestra"],
+          "difficulty": 4,
+          "audio": "Pomažem sestri.",
+          "source": "udzbenik p.179"
+        },
+        {
+          "id": "e.13.016",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Pomažem brata.",
+          "answer": "Pomažem bratu.",
+          "accepts": ["Pomažem bratu."],
+          "explain_nl": "pomoći vraagt de datief: bratu, niet brata.",
+          "targets": ["g.13.glagoli_dativ", "v.03.brat"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.017",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het voornaamwoord aan de persoon.",
+          "pairs": [
+            { "hr": "mu", "nl": "aan hem" },
+            { "hr": "joj", "nl": "aan haar" },
+            { "hr": "im", "nl": "aan hen" },
+            { "hr": "nam", "nl": "aan ons" }
+          ],
+          "targets": ["g.13.red_klitika"],
+          "difficulty": 3,
+          "source": "udzbenik p.177"
+        }
+      ]
+    },
+    {
+      "id": "s.13.3",
+      "title_nl": "Kaarten en felicitaties",
+      "kind": "practice",
+      "source": "udzbenik p.182",
+      "exercises": [
+        {
+          "id": "e.13.020",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet beide objecten in de juiste naamval.",
+          "given": "Kupujem ___ ___. (poklon, sestra)",
+          "answer": "poklon sestri",
+          "accepts": ["poklon sestri"],
+          "explain_nl": "poklon is mannelijk en levenloos → accusatief onveranderd. sestra is de ontvanger → datief sestri.",
+          "targets": ["g.13.dativ_objekt", "g.05.akuzativ.nezivo", "v.01.poklon"],
+          "difficulty": 5,
+          "audio": "Kupujem poklon sestri.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.021",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Tri", "razglednice", "šaljem", "sestri", "a", "dvije", "bratu"],
+          "answer": "Tri razglednice šaljem sestri, a dvije bratu.",
+          "accepts": ["Tri razglednice šaljem sestri, a dvije bratu."],
+          "explain_nl": "Twee ontvangers in de datief, met a voor de tegenstelling.",
+          "targets": ["g.13.dativ_objekt", "v.13.slati"],
+          "difficulty": 5,
+          "audio": "Tri razglednice šaljem sestri, a dvije bratu.",
+          "source": "udzbenik p.180"
+        },
+        {
+          "id": "e.13.022",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik schrijf haar een ansichtkaart.",
+          "answer": "Pišem joj razglednicu.",
+          "accepts": ["Pišem joj razglednicu."],
+          "explain_nl": "joj is de datief van ona; razglednicu is de accusatief.",
+          "targets": ["g.13.red_klitika", "g.13.slati_pisati", "v.13.razglednica"],
+          "difficulty": 4,
+          "audio": "Pišem joj razglednicu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.023",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Sretan Božić i sretna Nova godina!",
+          "answer": "Sretan Božić i sretna Nova godina!",
+          "accepts": ["Sretan Božić i sretna Nova godina!"],
+          "targets": ["v.13.sretan_bozic", "v.13.sretna_nova"],
+          "difficulty": 3,
+          "source": "udzbenik p.182"
+        },
+        {
+          "id": "e.13.024",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Het is 24 december. Wat schrijf je op de kaart?",
+          "given": "___",
+          "answer": "Sretan Božić!",
+          "distractors": ["Sretan put!", "Dobar tek!", "Sretan rođendan!"],
+          "explain_nl": "Božić is Kerstmis.",
+          "targets": ["v.13.sretan_bozic", "v.13.bozic"],
+          "difficulty": 2,
+          "source": "udzbenik p.182"
+        }
+      ]
+    },
+    {
+      "id": "s.13.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.13.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Morgen zal ik mijn broer een pakket sturen.",
+          "answer": "Sutra ću poslati paket bratu.",
+          "accepts": ["Sutra ću poslati paket bratu.", "Sutra ću bratu poslati paket.", "Poslat ću paket bratu sutra."],
+          "explain_nl": "Futur I uit les 12, accusatief paket, datief bratu voor de ontvanger.",
+          "targets": ["g.12.futur", "g.13.dativ_objekt", "v.13.paket", "v.03.brat"],
+          "difficulty": 5,
+          "audio": "Sutra ću poslati paket bratu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.13.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Kome pišete razglednice i što im šaljete?",
+          "given": "Kome pišete razglednice i što im šaljete?",
+          "model_answer": "Pišem razglednice sestri i prijateljima. Šaljem im suvenire iz Hrvatske.",
+          "rubric_nl": [
+            "De ontvangers staan in de datief",
+            "Wat je stuurt staat in de accusatief",
+            "Gebruikt pisati of slati correct vervoegd"
+          ],
+          "targets": ["g.13.dativ_objekt", "g.13.slati_pisati", "g.13.red_klitika"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

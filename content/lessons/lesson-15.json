@@ -1,0 +1,440 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "title_hr": "Putujemo zajedno",
+  "title_nl": "We reizen samen",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "203-216", "vjezbenica_pages": "75-80" },
+  "can_do_nl": [
+    "Ik kan zeggen waarmee ik reis.",
+    "Ik kan zeggen met wie ik ergens heen ga.",
+    "Ik ken het verschil tussen de kale instrumentalis en s + instrumentalis.",
+    "Ik kan de instrumentalis vormen voor alle drie de geslachten.",
+    "Ik kan de vragen čime? en s kim? beantwoorden.",
+    "Ik kan over reisplannen praten."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.15.instrumental",
+      "title_nl": "INSTRUMENTALIS — de vorm",
+      "cefr": "A2.2",
+      "explanation_nl": "De instrumentalis antwoordt op čime? (waarmee?) en s kim? (met wie?). Mannelijk en onzijdig krijgen -om, of -em na een zachte medeklinker. Vrouwelijk op -a krijgt -om. Vlak → vlakom, prijatelj → prijateljem, kuća → kućom.",
+      "contrast_nl": "Dit is de laatste van de zes naamvallen die je actief nodig hebt. Het Nederlands lost hem op met 'met' en 'per': 'met de trein', 'met mijn zus'. Het Kroatisch onderscheidt die twee — en dat onderscheid zit niet in het voorzetsel maar in de aan- of afwezigheid ervan.",
+      "paradigm": {
+        "caption_nl": "Instrumental jednine",
+        "columns": ["nominativ", "instrumental", "waarom"],
+        "rows": [
+          { "label": "1.", "cells": ["vlak", "vlakom", "harde medeklinker → -om"] },
+          { "label": "2.", "cells": ["autobus", "autobusom", "harde medeklinker → -om"] },
+          { "label": "3.", "cells": ["prijatelj", "prijateljem", "zachte medeklinker → -em"] },
+          { "label": "4.", "cells": ["nož", "nožem", "zachte medeklinker → -em"] },
+          { "label": "5.", "cells": ["selo", "selom", "srednji → -om"] },
+          { "label": "6.", "cells": ["more", "morem", "srednji, zacht → -em"] },
+          { "label": "7.", "cells": ["kuća", "kućom", "ženski → -om"] },
+          { "label": "8.", "cells": ["sestra", "sestrom", "ženski → -om"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "-om kiezen na een zachte medeklinker: het is prijateljem, niet *prijateljom.",
+        "De zachte medeklinkers zijn dezelfde als bij het lange meervoud in les 3: c, č, ć, dž, đ, j, lj, nj, š, ž.",
+        "Vrouwelijke woorden op een medeklinker (noć, ljubav) krijgen -i of -ju; die groep komt in les 18."
+      ],
+      "prerequisites": ["g.14.genitiv"],
+      "source": "udzbenik p.204"
+    },
+    {
+      "id": "g.15.sredstvo",
+      "title_nl": "Waarmee? — de kale instrumentalis",
+      "cefr": "A2.2",
+      "explanation_nl": "Om een middel of vervoermiddel aan te geven gebruik je de instrumentalis zónder voorzetsel. Idem autobusom. Putujemo vlakom. Pišem olovkom. De vraag is čime?",
+      "contrast_nl": "Hier zit het grootste verschil met het Nederlands. Wij zeggen 'met de bus', met een voorzetsel. Het Kroatisch zegt alleen autobusom — het voorzetsel toevoegen is fout en betekent iets anders, namelijk dat de bus met je meereist.",
+      "paradigm": {
+        "caption_nl": "Vervoer en middelen — zonder voorzetsel",
+        "columns": ["zin", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Idem autobusom.", "Ik ga met de bus."] },
+          { "label": "2.", "cells": ["Putujemo vlakom.", "We reizen met de trein."] },
+          { "label": "3.", "cells": ["Ide autom.", "Hij gaat met de auto."] },
+          { "label": "4.", "cells": ["Letimo avionom.", "We vliegen met het vliegtuig."] },
+          { "label": "5.", "cells": ["Pišem olovkom.", "Ik schrijf met een potlood."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "s toevoegen: 'Idem s autobusom' betekent dat je samen mét een bus reist — niet wat je bedoelt.",
+        "Lopen en fietsen hebben eigen uitdrukkingen: pješice (te voet), biciklom (met de fiets).",
+        "auto wordt autom, met wegval van de o: niet *autoom."
+      ],
+      "prerequisites": ["g.15.instrumental"],
+      "source": "udzbenik p.205"
+    },
+    {
+      "id": "g.15.s_instrumental",
+      "title_nl": "Met wie? — s / sa + instrumentalis",
+      "cefr": "A2.2",
+      "explanation_nl": "Gezelschap krijgt wél een voorzetsel: s of sa plus de instrumentalis. Idem s bratom. Putujem sa sestrom. Je gebruikt sa vóór woorden die met s, š, z, ž beginnen en vóór het voornaamwoord mnom, anders s.",
+      "contrast_nl": "Het onderscheid is scherp: geen voorzetsel betekent middel, wél een voorzetsel betekent gezelschap. Vergelijk Putujem vlakom (ik reis per trein) met Putujem s bratom (ik reis met mijn broer).",
+      "paradigm": {
+        "caption_nl": "s / sa + instrumentalis",
+        "columns": ["zin", "waarom s of sa"],
+        "rows": [
+          { "label": "1.", "cells": ["Idem s bratom.", "gewone medeklinker → s"] },
+          { "label": "2.", "cells": ["Putujem sa sestrom.", "begint met s → sa"] },
+          { "label": "3.", "cells": ["Razgovaram sa Šimunom.", "begint met š → sa"] },
+          { "label": "4.", "cells": ["Ideš sa mnom?", "vaste uitdrukking → sa mnom"] },
+          { "label": "5.", "cells": ["Idemo s prijateljima.", "meervoud op -ima"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het voorzetsel weglaten bij gezelschap: 'Idem bratom' is fout.",
+        "Het voorzetsel toevoegen bij vervoer: 'Idem s vlakom' is fout.",
+        "sa mnom is één vaste combinatie — nooit *s mnom."
+      ],
+      "prerequisites": ["g.15.sredstvo"],
+      "source": "udzbenik p.206"
+    },
+    {
+      "id": "g.15.instrumental_zamjenice",
+      "title_nl": "Voornaamwoorden in de instrumentalis",
+      "cefr": "A2.2",
+      "explanation_nl": "De instrumentalis heeft alleen lange voornaamwoorden, want er staat bijna altijd een voorzetsel voor: sa mnom, s tobom, s njim, s njom, s nama, s vama, s njima.",
+      "contrast_nl": "Anders dan bij de accusatief (me / mene) en de datief (mi / meni) is er hier geen korte vorm om te onthouden. Dat maakt deze set de eenvoudigste van de drie.",
+      "paradigm": {
+        "caption_nl": "Instrumental zamjenica",
+        "columns": ["nominativ", "s + instrumental"],
+        "rows": [
+          { "label": "ja", "cells": ["ja", "sa mnom"] },
+          { "label": "ti", "cells": ["ti", "s tobom"] },
+          { "label": "on/ono", "cells": ["on, ono", "s njim"] },
+          { "label": "ona", "cells": ["ona", "s njom"] },
+          { "label": "mi", "cells": ["mi", "s nama"] },
+          { "label": "vi", "cells": ["vi/Vi", "s vama"] },
+          { "label": "oni/one", "cells": ["oni, one", "s njima"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*s mnom — het is altijd sa mnom.",
+        "s njim (met hem) en s njom (met haar) verschillen maar één letter; let op de context.",
+        "Het meervoud s njima is gelijk voor oni en one."
+      ],
+      "prerequisites": ["g.15.s_instrumental"],
+      "source": "udzbenik p.207"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.15.voziti_se", "hr": "voziti se", "nl": "rijden, vervoerd worden", "pos": "verb", "aspect": "imperfective", "present_1sg": "vozim se", "verb_class": "-iti", "tags": ["werkwoord", "reizen"], "source": "vježbenica p.75" },
+    { "id": "v.15.letjeti", "hr": "letjeti", "nl": "vliegen", "pos": "verb", "aspect": "imperfective", "present_1sg": "letim", "verb_class": "-jeti", "tags": ["werkwoord", "reizen"], "source": "aangevuld" },
+    { "id": "v.15.ploviti", "hr": "ploviti", "nl": "varen", "pos": "verb", "aspect": "imperfective", "present_1sg": "plovim", "verb_class": "-iti", "tags": ["werkwoord", "reizen"], "source": "vježbenica p.80" },
+    { "id": "v.15.hodati", "hr": "hodati", "nl": "lopen", "pos": "verb", "aspect": "imperfective", "present_1sg": "hodam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.80" },
+    { "id": "v.15.razmisljati", "hr": "razmišljati", "nl": "nadenken (o + lokativ)", "pos": "verb", "aspect": "imperfective", "present_1sg": "razmišljam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.80" },
+
+    { "id": "v.15.brod", "hr": "brod", "nl": "boot, schip", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "broda", "nom_pl": "brodovi", "tags": ["vervoer"], "source": "vježbenica p.80" },
+    { "id": "v.15.bicikl", "hr": "bicikl", "nl": "fiets", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "bicikla", "nom_pl": "bicikli", "tags": ["vervoer"], "source": "vježbenica p.34" },
+    { "id": "v.15.taksi", "hr": "taksi", "nl": "taxi", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "taksija", "nom_pl": "taksiji", "tags": ["vervoer"], "source": "aangevuld" },
+    { "id": "v.15.pjesice", "hr": "pješice", "nl": "te voet", "pos": "adv", "tags": ["vervoer"], "source": "vježbenica p.47" },
+    { "id": "v.15.karta_vozna", "hr": "vozna karta", "nl": "vervoerbewijs", "pos": "phrase", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.15.peron", "hr": "peron", "nl": "perron", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "perona", "nom_pl": "peroni", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.15.putnik", "hr": "putnik", "nl": "reiziger", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "putnika", "nom_pl": "putnici", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.15.polazak", "hr": "polazak", "nl": "vertrek", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "polaska", "nom_pl": "polasci", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.15.dolazak", "hr": "dolazak", "nl": "aankomst", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "dolaska", "nom_pl": "dolasci", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.15.prtljaznik", "hr": "kofer", "nl": "koffer", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kofera", "nom_pl": "koferi", "tags": ["reizen"], "source": "udzbenik p.27" },
+    { "id": "v.15.olovka_instr", "hr": "olovka", "nl": "potlood", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "olovke", "nom_pl": "olovke", "tags": ["ding"], "source": "udzbenik p.27" },
+
+    { "id": "v.15.cime", "hr": "čime", "nl": "waarmee", "pos": "pron", "tags": ["vraagwoord"], "source": "vježbenica p.80" },
+    { "id": "v.15.s_kim", "hr": "s kim", "nl": "met wie", "pos": "phrase", "tags": ["vraagwoord"], "source": "vježbenica p.80" },
+    { "id": "v.15.o_cemu", "hr": "o čemu", "nl": "waarover", "pos": "phrase", "tags": ["vraagwoord"], "source": "vježbenica p.80" },
+    { "id": "v.15.zajedno", "hr": "zajedno", "nl": "samen", "pos": "adv", "tags": ["basis"], "source": "udzbenik p.203" },
+    { "id": "v.15.sam", "hr": "sam", "nl": "alleen", "pos": "adj", "tags": ["basis"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.15.1",
+      "title_nl": "Waarmee reis je?",
+      "kind": "input",
+      "text_hr": "Goranka: Ideš li na more ovog vikenda?\nJasna: Da, idem. Idemo onda autobusom.\nGoranka: Autobusom? Ne dolazi u obzir! Ja u autobusu ne mogu čitati.\nJasna: A čime onda? Vlakom?\nGoranka: Vlakom, da. Ili idemo autom, ali onda vozim ja.\nJasna: Dobro. A s kim putujemo?\nGoranka: S Antom i s njegovom sestrom. Oni idu brodom do otoka.\nJasna: Onda se vidimo na kolodvoru!",
+      "translation_nl": "Goranka: Ga je dit weekend naar zee?\nJasna: Ja, ik ga. Dan gaan we met de bus.\nGoranka: Met de bus? Geen sprake van! In de bus kan ik niet lezen.\nJasna: Waarmee dan? Met de trein?\nGoranka: Met de trein, ja. Of we gaan met de auto, maar dan rijd ik.\nJasna: Goed. En met wie reizen we?\nGoranka: Met Ante en met zijn zus. Zij gaan met de boot naar het eiland.\nJasna: Dan zien we elkaar op het station!",
+      "source": "vježbenica p.75",
+      "exercises": [
+        {
+          "id": "e.15.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Geen voorzetsel bij vervoer",
+          "body_nl": "De **instrumentalis** antwoordt op **čime?** (waarmee) en **s kim?** (met wie).\n\nDe vormen: mannelijk en onzijdig → **-om**, of **-em** na een zachte medeklinker · vrouwelijk op -a → **-om**\n\n*vlak → vlak**om*** · *prijatelj → prijatelj**em*** · *kuća → kuć**om***\n\nEn nu het punt waar Nederlandstaligen struikelen: bij een **vervoermiddel staat er géén voorzetsel**.\n\n*Idem autobus**om**.* — Ik ga met de bus.\n\n'Idem s autobusom' zou betekenen dat je sámen met een bus op reis gaat.",
+          "targets": ["g.15.instrumental", "g.15.sredstvo"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis. Geen voorzetsel.",
+          "given": "Idemo onda ___. (autobus)",
+          "answer": "autobusom",
+          "accepts": ["autobusom"],
+          "explain_nl": "Harde medeklinker → -om, zonder voorzetsel.",
+          "targets": ["g.15.sredstvo", "v.01.autobus"],
+          "difficulty": 3,
+          "audio": "Idemo onda autobusom.",
+          "source": "vježbenica p.75"
+        },
+        {
+          "id": "e.15.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis.",
+          "given": "Putujemo ___. (vlak)",
+          "answer": "vlakom",
+          "accepts": ["vlakom"],
+          "targets": ["g.15.sredstvo", "v.03.vlak"],
+          "difficulty": 2,
+          "audio": "Putujemo vlakom.",
+          "source": "vježbenica p.75"
+        },
+        {
+          "id": "e.15.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis. Let op de zachte medeklinker.",
+          "given": "Idem s ___. (prijatelj)",
+          "answer": "prijateljem",
+          "accepts": ["prijateljem"],
+          "explain_nl": "lj is een zachte medeklinker → -em, niet -om.",
+          "targets": ["g.15.instrumental", "g.15.s_instrumental", "v.01.prijatelj"],
+          "difficulty": 4,
+          "audio": "Idem s prijateljem.",
+          "source": "udzbenik p.204"
+        }
+      ]
+    },
+    {
+      "id": "s.15.2",
+      "title_nl": "Middel of gezelschap",
+      "kind": "grammar",
+      "source": "udzbenik p.206",
+      "exercises": [
+        {
+          "id": "e.15.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het voorzetsel maakt het verschil",
+          "body_nl": "Twee betekenissen, dezelfde naamval — het **voorzetsel** beslist:\n\n**zonder voorzetsel = middel**\n*Putujem vlak**om**.* — Ik reis met de trein.\n\n**met s / sa = gezelschap**\n*Putujem **s** brat**om**.* — Ik reis met mijn broer.\n\nJe gebruikt **sa** vóór woorden die met s, š, z of ž beginnen, en in de vaste vorm **sa mnom**. Anders **s**.\n\n*sa sestrom* · *sa Šimunom* · *sa mnom* · maar *s bratom*, *s njom*",
+          "targets": ["g.15.s_instrumental"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul voorzetsel én naamval in.",
+          "given": "Putujem ___ ___. (sestra)",
+          "answer": "sa sestrom",
+          "accepts": ["sa sestrom"],
+          "explain_nl": "sestra begint met s → sa. Gezelschap, dus wél een voorzetsel.",
+          "targets": ["g.15.s_instrumental", "v.01.sestra"],
+          "difficulty": 4,
+          "audio": "Putujem sa sestrom.",
+          "source": "udzbenik p.206"
+        },
+        {
+          "id": "e.15.012",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin betekent 'ik ga met de auto'?",
+          "given": "…",
+          "answer": "Idem autom.",
+          "distractors": ["Idem s autom.", "Idem u autom.", "Idem auto."],
+          "explain_nl": "Vervoermiddel → kale instrumentalis, zonder voorzetsel.",
+          "targets": ["g.15.sredstvo"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.013",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Putujemo s vlakom u Zagreb.",
+          "answer": "Putujemo vlakom u Zagreb.",
+          "accepts": ["Putujemo vlakom u Zagreb."],
+          "explain_nl": "Bij een vervoermiddel gebruik je geen voorzetsel.",
+          "targets": ["g.15.sredstvo", "v.03.vlak"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Idem bratom na more.",
+          "answer": "Idem s bratom na more.",
+          "accepts": ["Idem s bratom na more."],
+          "explain_nl": "Gezelschap krijgt juist wél een voorzetsel: s bratom.",
+          "targets": ["g.15.s_instrumental", "v.03.brat"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het voornaamwoord in.",
+          "given": "Ideš li ___ ___? (ja)",
+          "answer": "sa mnom",
+          "accepts": ["sa mnom"],
+          "explain_nl": "Vaste combinatie: sa mnom, nooit *s mnom.",
+          "targets": ["g.15.instrumental_zamjenice"],
+          "difficulty": 4,
+          "audio": "Ideš li sa mnom?",
+          "source": "udzbenik p.207"
+        },
+        {
+          "id": "e.15.016",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het voornaamwoord aan de vorm.",
+          "pairs": [
+            { "hr": "ja", "nl": "sa mnom" },
+            { "hr": "ti", "nl": "s tobom" },
+            { "hr": "ona", "nl": "s njom" },
+            { "hr": "oni", "nl": "s njima" }
+          ],
+          "targets": ["g.15.instrumental_zamjenice"],
+          "difficulty": 3,
+          "source": "udzbenik p.207"
+        }
+      ]
+    },
+    {
+      "id": "s.15.3",
+      "title_nl": "Reizen en praten",
+      "kind": "practice",
+      "source": "vježbenica p.80",
+      "exercises": [
+        {
+          "id": "e.15.020",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis.",
+          "given": "Brod plovi ___. (more)",
+          "answer": "morem",
+          "accepts": ["morem"],
+          "explain_nl": "more eindigt op -e, een zachte stam → -em.",
+          "targets": ["g.15.instrumental", "v.01.more", "v.15.ploviti"],
+          "difficulty": 4,
+          "audio": "Brod plovi morem.",
+          "source": "vježbenica p.80"
+        },
+        {
+          "id": "e.15.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis.",
+          "given": "Turisti hodaju ___. (Dubrovnik)",
+          "answer": "Dubrovnikom",
+          "accepts": ["Dubrovnikom"],
+          "explain_nl": "Hier geeft de instrumentalis de route aan: door Dubrovnik heen.",
+          "targets": ["g.15.instrumental", "v.15.hodati"],
+          "difficulty": 4,
+          "audio": "Turisti hodaju Dubrovnikom.",
+          "source": "vježbenica p.80"
+        },
+        {
+          "id": "e.15.022",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik reis met de trein met mijn zus.",
+          "answer": "Putujem vlakom sa sestrom.",
+          "accepts": ["Putujem vlakom sa sestrom."],
+          "explain_nl": "Twee instrumentalissen in één zin: vlakom (middel, geen voorzetsel) en sa sestrom (gezelschap, wel voorzetsel).",
+          "targets": ["g.15.sredstvo", "g.15.s_instrumental"],
+          "difficulty": 5,
+          "audio": "Putujem vlakom sa sestrom.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Stel de vraag met het juiste vraagwoord.",
+          "given": "Idemo autobusom. ___ idemo?",
+          "answer": "Čime",
+          "accepts": ["Čime", "čime"],
+          "explain_nl": "čime vraagt naar het middel.",
+          "targets": ["v.15.cime", "g.15.sredstvo"],
+          "difficulty": 3,
+          "audio": "Čime idemo?",
+          "source": "vježbenica p.80"
+        },
+        {
+          "id": "e.15.024",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "S kim putujete i čime idete na more?",
+          "answer": "S kim putujete i čime idete na more?",
+          "accepts": ["S kim putujete i čime idete na more?"],
+          "targets": ["v.15.s_kim", "v.15.cime"],
+          "difficulty": 5,
+          "source": "vježbenica p.80"
+        },
+        {
+          "id": "e.15.025",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Oni", "idu", "brodom", "do", "otoka"],
+          "answer": "Oni idu brodom do otoka.",
+          "accepts": ["Oni idu brodom do otoka."],
+          "explain_nl": "brodom is het middel (kale instrumentalis), do otoka is de genitief na het voorzetsel do — die komt in les 16.",
+          "targets": ["g.15.sredstvo", "v.15.brod", "v.05.otok"],
+          "difficulty": 5,
+          "audio": "Oni idu brodom do otoka.",
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.15.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.15.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Volgende week zal ik met de boot naar het eiland reizen, samen met mijn vrienden.",
+          "answer": "Sljedeći tjedan putovat ću brodom na otok, zajedno s prijateljima.",
+          "accepts": ["Sljedeći tjedan putovat ću brodom na otok, zajedno s prijateljima."],
+          "explain_nl": "Futur uit les 12, kale instrumentalis brodom, accusatief na otok, en s prijateljima voor gezelschap.",
+          "targets": ["g.12.futur", "g.15.sredstvo", "g.15.s_instrumental", "g.07.u_na_akuzativ"],
+          "difficulty": 5,
+          "audio": "Sljedeći tjedan putovat ću brodom na otok, zajedno s prijateljima.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.15.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Čime i s kim najčešće putujete?",
+          "given": "Čime i s kim najčešće putujete?",
+          "model_answer": "Najčešće putujem vlakom ili autom. Putujem sa sestrom i s prijateljima.",
+          "rubric_nl": [
+            "Het vervoermiddel staat in de kale instrumentalis, zonder voorzetsel",
+            "Het gezelschap staat met s of sa",
+            "De vormen op -om en -em zijn correct gekozen"
+          ],
+          "targets": ["g.15.sredstvo", "g.15.s_instrumental", "g.15.instrumental"],
+          "difficulty": 5,
+          "source": "vježbenica p.80"
+        }
+      ]
+    }
+  ]
+}

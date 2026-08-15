@@ -1,0 +1,428 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "title_hr": "Zdravlje i sport",
+  "title_nl": "Gezondheid en sport",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "247-256", "vjezbenica_pages": "90-92" },
+  "can_do_nl": [
+    "Ik kan zeggen wat er pijn doet met boljeti.",
+    "Ik kan naar de dokter gaan en klachten beschrijven.",
+    "Ik kan vrouwelijke woorden op een medeklinker verbuigen.",
+    "Ik kan zeggen welke sport ik beoefen met baviti se.",
+    "Ik kan een allergie benoemen.",
+    "Ik ken de belangrijkste lichaamsdelen."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.18.boljeti",
+      "title_nl": "boljeti — de pijn is het onderwerp",
+      "cefr": "A2.2",
+      "explanation_nl": "In het Kroatisch doet het lichaamsdeel de handeling: Boli me glava betekent letterlijk 'het hoofd doet mij pijn'. Het lichaamsdeel is het onderwerp en staat in de nominatief; de persoon staat in de accusatief. Is er één lichaamsdeel, dan boli; zijn het er meer, dan bole.",
+      "contrast_nl": "Het Nederlands zegt 'ik heb hoofdpijn' — de persoon is het onderwerp. Het Kroatisch draait dat om, en dat is precies waarom deze constructie zo lastig aanvoelt. Vraag jezelf af: wát doet er pijn? Dat woord is het onderwerp.",
+      "paradigm": {
+        "caption_nl": "boljeti — enkelvoud en meervoud",
+        "columns": ["Kroatisch", "letterlijk", "Nederlands"],
+        "rows": [
+          { "label": "1.", "cells": ["Boli me glava.", "het hoofd doet mij pijn", "Ik heb hoofdpijn."] },
+          { "label": "2.", "cells": ["Boli ga želudac.", "de maag doet hem pijn", "Hij heeft buikpijn."] },
+          { "label": "3.", "cells": ["Bole me zubi.", "de tanden doen mij pijn", "Ik heb kiespijn."] },
+          { "label": "4.", "cells": ["Bole nas noge.", "de benen doen ons pijn", "Onze benen doen pijn."] },
+          { "label": "5.", "cells": ["Boli li te uho?", "doet het oor jou pijn?", "Heb je oorpijn?"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De persoon als onderwerp nemen: 'Ja bolim glavu' is fout en betekent iets heel anders.",
+        "boli bij meerdere lichaamsdelen: het moet bole zijn.",
+        "De persoon staat in de accusatief, dus in de korte vorm: me, te, ga, je, nas, vas, ih."
+      ],
+      "prerequisites": ["g.07.zamjenice_akuzativ"],
+      "source": "udzbenik p.248"
+    },
+    {
+      "id": "g.18.zenski_suglasnik",
+      "title_nl": "Vrouwelijke woorden op een medeklinker",
+      "cefr": "A2.2",
+      "explanation_nl": "Een aparte groep vrouwelijke woorden eindigt niet op -a maar op een medeklinker: bolest, kost, riječ, noć, ljubav, stvar, sol, pomoć. Ze verbuigen anders: de genitief, datief en locatief krijgen allemaal -i, en de accusatief blijft gelijk aan de nominatief.",
+      "contrast_nl": "Deze woorden zijn de reden dat je het geslacht altijd moet meeleren. Aan noć of ljubav is niets te zien — ze zien eruit als mannelijke woorden, maar ze zijn vrouwelijk en gedragen zich zo: velika ljubav, niet veliki.",
+      "paradigm": {
+        "caption_nl": "riječ — vrouwelijk op een medeklinker",
+        "columns": ["naamval", "vorm", "voorbeeld"],
+        "rows": [
+          { "label": "nominativ", "cells": ["riječ", "To je duga riječ."] },
+          { "label": "akuzativ", "cells": ["riječ", "Znam tu riječ."] },
+          { "label": "genitiv", "cells": ["riječi", "Naučili smo mnogo riječi."] },
+          { "label": "dativ", "cells": ["riječi", "Vjerujem toj riječi."] },
+          { "label": "lokativ", "cells": ["riječi", "Razmišljam o toj riječi."] },
+          { "label": "instrumental", "cells": ["riječi / riječju", "Rekao je to jednom riječju."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Ze als mannelijk behandelen: het is velika ljubav en duga noć, met vrouwelijke bijvoeglijke naamwoorden.",
+        "De accusatief veranderen: die blijft gelijk aan de nominatief, dus geen -u.",
+        "In het meervoud eindigt de nominatief ook op -i: riječi, bolesti, noći."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg", "g.14.genitiv"],
+      "source": "udzbenik p.250"
+    },
+    {
+      "id": "g.18.baviti_se",
+      "title_nl": "baviti se + INSTRUMENTALIS",
+      "cefr": "A2.2",
+      "explanation_nl": "Om te zeggen welke sport of hobby je beoefent, gebruik je baviti se met de instrumentalis: Bavim se plivanjem. Bavi se nogometom. Let op het verschil met trenirati, dat gewoon een accusatief neemt: Treniram košarku.",
+      "contrast_nl": "Het Nederlands gebruikt 'aan' of niets ('ik doe aan zwemmen', 'ik zwem'). Het Kroatisch heeft hier een vaste combinatie die je als geheel leert: baviti se + instrumentalis.",
+      "paradigm": {
+        "caption_nl": "baviti se en trenirati",
+        "columns": ["werkwoord", "naamval", "voorbeeld"],
+        "rows": [
+          { "label": "baviti se", "cells": ["instrumental", "Bavim se plivanjem."] },
+          { "label": "baviti se", "cells": ["instrumental", "Bavi se vrtlarstvom."] },
+          { "label": "trenirati", "cells": ["akuzativ", "Treniram košarku."] },
+          { "label": "trenirati", "cells": ["akuzativ", "Treniraju vaterpolo."] },
+          { "label": "igrati", "cells": ["akuzativ", "Igram nogomet."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De accusatief gebruiken na baviti se: 'Bavim se plivanje' is fout.",
+        "Het se vergeten: baviti zonder se bestaat in deze betekenis niet.",
+        "Sportnamen op -anje zijn onzijdig: plivanje → plivanjem."
+      ],
+      "prerequisites": ["g.15.instrumental", "g.14.povratni"],
+      "source": "vježbenica p.92"
+    },
+    {
+      "id": "g.18.alergican",
+      "title_nl": "alergičan na + ACCUSATIEF",
+      "cefr": "A2.2",
+      "explanation_nl": "Een allergie druk je uit met alergičan (mannelijk), alergična (vrouwelijk), alergično (onzijdig) plus na met de accusatief: Alergičan sam na pelud. Ivona je alergična na prašinu.",
+      "contrast_nl": "De constructie is bijna gelijk aan het Nederlandse 'allergisch voor'. Het enige verschil is dat na de accusatief eist en dat het bijvoeglijk naamwoord meebuigt met de spreker.",
+      "paradigm": {
+        "caption_nl": "alergičan na + akuzativ",
+        "columns": ["persoon", "voorbeeld"],
+        "rows": [
+          { "label": "man", "cells": ["Ja sam alergičan na pelud."] },
+          { "label": "vrouw", "cells": ["Ivona je alergična na prašinu."] },
+          { "label": "kinderen", "cells": ["Njihova djeca su alergična na penicilin."] },
+          { "label": "meervoud", "cells": ["Mi nismo alergični na životinjsku dlaku."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het bijvoeglijk naamwoord niet aanpassen aan het geslacht van de spreker.",
+        "De accusatief vergeten: na prašinu, niet na prašina.",
+        "pelud is vrouwelijk en eindigt op een medeklinker — dus na pelud blijft onveranderd."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo", "g.04.pridjevi"],
+      "source": "vježbenica p.91"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.18.boljeti", "hr": "boljeti", "nl": "pijn doen", "pos": "verb", "aspect": "imperfective", "present_1sg": "bolim", "verb_class": "-jeti", "tags": ["gezondheid"], "source": "udzbenik p.248" },
+    { "id": "v.18.glava", "hr": "glava", "nl": "hoofd", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "glave", "nom_pl": "glave", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.grlo", "hr": "grlo", "nl": "keel", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "grla", "nom_pl": "grla", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.leda", "hr": "leđa", "nl": "rug", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "leđa", "nom_pl": "leđa", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.oko_lichaam", "hr": "oko", "nl": "oog", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "oka", "nom_pl": "oči", "tags": ["lichaam", "uitzondering"], "source": "vježbenica p.90" },
+    { "id": "v.18.uho", "hr": "uho", "nl": "oor", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "uha", "nom_pl": "uši", "tags": ["lichaam", "uitzondering"], "source": "vježbenica p.90" },
+    { "id": "v.18.zub", "hr": "zub", "nl": "tand", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "zuba", "nom_pl": "zubi", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.zeludac", "hr": "želudac", "nl": "maag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "želuca", "nom_pl": "želuci", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.prst", "hr": "prst", "nl": "vinger", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "prsta", "nom_pl": "prsti", "tags": ["lichaam"], "source": "vježbenica p.90" },
+    { "id": "v.18.koljeno", "hr": "koljeno", "nl": "knie", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "koljena", "nom_pl": "koljena", "tags": ["lichaam"], "source": "vježbenica p.90" },
+
+    { "id": "v.18.bolest", "hr": "bolest", "nl": "ziekte", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "bolesti", "nom_pl": "bolesti", "tags": ["gezondheid", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.kost", "hr": "kost", "nl": "bot", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "kosti", "nom_pl": "kosti", "tags": ["lichaam", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.rijec", "hr": "riječ", "nl": "woord", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "riječi", "nom_pl": "riječi", "tags": ["taal", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.noc", "hr": "noć", "nl": "nacht", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "noći", "nom_pl": "noći", "tags": ["tijd", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.ljubav", "hr": "ljubav", "nl": "liefde", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "ljubavi", "nom_pl": "ljubavi", "tags": ["abstract", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.stvar", "hr": "stvar", "nl": "ding, zaak", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "stvari", "nom_pl": "stvari", "tags": ["abstract", "i-stam"], "source": "aangevuld" },
+    { "id": "v.18.pomoc", "hr": "pomoć", "nl": "hulp", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "pomoći", "tags": ["abstract", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.povijest", "hr": "povijest", "nl": "geschiedenis", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "povijesti", "tags": ["school", "i-stam"], "source": "vježbenica p.90" },
+    { "id": "v.18.krv", "hr": "krv", "nl": "bloed", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "krvi", "tags": ["lichaam", "i-stam"], "source": "vježbenica p.90" },
+
+    { "id": "v.18.baviti_se_sport", "hr": "baviti se", "nl": "beoefenen (+ instrumentalis)", "pos": "verb", "aspect": "imperfective", "present_1sg": "bavim se", "verb_class": "-iti", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.plivanje", "hr": "plivanje", "nl": "zwemmen", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "plivanja", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.skijanje", "hr": "skijanje", "nl": "skiën", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "skijanja", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.kosarka", "hr": "košarka", "nl": "basketbal", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "košarke", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.vaterpolo", "hr": "vaterpolo", "nl": "waterpolo", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "vaterpola", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.sah", "hr": "šah", "nl": "schaken", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "šaha", "tags": ["sport"], "source": "vježbenica p.92" },
+    { "id": "v.18.alergican", "hr": "alergičan", "nl": "allergisch", "pos": "adj", "tags": ["gezondheid", "vluchtige-a"], "source": "vježbenica p.91" },
+    { "id": "v.18.prasina", "hr": "prašina", "nl": "stof", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "prašine", "tags": ["gezondheid"], "source": "vježbenica p.91" },
+    { "id": "v.18.pelud", "hr": "pelud", "nl": "pollen", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "peludi", "tags": ["gezondheid", "i-stam"], "source": "vježbenica p.91" },
+    { "id": "v.18.zdravlje", "hr": "zdravlje", "nl": "gezondheid", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "zdravlja", "tags": ["gezondheid"], "source": "udzbenik p.247" },
+    { "id": "v.18.bolestan", "hr": "bolestan", "nl": "ziek", "pos": "adj", "tags": ["gezondheid", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.18.zdrav", "hr": "zdrav", "nl": "gezond", "pos": "adj", "tags": ["gezondheid"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.18.1",
+      "title_nl": "Bij de dokter",
+      "kind": "input",
+      "text_hr": "Liječnica: Dobar dan! Što vas boli?\nPacijent: Boli me glava i boli me grlo. Bole me i leđa.\nLiječnica: Koliko dugo?\nPacijent: Tri dana. Noću ne mogu spavati.\nLiječnica: Jeste li alergični na nešto?\nPacijent: Da, alergičan sam na pelud i na prašinu.\nLiječnica: Dobro. Trebate lijek i odmor. Bez odmora nema zdravlja.\nPacijent: Hvala Vam na pomoći!",
+      "translation_nl": "Arts: Goedendag! Wat doet u pijn?\nPatiënt: Ik heb hoofdpijn en keelpijn. Mijn rug doet ook pijn.\nArts: Hoe lang al?\nPatiënt: Drie dagen. 's Nachts kan ik niet slapen.\nArts: Bent u ergens allergisch voor?\nPatiënt: Ja, ik ben allergisch voor pollen en voor stof.\nArts: Goed. U hebt medicijnen en rust nodig. Zonder rust geen gezondheid.\nPatiënt: Dank u voor uw hulp!",
+      "source": "udzbenik p.248",
+      "exercises": [
+        {
+          "id": "e.18.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het lichaamsdeel is het onderwerp",
+          "body_nl": "Het Kroatisch draait de pijnzin om. Waar wij zeggen 'ik heb hoofdpijn', zegt het Kroatisch letterlijk **'het hoofd doet mij pijn'**:\n\n*Boli **me** glava.*\n\nHet **lichaamsdeel** is het onderwerp en staat in de nominatief. De **persoon** staat in de accusatief, in de korte vorm: me, te, ga, je, nas, vas, ih.\n\nEén lichaamsdeel → **boli**. Meerdere → **bole**:\n*Boli me zub.* — *Bole me zubi.*\n\nVraag jezelf altijd af: **wát** doet er pijn? Dat woord bepaalt het werkwoord.",
+          "targets": ["g.18.boljeti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.18.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het voornaamwoord in.",
+          "given": "Boli ___ noga. (on)",
+          "answer": "ga",
+          "accepts": ["ga"],
+          "explain_nl": "De persoon staat in de accusatief, korte vorm: ga.",
+          "targets": ["g.18.boljeti", "v.10.noga"],
+          "difficulty": 3,
+          "audio": "Boli ga noga.",
+          "source": "vježbenica p.90"
+        },
+        {
+          "id": "e.18.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het werkwoord in. Let op het aantal.",
+          "given": "___ me zubi.",
+          "answer": "Bole",
+          "accepts": ["Bole", "bole"],
+          "explain_nl": "zubi is meervoud → bole.",
+          "targets": ["g.18.boljeti", "v.18.zub"],
+          "difficulty": 4,
+          "audio": "Bole me zubi.",
+          "source": "vježbenica p.90"
+        },
+        {
+          "id": "e.18.004",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Boli me oči.",
+          "answer": "Bole me oči.",
+          "accepts": ["Bole me oči."],
+          "explain_nl": "oči is meervoud (oko → oči), dus bole.",
+          "targets": ["g.18.boljeti", "v.18.oko_lichaam"],
+          "difficulty": 4,
+          "source": "vježbenica p.90"
+        }
+      ]
+    },
+    {
+      "id": "s.18.2",
+      "title_nl": "Vrouwelijk op een medeklinker",
+      "kind": "grammar",
+      "source": "udzbenik p.250",
+      "exercises": [
+        {
+          "id": "e.18.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De groep die je vanaf les 1 hebt uitgesteld",
+          "body_nl": "In les 1 stond er een voetnoot: sommige woorden op een medeklinker zijn tóch vrouwelijk. Hier is die groep:\n\n**bolest, kost, riječ, noć, ljubav, stvar, sol, pomoć, povijest, krv**\n\nZe verbuigen anders dan de -a groep:\n**genitief, datief en locatief → -i** · *mnogo riječ**i***, *o ljubav**i***\n**accusatief = nominatief** · *Znam tu riječ.* — geen -u\n\nEn ze zijn écht vrouwelijk, dus: *velik**a** ljubav*, *dug**a** noć*.\n\nAan de vorm is niets te zien. Daarom staat het geslacht bij elk woord in de lijst.",
+          "targets": ["g.18.zenski_suglasnik"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.18.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "Naučili smo mnogo ___. (riječ mn)",
+          "answer": "riječi",
+          "accepts": ["riječi"],
+          "explain_nl": "Vrouwelijk op een medeklinker → genitief meervoud op -i.",
+          "targets": ["g.18.zenski_suglasnik", "v.18.rijec"],
+          "difficulty": 4,
+          "audio": "Naučili smo mnogo riječi.",
+          "source": "vježbenica p.90"
+        },
+        {
+          "id": "e.18.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief na dovoljno.",
+          "given": "U juhi nema dovoljno ___. (sol)",
+          "answer": "soli",
+          "accepts": ["soli"],
+          "targets": ["g.18.zenski_suglasnik", "v.14.sol"],
+          "difficulty": 4,
+          "audio": "U juhi nema dovoljno soli.",
+          "source": "vježbenica p.90"
+        },
+        {
+          "id": "e.18.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het bijvoeglijk naamwoord in. Let op het geslacht.",
+          "given": "To je ___ noć. (dug)",
+          "answer": "duga",
+          "accepts": ["duga"],
+          "explain_nl": "noć is vrouwelijk, ook al eindigt het op een medeklinker → duga.",
+          "targets": ["g.18.zenski_suglasnik", "v.18.noc", "g.04.pridjevi"],
+          "difficulty": 5,
+          "audio": "To je duga noć.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.18.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan. Let op: de accusatief verandert hier niet.",
+          "given": "Mogu li te moliti za ___? (pomoć)",
+          "answer": "pomoć",
+          "accepts": ["pomoć"],
+          "explain_nl": "Bij deze groep is de accusatief gelijk aan de nominatief — geen -u.",
+          "targets": ["g.18.zenski_suglasnik", "v.18.pomoc"],
+          "difficulty": 5,
+          "audio": "Mogu li te moliti za pomoć?",
+          "source": "vježbenica p.90"
+        },
+        {
+          "id": "e.18.015",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het Kroatische woord aan het Nederlandse.",
+          "pairs": [
+            { "hr": "bolest", "nl": "ziekte" },
+            { "hr": "riječ", "nl": "woord" },
+            { "hr": "ljubav", "nl": "liefde" },
+            { "hr": "noć", "nl": "nacht" }
+          ],
+          "targets": ["g.18.zenski_suglasnik", "v.18.bolest", "v.18.rijec", "v.18.ljubav", "v.18.noc"],
+          "difficulty": 2,
+          "source": "vježbenica p.90"
+        }
+      ]
+    },
+    {
+      "id": "s.18.3",
+      "title_nl": "Sport en allergieën",
+      "kind": "practice",
+      "source": "vježbenica p.91-92",
+      "exercises": [
+        {
+          "id": "e.18.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "baviti se vraagt de instrumentalis",
+          "body_nl": "Welke sport je beoefent zeg je met **baviti se + instrumentalis**:\n\n*Bavim se plivanj**em**.* · *Bavi se vrtlarstv**om**.*\n\nMaar **trenirati** en **igrati** nemen gewoon een **accusatief**:\n*Treniram košark**u**.* · *Igram nogomet.*\n\nTwee werkwoorden voor bijna hetzelfde, met verschillende naamvallen. Leer ze als paar.",
+          "targets": ["g.18.baviti_se"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.18.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de instrumentalis.",
+          "given": "Bavim se ___. (plivanje)",
+          "answer": "plivanjem",
+          "accepts": ["plivanjem"],
+          "explain_nl": "Onzijdig op -e → instrumentalis -em.",
+          "targets": ["g.18.baviti_se", "v.18.plivanje"],
+          "difficulty": 4,
+          "audio": "Bavim se plivanjem.",
+          "source": "vježbenica p.92"
+        },
+        {
+          "id": "e.18.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Treniram ___. (košarka)",
+          "answer": "košarku",
+          "accepts": ["košarku"],
+          "explain_nl": "trenirati neemt de accusatief, niet de instrumentalis.",
+          "targets": ["g.18.baviti_se", "v.18.kosarka"],
+          "difficulty": 4,
+          "audio": "Treniram košarku.",
+          "source": "vježbenica p.92"
+        },
+        {
+          "id": "e.18.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het bijvoeglijk naamwoord en de accusatief in.",
+          "given": "Ivona je ___ na ___. (alergičan, prašina)",
+          "answer": "alergična na prašinu",
+          "accepts": ["alergična na prašinu"],
+          "explain_nl": "Vrouwelijk → alergična; na + accusatief → prašinu.",
+          "targets": ["g.18.alergican", "v.18.prasina"],
+          "difficulty": 4,
+          "audio": "Ivona je alergična na prašinu.",
+          "source": "vježbenica p.91"
+        },
+        {
+          "id": "e.18.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan. Let op: pelud is vrouwelijk op een medeklinker.",
+          "given": "Ja sam alergičan na ___. (pelud)",
+          "answer": "pelud",
+          "accepts": ["pelud"],
+          "explain_nl": "De accusatief van deze groep is gelijk aan de nominatief.",
+          "targets": ["g.18.alergican", "g.18.zenski_suglasnik", "v.18.pelud"],
+          "difficulty": 5,
+          "audio": "Ja sam alergičan na pelud.",
+          "source": "vježbenica p.91"
+        },
+        {
+          "id": "e.18.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Što vas boli? Boli me glava i bole me leđa.",
+          "answer": "Što vas boli? Boli me glava i bole me leđa.",
+          "accepts": ["Što vas boli? Boli me glava i bole me leđa."],
+          "targets": ["g.18.boljeti", "v.18.glava", "v.18.leda"],
+          "difficulty": 5,
+          "source": "udzbenik p.248"
+        }
+      ]
+    },
+    {
+      "id": "s.18.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.18.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik heb hoofdpijn en ik kan 's nachts niet slapen.",
+          "answer": "Boli me glava i noću ne mogu spavati.",
+          "accepts": ["Boli me glava i noću ne mogu spavati.", "Boli me glava i ne mogu spavati noću."],
+          "explain_nl": "De omgekeerde pijnconstructie plus ne mogu uit les 6.",
+          "targets": ["g.18.boljeti", "g.06.moci", "v.18.glava"],
+          "difficulty": 5,
+          "audio": "Boli me glava i noću ne mogu spavati.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.18.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Bavite li se sportom? Jeste li alergični na nešto?",
+          "given": "Bavite li se sportom? Jeste li alergični na nešto?",
+          "model_answer": "Bavim se plivanjem i treniram košarku. Alergičan sam na pelud.",
+          "rubric_nl": [
+            "baviti se wordt gevolgd door de instrumentalis",
+            "trenirati of igrati wordt gevolgd door de accusatief",
+            "Het bijvoeglijk naamwoord alergičan klopt met je eigen geslacht"
+          ],
+          "targets": ["g.18.baviti_se", "g.18.alergican"],
+          "difficulty": 5,
+          "source": "vježbenica p.92"
+        }
+      ]
+    }
+  ]
+}

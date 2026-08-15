@@ -1,0 +1,18 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# Je voortgang. Eén SQLite-bestand met je hele leergeschiedenis — dat is
+# persoonlijke data en hoort niet in een repository. `npm run seed` bouwt de
+# database opnieuw op uit content/.
+data/
+
+# De bronboeken. Dit zijn gescande hoofdstukken uit een commercieel lesboek
+# (Hrvatski za početnike). Die mogen niet mee: het auteursrecht ligt niet hier,
+# en 18 MB scans horen sowieso niet in versiebeheer.
+*.pdf
+
+# Machine-eigen instellingen van Claude Code.
+.claude/settings.local.json

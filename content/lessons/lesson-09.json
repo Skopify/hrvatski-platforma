@@ -1,0 +1,421 @@
+{
+  "id": "lesson-09",
+  "number": 9,
+  "title_hr": "Odijelo (ne) čini čovjeka",
+  "title_nl": "Kleren maken (niet) de man",
+  "cefr": "A1.2",
+  "source": { "udzbenik_pages": "119-128", "vjezbenica_pages": "46-50" },
+  "can_do_nl": [
+    "Ik kan kledingstukken benoemen en beschrijven.",
+    "Ik kan werkwoorden op -iti vervoegen in de tegenwoordige tijd.",
+    "Ik kan werkwoorden op -jeti vervoegen.",
+    "Ik hoor het verschil tussen de derde persoon meervoud -e en -aju.",
+    "Ik kan kleding kopen in een winkel en zeggen wat ik zoek."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.09.prezent.iti",
+      "title_nl": "Tegenwoordige tijd van werkwoorden op -iti",
+      "cefr": "A1.2",
+      "explanation_nl": "De tweede grote werkwoordsgroep. Haal -iti van de infinitief en plak erachter: -im, -iš, -i, -imo, -ite, -e. raditi → radim, radiš, radi, radimo, radite, rade. Zo gaan ook nositi, govoriti, učiti, kupiti, misliti.",
+      "contrast_nl": "Voor het Nederlands is er geen verschil tussen deze groepen — 'werken' en 'lezen' vervoegen hetzelfde. In het Kroatisch bepaalt de infinitiefuitgang welke set je krijgt, dus je moet bij elk nieuw werkwoord de klasse meeleren.",
+      "paradigm": {
+        "caption_nl": "raditi (werken) — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["radim", "radimo"] },
+          { "label": "2.", "cells": ["radiš", "radite"] },
+          { "label": "3.", "cells": ["radi", "rade"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De 3e persoon meervoud is -e, niet -iju: rade, nose, uče.",
+        "De 3e persoon enkelvoud heeft geen extra uitgang: radi, niet *radie.",
+        "Verwar de klasse niet met de -ati groep: čitati → čitaju, maar raditi → rade."
+      ],
+      "prerequisites": ["g.05.prezent.ati"],
+      "source": "udzbenik p.120"
+    },
+    {
+      "id": "g.09.prezent.jeti",
+      "title_nl": "Werkwoorden op -jeti",
+      "cefr": "A1.2",
+      "explanation_nl": "Werkwoorden op -jeti vervoegen precies als de -iti groep: vidjeti → vidim, vidiš, vidi, vidimo, vidite, vide. Zo ook živjeti (živim), voljeti (volim), željeti (želim). De je van de infinitief verdwijnt volledig in het presens.",
+      "contrast_nl": "Dat de infinitief -jeti heeft maar het presens -im, is precies de reden waarom je een werkwoord altijd met zijn ik-vorm leert. Uit 'voljeti' alleen kun je 'volim' niet afleiden.",
+      "paradigm": {
+        "caption_nl": "-jeti werkwoorden — de ik-vorm",
+        "columns": ["infinitief", "ja-vorm", "betekenis"],
+        "rows": [
+          { "label": "1.", "cells": ["vidjeti", "vidim", "zien"] },
+          { "label": "2.", "cells": ["živjeti", "živim", "wonen, leven"] },
+          { "label": "3.", "cells": ["voljeti", "volim", "houden van"] },
+          { "label": "4.", "cells": ["željeti", "želim", "wensen, willen"] },
+          { "label": "5.", "cells": ["razumjeti", "razumijem", "begrijpen (afwijkend)"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De je meenemen in het presens: *voljem bestaat niet, het is volim.",
+        "razumjeti valt buiten het patroon: razumijem, razumiješ, razumije.",
+        "voljeti (houden van) en željeti (wensen) lijken op elkaar maar zijn verschillend."
+      ],
+      "prerequisites": ["g.09.prezent.iti"],
+      "source": "udzbenik p.120"
+    },
+    {
+      "id": "g.09.treca_mnozina",
+      "title_nl": "Het verschil dat je moet horen: -e versus -aju",
+      "cefr": "A1.2",
+      "explanation_nl": "In de derde persoon meervoud lopen de twee grote groepen uiteen. De -ati groep krijgt -aju: čitaju, gledaju, kuhaju. De -iti en -jeti groepen krijgen -e: rade, nose, vide, vole. Dat is vaak het enige verschil tussen 'hij doet' en 'zij doen', dus je moet het horen én produceren.",
+      "contrast_nl": "Het Nederlands markeert het meervoud in de derde persoon nauwelijks ('hij werkt' / 'zij werken' verschilt maar één letter). In het Kroatisch is het verschil groter, maar dan wel op een plek waar je het makkelijk verkeerd raadt.",
+      "paradigm": {
+        "caption_nl": "3. lice množine — twee patronen",
+        "columns": ["infinitief", "klasse", "3. l. mn"],
+        "rows": [
+          { "label": "1.", "cells": ["čitati", "-ati", "čitaju"] },
+          { "label": "2.", "cells": ["gledati", "-ati", "gledaju"] },
+          { "label": "3.", "cells": ["raditi", "-iti", "rade"] },
+          { "label": "4.", "cells": ["nositi", "-iti", "nose"] },
+          { "label": "5.", "cells": ["vidjeti", "-jeti", "vide"] },
+          { "label": "6.", "cells": ["voljeti", "-jeti", "vole"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*radiju of *nosiju — die vormen bestaan niet.",
+        "*čitae of *gledae — de -ati groep houdt de a: čitaju.",
+        "Bij twijfel: kijk naar de infinitief, niet naar de betekenis."
+      ],
+      "prerequisites": ["g.09.prezent.iti", "g.05.prezent.ati"],
+      "source": "udzbenik p.121"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.09.nositi", "hr": "nositi", "nl": "dragen", "pos": "verb", "aspect": "imperfective", "present_1sg": "nosim", "verb_class": "-iti", "tags": ["werkwoord", "kleding"], "source": "udzbenik p.120" },
+    { "id": "v.09.raditi", "hr": "raditi", "nl": "werken, doen", "pos": "verb", "aspect": "imperfective", "present_1sg": "radim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "udzbenik p.120" },
+    { "id": "v.09.govoriti", "hr": "govoriti", "nl": "spreken", "pos": "verb", "aspect": "imperfective", "present_1sg": "govorim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.uciti", "hr": "učiti", "nl": "leren, studeren", "pos": "verb", "aspect": "imperfective", "present_1sg": "učim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.misliti", "hr": "misliti", "nl": "denken", "pos": "verb", "aspect": "imperfective", "present_1sg": "mislim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.platiti", "hr": "platiti", "nl": "betalen", "pos": "verb", "aspect": "perfective", "present_1sg": "platim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.vidjeti", "hr": "vidjeti", "nl": "zien", "pos": "verb", "aspect": "imperfective", "present_1sg": "vidim", "verb_class": "-jeti", "tags": ["werkwoord"], "source": "udzbenik p.120" },
+    { "id": "v.09.zivjeti", "hr": "živjeti", "nl": "wonen, leven", "pos": "verb", "aspect": "imperfective", "present_1sg": "živim", "verb_class": "-jeti", "tags": ["werkwoord"], "source": "udzbenik p.120" },
+    { "id": "v.09.voljeti", "hr": "voljeti", "nl": "houden van", "pos": "verb", "aspect": "imperfective", "present_1sg": "volim", "verb_class": "-jeti", "tags": ["werkwoord"], "source": "udzbenik p.120" },
+    { "id": "v.09.zeljeti", "hr": "željeti", "nl": "wensen, willen", "pos": "verb", "aspect": "imperfective", "present_1sg": "želim", "verb_class": "-jeti", "tags": ["werkwoord"], "source": "udzbenik p.120" },
+    { "id": "v.09.razumjeti", "hr": "razumjeti", "nl": "begrijpen", "pos": "verb", "aspect": "imperfective", "present_1sg": "razumijem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "aangevuld" },
+
+    { "id": "v.09.odjeca", "hr": "odjeća", "nl": "kleding", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "odjeće", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.obuca", "hr": "obuća", "nl": "schoeisel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "obuće", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.majica", "hr": "majica", "nl": "T-shirt", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "majice", "nom_pl": "majice", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.kosulja", "hr": "košulja", "nl": "overhemd, blouse", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "košulje", "nom_pl": "košulje", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.hlace", "hr": "hlače", "nl": "broek", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "hlača", "nom_pl": "hlače", "tags": ["kleding"], "source": "vježbenica p.46" },
+    { "id": "v.09.suknja", "hr": "suknja", "nl": "rok", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "suknje", "nom_pl": "suknje", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.jakna", "hr": "jakna", "nl": "jas (kort)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "jakne", "nom_pl": "jakne", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.kaput", "hr": "kaput", "nl": "jas (lang)", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kaputa", "nom_pl": "kaputi", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.carape", "hr": "čarape", "nl": "sokken", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "čarapa", "nom_pl": "čarape", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.tenisice", "hr": "tenisice", "nl": "sneakers", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "tenisica", "nom_pl": "tenisice", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.sesir", "hr": "šešir", "nl": "hoed", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "šešira", "nom_pl": "šeširi", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.kapa", "hr": "kapa", "nl": "muts, pet", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kape", "nom_pl": "kape", "tags": ["kleding"], "source": "udzbenik p.119" },
+    { "id": "v.09.trgovina_odjece", "hr": "trgovina odjeće", "nl": "kledingwinkel", "pos": "phrase", "tags": ["kleding"], "source": "aangevuld" },
+    { "id": "v.09.velicina", "hr": "veličina", "nl": "maat", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "veličine", "nom_pl": "veličine", "tags": ["kleding"], "source": "aangevuld" },
+    { "id": "v.09.modna_revija", "hr": "modna revija", "nl": "modeshow", "pos": "phrase", "tags": ["kleding"], "source": "udzbenik p.122" },
+
+    { "id": "v.09.jeftin", "hr": "jeftin", "nl": "goedkoop", "pos": "adj", "tags": ["eigenschap"], "source": "aangevuld" },
+    { "id": "v.09.udoban_kleding", "hr": "moderan", "nl": "modern", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.09.izgledati", "hr": "izgledati", "nl": "eruitzien", "pos": "verb", "aspect": "imperfective", "present_1sg": "izgledam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.trazim", "hr": "tražiti", "nl": "zoeken", "pos": "verb", "aspect": "imperfective", "present_1sg": "tražim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.09.koliko_kosta", "hr": "Koliko košta?", "nl": "Hoeveel kost het?", "pos": "phrase", "tags": ["winkelen"], "source": "aangevuld" },
+    { "id": "v.09.mogu_probati", "hr": "Mogu li probati?", "nl": "Mag ik het passen?", "pos": "phrase", "tags": ["winkelen"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.09.1",
+      "title_nl": "In de kledingwinkel",
+      "kind": "input",
+      "text_hr": "Prodavačica: Dobar dan! Tražite li nešto?\nKupac: Da, tražim košulju. Nosim veličinu 40.\nProdavačica: Ova bijela košulja je vrlo moderna. Mogu li Vam pomoći?\nKupac: Mogu li probati?\nProdavačica: Naravno. Kako izgleda?\nKupac: Dobro izgleda, ali je preskupa. Koliko košta?\nProdavačica: Košta četrdeset eura.\nKupac: Onda je ne želim. Hvala!",
+      "translation_nl": "Verkoopster: Goedendag! Zoekt u iets?\nKlant: Ja, ik zoek een overhemd. Ik heb maat 40.\nVerkoopster: Dit witte overhemd is heel modern. Kan ik u helpen?\nKlant: Mag ik het passen?\nVerkoopster: Natuurlijk. Hoe ziet het eruit?\nKlant: Het ziet er goed uit, maar het is te duur. Hoeveel kost het?\nVerkoopster: Het kost veertig euro.\nKlant: Dan wil ik het niet. Dank u!",
+      "source": "udzbenik p.120",
+      "exercises": [
+        {
+          "id": "e.09.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De tweede werkwoordsgroep",
+          "body_nl": "Naast de **-ati** groep (znam, čitam) is er de **-iti** groep. Haal -iti van de infinitief en plak erachter: **-im, -iš, -i, -imo, -ite, -e**.\n\n*raditi* → radim, radiš, radi, radimo, radite, **rade**\n\nWerkwoorden op **-jeti** doen precies hetzelfde; de je verdwijnt:\n*vidjeti* → **vidim** · *živjeti* → **živim** · *voljeti* → **volim**\n\nDaarom leer je een werkwoord altijd met zijn ik-vorm erbij: uit *voljeti* alleen kom je nooit op *volim*.",
+          "targets": ["g.09.prezent.iti", "g.09.prezent.jeti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord.",
+          "given": "Ja ___ košulju. (tražiti)",
+          "answer": "tražim",
+          "accepts": ["tražim"],
+          "explain_nl": "-iti groep, 1e persoon enkelvoud → -im.",
+          "targets": ["g.09.prezent.iti", "v.09.trazim"],
+          "difficulty": 2,
+          "audio": "Ja tražim košulju.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord.",
+          "given": "Ona ___ crvenu haljinu. (nositi)",
+          "answer": "nosi",
+          "accepts": ["nosi"],
+          "explain_nl": "3e persoon enkelvoud → -i, zonder extra uitgang.",
+          "targets": ["g.09.prezent.iti", "v.09.nositi"],
+          "difficulty": 2,
+          "audio": "Ona nosi crvenu haljinu.",
+          "source": "udzbenik p.120"
+        },
+        {
+          "id": "e.09.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord op -jeti.",
+          "given": "Mi ___ u Zagrebu. (živjeti)",
+          "answer": "živimo",
+          "accepts": ["živimo"],
+          "explain_nl": "živjeti → živim, dus 1e persoon meervoud is živimo. De je verdwijnt.",
+          "targets": ["g.09.prezent.jeti", "v.09.zivjeti"],
+          "difficulty": 3,
+          "audio": "Mi živimo u Zagrebu.",
+          "source": "udzbenik p.120"
+        }
+      ]
+    },
+    {
+      "id": "s.09.2",
+      "title_nl": "Het verschil in de derde persoon meervoud",
+      "kind": "grammar",
+      "source": "udzbenik p.121",
+      "exercises": [
+        {
+          "id": "e.09.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "-aju of -e?",
+          "body_nl": "In de derde persoon meervoud lopen de groepen uiteen, en dit is waar het misgaat:\n\n**-ati** → **-aju**: čitaju, gledaju, kuhaju, znaju\n**-iti / -jeti** → **-e**: rade, nose, uče, vide, vole\n\nDus: *Oni čitaju* maar *Oni rade*.\n\nEr bestaat geen *radiju* en geen *čitae*. Kijk bij twijfel naar de infinitief — niet naar de betekenis, want die helpt je hier niet.",
+          "targets": ["g.09.treca_mnozina"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg in de derde persoon meervoud.",
+          "given": "Oni ___ u trgovini. (raditi)",
+          "answer": "rade",
+          "accepts": ["rade"],
+          "explain_nl": "-iti groep → -e. Niet *radiju.",
+          "targets": ["g.09.treca_mnozina", "v.09.raditi"],
+          "difficulty": 3,
+          "audio": "Oni rade u trgovini.",
+          "source": "udzbenik p.121"
+        },
+        {
+          "id": "e.09.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg in de derde persoon meervoud.",
+          "given": "Djeca ___ televiziju. (gledati)",
+          "answer": "gledaju",
+          "accepts": ["gledaju"],
+          "explain_nl": "-ati groep → -aju.",
+          "targets": ["g.09.treca_mnozina", "v.05.gledati"],
+          "difficulty": 3,
+          "audio": "Djeca gledaju televiziju.",
+          "source": "udzbenik p.121"
+        },
+        {
+          "id": "e.09.013",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm is juist?",
+          "given": "Studenti ___ hrvatski. (učiti)",
+          "answer": "uče",
+          "distractors": ["učiju", "učaju", "uči"],
+          "explain_nl": "učiti is -iti groep → uče.",
+          "targets": ["g.09.treca_mnozina", "v.09.uciti"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Moji prijatelji nosiju jakne.",
+          "answer": "Moji prijatelji nose jakne.",
+          "accepts": ["Moji prijatelji nose jakne."],
+          "explain_nl": "nositi is -iti groep → nose. *nosiju bestaat niet.",
+          "targets": ["g.09.treca_mnozina", "v.09.nositi", "v.09.jakna"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.015",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de infinitief aan de derde persoon meervoud.",
+          "pairs": [
+            { "hr": "čitati", "nl": "čitaju" },
+            { "hr": "raditi", "nl": "rade" },
+            { "hr": "vidjeti", "nl": "vide" },
+            { "hr": "kuhati", "nl": "kuhaju" }
+          ],
+          "targets": ["g.09.treca_mnozina", "g.09.prezent.iti", "g.09.prezent.jeti"],
+          "difficulty": 4,
+          "source": "udzbenik p.121"
+        },
+        {
+          "id": "e.09.016",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het werkwoord.",
+          "given": "One ___ modu. (voljeti)",
+          "answer": "vole",
+          "accepts": ["vole"],
+          "explain_nl": "voljeti → volim, dus derde persoon meervoud is vole.",
+          "targets": ["g.09.prezent.jeti", "g.09.treca_mnozina", "v.09.voljeti"],
+          "difficulty": 4,
+          "audio": "One vole modu.",
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.09.3",
+      "title_nl": "Kleding kopen",
+      "kind": "practice",
+      "source": "udzbenik p.119",
+      "exercises": [
+        {
+          "id": "e.09.020",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet het kledingstuk in de accusatief.",
+          "given": "Tražim ___. (košulja)",
+          "answer": "košulju",
+          "accepts": ["košulju"],
+          "explain_nl": "Vrouwelijk op -a → -u.",
+          "targets": ["g.05.akuzativ.nezivo", "v.09.kosulja"],
+          "difficulty": 2,
+          "audio": "Tražim košulju.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief. Let op het bijvoeglijk naamwoord.",
+          "given": "Ona nosi ___ ___. (crn, suknja)",
+          "answer": "crnu suknju",
+          "accepts": ["crnu suknju"],
+          "explain_nl": "Het bijvoeglijk naamwoord buigt mee met het zelfstandig naamwoord: crna suknja → crnu suknju.",
+          "targets": ["g.04.pridjevi", "g.05.akuzativ.nezivo", "v.04.crn", "v.09.suknja"],
+          "difficulty": 4,
+          "audio": "Ona nosi crnu suknju.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Zimi nosim ___ i ___. (kaput, kapa)",
+          "answer": "kaput i kapu",
+          "accepts": ["kaput i kapu"],
+          "explain_nl": "kaput is mannelijk en levenloos → onveranderd. kapa is vrouwelijk → kapu.",
+          "targets": ["g.05.akuzativ.nezivo", "v.09.kaput", "v.09.kapa"],
+          "difficulty": 4,
+          "audio": "Zimi nosim kaput i kapu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.023",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Mag ik het passen? Hoeveel kost het?",
+          "answer": "Mogu li probati? Koliko košta?",
+          "accepts": ["Mogu li probati? Koliko košta?"],
+          "explain_nl": "mogu li + infinitief; košta is de 3e persoon van koštati.",
+          "targets": ["g.06.moci", "v.09.mogu_probati", "v.09.koliko_kosta"],
+          "difficulty": 3,
+          "audio": "Mogu li probati? Koliko košta?",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.024",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Ova bijela košulja je vrlo moderna.",
+          "answer": "Ova bijela košulja je vrlo moderna.",
+          "accepts": ["Ova bijela košulja je vrlo moderna."],
+          "targets": ["g.04.pridjevi", "v.09.kosulja"],
+          "difficulty": 4,
+          "source": "udzbenik p.120"
+        },
+        {
+          "id": "e.09.025",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Moji", "prijatelji", "vole", "modu", "i", "nose", "moderne", "jakne"],
+          "answer": "Moji prijatelji vole modu i nose moderne jakne.",
+          "accepts": ["Moji prijatelji vole modu i nose moderne jakne."],
+          "explain_nl": "Twee werkwoorden uit de -iti/-jeti groep, allebei met -e in de derde persoon meervoud.",
+          "targets": ["g.09.treca_mnozina", "v.09.voljeti", "v.09.nositi"],
+          "difficulty": 5,
+          "audio": "Moji prijatelji vole modu i nose moderne jakne.",
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.09.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.09.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Wij wonen in Zagreb en werken in een winkel.",
+          "answer": "Mi živimo u Zagrebu i radimo u trgovini.",
+          "accepts": ["Mi živimo u Zagrebu i radimo u trgovini.", "Živimo u Zagrebu i radimo u trgovini."],
+          "explain_nl": "Twee werkwoorden op -jeti en -iti, allebei met -imo. De plaatsvormen (u Zagrebu, u trgovini) zijn de locatief — die komt in les 10.",
+          "targets": ["g.09.prezent.jeti", "g.09.prezent.iti", "v.09.zivjeti", "v.09.raditi"],
+          "difficulty": 5,
+          "audio": "Mi živimo u Zagrebu i radimo u trgovini.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.09.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što danas nosite?",
+          "given": "Što danas nosite?",
+          "model_answer": "Danas nosim plave hlače i bijelu majicu. Nosim i crne cipele.",
+          "rubric_nl": [
+            "Gebruikt nositi correct vervoegd",
+            "De kledingstukken staan in de accusatief",
+            "De bijvoeglijke naamwoorden kloppen met geslacht en getal"
+          ],
+          "targets": ["g.09.prezent.iti", "g.05.akuzativ.nezivo", "g.04.pridjevi"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

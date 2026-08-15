@@ -1,0 +1,537 @@
+{
+  "id": "lesson-03",
+  "number": 3,
+  "title_hr": "Naši poznanici, prijatelji i obitelj",
+  "title_nl": "Kennissen, vrienden en familie",
+  "cefr": "A1.1",
+  "source": { "udzbenik_pages": "39-56", "vjezbenica_pages": "19-23" },
+  "can_do_nl": [
+    "Ik kan mijn familie voorstellen en familierelaties benoemen.",
+    "Ik kan vragen en zeggen hoe iemand heet met zvati se.",
+    "Ik kan bezit uitdrukken met bezittelijke voornaamwoorden en vragen met čiji?",
+    "Ik kan het meervoud van korte mannelijke woorden vormen (-ovi / -evi).",
+    "Ik herken sibilarisatie en de vluchtige a in het meervoud.",
+    "Ik ken de onregelmatige meervouden čovjek → ljudi, dijete → djeca, brat → braća."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.03.zvati_se",
+      "title_nl": "zvati se — heten",
+      "cefr": "A1.1",
+      "explanation_nl": "zvati se betekent letterlijk 'zich noemen'. Het se hoort er onlosmakelijk bij en verandert nooit van vorm. Let op de stam: de infinitief is zvati, maar de presensstam is zov-. In de vraag komt se meestal direct na het vraagwoord: Kako se zoveš?",
+      "contrast_nl": "Nederlands zegt 'ik heet' met één woord. Kroatisch gebruikt een wederkerend werkwoord, net als het Duitse 'ich heiße' eigenlijk 'ich nenne mich' was. Het se is dus geen versiering — laat je het weg, dan betekent zvati 'roepen'.",
+      "paradigm": {
+        "caption_nl": "zvati se — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["ja se zovem", "mi se zovemo"] },
+          { "label": "2.", "cells": ["ti se zoveš", "vi/Vi se zovete"] },
+          { "label": "3.", "cells": ["on, ona se zove", "oni, one se zovu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het se weglaten: 'Zovem Marko' betekent 'ik roep Marko'.",
+        "De stam zvat- gebruiken in plaats van zov-: het is zovem, niet *zvam.",
+        "In een vraag glijdt se naar voren: Kako se on zove? — niet 'Kako on zove se?'"
+      ],
+      "prerequisites": ["g.pron.personal"],
+      "source": "udzbenik p.40"
+    },
+    {
+      "id": "g.03.posvojne_zamjenice",
+      "title_nl": "Bezittelijke voornaamwoorden",
+      "cefr": "A1.1",
+      "explanation_nl": "Een bezittelijk voornaamwoord past zich aan aan het bezeten ding, niet aan de bezitter: moj stan, moja kuća, moje pismo. Vraag ernaar met čiji? — dat verbuigt mee: Čiji je stol? Čija je torba? Čije je pismo?",
+      "contrast_nl": "Nederlands heeft 'mijn' in één vorm voor alles. Kroatisch heeft drie vormen per persoon, één per geslacht. En anders dan in het Nederlands zegt njegov/njezin niets over wie er kijkt: njegova sestra = zijn zus, njezina sestra = haar zus — dus je moet weten van wie je spreekt vóór je het woord kiest.",
+      "paradigm": {
+        "caption_nl": "Bezittelijke voornaamwoorden — nominatief enkelvoud",
+        "columns": ["muški rod", "ženski rod", "srednji rod"],
+        "rows": [
+          { "label": "ja", "cells": ["moj", "moja", "moje"] },
+          { "label": "ti", "cells": ["tvoj", "tvoja", "tvoje"] },
+          { "label": "on/ono", "cells": ["njegov", "njegova", "njegovo"] },
+          { "label": "ona", "cells": ["njezin", "njezina", "njezino"] },
+          { "label": "mi", "cells": ["naš", "naša", "naše"] },
+          { "label": "vi/Vi", "cells": ["vaš", "vaša", "vaše"] },
+          { "label": "oni/one", "cells": ["njihov", "njihova", "njihovo"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het voornaamwoord laten meebuigen met de bezitter in plaats van met het bezeten ding: het is 'moja kuća' ook als ik een man ben.",
+        "njegov versus njezin verwisselen — het Nederlandse 'zijn/haar' werkt hetzelfde, maar in een lange zin verlies je snel het spoor.",
+        "naš/vaš hebben een š, geen s."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.42"
+    },
+    {
+      "id": "g.03.duga_mnozina",
+      "title_nl": "Lang meervoud bij korte mannelijke woorden (-ovi / -evi)",
+      "cefr": "A1.1",
+      "explanation_nl": "Eenlettergrepige mannelijke woorden krijgen in het meervoud een extra stuk: -ovi na een harde medeklinker (stol → stolovi), -evi na een zachte (nož → noževi, ključ → ključevi). Zachte medeklinkers zijn c, č, ć, dž, đ, j, lj, nj, š, ž.",
+      "contrast_nl": "Het Nederlands verlengt ook wel eens ('kind → kinderen'), maar dat is een uitzondering. Hier is het een regel met een duidelijke trigger: één lettergreep, mannelijk.",
+      "paradigm": {
+        "caption_nl": "Lang meervoud",
+        "columns": ["jednina", "množina", "waarom"],
+        "rows": [
+          { "label": "1.", "cells": ["stol", "stolovi", "harde medeklinker → -ovi"] },
+          { "label": "2.", "cells": ["vlak", "vlakovi", "harde medeklinker → -ovi"] },
+          { "label": "3.", "cells": ["nož", "noževi", "zachte medeklinker → -evi"] },
+          { "label": "4.", "cells": ["ključ", "ključevi", "zachte medeklinker → -evi"] },
+          { "label": "5.", "cells": ["prijatelj", "prijatelji", "meerlettergrepig → gewoon -i"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De regel toepassen op langere woorden: prijatelj heeft drie lettergrepen en krijgt gewoon -i.",
+        "-ovi kiezen na een zachte medeklinker: het is noževi, niet *nožovi.",
+        "Enkele veelgebruikte woorden doen niet mee, zoals dan → dani en zub → zubi."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.44"
+    },
+    {
+      "id": "g.03.sibilarizacija",
+      "title_nl": "Sibilarisatie — k, g, h worden c, z, s",
+      "cefr": "A1.1",
+      "explanation_nl": "Staat er een k, g of h vlak vóór de meervoudsuitgang -i, dan verandert die medeklinker: k → c, g → z, h → s. Dus rječnik → rječnici, jastuk → jastuci, Poljak → Poljaci. Dit is geen uitzondering maar een klankregel die je door het hele Kroatisch tegenkomt — hij komt terug in de locatief (les 10).",
+      "contrast_nl": "Het Nederlands kent zoiets niet: 'boek' blijft 'boeken'. Hier verandert de stam zelf, wat betekent dat je het meervoud niet kunt raden door alleen een uitgang te plakken.",
+      "paradigm": {
+        "caption_nl": "Sibilarisatie voor -i",
+        "columns": ["jednina", "množina", "verandering"],
+        "rows": [
+          { "label": "k → c", "cells": ["rječnik", "rječnici", "k + i → ci"] },
+          { "label": "k → c", "cells": ["jastuk", "jastuci", "k + i → ci"] },
+          { "label": "k → c", "cells": ["liječnik", "liječnici", "k + i → ci"] },
+          { "label": "g → z", "cells": ["bubreg", "bubrezi", "g + i → zi"] },
+          { "label": "h → s", "cells": ["orah", "orasi", "h + i → si"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het meervoud vormen zonder de stamverandering: *rječniki bestaat niet.",
+        "Sibilarisatie ook toepassen waar geen -i volgt — hij treedt alleen op vóór die uitgang.",
+        "Woorden op -čki en namen doen soms niet mee; die leer je los."
+      ],
+      "prerequisites": ["g.03.duga_mnozina"],
+      "source": "udzbenik p.45"
+    },
+    {
+      "id": "g.03.nepostojano_a",
+      "title_nl": "De vluchtige a (nepostojano a)",
+      "cefr": "A1.1",
+      "explanation_nl": "Sommige mannelijke woorden hebben in de nominatief enkelvoud een a die in alle andere vormen verdwijnt: policajac → policajci, kupac → kupci, Danac → Danci, stranac → stranci. De a zit er alleen om het woord uitspreekbaar te maken; zodra er een uitgang achter komt, is hij overbodig.",
+      "contrast_nl": "Vergelijk het Nederlandse 'wandel-en' versus 'wandl-ing' — daar valt ook een klinker weg, maar onvoorspelbaar. Hier is het systematisch: -ac en -ak aan het eind van een mannelijk woord zijn bijna altijd vluchtig.",
+      "paradigm": {
+        "caption_nl": "Vluchtige a",
+        "columns": ["jednina", "genitiv", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["policajac", "policajca", "policajci"] },
+          { "label": "2.", "cells": ["kupac", "kupca", "kupci"] },
+          { "label": "3.", "cells": ["Danac", "Danca", "Danci"] },
+          { "label": "4.", "cells": ["lovac", "lovca", "lovci"] },
+          { "label": "5.", "cells": ["Amerikanac", "Amerikanca", "Amerikanci"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De a laten staan: *policajaci bestaat niet.",
+        "Denken dat élke a vluchtig is — alleen die in de laatste lettergreep van bepaalde woorden.",
+        "Dit raakt ook de nationaliteiten uit les 2: Nijemac → Nijemci, Japanac → Japanci."
+      ],
+      "prerequisites": ["g.03.duga_mnozina"],
+      "source": "udzbenik p.45"
+    },
+    {
+      "id": "g.03.nepravilna_mnozina",
+      "title_nl": "Drie onregelmatige meervouden",
+      "cefr": "A1.1",
+      "explanation_nl": "Drie veelgebruikte woorden vormen hun meervoud met een heel andere stam: čovjek → ljudi (mens → mensen), dijete → djeca (kind → kinderen), brat → braća (broer → broers). Let op: djeca en braća zijn grammaticaal vrouwelijk enkelvoud, ook al betekenen ze iets meervoudigs — daarom zeg je 'Djeca su lijepa' met een vrouwelijke uitgang op het bijvoeglijk naamwoord.",
+      "contrast_nl": "Nederlands heeft dit ook ('kind → kinderen'), maar zonder de geslachtswisseling. Dat djeca zich als een vrouwelijk enkelvoud gedraagt terwijl het over meerdere kinderen gaat, is het lastigste stukje van deze les.",
+      "paradigm": {
+        "caption_nl": "Onregelmatige meervouden",
+        "columns": ["jednina", "množina", "let op"],
+        "rows": [
+          { "label": "1.", "cells": ["čovjek", "ljudi", "andere stam"] },
+          { "label": "2.", "cells": ["dijete", "djeca", "gedraagt zich als vrouwelijk ev."] },
+          { "label": "3.", "cells": ["brat", "braća", "gedraagt zich als vrouwelijk ev."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*čovjeci en *djeteta als meervoud gebruiken.",
+        "'Djeca su lijepi' zeggen: het moet lijepa zijn, want djeca telt als vrouwelijk enkelvoud.",
+        "braća betekent broers; 'broers en zussen' is een aparte uitdrukking."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.46"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.03.obitelj", "hr": "obitelj", "nl": "familie, gezin", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "obitelji", "nom_pl": "obitelji", "tags": ["familie"], "source": "udzbenik p.40" },
+    { "id": "v.03.majka", "hr": "majka", "nl": "moeder", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "majke", "nom_pl": "majke", "tags": ["familie"], "source": "udzbenik p.40" },
+    { "id": "v.03.otac", "hr": "otac", "nl": "vader", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "oca", "nom_pl": "očevi", "tags": ["familie", "uitzondering"], "source": "udzbenik p.40" },
+    { "id": "v.03.brat", "hr": "brat", "nl": "broer", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "brata", "nom_pl": "braća", "tags": ["familie", "uitzondering"], "source": "udzbenik p.40" },
+    { "id": "v.03.baka", "hr": "baka", "nl": "oma", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "bake", "nom_pl": "bake", "tags": ["familie"], "source": "vježbenica p.19" },
+    { "id": "v.03.djed", "hr": "djed", "nl": "opa", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "djeda", "nom_pl": "djedovi", "tags": ["familie"], "source": "vježbenica p.19" },
+    { "id": "v.03.teta", "hr": "teta", "nl": "tante", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "tete", "nom_pl": "tete", "tags": ["familie"], "source": "vježbenica p.19" },
+    { "id": "v.03.ujak", "hr": "ujak", "nl": "oom (moederskant)", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "ujaka", "nom_pl": "ujaci", "tags": ["familie"], "source": "vježbenica p.19" },
+    { "id": "v.03.stric", "hr": "stric", "nl": "oom (vaderskant)", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "strica", "nom_pl": "stričevi", "tags": ["familie"], "source": "vježbenica p.27" },
+    { "id": "v.03.kcerka", "hr": "kćerka", "nl": "dochter", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "kćerke", "nom_pl": "kćerke", "tags": ["familie"], "source": "vježbenica p.20" },
+    { "id": "v.03.sin", "hr": "sin", "nl": "zoon", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "sina", "nom_pl": "sinovi", "tags": ["familie"], "source": "udzbenik p.76" },
+    { "id": "v.03.dijete", "hr": "dijete", "nl": "kind", "pos": "noun", "gender": "n", "animacy": "animate", "declension": "a", "gen_sg": "djeteta", "nom_pl": "djeca", "tags": ["familie", "uitzondering"], "source": "vježbenica p.20" },
+    { "id": "v.03.roditelj", "hr": "roditelj", "nl": "ouder", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "roditelja", "nom_pl": "roditelji", "tags": ["familie"], "source": "vježbenica p.20" },
+    { "id": "v.03.suprug", "hr": "suprug", "nl": "echtgenoot", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "supruga", "nom_pl": "supruzi", "tags": ["familie"], "source": "vježbenica p.27" },
+    { "id": "v.03.sestricna", "hr": "sestrična", "nl": "nicht (dochter van oom/tante)", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "sestrične", "nom_pl": "sestrične", "tags": ["familie"], "source": "vježbenica p.20" },
+    { "id": "v.03.bratic", "hr": "bratić", "nl": "neef (zoon van oom/tante)", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "bratića", "nom_pl": "bratići", "tags": ["familie"], "source": "vježbenica p.20" },
+    { "id": "v.03.susjed", "hr": "susjed", "nl": "buurman", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "susjeda", "nom_pl": "susjedi", "tags": ["persoon"], "source": "vježbenica p.24" },
+    { "id": "v.03.kolega", "hr": "kolega", "nl": "collega (m)", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "e", "gen_sg": "kolege", "nom_pl": "kolege", "tags": ["persoon", "uitzondering"], "source": "vježbenica p.22" },
+    { "id": "v.03.kolegica", "hr": "kolegica", "nl": "collega (v)", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "kolegice", "nom_pl": "kolegice", "tags": ["persoon"], "source": "vježbenica p.27" },
+    { "id": "v.03.covjek", "hr": "čovjek", "nl": "mens", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "čovjeka", "nom_pl": "ljudi", "tags": ["persoon", "uitzondering"], "source": "vježbenica p.22" },
+    { "id": "v.03.djevojka", "hr": "djevojka", "nl": "meisje, vriendin", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "djevojke", "nom_pl": "djevojke", "tags": ["persoon"], "source": "vježbenica p.43" },
+    { "id": "v.03.djecak", "hr": "dječak", "nl": "jongen", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "dječaka", "nom_pl": "dječaci", "tags": ["persoon"], "source": "vježbenica p.22" },
+
+    { "id": "v.03.pas", "hr": "pas", "nl": "hond", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "psa", "nom_pl": "psi", "tags": ["dier", "uitzondering"], "source": "vježbenica p.22" },
+    { "id": "v.03.macka", "hr": "mačka", "nl": "kat", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "mačke", "nom_pl": "mačke", "tags": ["dier"], "source": "vježbenica p.22" },
+    { "id": "v.03.papiga", "hr": "papiga", "nl": "papegaai", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "papige", "nom_pl": "papige", "tags": ["dier"], "source": "vježbenica p.20" },
+
+    { "id": "v.03.stol", "hr": "stol", "nl": "tafel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "stola", "nom_pl": "stolovi", "tags": ["ding"], "source": "vježbenica p.22" },
+    { "id": "v.03.kljuc", "hr": "ključ", "nl": "sleutel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ključa", "nom_pl": "ključevi", "tags": ["ding"], "source": "vježbenica p.22" },
+    { "id": "v.03.vlak", "hr": "vlak", "nl": "trein", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "vlaka", "nom_pl": "vlakovi", "tags": ["vervoer"], "source": "vježbenica p.22" },
+    { "id": "v.03.noz", "hr": "nož", "nl": "mes", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "noža", "nom_pl": "noževi", "tags": ["ding"], "source": "vježbenica p.22" },
+    { "id": "v.03.rjecnik", "hr": "rječnik", "nl": "woordenboek", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "rječnika", "nom_pl": "rječnici", "tags": ["ding", "school"], "source": "vježbenica p.22" },
+    { "id": "v.03.jastuk", "hr": "jastuk", "nl": "kussen", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "jastuka", "nom_pl": "jastuci", "tags": ["ding"], "source": "vježbenica p.22" },
+    { "id": "v.03.kupac", "hr": "kupac", "nl": "klant, koper", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "kupca", "nom_pl": "kupci", "tags": ["persoon"], "source": "vježbenica p.22" },
+    { "id": "v.03.soba", "hr": "soba", "nl": "kamer", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "sobe", "nom_pl": "sobe", "tags": ["wonen"], "source": "vježbenica p.20" },
+    { "id": "v.03.mobitel", "hr": "mobitel", "nl": "mobiele telefoon", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "mobitela", "nom_pl": "mobiteli", "tags": ["ding"], "source": "vježbenica p.20" },
+    { "id": "v.03.sat", "hr": "sat", "nl": "horloge, uur", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sata", "nom_pl": "satovi", "tags": ["ding"], "source": "vježbenica p.20" },
+    { "id": "v.03.ulica", "hr": "ulica", "nl": "straat", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ulice", "nom_pl": "ulice", "tags": ["stad"], "source": "vježbenica p.20" },
+    { "id": "v.03.trgovina", "hr": "trgovina", "nl": "winkel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "trgovine", "nom_pl": "trgovine", "tags": ["stad"], "source": "vježbenica p.20" },
+    { "id": "v.03.kazaliste", "hr": "kazalište", "nl": "theater", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "kazališta", "nom_pl": "kazališta", "tags": ["stad"], "source": "vježbenica p.20" },
+    { "id": "v.03.jezero", "hr": "jezero", "nl": "meer", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "jezera", "nom_pl": "jezera", "tags": ["natuur"], "source": "vježbenica p.20" },
+    { "id": "v.03.brdo", "hr": "brdo", "nl": "heuvel", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "brda", "nom_pl": "brda", "tags": ["natuur"], "source": "vježbenica p.20" },
+    { "id": "v.03.slika", "hr": "slika", "nl": "afbeelding, schilderij", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "slike", "nom_pl": "slike", "tags": ["ding"], "source": "vježbenica p.20" },
+
+    { "id": "v.03.moj", "hr": "moj, moja, moje", "nl": "mijn", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.tvoj", "hr": "tvoj, tvoja, tvoje", "nl": "jouw", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.njegov", "hr": "njegov, njegova, njegovo", "nl": "zijn", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.njezin", "hr": "njezin, njezina, njezino", "nl": "haar", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.nas", "hr": "naš, naša, naše", "nl": "ons, onze", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.vas", "hr": "vaš, vaša, vaše", "nl": "jullie, uw", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.njihov", "hr": "njihov, njihova, njihovo", "nl": "hun", "pos": "pron", "tags": ["bezit"], "source": "udzbenik p.42" },
+    { "id": "v.03.ciji", "hr": "čiji, čija, čije", "nl": "wiens, van wie", "pos": "pron", "tags": ["vraagwoord"], "source": "vježbenica p.20" },
+    { "id": "v.03.kako", "hr": "kako", "nl": "hoe", "pos": "adv", "tags": ["vraagwoord"], "source": "udzbenik p.40" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.03.1",
+      "title_nl": "Mijn familie",
+      "kind": "input",
+      "text_hr": "Moja mama zove se Marta. Ona je kuharica.\nMoj tata zove se Ivan. On je inženjer.\nMoja sestra zove se Nina. Ona je studentica.\nMoj brat zove se Luka. On je liječnik.\nMoja baka zove se Ana, a moj djed zove se Josip.\nNjihova kuća je u Zagrebu. Naša obitelj je velika.",
+      "translation_nl": "Mijn moeder heet Marta. Zij is kokkin.\nMijn vader heet Ivan. Hij is ingenieur.\nMijn zus heet Nina. Zij is studente.\nMijn broer heet Luka. Hij is arts.\nMijn oma heet Ana, en mijn opa heet Josip.\nHun huis staat in Zagreb. Onze familie is groot.",
+      "source": "vježbenica p.19",
+      "exercises": [
+        {
+          "id": "e.03.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "zvati se — en dat se laat je nooit weg",
+          "body_nl": "'Heten' is in het Kroatisch een wederkerend werkwoord: **zvati se**. Het se hoort er onlosmakelijk bij.\n\nLet op de stam: de infinitief is *zvati*, maar in het presens wordt het **zov-**: zovem, zoveš, zove, zovemo, zovete, zovu.\n\nEn in een vraag schuift se naar voren: *Kako se zoveš?* — niet 'Kako zoveš se?'. Laat je het se helemaal weg, dan zeg je 'ik roep'.",
+          "targets": ["g.03.zvati_se"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.03.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm van zvati se in.",
+          "given": "Moja mama ___ se Marta.",
+          "answer": "zove",
+          "accepts": ["zove"],
+          "explain_nl": "3e persoon enkelvoud: zove. De stam is zov-, niet zvat-.",
+          "targets": ["g.03.zvati_se"],
+          "difficulty": 2,
+          "audio": "Moja mama zove se Marta.",
+          "source": "vježbenica p.19"
+        },
+        {
+          "id": "e.03.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm van zvati se in.",
+          "given": "Mi se ___ Katarina i Ivo.",
+          "answer": "zovemo",
+          "accepts": ["zovemo"],
+          "targets": ["g.03.zvati_se"],
+          "difficulty": 2,
+          "audio": "Mi se zovemo Katarina i Ivo.",
+          "source": "vježbenica p.19"
+        },
+        {
+          "id": "e.03.004",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde tot een vraag.",
+          "tokens": ["Kako", "se", "ti", "zoveš"],
+          "answer": "Kako se ti zoveš?",
+          "accepts": ["Kako se ti zoveš?", "Kako se ti zoveš"],
+          "explain_nl": "Het onbeklemtoonde se staat op de tweede plaats, direct na het vraagwoord.",
+          "targets": ["g.03.zvati_se"],
+          "difficulty": 3,
+          "audio": "Kako se ti zoveš?",
+          "source": "vježbenica p.19"
+        }
+      ]
+    },
+    {
+      "id": "s.03.2",
+      "title_nl": "Van wie is het?",
+      "kind": "grammar",
+      "source": "udzbenik p.42",
+      "exercises": [
+        {
+          "id": "e.03.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het bezit bepaalt de vorm, niet de bezitter",
+          "body_nl": "Een bezittelijk voornaamwoord richt zich naar het **bezeten ding**, niet naar wie het bezit:\n\n*moj stan* (m) · *moja kuća* (v) · *moje pismo* (o)\n\nOok als ik een man ben, zeg ik *moja kuća* — want kuća is vrouwelijk. Dit is precies andersom dan wat je intuïtie je influistert.\n\nVragen doe je met **čiji?**, dat net zo meebuigt: *Čiji je stol? Čija je torba? Čije je pismo?*",
+          "targets": ["g.03.posvojne_zamjenice"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.03.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het bezittelijk voornaamwoord in dat bij 'ja' hoort.",
+          "given": "Čija je torba? Torba je ___.",
+          "answer": "moja",
+          "accepts": ["moja"],
+          "explain_nl": "torba is vrouwelijk, dus moja — ook als de spreker een man is.",
+          "targets": ["g.03.posvojne_zamjenice"],
+          "difficulty": 2,
+          "audio": "Čija je torba? Torba je moja.",
+          "source": "vježbenica p.20"
+        },
+        {
+          "id": "e.03.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het bezittelijk voornaamwoord in dat bij 'mi' hoort.",
+          "given": "Čiji su satovi? Satovi su ___.",
+          "answer": "naši",
+          "accepts": ["naši"],
+          "explain_nl": "satovi is mannelijk meervoud, dus naši.",
+          "targets": ["g.03.posvojne_zamjenice", "v.03.sat"],
+          "difficulty": 3,
+          "audio": "Čiji su satovi? Satovi su naši.",
+          "source": "vježbenica p.20"
+        },
+        {
+          "id": "e.03.013",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "___ je pismo? (van wie)",
+          "answer": "Čije",
+          "distractors": ["Čiji", "Čija", "Čiju"],
+          "explain_nl": "pismo is onzijdig, dus čije.",
+          "targets": ["g.03.posvojne_zamjenice", "v.03.ciji"],
+          "difficulty": 2,
+          "source": "vježbenica p.20"
+        },
+        {
+          "id": "e.03.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ovo je moj kuća.",
+          "answer": "Ovo je moja kuća.",
+          "accepts": ["Ovo je moja kuća."],
+          "explain_nl": "kuća is vrouwelijk, dus moja. Het voornaamwoord volgt het zelfstandig naamwoord, niet de spreker.",
+          "targets": ["g.03.posvojne_zamjenice", "v.01.kuca"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.03.3",
+      "title_nl": "Meervoud — de drie complicaties",
+      "kind": "practice",
+      "source": "udzbenik p.44-46",
+      "exercises": [
+        {
+          "id": "e.03.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Waarom is stol → stolovi en niet stoli?",
+          "body_nl": "Korte mannelijke woorden — één lettergreep — schuiven een extra stuk tussen stam en uitgang:\n\n**-ovi** na een harde medeklinker: stol → stol*ovi*, vlak → vlak*ovi*\n**-evi** na een zachte (c, č, ć, dž, đ, j, lj, nj, š, ž): nož → nož*evi*, ključ → ključ*evi*\n\nLangere woorden doen niet mee: *prijatelj* → *prijatelji*, gewoon met -i.",
+          "targets": ["g.03.duga_mnozina"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.03.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Ovo je stol. Ovo su ___.",
+          "answer": "stolovi",
+          "accepts": ["stolovi"],
+          "explain_nl": "Eenlettergrepig, harde medeklinker → -ovi.",
+          "targets": ["g.03.duga_mnozina", "v.03.stol"],
+          "difficulty": 2,
+          "audio": "Ovo je stol. Ovo su stolovi.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "To je ključ. To su ___.",
+          "answer": "ključevi",
+          "accepts": ["ključevi"],
+          "explain_nl": "č is een zachte medeklinker → -evi, niet -ovi.",
+          "targets": ["g.03.duga_mnozina", "v.03.kljuc"],
+          "difficulty": 3,
+          "audio": "To je ključ. To su ključevi.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.023",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee dingen die de stam veranderen",
+          "body_nl": "**Sibilarisatie.** Staat er k, g of h vlak vóór de -i, dan verandert die: k → c, g → z, h → s.\nrječnik → rječni*c*i · jastuk → jastu*c*i · Poljak → Polja*c*i\n\n**Vluchtige a.** Sommige mannelijke woorden hebben een a die verdwijnt zodra er een uitgang bij komt:\npolicajac → policaj*c*i · kupac → kup*c*i · stranac → stran*c*i\n\nBeide regels raken ook de nationaliteiten uit les 2: Nijemac → Nijemci, Japanac → Japanci.",
+          "targets": ["g.03.sibilarizacija", "g.03.nepostojano_a"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.03.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Ovo je rječnik. Ovo su ___.",
+          "answer": "rječnici",
+          "accepts": ["rječnici"],
+          "explain_nl": "Sibilarisatie: k → c vóór de -i.",
+          "targets": ["g.03.sibilarizacija", "v.03.rjecnik"],
+          "difficulty": 3,
+          "audio": "Ovo je rječnik. Ovo su rječnici.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.025",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Ovo je policajac. Ovo su ___.",
+          "answer": "policajci",
+          "accepts": ["policajci"],
+          "explain_nl": "Vluchtige a: policaj-a-c → policajci. De a verdwijnt.",
+          "targets": ["g.03.nepostojano_a", "v.02.policajac"],
+          "difficulty": 3,
+          "audio": "Ovo je policajac. Ovo su policajci.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.026",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud. Let op: dit woord is onregelmatig.",
+          "given": "To je čovjek. To su ___.",
+          "answer": "ljudi",
+          "accepts": ["ljudi"],
+          "explain_nl": "čovjek → ljudi. Een compleet andere stam; er valt niets aan af te leiden.",
+          "targets": ["g.03.nepravilna_mnozina", "v.03.covjek"],
+          "difficulty": 3,
+          "audio": "To je čovjek. To su ljudi.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.027",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud. Let op: dit woord is onregelmatig.",
+          "given": "Ovo je dijete. Ovo su ___.",
+          "answer": "djeca",
+          "accepts": ["djeca"],
+          "explain_nl": "dijete → djeca. En djeca gedraagt zich daarna als een vrouwelijk enkelvoud: Djeca su lijepa.",
+          "targets": ["g.03.nepravilna_mnozina", "v.03.dijete"],
+          "difficulty": 4,
+          "audio": "Ovo je dijete. Ovo su djeca.",
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.028",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het enkelvoud aan het meervoud.",
+          "pairs": [
+            { "hr": "vlak", "nl": "vlakovi" },
+            { "hr": "nož", "nl": "noževi" },
+            { "hr": "jastuk", "nl": "jastuci" },
+            { "hr": "brat", "nl": "braća" }
+          ],
+          "targets": ["g.03.duga_mnozina", "g.03.sibilarizacija", "g.03.nepravilna_mnozina"],
+          "difficulty": 3,
+          "source": "vježbenica p.22"
+        },
+        {
+          "id": "e.03.029",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Dit zijn mijn vrienden.",
+          "answer": "Ovo su moji prijatelji.",
+          "accepts": ["Ovo su moji prijatelji.", "To su moji prijatelji."],
+          "explain_nl": "prijatelj is meerlettergrepig, dus gewoon -i. Het bezittelijk voornaamwoord wordt meervoud: moji.",
+          "targets": ["g.03.duga_mnozina", "g.03.posvojne_zamjenice", "v.01.prijatelj"],
+          "difficulty": 4,
+          "audio": "Ovo su moji prijatelji.",
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.03.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.03.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Mijn zus heet Nina. Zij is arts.",
+          "answer": "Moja sestra zove se Nina. Ona je liječnica.",
+          "accepts": [
+            "Moja sestra zove se Nina. Ona je liječnica.",
+            "Moja sestra se zove Nina. Ona je liječnica."
+          ],
+          "explain_nl": "moja bij sestra (vrouwelijk), zove se voor 'heet', en de vrouwelijke beroepsvorm liječnica.",
+          "targets": ["g.03.posvojne_zamjenice", "g.03.zvati_se", "g.02.zanimanja", "v.02.lijecnica"],
+          "difficulty": 5,
+          "audio": "Moja sestra zove se Nina. Ona je liječnica.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.03.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Kako se zove tvoja obitelj? Tko je u tvojoj obitelji?",
+          "given": "Tko je u tvojoj obitelji?",
+          "model_answer": "Moja mama zove se Anna. Moj tata zove se Peter. Imam sestru i brata.",
+          "rubric_nl": [
+            "Gebruikt zvati se met het se op de juiste plek",
+            "Gebruikt bezittelijke voornaamwoorden die kloppen met het geslacht",
+            "Noemt minimaal twee familieleden"
+          ],
+          "targets": ["g.03.zvati_se", "g.03.posvojne_zamjenice"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

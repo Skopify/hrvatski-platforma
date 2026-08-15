@@ -1,0 +1,458 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "title_hr": "Planiramo putovanja i izlete",
+  "title_nl": "We plannen reizen en uitstapjes",
+  "cefr": "A2.1",
+  "source": { "udzbenik_pages": "161-174", "vjezbenica_pages": "60-63" },
+  "can_do_nl": [
+    "Ik kan zeggen waar ik naartoe beweeg met de datief.",
+    "Ik weet dat datief en locatief in het enkelvoud dezelfde vorm hebben.",
+    "Ik kan de voorzetsels prema, k, nasuprot en unatoč gebruiken.",
+    "Ik kan de toekomende tijd vormen met futur I.",
+    "Ik kan plannen en voorstellen uitdrukken.",
+    "Ik kan een weerbericht globaal begrijpen."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.12.dativ",
+      "title_nl": "DATIEF — dezelfde vorm als de locatief",
+      "cefr": "A2.1",
+      "explanation_nl": "Goed nieuws: de datief enkelvoud heeft precies dezelfde uitgangen als de locatief. Mannelijk en onzijdig krijgen -u, vrouwelijk op -a krijgt -i. Gradu, selu, kući. Je hoeft dus geen nieuwe vormen te leren — alleen een nieuwe functie.",
+      "contrast_nl": "Het verschil zit niet in de vorm maar in de rol. De locatief geeft aan wáár iets is en heeft altijd een voorzetsel nodig. De datief geeft de richting of de ontvanger aan en kan ook zónder voorzetsel staan. Vergelijk: u gradu (in de stad, locatief) tegenover prema gradu (richting de stad, datief).",
+      "paradigm": {
+        "caption_nl": "Dativ jednine — identiek aan de locatief",
+        "columns": ["nominativ", "dativ", "geslacht"],
+        "rows": [
+          { "label": "1.", "cells": ["grad", "gradu", "muški → -u"] },
+          { "label": "2.", "cells": ["prijatelj", "prijatelju", "muški → -u"] },
+          { "label": "3.", "cells": ["more", "moru", "srednji → -u"] },
+          { "label": "4.", "cells": ["kuća", "kući", "ženski → -i"] },
+          { "label": "5.", "cells": ["sestra", "sestri", "ženski → -i"] },
+          { "label": "6.", "cells": ["Hrvatska", "Hrvatskoj", "-ska → -oj"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Denken dat je een nieuwe uitgangenset moet leren — het is dezelfde als de locatief.",
+        "Sibilarisatie geldt hier net zo goed: majka → majci, knjiga → knjizi.",
+        "Landen op -ska krijgen ook hier -oj: prema Hrvatskoj."
+      ],
+      "prerequisites": ["g.10.lokativ"],
+      "source": "udzbenik p.162"
+    },
+    {
+      "id": "g.12.prijedlozi_dativ",
+      "title_nl": "Voorzetsels met de datief",
+      "cefr": "A2.1",
+      "explanation_nl": "Vier voorzetsels vragen de datief: prema (richting, naar), k / ka (naar, bij een persoon), nasuprot (tegenover) en unatoč / usprkos (ondanks). Idemo prema moru. Idem k liječniku. Sjedi nasuprot meni.",
+      "contrast_nl": "prema is de manier om 'in de richting van' te zeggen zonder dat je er aankomt — anders dan u en na met de accusatief, die een bestemming aangeven. 'Idem u Zagreb' betekent dat Zagreb je doel is; 'Idem prema Zagrebu' betekent dat je die kant op gaat.",
+      "paradigm": {
+        "caption_nl": "Voorzetsels met de datief",
+        "columns": ["voorzetsel", "betekenis", "voorbeeld"],
+        "rows": [
+          { "label": "prema", "cells": ["richting, naar", "Idemo prema moru."] },
+          { "label": "k / ka", "cells": ["naar (een persoon)", "Idem k liječniku."] },
+          { "label": "nasuprot", "cells": ["tegenover", "Hotel je nasuprot kolodvoru."] },
+          { "label": "unatoč", "cells": ["ondanks", "Unatoč kiši, idemo na izlet."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "k wordt ka vóór woorden die met k of g beginnen: ka gradu.",
+        "prema met de accusatief gebruiken — het is altijd de datief.",
+        "unatoč en usprkos betekenen hetzelfde; allebei met de datief."
+      ],
+      "prerequisites": ["g.12.dativ"],
+      "source": "udzbenik p.163"
+    },
+    {
+      "id": "g.12.futur",
+      "title_nl": "FUTUR I — de toekomende tijd",
+      "cefr": "A2.1",
+      "explanation_nl": "De toekomende tijd bouw je met de onbeklemtoonde vorm van htjeti plus de infinitief: ću, ćeš, će, ćemo, ćete, će. Ja ću raditi. Staat het werkwoord voorop, dan verliest de infinitief zijn slot-i en schuift het hulpwerkwoord erachter: Radit ću. Bij werkwoorden op -ći gebeurt dat niet: Ići ću.",
+      "contrast_nl": "Het Nederlands gebruikt 'zullen' plus infinitief, dus de bouw is vertrouwd. Het eigenaardige is de schrijfwijze: radit ću, met een afgekapte infinitief en een spatie. Dat is de Kroatische standaard; de Servische variant schrijft radiću aan elkaar.",
+      "paradigm": {
+        "caption_nl": "raditi in futur I — twee woordvolgordes",
+        "columns": ["met voornaamwoord", "zonder voornaamwoord"],
+        "rows": [
+          { "label": "ja", "cells": ["ja ću raditi", "radit ću"] },
+          { "label": "ti", "cells": ["ti ćeš raditi", "radit ćeš"] },
+          { "label": "on/ona", "cells": ["on će raditi", "radit će"] },
+          { "label": "mi", "cells": ["mi ćemo raditi", "radit ćemo"] },
+          { "label": "vi/Vi", "cells": ["vi ćete raditi", "radit ćete"] },
+          { "label": "oni/one", "cells": ["oni će raditi", "radit će"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De lange vorm hoću gebruiken voor de toekomst — dat betekent 'ik wil'. Voor de toekomst is het ću.",
+        "Het hulpwerkwoord vooraan zetten: 'Ću raditi' kan niet, want ću is onbeklemtoond.",
+        "De slot-i vergeten weg te laten: het is radit ću, niet *raditi ću."
+      ],
+      "prerequisites": ["g.06.htjeti"],
+      "source": "udzbenik p.164"
+    },
+    {
+      "id": "g.12.futur_negacija",
+      "title_nl": "Toekomst ontkennen en bevragen",
+      "cefr": "A2.1",
+      "explanation_nl": "Ontkennen doe je met neću, nećeš, neće, nećemo, nećete, neće plus de volledige infinitief: Neću raditi. Hier valt de slot-i dus níét weg. Vragen doe je met de lange vorm: Hoćeš li raditi? of Hoće li doći?",
+      "contrast_nl": "Dat de infinitief bij de ontkenning wél heel blijft (neću raditi) maar bij de bevestiging afgekapt wordt (radit ću), is een van de weinige echt willekeurige spellingregels van deze cursus. Onthouden is de enige weg.",
+      "paradigm": {
+        "caption_nl": "Drie zinstypen in futur I",
+        "columns": ["type", "voorbeeld"],
+        "rows": [
+          { "label": "bevestigend", "cells": ["Radit ću sutra."] },
+          { "label": "ontkennend", "cells": ["Neću raditi sutra."] },
+          { "label": "vraag", "cells": ["Hoćeš li raditi sutra?"] },
+          { "label": "kort antwoord", "cells": ["Da, hoću. / Ne, neću."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*Ne ću of *ne hoću — het is neću, één woord.",
+        "In de ontkenning blijft de infinitief compleet: neću raditi, niet *neću radit.",
+        "Het korte antwoord gebruikt de lange vorm: hoću of neću."
+      ],
+      "prerequisites": ["g.12.futur"],
+      "source": "udzbenik p.165"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.12.prema", "hr": "prema", "nl": "richting, naar", "pos": "prep", "tags": ["voorzetsel"], "source": "udzbenik p.163" },
+    { "id": "v.12.k", "hr": "k / ka", "nl": "naar (een persoon)", "pos": "prep", "tags": ["voorzetsel"], "source": "udzbenik p.163" },
+    { "id": "v.12.nasuprot", "hr": "nasuprot", "nl": "tegenover", "pos": "prep", "tags": ["voorzetsel"], "source": "udzbenik p.163" },
+    { "id": "v.12.unatoc", "hr": "unatoč", "nl": "ondanks", "pos": "prep", "tags": ["voorzetsel"], "source": "udzbenik p.163" },
+
+    { "id": "v.12.planirati", "hr": "planirati", "nl": "plannen", "pos": "verb", "aspect": "imperfective", "present_1sg": "planiram", "verb_class": "-irati", "tags": ["werkwoord"], "source": "udzbenik p.161" },
+    { "id": "v.12.predlagati", "hr": "predlagati", "nl": "voorstellen", "pos": "verb", "aspect": "imperfective", "present_1sg": "predlažem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.12.dogovoriti_se", "hr": "dogovoriti se", "nl": "afspreken", "pos": "verb", "aspect": "perfective", "present_1sg": "dogovorim se", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.12.krenuti", "hr": "krenuti", "nl": "vertrekken, op weg gaan", "pos": "verb", "aspect": "perfective", "present_1sg": "krenem", "verb_class": "onregelmatig", "tags": ["werkwoord", "reizen"], "source": "aangevuld" },
+    { "id": "v.12.stici", "hr": "stići", "nl": "aankomen", "pos": "verb", "aspect": "perfective", "present_1sg": "stignem", "verb_class": "onregelmatig", "tags": ["werkwoord", "reizen"], "source": "aangevuld" },
+    { "id": "v.12.posjetiti", "hr": "posjetiti", "nl": "bezoeken", "pos": "verb", "aspect": "perfective", "present_1sg": "posjetim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+
+    { "id": "v.12.nacionalni_park", "hr": "nacionalni park", "nl": "nationaal park", "pos": "phrase", "tags": ["natuur"], "source": "udzbenik p.166" },
+    { "id": "v.12.slap", "hr": "slap", "nl": "waterval", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "slapa", "nom_pl": "slapovi", "tags": ["natuur"], "source": "udzbenik p.166" },
+    { "id": "v.12.suma", "hr": "šuma", "nl": "bos", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "šume", "nom_pl": "šume", "tags": ["natuur"], "source": "aangevuld" },
+    { "id": "v.12.vrijeme", "hr": "vrijeme", "nl": "weer, tijd", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "vremena", "tags": ["weer"], "source": "udzbenik p.168" },
+    { "id": "v.12.kisa", "hr": "kiša", "nl": "regen", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kiše", "tags": ["weer"], "source": "udzbenik p.168" },
+    { "id": "v.12.snijeg", "hr": "snijeg", "nl": "sneeuw", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "snijega", "tags": ["weer"], "source": "vježbenica p.45" },
+    { "id": "v.12.sunce_weer", "hr": "sunčano", "nl": "zonnig", "pos": "adv", "tags": ["weer"], "source": "udzbenik p.168" },
+    { "id": "v.12.oblacno", "hr": "oblačno", "nl": "bewolkt", "pos": "adv", "tags": ["weer"], "source": "udzbenik p.168" },
+    { "id": "v.12.hladno", "hr": "hladno", "nl": "koud", "pos": "adv", "tags": ["weer"], "source": "aangevuld" },
+    { "id": "v.12.vjetar", "hr": "vjetar", "nl": "wind", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "vjetra", "nom_pl": "vjetrovi", "tags": ["weer"], "source": "aangevuld" },
+    { "id": "v.12.temperatura", "hr": "temperatura", "nl": "temperatuur", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "temperature", "tags": ["weer"], "source": "aangevuld" },
+
+    { "id": "v.12.sutra_toek", "hr": "sutra", "nl": "morgen", "pos": "adv", "tags": ["tijd"], "source": "udzbenik p.164" },
+    { "id": "v.12.prekosutra", "hr": "prekosutra", "nl": "overmorgen", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.12.sljedeci_tjedan", "hr": "sljedeći tjedan", "nl": "volgende week", "pos": "phrase", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.12.uskoro", "hr": "uskoro", "nl": "binnenkort", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.12.lijecnik_d", "hr": "liječnik", "nl": "arts", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "liječnika", "nom_pl": "liječnici", "tags": ["beroep"], "source": "udzbenik p.163" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.12.1",
+      "title_nl": "Plannen maken",
+      "kind": "input",
+      "text_hr": "A: Što ćeš raditi sljedeći tjedan?\nB: Putovat ću u Hrvatsku. Idemo prema moru, na Plitvička jezera.\nA: Hoćete li posjetiti i Zadar?\nB: Hoćemo. Krenut ćemo u ponedjeljak, a stići ćemo u utorak.\nA: A kakvo će biti vrijeme?\nB: Bit će sunčano, ali u srijedu će padati kiša.\nA: Neće vam biti dosadno!\nB: Ne, neće. Unatoč kiši, bit će lijepo.",
+      "translation_nl": "A: Wat ga je volgende week doen?\nB: Ik ga naar Kroatië reizen. We gaan richting zee, naar de Plitvicemeren.\nA: Gaan jullie ook Zadar bezoeken?\nB: Ja. We vertrekken maandag en komen dinsdag aan.\nA: En wat voor weer wordt het?\nB: Het wordt zonnig, maar woensdag gaat het regenen.\nA: Jullie zullen je niet vervelen!\nB: Nee, zeker niet. Ondanks de regen wordt het mooi.",
+      "source": "udzbenik p.164",
+      "exercises": [
+        {
+          "id": "e.12.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Toekomst met ću, niet met hoću",
+          "body_nl": "De toekomende tijd bouw je met de **onbeklemtoonde** vorm van htjeti plus de infinitief:\n\n**ću, ćeš, će, ćemo, ćete, će**\n\n*Ja ću raditi.* — en als het werkwoord voorop staat, kapt de infinitief zijn slot-i af en schuift het hulpwerkwoord erachter: **Radit ću.**\n\nLet op het verschil met les 6: **hoću raditi** betekent 'ik wíl werken'. **Radit ću** betekent 'ik zal werken'. Dezelfde stam, andere vorm, andere betekenis.\n\nBij werkwoorden op -ći valt er niets af: *Ići ću.*",
+          "targets": ["g.12.futur"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in futur I, met het werkwoord voorop.",
+          "given": "___ ___ sutra. (raditi, ja)",
+          "answer": "Radit ću",
+          "accepts": ["Radit ću", "radit ću"],
+          "explain_nl": "De infinitief verliest zijn slot-i en het hulpwerkwoord komt erachter.",
+          "targets": ["g.12.futur", "v.09.raditi"],
+          "difficulty": 4,
+          "audio": "Radit ću sutra.",
+          "source": "udzbenik p.164"
+        },
+        {
+          "id": "e.12.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in futur I, met het voornaamwoord voorop.",
+          "given": "Mi ___ ___ u Hrvatsku. (putovati)",
+          "answer": "ćemo putovati",
+          "accepts": ["ćemo putovati"],
+          "explain_nl": "Staat het voornaamwoord voorop, dan blijft de infinitief compleet.",
+          "targets": ["g.12.futur", "v.10.putovati"],
+          "difficulty": 3,
+          "audio": "Mi ćemo putovati u Hrvatsku.",
+          "source": "udzbenik p.164"
+        },
+        {
+          "id": "e.12.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de ontkennende futur I.",
+          "given": "Ja ___ ___ sutra. (raditi, neg)",
+          "answer": "neću raditi",
+          "accepts": ["neću raditi"],
+          "explain_nl": "Bij de ontkenning blijft de infinitief heel: neću raditi, niet *neću radit.",
+          "targets": ["g.12.futur_negacija"],
+          "difficulty": 4,
+          "audio": "Ja neću raditi sutra.",
+          "source": "udzbenik p.165"
+        }
+      ]
+    },
+    {
+      "id": "s.12.2",
+      "title_nl": "De datief: bekende vorm, nieuwe taak",
+      "kind": "grammar",
+      "source": "udzbenik p.162",
+      "exercises": [
+        {
+          "id": "e.12.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Je kent de vorm al",
+          "body_nl": "De **datief** enkelvoud heeft **exact dezelfde uitgangen als de locatief**:\n\nmannelijk en onzijdig → **-u** · vrouwelijk op -a → **-i**\n\n*gradu, selu, kući, sestri*\n\nEr is dus niets nieuws te leren aan de vorm. Wat nieuw is, is de functie: de locatief zegt **waar** iets is en heeft altijd een voorzetsel nodig; de datief geeft **richting** of een ontvanger aan.\n\n*u gradu* (in de stad — locatief) tegenover *prema gradu* (richting de stad — datief)\n\nEn ja: sibilarisatie geldt hier net zo goed. *majka → majci*, *knjiga → knjizi*.",
+          "targets": ["g.12.dativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de datief na prema.",
+          "given": "Idemo prema ___. (more)",
+          "answer": "moru",
+          "accepts": ["moru"],
+          "explain_nl": "Onzijdig → -u, net als in de locatief.",
+          "targets": ["g.12.dativ", "g.12.prijedlozi_dativ", "v.01.more"],
+          "difficulty": 3,
+          "audio": "Idemo prema moru.",
+          "source": "udzbenik p.163"
+        },
+        {
+          "id": "e.12.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de datief na k.",
+          "given": "Sutra idem k ___. (liječnik)",
+          "answer": "liječniku",
+          "accepts": ["liječniku"],
+          "explain_nl": "Mannelijk → -u. k gebruik je bij personen.",
+          "targets": ["g.12.dativ", "g.12.prijedlozi_dativ", "v.12.lijecnik_d"],
+          "difficulty": 3,
+          "audio": "Sutra idem k liječniku.",
+          "source": "udzbenik p.163"
+        },
+        {
+          "id": "e.12.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de datief. Let op de klankverandering.",
+          "given": "Šaljem pismo ___. (majka)",
+          "answer": "majci",
+          "accepts": ["majci"],
+          "explain_nl": "Sibilarisatie: k → c vóór de -i, precies als in de locatief.",
+          "targets": ["g.12.dativ", "g.10.sibilarizacija_lokativ"],
+          "difficulty": 5,
+          "audio": "Šaljem pismo majci.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.014",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin betekent 'we gaan richting de zee' (zonder er per se aan te komen)?",
+          "given": "…",
+          "answer": "Idemo prema moru.",
+          "distractors": ["Idemo na more.", "Idemo u moru.", "Smo na moru."],
+          "explain_nl": "prema + datief = in de richting van. na more (accusatief) betekent dat de zee je bestemming is.",
+          "targets": ["g.12.prijedlozi_dativ", "g.10.gdje_kamo"],
+          "difficulty": 4,
+          "source": "udzbenik p.163"
+        },
+        {
+          "id": "e.12.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de datief na nasuprot.",
+          "given": "Hotel je nasuprot ___. (kolodvor)",
+          "answer": "kolodvoru",
+          "accepts": ["kolodvoru"],
+          "targets": ["g.12.prijedlozi_dativ", "v.07.kolodvor"],
+          "difficulty": 4,
+          "audio": "Hotel je nasuprot kolodvoru.",
+          "source": "udzbenik p.163"
+        }
+      ]
+    },
+    {
+      "id": "s.12.3",
+      "title_nl": "Plannen, weer, voorstellen",
+      "kind": "practice",
+      "source": "udzbenik p.168",
+      "exercises": [
+        {
+          "id": "e.12.020",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in futur I.",
+          "given": "___ ___ sunčano. (biti)",
+          "answer": "Bit će",
+          "accepts": ["Bit će", "bit će"],
+          "explain_nl": "biti → bit će. Ook hier valt de slot-i weg.",
+          "targets": ["g.12.futur", "v.12.sunce_weer"],
+          "difficulty": 4,
+          "audio": "Bit će sunčano.",
+          "source": "udzbenik p.168"
+        },
+        {
+          "id": "e.12.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in futur I.",
+          "given": "___ ___ na Plitvička jezera. (ići, mi)",
+          "answer": "Ići ćemo",
+          "accepts": ["Ići ćemo", "ići ćemo"],
+          "explain_nl": "Bij werkwoorden op -ći valt er niets af: ići ćemo.",
+          "targets": ["g.12.futur", "v.07.ici"],
+          "difficulty": 5,
+          "audio": "Ići ćemo na Plitvička jezera.",
+          "source": "udzbenik p.164"
+        },
+        {
+          "id": "e.12.022",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde tot een vraag.",
+          "tokens": ["Hoćete", "li", "posjetiti", "i", "Zadar"],
+          "answer": "Hoćete li posjetiti i Zadar?",
+          "accepts": ["Hoćete li posjetiti i Zadar?", "Hoćete li posjetiti i Zadar"],
+          "explain_nl": "In de vraag gebruik je de lange vorm hoćete, gevolgd door li.",
+          "targets": ["g.12.futur_negacija", "v.12.posjetiti"],
+          "difficulty": 4,
+          "audio": "Hoćete li posjetiti i Zadar?",
+          "source": "udzbenik p.165"
+        },
+        {
+          "id": "e.12.023",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ću raditi sutra.",
+          "answer": "Radit ću sutra.",
+          "accepts": ["Radit ću sutra.", "Ja ću raditi sutra."],
+          "explain_nl": "ću is onbeklemtoond en kan niet vooraan staan — dezelfde regel als bij sam in les 1.",
+          "targets": ["g.12.futur"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.024",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Hoću putovati u Hrvatsku sljedeći tjedan.",
+          "answer": "Putovat ću u Hrvatsku sljedeći tjedan.",
+          "accepts": ["Putovat ću u Hrvatsku sljedeći tjedan.", "Ja ću putovati u Hrvatsku sljedeći tjedan."],
+          "explain_nl": "hoću betekent 'ik wil'. Voor een plan in de toekomst gebruik je de onbeklemtoonde vorm: putovat ću.",
+          "targets": ["g.12.futur", "g.06.htjeti"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Bit će sunčano, ali u srijedu će padati kiša.",
+          "answer": "Bit će sunčano, ali u srijedu će padati kiša.",
+          "accepts": ["Bit će sunčano, ali u srijedu će padati kiša."],
+          "targets": ["g.12.futur", "v.12.kisa"],
+          "difficulty": 5,
+          "source": "udzbenik p.168"
+        },
+        {
+          "id": "e.12.026",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het voorzetsel aan de betekenis.",
+          "pairs": [
+            { "hr": "prema", "nl": "richting, naar" },
+            { "hr": "k", "nl": "naar (een persoon)" },
+            { "hr": "nasuprot", "nl": "tegenover" },
+            { "hr": "unatoč", "nl": "ondanks" }
+          ],
+          "targets": ["g.12.prijedlozi_dativ", "v.12.prema", "v.12.k", "v.12.nasuprot", "v.12.unatoc"],
+          "difficulty": 3,
+          "source": "udzbenik p.163"
+        }
+      ]
+    },
+    {
+      "id": "s.12.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.12.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Morgen ga ik naar de dokter. Ik zal niet werken.",
+          "answer": "Sutra idem k liječniku. Neću raditi.",
+          "accepts": ["Sutra idem k liječniku. Neću raditi.", "Sutra ću ići k liječniku. Neću raditi."],
+          "explain_nl": "k + datief bij een persoon; ontkennende futur met neću plus volledige infinitief.",
+          "targets": ["g.12.prijedlozi_dativ", "g.12.futur_negacija", "v.12.lijecnik_d"],
+          "difficulty": 5,
+          "audio": "Sutra idem k liječniku. Neću raditi.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.031",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Gisteren was ik in Zagreb, en volgende week zal ik naar zee reizen.",
+          "answer": "Jučer sam bio u Zagrebu, a sljedeći tjedan putovat ću na more.",
+          "accepts": [
+            "Jučer sam bio u Zagrebu, a sljedeći tjedan putovat ću na more.",
+            "Jučer sam bila u Zagrebu, a sljedeći tjedan putovat ću na more."
+          ],
+          "explain_nl": "Perfekt (les 11) en futur (les 12) in één zin, met locatief u Zagrebu en accusatief na more.",
+          "targets": ["g.11.perfekt", "g.12.futur", "g.10.lokativ", "g.07.u_na_akuzativ"],
+          "difficulty": 5,
+          "audio": "Jučer sam bio u Zagrebu, a sljedeći tjedan putovat ću na more.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.12.032",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što ćete raditi sljedeći vikend?",
+          "given": "Što ćete raditi sljedeći vikend?",
+          "model_answer": "Sljedeći vikend putovat ću u Hrvatsku. Posjetit ću prijatelje i ići ćemo na more.",
+          "rubric_nl": [
+            "Gebruikt futur I met ću, ćeš, će enzovoort",
+            "Het hulpwerkwoord staat nooit vooraan de zin",
+            "Bij het werkwoord vooraan is de slot-i weggelaten"
+          ],
+          "targets": ["g.12.futur", "g.12.futur_negacija"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

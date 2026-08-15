@@ -1,0 +1,461 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "title_hr": "Školovanje, posao, svakodnevica",
+  "title_nl": "Opleiding, werk, dagelijks leven",
+  "cefr": "A2.1",
+  "source": { "udzbenik_pages": "185-202", "vjezbenica_pages": "69-74" },
+  "can_do_nl": [
+    "Ik kan hoeveelheden uitdrukken met de genitief.",
+    "Ik kan de genitief vormen voor alle drie de geslachten.",
+    "Ik weet wanneer ik het enkelvoud en wanneer het meervoud van de genitief gebruik.",
+    "Ik kan wederkerende werkwoorden met se gebruiken.",
+    "Ik kan mijn dagindeling beschrijven.",
+    "Ik kan over opleiding en werk praten."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.14.genitiv",
+      "title_nl": "GENITIEF — de vorm",
+      "cefr": "A2.1",
+      "explanation_nl": "De genitief antwoordt op koga? čega? (van wie? van wat?). De uitgangen enkelvoud: mannelijk en onzijdig krijgen -a, vrouwelijk op -a krijgt -e. Grad → grada, selo → sela, kuća → kuće. Je kent deze vorm al: hij staat vanaf les 1 bij elk zelfstandig naamwoord in de woordenlijst.",
+      "contrast_nl": "De genitief is de veelzijdigste naamval van het Kroatisch — hij drukt bezit, hoeveelheid, herkomst en afwezigheid uit. Het Nederlands verdeelt dat over 'van', 'uit' en losse constructies. In deze les ligt de nadruk op hoeveelheid; de voorzetsels volgen in les 16.",
+      "paradigm": {
+        "caption_nl": "Genitiv jednine",
+        "columns": ["nominativ", "genitiv", "geslacht"],
+        "rows": [
+          { "label": "1.", "cells": ["grad", "grada", "muški → -a"] },
+          { "label": "2.", "cells": ["kruh", "kruha", "muški → -a"] },
+          { "label": "3.", "cells": ["selo", "sela", "srednji → -a"] },
+          { "label": "4.", "cells": ["vino", "vina", "srednji → -a"] },
+          { "label": "5.", "cells": ["kuća", "kuće", "ženski → -e"] },
+          { "label": "6.", "cells": ["salata", "salate", "ženski → -e"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De mannelijke genitief enkelvoud (-a) ziet er hetzelfde uit als de accusatief van een levend woord: prijatelja. De context maakt duidelijk welke het is.",
+        "Woorden met een vluchtige a verliezen die: kupac → kupca, siječanj → siječnja.",
+        "Het onzijdige meervoud van de nominatief eindigt óók op -a: sela kan 'dorpen' zijn (nominatief mv.) of 'van het dorp' (genitief ev.)."
+      ],
+      "prerequisites": ["g.12.dativ"],
+      "source": "udzbenik p.186"
+    },
+    {
+      "id": "g.14.genitiv_kolicina",
+      "title_nl": "Hoeveelheidswoorden vragen de genitief",
+      "cefr": "A2.1",
+      "explanation_nl": "Na een hoeveelheidswoord staat altijd de genitief: mnogo, puno (veel), malo (weinig), dovoljno (genoeg), previše (te veel), premalo (te weinig), nekoliko (enkele). Imamo dovoljno kruha. Imam previše posla.",
+      "contrast_nl": "Het Nederlands zet er niets bijzonders bij: 'genoeg brood'. Het Kroatisch dwingt een naamval af, en dat is meteen de plek waar je de genitief het vaakst nodig hebt in dagelijks gesprek.",
+      "paradigm": {
+        "caption_nl": "Hoeveelheidswoord + genitief",
+        "columns": ["woord", "betekenis", "voorbeeld"],
+        "rows": [
+          { "label": "1.", "cells": ["mnogo / puno", "veel", "mnogo mesa"] },
+          { "label": "2.", "cells": ["malo", "weinig", "malo vina"] },
+          { "label": "3.", "cells": ["dovoljno", "genoeg", "dovoljno kruha"] },
+          { "label": "4.", "cells": ["previše", "te veel", "previše posla"] },
+          { "label": "5.", "cells": ["premalo", "te weinig", "premalo soli"] },
+          { "label": "6.", "cells": ["nekoliko", "enkele", "nekoliko sokova"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De nominatief laten staan: 'mnogo meso' is fout, het moet mnogo mesa zijn.",
+        "Het werkwoord blijft in het enkelvoud: Mnogo ljudi radi ovdje.",
+        "puno en mnogo zijn uitwisselbaar; puno is spreektaliger."
+      ],
+      "prerequisites": ["g.14.genitiv"],
+      "source": "vježbenica p.69"
+    },
+    {
+      "id": "g.14.genitiv_jd_mn",
+      "title_nl": "Enkelvoud of meervoud na de hoeveelheid?",
+      "cefr": "A2.1",
+      "explanation_nl": "Kun je het tellen, dan staat de genitief in het meervoud: nekoliko sokova, puno jabuka. Kun je het niet tellen, dan blijft hij enkelvoud: mnogo mesa, malo vina, dovoljno kruha. De genitief meervoud eindigt meestal op -a: jabuka, sokova, kolača.",
+      "contrast_nl": "Het Nederlands maakt hetzelfde onderscheid ('veel appels' tegenover 'veel vlees'), dus de logica is vertrouwd. Alleen moet je hier de vorm aanpassen in plaats van alleen het woord te kiezen.",
+      "paradigm": {
+        "caption_nl": "Telbaar of niet",
+        "columns": ["type", "voorbeeld", "genitief"],
+        "rows": [
+          { "label": "niet telbaar", "cells": ["mnogo mesa", "jednina"] },
+          { "label": "niet telbaar", "cells": ["malo vina", "jednina"] },
+          { "label": "niet telbaar", "cells": ["dovoljno kruha", "jednina"] },
+          { "label": "telbaar", "cells": ["puno jabuka", "množina"] },
+          { "label": "telbaar", "cells": ["nekoliko sokova", "množina"] },
+          { "label": "telbaar", "cells": ["previše kolača", "množina"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De genitief meervoud van vrouwelijke woorden op -a is kaal: jabuka, salata — zonder uitgang, maar mét lange klinker.",
+        "Mannelijke woorden met lang meervoud krijgen -ova: sok → sokova.",
+        "Bij twijfel: kun je er een getal voor zetten? Dan meervoud."
+      ],
+      "prerequisites": ["g.14.genitiv_kolicina"],
+      "source": "vježbenica p.69"
+    },
+    {
+      "id": "g.14.povratni",
+      "title_nl": "Wederkerende werkwoorden met se",
+      "cefr": "A2.1",
+      "explanation_nl": "Veel werkwoorden voor dagelijkse handelingen dragen een se: zvati se (heten), odmarati se (uitrusten), buditi se (wakker worden), tuširati se (douchen), oblačiti se (zich aankleden), vraćati se (terugkeren). Het se verandert nooit van vorm, maar het is een clitisch woordje: het staat op de tweede plaats in de zin.",
+      "contrast_nl": "Het Nederlands heeft 'zich' met verschillende vormen (me, je, zich). Het Kroatisch heeft er maar één: se, voor alle personen. Dat is eenvoudiger — alleen de plaats in de zin vraagt aandacht.",
+      "paradigm": {
+        "caption_nl": "buditi se — presens en woordvolgorde",
+        "columns": ["met voornaamwoord", "zonder voornaamwoord"],
+        "rows": [
+          { "label": "ja", "cells": ["ja se budim", "budim se"] },
+          { "label": "ti", "cells": ["ti se budiš", "budiš se"] },
+          { "label": "on/ona", "cells": ["on se budi", "budi se"] },
+          { "label": "mi", "cells": ["mi se budimo", "budimo se"] },
+          { "label": "vi/Vi", "cells": ["vi se budite", "budite se"] },
+          { "label": "oni/one", "cells": ["oni se bude", "bude se"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Het se vooraan zetten: 'Se budim' kan niet.",
+        "In het perfekt komt se ná het hulpwerkwoord: Odmarao sam se.",
+        "Het se verandert nooit mee met de persoon — anders dan in het Nederlands."
+      ],
+      "prerequisites": ["g.03.zvati_se"],
+      "source": "udzbenik p.188"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.14.buditi_se", "hr": "buditi se", "nl": "wakker worden", "pos": "verb", "aspect": "imperfective", "present_1sg": "budim se", "verb_class": "-iti", "tags": ["werkwoord", "dagelijks"], "source": "udzbenik p.188" },
+    { "id": "v.14.ustajati", "hr": "ustajati", "nl": "opstaan", "pos": "verb", "aspect": "imperfective", "present_1sg": "ustajem", "verb_class": "onregelmatig", "tags": ["werkwoord", "dagelijks"], "source": "aangevuld" },
+    { "id": "v.14.tusirati_se", "hr": "tuširati se", "nl": "douchen", "pos": "verb", "aspect": "imperfective", "present_1sg": "tuširam se", "verb_class": "-irati", "tags": ["werkwoord", "dagelijks"], "source": "aangevuld" },
+    { "id": "v.14.oblaciti_se", "hr": "oblačiti se", "nl": "zich aankleden", "pos": "verb", "aspect": "imperfective", "present_1sg": "oblačim se", "verb_class": "-iti", "tags": ["werkwoord", "dagelijks"], "source": "aangevuld" },
+    { "id": "v.14.vracati_se", "hr": "vraćati se", "nl": "terugkeren", "pos": "verb", "aspect": "imperfective", "present_1sg": "vraćam se", "verb_class": "-ati", "tags": ["werkwoord", "dagelijks"], "source": "aangevuld" },
+    { "id": "v.14.baviti_se", "hr": "baviti se", "nl": "zich bezighouden met", "pos": "verb", "aspect": "imperfective", "present_1sg": "bavim se", "verb_class": "-iti", "tags": ["werkwoord"], "source": "vježbenica p.92" },
+    { "id": "v.14.zaposliti_se", "hr": "zaposliti se", "nl": "een baan krijgen", "pos": "verb", "aspect": "perfective", "present_1sg": "zaposlim se", "verb_class": "-iti", "tags": ["werkwoord", "werk"], "source": "aangevuld" },
+    { "id": "v.14.studirati", "hr": "studirati", "nl": "studeren", "pos": "verb", "aspect": "imperfective", "present_1sg": "studiram", "verb_class": "-irati", "tags": ["werkwoord", "school"], "source": "aangevuld" },
+    { "id": "v.14.zavrsiti", "hr": "završiti", "nl": "afmaken, afronden", "pos": "verb", "aspect": "perfective", "present_1sg": "završim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+
+    { "id": "v.14.mnogo", "hr": "mnogo", "nl": "veel", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.puno", "hr": "puno", "nl": "veel", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.malo", "hr": "malo", "nl": "weinig, een beetje", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.dovoljno", "hr": "dovoljno", "nl": "genoeg", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.previse", "hr": "previše", "nl": "te veel", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.premalo", "hr": "premalo", "nl": "te weinig", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+    { "id": "v.14.nekoliko", "hr": "nekoliko", "nl": "enkele, een paar", "pos": "adv", "tags": ["hoeveelheid"], "source": "vježbenica p.69" },
+
+    { "id": "v.14.posao", "hr": "posao", "nl": "werk, baan", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "posla", "nom_pl": "poslovi", "tags": ["werk", "l-o"], "source": "udzbenik p.190" },
+    { "id": "v.14.ured", "hr": "ured", "nl": "kantoor", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ureda", "nom_pl": "uredi", "tags": ["werk"], "source": "vježbenica p.27" },
+    { "id": "v.14.placa", "hr": "plaća", "nl": "salaris", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "plaće", "nom_pl": "plaće", "tags": ["werk"], "source": "aangevuld" },
+    { "id": "v.14.sef", "hr": "šef", "nl": "baas", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "šefa", "nom_pl": "šefovi", "tags": ["werk"], "source": "vježbenica p.27" },
+    { "id": "v.14.fakultet_stud", "hr": "studij", "nl": "studie", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "studija", "nom_pl": "studiji", "tags": ["school"], "source": "aangevuld" },
+    { "id": "v.14.ispit", "hr": "ispit", "nl": "examen, tentamen", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ispita", "nom_pl": "ispiti", "tags": ["school"], "source": "aangevuld" },
+    { "id": "v.14.zadaca", "hr": "zadaća", "nl": "huiswerk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "zadaće", "nom_pl": "zadaće", "tags": ["school"], "source": "vježbenica p.24" },
+    { "id": "v.14.slobodno_vrijeme", "hr": "slobodno vrijeme", "nl": "vrije tijd", "pos": "phrase", "tags": ["dagelijks"], "source": "aangevuld" },
+    { "id": "v.14.brasno", "hr": "brašno", "nl": "meel", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "brašna", "tags": ["eten"], "source": "vježbenica p.69" },
+    { "id": "v.14.riza", "hr": "riža", "nl": "rijst", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "riže", "tags": ["eten"], "source": "vježbenica p.69" },
+    { "id": "v.14.sol", "hr": "sol", "nl": "zout", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "i", "gen_sg": "soli", "tags": ["eten"], "source": "vježbenica p.45" },
+    { "id": "v.14.ulje", "hr": "ulje", "nl": "olie", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "ulja", "tags": ["eten"], "source": "vježbenica p.69" },
+    { "id": "v.14.mrkva", "hr": "mrkva", "nl": "wortel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "mrkve", "nom_pl": "mrkve", "tags": ["eten"], "source": "vježbenica p.69" },
+    { "id": "v.14.banana", "hr": "banana", "nl": "banaan", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "banane", "nom_pl": "banane", "tags": ["eten"], "source": "vježbenica p.69" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.14.1",
+      "title_nl": "Mijn dag",
+      "kind": "input",
+      "text_hr": "Budim se u sedam sati. Tuširam se i oblačim se.\nZa doručak jedem malo kruha i pijem kavu.\nRadim u uredu u centru. Imam previše posla, ali plaća je dobra.\nU pet sati vraćam se kući. Odmaram se i gledam televiziju.\nImam malo slobodnog vremena, ali navečer uvijek čitam.\nSubotom idem u trgovinu. Kupujem puno voća i nekoliko sokova.",
+      "translation_nl": "Ik word om zeven uur wakker. Ik douche en kleed me aan.\nAls ontbijt eet ik een beetje brood en drink ik koffie.\nIk werk op een kantoor in het centrum. Ik heb te veel werk, maar het salaris is goed.\nOm vijf uur kom ik terug naar huis. Ik rust uit en kijk televisie.\nIk heb weinig vrije tijd, maar 's avonds lees ik altijd.\nOp zaterdag ga ik naar de winkel. Ik koop veel fruit en een paar sapjes.",
+      "source": "udzbenik p.188",
+      "exercises": [
+        {
+          "id": "e.14.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveelheid vraagt de genitief",
+          "body_nl": "De **genitief** is de veelzijdigste naamval van het Kroatisch. In deze les gebruik je hem voor **hoeveelheid**.\n\nDe vormen ken je al — ze staan vanaf les 1 bij elk woord in de lijst:\nmannelijk en onzijdig → **-a** · vrouwelijk op -a → **-e**\n\nNa elk hoeveelheidswoord volgt de genitief:\n*mnogo mes**a*** · *malo vin**a*** · *dovoljno kruh**a*** · *previše posl**a***\n\nHoeveelheidswoorden: **mnogo, puno, malo, dovoljno, previše, premalo, nekoliko**.",
+          "targets": ["g.14.genitiv", "g.14.genitiv_kolicina"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Imamo dovoljno ___. (kruh)",
+          "answer": "kruha",
+          "accepts": ["kruha"],
+          "explain_nl": "Mannelijk → -a.",
+          "targets": ["g.14.genitiv_kolicina", "v.07.kruh"],
+          "difficulty": 3,
+          "audio": "Imamo dovoljno kruha.",
+          "source": "vježbenica p.69"
+        },
+        {
+          "id": "e.14.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Imam previše ___. (posao)",
+          "answer": "posla",
+          "accepts": ["posla"],
+          "explain_nl": "posao heeft de l/o-wissel én een vluchtige a: posao → posla.",
+          "targets": ["g.14.genitiv_kolicina", "v.14.posao"],
+          "difficulty": 5,
+          "audio": "Imam previše posla.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Pijem malo ___. (vino)",
+          "answer": "vina",
+          "accepts": ["vina"],
+          "explain_nl": "Onzijdig → -a.",
+          "targets": ["g.14.genitiv_kolicina", "v.01.vino"],
+          "difficulty": 2,
+          "audio": "Pijem malo vina.",
+          "source": "vježbenica p.69"
+        },
+        {
+          "id": "e.14.005",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Nemamo dovoljno ___. (salata)",
+          "answer": "salate",
+          "accepts": ["salate"],
+          "explain_nl": "Vrouwelijk op -a → -e.",
+          "targets": ["g.14.genitiv_kolicina", "v.06.salata"],
+          "difficulty": 3,
+          "audio": "Nemamo dovoljno salate.",
+          "source": "vježbenica p.69"
+        }
+      ]
+    },
+    {
+      "id": "s.14.2",
+      "title_nl": "Telbaar of niet",
+      "kind": "grammar",
+      "source": "vježbenica p.69",
+      "exercises": [
+        {
+          "id": "e.14.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Enkelvoud of meervoud?",
+          "body_nl": "Kun je het **tellen**, dan gaat de genitief in het **meervoud**:\n*puno jabuk**a*** · *nekoliko sokov**a*** · *previše kolač**a***\n\nKun je het **niet tellen**, dan blijft hij **enkelvoud**:\n*mnogo mes**a*** · *malo vin**a*** · *dovoljno kruh**a***\n\nDe genitief meervoud eindigt meestal op **-a**. Bij vrouwelijke woorden op -a is die vorm kaal: *jabuka, salata, banana* — dezelfde letters als het enkelvoud, maar met een lange klinker.\n\nVuistregel: kun je er een getal voor zetten? Dan meervoud.",
+          "targets": ["g.14.genitiv_jd_mn"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "Imaju puno ___. (banana mn)",
+          "answer": "banana",
+          "accepts": ["banana"],
+          "explain_nl": "Telbaar → genitief meervoud. Bij vrouwelijke woorden op -a is die vorm kaal: banana.",
+          "targets": ["g.14.genitiv_jd_mn", "v.14.banana"],
+          "difficulty": 4,
+          "audio": "Imaju puno banana.",
+          "source": "vježbenica p.69"
+        },
+        {
+          "id": "e.14.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "Imaju nekoliko ___. (sok mn)",
+          "answer": "sokova",
+          "accepts": ["sokova"],
+          "explain_nl": "Mannelijk met lang meervoud → genitief meervoud sokova.",
+          "targets": ["g.14.genitiv_jd_mn", "v.06.sok", "g.03.duga_mnozina"],
+          "difficulty": 5,
+          "audio": "Imaju nekoliko sokova.",
+          "source": "vježbenica p.69"
+        },
+        {
+          "id": "e.14.013",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "U zamrzivaču imaju mnogo ___. (meso)",
+          "answer": "mesa",
+          "distractors": ["mesu", "meso", "mesima"],
+          "explain_nl": "Vlees is niet telbaar → genitief enkelvoud mesa.",
+          "targets": ["g.14.genitiv_jd_mn", "v.07.meso"],
+          "difficulty": 3,
+          "source": "vježbenica p.69"
+        },
+        {
+          "id": "e.14.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Imamo dovoljno kruh.",
+          "answer": "Imamo dovoljno kruha.",
+          "accepts": ["Imamo dovoljno kruha."],
+          "explain_nl": "Na een hoeveelheidswoord hoort de genitief, niet de nominatief.",
+          "targets": ["g.14.genitiv_kolicina", "v.07.kruh"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "U juhi nema dovoljno ___. (sol)",
+          "answer": "soli",
+          "accepts": ["soli"],
+          "explain_nl": "sol is een vrouwelijk woord op een medeklinker — die groep krijgt -i in de genitief. Deze groep komt uitgebreid terug in les 18.",
+          "targets": ["g.14.genitiv", "v.14.sol"],
+          "difficulty": 5,
+          "audio": "U juhi nema dovoljno soli.",
+          "source": "vježbenica p.45"
+        },
+        {
+          "id": "e.14.016",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het hoeveelheidswoord aan de betekenis.",
+          "pairs": [
+            { "hr": "dovoljno", "nl": "genoeg" },
+            { "hr": "previše", "nl": "te veel" },
+            { "hr": "premalo", "nl": "te weinig" },
+            { "hr": "nekoliko", "nl": "enkele" }
+          ],
+          "targets": ["g.14.genitiv_kolicina", "v.14.dovoljno", "v.14.previse", "v.14.premalo", "v.14.nekoliko"],
+          "difficulty": 2,
+          "source": "vježbenica p.69"
+        }
+      ]
+    },
+    {
+      "id": "s.14.3",
+      "title_nl": "De dag doornemen",
+      "kind": "practice",
+      "source": "udzbenik p.188",
+      "exercises": [
+        {
+          "id": "e.14.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Eén se voor alle personen",
+          "body_nl": "Veel dagelijkse handelingen dragen een **se**:\n\n*buditi se* (wakker worden) · *tuširati se* (douchen) · *oblačiti se* (zich aankleden) · *odmarati se* (uitrusten) · *vraćati se* (terugkeren)\n\nAnders dan het Nederlandse 'me/je/zich' is er in het Kroatisch maar **één vorm: se**, voor alle personen.\n\nWel is het een clitisch woordje, dus het staat op de **tweede plaats**: *Budim **se** u sedam.* Nooit vooraan.\n\nEn in het perfekt komt het ná het hulpwerkwoord: *Odmarao sam **se**.*",
+          "targets": ["g.14.povratni"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het wederkerende werkwoord.",
+          "given": "Ja ___ ___ u sedam sati. (buditi se)",
+          "answer": "se budim",
+          "accepts": ["se budim"],
+          "explain_nl": "-iti groep → budim. Het se staat op de tweede plaats.",
+          "targets": ["g.14.povratni", "v.14.buditi_se"],
+          "difficulty": 3,
+          "audio": "Ja se budim u sedam sati.",
+          "source": "udzbenik p.188"
+        },
+        {
+          "id": "e.14.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het wederkerende werkwoord.",
+          "given": "Oni ___ ___ kući u pet sati. (vraćati se)",
+          "answer": "se vraćaju",
+          "accepts": ["se vraćaju"],
+          "explain_nl": "-ati groep → vraćaju.",
+          "targets": ["g.14.povratni", "v.14.vracati_se"],
+          "difficulty": 4,
+          "audio": "Oni se vraćaju kući u pet sati.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.023",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Se odmaram poslije posla.",
+          "answer": "Odmaram se poslije posla.",
+          "accepts": ["Odmaram se poslije posla.", "Ja se odmaram poslije posla."],
+          "explain_nl": "se is onbeklemtoond en kan niet vooraan de zin staan — dezelfde regel als bij sam en ću.",
+          "targets": ["g.14.povratni", "v.07.odmarati_se"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.024",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik heb te veel werk en te weinig vrije tijd.",
+          "answer": "Imam previše posla i premalo slobodnog vremena.",
+          "accepts": ["Imam previše posla i premalo slobodnog vremena."],
+          "explain_nl": "Twee hoeveelheidswoorden, allebei met de genitief: posla en slobodnog vremena.",
+          "targets": ["g.14.genitiv_kolicina", "v.14.posao", "v.14.slobodno_vrijeme"],
+          "difficulty": 5,
+          "audio": "Imam previše posla i premalo slobodnog vremena.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Budim se u sedam sati, tuširam se i oblačim se.",
+          "answer": "Budim se u sedam sati, tuširam se i oblačim se.",
+          "accepts": ["Budim se u sedam sati, tuširam se i oblačim se."],
+          "targets": ["g.14.povratni", "v.14.tusirati_se", "v.14.oblaciti_se"],
+          "difficulty": 5,
+          "source": "udzbenik p.188"
+        }
+      ]
+    },
+    {
+      "id": "s.14.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.14.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Gisteren heb ik veel fruit en een paar sapjes gekocht.",
+          "answer": "Jučer sam kupio puno voća i nekoliko sokova.",
+          "accepts": [
+            "Jučer sam kupio puno voća i nekoliko sokova.",
+            "Jučer sam kupila puno voća i nekoliko sokova."
+          ],
+          "explain_nl": "Perfekt uit les 11, plus twee hoeveelheden met de genitief: voća (niet telbaar, enkelvoud) en sokova (telbaar, meervoud).",
+          "targets": ["g.11.perfekt", "g.14.genitiv_jd_mn", "v.07.voce", "v.06.sok"],
+          "difficulty": 5,
+          "audio": "Jučer sam kupio puno voća i nekoliko sokova.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.14.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Kako izgleda vaš običan dan?",
+          "given": "Kako izgleda vaš običan dan?",
+          "model_answer": "Budim se u sedam sati. Tuširam se i jedem malo kruha. Radim u uredu i imam previše posla. Navečer se odmaram.",
+          "rubric_nl": [
+            "Gebruikt minstens twee wederkerende werkwoorden met se op de juiste plaats",
+            "Gebruikt minstens één hoeveelheidswoord met de genitief",
+            "De werkwoorden zijn correct vervoegd"
+          ],
+          "targets": ["g.14.povratni", "g.14.genitiv_kolicina"],
+          "difficulty": 5,
+          "source": "udzbenik p.188"
+        }
+      ]
+    }
+  ]
+}

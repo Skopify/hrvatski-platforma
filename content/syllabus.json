@@ -1,0 +1,284 @@
+{
+  "$comment": "Fase 2-output: syllabusmap afgeleid uit 'Hrvatski za početnike 1' (Croaticum, FF Zagreb, 2006) — udžbenik + vježbenica. Bron-CEFR volgens de auteurs: A1, A2, A2+.",
+  "source": {
+    "textbook": {
+      "title": "Hrvatski za početnike 1 — Udžbenik hrvatskoga kao drugog i stranog jezika",
+      "authors": ["Marica Čilaš-Mikulić", "Milvia Gulešić Machata", "Dinka Pasini", "Sanda Lucija Udier"],
+      "publisher": "Hrvatska sveučilišna naklada, Zagreb, 2006",
+      "isbn": "953-169-123-1",
+      "pdf_pages": 147,
+      "spread_layout": "2 boekpagina's per PDF-pagina",
+      "page_mapping": "boekpagina = 2 * pdfpagina + 2 (vanaf pdf 5)",
+      "coverage": "boekpagina's 4-298 (hoofdstukken 0-20 + fonetski dodatak + rješenja)",
+      "gaps": ["boekpagina's 10-11 ontbreken (vervolg syllabustabel lessen 14-20)", "Rječnik (glossarium HR-EN-ES, boekp. 299-355) ontbreekt", "Popis etnika (boekp. 355) ontbreekt", "audio-CD niet aanwezig"],
+      "text_layer_quality": "SLECHT — compressie heeft de fontmapping gesloopt: 0 voorkomens van č, ć, đ in de tekstlaag. Glyphs renderen wél correct als afbeelding; visuele extractie is de betrouwbare route."
+    },
+    "workbook": {
+      "title": "Hrvatski za početnike 1 — Vježbenica i gramatički pregled",
+      "publisher": "Hrvatska sveučilišna naklada, Zagreb, 2006",
+      "isbn": "953-169-136-3",
+      "pdf_pages": 49,
+      "page_mapping": "boekpagina = 2 * pdfpagina",
+      "coverage": "boekpagina's 4-100 (oefeningen lessen 0-20)",
+      "gaps": ["Gramatički pregled (boekp. 101-116) ontbreekt", "Glagolski dodatak (boekp. 117-128) ontbreekt", "antwoordsleutel ontbreekt"],
+      "text_layer_quality": "GOED — diakritische tekens intact (č 456, ć 285, š 330, ž 182, đ 87). Primaire tekstbron."
+    }
+  },
+  "cefr_mapping": {
+    "$comment": "Eigen indeling van de 21 broneenheden naar fijnmazige niveaus, zodat het levelsysteem betekenisvolle stappen heeft.",
+    "A1.1": [0, 1, 2, 3, 4],
+    "A1.2": [5, 6, 7, 8, 9],
+    "A2.1": [10, 11, 12, 13, 14],
+    "A2.2": [15, 16, 17, 18, 19, 20]
+  },
+  "case_introduction_order": {
+    "$comment": "Volgorde waarin de bron de naamvallen introduceert. Dit is de ruggengraat van het interleaving-schema.",
+    "nominativ": { "lesson": 1, "note": "impliciet vanaf les 1, expliciet in les 2-4" },
+    "akuzativ": { "lesson": 5, "note": "eerst levenloos, daarna levend; uitgebreid in 7 (u/na + akk)" },
+    "lokativ": { "lesson": 10, "note": "alleen met voorzetsel; plaats" },
+    "dativ": { "lesson": 12, "note": "doel van beweging; daarna indirect object (13) en ervaarder (19)" },
+    "genitiv": { "lesson": 14, "note": "hoeveelheid/partitief, daarna voorzetsels (16) en getallen (17)" },
+    "instrumental": { "lesson": 15, "note": "middel/vervoer en gezelschap (s + instr.)" },
+    "vokativ": { "lesson": 20, "note": "aanspreekvorm" }
+  },
+  "lessons": [
+    {
+      "number": 0,
+      "title_hr": "Upoznajmo Hrvatsku i hrvatski jezik!",
+      "title_nl": "Kennismaken met Kroatië en het Kroatisch",
+      "cefr": "A1.1",
+      "udzbenik_pages": "13-18",
+      "vjezbenica_pages": "7-10",
+      "communicative_goals_nl": ["De uitspraak van het Kroatisch beheersen", "Het alfabet gebruiken", "Tot tien tellen", "Bekende woorden herkennen"],
+      "grammar": ["alfabet en klanksysteem", "uitspraak van de palatalen č, ć, dž, đ, š, ž, lj, nj", "getallen 1-10"],
+      "culture": ["basisgegevens over Kroatië", "de šahovnica (wapen)"]
+    },
+    {
+      "number": 1,
+      "title_hr": "Dobro došli!",
+      "title_nl": "Welkom!",
+      "cefr": "A1.1",
+      "udzbenik_pages": "19-30",
+      "vjezbenica_pages": "11-14",
+      "communicative_goals_nl": ["Groeten en afscheid nemen", "Jezelf voorstellen", "Vragen hoe het gaat", "Conventionele beleefdheidsformules gebruiken"],
+      "grammar": ["persoonlijke voornaamwoorden", "biti — korte (onbeklemtoonde) vorm", "biti — lange (beklemtoonde) vorm in vragen", "biti — ontkennende vorm (nisam ...)", "zelfstandige naamwoorden: drie geslachten in enkelvoud", "aanwijzende voornaamwoorden (ovo/to/ono)", "onregelmatig meervoud"],
+      "culture": ["geografische diversiteit van Kroatië"]
+    },
+    {
+      "number": 2,
+      "title_hr": "Ljudi — zanimanja, nacionalnosti",
+      "title_nl": "Mensen — beroepen en nationaliteiten",
+      "cefr": "A1.1",
+      "udzbenik_pages": "31-38",
+      "vjezbenica_pages": "15-18",
+      "communicative_goals_nl": ["Je eigen beroep en dat van anderen noemen", "Nationaliteit uitdrukken", "Je redden in een taxi"],
+      "grammar": ["namen van beroepen (m/v-paren)", "nationaliteiten en landen", "nominatief"],
+      "culture": ["beroemde Kroaten op bankbiljetten"]
+    },
+    {
+      "number": 3,
+      "title_hr": "Naši poznanici, prijatelji i obitelj",
+      "title_nl": "Kennissen, vrienden en familie",
+      "cefr": "A1.1",
+      "udzbenik_pages": "39-56",
+      "vjezbenica_pages": "19-23",
+      "communicative_goals_nl": ["Familierelaties benoemen", "Je gezin voorstellen", "Bezit uitdrukken", "De weg vragen op straat"],
+      "grammar": ["familietermen", "zvati se", "bezittelijke voornaamwoorden", "dierennamen", "mannelijk lang meervoud (-ovi/-evi)", "sibilarisatie (k/g/h → c/z/s)", "vluchtige a (nepostojano a)", "getallen 11 tot een biljoen"],
+      "culture": ["park Maksimir", "Kroatische diaspora", "de kleinste stad ter wereld (Hum)"]
+    },
+    {
+      "number": 4,
+      "title_hr": "Karakteristike stvari i ljudi",
+      "title_nl": "Eigenschappen van dingen en mensen",
+      "cefr": "A1.1",
+      "udzbenik_pages": "57-70",
+      "vjezbenica_pages": "24-27",
+      "communicative_goals_nl": ["Kleuren gebruiken", "Voorwerpen beschrijven", "Mensen beschrijven (uiterlijk en karakter)", "Bezit uitdrukken"],
+      "grammar": ["kleuren", "beschrijvende bijvoeglijke naamwoorden", "bezittelijke bijvoeglijke naamwoorden (levenloos: -ov/-ev/-in)", "bezittelijke bijvoeglijke naamwoorden (levend)", "congruentie in de nominatief"],
+      "culture": ["vlaggen", "Meštrović en zijn beelden", "de tram als symbool van Zagreb"]
+    },
+    {
+      "number": 5,
+      "title_hr": "Informacije o Hrvatskoj i Hrvatima",
+      "title_nl": "Informatie over Kroatië en de Kroaten",
+      "cefr": "A1.2",
+      "udzbenik_pages": "71-82",
+      "vjezbenica_pages": "28-31",
+      "communicative_goals_nl": ["Een hotelkamer zoeken", "Wensen rond een kamer uitdrukken", "Verzoeken doen", "Een stadsplattegrond lezen", "Voorkeur voor mensen en dingen uitdrukken"],
+      "grammar": ["imati / nemati", "ACCUSATIEF — levenloos", "ACCUSATIEF — levend", "presens van -ati werkwoorden", "presens van -irati werkwoorden", "accusatief van voor- en achternamen"],
+      "culture": ["bestuurlijke indeling in županije", "klimaat", "de stropdas (kravata)", "Arena van Pula"]
+    },
+    {
+      "number": 6,
+      "title_hr": "Znam, hoću, mogu",
+      "title_nl": "Ik weet, ik wil, ik kan",
+      "cefr": "A1.2",
+      "udzbenik_pages": "83-90",
+      "vjezbenica_pages": "32-35",
+      "communicative_goals_nl": ["Je redden op het vliegveld", "Afspraken maken", "Noodzaak, toestemming en verbod uitdrukken", "Behoeften en wensen uitdrukken"],
+      "grammar": ["modale werkwoorden: morati, trebati, smjeti, htjeti, moći", "modaal + infinitief", "modaal + da-constructie"],
+      "culture": ["Gornji grad", "Lotrščak en het kanon"]
+    },
+    {
+      "number": 7,
+      "title_hr": "Hajdemo!",
+      "title_nl": "Laten we gaan!",
+      "cefr": "A1.2",
+      "udzbenik_pages": "91-106",
+      "vjezbenica_pages": "36-40",
+      "communicative_goals_nl": ["Het doel van een beweging uitdrukken", "Dagen van de week gebruiken", "Informatie vragen bij een reisbureau", "Standpunten tegenover elkaar zetten en eenvoudig argumenteren", "Een boodschappenlijst maken"],
+      "grammar": ["presens van ići", "voorzetsels u en na + ACCUSATIEF (richting)", "voorzetsel po + accusatief (iets halen)", "persoonlijke voornaamwoorden in de accusatief — clitisch (me, te, ga, je, nas, vas, ih)", "persoonlijke voornaamwoorden in de accusatief — beklemtoond (mene, tebe, njega ...)"],
+      "culture": ["toeristische bestemmingen", "regionale producten"]
+    },
+    {
+      "number": 8,
+      "title_hr": "Dobar tek!",
+      "title_nl": "Eet smakelijk!",
+      "cefr": "A1.2",
+      "udzbenik_pages": "107-118",
+      "vjezbenica_pages": "41-45",
+      "communicative_goals_nl": ["Eten en drinken bestellen in een café en restaurant", "Soorten eten en smaken benoemen", "Over eetgewoonten praten", "Een menukaart lezen"],
+      "grammar": ["presens van jesti", "presens van piti", "herhaling accusatief in objectfunctie"],
+      "culture": ["een authentiek menu", "een authentiek recept", "regionale Kroatische keuken"]
+    },
+    {
+      "number": 9,
+      "title_hr": "Odijelo (ne) čini čovjeka",
+      "title_nl": "Kleren maken (niet) de man",
+      "cefr": "A1.2",
+      "udzbenik_pages": "119-128",
+      "vjezbenica_pages": "46-50",
+      "communicative_goals_nl": ["Kleren en schoenen kopen", "Kledingstukken benoemen", "Over kledinggewoonten praten", "Een modeshow volgen", "Wensen uitdrukken"],
+      "grammar": ["presens van -iti werkwoorden", "presens van -jeti werkwoorden", "onderscheid 3e p. mv. bij -iti/-jeti (-e) versus -ati (-aju)", "herhaling persoonlijke voornaamwoorden"],
+      "culture": ["traditionele klederdracht per regio", "het verhaal van de minirok"]
+    },
+    {
+      "number": 10,
+      "title_hr": "Gdje živimo?",
+      "title_nl": "Waar wonen we?",
+      "cefr": "A2.1",
+      "udzbenik_pages": "129-146",
+      "vjezbenica_pages": "51-55",
+      "communicative_goals_nl": ["Plaats en ligging uitdrukken", "Een interieur beschrijven", "Woningadvertenties lezen", "Een telefoongesprek voeren", "Maanden gebruiken"],
+      "grammar": ["LOCATIEF van zelfstandige naamwoorden", "voorzetsels u, na, o, pri + locatief", "presens van -ovati/-evati/-ivati werkwoorden", "locatief van vrouwelijke woorden op -ska", "sibilarisatie in de locatief", "locatief van voornaamwoorden", "namen van de maanden"],
+      "culture": ["woontypen in Kroatië", "Kroatische maandnamen (siječanj, veljača ...)"]
+    },
+    {
+      "number": 11,
+      "title_hr": "Gdje ste bili?",
+      "title_nl": "Waar bent u geweest?",
+      "cefr": "A2.1",
+      "udzbenik_pages": "147-160",
+      "vjezbenica_pages": "56-59",
+      "communicative_goals_nl": ["Over gebeurtenissen in het verleden vertellen", "Verslag doen", "Emotionele toestanden uitdrukken"],
+      "grammar": ["PERFEKT (voltooid verleden tijd) — hulpwerkwoord biti + deelwoord", "perfekt van -ati, -iti, -jeti werkwoorden", "perfekt van ići, reći, moći", "congruentie van het deelwoord in geslacht en getal", "woordvolgorde met clitica"],
+      "culture": ["Kroatische film", "Varaždin", "geschiedenis van de stropdas"]
+    },
+    {
+      "number": 12,
+      "title_hr": "Planiramo putovanja i izlete",
+      "title_nl": "We plannen reizen en uitstapjes",
+      "cefr": "A2.1",
+      "udzbenik_pages": "161-174",
+      "vjezbenica_pages": "60-63",
+      "communicative_goals_nl": ["Richting van beweging uitdrukken", "Standpunten geven", "Voorstellen doen", "Plannen uitdrukken", "Een weerbericht begrijpen"],
+      "grammar": ["DATIEF van doel/richting", "voorzetsels met datief: prema, k, nasuprot, usprkos", "FUTUR I (toekomende tijd)", "korte en lange vorm van futur"],
+      "culture": ["Rastoke", "Plitvicer meren en andere nationale parken", "Zadar"]
+    },
+    {
+      "number": 13,
+      "title_hr": "Male stvari koje život znače",
+      "title_nl": "Kleine dingen die het leven betekenis geven",
+      "cefr": "A2.1",
+      "udzbenik_pages": "175-184",
+      "vjezbenica_pages": "64-68",
+      "communicative_goals_nl": ["Souvenirs kopen", "Een keuze uitleggen en beargumenteren", "Smaak uitdrukken", "Je redden op het postkantoor", "Ansichtkaarten en felicitaties schrijven"],
+      "grammar": ["direct en indirect object samen", "presens van slati en pisati", "werkwoorden met datiefrectie", "volgorde van clitica (dativ vóór akuzativ)"],
+      "culture": ["Kroatische feestdagen", "typisch Kroatische producten en souvenirs"]
+    },
+    {
+      "number": 14,
+      "title_hr": "Školovanje, posao, svakodnevica",
+      "title_nl": "Opleiding, werk, dagelijks leven",
+      "cefr": "A2.1",
+      "udzbenik_pages": "185-202",
+      "vjezbenica_pages": "69-74",
+      "communicative_goals_nl": ["Over opleiding en werk praten", "Je dagindeling beschrijven", "Hoeveelheden uitdrukken"],
+      "grammar": ["GENITIEF van zelfstandige naamwoorden", "genitief na hoeveelheidswoorden (mnogo, malo, dovoljno, previše, nekoliko)", "partitieve genitief", "wederkerende werkwoorden met se"],
+      "culture": ["onderwijssysteem", "werkgewoonten"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica; de syllabustabel voor lessen 14-20 ontbreekt in het PDF (boekpagina's 10-11)."
+    },
+    {
+      "number": 15,
+      "title_hr": "Putujemo zajedno",
+      "title_nl": "We reizen samen",
+      "cefr": "A2.2",
+      "udzbenik_pages": "203-216",
+      "vjezbenica_pages": "75-80",
+      "communicative_goals_nl": ["Vervoermiddelen benoemen", "Zeggen met wie en waarmee je reist", "Over reisplannen praten"],
+      "grammar": ["INSTRUMENTALIS van zelfstandige naamwoorden", "instrumentalis als middel (autobusom, vlakom)", "s/sa + instrumentalis (gezelschap)", "instrumentalis van voornaamwoorden", "vragen: čime? s kim? o čemu?"],
+      "culture": ["reizen door Kroatië"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    },
+    {
+      "number": 16,
+      "title_hr": "Zajedno u Hrvatskoj",
+      "title_nl": "Samen in Kroatië",
+      "cefr": "A2.2",
+      "udzbenik_pages": "217-234",
+      "vjezbenica_pages": "81-85",
+      "communicative_goals_nl": ["Herkomst uitdrukken", "Locaties ten opzichte van elkaar beschrijven", "Oorzaak uitdrukken"],
+      "grammar": ["genitief na voorzetsels: iz, od, do, blizu, pokraj, iznad, ispod, između, zbog, bez, nedaleko od", "genitief meervoud", "herhaling van alle naamvallen"],
+      "culture": ["Kroatische steden en hun ligging", "nationale parken"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    },
+    {
+      "number": 17,
+      "title_hr": "Brojimo novac, sate, dane, godine ...",
+      "title_nl": "We tellen geld, uren, dagen, jaren ...",
+      "cefr": "A2.2",
+      "udzbenik_pages": "235-246",
+      "vjezbenica_pages": "86-89",
+      "communicative_goals_nl": ["Prijzen noemen en begrijpen", "Kloktijd en data uitdrukken", "Leeftijd en duur uitdrukken"],
+      "grammar": ["getallen + naamval (2-4 → genitief enkelvoud; 5+ → genitief meervoud)", "rangtelwoorden", "data schrijven en uitspreken", "getallen met mannelijke persoonswoorden (dvojica, dva čovjeka)"],
+      "culture": ["Kroatische feestdagen", "personen op de bankbiljetten", "afmetingen en cijfers van Kroatië"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    },
+    {
+      "number": 18,
+      "title_hr": "Zdravlje i sport",
+      "title_nl": "Gezondheid en sport",
+      "cefr": "A2.2",
+      "udzbenik_pages": "247-256",
+      "vjezbenica_pages": "90-92",
+      "communicative_goals_nl": ["Zeggen wat er pijn doet", "Naar de dokter gaan", "Over sport en hobby's praten", "Allergieën benoemen"],
+      "grammar": ["boljeti + accusatief (Boli me glava)", "vrouwelijke i-stam zelfstandige naamwoorden (bolest, kost, riječ, noć, ljubav)", "baviti se + instrumentalis", "alergičan na + accusatief"],
+      "culture": ["sport in Kroatië"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    },
+    {
+      "number": 19,
+      "title_hr": "Volim te!",
+      "title_nl": "Ik hou van je!",
+      "cefr": "A2.2",
+      "udzbenik_pages": "257-266",
+      "vjezbenica_pages": "93-96",
+      "communicative_goals_nl": ["Gevoelens en voorkeuren uitdrukken", "Over relaties praten", "Angsten benoemen"],
+      "grammar": ["DATIEF van de ervaarder (sviđa mi se, hladno mi je, dosadno nam je)", "clitische versus beklemtoonde datief (meni se sviđa / sviđa mi se)", "bojati se + genitief", "zaljubljen u + accusatief", "afleidingen op -ost (mogućnost, budućnost) en hun verbuiging"],
+      "culture": ["liefde en relaties in Kroatië"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    },
+    {
+      "number": 20,
+      "title_hr": "Ovo nije zbogom",
+      "title_nl": "Dit is geen afscheid",
+      "cefr": "A2.2",
+      "udzbenik_pages": "267-280",
+      "vjezbenica_pages": "97-100",
+      "communicative_goals_nl": ["Iemand aanspreken", "Bevelen, verzoeken en uitnodigingen formuleren", "Afscheid nemen"],
+      "grammar": ["IMPERATIEF (2e p. ev., 1e p. mv., 2e p. mv.)", "ontkennende imperatief (nemoj/nemojte + infinitief; ne + imperatief)", "neka + 3e persoon", "VOCATIEF (aanspreekvorm)", "onregelmatige imperatieven (idi, dođi, budi, reci, jedi)"],
+      "culture": ["afscheidsformules", "Kroatische volksliedcitaten"],
+      "$note": "Grammatica afgeleid uit de oefeningen in de vježbenica."
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "id": "lesson-07",
+  "number": 7,
+  "title_hr": "Hajdemo!",
+  "title_nl": "Laten we gaan!",
+  "cefr": "A1.2",
+  "source": { "udzbenik_pages": "91-106", "vjezbenica_pages": "36-40" },
+  "can_do_nl": [
+    "Ik kan zeggen waar ik naartoe ga met ići.",
+    "Ik weet wanneer ik u gebruik en wanneer na.",
+    "Ik kan zeggen dat ik iets ga hálen met po.",
+    "Ik kan zeggen voor wie iets bestemd is met za.",
+    "Ik kan persoonlijke voornaamwoorden in de accusatief gebruiken.",
+    "Ik kan de dagen van de week gebruiken."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.07.ici",
+      "title_nl": "ići — gaan",
+      "cefr": "A1.2",
+      "explanation_nl": "ići is onregelmatig: de infinitief heeft niets gemeen met de presensstam id-. idem, ideš, ide, idemo, idete, idu. Het is een van de meest gebruikte werkwoorden van het Kroatisch, dus deze paradigma leer je uit je hoofd.",
+      "contrast_nl": "Net als het Nederlandse 'gaan' zegt ići niets over hóé je gaat — lopend, met de auto, met het vliegtuig. Wil je het vervoermiddel noemen, dan heb je de instrumentalis nodig, en die komt pas in les 15.",
+      "paradigm": {
+        "caption_nl": "ići — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["idem", "idemo"] },
+          { "label": "2.", "cells": ["ideš", "idete"] },
+          { "label": "3.", "cells": ["ide", "idu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De infinitiefstam gebruiken: *ićem bestaat niet.",
+        "De ontkenning is los: ne idem, ne ideš. ići trekt niet samen.",
+        "3e persoon meervoud is idu, niet *ideju."
+      ],
+      "prerequisites": ["g.05.prezent.ati"],
+      "source": "udzbenik p.92"
+    },
+    {
+      "id": "g.07.u_na_akuzativ",
+      "title_nl": "Richting: u en na + ACCUSATIEF",
+      "cefr": "A1.2",
+      "explanation_nl": "Om te zeggen waar je naartoe gaat, gebruik je u of na met de accusatief. De vraag is kamo? (waarheen?). Idem u trgovinu. Idemo na koncert. Let op: het is dezelfde accusatief als in les 5 — kuća → kuću, fakultet → fakultet.",
+      "contrast_nl": "Het Nederlands gebruikt 'naar' voor alles. Het Kroatisch splitst dat in twee voorzetsels, en de keuze is deels betekenisvol, deels gewoon vast per woord. Nog belangrijker: bij richting hoort de accusatief, bij plaats de locatief (les 10). Gdje? en kamo? krijgen dus verschillende naamvallen.",
+      "paradigm": {
+        "caption_nl": "Kamo ideš? — richting met de accusatief",
+        "columns": ["voorzetsel", "voorbeeld", "type plaats"],
+        "rows": [
+          { "label": "u", "cells": ["Idem u trgovinu.", "gesloten ruimte"] },
+          { "label": "u", "cells": ["Idemo u Zagreb.", "stad, land"] },
+          { "label": "na", "cells": ["Idem na fakultet.", "instelling waar je studeert of werkt"] },
+          { "label": "na", "cells": ["Idemo na koncert.", "gebeurtenis"] },
+          { "label": "na", "cells": ["Idu na more.", "open ruimte, eiland, berg"] },
+          { "label": "na", "cells": ["Ide na kavu.", "iets gaan doen of nuttigen"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "u kiezen waar na hoort: het is na fakultet, na koncert, na izlet, na more — niet u.",
+        "De accusatiefuitgang vergeten: 'Idem u trgovina' is fout, het moet trgovinu zijn.",
+        "kamo (waarheen) en gdje (waar) verwarren — ze vragen om verschillende naamvallen."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo", "g.07.ici"],
+      "source": "udzbenik p.92"
+    },
+    {
+      "id": "g.07.po_akuzativ",
+      "title_nl": "po + ACCUSATIEF — iets gaan halen",
+      "cefr": "A1.2",
+      "explanation_nl": "po met de accusatief betekent 'om te halen': Idem po kruh. Idemo po dijete. De vraag is po što? (waarvoor?) of po koga? (voor wie?). Het gaat altijd om ophalen en meenemen — niet om ergens naartoe gaan.",
+      "contrast_nl": "Het Nederlands heeft hier geen apart voorzetsel voor; wij zeggen 'ik ga brood halen' met een werkwoord. Het Kroatisch stopt die betekenis in het voorzetsel, waardoor je met één werkwoord (ići) toekunt.",
+      "paradigm": {
+        "caption_nl": "po + accusatief",
+        "columns": ["zin", "betekenis"],
+        "rows": [
+          { "label": "1.", "cells": ["Idem po kruh.", "Ik ga brood halen."] },
+          { "label": "2.", "cells": ["Idemo po dijete.", "We gaan het kind ophalen."] },
+          { "label": "3.", "cells": ["U banku idemo po novac.", "Naar de bank gaan we voor geld."] },
+          { "label": "4.", "cells": ["Mama ide na kolodvor po baku.", "Mama gaat oma van het station halen."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "po verwarren met za: po = halen, za = bestemd voor.",
+        "Bij levende wezens geldt de accusatiefregel gewoon: po brata, po baku.",
+        "po heeft ook andere betekenissen met andere naamvallen; hier gaat het alleen om deze."
+      ],
+      "prerequisites": ["g.07.u_na_akuzativ"],
+      "source": "udzbenik p.94"
+    },
+    {
+      "id": "g.07.za_akuzativ",
+      "title_nl": "za + ACCUSATIEF — bestemd voor",
+      "cefr": "A1.2",
+      "explanation_nl": "za met de accusatief geeft aan voor wie of waarvoor iets is: Kava je za sestru. Ovaj novac je za hranu. De vraag is za koga? of za što?",
+      "contrast_nl": "Dit werkt bijna één-op-één met het Nederlandse 'voor'. Het enige verschil is dat het woord erachter moet verbuigen: 'voor mijn zus' wordt za sestru, niet za sestra.",
+      "paradigm": {
+        "caption_nl": "za + accusatief",
+        "columns": ["vraag", "voorbeeld"],
+        "rows": [
+          { "label": "za koga?", "cells": ["Kava je za sestru."] },
+          { "label": "za koga?", "cells": ["Poklon je za brata."] },
+          { "label": "za što?", "cells": ["Ovaj novac je za hranu."] },
+          { "label": "za što?", "cells": ["Ovo meso je za večeru."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De accusatief vergeten na za: het is za sestru, za brata, za večeru.",
+        "za en po verwarren — 'Idem po novine' (ik ga de krant halen) versus 'Novine su za mamu' (de krant is voor mama)."
+      ],
+      "prerequisites": ["g.05.akuzativ.zivo"],
+      "source": "vježbenica p.39"
+    },
+    {
+      "id": "g.07.zamjenice_akuzativ",
+      "title_nl": "Persoonlijke voornaamwoorden in de accusatief",
+      "cefr": "A1.2",
+      "explanation_nl": "Er zijn twee sets. De korte (onbeklemtoonde) vormen me, te, ga, je/ju, nas, vas, ih zijn de gewone keuze en kunnen nooit vooraan de zin staan. De lange (beklemtoonde) vormen mene, tebe, njega, nju, nas, vas, njih gebruik je na een voorzetsel en wanneer je nadruk legt.",
+      "contrast_nl": "Het Nederlands heeft ook zoiets ('m versus hem), maar veel losser. In het Kroatisch is de regel hard: na een voorzetsel altijd de lange vorm — za mene, po njega — en aan het begin van de zin ook.",
+      "paradigm": {
+        "caption_nl": "Akuzativ zamjenica — kort en lang",
+        "columns": ["nominativ", "kort", "lang"],
+        "rows": [
+          { "label": "ja", "cells": ["ja", "me", "mene"] },
+          { "label": "ti", "cells": ["ti", "te", "tebe"] },
+          { "label": "on/ono", "cells": ["on, ono", "ga", "njega"] },
+          { "label": "ona", "cells": ["ona", "je / ju", "nju"] },
+          { "label": "mi", "cells": ["mi", "nas", "nas"] },
+          { "label": "vi", "cells": ["vi/Vi", "vas", "vas"] },
+          { "label": "oni/one", "cells": ["oni, one", "ih", "njih"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Na een voorzetsel de korte vorm gebruiken: 'za me' is fout, het is za mene.",
+        "De korte vorm vooraan zetten: 'Ga vidim' kan niet, het moet 'Vidim ga' zijn.",
+        "Bij ona wordt je meestal ju als er al een je in de zin staat, om herhaling te vermijden."
+      ],
+      "prerequisites": ["g.05.akuzativ.zivo"],
+      "source": "udzbenik p.96"
+    },
+    {
+      "id": "g.07.dani",
+      "title_nl": "Dagen van de week",
+      "cefr": "A1.2",
+      "explanation_nl": "De week begint op maandag. Om te zeggen 'op maandag' gebruik je u met de accusatief: u ponedjeljak, u utorak. Bij srijeda (vrouwelijk) wordt dat u srijedu. Uitzondering: 'op zondag' is u nedjelju, maar 'in de week' is u tjednu.",
+      "contrast_nl": "De namen zijn doorzichtiger dan in het Nederlands: utorak komt van 'tweede', srijeda van 'midden', četvrtak van 'vierde', petak van 'vijfde'. Als je de getallen kent, kun je de helft afleiden.",
+      "paradigm": {
+        "caption_nl": "Dani u tjednu",
+        "columns": ["dag", "op die dag"],
+        "rows": [
+          { "label": "1.", "cells": ["ponedjeljak", "u ponedjeljak"] },
+          { "label": "2.", "cells": ["utorak", "u utorak"] },
+          { "label": "3.", "cells": ["srijeda", "u srijedu"] },
+          { "label": "4.", "cells": ["četvrtak", "u četvrtak"] },
+          { "label": "5.", "cells": ["petak", "u petak"] },
+          { "label": "6.", "cells": ["subota", "u subotu"] },
+          { "label": "7.", "cells": ["nedjelja", "u nedjelju"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Dagen krijgen géén hoofdletter in het Kroatisch.",
+        "srijeda, subota en nedjelja zijn vrouwelijk en krijgen dus -u: u srijedu, u subotu, u nedjelju.",
+        "nedjelja (zondag) en tjedan (week) lijken op elkaar maar zijn verschillende woorden."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo"],
+      "source": "udzbenik p.93"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.07.ici", "hr": "ići", "nl": "gaan", "pos": "verb", "aspect": "imperfective", "present_1sg": "idem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "udzbenik p.92" },
+    { "id": "v.07.setati", "hr": "šetati", "nl": "wandelen", "pos": "verb", "aspect": "imperfective", "present_1sg": "šetam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.38" },
+    { "id": "v.07.odmarati_se", "hr": "odmarati se", "nl": "uitrusten", "pos": "verb", "aspect": "imperfective", "present_1sg": "odmaram se", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.38" },
+    { "id": "v.07.zanimati", "hr": "zanimati", "nl": "interesseren", "pos": "verb", "aspect": "imperfective", "present_1sg": "zanimam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.39" },
+
+    { "id": "v.07.ponedjeljak", "hr": "ponedjeljak", "nl": "maandag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ponedjeljka", "nom_pl": "ponedjeljci", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.utorak", "hr": "utorak", "nl": "dinsdag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "utorka", "nom_pl": "utorci", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.srijeda", "hr": "srijeda", "nl": "woensdag", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "srijede", "nom_pl": "srijede", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.cetvrtak", "hr": "četvrtak", "nl": "donderdag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "četvrtka", "nom_pl": "četvrtci", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.petak", "hr": "petak", "nl": "vrijdag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "petka", "nom_pl": "petci", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.subota", "hr": "subota", "nl": "zaterdag", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "subote", "nom_pl": "subote", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.nedjelja", "hr": "nedjelja", "nl": "zondag", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "nedjelje", "nom_pl": "nedjelje", "tags": ["tijd", "dag"], "source": "udzbenik p.93" },
+    { "id": "v.07.tjedan", "hr": "tjedan", "nl": "week", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "tjedna", "nom_pl": "tjedni", "tags": ["tijd"], "source": "udzbenik p.93" },
+
+    { "id": "v.07.banka", "hr": "banka", "nl": "bank", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "banke", "nom_pl": "banke", "tags": ["stad"], "source": "vježbenica p.36" },
+    { "id": "v.07.fakultet", "hr": "fakultet", "nl": "faculteit, universiteit", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "fakulteta", "nom_pl": "fakulteti", "tags": ["school"], "source": "vježbenica p.36" },
+    { "id": "v.07.predavanje", "hr": "predavanje", "nl": "college, lezing", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "predavanja", "nom_pl": "predavanja", "tags": ["school"], "source": "vježbenica p.36" },
+    { "id": "v.07.skola", "hr": "škola", "nl": "school", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "škole", "nom_pl": "škole", "tags": ["school"], "source": "vježbenica p.36" },
+    { "id": "v.07.knjiznica", "hr": "knjižnica", "nl": "bibliotheek", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "knjižnice", "nom_pl": "knjižnice", "tags": ["stad"], "source": "vježbenica p.36" },
+    { "id": "v.07.izlet", "hr": "izlet", "nl": "uitstapje", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "izleta", "nom_pl": "izleti", "tags": ["reizen"], "source": "vježbenica p.36" },
+    { "id": "v.07.koncert", "hr": "koncert", "nl": "concert", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "koncerta", "nom_pl": "koncerti", "tags": ["gelegenheid"], "source": "vježbenica p.36" },
+    { "id": "v.07.izlozba", "hr": "izložba", "nl": "tentoonstelling", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "izložbe", "nom_pl": "izložbe", "tags": ["gelegenheid"], "source": "vježbenica p.36" },
+    { "id": "v.07.vjencanje", "hr": "vjenčanje", "nl": "bruiloft", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "vjenčanja", "nom_pl": "vjenčanja", "tags": ["gelegenheid"], "source": "vježbenica p.36" },
+    { "id": "v.07.kolodvor", "hr": "kolodvor", "nl": "station", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kolodvora", "nom_pl": "kolodvori", "tags": ["reizen"], "source": "vježbenica p.38" },
+    { "id": "v.07.trznica", "hr": "tržnica", "nl": "markt", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "tržnice", "nom_pl": "tržnice", "tags": ["stad"], "source": "vježbenica p.38" },
+    { "id": "v.07.plaza", "hr": "plaža", "nl": "strand", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "plaže", "nom_pl": "plaže", "tags": ["natuur"], "source": "vježbenica p.36" },
+    { "id": "v.07.kino", "hr": "kino", "nl": "bioscoop", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "kina", "nom_pl": "kina", "tags": ["stad"], "source": "vježbenica p.36" },
+    { "id": "v.07.kafic", "hr": "kafić", "nl": "café", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kafića", "nom_pl": "kafići", "tags": ["stad"], "source": "vježbenica p.36" },
+    { "id": "v.07.posta", "hr": "pošta", "nl": "postkantoor", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "pošte", "nom_pl": "pošte", "tags": ["stad"], "source": "vježbenica p.38" },
+    { "id": "v.07.ljekarna", "hr": "ljekarna", "nl": "apotheek", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ljekarne", "nom_pl": "ljekarne", "tags": ["stad"], "source": "vježbenica p.38" },
+    { "id": "v.07.trg", "hr": "trg", "nl": "plein", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "trga", "nom_pl": "trgovi", "tags": ["stad"], "source": "vježbenica p.38" },
+    { "id": "v.07.kruh", "hr": "kruh", "nl": "brood", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kruha", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.mlijeko", "hr": "mlijeko", "nl": "melk", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "mlijeka", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.voce", "hr": "voće", "nl": "fruit", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "voća", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.povrce", "hr": "povrće", "nl": "groente", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "povrća", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.meso", "hr": "meso", "nl": "vlees", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "mesa", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.riba", "hr": "riba", "nl": "vis", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ribe", "nom_pl": "ribe", "tags": ["eten"], "source": "vježbenica p.38" },
+    { "id": "v.07.hrana", "hr": "hrana", "nl": "eten, voedsel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "hrane", "tags": ["eten"], "source": "vježbenica p.39" },
+    { "id": "v.07.cvijece", "hr": "cvijeće", "nl": "bloemen", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "cvijeća", "tags": ["ding"], "source": "vježbenica p.38" },
+    { "id": "v.07.casopis", "hr": "časopis", "nl": "tijdschrift", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "časopisa", "nom_pl": "časopisi", "tags": ["ding"], "source": "vježbenica p.38" },
+
+    { "id": "v.07.kamo", "hr": "kamo", "nl": "waarheen", "pos": "adv", "tags": ["vraagwoord"], "source": "udzbenik p.92" },
+    { "id": "v.07.kada", "hr": "kada", "nl": "wanneer", "pos": "adv", "tags": ["vraagwoord"], "source": "vježbenica p.38" },
+    { "id": "v.07.za", "hr": "za", "nl": "voor (bestemd voor)", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.39" },
+    { "id": "v.07.po", "hr": "po", "nl": "om te halen", "pos": "prep", "tags": ["voorzetsel"], "source": "udzbenik p.94" },
+    { "id": "v.07.hajdemo", "hr": "Hajdemo!", "nl": "Laten we gaan!", "pos": "phrase", "tags": ["basis"], "source": "udzbenik p.91" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.07.1",
+      "title_nl": "Waar ga je heen?",
+      "kind": "input",
+      "text_hr": "U ponedjeljak idem u centar i šetam.\nU utorak idem na fakultet, na predavanje.\nU srijedu idemo na izlet.\nU četvrtak ide na frizuru i na masažu.\nU petak idu na koncert, a u subotu na vjenčanje.\nU nedjelju ne idem nigdje. Odmaram se.",
+      "translation_nl": "Op maandag ga ik naar het centrum en wandel ik.\nOp dinsdag ga ik naar de universiteit, naar college.\nOp woensdag gaan we op uitstapje.\nOp donderdag gaat ze naar de kapper en naar de massage.\nOp vrijdag gaan ze naar een concert, en op zaterdag naar een bruiloft.\nOp zondag ga ik nergens heen. Ik rust uit.",
+      "source": "vježbenica p.38",
+      "exercises": [
+        {
+          "id": "e.07.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "ići, en de vraag kamo?",
+          "body_nl": "**ići** (gaan) is onregelmatig: de infinitief lijkt niet op de stam.\n\n*idem, ideš, ide, idemo, idete, idu*\n\nDe vraag naar richting is **kamo?** (waarheen). Het antwoord krijgt **u** of **na** plus de **accusatief** — dezelfde accusatief als in les 5.\n\n*Kamo ideš?* — *Idem u trgovin**u**.*\n\nLet op het verschil met **gdje?** (waar). Die vraagt naar een plaats waar iets ís, en krijgt een andere naamval — die komt in les 10.",
+          "targets": ["g.07.ici", "g.07.u_na_akuzativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg ići.",
+          "given": "Ja ___ u trgovinu.",
+          "answer": "idem",
+          "accepts": ["idem"],
+          "targets": ["g.07.ici"],
+          "difficulty": 1,
+          "audio": "Ja idem u trgovinu.",
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg ići.",
+          "given": "Susjedi ___ u trgovinu.",
+          "answer": "idu",
+          "accepts": ["idu"],
+          "explain_nl": "3e persoon meervoud: idu. Niet *ideju.",
+          "targets": ["g.07.ici"],
+          "difficulty": 2,
+          "audio": "Susjedi idu u trgovinu.",
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief.",
+          "given": "Mi idemo na ___. (plaža)",
+          "answer": "plažu",
+          "accepts": ["plažu"],
+          "explain_nl": "Vrouwelijk op -a → -u. En bij een strand hoort na, niet u.",
+          "targets": ["g.07.u_na_akuzativ", "v.07.plaza"],
+          "difficulty": 3,
+          "audio": "Mi idemo na plažu.",
+          "source": "vježbenica p.36"
+        }
+      ]
+    },
+    {
+      "id": "s.07.2",
+      "title_nl": "u of na?",
+      "kind": "grammar",
+      "source": "udzbenik p.92",
+      "exercises": [
+        {
+          "id": "e.07.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee voorzetsels waar het Nederlands er één heeft",
+          "body_nl": "Wij zeggen altijd 'naar'. Het Kroatisch kiest:\n\n**u** — gesloten ruimtes, steden, landen: *u trgovinu, u kino, u banku, u Zagreb, u Hrvatsku*\n\n**na** — open ruimtes, gebeurtenissen, eilanden en bergen, en instellingen waar je studeert of werkt: *na fakultet, na koncert, na izlet, na more, na otok, na plažu, na poštu*\n\nDe scheidslijn is deels logisch en deels gewoon vast per woord. *na fakultet* en *na poštu* moet je onthouden — daar helpt de logica je niet.\n\nWat wél altijd geldt: er volgt een **accusatief**.",
+          "targets": ["g.07.u_na_akuzativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.011",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk voorzetsel hoort hier?",
+          "given": "Idem ___ fakultet.",
+          "answer": "na",
+          "distractors": ["u", "po", "za"],
+          "explain_nl": "Instellingen waar je studeert krijgen na: na fakultet, na predavanje.",
+          "targets": ["g.07.u_na_akuzativ", "v.07.fakultet"],
+          "difficulty": 3,
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.012",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk voorzetsel hoort hier?",
+          "given": "Idemo ___ kino.",
+          "answer": "u",
+          "distractors": ["na", "po", "za"],
+          "explain_nl": "Een gesloten ruimte krijgt u.",
+          "targets": ["g.07.u_na_akuzativ", "v.07.kino"],
+          "difficulty": 2,
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul voorzetsel én naamval in.",
+          "given": "Djeca idu ___ ___. (škola)",
+          "answer": "u školu",
+          "accepts": ["u školu"],
+          "explain_nl": "Gesloten ruimte → u; vrouwelijk op -a → školu.",
+          "targets": ["g.07.u_na_akuzativ", "v.07.skola"],
+          "difficulty": 3,
+          "audio": "Djeca idu u školu.",
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul voorzetsel én naamval in.",
+          "given": "Večeras idem ___ ___. (koncert)",
+          "answer": "na koncert",
+          "accepts": ["na koncert"],
+          "explain_nl": "Een gebeurtenis → na; mannelijk en levenloos → onveranderd.",
+          "targets": ["g.07.u_na_akuzativ", "v.07.koncert"],
+          "difficulty": 3,
+          "audio": "Večeras idem na koncert.",
+          "source": "vježbenica p.36"
+        },
+        {
+          "id": "e.07.015",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Idem u trgovina.",
+          "answer": "Idem u trgovinu.",
+          "accepts": ["Idem u trgovinu."],
+          "explain_nl": "Na u bij richting hoort de accusatief: trgovina → trgovinu.",
+          "targets": ["g.07.u_na_akuzativ", "v.03.trgovina"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.016",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zeg op welke dag. Let op de naamval.",
+          "given": "___ ___ idemo na izlet. (u, srijeda)",
+          "answer": "U srijedu",
+          "accepts": ["U srijedu", "u srijedu"],
+          "explain_nl": "srijeda is vrouwelijk → u srijedu. Dagen krijgen geen hoofdletter.",
+          "targets": ["g.07.dani", "v.07.srijeda"],
+          "difficulty": 4,
+          "audio": "U srijedu idemo na izlet.",
+          "source": "vježbenica p.38"
+        }
+      ]
+    },
+    {
+      "id": "s.07.3",
+      "title_nl": "Halen, en voor wie",
+      "kind": "practice",
+      "source": "udzbenik p.94",
+      "exercises": [
+        {
+          "id": "e.07.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "po = halen, za = bestemd voor",
+          "body_nl": "**po** + accusatief betekent 'om te halen':\n*Idem po kruh.* — Ik ga brood halen.\n*Mama ide na kolodvor po baku.* — Mama haalt oma van het station.\n\n**za** + accusatief betekent 'bestemd voor':\n*Kava je za sestru.* — De koffie is voor mijn zus.\n*Ovaj novac je za hranu.* — Dit geld is voor eten.\n\nHet Nederlands heeft voor po geen apart woord — wij zetten er een werkwoord bij ('gaan halen'). Het Kroatisch stopt die betekenis in het voorzetsel.",
+          "targets": ["g.07.po_akuzativ", "g.07.za_akuzativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan in de accusatief.",
+          "given": "U trgovinu idemo po ___ i ___. (kruh, mlijeko)",
+          "answer": "kruh i mlijeko",
+          "accepts": ["kruh i mlijeko"],
+          "explain_nl": "kruh is mannelijk en levenloos, mlijeko is onzijdig — allebei onveranderd.",
+          "targets": ["g.07.po_akuzativ", "v.07.kruh", "v.07.mlijeko"],
+          "difficulty": 3,
+          "audio": "U trgovinu idemo po kruh i mlijeko.",
+          "source": "vježbenica p.38"
+        },
+        {
+          "id": "e.07.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan in de accusatief.",
+          "given": "Idemo po ___ na kolodvor. (baka)",
+          "answer": "baku",
+          "accepts": ["baku"],
+          "explain_nl": "Vrouwelijk op -a → baku, ook al is oma een levend wezen — dat onderscheid geldt alleen bij mannelijke woorden.",
+          "targets": ["g.07.po_akuzativ", "v.03.baka"],
+          "difficulty": 4,
+          "audio": "Idemo po baku na kolodvor.",
+          "source": "vježbenica p.38"
+        },
+        {
+          "id": "e.07.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan in de accusatief.",
+          "given": "Poklon je za ___. (brat)",
+          "answer": "brata",
+          "accepts": ["brata"],
+          "explain_nl": "Mannelijk en levend → brata. Na za hoort net zo goed de accusatief.",
+          "targets": ["g.07.za_akuzativ", "g.05.akuzativ.zivo", "v.03.brat"],
+          "difficulty": 3,
+          "audio": "Poklon je za brata.",
+          "source": "vježbenica p.39"
+        },
+        {
+          "id": "e.07.024",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Kort en lang: me of mene",
+          "body_nl": "Persoonlijke voornaamwoorden in de accusatief hebben twee vormen:\n\n**kort**: me, te, ga, je/ju, nas, vas, ih — de gewone keuze, maar nooit vooraan de zin.\n*Vidim ga.* *Čekamo vas.*\n\n**lang**: mene, tebe, njega, nju, nas, vas, njih — na een voorzetsel, en bij nadruk.\n*Ovo je za mene.* *Idem po njega.*\n\nDe harde regel: **na een voorzetsel altijd de lange vorm.** *za me* bestaat niet.",
+          "targets": ["g.07.zamjenice_akuzativ"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.025",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het voornaamwoord in.",
+          "given": "Za koga je knjiga? Za ___. (on)",
+          "answer": "njega",
+          "accepts": ["njega"],
+          "explain_nl": "Na het voorzetsel za hoort de lange vorm: njega, niet ga.",
+          "targets": ["g.07.zamjenice_akuzativ", "g.07.za_akuzativ"],
+          "difficulty": 4,
+          "audio": "Za koga je knjiga? Za njega.",
+          "source": "vježbenica p.40"
+        },
+        {
+          "id": "e.07.026",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het voornaamwoord in.",
+          "given": "Po koga ide mama na kolodvor? Po ___. (oni)",
+          "answer": "njih",
+          "accepts": ["njih"],
+          "explain_nl": "Na po de lange vorm: njih.",
+          "targets": ["g.07.zamjenice_akuzativ", "g.07.po_akuzativ"],
+          "difficulty": 4,
+          "audio": "Po koga ide mama na kolodvor? Po njih.",
+          "source": "vježbenica p.40"
+        },
+        {
+          "id": "e.07.027",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ovaj poklon je za te.",
+          "answer": "Ovaj poklon je za tebe.",
+          "accepts": ["Ovaj poklon je za tebe."],
+          "explain_nl": "Na een voorzetsel altijd de lange vorm: tebe.",
+          "targets": ["g.07.zamjenice_akuzativ"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.028",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de korte aan de lange vorm.",
+          "pairs": [
+            { "hr": "me", "nl": "mene" },
+            { "hr": "ga", "nl": "njega" },
+            { "hr": "je", "nl": "nju" },
+            { "hr": "ih", "nl": "njih" }
+          ],
+          "targets": ["g.07.zamjenice_akuzativ"],
+          "difficulty": 3,
+          "source": "udzbenik p.96"
+        }
+      ]
+    },
+    {
+      "id": "s.07.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.07.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Op vrijdag gaan we naar een concert. Het kaartje is voor mijn zus.",
+          "answer": "U petak idemo na koncert. Karta je za sestru.",
+          "accepts": ["U petak idemo na koncert. Karta je za sestru."],
+          "explain_nl": "u petak (dag, accusatief), na koncert (gebeurtenis), za sestru (accusatief na za).",
+          "targets": ["g.07.dani", "g.07.u_na_akuzativ", "g.07.za_akuzativ", "v.07.koncert"],
+          "difficulty": 5,
+          "audio": "U petak idemo na koncert. Karta je za sestru.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.031",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Kamo ideš? Idem po kruh, a poslije idem na tržnicu.",
+          "answer": "Kamo ideš? Idem po kruh, a poslije idem na tržnicu.",
+          "accepts": ["Kamo ideš? Idem po kruh, a poslije idem na tržnicu."],
+          "targets": ["g.07.ici", "g.07.po_akuzativ", "v.07.trznica"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.07.032",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Kamo idete u subotu?",
+          "given": "Kamo idete u subotu?",
+          "model_answer": "U subotu idem na tržnicu i u kino. Poslije idem na kavu.",
+          "rubric_nl": [
+            "Gebruikt ići correct vervoegd",
+            "u of na correct gekozen bij elke plaats",
+            "Alle plaatsen staan in de accusatief"
+          ],
+          "targets": ["g.07.ici", "g.07.u_na_akuzativ", "g.07.dani"],
+          "difficulty": 4,
+          "source": "vježbenica p.38"
+        }
+      ]
+    }
+  ]
+}

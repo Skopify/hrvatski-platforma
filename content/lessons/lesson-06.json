@@ -1,0 +1,475 @@
+{
+  "id": "lesson-06",
+  "number": 6,
+  "title_hr": "Znam, hoću, mogu",
+  "title_nl": "Ik weet, ik wil, ik kan",
+  "cefr": "A1.2",
+  "source": { "udzbenik_pages": "83-90", "vjezbenica_pages": "32-35" },
+  "can_do_nl": [
+    "Ik kan zeggen wat ik moet, wil, kan en mag.",
+    "Ik kan een modaal werkwoord combineren met een infinitief.",
+    "Ik ken het verschil tussen 'ik hoef niet' en 'ik mag niet'.",
+    "Ik kan de onregelmatige ontkenning neću gebruiken.",
+    "Ik kan zeggen wat ik nodig heb voor een gelegenheid.",
+    "Ik kan me redden op het vliegveld en een afspraak maken."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.06.modalni",
+      "title_nl": "Modale werkwoorden — de bouw van de zin",
+      "cefr": "A1.2",
+      "explanation_nl": "Een modaal werkwoord vervoeg je, en het werkwoord dat erachter komt blijft in de infinitief: Moram kuhati. Hoću piti kavu. Ne mogu doći. De infinitief verandert dus nooit — alleen het modale werkwoord past zich aan de persoon aan.",
+      "contrast_nl": "Precies zoals het Nederlands: 'ik moet koken'. Het verschil zit in de woordvolgorde — het Kroatisch zet de infinitief direct achter het modale werkwoord, niet achteraan de zin. 'Moram kuhati ručak', niet 'Moram ručak kuhati'.",
+      "paradigm": {
+        "caption_nl": "De vijf modale werkwoorden — 1e persoon enkelvoud",
+        "columns": ["infinitief", "ja-vorm", "betekenis"],
+        "rows": [
+          { "label": "1.", "cells": ["morati", "moram", "moeten"] },
+          { "label": "2.", "cells": ["trebati", "trebam", "nodig hebben, moeten"] },
+          { "label": "3.", "cells": ["smjeti", "smijem", "mogen (toestemming)"] },
+          { "label": "4.", "cells": ["moći", "mogu", "kunnen"] },
+          { "label": "5.", "cells": ["htjeti", "hoću", "willen"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De infinitief mee vervoegen: 'Moram kuham' is fout, het blijft kuhati.",
+        "trebati heeft twee gebruiken: met een infinitief ('moeten') en met een lijdend voorwerp in de accusatief ('nodig hebben'): Trebam lijek.",
+        "moći en smjeti verwisselen: moći = in staat zijn, smjeti = toestemming hebben."
+      ],
+      "prerequisites": ["g.05.prezent.ati"],
+      "source": "udzbenik p.84"
+    },
+    {
+      "id": "g.06.htjeti",
+      "title_nl": "htjeti — willen, en zijn onregelmatige nee",
+      "cefr": "A1.2",
+      "explanation_nl": "htjeti is het onregelmatigste werkwoord van de vijf: hoću, hoćeš, hoće, hoćemo, hoćete, hoće. De ontkenning is niet 'ne hoću' maar één samengetrokken woord: neću, nećeš, neće, nećemo, nećete, neće.",
+      "contrast_nl": "Nederlands: 'ik wil niet' in twee woorden. Kroatisch trekt het samen tot neću — dezelfde uitzondering als bij nisam (biti) en nemam (imati). Dat zijn precies de drie werkwoorden die je het vaakst ontkent.",
+      "paradigm": {
+        "caption_nl": "htjeti — bevestigend en ontkennend",
+        "columns": ["bevestigend", "ontkennend"],
+        "rows": [
+          { "label": "ja", "cells": ["hoću", "neću"] },
+          { "label": "ti", "cells": ["hoćeš", "nećeš"] },
+          { "label": "on/ona", "cells": ["hoće", "neće"] },
+          { "label": "mi", "cells": ["hoćemo", "nećemo"] },
+          { "label": "vi/Vi", "cells": ["hoćete", "nećete"] },
+          { "label": "oni/one", "cells": ["hoće", "neće"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*ne hoću schrijven in plaats van neću.",
+        "De 3e persoon enkelvoud en meervoud zijn gelijk: allebei hoće.",
+        "htjeti heeft ook een onbeklemtoonde vorm (ću, ćeš, će ...) — die gebruik je pas voor de toekomende tijd in les 12."
+      ],
+      "prerequisites": ["g.06.modalni"],
+      "source": "udzbenik p.84"
+    },
+    {
+      "id": "g.06.moci",
+      "title_nl": "moći — kunnen",
+      "cefr": "A1.2",
+      "explanation_nl": "moći is onregelmatig in de eerste persoon: mogu, niet *možem. Verder loopt hij regelmatig door met ž: možeš, može, možemo, možete. De derde persoon meervoud is weer mogu, gelijk aan de ik-vorm.",
+      "contrast_nl": "Dat de ik-vorm en de zij-vorm identiek zijn (mogu) voelt vreemd, maar de context maakt het altijd duidelijk — en het onderwerp mag je toevoegen als het niet helder is.",
+      "paradigm": {
+        "caption_nl": "moći — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["mogu", "možemo"] },
+          { "label": "2.", "cells": ["možeš", "možete"] },
+          { "label": "3.", "cells": ["može", "mogu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*možem in plaats van mogu.",
+        "De k van de infinitief wordt ž in het presens — dat is dezelfde klankwisseling als bij reći → rečem.",
+        "'Može' alleen is ook een compleet antwoord: 'Kan dat?' — 'Može.' (Prima.)"
+      ],
+      "prerequisites": ["g.06.modalni"],
+      "source": "udzbenik p.84"
+    },
+    {
+      "id": "g.06.morati_smjeti",
+      "title_nl": "Niet hoeven versus niet mogen",
+      "cefr": "A1.2",
+      "explanation_nl": "Dit is de belangrijkste val van deze les. Ne moram betekent 'ik hoef niet' — er is geen verplichting. Ne smijem betekent 'ik mag niet' — er is een verbod. Ze zijn niet uitwisselbaar, en de fout verandert de betekenis volledig.",
+      "contrast_nl": "Het Nederlands maakt hetzelfde onderscheid ('hoeven' versus 'mogen'), maar veel leerders vertalen 'moeten' automatisch naar morati en komen dan uit op 'ne moram' waar 'ne smijem' hoort. Vraag jezelf af: mág het niet, of hóéft het niet?",
+      "paradigm": {
+        "caption_nl": "Ontkende modale werkwoorden",
+        "columns": ["Kroatisch", "Nederlands", "betekent"],
+        "rows": [
+          { "label": "1.", "cells": ["Ne moram raditi.", "Ik hoef niet te werken.", "geen verplichting"] },
+          { "label": "2.", "cells": ["Ne smijem raditi.", "Ik mag niet werken.", "verbod"] },
+          { "label": "3.", "cells": ["Ne mogu raditi.", "Ik kan niet werken.", "onvermogen"] },
+          { "label": "4.", "cells": ["Neću raditi.", "Ik wil niet werken.", "onwil"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "'Ne moraš pušiti' betekent 'je hoeft niet te roken' — als je 'je mag niet roken' bedoelt, is het 'Ne smiješ pušiti'.",
+        "Bij deze vier werkwoorden staat ne los, behalve bij htjeti (neću).",
+        "smjeti heeft ij in de stam: smijem, smiješ — niet *smjem."
+      ],
+      "prerequisites": ["g.06.modalni", "g.06.htjeti"],
+      "source": "udzbenik p.85"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.06.morati", "hr": "morati", "nl": "moeten", "pos": "verb", "aspect": "imperfective", "present_1sg": "moram", "verb_class": "-ati", "tags": ["modaal"], "source": "udzbenik p.84" },
+    { "id": "v.06.trebati", "hr": "trebati", "nl": "nodig hebben, moeten", "pos": "verb", "aspect": "imperfective", "present_1sg": "trebam", "verb_class": "-ati", "tags": ["modaal"], "source": "udzbenik p.84" },
+    { "id": "v.06.smjeti", "hr": "smjeti", "nl": "mogen (toestemming)", "pos": "verb", "aspect": "imperfective", "present_1sg": "smijem", "verb_class": "onregelmatig", "tags": ["modaal"], "source": "udzbenik p.84" },
+    { "id": "v.06.moci", "hr": "moći", "nl": "kunnen", "pos": "verb", "aspect": "imperfective", "present_1sg": "mogu", "verb_class": "onregelmatig", "tags": ["modaal"], "source": "udzbenik p.84" },
+    { "id": "v.06.htjeti", "hr": "htjeti", "nl": "willen", "pos": "verb", "aspect": "imperfective", "present_1sg": "hoću", "verb_class": "onregelmatig", "tags": ["modaal"], "source": "udzbenik p.84" },
+
+    { "id": "v.06.kupiti", "hr": "kupiti", "nl": "kopen", "pos": "verb", "aspect": "perfective", "present_1sg": "kupim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "vježbenica p.34" },
+    { "id": "v.06.raditi", "hr": "raditi", "nl": "werken, doen", "pos": "verb", "aspect": "imperfective", "present_1sg": "radim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.06.doci", "hr": "doći", "nl": "komen", "pos": "verb", "aspect": "perfective", "present_1sg": "dođem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.06.pitati", "hr": "pitati", "nl": "vragen", "pos": "verb", "aspect": "imperfective", "present_1sg": "pitam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.34" },
+    { "id": "v.06.pusiti", "hr": "pušiti", "nl": "roken", "pos": "verb", "aspect": "imperfective", "present_1sg": "pušim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "vježbenica p.32" },
+    { "id": "v.06.parkirati", "hr": "parkirati", "nl": "parkeren", "pos": "verb", "aspect": "imperfective", "present_1sg": "parkiram", "verb_class": "-irati", "tags": ["werkwoord"], "source": "vježbenica p.32" },
+    { "id": "v.06.plivati", "hr": "plivati", "nl": "zwemmen", "pos": "verb", "aspect": "imperfective", "present_1sg": "plivam", "verb_class": "-ati", "tags": ["werkwoord", "sport"], "source": "vježbenica p.32" },
+    { "id": "v.06.spavati", "hr": "spavati", "nl": "slapen", "pos": "verb", "aspect": "imperfective", "present_1sg": "spavam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.32" },
+    { "id": "v.06.slusati", "hr": "slušati", "nl": "luisteren (naar)", "pos": "verb", "aspect": "imperfective", "present_1sg": "slušam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.34" },
+    { "id": "v.06.cekati_mod", "hr": "čekati", "nl": "wachten", "pos": "verb", "aspect": "imperfective", "present_1sg": "čekam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "vježbenica p.34" },
+
+    { "id": "v.06.proslava", "hr": "proslava", "nl": "feest, viering", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "proslave", "nom_pl": "proslave", "tags": ["gelegenheid"], "source": "vježbenica p.34" },
+    { "id": "v.06.rodendan", "hr": "rođendan", "nl": "verjaardag", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "rođendana", "nom_pl": "rođendani", "tags": ["gelegenheid"], "source": "vježbenica p.34" },
+    { "id": "v.06.gost", "hr": "gost", "nl": "gast", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "gosta", "nom_pl": "gosti", "tags": ["persoon"], "source": "vježbenica p.34" },
+    { "id": "v.06.sastanak", "hr": "sastanak", "nl": "vergadering, afspraak", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sastanka", "nom_pl": "sastanci", "tags": ["werk"], "source": "vježbenica p.34" },
+    { "id": "v.06.odijelo", "hr": "odijelo", "nl": "pak (kleding)", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "odijela", "nom_pl": "odijela", "tags": ["kleding"], "source": "vježbenica p.34" },
+    { "id": "v.06.pozivnica", "hr": "pozivnica", "nl": "uitnodiging", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "pozivnice", "nom_pl": "pozivnice", "tags": ["gelegenheid"], "source": "vježbenica p.34" },
+    { "id": "v.06.torta", "hr": "torta", "nl": "taart", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "torte", "nom_pl": "torte", "tags": ["eten"], "source": "vježbenica p.34" },
+    { "id": "v.06.kolac", "hr": "kolač", "nl": "gebak, koek", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kolača", "nom_pl": "kolači", "tags": ["eten"], "source": "vježbenica p.34" },
+    { "id": "v.06.sok", "hr": "sok", "nl": "sap", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "soka", "nom_pl": "sokovi", "tags": ["eten"], "source": "vježbenica p.34" },
+    { "id": "v.06.pivo", "hr": "pivo", "nl": "bier", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "piva", "nom_pl": "piva", "tags": ["eten"], "source": "vježbenica p.34" },
+    { "id": "v.06.salata", "hr": "salata", "nl": "salade", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "salate", "nom_pl": "salate", "tags": ["eten"], "source": "vježbenica p.34" },
+    { "id": "v.06.casa", "hr": "čaša", "nl": "glas", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "čaše", "nom_pl": "čaše", "tags": ["ding"], "source": "vježbenica p.34" },
+    { "id": "v.06.tanjur", "hr": "tanjur", "nl": "bord", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "tanjura", "nom_pl": "tanjuri", "tags": ["ding"], "source": "vježbenica p.34" },
+    { "id": "v.06.lijek", "hr": "lijek", "nl": "medicijn", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "lijeka", "nom_pl": "lijekovi", "tags": ["gezondheid"], "source": "vježbenica p.34" },
+    { "id": "v.06.gripa", "hr": "gripa", "nl": "griep", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "gripe", "tags": ["gezondheid"], "source": "vježbenica p.34" },
+    { "id": "v.06.mir", "hr": "mir", "nl": "rust, vrede", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "mira", "tags": ["abstract"], "source": "vježbenica p.32" },
+    { "id": "v.06.aerodrom", "hr": "aerodrom", "nl": "vliegveld", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "aerodroma", "nom_pl": "aerodromi", "tags": ["reizen"], "source": "udzbenik p.83" },
+    { "id": "v.06.karta_avio", "hr": "avionska karta", "nl": "vliegticket", "pos": "phrase", "tags": ["reizen"], "source": "udzbenik p.83" },
+    { "id": "v.06.putovnica", "hr": "putovnica", "nl": "paspoort", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "putovnice", "nom_pl": "putovnice", "tags": ["reizen"], "source": "udzbenik p.83" },
+    { "id": "v.06.prtljaga", "hr": "prtljaga", "nl": "bagage", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "prtljage", "tags": ["reizen"], "source": "udzbenik p.83" },
+
+    { "id": "v.06.danas", "hr": "danas", "nl": "vandaag", "pos": "adv", "tags": ["tijd"], "source": "vježbenica p.32" },
+    { "id": "v.06.ponekad", "hr": "ponekad", "nl": "soms", "pos": "adv", "tags": ["tijd"], "source": "vježbenica p.34" },
+    { "id": "v.06.uvijek", "hr": "uvijek", "nl": "altijd", "pos": "adv", "tags": ["tijd"], "source": "vježbenica p.34" },
+    { "id": "v.06.nikad", "hr": "nikad", "nl": "nooit", "pos": "adv", "tags": ["tijd"], "source": "vježbenica p.34" },
+    { "id": "v.06.rijetko", "hr": "rijetko", "nl": "zelden", "pos": "adv", "tags": ["tijd"], "source": "vježbenica p.34" },
+    { "id": "v.06.hitno", "hr": "hitno", "nl": "dringend", "pos": "adv", "tags": ["basis"], "source": "vježbenica p.35" },
+    { "id": "v.06.nesto", "hr": "nešto", "nl": "iets", "pos": "pron", "tags": ["basis"], "source": "vježbenica p.32" },
+    { "id": "v.06.svaki_dan", "hr": "svaki dan", "nl": "elke dag", "pos": "phrase", "tags": ["tijd"], "source": "vježbenica p.34" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.06.1",
+      "title_nl": "Wat moet, wat mag, wat wil je",
+      "kind": "input",
+      "text_hr": "A: Mogu li Vam pomoći?\nB: Hvala, nije potrebno.\n\nA: Smijemo li ovdje pušiti?\nB: Ne, ne smijete. Ovdje se ne puši.\n\nA: Hitno trebam kavu! A ti?\nB: Ja neću kavu. Hoću čaj.\n\nA: Gdje su Vana i Tina?\nB: Moraju doći na vrijeme, ali smiju malo kasniti.",
+      "translation_nl": "A: Kan ik u helpen?\nB: Dank u, het is niet nodig.\n\nA: Mogen we hier roken?\nB: Nee, dat mag u niet. Hier wordt niet gerookt.\n\nA: Ik heb dringend koffie nodig! En jij?\nB: Ik wil geen koffie. Ik wil thee.\n\nA: Waar zijn Vana en Tina?\nB: Ze moeten op tijd komen, maar ze mogen iets te laat zijn.",
+      "source": "vježbenica p.35",
+      "exercises": [
+        {
+          "id": "e.06.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Modaal + infinitief",
+          "body_nl": "Je vervoegt het **modale** werkwoord; het werkwoord erachter blijft in de **infinitief**:\n\n*Moram kuhati.* · *Hoću piti kavu.* · *Ne mogu doći.*\n\nDe infinitief komt direct achter het modale werkwoord — niet achteraan de zin zoals in het Nederlands. Dus *Moram kuhati ručak*, niet *Moram ručak kuhati*.\n\nDe vijf: **morati** (moeten), **trebati** (nodig hebben), **smjeti** (mogen), **moći** (kunnen), **htjeti** (willen).",
+          "targets": ["g.06.modalni"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het modale werkwoord.",
+          "given": "Jasna ___ kupiti mobitel. (morati)",
+          "answer": "mora",
+          "accepts": ["mora"],
+          "explain_nl": "3e persoon enkelvoud. De infinitief kupiti blijft onveranderd.",
+          "targets": ["g.06.modalni", "v.06.morati"],
+          "difficulty": 2,
+          "audio": "Jasna mora kupiti mobitel.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het modale werkwoord.",
+          "given": "Vi ___ mnogo trenirati. (moći)",
+          "answer": "možete",
+          "accepts": ["možete"],
+          "explain_nl": "moći met ž in alle vormen behalve de ik-vorm en de zij-vorm meervoud.",
+          "targets": ["g.06.moci"],
+          "difficulty": 3,
+          "audio": "Vi možete mnogo trenirati.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg het modale werkwoord.",
+          "given": "___ li nešto pitati? (smjeti, ja)",
+          "answer": "Smijem",
+          "accepts": ["Smijem", "smijem"],
+          "explain_nl": "smjeti heeft ij in de stam: smijem. Niet *smjem.",
+          "targets": ["g.06.modalni", "v.06.smjeti"],
+          "difficulty": 4,
+          "audio": "Smijem li nešto pitati?",
+          "source": "vježbenica p.34"
+        }
+      ]
+    },
+    {
+      "id": "s.06.2",
+      "title_nl": "Willen — en niet willen",
+      "kind": "grammar",
+      "source": "udzbenik p.84",
+      "exercises": [
+        {
+          "id": "e.06.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De derde samentrekking",
+          "body_nl": "htjeti is onregelmatig: **hoću, hoćeš, hoće, hoćemo, hoćete, hoće**.\n\nDe ontkenning is niet *ne hoću* maar één woord: **neću, nećeš, neće, nećemo, nećete, neće**.\n\nDat is de derde keer dat je dit ziet: **nisam** (biti), **nemam** (imati), **neću** (htjeti). Precies de drie werkwoorden die je het vaakst ontkent trekken samen — de rest zet ne gewoon los ervoor.",
+          "targets": ["g.06.htjeti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de bevestigende vorm van htjeti in.",
+          "given": "___ li ti čaj?",
+          "answer": "Hoćeš",
+          "accepts": ["Hoćeš", "hoćeš"],
+          "targets": ["g.06.htjeti"],
+          "difficulty": 2,
+          "audio": "Hoćeš li ti čaj?",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de ontkennende vorm van htjeti in.",
+          "given": "Ana ___ čaj. (neg)",
+          "answer": "neće",
+          "accepts": ["neće"],
+          "explain_nl": "neće — één woord. Nooit *ne hoće.",
+          "targets": ["g.06.htjeti"],
+          "difficulty": 3,
+          "audio": "Ana neće čaj.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.013",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ja ne hoću mlijeko.",
+          "answer": "Ja neću mlijeko.",
+          "accepts": ["Ja neću mlijeko.", "Neću mlijeko."],
+          "explain_nl": "htjeti trekt samen met de ontkenning: neću.",
+          "targets": ["g.06.htjeti"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.014",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Hoeft niet ≠ mag niet",
+          "body_nl": "De belangrijkste val van deze les:\n\n**Ne moram raditi.** — Ik *hoef* niet te werken. Er is geen verplichting.\n**Ne smijem raditi.** — Ik *mag* niet werken. Er is een verbod.\n\nDie twee betekenen iets totaal anders. Vraag jezelf voor je kiest: *mág het niet, of hóéft het niet?*\n\nEn erbij: **Ne mogu raditi** (ik kan niet) en **Neću raditi** (ik wil niet).",
+          "targets": ["g.06.morati_smjeti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.015",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Op het vliegtuig staat een rookverbod. Wat zeg je?",
+          "given": "Ovdje ___ pušiti.",
+          "answer": "ne smijemo",
+          "distractors": ["ne moramo", "ne možemo", "nećemo"],
+          "explain_nl": "Een verbod → ne smijemo. 'Ne moramo pušiti' zou betekenen dat roken niet verplicht is.",
+          "targets": ["g.06.morati_smjeti", "v.06.pusiti"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.016",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Vandaag hoef ik niet te koken.",
+          "answer": "Danas ne moram kuhati.",
+          "accepts": ["Danas ne moram kuhati.", "Ne moram danas kuhati."],
+          "explain_nl": "'Hoeven niet' → ne moram. Ne staat hier los, want morati trekt niet samen.",
+          "targets": ["g.06.morati_smjeti", "v.06.danas", "v.05.kuhati"],
+          "difficulty": 4,
+          "audio": "Danas ne moram kuhati.",
+          "source": "vježbenica p.32"
+        },
+        {
+          "id": "e.06.017",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Je mag hier niet parkeren.",
+          "answer": "Ne smiješ ovdje parkirati.",
+          "accepts": ["Ne smiješ ovdje parkirati.", "Ovdje ne smiješ parkirati.", "Ne smiješ parkirati ovdje."],
+          "explain_nl": "Verbod → ne smiješ. Vergelijk: 'Ne moraš parkirati' = je hoeft niet te parkeren.",
+          "targets": ["g.06.morati_smjeti", "v.06.parkirati"],
+          "difficulty": 5,
+          "audio": "Ne smiješ ovdje parkirati.",
+          "source": "vježbenica p.32"
+        }
+      ]
+    },
+    {
+      "id": "s.06.3",
+      "title_nl": "Wat heb je nodig?",
+      "kind": "practice",
+      "source": "vježbenica p.34",
+      "exercises": [
+        {
+          "id": "e.06.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "trebati doet twee dingen",
+          "body_nl": "**trebati + infinitief** = moeten: *Trebam kuhati ručak.*\n\n**trebati + accusatief** = nodig hebben: *Trebam lijek.* *Trebam odijelo i kravatu.*\n\nIn het tweede geval is trebati een gewoon werkwoord met een lijdend voorwerp — dus de accusatief uit les 5 komt hier meteen terug.",
+          "targets": ["g.06.modalni", "g.05.akuzativ.nezivo"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Je hebt griep. Vul aan in de accusatief.",
+          "given": "Imate gripu. Trebam ___. (lijek)",
+          "answer": "lijek",
+          "accepts": ["lijek"],
+          "explain_nl": "lijek is mannelijk en levenloos → onveranderd in de accusatief.",
+          "targets": ["g.05.akuzativ.nezivo", "v.06.lijek"],
+          "difficulty": 3,
+          "audio": "Trebam lijek.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Je hebt een zakelijke afspraak. Vul aan in de accusatief.",
+          "given": "Trebam ___ i ___. (odijelo, kravata)",
+          "answer": "odijelo i kravatu",
+          "accepts": ["odijelo i kravatu"],
+          "explain_nl": "odijelo is onzijdig → onveranderd. kravata is vrouwelijk op -a → kravatu.",
+          "targets": ["g.05.akuzativ.nezivo", "v.06.odijelo", "v.04.kravata"],
+          "difficulty": 4,
+          "audio": "Trebam odijelo i kravatu.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Je geeft een feestje. Vul aan in de accusatief meervoud.",
+          "given": "Za proslavu trebam ___ i ___. (sok mn, kolač mn)",
+          "answer": "sokove i kolače",
+          "accepts": ["sokove i kolače"],
+          "explain_nl": "Beide mannelijk: lang meervoud sokovi → accusatief sokove; kolači → kolače.",
+          "targets": ["g.05.akuzativ.mnozina", "g.03.duga_mnozina", "v.06.sok", "v.06.kolac"],
+          "difficulty": 5,
+          "audio": "Za proslavu trebam sokove i kolače.",
+          "source": "vježbenica p.34"
+        },
+        {
+          "id": "e.06.024",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de zin aan de betekenis.",
+          "pairs": [
+            { "hr": "Ne moram raditi.", "nl": "Ik hoef niet te werken." },
+            { "hr": "Ne smijem raditi.", "nl": "Ik mag niet werken." },
+            { "hr": "Ne mogu raditi.", "nl": "Ik kan niet werken." },
+            { "hr": "Neću raditi.", "nl": "Ik wil niet werken." }
+          ],
+          "targets": ["g.06.morati_smjeti", "g.06.htjeti", "g.06.moci", "v.06.raditi"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.025",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Djeca", "ne", "smiju", "dugo", "gledati", "televiziju"],
+          "answer": "Djeca ne smiju dugo gledati televiziju.",
+          "accepts": ["Djeca ne smiju dugo gledati televiziju."],
+          "explain_nl": "De infinitief staat direct achter het modale werkwoord; het lijdend voorwerp komt daarna.",
+          "targets": ["g.06.modalni", "g.06.morati_smjeti", "v.05.gledati"],
+          "difficulty": 4,
+          "audio": "Djeca ne smiju dugo gledati televiziju.",
+          "source": "vježbenica p.32"
+        },
+        {
+          "id": "e.06.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Mogu li Vam pomoći? Hvala, nije potrebno.",
+          "answer": "Mogu li Vam pomoći? Hvala, nije potrebno.",
+          "accepts": ["Mogu li Vam pomoći? Hvala, nije potrebno."],
+          "targets": ["g.06.moci"],
+          "difficulty": 4,
+          "source": "vježbenica p.35"
+        }
+      ]
+    },
+    {
+      "id": "s.06.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.06.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik wil geen bier. Ik wil wijn.",
+          "answer": "Neću pivo. Hoću vino.",
+          "accepts": ["Neću pivo. Hoću vino.", "Ja neću pivo. Ja hoću vino."],
+          "explain_nl": "neću voor de ontkenning, hoću voor de bevestiging. pivo en vino zijn onzijdig, dus onveranderd in de accusatief.",
+          "targets": ["g.06.htjeti", "g.05.akuzativ.nezivo", "v.06.pivo", "v.01.vino"],
+          "difficulty": 5,
+          "audio": "Neću pivo. Hoću vino.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.06.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što danas morate, a što ne smijete?",
+          "given": "Što danas morate, a što ne smijete?",
+          "model_answer": "Danas moram raditi i kuhati. Ne smijem spavati cijeli dan.",
+          "rubric_nl": [
+            "Gebruikt morati en smjeti correct vervoegd",
+            "De werkwoorden erachter staan in de infinitief",
+            "Het verschil tussen 'hoeven' en 'mogen' is juist toegepast"
+          ],
+          "targets": ["g.06.modalni", "g.06.morati_smjeti"],
+          "difficulty": 4,
+          "source": "vježbenica p.35"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "title_hr": "Gdje ste bili?",
+  "title_nl": "Waar bent u geweest?",
+  "cefr": "A2.1",
+  "source": { "udzbenik_pages": "147-160", "vjezbenica_pages": "56-59" },
+  "can_do_nl": [
+    "Ik kan over gebeurtenissen in het verleden vertellen.",
+    "Ik kan het perfectum vormen met biti plus deelwoord.",
+    "Ik kan het deelwoord laten kloppen met geslacht en getal.",
+    "Ik kan een zin in het verleden ontkennen en er een vraag van maken.",
+    "Ik ken de onregelmatige deelwoorden išao, rekao, mogao.",
+    "Ik kan emotionele toestanden uitdrukken."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.11.perfekt",
+      "title_nl": "PERFEKT — de verleden tijd",
+      "cefr": "A2.1",
+      "explanation_nl": "Het Kroatisch heeft één gewone verleden tijd: het perfekt. Je bouwt hem uit twee delen: de korte vorm van biti (sam, si, je, smo, ste, su) plus het deelwoord van het hoofdwerkwoord. Radio sam. Čitali smo. Bila je u Zagrebu.",
+      "contrast_nl": "De opbouw lijkt op het Nederlandse 'ik heb gewerkt', maar met twee grote verschillen: het hulpwerkwoord is altijd biti (zijn), nooit imati, én het deelwoord past zich aan aan geslacht en getal van het onderwerp. Een vrouw zegt radila sam, een man radio sam.",
+      "paradigm": {
+        "caption_nl": "raditi in het perfekt — mannelijk en vrouwelijk",
+        "columns": ["persoon", "muški rod", "ženski rod"],
+        "rows": [
+          { "label": "ja", "cells": ["radio sam", "radila sam"] },
+          { "label": "ti", "cells": ["radio si", "radila si"] },
+          { "label": "on / ona", "cells": ["radio je", "radila je"] },
+          { "label": "mi", "cells": ["radili smo", "radile smo"] },
+          { "label": "vi/Vi", "cells": ["radili ste", "radile ste"] },
+          { "label": "oni / one", "cells": ["radili su", "radile su"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "imati als hulpwerkwoord gebruiken — het is altijd biti.",
+        "Het hulpwerkwoord is onbeklemtoond en kan niet vooraan de zin staan: 'Sam radio' is fout, het moet 'Radio sam' of 'Ja sam radio' zijn.",
+        "Het deelwoord vergeten aan te passen aan het geslacht van de spreker."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.148"
+    },
+    {
+      "id": "g.11.particip",
+      "title_nl": "Het deelwoord vormen",
+      "cefr": "A2.1",
+      "explanation_nl": "Haal -ti van de infinitief en plak de uitgang erachter: -o voor mannelijk, -la voor vrouwelijk, -lo voor onzijdig, -li / -le / -la voor het meervoud. Bij werkwoorden op -ati en -iti komt er nog een l bij in de mannelijke vorm: raditi → radi + o = radio, čitati → čita + o = čitao.",
+      "contrast_nl": "Het Nederlandse voltooid deelwoord is één vaste vorm ('gewerkt'). Hier is het eigenlijk een bijvoeglijk naamwoord dat meebuigt — daarom heet het in het Kroatisch ook radni glagolski pridjev, 'werkwoordelijk bijvoeglijk naamwoord'.",
+      "paradigm": {
+        "caption_nl": "Van infinitief naar deelwoord",
+        "columns": ["infinitief", "on", "ona", "oni"],
+        "rows": [
+          { "label": "1.", "cells": ["čitati", "čitao", "čitala", "čitali"] },
+          { "label": "2.", "cells": ["raditi", "radio", "radila", "radili"] },
+          { "label": "3.", "cells": ["vidjeti", "vidio", "vidjela", "vidjeli"] },
+          { "label": "4.", "cells": ["biti", "bio", "bila", "bili"] },
+          { "label": "5.", "cells": ["kupovati", "kupovao", "kupovala", "kupovali"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Bij -jeti werkwoorden verschilt de mannelijke vorm van de rest: vidio maar vidjela.",
+        "Het meervoud heeft drie vormen: -li (mannelijk of gemengd), -le (alleen vrouwen), -la (onzijdig).",
+        "Bij djeca gebruik je de onzijdige meervoudsvorm: Djeca su radila."
+      ],
+      "prerequisites": ["g.11.perfekt"],
+      "source": "udzbenik p.148"
+    },
+    {
+      "id": "g.11.perfekt_negacija",
+      "title_nl": "Ontkennen en vragen in het verleden",
+      "cefr": "A2.1",
+      "explanation_nl": "Ontkennen doe je door het hulpwerkwoord te vervangen door de ontkennende vorm van biti: nisam, nisi, nije, nismo, niste, nisu. Nisam radio. Nije bila kod kuće. Een vraag maak je met de lange vorm plus li: Jesi li radio? Jeste li bili u Zagrebu?",
+      "contrast_nl": "Alles wat je in les 1 over biti leerde — kort, lang en ontkennend — komt hier terug, nu als hulpwerkwoord. Dat is de reden dat die drie sets zoveel aandacht kregen.",
+      "paradigm": {
+        "caption_nl": "Drie zinstypen in het perfekt",
+        "columns": ["type", "voorbeeld"],
+        "rows": [
+          { "label": "bevestigend", "cells": ["Radio sam cijeli dan."] },
+          { "label": "ontkennend", "cells": ["Nisam radio cijeli dan."] },
+          { "label": "vraag", "cells": ["Jesi li radio cijeli dan?"] },
+          { "label": "kort antwoord", "cells": ["Da, jesam. / Ne, nisam."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "'Ne sam radio' — de ontkenning zit al in nisam.",
+        "In de vraag gebruik je de lange vorm jesi, niet de korte si.",
+        "Het korte antwoord is jesam of nisam, zonder het deelwoord te herhalen."
+      ],
+      "prerequisites": ["g.11.perfekt", "g.biti.present.negative"],
+      "source": "udzbenik p.149"
+    },
+    {
+      "id": "g.11.perfekt_nepravilni",
+      "title_nl": "Onregelmatige deelwoorden",
+      "cefr": "A2.1",
+      "explanation_nl": "Een handvol veelgebruikte werkwoorden vormt het deelwoord uit een andere stam. De belangrijkste: ići → išao/išla, reći → rekao/rekla, moći → mogao/mogla, jesti → jeo/jela, piti → pio/pila. Let op dat de mannelijke en de vrouwelijke vorm hier soms flink verschillen.",
+      "contrast_nl": "Net als in het Nederlands zijn het juist de meest gebruikte werkwoorden die onregelmatig zijn ('gaan → gegaan'). Dat is geen toeval: veelgebruikte vormen slijten minder snel glad.",
+      "paradigm": {
+        "caption_nl": "Onregelmatige deelwoorden",
+        "columns": ["infinitief", "on", "ona", "oni"],
+        "rows": [
+          { "label": "1.", "cells": ["ići", "išao", "išla", "išli"] },
+          { "label": "2.", "cells": ["reći", "rekao", "rekla", "rekli"] },
+          { "label": "3.", "cells": ["moći", "mogao", "mogla", "mogli"] },
+          { "label": "4.", "cells": ["jesti", "jeo", "jela", "jeli"] },
+          { "label": "5.", "cells": ["piti", "pio", "pila", "pili"] },
+          { "label": "6.", "cells": ["htjeti", "htio", "htjela", "htjeli"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "išao heeft een š die in de infinitief niet te zien is.",
+        "mogao → mogla: de a verdwijnt in de vrouwelijke vorm (vluchtige a).",
+        "htio → htjela: de klinker verandert mee."
+      ],
+      "prerequisites": ["g.11.particip"],
+      "source": "udzbenik p.150"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.11.jucer", "hr": "jučer", "nl": "gisteren", "pos": "adv", "tags": ["tijd"], "source": "udzbenik p.148" },
+    { "id": "v.11.prekjucer", "hr": "prekjučer", "nl": "eergisteren", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.11.sinoc", "hr": "sinoć", "nl": "gisteravond", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.11.jutros", "hr": "jutros", "nl": "vanochtend", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.11.proslo_ljeto", "hr": "prošlo ljeto", "nl": "afgelopen zomer", "pos": "phrase", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.11.prosli_tjedan", "hr": "prošli tjedan", "nl": "vorige week", "pos": "phrase", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.11.nekad", "hr": "nekad", "nl": "vroeger, ooit", "pos": "adv", "tags": ["tijd"], "source": "aangevuld" },
+
+    { "id": "v.11.reci", "hr": "reći", "nl": "zeggen", "pos": "verb", "aspect": "perfective", "present_1sg": "kažem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "udzbenik p.150" },
+    { "id": "v.11.dogoditi_se", "hr": "dogoditi se", "nl": "gebeuren", "pos": "verb", "aspect": "perfective", "present_1sg": "dogodim se", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.11.pronaci", "hr": "pronaći", "nl": "vinden", "pos": "verb", "aspect": "perfective", "present_1sg": "pronađem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "udzbenik p.298" },
+    { "id": "v.11.upoznati", "hr": "upoznati", "nl": "leren kennen", "pos": "verb", "aspect": "perfective", "present_1sg": "upoznam", "verb_class": "-ati", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.11.ostati", "hr": "ostati", "nl": "blijven", "pos": "verb", "aspect": "perfective", "present_1sg": "ostanem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.11.vratiti_se", "hr": "vratiti se", "nl": "terugkeren", "pos": "verb", "aspect": "perfective", "present_1sg": "vratim se", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+
+    { "id": "v.11.sretan", "hr": "sretan", "nl": "gelukkig, blij", "pos": "adj", "tags": ["gevoel", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.11.nesretan", "hr": "nesretan", "nl": "ongelukkig", "pos": "adj", "tags": ["gevoel", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.11.zabrinut", "hr": "zabrinut", "nl": "bezorgd", "pos": "adj", "tags": ["gevoel"], "source": "aangevuld" },
+    { "id": "v.11.iznenaden", "hr": "iznenađen", "nl": "verrast", "pos": "adj", "tags": ["gevoel"], "source": "aangevuld" },
+    { "id": "v.11.umoran_gev", "hr": "razočaran", "nl": "teleurgesteld", "pos": "adj", "tags": ["gevoel"], "source": "aangevuld" },
+    { "id": "v.11.ponosan", "hr": "ponosan", "nl": "trots", "pos": "adj", "tags": ["gevoel", "vluchtige-a"], "source": "aangevuld" },
+
+    { "id": "v.11.dogadaj", "hr": "događaj", "nl": "gebeurtenis", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "događaja", "nom_pl": "događaji", "tags": ["abstract"], "source": "aangevuld" },
+    { "id": "v.11.dokument", "hr": "dokument", "nl": "document", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "dokumenta", "nom_pl": "dokumenti", "tags": ["ding"], "source": "udzbenik p.298" },
+    { "id": "v.11.putovanje", "hr": "putovanje", "nl": "reis", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "putovanja", "nom_pl": "putovanja", "tags": ["reizen"], "source": "aangevuld" },
+    { "id": "v.11.kod_kuce", "hr": "kod kuće", "nl": "thuis", "pos": "phrase", "tags": ["plaats"], "source": "aangevuld" },
+    { "id": "v.11.cijeli_dan", "hr": "cijeli dan", "nl": "de hele dag", "pos": "phrase", "tags": ["tijd"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.11.1",
+      "title_nl": "Waar was je?",
+      "kind": "input",
+      "text_hr": "A: Gdje si bio jučer? Zvao sam te cijeli dan.\nB: Bio sam u Varaždinu. Putovao sam s prijateljima.\nA: Jeste li išli na koncert?\nB: Jesmo. Išli smo na koncert, a poslije smo jeli u restoranu.\nA: Je li bilo dobro?\nB: Bilo je odlično! Ali nismo mogli dugo ostati. Vratili smo se u ponoć.\nA: A Ana? Nije htjela ići?\nB: Nije. Rekla je da je umorna.",
+      "translation_nl": "A: Waar was je gisteren? Ik heb je de hele dag gebeld.\nB: Ik was in Varaždin. Ik reisde met vrienden.\nA: Zijn jullie naar een concert geweest?\nB: Ja. We zijn naar een concert geweest, en daarna hebben we in een restaurant gegeten.\nA: Was het goed?\nB: Het was uitstekend! Maar we konden niet lang blijven. We zijn om middernacht teruggekomen.\nA: En Ana? Wilde ze niet mee?\nB: Nee. Ze zei dat ze moe was.",
+      "source": "udzbenik p.148",
+      "exercises": [
+        {
+          "id": "e.11.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee delen, en het tweede buigt mee",
+          "body_nl": "Het perfekt bestaat uit **biti (kort) + deelwoord**:\n\n*Radio sam.* — Ik heb gewerkt / ik werkte.\n\nTwee dingen die anders zijn dan in het Nederlands:\n\n**Het hulpwerkwoord is altijd biti**, nooit imati. Ook bij 'ik heb gegeten': *Jeo sam.*\n\n**Het deelwoord past zich aan het onderwerp aan.** Een man zegt *radio sam*, een vrouw *radila sam*. In het meervoud: *radili* (mannen of gemengd), *radile* (alleen vrouwen).\n\nEn net als in les 1: het korte hulpwerkwoord kan **nooit vooraan** staan. *Radio sam*, niet *Sam radio*.",
+          "targets": ["g.11.perfekt", "g.11.particip"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. De spreker is een man.",
+          "given": "Jučer ___ ___ u Zagrebu. (biti, ja)",
+          "answer": "sam bio",
+          "accepts": ["sam bio"],
+          "explain_nl": "Het deelwoord van biti is bio (mannelijk). Het hulpwerkwoord staat op de tweede plaats.",
+          "targets": ["g.11.perfekt", "v.11.jucer"],
+          "difficulty": 3,
+          "audio": "Jučer sam bio u Zagrebu.",
+          "source": "udzbenik p.148"
+        },
+        {
+          "id": "e.11.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Het onderwerp is vrouwelijk.",
+          "given": "Ana ___ ___ cijeli dan. (raditi)",
+          "answer": "je radila",
+          "accepts": ["je radila"],
+          "explain_nl": "Vrouwelijk enkelvoud → radila. Hulpwerkwoord je.",
+          "targets": ["g.11.perfekt", "g.11.particip", "v.09.raditi"],
+          "difficulty": 3,
+          "audio": "Ana je radila cijeli dan.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Het onderwerp is een gemengde groep.",
+          "given": "Mi ___ ___ u restoranu. (jesti)",
+          "answer": "smo jeli",
+          "accepts": ["smo jeli"],
+          "explain_nl": "jesti → jeo/jela/jeli. Meervoud gemengd → jeli.",
+          "targets": ["g.11.perfekt_nepravilni", "v.08.jesti"],
+          "difficulty": 4,
+          "audio": "Mi smo jeli u restoranu.",
+          "source": "udzbenik p.150"
+        }
+      ]
+    },
+    {
+      "id": "s.11.2",
+      "title_nl": "Ontkennen, vragen, onregelmatig",
+      "kind": "grammar",
+      "source": "udzbenik p.149-150",
+      "exercises": [
+        {
+          "id": "e.11.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Alles uit les 1 komt terug",
+          "body_nl": "Voor het perfekt heb je alle drie de sets van biti nodig die je in les 1 leerde:\n\n**kort** voor gewone zinnen: *Radio sam.*\n**ontkennend** voor de ontkenning: *Nisam radio.*\n**lang** voor de vraag: *Jesi li radio?* — *Da, jesam. / Ne, nisam.*\n\nJe zet dus nooit ne los voor het hulpwerkwoord, en je herhaalt het deelwoord niet in het korte antwoord.",
+          "targets": ["g.11.perfekt_negacija"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de ontkennende vorm. Het onderwerp is vrouwelijk.",
+          "given": "Ona ___ ___ kod kuće. (biti, neg)",
+          "answer": "nije bila",
+          "accepts": ["nije bila"],
+          "explain_nl": "nije als ontkennend hulpwerkwoord, bila als vrouwelijk deelwoord.",
+          "targets": ["g.11.perfekt_negacija", "v.11.kod_kuce"],
+          "difficulty": 4,
+          "audio": "Ona nije bila kod kuće.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.012",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde tot een vraag.",
+          "tokens": ["Jeste", "li", "bili", "u", "Zagrebu"],
+          "answer": "Jeste li bili u Zagrebu?",
+          "accepts": ["Jeste li bili u Zagrebu?", "Jeste li bili u Zagrebu"],
+          "explain_nl": "De lange vorm jeste staat voorop, direct gevolgd door li.",
+          "targets": ["g.11.perfekt_negacija", "g.biti.present.long"],
+          "difficulty": 4,
+          "audio": "Jeste li bili u Zagrebu?",
+          "source": "udzbenik p.149"
+        },
+        {
+          "id": "e.11.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Let op: onregelmatig deelwoord.",
+          "given": "Oni ___ ___ na koncert. (ići)",
+          "answer": "su išli",
+          "accepts": ["su išli"],
+          "explain_nl": "ići → išao/išla/išli. De š zie je in de infinitief niet.",
+          "targets": ["g.11.perfekt_nepravilni", "v.07.ici"],
+          "difficulty": 4,
+          "audio": "Oni su išli na koncert.",
+          "source": "udzbenik p.150"
+        },
+        {
+          "id": "e.11.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Het onderwerp is vrouwelijk.",
+          "given": "Ona ___ ___ da je umorna. (reći)",
+          "answer": "je rekla",
+          "accepts": ["je rekla"],
+          "explain_nl": "reći → rekao/rekla/rekli.",
+          "targets": ["g.11.perfekt_nepravilni", "v.11.reci"],
+          "difficulty": 4,
+          "audio": "Ona je rekla da je umorna.",
+          "source": "udzbenik p.150"
+        },
+        {
+          "id": "e.11.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt, ontkennend. Het onderwerp is 'wij'.",
+          "given": "___ ___ dugo ostati. (moći, neg)",
+          "answer": "Nismo mogli",
+          "accepts": ["Nismo mogli", "nismo mogli"],
+          "explain_nl": "moći → mogao/mogla/mogli. Ontkennend hulpwerkwoord nismo.",
+          "targets": ["g.11.perfekt_nepravilni", "g.11.perfekt_negacija", "v.06.moci"],
+          "difficulty": 5,
+          "audio": "Nismo mogli dugo ostati.",
+          "source": "udzbenik p.150"
+        },
+        {
+          "id": "e.11.016",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Sam bio u Varaždinu.",
+          "answer": "Bio sam u Varaždinu.",
+          "accepts": ["Bio sam u Varaždinu.", "Ja sam bio u Varaždinu."],
+          "explain_nl": "Het korte hulpwerkwoord kan niet vooraan de zin staan — dezelfde regel als in les 1.",
+          "targets": ["g.11.perfekt", "g.biti.present.short"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.017",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel de infinitief aan het mannelijke deelwoord.",
+          "pairs": [
+            { "hr": "ići", "nl": "išao" },
+            { "hr": "reći", "nl": "rekao" },
+            { "hr": "moći", "nl": "mogao" },
+            { "hr": "piti", "nl": "pio" }
+          ],
+          "targets": ["g.11.perfekt_nepravilni"],
+          "difficulty": 4,
+          "source": "udzbenik p.150"
+        }
+      ]
+    },
+    {
+      "id": "s.11.3",
+      "title_nl": "Vertellen wat er gebeurd is",
+      "kind": "practice",
+      "source": "udzbenik p.152",
+      "exercises": [
+        {
+          "id": "e.11.020",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Alleen vrouwen.",
+          "given": "One ___ ___ u kinu. (biti)",
+          "answer": "su bile",
+          "accepts": ["su bile"],
+          "explain_nl": "Uitsluitend vrouwelijk meervoud → bile, niet bili.",
+          "targets": ["g.11.particip", "g.pron.personal"],
+          "difficulty": 4,
+          "audio": "One su bile u kinu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt. Let op: djeca telt als onzijdig meervoud.",
+          "given": "Djeca ___ ___ cijeli dan. (spavati)",
+          "answer": "su spavala",
+          "accepts": ["su spavala"],
+          "explain_nl": "Onzijdig meervoud → -la. Djeca su spavala.",
+          "targets": ["g.11.particip", "g.03.nepravilna_mnozina", "v.06.spavati"],
+          "difficulty": 5,
+          "audio": "Djeca su spavala cijeli dan.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het perfekt.",
+          "given": "Prošlo ljeto ___ ___ u Hrvatskoj. (ljetovati, mi)",
+          "answer": "smo ljetovali",
+          "accepts": ["smo ljetovali"],
+          "explain_nl": "-ovati werkwoorden houden hun -ova- in het deelwoord: ljetovali.",
+          "targets": ["g.11.particip", "v.10.ljetovati", "g.10.lokativ_ska"],
+          "difficulty": 5,
+          "audio": "Prošlo ljeto smo ljetovali u Hrvatskoj.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.023",
+          "type": "translate_hr_nl",
+          "mode": "receptive",
+          "prompt_nl": "Vertaal naar het Nederlands.",
+          "given": "Nisu pronašli dokumente.",
+          "answer": "Ze hebben de documenten niet gevonden.",
+          "accepts": ["Ze hebben de documenten niet gevonden.", "Zij hebben de documenten niet gevonden."],
+          "targets": ["g.11.perfekt_negacija", "v.11.pronaci", "v.11.dokument"],
+          "difficulty": 3,
+          "source": "udzbenik p.298"
+        },
+        {
+          "id": "e.11.024",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch. Je bent een vrouw.",
+          "given": "Gisteren was ik thuis. Ik heb niet gewerkt.",
+          "answer": "Jučer sam bila kod kuće. Nisam radila.",
+          "accepts": ["Jučer sam bila kod kuće. Nisam radila."],
+          "explain_nl": "Vrouwelijke deelwoorden bila en radila; ontkenning met nisam.",
+          "targets": ["g.11.perfekt", "g.11.perfekt_negacija", "v.11.jucer", "v.11.kod_kuce"],
+          "difficulty": 5,
+          "audio": "Jučer sam bila kod kuće. Nisam radila.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Gdje si bio jučer? Zvao sam te cijeli dan.",
+          "answer": "Gdje si bio jučer? Zvao sam te cijeli dan.",
+          "accepts": ["Gdje si bio jučer? Zvao sam te cijeli dan."],
+          "targets": ["g.11.perfekt", "v.11.cijeli_dan"],
+          "difficulty": 5,
+          "source": "udzbenik p.148"
+        }
+      ]
+    },
+    {
+      "id": "s.11.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.11.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch. Je spreekt over een man.",
+          "given": "Hij is naar de markt gegaan en heeft brood gekocht.",
+          "answer": "Išao je na tržnicu i kupio je kruh.",
+          "accepts": ["Išao je na tržnicu i kupio je kruh.", "Išao je na tržnicu i kupio kruh."],
+          "explain_nl": "Onregelmatig deelwoord išao; na tržnicu blijft accusatief want er is beweging; kruh is mannelijk en levenloos.",
+          "targets": ["g.11.perfekt_nepravilni", "g.07.u_na_akuzativ", "v.07.kruh", "v.06.kupiti"],
+          "difficulty": 5,
+          "audio": "Išao je na tržnicu i kupio je kruh.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.11.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što ste radili prošli vikend?",
+          "given": "Što ste radili prošli vikend?",
+          "model_answer": "Prošli vikend sam bio kod kuće. Čitao sam knjigu i gledao film. U subotu sam išao na tržnicu.",
+          "rubric_nl": [
+            "Alle werkwoorden staan in het perfekt met biti als hulpwerkwoord",
+            "De deelwoorden kloppen met je eigen geslacht",
+            "Het hulpwerkwoord staat nooit vooraan de zin"
+          ],
+          "targets": ["g.11.perfekt", "g.11.particip", "g.11.perfekt_negacija"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "id": "lesson-08",
+  "number": 8,
+  "title_hr": "Dobar tek!",
+  "title_nl": "Eet smakelijk!",
+  "cefr": "A1.2",
+  "source": { "udzbenik_pages": "107-118", "vjezbenica_pages": "41-45" },
+  "can_do_nl": [
+    "Ik kan eten en drinken bestellen in een café of restaurant.",
+    "Ik kan zeggen wat ik eet en drink met jesti en piti.",
+    "Ik kan soorten eten en smaken benoemen.",
+    "Ik kan over mijn eetgewoonten praten.",
+    "Ik kan een menukaart lezen."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.08.jesti",
+      "title_nl": "jesti — eten",
+      "cefr": "A1.2",
+      "explanation_nl": "jesti heeft een andere stam in het presens: jed-. Dus jedem, jedeš, jede, jedemo, jedete, jedu. De uitgangen zijn -em, -eš, -e, -emo, -ete, -u — een derde patroon naast de -ati groep (znam) en de -iti groep die in les 9 komt.",
+      "contrast_nl": "Waar het Nederlands 'eten' door alle personen bijna gelijk houdt, wisselt het Kroatisch hier van stam: jesti maar jedem. Dat is dezelfde soort wisseling als bij ići → idem.",
+      "paradigm": {
+        "caption_nl": "jesti — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["jedem", "jedemo"] },
+          { "label": "2.", "cells": ["jedeš", "jedete"] },
+          { "label": "3.", "cells": ["jede", "jedu"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*jestim of *jesem — de stam is jed-.",
+        "3e persoon meervoud is jedu, niet *jedeju.",
+        "Wat je eet staat in de accusatief: Jedem juhu."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo"],
+      "source": "udzbenik p.108"
+    },
+    {
+      "id": "g.08.piti",
+      "title_nl": "piti — drinken",
+      "cefr": "A1.2",
+      "explanation_nl": "piti krijgt in het presens een j in de stam: pij-. Dus pijem, piješ, pije, pijemo, pijete, piju. Net als bij jesti staat wat je drinkt in de accusatief: Pijem kavu.",
+      "contrast_nl": "De j komt uit het niets als je alleen naar de infinitief kijkt. Het helpt om piti en pijem als paar te leren, net zoals je bij zvati se de vorm zovem apart moest onthouden.",
+      "paradigm": {
+        "caption_nl": "piti — presens",
+        "columns": ["jednina", "množina"],
+        "rows": [
+          { "label": "1.", "cells": ["pijem", "pijemo"] },
+          { "label": "2.", "cells": ["piješ", "pijete"] },
+          { "label": "3.", "cells": ["pije", "piju"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*pitim of *piem — er hoort een j in: pijem.",
+        "3e persoon meervoud is piju.",
+        "Pijem kavu, niet *pijem kava — de accusatief blijft verplicht."
+      ],
+      "prerequisites": ["g.08.jesti"],
+      "source": "udzbenik p.108"
+    },
+    {
+      "id": "g.08.akuzativ.objekt",
+      "title_nl": "De accusatief als lijdend voorwerp — nu bij eten en drinken",
+      "cefr": "A1.2",
+      "explanation_nl": "Elk werkwoord dat een lijdend voorwerp neemt, vraagt de accusatief. Bij eten en drinken zie je dat constant: Jedem salatu (salata → salatu). Pijem bijelu kavu. Naručujem juhu i ribu. Dit is geen nieuwe regel, maar de plek waar je hem het vaakst nodig hebt.",
+      "contrast_nl": "In het Nederlands verandert er niets aan het woord: 'ik eet salade', 'ik zie salade'. In het Kroatisch verraadt de vorm de rol, ook als de woordvolgorde wisselt: 'Salatu jedem' is nog steeds 'ik eet salade'.",
+      "paradigm": {
+        "caption_nl": "Nominatief → accusatief bij gerechten",
+        "columns": ["nominativ", "akuzativ", "geslacht"],
+        "rows": [
+          { "label": "1.", "cells": ["juha", "juhu", "ženski"] },
+          { "label": "2.", "cells": ["salata", "salatu", "ženski"] },
+          { "label": "3.", "cells": ["riba", "ribu", "ženski"] },
+          { "label": "4.", "cells": ["kruh", "kruh", "muški, neživo"] },
+          { "label": "5.", "cells": ["sok", "sok", "muški, neživo"] },
+          { "label": "6.", "cells": ["meso", "meso", "srednji"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Bij vrouwelijke woorden de -u vergeten: 'Jedem salata' is fout.",
+        "Bij mannelijke en onzijdige woorden juist iets veranderen — daar gebeurt niets.",
+        "Meervoud: Jedem sendviče (accusatief meervoud op -e), niet sendviči."
+      ],
+      "prerequisites": ["g.05.akuzativ.nezivo", "g.05.akuzativ.mnozina"],
+      "source": "udzbenik p.109"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.08.jesti", "hr": "jesti", "nl": "eten", "pos": "verb", "aspect": "imperfective", "present_1sg": "jedem", "verb_class": "onregelmatig", "tags": ["werkwoord", "eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.piti", "hr": "piti", "nl": "drinken", "pos": "verb", "aspect": "imperfective", "present_1sg": "pijem", "verb_class": "onregelmatig", "tags": ["werkwoord", "eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.narucivati", "hr": "naručivati", "nl": "bestellen", "pos": "verb", "aspect": "imperfective", "present_1sg": "naručujem", "verb_class": "-ivati", "tags": ["werkwoord", "eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.probati", "hr": "probati", "nl": "proeven, proberen", "pos": "verb", "aspect": "imperfective", "present_1sg": "probam", "verb_class": "-ati", "tags": ["werkwoord", "eten"], "source": "aangevuld" },
+
+    { "id": "v.08.dorucak", "hr": "doručak", "nl": "ontbijt", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "doručka", "nom_pl": "doručci", "tags": ["eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.juha", "hr": "juha", "nl": "soep", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "juhe", "nom_pl": "juhe", "tags": ["eten"], "source": "vježbenica p.42" },
+    { "id": "v.08.jelovnik", "hr": "jelovnik", "nl": "menukaart", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "jelovnika", "nom_pl": "jelovnici", "tags": ["eten"], "source": "udzbenik p.110" },
+    { "id": "v.08.prilog", "hr": "prilog", "nl": "bijgerecht", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "priloga", "nom_pl": "prilozi", "tags": ["eten"], "source": "vježbenica p.42" },
+    { "id": "v.08.desert", "hr": "desert", "nl": "nagerecht", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "deserta", "nom_pl": "deserti", "tags": ["eten"], "source": "vježbenica p.42" },
+    { "id": "v.08.tjestenina", "hr": "tjestenina", "nl": "pasta", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "tjestenine", "tags": ["eten"], "source": "vježbenica p.41" },
+    { "id": "v.08.krumpir", "hr": "krumpir", "nl": "aardappel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "krumpira", "nom_pl": "krumpiri", "tags": ["eten"], "source": "aangevuld" },
+    { "id": "v.08.jabuka", "hr": "jabuka", "nl": "appel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "jabuke", "nom_pl": "jabuke", "tags": ["eten"], "source": "vježbenica p.42" },
+    { "id": "v.08.naranca", "hr": "naranča", "nl": "sinaasappel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "naranče", "nom_pl": "naranče", "tags": ["eten"], "source": "aangevuld" },
+    { "id": "v.08.sljiva", "hr": "šljiva", "nl": "pruim", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "šljive", "nom_pl": "šljive", "tags": ["eten"], "source": "vježbenica p.41" },
+    { "id": "v.08.brokula", "hr": "brokula", "nl": "broccoli", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "brokule", "nom_pl": "brokule", "tags": ["eten"], "source": "vježbenica p.41" },
+    { "id": "v.08.skampi", "hr": "škampi", "nl": "scampi", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "škampa", "nom_pl": "škampi", "tags": ["eten"], "source": "vježbenica p.41" },
+    { "id": "v.08.sir_hrana", "hr": "sladoled", "nl": "ijs", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sladoleda", "nom_pl": "sladoledi", "tags": ["eten"], "source": "vježbenica p.41" },
+
+    { "id": "v.08.voda", "hr": "voda", "nl": "water", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "vode", "nom_pl": "vode", "tags": ["drinken"], "source": "vježbenica p.41" },
+    { "id": "v.08.limunada", "hr": "limunada", "nl": "limonade", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "limunade", "nom_pl": "limunade", "tags": ["drinken"], "source": "vježbenica p.41" },
+    { "id": "v.08.bijela_kava", "hr": "bijela kava", "nl": "koffie met melk", "pos": "phrase", "tags": ["drinken"], "source": "vježbenica p.41" },
+    { "id": "v.08.rakija", "hr": "rakija", "nl": "rakija (sterke drank)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "rakije", "nom_pl": "rakije", "tags": ["drinken"], "source": "vježbenica p.41" },
+    { "id": "v.08.dzus", "hr": "džus", "nl": "jus d'orange", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "džusa", "nom_pl": "džusevi", "tags": ["drinken"], "source": "vježbenica p.41" },
+    { "id": "v.08.mineralna", "hr": "mineralna voda", "nl": "mineraalwater", "pos": "phrase", "tags": ["drinken"], "source": "aangevuld" },
+
+    { "id": "v.08.slan", "hr": "slan", "nl": "zout", "pos": "adj", "tags": ["smaak"], "source": "aangevuld" },
+    { "id": "v.08.sladak", "hr": "sladak", "nl": "zoet", "pos": "adj", "tags": ["smaak", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.08.kiseo", "hr": "kiseo", "nl": "zuur", "pos": "adj", "tags": ["smaak", "l-o"], "source": "aangevuld" },
+    { "id": "v.08.gorak", "hr": "gorak", "nl": "bitter", "pos": "adj", "tags": ["smaak", "vluchtige-a"], "source": "aangevuld" },
+    { "id": "v.08.ukusan", "hr": "ukusan", "nl": "lekker", "pos": "adj", "tags": ["smaak", "vluchtige-a"], "source": "aangevuld" },
+
+    { "id": "v.08.konobar", "hr": "konobar", "nl": "ober", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "konobara", "nom_pl": "konobari", "tags": ["beroep", "eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.racun", "hr": "račun", "nl": "rekening", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "računa", "nom_pl": "računi", "tags": ["eten"], "source": "aangevuld" },
+    { "id": "v.08.izvolite_narucit", "hr": "Izvolite?", "nl": "Zegt u het maar? (ober)", "pos": "phrase", "tags": ["eten"], "source": "udzbenik p.108" },
+    { "id": "v.08.molim_racun", "hr": "Molim račun.", "nl": "De rekening, graag.", "pos": "phrase", "tags": ["eten"], "source": "aangevuld" },
+    { "id": "v.08.jos_nesto", "hr": "Još nešto?", "nl": "Nog iets?", "pos": "phrase", "tags": ["eten"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.08.1",
+      "title_nl": "In het restaurant",
+      "kind": "input",
+      "text_hr": "Konobar: Dobar dan! Izvolite?\nGost: Molim jelovnik.\nKonobar: Izvolite. Što želite piti?\nGost: Ja pijem mineralnu vodu, a moja sestra pije bijelu kavu.\nKonobar: A za jelo?\nGost: Ja jedem juhu i ribu. Sestra jede salatu.\nKonobar: Još nešto?\nGost: Ne, hvala. Molim račun.",
+      "translation_nl": "Ober: Goedendag! Zegt u het maar.\nGast: De menukaart, graag.\nOber: Alstublieft. Wat wilt u drinken?\nGast: Ik drink mineraalwater, en mijn zus drinkt koffie met melk.\nOber: En om te eten?\nGast: Ik eet soep en vis. Mijn zus eet salade.\nOber: Nog iets?\nGast: Nee, dank u. De rekening, graag.",
+      "source": "udzbenik p.108",
+      "exercises": [
+        {
+          "id": "e.08.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee werkwoorden met een eigen stam",
+          "body_nl": "**jesti** (eten) wordt in het presens **jed-**: jedem, jedeš, jede, jedemo, jedete, jedu.\n\n**piti** (drinken) krijgt een j: **pij-**: pijem, piješ, pije, pijemo, pijete, piju.\n\nUit de infinitief kun je die stammen niet afleiden — leer *jesti/jedem* en *piti/pijem* als paar, net zoals je dat bij *zvati se/zovem* deed.\n\nEn wat je eet of drinkt staat in de **accusatief**: *Jedem juh**u**. Pijem kav**u**.*",
+          "targets": ["g.08.jesti", "g.08.piti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg piti en zet het object in de accusatief.",
+          "given": "Ja ___ ___. (piti, kava)",
+          "answer": "pijem kavu",
+          "accepts": ["pijem kavu"],
+          "explain_nl": "pijem met j; kava is vrouwelijk op -a → kavu.",
+          "targets": ["g.08.piti", "g.08.akuzativ.objekt", "v.01.kava"],
+          "difficulty": 3,
+          "audio": "Ja pijem kavu.",
+          "source": "vježbenica p.41"
+        },
+        {
+          "id": "e.08.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg piti.",
+          "given": "Djeca ___ sokove. (piti)",
+          "answer": "piju",
+          "accepts": ["piju"],
+          "explain_nl": "3e persoon meervoud: piju. Djeca telt als meervoud bij het werkwoord.",
+          "targets": ["g.08.piti", "v.03.dijete"],
+          "difficulty": 3,
+          "audio": "Djeca piju sokove.",
+          "source": "vježbenica p.41"
+        },
+        {
+          "id": "e.08.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg jesti en zet het object in de accusatief.",
+          "given": "Oni ___ ___. (jesti, juha)",
+          "answer": "jedu juhu",
+          "accepts": ["jedu juhu"],
+          "explain_nl": "jedu met de stam jed-; juha → juhu.",
+          "targets": ["g.08.jesti", "g.08.akuzativ.objekt", "v.08.juha"],
+          "difficulty": 3,
+          "audio": "Oni jedu juhu.",
+          "source": "vježbenica p.42"
+        }
+      ]
+    },
+    {
+      "id": "s.08.2",
+      "title_nl": "Wat eet en drinkt iedereen?",
+      "kind": "grammar",
+      "source": "vježbenica p.41-42",
+      "exercises": [
+        {
+          "id": "e.08.010",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg jesti.",
+          "given": "Djed ___ jabuke. (jesti)",
+          "answer": "jede",
+          "accepts": ["jede"],
+          "targets": ["g.08.jesti", "v.03.djed", "v.08.jabuka"],
+          "difficulty": 2,
+          "audio": "Djed jede jabuke.",
+          "source": "vježbenica p.42"
+        },
+        {
+          "id": "e.08.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vervoeg piti.",
+          "given": "Vi ___ vina. (piti)",
+          "answer": "pijete",
+          "accepts": ["pijete"],
+          "targets": ["g.08.piti"],
+          "difficulty": 2,
+          "audio": "Vi pijete vina.",
+          "source": "vježbenica p.41"
+        },
+        {
+          "id": "e.08.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet het gerecht in de accusatief.",
+          "given": "Ja jedem ___. (tjestenina)",
+          "answer": "tjesteninu",
+          "accepts": ["tjesteninu"],
+          "explain_nl": "Vrouwelijk op -a → -u.",
+          "targets": ["g.08.akuzativ.objekt", "v.08.tjestenina"],
+          "difficulty": 2,
+          "audio": "Ja jedem tjesteninu.",
+          "source": "vježbenica p.41"
+        },
+        {
+          "id": "e.08.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de accusatief meervoud.",
+          "given": "Ja jedem ___. (sendvič mn)",
+          "answer": "sendviče",
+          "accepts": ["sendviče"],
+          "explain_nl": "Mannelijk meervoud in de accusatief → -e. Niet sendviči.",
+          "targets": ["g.05.akuzativ.mnozina", "v.01.sendvic"],
+          "difficulty": 4,
+          "audio": "Ja jedem sendviče.",
+          "source": "vježbenica p.42"
+        },
+        {
+          "id": "e.08.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Mi pijemo pivo i jedemo salata.",
+          "answer": "Mi pijemo pivo i jedemo salatu.",
+          "accepts": ["Mi pijemo pivo i jedemo salatu."],
+          "explain_nl": "pivo is onzijdig en blijft, maar salata is vrouwelijk en wordt salatu.",
+          "targets": ["g.08.akuzativ.objekt", "v.06.salata", "v.06.pivo"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.015",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het Kroatisch aan het Nederlands.",
+          "pairs": [
+            { "hr": "jelovnik", "nl": "menukaart" },
+            { "hr": "račun", "nl": "rekening" },
+            { "hr": "prilog", "nl": "bijgerecht" },
+            { "hr": "desert", "nl": "nagerecht" }
+          ],
+          "targets": ["v.08.jelovnik", "v.08.racun", "v.08.prilog", "v.08.desert"],
+          "difficulty": 2,
+          "source": "vježbenica p.42"
+        }
+      ]
+    },
+    {
+      "id": "s.08.3",
+      "title_nl": "Bestellen en smaken",
+      "kind": "practice",
+      "source": "udzbenik p.110",
+      "exercises": [
+        {
+          "id": "e.08.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Smaken zijn bijvoeglijke naamwoorden",
+          "body_nl": "Smaakwoorden buigen mee met wat je beschrijft, en drie ervan hebben de trucs uit les 4:\n\n**sladak → slatka, slatko** (vluchtige a, plus k→tk)\n**gorak → gorka, gorko** (vluchtige a)\n**kiseo → kisela, kiselo** (l wordt o)\n\n*Juha je slana. Kava je gorka. Jabuka je kisela.*\n\nZonder die kennis uit les 4 kom je hier niet uit — daarom staan ze hier terug.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "g.04.l_o"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Juha je ___. (slan)",
+          "answer": "slana",
+          "accepts": ["slana"],
+          "explain_nl": "juha is vrouwelijk → slana.",
+          "targets": ["g.04.pridjevi", "v.08.slan", "v.08.juha"],
+          "difficulty": 2,
+          "audio": "Juha je slana.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Let op de vluchtige a.",
+          "given": "Kava je ___. (gorak)",
+          "answer": "gorka",
+          "accepts": ["gorka"],
+          "explain_nl": "gorak → gorka: de a verdwijnt.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "v.08.gorak"],
+          "difficulty": 4,
+          "audio": "Kava je gorka.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Let op de l/o-wissel.",
+          "given": "Jabuka je ___. (kiseo)",
+          "answer": "kisela",
+          "accepts": ["kisela"],
+          "explain_nl": "kiseo → kisela, met de l terug.",
+          "targets": ["g.04.l_o", "v.08.kiseo", "v.08.jabuka"],
+          "difficulty": 4,
+          "audio": "Jabuka je kisela.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.024",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik drink water en ik eet vis.",
+          "answer": "Pijem vodu i jedem ribu.",
+          "accepts": ["Pijem vodu i jedem ribu.", "Ja pijem vodu i jedem ribu."],
+          "explain_nl": "voda → vodu, riba → ribu. Allebei vrouwelijk op -a.",
+          "targets": ["g.08.piti", "g.08.jesti", "g.08.akuzativ.objekt", "v.08.voda", "v.07.riba"],
+          "difficulty": 4,
+          "audio": "Pijem vodu i jedem ribu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Molim jelovnik. Što želite piti?",
+          "answer": "Molim jelovnik. Što želite piti?",
+          "accepts": ["Molim jelovnik. Što želite piti?"],
+          "targets": ["v.08.jelovnik", "g.08.piti"],
+          "difficulty": 3,
+          "source": "udzbenik p.108"
+        },
+        {
+          "id": "e.08.026",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Moja", "sestra", "pije", "bijelu", "kavu"],
+          "answer": "Moja sestra pije bijelu kavu.",
+          "accepts": ["Moja sestra pije bijelu kavu."],
+          "explain_nl": "Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord en buigt mee: bijela kava → bijelu kavu.",
+          "targets": ["g.08.piti", "g.04.pridjevi", "v.08.bijela_kava"],
+          "difficulty": 4,
+          "audio": "Moja sestra pije bijelu kavu.",
+          "source": "vježbenica p.41"
+        }
+      ]
+    },
+    {
+      "id": "s.08.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.08.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Op zaterdag gaan we naar het restaurant. Ik wil vis eten.",
+          "answer": "U subotu idemo u restoran. Hoću jesti ribu.",
+          "accepts": ["U subotu idemo u restoran. Hoću jesti ribu.", "U subotu idemo u restoran. Hoću jesti ribu"],
+          "explain_nl": "u subotu (dag), u restoran (gesloten ruimte, mannelijk onveranderd), hoću + infinitief, ribu in de accusatief.",
+          "targets": ["g.07.dani", "g.07.u_na_akuzativ", "g.06.htjeti", "g.08.jesti", "v.07.riba"],
+          "difficulty": 5,
+          "audio": "U subotu idemo u restoran. Hoću jesti ribu.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.08.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što jedete i pijete za doručak?",
+          "given": "Što jedete i pijete za doručak?",
+          "model_answer": "Za doručak jedem kruh i sir. Pijem kavu i vodu.",
+          "rubric_nl": [
+            "Gebruikt jesti en piti correct vervoegd",
+            "Alle gerechten en dranken staan in de accusatief",
+            "Minimaal twee dingen genoemd"
+          ],
+          "targets": ["g.08.jesti", "g.08.piti", "g.08.akuzativ.objekt"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "title_hr": "Zajedno u Hrvatskoj",
+  "title_nl": "Samen in Kroatië",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "217-234", "vjezbenica_pages": "81-85" },
+  "can_do_nl": [
+    "Ik kan zeggen waar ik vandaan kom met iz en od.",
+    "Ik kan de ligging van plaatsen ten opzichte van elkaar beschrijven.",
+    "Ik kan een oorzaak uitdrukken met zbog.",
+    "Ik kan afwezigheid uitdrukken met bez.",
+    "Ik kan de genitief meervoud vormen.",
+    "Ik kan alle zes de naamvallen uit elkaar houden."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.16.genitiv_prijedlozi",
+      "title_nl": "De voorzetsels van de genitief",
+      "cefr": "A2.2",
+      "explanation_nl": "De genitief heeft veruit de meeste voorzetsels van alle naamvallen. De belangrijkste: iz (uit), od (van), do (tot), blizu (dichtbij), pokraj (naast), iznad (boven), ispod (onder), između (tussen), zbog (vanwege), bez (zonder), oko (rond), poslije (na).",
+      "contrast_nl": "Dit is de grootste woordenschatwinst van de hele cursus: één naamval leren opent twaalf voorzetsels tegelijk. Waar het Nederlands elk voorzetsel apart heeft, hoef jij hier alleen te onthouden dat ze állemaal de genitief nemen.",
+      "paradigm": {
+        "caption_nl": "Voorzetsels met de genitief",
+        "columns": ["voorzetsel", "betekenis", "voorbeeld"],
+        "rows": [
+          { "label": "iz", "cells": ["uit", "Rashmi je iz Indije."] },
+          { "label": "od", "cells": ["van, vanaf", "Osijek je istočno od Zagreba."] },
+          { "label": "do", "cells": ["tot, naar", "Idem do kolodvora."] },
+          { "label": "blizu", "cells": ["dichtbij", "Rab je blizu Krka."] },
+          { "label": "pokraj", "cells": ["naast", "Opatija je pokraj Rijeke."] },
+          { "label": "iznad", "cells": ["boven", "Biokovo je iznad Makarske."] },
+          { "label": "između", "cells": ["tussen", "Rovinj je između Umaga i Pule."] },
+          { "label": "zbog", "cells": ["vanwege", "Dijete plače zbog igračke."] },
+          { "label": "bez", "cells": ["zonder", "Ne mogu bez kave."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "između vraagt twee genitieven, verbonden met i: između Umaga i Pule.",
+        "zbog geeft een reden, ne een doel — 'om te' is iets anders (da of radi).",
+        "do betekent 'tot aan', niet 'naar binnen'. Voor een bestemming gebruik je u of na met de accusatief."
+      ],
+      "prerequisites": ["g.14.genitiv"],
+      "source": "udzbenik p.218"
+    },
+    {
+      "id": "g.16.iz_od",
+      "title_nl": "iz of od — waar kom je vandaan?",
+      "cefr": "A2.2",
+      "explanation_nl": "iz gebruik je bij plaatsen en landen: Ja sam iz Nizozemske. Dolazim iz Amsterdama. od gebruik je bij personen en bij een startpunt van een afstand: Dolazim od liječnika. Osijek je istočno od Zagreba.",
+      "contrast_nl": "Het Nederlands zegt in beide gevallen 'van' of 'uit' door elkaar. Het Kroatisch is scherper: iz betekent 'uit de binnenkant van', od betekent 'weg vanaf'. Uit een land kom je, van een persoon kom je weg.",
+      "paradigm": {
+        "caption_nl": "iz tegenover od",
+        "columns": ["voorzetsel", "gebruik", "voorbeeld"],
+        "rows": [
+          { "label": "iz", "cells": ["land, stad, gebouw", "Ja sam iz Hrvatske."] },
+          { "label": "iz", "cells": ["binnenuit", "Izlazi iz kuće."] },
+          { "label": "od", "cells": ["persoon", "Dolazim od liječnika."] },
+          { "label": "od", "cells": ["startpunt afstand", "Deset kilometara od grada."] },
+          { "label": "od", "cells": ["materiaal", "Kolač od mrkve."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "od gebruiken bij een land: 'Ja sam od Nizozemske' is fout, het is iz Nizozemske.",
+        "iz gebruiken bij een persoon: 'iz liječnika' zou betekenen dat je uit de dokter komt.",
+        "Landen op -ska krijgen in de genitief -e: iz Hrvatske, iz Njemačke."
+      ],
+      "prerequisites": ["g.16.genitiv_prijedlozi"],
+      "source": "vježbenica p.81"
+    },
+    {
+      "id": "g.16.genitiv_mnozina",
+      "title_nl": "GENITIEF MEERVOUD",
+      "cefr": "A2.2",
+      "explanation_nl": "De genitief meervoud eindigt bijna altijd op -a. Mannelijk: gradova, prijatelja, otoka. Vrouwelijk op -a: kuća, žena, jabuka — zonder uitgang maar met een lange klinker. Onzijdig: sela, mora. Vrouwelijke woorden op een medeklinker krijgen -i: noći, riječi.",
+      "contrast_nl": "Dat de vrouwelijke genitief meervoud er hetzelfde uitziet als de nominatief enkelvoud (kuća) is verwarrend, maar de context lost het altijd op: na een hoeveelheidswoord of een voorzetsel is het de genitief.",
+      "paradigm": {
+        "caption_nl": "Genitiv množine",
+        "columns": ["nominativ mn.", "genitiv mn.", "geslacht"],
+        "rows": [
+          { "label": "1.", "cells": ["gradovi", "gradova", "muški → -a"] },
+          { "label": "2.", "cells": ["prijatelji", "prijatelja", "muški → -a"] },
+          { "label": "3.", "cells": ["otoci", "otoka", "muški → -a"] },
+          { "label": "4.", "cells": ["kuće", "kuća", "ženski → kaal"] },
+          { "label": "5.", "cells": ["jabuke", "jabuka", "ženski → kaal"] },
+          { "label": "6.", "cells": ["sela", "sela", "srednji → -a"] },
+          { "label": "7.", "cells": ["riječi", "riječi", "ženski op medeklinker → -i"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Bij mannelijke woorden met lang meervoud komt de -ova mee: sok → sokova, grad → gradova.",
+        "De vrouwelijke vorm is kaal, maar niet gelijk aan de nominatief enkelvoud in klemtoon — in schrift zie je dat niet.",
+        "Sommige vrouwelijke woorden krijgen een tussenklank: sestra → sestara, majka → majki."
+      ],
+      "prerequisites": ["g.14.genitiv_jd_mn"],
+      "source": "udzbenik p.220"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.16.iz", "hr": "iz", "nl": "uit", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.81" },
+    { "id": "v.16.od", "hr": "od", "nl": "van, vanaf", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.81" },
+    { "id": "v.16.do", "hr": "do", "nl": "tot", "pos": "prep", "tags": ["voorzetsel"], "source": "aangevuld" },
+    { "id": "v.16.blizu", "hr": "blizu", "nl": "dichtbij", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.pokraj", "hr": "pokraj", "nl": "naast", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.iznad", "hr": "iznad", "nl": "boven", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.ispod", "hr": "ispod", "nl": "onder", "pos": "prep", "tags": ["voorzetsel"], "source": "aangevuld" },
+    { "id": "v.16.izmedu", "hr": "između", "nl": "tussen", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.zbog", "hr": "zbog", "nl": "vanwege", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.bez", "hr": "bez", "nl": "zonder", "pos": "prep", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+    { "id": "v.16.oko", "hr": "oko", "nl": "rond, ongeveer", "pos": "prep", "tags": ["voorzetsel"], "source": "aangevuld" },
+    { "id": "v.16.poslije", "hr": "poslije", "nl": "na", "pos": "prep", "tags": ["voorzetsel"], "source": "aangevuld" },
+    { "id": "v.16.nedaleko_od", "hr": "nedaleko od", "nl": "niet ver van", "pos": "phrase", "tags": ["voorzetsel"], "source": "vježbenica p.82" },
+
+    { "id": "v.16.dolaziti", "hr": "dolaziti", "nl": "komen, aankomen", "pos": "verb", "aspect": "imperfective", "present_1sg": "dolazim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.16.izlaziti", "hr": "izlaziti", "nl": "naar buiten gaan", "pos": "verb", "aspect": "imperfective", "present_1sg": "izlazim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "aangevuld" },
+    { "id": "v.16.plakati", "hr": "plakati", "nl": "huilen", "pos": "verb", "aspect": "imperfective", "present_1sg": "plačem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.82" },
+    { "id": "v.16.pobjeci", "hr": "pobjeći", "nl": "vluchten", "pos": "verb", "aspect": "perfective", "present_1sg": "pobjegnem", "verb_class": "onregelmatig", "tags": ["werkwoord"], "source": "vježbenica p.82" },
+
+    { "id": "v.16.obala", "hr": "obala", "nl": "kust", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "obale", "nom_pl": "obale", "tags": ["natuur"], "source": "aangevuld" },
+    { "id": "v.16.granica", "hr": "granica", "nl": "grens", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "granice", "nom_pl": "granice", "tags": ["land"], "source": "aangevuld" },
+    { "id": "v.16.sjever", "hr": "sjever", "nl": "noorden", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sjevera", "tags": ["richting"], "source": "aangevuld" },
+    { "id": "v.16.jug", "hr": "jug", "nl": "zuiden", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "juga", "tags": ["richting"], "source": "aangevuld" },
+    { "id": "v.16.istok", "hr": "istok", "nl": "oosten", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "istoka", "tags": ["richting"], "source": "vježbenica p.82" },
+    { "id": "v.16.zapad", "hr": "zapad", "nl": "westen", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "zapada", "tags": ["richting"], "source": "aangevuld" },
+    { "id": "v.16.igracka", "hr": "igračka", "nl": "speelgoed", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "igračke", "nom_pl": "igračke", "tags": ["ding"], "source": "vježbenica p.82" },
+    { "id": "v.16.dug", "hr": "dug", "nl": "schuld", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "duga", "nom_pl": "dugovi", "tags": ["abstract"], "source": "vježbenica p.82" },
+    { "id": "v.16.zemlja_land", "hr": "zemlja", "nl": "land, aarde", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "zemlje", "nom_pl": "zemlje", "tags": ["land"], "source": "vježbenica p.82" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.16.1",
+      "title_nl": "Waar kom je vandaan?",
+      "kind": "input",
+      "text_hr": "Rashmi je iz Kalkute, iz Indije. Christian je iz Berlina, iz Njemačke.\nElena je iz Moskve, iz Rusije. Marta je iz Varšave, iz Poljske.\nMark je iz Bostona, iz Amerike. Heinz je iz Beča, iz Austrije.\n\nZovem se Laura. Živim u Zagrebu, ali moji roditelji su iz Vukovara.\nMoj suprug je iz Japana. Njegov otac je iz Japana, a majka je Talijanka iz Amerike.\nNaši prijatelji su iz Zagreba, Varaždina, Osijeka i Praga.\nMoji kolege su iz Nizozemske, Danske i Turske.",
+      "translation_nl": "Rashmi komt uit Calcutta, uit India. Christian komt uit Berlijn, uit Duitsland.\nElena komt uit Moskou, uit Rusland. Marta komt uit Warschau, uit Polen.\nMark komt uit Boston, uit Amerika. Heinz komt uit Wenen, uit Oostenrijk.\n\nIk heet Laura. Ik woon in Zagreb, maar mijn ouders komen uit Vukovar.\nMijn man komt uit Japan. Zijn vader komt uit Japan, en zijn moeder is een Italiaanse uit Amerika.\nOnze vrienden komen uit Zagreb, Varaždin, Osijek en Praag.\nMijn collega's komen uit Nederland, Denemarken en Turkije.",
+      "source": "vježbenica p.81",
+      "exercises": [
+        {
+          "id": "e.16.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twaalf voorzetsels voor de prijs van één naamval",
+          "body_nl": "De genitief heeft veruit de meeste voorzetsels van alle naamvallen. Dat is goed nieuws: je kent de vorm al uit les 14, en nu open je er in één klap een hele reeks mee.\n\n**iz** (uit) · **od** (van) · **do** (tot) · **blizu** (dichtbij) · **pokraj** (naast) · **iznad** (boven) · **ispod** (onder) · **između** (tussen) · **zbog** (vanwege) · **bez** (zonder) · **oko** (rond) · **poslije** (na)\n\nAllemaal met de genitief. Geen uitzonderingen.\n\n*Ja sam iz Nizozemsk**e**.* · *Ne mogu bez kav**e**.* · *Rab je blizu Krk**a**.*",
+          "targets": ["g.16.genitiv_prijedlozi"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.16.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief na iz.",
+          "given": "Christian je iz ___, iz ___. (Berlin, Njemačka)",
+          "answer": "Berlina, iz Njemačke",
+          "accepts": ["Berlina, iz Njemačke"],
+          "explain_nl": "Mannelijk → -a. Landen op -ska krijgen -e in de genitief.",
+          "targets": ["g.16.iz_od", "v.02.njemacka"],
+          "difficulty": 4,
+          "audio": "Christian je iz Berlina, iz Njemačke.",
+          "source": "vježbenica p.81"
+        },
+        {
+          "id": "e.16.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Ja sam iz ___. (Nizozemska)",
+          "answer": "Nizozemske",
+          "accepts": ["Nizozemske"],
+          "explain_nl": "Landen op -ska → genitief op -e.",
+          "targets": ["g.16.iz_od", "v.02.nizozemska"],
+          "difficulty": 3,
+          "audio": "Ja sam iz Nizozemske.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.16.004",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk voorzetsel hoort hier?",
+          "given": "Dolazim ___ liječnika.",
+          "answer": "od",
+          "distractors": ["iz", "do", "bez"],
+          "explain_nl": "Bij een persoon gebruik je od, niet iz.",
+          "targets": ["g.16.iz_od"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.16.2",
+      "title_nl": "Waar ligt het?",
+      "kind": "grammar",
+      "source": "vježbenica p.82",
+      "exercises": [
+        {
+          "id": "e.16.010",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Opatija je pokraj ___. (Rijeka)",
+          "answer": "Rijeke",
+          "accepts": ["Rijeke"],
+          "explain_nl": "Vrouwelijk op -a → -e.",
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.pokraj"],
+          "difficulty": 3,
+          "audio": "Opatija je pokraj Rijeke.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Nacionalni park Krka je pokraj ___. (Šibenik)",
+          "answer": "Šibenika",
+          "accepts": ["Šibenika"],
+          "targets": ["g.16.genitiv_prijedlozi", "v.12.nacionalni_park"],
+          "difficulty": 3,
+          "audio": "Nacionalni park Krka je pokraj Šibenika.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet beide plaatsen in de genitief.",
+          "given": "Gradić Rovinj je između ___ i ___. (Umag, Pula)",
+          "answer": "Umaga i Pule",
+          "accepts": ["Umaga i Pule"],
+          "explain_nl": "između vraagt twee genitieven: mannelijk Umaga, vrouwelijk Pule.",
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.izmedu"],
+          "difficulty": 5,
+          "audio": "Gradić Rovinj je između Umaga i Pule.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief.",
+          "given": "Planina Biokovo je iznad ___. (Makarska)",
+          "answer": "Makarske",
+          "accepts": ["Makarske"],
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.iznad"],
+          "difficulty": 3,
+          "audio": "Planina Biokovo je iznad Makarske.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief na zbog.",
+          "given": "Dijete plače zbog ___. (igračka)",
+          "answer": "igračke",
+          "accepts": ["igračke"],
+          "explain_nl": "zbog geeft de oorzaak aan en vraagt de genitief.",
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.igracka", "v.16.plakati"],
+          "difficulty": 4,
+          "audio": "Dijete plače zbog igračke.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud na bez.",
+          "given": "Nitko ne može bez ___. (prijatelj mn)",
+          "answer": "prijatelja",
+          "accepts": ["prijatelja"],
+          "explain_nl": "Genitief meervoud mannelijk → -a: prijatelja.",
+          "targets": ["g.16.genitiv_mnozina", "v.16.bez", "v.01.prijatelj"],
+          "difficulty": 4,
+          "audio": "Nitko ne može bez prijatelja.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.016",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het voorzetsel aan de betekenis.",
+          "pairs": [
+            { "hr": "iznad", "nl": "boven" },
+            { "hr": "između", "nl": "tussen" },
+            { "hr": "zbog", "nl": "vanwege" },
+            { "hr": "bez", "nl": "zonder" }
+          ],
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.iznad", "v.16.izmedu", "v.16.zbog", "v.16.bez"],
+          "difficulty": 2,
+          "source": "vježbenica p.82"
+        }
+      ]
+    },
+    {
+      "id": "s.16.3",
+      "title_nl": "Genitief meervoud",
+      "kind": "practice",
+      "source": "udzbenik p.220",
+      "exercises": [
+        {
+          "id": "e.16.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Bijna alles op -a",
+          "body_nl": "De genitief meervoud is verrassend uniform: bijna alles eindigt op **-a**.\n\n**mannelijk**: gradovi → grad**ova**, prijatelji → prijatelj**a**, otoci → otok**a**\n**onzijdig**: sela → sel**a**, mora → mor**a**\n**vrouwelijk op -a**: kuće → **kuća**, jabuke → **jabuka** — kaal, zonder uitgang\n\nAlleen vrouwelijke woorden op een medeklinker wijken af: riječi → riječ**i**.\n\nDat *kuća* er hetzelfde uitziet als het enkelvoud is verwarrend, maar de context beslist: staat er een hoeveelheidswoord of voorzetsel voor, dan is het de genitief.",
+          "targets": ["g.16.genitiv_mnozina"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.16.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "Hrvatska ima puno ___. (otok mn)",
+          "answer": "otoka",
+          "accepts": ["otoka"],
+          "explain_nl": "Genitief meervoud mannelijk → -a.",
+          "targets": ["g.16.genitiv_mnozina", "v.05.otok"],
+          "difficulty": 3,
+          "audio": "Hrvatska ima puno otoka.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.16.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "Pobjegao je iz zemlje zbog ___. (dug mn)",
+          "answer": "dugova",
+          "accepts": ["dugova"],
+          "explain_nl": "dug heeft lang meervoud dugovi → genitief dugova.",
+          "targets": ["g.16.genitiv_mnozina", "v.16.dug", "v.16.pobjeci"],
+          "difficulty": 5,
+          "audio": "Pobjegao je iz zemlje zbog dugova.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in de genitief meervoud.",
+          "given": "U gradu ima mnogo ___. (kuća mn)",
+          "answer": "kuća",
+          "accepts": ["kuća"],
+          "explain_nl": "Vrouwelijke genitief meervoud is kaal: kuća.",
+          "targets": ["g.16.genitiv_mnozina", "v.01.kuca"],
+          "difficulty": 4,
+          "audio": "U gradu ima mnogo kuća.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.16.024",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik kan niet zonder koffie.",
+          "answer": "Ne mogu bez kave.",
+          "accepts": ["Ne mogu bez kave.", "Ja ne mogu bez kave."],
+          "explain_nl": "bez + genitief: kava → kave.",
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.bez", "v.01.kava"],
+          "difficulty": 3,
+          "audio": "Ne mogu bez kave.",
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.025",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Gradić Cavtat je nedaleko od Dubrovnika.",
+          "answer": "Gradić Cavtat je nedaleko od Dubrovnika.",
+          "accepts": ["Gradić Cavtat je nedaleko od Dubrovnika."],
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.nedaleko_od"],
+          "difficulty": 4,
+          "source": "vježbenica p.82"
+        }
+      ]
+    },
+    {
+      "id": "s.16.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.16.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik kom uit Nederland, maar mijn ouders komen uit Kroatië.",
+          "answer": "Ja sam iz Nizozemske, ali moji roditelji su iz Hrvatske.",
+          "accepts": ["Ja sam iz Nizozemske, ali moji roditelji su iz Hrvatske.", "Iz Nizozemske sam, ali moji roditelji su iz Hrvatske."],
+          "explain_nl": "Twee landen op -ska, allebei in de genitief op -e.",
+          "targets": ["g.16.iz_od", "v.02.nizozemska", "v.02.hrvatska"],
+          "difficulty": 4,
+          "audio": "Ja sam iz Nizozemske, ali moji roditelji su iz Hrvatske.",
+          "source": "vježbenica p.81"
+        },
+        {
+          "id": "e.16.031",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Rab je blizu Krk.",
+          "answer": "Rab je blizu Krka.",
+          "accepts": ["Rab je blizu Krka."],
+          "explain_nl": "blizu vraagt de genitief: Krka.",
+          "targets": ["g.16.genitiv_prijedlozi", "v.16.blizu"],
+          "difficulty": 3,
+          "source": "vježbenica p.82"
+        },
+        {
+          "id": "e.16.032",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Odakle ste i gdje se nalazi vaš grad?",
+          "given": "Odakle ste i gdje se nalazi vaš grad?",
+          "model_answer": "Ja sam iz Nizozemske, iz Amsterdama. Amsterdam je blizu mora, na zapadu zemlje.",
+          "rubric_nl": [
+            "Gebruikt iz bij landen en steden",
+            "Alle woorden na een voorzetsel staan in de genitief",
+            "Minimaal twee voorzetsels van de genitief gebruikt"
+          ],
+          "targets": ["g.16.iz_od", "g.16.genitiv_prijedlozi"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

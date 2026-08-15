@@ -1,0 +1,425 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "title_hr": "Brojimo novac, sate, dane, godine ...",
+  "title_nl": "We tellen geld, uren, dagen, jaren ...",
+  "cefr": "A2.2",
+  "source": { "udzbenik_pages": "235-246", "vjezbenica_pages": "86-89" },
+  "can_do_nl": [
+    "Ik weet welke naamval na welk getal hoort.",
+    "Ik kan prijzen en hoeveelheden noemen.",
+    "Ik kan rangtelwoorden gebruiken.",
+    "Ik kan de kloktijd zeggen.",
+    "Ik kan een datum uitspreken.",
+    "Ik kan leeftijd en duur uitdrukken."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.17.brojevi_padez",
+      "title_nl": "Welke naamval na welk getal?",
+      "cefr": "A2.2",
+      "explanation_nl": "Dit is de regel die je het vaakst nodig hebt bij winkelen en tijd. Na 1 volgt de nominatief enkelvoud. Na 2, 3 en 4 volgt de genitief enkelvoud. Na 5 en hoger volgt de genitief meervoud. Beslissend is het laatste cijfer: 21 gedraagt zich als 1, 22 als 2, 25 als 5.",
+      "contrast_nl": "Het Nederlands kent alleen enkelvoud na 1 en meervoud daarna. Het Kroatisch heeft drie zones, en de tussenzone (2-4) is de val: dva stola, niet dva stolovi.",
+      "paradigm": {
+        "caption_nl": "Drie zones",
+        "columns": ["getal", "naamval", "voorbeeld"],
+        "rows": [
+          { "label": "1, 21, 101", "cells": ["nominativ jednine", "jedan stol, dvadeset jedan stol"] },
+          { "label": "2, 3, 4", "cells": ["genitiv jednine", "dva stola, tri kave, četiri sata"] },
+          { "label": "5 – 20", "cells": ["genitiv množine", "pet stolova, deset kava"] },
+          { "label": "22, 23, 24", "cells": ["genitiv jednine", "dvadeset dva stola"] },
+          { "label": "25 en hoger", "cells": ["genitiv množine", "dvadeset pet stolova"] },
+          { "label": "11 – 14", "cells": ["genitiv množine", "jedanaest stolova (uitzondering)"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "11 tot en met 14 volgen de 5+ regel, ook al eindigen ze op 1 tot 4.",
+        "Het getal 2 heeft een vrouwelijke vorm: dva stola maar dvije kave.",
+        "Na 2, 3 en 4 lijkt de vorm op een meervoud maar het is een genitief enkelvoud."
+      ],
+      "prerequisites": ["g.16.genitiv_mnozina"],
+      "source": "udzbenik p.236"
+    },
+    {
+      "id": "g.17.dva_dvije",
+      "title_nl": "dva of dvije — het getal buigt mee",
+      "cefr": "A2.2",
+      "explanation_nl": "De getallen 1 en 2 hebben aparte vormen per geslacht. jedan / jedna / jedno, en dva (mannelijk en onzijdig) tegenover dvije (vrouwelijk). Vanaf 3 verandert het getal niet meer: tri, četiri, pet zijn voor alles gelijk.",
+      "contrast_nl": "Het Nederlands zegt altijd 'twee'. Hier moet je bij twee dus nog even nadenken over het geslacht — maar alleen bij 1 en 2, daarna niet meer.",
+      "paradigm": {
+        "caption_nl": "1 en 2 per geslacht",
+        "columns": ["getal", "muški / srednji", "ženski"],
+        "rows": [
+          { "label": "1", "cells": ["jedan stol / jedno pismo", "jedna kava"] },
+          { "label": "2", "cells": ["dva stola / dva pisma", "dvije kave"] },
+          { "label": "3", "cells": ["tri stola", "tri kave"] },
+          { "label": "4", "cells": ["četiri stola", "četiri kave"] },
+          { "label": "5", "cells": ["pet stolova", "pet kava"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*dva kave — bij vrouwelijke woorden is het dvije kave.",
+        "Bij onzijdige woorden gebruik je dva, niet dvije: dva pisma.",
+        "Voor mannelijke personen bestaat nog een aparte vorm (dvojica), die hier buiten beschouwing blijft."
+      ],
+      "prerequisites": ["g.17.brojevi_padez"],
+      "source": "udzbenik p.236"
+    },
+    {
+      "id": "g.17.redni_brojevi",
+      "title_nl": "Rangtelwoorden",
+      "cefr": "A2.2",
+      "explanation_nl": "Rangtelwoorden zijn bijvoeglijke naamwoorden en buigen dus mee: prvi, druga, treće. Ze worden geschreven met een punt achter het cijfer: 1. dan = prvi dan. De reeks: prvi, drugi, treći, četvrti, peti, šesti, sedmi, osmi, deveti, deseti.",
+      "contrast_nl": "Ook het Nederlands maakt er bijvoeglijke naamwoorden van ('de eerste dag'). Het verschil is dat het Kroatisch ze volledig verbuigt, inclusief naamval: u prvom mjesecu.",
+      "paradigm": {
+        "caption_nl": "Redni brojevi",
+        "columns": ["cijfer", "muški", "ženski", "srednji"],
+        "rows": [
+          { "label": "1.", "cells": ["prvi", "prva", "prvo"] },
+          { "label": "2.", "cells": ["drugi", "druga", "drugo"] },
+          { "label": "3.", "cells": ["treći", "treća", "treće"] },
+          { "label": "4.", "cells": ["četvrti", "četvrta", "četvrto"] },
+          { "label": "5.", "cells": ["peti", "peta", "peto"] },
+          { "label": "10.", "cells": ["deseti", "deseta", "deseto"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De punt achter het cijfer hoort erbij: 1. dan, niet 1 dan.",
+        "treći heeft een ć, geen č.",
+        "Na een rangtelwoord volgt gewoon de nominatief, geen genitief: prvi dan."
+      ],
+      "prerequisites": ["g.04.pridjevi"],
+      "source": "udzbenik p.238"
+    },
+    {
+      "id": "g.17.sati_datum",
+      "title_nl": "Kloktijd en datum",
+      "cefr": "A2.2",
+      "explanation_nl": "Kloktijd vraag je met Koliko je sati? Het antwoord volgt de getalregel: jedan sat, dva sata, pet sati. 'Om' is u: u pet sati. Een datum bestaat uit een rangtelwoord plus de maand in de genitief: petog svibnja.",
+      "contrast_nl": "sat betekent zowel 'uur' als 'horloge'. En let op dat de getalregel ook hier geldt: 'vier uur' is četiri sata (genitief enkelvoud), maar 'vijf uur' is pet sati (genitief meervoud).",
+      "paradigm": {
+        "caption_nl": "Tijd en datum",
+        "columns": ["vraag of vorm", "voorbeeld"],
+        "rows": [
+          { "label": "Koliko je sati?", "cells": ["Dva sata. / Pet sati."] },
+          { "label": "U koliko sati?", "cells": ["U pet sati."] },
+          { "label": "Koji je danas datum?", "cells": ["Petnaesti svibnja."] },
+          { "label": "geschreven", "cells": ["15. 5. 2026."] },
+          { "label": "duur", "cells": ["Učim hrvatski dva mjeseca."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "*pet sata — vanaf 5 is het genitief meervoud: pet sati.",
+        "De maand staat in de genitief: svibnja, niet svibanj.",
+        "Bij een datum krijgt ook het rangtelwoord de genitief: petnaestog svibnja."
+      ],
+      "prerequisites": ["g.17.brojevi_padez", "g.17.redni_brojevi"],
+      "source": "udzbenik p.240"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.17.broj", "hr": "broj", "nl": "getal, nummer", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "broja", "nom_pl": "brojevi", "tags": ["getal"], "source": "udzbenik p.235" },
+    { "id": "v.17.kuna", "hr": "kuna", "nl": "kuna (Kroatische munt tot 2023)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kune", "nom_pl": "kune", "tags": ["geld"], "source": "udzbenik p.235" },
+    { "id": "v.17.lipa", "hr": "lipa", "nl": "lipa (muntje)", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "lipe", "nom_pl": "lipe", "tags": ["geld"], "source": "vježbenica p.86" },
+    { "id": "v.17.euro", "hr": "euro", "nl": "euro", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "eura", "nom_pl": "euri", "tags": ["geld"], "source": "aangevuld" },
+    { "id": "v.17.novcanica", "hr": "novčanica", "nl": "bankbiljet", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "novčanice", "nom_pl": "novčanice", "tags": ["geld"], "source": "vježbenica p.88" },
+    { "id": "v.17.cijena", "hr": "cijena", "nl": "prijs", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "cijene", "nom_pl": "cijene", "tags": ["geld"], "source": "aangevuld" },
+    { "id": "v.17.kostati", "hr": "koštati", "nl": "kosten", "pos": "verb", "aspect": "imperfective", "present_1sg": "koštam", "verb_class": "-ati", "tags": ["werkwoord", "geld"], "source": "vježbenica p.86" },
+    { "id": "v.17.platiti_geld", "hr": "platiti", "nl": "betalen", "pos": "verb", "aspect": "perfective", "present_1sg": "platim", "verb_class": "-iti", "tags": ["werkwoord", "geld"], "source": "aangevuld" },
+    { "id": "v.17.brojiti", "hr": "brojiti", "nl": "tellen", "pos": "verb", "aspect": "imperfective", "present_1sg": "brojim", "verb_class": "-iti", "tags": ["werkwoord"], "source": "udzbenik p.235" },
+
+    { "id": "v.17.sat_uur", "hr": "sat", "nl": "uur, horloge", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sata", "nom_pl": "sati", "tags": ["tijd"], "source": "vježbenica p.87" },
+    { "id": "v.17.minuta", "hr": "minuta", "nl": "minuut", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "minute", "nom_pl": "minute", "tags": ["tijd"], "source": "aangevuld" },
+    { "id": "v.17.datum", "hr": "datum", "nl": "datum", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "datuma", "nom_pl": "datumi", "tags": ["tijd"], "source": "udzbenik p.240" },
+    { "id": "v.17.pola", "hr": "pola", "nl": "half", "pos": "adv", "tags": ["getal"], "source": "vježbenica p.87" },
+    { "id": "v.17.tisuca", "hr": "tisuća", "nl": "duizend", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "tisuće", "nom_pl": "tisuće", "tags": ["getal"], "source": "vježbenica p.87" },
+    { "id": "v.17.milijun", "hr": "milijun", "nl": "miljoen", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "milijuna", "nom_pl": "milijuni", "tags": ["getal"], "source": "vježbenica p.87" },
+    { "id": "v.17.kilometar", "hr": "kilometar", "nl": "kilometer", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "kilometra", "nom_pl": "kilometri", "tags": ["maat"], "source": "vježbenica p.87" },
+    { "id": "v.17.metar", "hr": "metar", "nl": "meter", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "metra", "nom_pl": "metri", "tags": ["maat"], "source": "vježbenica p.87" },
+    { "id": "v.17.stupanj", "hr": "stupanj", "nl": "graad", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "stupnja", "nom_pl": "stupnjevi", "tags": ["maat"], "source": "vježbenica p.87" },
+    { "id": "v.17.stanovnik", "hr": "stanovnik", "nl": "inwoner", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "stanovnika", "nom_pl": "stanovnici", "tags": ["persoon"], "source": "vježbenica p.87" },
+    { "id": "v.17.prvi", "hr": "prvi", "nl": "eerste", "pos": "adj", "tags": ["rangtelwoord"], "source": "udzbenik p.238" },
+    { "id": "v.17.drugi", "hr": "drugi", "nl": "tweede, ander", "pos": "adj", "tags": ["rangtelwoord"], "source": "udzbenik p.238" },
+    { "id": "v.17.treci", "hr": "treći", "nl": "derde", "pos": "adj", "tags": ["rangtelwoord"], "source": "udzbenik p.238" },
+    { "id": "v.17.koliko", "hr": "koliko", "nl": "hoeveel", "pos": "adv", "tags": ["vraagwoord"], "source": "aangevuld" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.17.1",
+      "title_nl": "Tellen en betalen",
+      "kind": "input",
+      "text_hr": "U Češkoj novine koštaju dva eura, a u Hrvatskoj jedan euro.\nU Švedskoj kava obično košta četiri eura, a u Hrvatskoj dva eura.\nJedan euro ima sto centi.\nHrvatska ima oko četiri milijuna stanovnika.\nZagreb ima oko osamsto tisuća stanovnika.\nPovršina Hrvatske je pedeset šest tisuća kvadratnih kilometara.",
+      "translation_nl": "In Tsjechië kost de krant twee euro, en in Kroatië één euro.\nIn Zweden kost koffie meestal vier euro, en in Kroatië twee euro.\nEén euro heeft honderd cent.\nKroatië heeft ongeveer vier miljoen inwoners.\nZagreb heeft ongeveer achthonderdduizend inwoners.\nDe oppervlakte van Kroatië is zesenvijftigduizend vierkante kilometer.",
+      "source": "vježbenica p.86",
+      "exercises": [
+        {
+          "id": "e.17.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie zones achter het getal",
+          "body_nl": "Welke vorm er na een getal komt, hangt af van het **laatste cijfer**:\n\n**1** → nominatief enkelvoud · *jedan stol, jedna kava*\n**2, 3, 4** → **genitief enkelvoud** · *dva stol**a**, tri kav**e***\n**5 en hoger** → **genitief meervoud** · *pet stol**ova**, deset kav**a***\n\nDat geldt ook voor grotere getallen: 22 gedraagt zich als 2, 25 als 5.\n\nEén uitzondering: **11 tot en met 14** volgen de 5+-regel, ook al eindigen ze op 1 tot 4.\n\nDe tussenzone 2–4 is de val — daar lijkt de vorm op een meervoud, maar het is een genitief enkelvoud.",
+          "targets": ["g.17.brojevi_padez"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.17.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "U kafiću naručujem pet ___. (kava)",
+          "answer": "kava",
+          "accepts": ["kava"],
+          "explain_nl": "Vanaf 5 → genitief meervoud. Bij kava is die vorm kaal: kava.",
+          "targets": ["g.17.brojevi_padez", "v.01.kava"],
+          "difficulty": 3,
+          "audio": "U kafiću naručujem pet kava.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Naručujem tri ___. (kava)",
+          "answer": "kave",
+          "accepts": ["kave"],
+          "explain_nl": "2, 3 en 4 → genitief enkelvoud: kave.",
+          "targets": ["g.17.brojevi_padez", "v.01.kava"],
+          "difficulty": 4,
+          "audio": "Naručujem tri kave.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Ovdje su tri ___ i jedanaest ___. (stol, stol)",
+          "answer": "stola i jedanaest stolova",
+          "accepts": ["stola i jedanaest stolova"],
+          "explain_nl": "3 → genitief enkelvoud stola; 11 volgt de 5+-regel → genitief meervoud stolova.",
+          "targets": ["g.17.brojevi_padez", "v.03.stol"],
+          "difficulty": 5,
+          "audio": "Ovdje su tri stola i jedanaest stolova.",
+          "source": "vježbenica p.86"
+        }
+      ]
+    },
+    {
+      "id": "s.17.2",
+      "title_nl": "dva of dvije",
+      "kind": "grammar",
+      "source": "udzbenik p.236",
+      "exercises": [
+        {
+          "id": "e.17.010",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Imam ___ sestre.",
+          "answer": "dvije",
+          "distractors": ["dva", "dvoje", "dvaju"],
+          "explain_nl": "sestra is vrouwelijk → dvije.",
+          "targets": ["g.17.dva_dvije", "v.01.sestra"],
+          "difficulty": 3,
+          "source": "udzbenik p.236"
+        },
+        {
+          "id": "e.17.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het getal en de juiste vorm in.",
+          "given": "Moje dijete ima ___ ___ i dva ___. (2, godina, mjesec)",
+          "answer": "dvije godine i dva mjeseca",
+          "accepts": ["dvije godine i dva mjeseca"],
+          "explain_nl": "godina is vrouwelijk → dvije godine. mjesec is mannelijk → dva mjeseca. Beide in de genitief enkelvoud.",
+          "targets": ["g.17.dva_dvije", "g.17.brojevi_padez", "v.10.godina", "v.10.mjesec"],
+          "difficulty": 5,
+          "audio": "Moje dijete ima dvije godine i dva mjeseca.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Znam Mariju već deset ___. (godina)",
+          "answer": "godina",
+          "accepts": ["godina"],
+          "explain_nl": "Vanaf 5 → genitief meervoud, en die is bij godina kaal.",
+          "targets": ["g.17.brojevi_padez", "v.10.godina"],
+          "difficulty": 4,
+          "audio": "Znam Mariju već deset godina.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Gregor uči hrvatski pet ___. (mjesec)",
+          "answer": "mjeseci",
+          "accepts": ["mjeseci"],
+          "explain_nl": "Genitief meervoud van mjesec is mjeseci.",
+          "targets": ["g.17.brojevi_padez", "v.10.mjesec"],
+          "difficulty": 4,
+          "audio": "Gregor uči hrvatski pet mjeseci.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.014",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Imam dva sestre.",
+          "answer": "Imam dvije sestre.",
+          "accepts": ["Imam dvije sestre."],
+          "explain_nl": "sestra is vrouwelijk, dus dvije.",
+          "targets": ["g.17.dva_dvije"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.17.3",
+      "title_nl": "Hoe laat en welke datum",
+      "kind": "practice",
+      "source": "udzbenik p.240",
+      "exercises": [
+        {
+          "id": "e.17.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Rangtelwoorden en tijd",
+          "body_nl": "**Rangtelwoorden** zijn bijvoeglijke naamwoorden en buigen mee:\n*prvi, drugi, treći, četvrti, peti, šesti, sedmi, osmi, deveti, deseti*\n\nJe schrijft ze met een punt achter het cijfer: **1. dan** = *prvi dan*.\n\n**Kloktijd** volgt de getalregel uit deze les:\n*jedan sat* · *dva sat**a*** · *pet sat**i***\n\n'Om' is **u**: *Sastanak je u pet sati.*\n\nEen **datum** is een rangtelwoord plus de maand in de genitief: *petnaestog svibnja*.",
+          "targets": ["g.17.redni_brojevi", "g.17.sati_datum"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.17.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Moj sat pokazuje točno četiri ___. (sat)",
+          "answer": "sata",
+          "accepts": ["sata"],
+          "explain_nl": "4 → genitief enkelvoud sata.",
+          "targets": ["g.17.sati_datum", "v.17.sat_uur"],
+          "difficulty": 4,
+          "audio": "Moj sat pokazuje točno četiri sata.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Sastanak je u pet ___. (sat)",
+          "answer": "sati",
+          "accepts": ["sati"],
+          "explain_nl": "5 → genitief meervoud sati. Vergelijk met četiri sata.",
+          "targets": ["g.17.sati_datum", "v.17.sat_uur"],
+          "difficulty": 4,
+          "audio": "Sastanak je u pet sati.",
+          "source": "vježbenica p.86"
+        },
+        {
+          "id": "e.17.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het rangtelwoord in.",
+          "given": "___ dan u tjednu zove se četvrtak. (4.)",
+          "answer": "Četvrti",
+          "accepts": ["Četvrti", "četvrti"],
+          "explain_nl": "4. → četvrti, mannelijk omdat dan mannelijk is.",
+          "targets": ["g.17.redni_brojevi", "v.07.tjedan"],
+          "difficulty": 3,
+          "audio": "Četvrti dan u tjednu zove se četvrtak.",
+          "source": "vježbenica p.88"
+        },
+        {
+          "id": "e.17.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het rangtelwoord in.",
+          "given": "Split je po veličini ___ grad u Hrvatskoj. (2.)",
+          "answer": "drugi",
+          "accepts": ["drugi"],
+          "targets": ["g.17.redni_brojevi", "v.17.drugi"],
+          "difficulty": 3,
+          "audio": "Split je po veličini drugi grad u Hrvatskoj.",
+          "source": "vježbenica p.88"
+        },
+        {
+          "id": "e.17.025",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het cijfer aan het rangtelwoord.",
+          "pairs": [
+            { "hr": "1.", "nl": "prvi" },
+            { "hr": "2.", "nl": "drugi" },
+            { "hr": "3.", "nl": "treći" },
+            { "hr": "4.", "nl": "četvrti" }
+          ],
+          "targets": ["g.17.redni_brojevi", "v.17.prvi", "v.17.drugi", "v.17.treci"],
+          "difficulty": 2,
+          "source": "udzbenik p.238"
+        },
+        {
+          "id": "e.17.026",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Koliko je sati? Pet sati i deset minuta.",
+          "answer": "Koliko je sati? Pet sati i deset minuta.",
+          "accepts": ["Koliko je sati? Pet sati i deset minuta."],
+          "targets": ["g.17.sati_datum", "v.17.minuta"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.17.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.17.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik leer al twee jaar Kroatisch.",
+          "answer": "Učim hrvatski već dvije godine.",
+          "accepts": ["Učim hrvatski već dvije godine.", "Već dvije godine učim hrvatski."],
+          "explain_nl": "godina is vrouwelijk → dvije, en 2 vraagt de genitief enkelvoud godine.",
+          "targets": ["g.17.dva_dvije", "g.17.brojevi_padez", "v.09.uciti"],
+          "difficulty": 5,
+          "audio": "Učim hrvatski već dvije godine.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.17.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Koliko dugo učite hrvatski i koliko sati dnevno?",
+          "given": "Koliko dugo učite hrvatski i koliko sati dnevno?",
+          "model_answer": "Učim hrvatski tri mjeseca. Učim jedan sat dnevno, a vikendom dva sata.",
+          "rubric_nl": [
+            "De naamval na elk getal is correct gekozen",
+            "dva of dvije klopt met het geslacht",
+            "Minimaal twee getallen gebruikt"
+          ],
+          "targets": ["g.17.brojevi_padez", "g.17.dva_dvije", "g.17.sati_datum"],
+          "difficulty": 5,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

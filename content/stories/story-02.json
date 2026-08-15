@@ -1,0 +1,849 @@
+{
+  "id": "story-02",
+  "slug": "nina-ide-na-trznicu",
+  "series": "Nina u Zagrebu",
+  "part": 2,
+  "title_hr": "Nina ide na tržnicu",
+  "title_nl": "Nina gaat naar de markt",
+  "cefr": "A1.2",
+  "requires_lesson": 8,
+  "blurb_nl": "Nina doet boodschappen op de Dolac. Elk ding dat ze koopt staat in de accusatief — precies wat les 5 tot en met 8 hebben opgebouwd.",
+  "motif": "trznica",
+  "focus_nl": [
+    "accusatief",
+    "ići + u/na",
+    "jesti en piti",
+    "imati / nemati"
+  ],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "hr": "Subota je.",
+          "nl": "Het is zaterdag."
+        },
+        {
+          "hr": "Nina ide na tržnicu.",
+          "nl": "Nina gaat naar de markt."
+        },
+        {
+          "hr": "Tržnica se zove Dolac.",
+          "nl": "De markt heet Dolac."
+        },
+        {
+          "hr": "Ona treba mlijeko i kruh.",
+          "nl": "Ze heeft melk en brood nodig."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "hr": "Nina kupuje kruh, sir i mlijeko.",
+          "nl": "Nina koopt brood, kaas en melk."
+        },
+        {
+          "hr": "Gleda rajčice.",
+          "nl": "Ze bekijkt de tomaten."
+        },
+        {
+          "hr": "Prodavačica pita: „Što želite, gospođo?“",
+          "nl": "De marktvrouw vraagt: \"Wat wenst u, mevrouw?\""
+        },
+        {
+          "hr": "„Želim jednu rajčicu i jednu jabuku, molim.“",
+          "nl": "\"Ik wil één tomaat en één appel, graag.\""
+        },
+        {
+          "hr": "„Izvolite!“",
+          "nl": "\"Alstublieft!\""
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "hr": "Nina vidi Petru.",
+          "nl": "Nina ziet Petra."
+        },
+        {
+          "hr": "Petra također kupuje voće.",
+          "nl": "Petra koopt ook fruit."
+        },
+        {
+          "hr": "„Bok, Nina! Idemo na kavu?“",
+          "nl": "\"Hoi Nina! Zullen we koffie gaan drinken?\""
+        },
+        {
+          "hr": "„Može! Ja častim.“",
+          "nl": "\"Prima! Ik trakteer.\""
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "hr": "One idu u kafić.",
+          "nl": "Ze gaan naar een café."
+        },
+        {
+          "hr": "Nina pije kavu, a Petra pije čaj.",
+          "nl": "Nina drinkt koffie en Petra drinkt thee."
+        },
+        {
+          "hr": "Jedu i kolač.",
+          "nl": "Ze eten ook gebak."
+        },
+        {
+          "hr": "Nina voli subotu.",
+          "nl": "Nina houdt van zaterdag."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "subota": {
+      "hr": "subota",
+      "nl": "zaterdag",
+      "info": "vrouwelijk; de dagen van de week krijgen geen hoofdletter"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "3e persoon enkelvoud; «Subota je» = het is zaterdag"
+    },
+    "nina": {
+      "hr": "Nina",
+      "nl": "Nina",
+      "info": "eigennaam"
+    },
+    "ide": {
+      "hr": "ide",
+      "nl": "gaat",
+      "lemma": "ići",
+      "info": "3e persoon enkelvoud van ići"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "naar; op",
+      "info": "met accusatief: richting (na tržnicu); met locatief: plaats"
+    },
+    "tržnicu": {
+      "hr": "tržnicu",
+      "nl": "markt",
+      "lemma": "tržnica",
+      "info": "accusatief enkelvoud — het doel van de beweging",
+      "item": "v.pr2.trznica"
+    },
+    "tržnica": {
+      "hr": "tržnica",
+      "nl": "markt",
+      "info": "nominatief enkelvoud",
+      "item": "v.pr2.trznica"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend partikel; zvati se = heten"
+    },
+    "zove": {
+      "hr": "zove",
+      "nl": "noemt",
+      "lemma": "zvati",
+      "info": "3e persoon enkelvoud; zove se = heet"
+    },
+    "dolac": {
+      "hr": "Dolac",
+      "nl": "Dolac",
+      "info": "de centrale markt van Zagreb, sinds 1930"
+    },
+    "ona": {
+      "hr": "ona",
+      "nl": "zij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "treba": {
+      "hr": "treba",
+      "nl": "heeft nodig",
+      "lemma": "trebati",
+      "info": "3e persoon enkelvoud; wat je nodig hebt staat in de accusatief"
+    },
+    "mlijeko": {
+      "hr": "mlijeko",
+      "nl": "melk",
+      "info": "onzijdig; accusatief = nominatief",
+      "item": "v.pr2.mlijeko"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en; ook",
+      "info": "voegwoord"
+    },
+    "kruh": {
+      "hr": "kruh",
+      "nl": "brood",
+      "info": "mannelijk, levenloos; accusatief = nominatief",
+      "item": "v.pr2.kruh"
+    },
+    "kupuje": {
+      "hr": "kupuje",
+      "nl": "koopt",
+      "lemma": "kupovati",
+      "info": "3e persoon enkelvoud; -ovati wordt -uje",
+      "item": "v.pr2.kupovati"
+    },
+    "sir": {
+      "hr": "sir",
+      "nl": "kaas",
+      "info": "mannelijk, levenloos; accusatief = nominatief",
+      "item": "v.pr2.sir"
+    },
+    "gleda": {
+      "hr": "gleda",
+      "nl": "kijkt naar, bekijkt",
+      "lemma": "gledati",
+      "info": "3e persoon enkelvoud, -ati werkwoord"
+    },
+    "rajčice": {
+      "hr": "rajčice",
+      "nl": "tomaten",
+      "lemma": "rajčica",
+      "info": "accusatief meervoud",
+      "item": "v.pr2.rajcica"
+    },
+    "prodavačica": {
+      "hr": "prodavačica",
+      "nl": "verkoopster, marktvrouw",
+      "info": "vrouwelijk; man: prodavač",
+      "item": "v.pr2.prodavacica"
+    },
+    "pita": {
+      "hr": "pita",
+      "nl": "vraagt",
+      "lemma": "pitati",
+      "info": "3e persoon enkelvoud; ook: een hartige taart!"
+    },
+    "što": {
+      "hr": "što",
+      "nl": "wat",
+      "info": "vraagwoord"
+    },
+    "želite": {
+      "hr": "želite",
+      "nl": "u wenst",
+      "lemma": "željeti",
+      "info": "2e persoon meervoud — de beleefdheidsvorm"
+    },
+    "gospođo": {
+      "hr": "gospođo",
+      "nl": "mevrouw",
+      "lemma": "gospođa",
+      "info": "vocatief! De aanspreekvorm — die komt pas in les 20, maar op de markt hoor je hem nu al"
+    },
+    "želim": {
+      "hr": "želim",
+      "nl": "ik wil, ik wens",
+      "lemma": "željeti",
+      "info": "1e persoon enkelvoud"
+    },
+    "jednu": {
+      "hr": "jednu",
+      "nl": "één",
+      "lemma": "jedan",
+      "info": "vrouwelijke accusatief: jedna → jednu"
+    },
+    "rajčicu": {
+      "hr": "rajčicu",
+      "nl": "tomaat",
+      "lemma": "rajčica",
+      "info": "accusatief enkelvoud: -a → -u",
+      "item": "v.pr2.rajcica"
+    },
+    "jabuku": {
+      "hr": "jabuku",
+      "nl": "appel",
+      "lemma": "jabuka",
+      "info": "accusatief enkelvoud: -a → -u",
+      "item": "v.pr2.jabuka"
+    },
+    "molim": {
+      "hr": "molim",
+      "nl": "graag, alstublieft",
+      "lemma": "moliti",
+      "info": "letterlijk: ik verzoek"
+    },
+    "izvolite": {
+      "hr": "izvolite",
+      "nl": "alstublieft (bij het geven)",
+      "info": "vaste marktformule; ook: zegt u het maar"
+    },
+    "vidi": {
+      "hr": "vidi",
+      "nl": "ziet",
+      "lemma": "vidjeti",
+      "info": "3e persoon enkelvoud"
+    },
+    "petru": {
+      "hr": "Petru",
+      "nl": "Petra",
+      "lemma": "Petra",
+      "info": "accusatief — Petra is levend én lijdend voorwerp: -a → -u"
+    },
+    "petra": {
+      "hr": "Petra",
+      "nl": "Petra",
+      "info": "eigennaam, nominatief"
+    },
+    "također": {
+      "hr": "također",
+      "nl": "ook, eveneens",
+      "info": "bijwoord"
+    },
+    "voće": {
+      "hr": "voće",
+      "nl": "fruit",
+      "info": "onzijdig verzamelwoord — altijd enkelvoud",
+      "item": "v.pr2.voce"
+    },
+    "bok": {
+      "hr": "bok",
+      "nl": "hoi",
+      "info": "informele groet"
+    },
+    "idemo": {
+      "hr": "idemo",
+      "nl": "wij gaan; zullen we",
+      "lemma": "ići",
+      "info": "1e persoon meervoud; als uitnodiging: zullen we?"
+    },
+    "kavu": {
+      "hr": "kavu",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "accusatief enkelvoud; ići na kavu = koffie gaan drinken",
+      "item": "v.pr2.kava"
+    },
+    "može": {
+      "hr": "može",
+      "nl": "prima, oké",
+      "lemma": "moći",
+      "info": "letterlijk 'het kan' — hét woord om ja te zeggen op een voorstel"
+    },
+    "ja": {
+      "hr": "ja",
+      "nl": "ik",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "častim": {
+      "hr": "častim",
+      "nl": "ik trakteer",
+      "lemma": "častiti",
+      "info": "1e persoon enkelvoud",
+      "item": "v.pr2.castiti"
+    },
+    "one": {
+      "hr": "one",
+      "nl": "zij (meervoud, vrouwelijk)",
+      "info": "twee vrouwen = one, niet oni"
+    },
+    "idu": {
+      "hr": "idu",
+      "nl": "gaan",
+      "lemma": "ići",
+      "info": "3e persoon meervoud"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "naar; in",
+      "info": "met accusatief: richting (u kafić); met locatief: plaats"
+    },
+    "kafić": {
+      "hr": "kafić",
+      "nl": "café",
+      "info": "mannelijk, levenloos; accusatief = nominatief",
+      "item": "v.pr2.kafic"
+    },
+    "pije": {
+      "hr": "pije",
+      "nl": "drinkt",
+      "lemma": "piti",
+      "info": "3e persoon enkelvoud"
+    },
+    "a": {
+      "hr": "a",
+      "nl": "en, maar",
+      "info": "zwak tegenstellend voegwoord"
+    },
+    "čaj": {
+      "hr": "čaj",
+      "nl": "thee",
+      "info": "mannelijk; zonder č zou er 'caj' staan — een ander woord dan čaj",
+      "item": "v.pr2.caj"
+    },
+    "jedu": {
+      "hr": "jedu",
+      "nl": "eten",
+      "lemma": "jesti",
+      "info": "3e persoon meervoud; onregelmatig: jedem, jedeš, jede…"
+    },
+    "kolač": {
+      "hr": "kolač",
+      "nl": "gebak, taartje",
+      "info": "mannelijk, levenloos; accusatief = nominatief",
+      "item": "v.pr2.kolac"
+    },
+    "voli": {
+      "hr": "voli",
+      "nl": "houdt van",
+      "lemma": "voljeti",
+      "info": "3e persoon enkelvoud; met accusatief"
+    },
+    "subotu": {
+      "hr": "subotu",
+      "nl": "zaterdag",
+      "lemma": "subota",
+      "info": "accusatief enkelvoud — subota is hier lijdend voorwerp van voljeti"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Dolac",
+    "body_nl": "De Dolac is sinds 1930 de buik van Zagreb: een open markt pal boven het hoofdplein, herkenbaar aan de rode parasols. Beneden, in de hal, koop je kaas en vlees; boven, in de openlucht, groente en fruit. De «kumice» — de marktvrouwen — zijn een instituut; er staat zelfs een standbeeld voor ze. Wie op zaterdagochtend naar de Dolac gaat en daarna koffie drinkt op de Tkalčićeva, doet precies wat heel Zagreb die ochtend doet."
+  },
+  "vocab": [
+    {
+      "id": "v.pr2.trznica",
+      "hr": "tržnica",
+      "nl": "markt",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "tržnice",
+      "nom_pl": "tržnice",
+      "tags": [
+        "stad",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.kruh",
+      "hr": "kruh",
+      "nl": "brood",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "kruha",
+      "nom_pl": "kruhovi",
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.sir",
+      "hr": "sir",
+      "nl": "kaas",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "sira",
+      "nom_pl": "sirevi",
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.mlijeko",
+      "hr": "mlijeko",
+      "nl": "melk",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "mlijeka",
+      "nom_pl": null,
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.rajcica",
+      "hr": "rajčica",
+      "nl": "tomaat",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "rajčice",
+      "nom_pl": "rajčice",
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.jabuka",
+      "hr": "jabuka",
+      "nl": "appel",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "jabuke",
+      "nom_pl": "jabuke",
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.kava",
+      "hr": "kava",
+      "nl": "koffie",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "kave",
+      "nom_pl": "kave",
+      "tags": [
+        "drinken",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.caj",
+      "hr": "čaj",
+      "nl": "thee",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "čaja",
+      "nom_pl": "čajevi",
+      "tags": [
+        "drinken",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.kolac",
+      "hr": "kolač",
+      "nl": "gebak, taartje",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "kolača",
+      "nom_pl": "kolači",
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.kafic",
+      "hr": "kafić",
+      "nl": "café",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "kafića",
+      "nom_pl": "kafići",
+      "tags": [
+        "stad",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.voce",
+      "hr": "voće",
+      "nl": "fruit",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "voća",
+      "nom_pl": null,
+      "tags": [
+        "eten",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.prodavacica",
+      "hr": "prodavačica",
+      "nl": "verkoopster",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "animate",
+      "declension": "e",
+      "gen_sg": "prodavačice",
+      "nom_pl": "prodavačice",
+      "tags": [
+        "beroep",
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.kupovati",
+      "hr": "kupovati",
+      "nl": "kopen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "kupujem",
+      "verb_class": "-ovati",
+      "tags": [
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr2.castiti",
+      "hr": "častiti",
+      "nl": "trakteren",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "častim",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-02"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr2.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat dit verhaal over?",
+      "answer": "Een zaterdagochtend van Nina: boodschappen en daarna koffie.",
+      "distractors": [
+        "Hoe duur het leven in Zagreb is.",
+        "Een ruzie tussen Nina en een marktvrouw.",
+        "Nina die leert koken."
+      ],
+      "explain_nl": "De tekst volgt één ochtend van begin tot eind: markt, ontmoeting, café. Over prijzen of ruzie staat er niets. Een hoofdgedachte is vaak simpelweg: wie doet wat, wanneer.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr2.002",
+      "skill": "volgorde",
+      "type": "choice",
+      "prompt_nl": "In welke volgorde gebeurt het?",
+      "answer": "Brood kopen → Petra zien → naar het café → koffie drinken",
+      "distractors": [
+        "Petra zien → brood kopen → koffie drinken → naar het café",
+        "Naar het café → koffie drinken → brood kopen → Petra zien",
+        "Brood kopen → naar het café → Petra zien → koffie drinken"
+      ],
+      "explain_nl": "Let op de signaalwoorden en de alinea-indeling: elke alinea is een volgende stap. De ontmoeting met Petra staat in alinea 3, ná het kopen in alinea 2 — dus het café kan pas daarna komen.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr2.003",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Može! Ja častim.» Wat betekent «Ja častim»?",
+      "answer": "Ik trakteer.",
+      "distractors": [
+        "Ik heb haast.",
+        "Ik lust geen koffie.",
+        "Ik betaal later."
+      ],
+      "explain_nl": "Petra stelt koffie voor, Nina zegt «Može!» (prima) en dan dit. In die situatie is er maar één ding dat je erna zegt. Zo leid je de betekenis af uit wat er vlak vóór gebeurt.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr2.004",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat koopt Petra op de markt?",
+      "answer": "Fruit.",
+      "distractors": [
+        "Brood en kaas.",
+        "Melk.",
+        "Een tomaat en een appel."
+      ],
+      "explain_nl": "Er staat «Petra također kupuje voće» — Petra koopt ook fruit. De andere antwoorden staan wél in de tekst, maar dat koopt Nina. Bij een detailvraag moet je niet alleen het ding terugvinden, maar ook wie het doet.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr2.005",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waaraan merk je dat Nina en Petra elkaar goed kennen?",
+      "answer": "Petra stelt zomaar voor om samen koffie te gaan drinken.",
+      "distractors": [
+        "Ze wonen in hetzelfde huis.",
+        "Ze kopen precies dezelfde boodschappen.",
+        "Petra spreekt Nederlands tegen Nina."
+      ],
+      "explain_nl": "Dat ze bevriend zijn staat er niet. Maar Petra groet met «Bok» (informeel), stelt meteen iets voor, en Nina biedt aan te trakteren. Die manier van doen hoort bij mensen die elkaar kennen — gedrag verraadt hier de relatie.",
+      "difficulty": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr2.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom gaat Nina naar de markt?",
+      "answer": "Ze heeft melk en brood nodig.",
+      "distractors": [
+        "Ze wil Petra ontmoeten.",
+        "Ze werkt op de markt.",
+        "Ze wil koffie drinken."
+      ],
+      "explain_nl": "«Ona treba mlijeko i kruh.» Petra ontmoeten gebeurt toevallig, pas later.",
+      "targets": [
+        "v.pr2.mlijeko",
+        "v.pr2.kruh"
+      ],
+      "difficulty": 1,
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul de juiste vorm in: 'Ik wil één tomaat.'",
+      "given": "Želim jednu ___.",
+      "answer": "rajčicu",
+      "accepts": [
+        "rajčicu"
+      ],
+      "explain_nl": "Rajčica is lijdend voorwerp: accusatief. Vrouwelijk -a wordt -u, en jedan doet mee: jednu rajčicu.",
+      "targets": [
+        "v.pr2.rajcica"
+      ],
+      "difficulty": 2,
+      "audio": "Želim jednu rajčicu.",
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.003",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul de juiste vorm in: 'Nina ziet Petra.'",
+      "given": "Nina vidi ___.",
+      "answer": "Petru",
+      "accepts": [
+        "Petru",
+        "petru"
+      ],
+      "explain_nl": "Ook namen verbuigen. Petra is lijdend voorwerp, dus accusatief: Petra → Petru.",
+      "targets": [
+        "v.pr2.prodavacica"
+      ],
+      "difficulty": 3,
+      "audio": "Nina vidi Petru.",
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.004",
+      "type": "word_order",
+      "mode": "productive",
+      "prompt_nl": "Zet in de juiste volgorde: 'Nina drinkt koffie en Petra drinkt thee.'",
+      "tokens": [
+        "Nina",
+        "pije",
+        "kavu,",
+        "a",
+        "Petra",
+        "pije",
+        "čaj."
+      ],
+      "answer": "Nina pije kavu, a Petra pije čaj.",
+      "explain_nl": "Het voegwoord a zet twee gewone zinnen tegenover elkaar — zachter dan ali.",
+      "targets": [
+        "v.pr2.kava",
+        "v.pr2.caj"
+      ],
+      "difficulty": 2,
+      "audio": "Nina pije kavu, a Petra pije čaj.",
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.005",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: 'Ze gaan naar een café.'",
+      "given": "Ze gaan naar een café. (zij = twee vrouwen)",
+      "answer": "One idu u kafić.",
+      "accepts": [
+        "One idu u kafić.",
+        "One idu u kafić",
+        "Idu u kafić.",
+        "Idu u kafić"
+      ],
+      "explain_nl": "Richting = u + accusatief. Kafić is levenloos, dus de accusatief is gelijk aan de nominatief. Twee vrouwen: one.",
+      "targets": [
+        "v.pr2.kafic"
+      ],
+      "difficulty": 3,
+      "audio": "One idu u kafić.",
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.006",
+      "type": "listen_type",
+      "mode": "productive",
+      "prompt_nl": "Typ wat je hoort — let op č en ć.",
+      "answer": "Jedu i kolač.",
+      "accepts": [
+        "Jedu i kolač.",
+        "Jedu i kolač"
+      ],
+      "audio": "Jedu i kolač.",
+      "explain_nl": "Kolač eindigt op č (hard). Vergelijk kafić, dat op ć (zacht) eindigt.",
+      "targets": [
+        "v.pr2.kolac"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-02"
+    },
+    {
+      "id": "e.pr2.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Jij staat op de Dolac. Schrijf wat jij koopt — minstens drie dingen, in de accusatief.",
+      "hint": "Kupujem … / Želim … — denk aan -a → -u bij vrouwelijke woorden.",
+      "model_answer": "Kupujem kruh, sir i jednu jabuku. Želim i kavu.",
+      "rubric_nl": [
+        "Kupujem of želim + minstens drie dingen.",
+        "Vrouwelijke woorden op -a staan in de accusatief op -u (jabuku, kavu).",
+        "Mannelijke levenloze woorden veranderen niet (kruh, sir)."
+      ],
+      "targets": [
+        "v.pr2.kupovati"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-02"
+    }
+  ]
+}

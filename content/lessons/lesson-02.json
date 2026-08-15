@@ -1,0 +1,512 @@
+{
+  "id": "lesson-02",
+  "number": 2,
+  "title_hr": "Ljudi — zanimanja, nacionalnosti",
+  "title_nl": "Mensen — beroepen en nationaliteiten",
+  "cefr": "A1.1",
+  "source": { "udzbenik_pages": "31-38", "vjezbenica_pages": "15-18" },
+  "can_do_nl": [
+    "Ik kan zeggen wat ik en anderen van beroep zijn.",
+    "Ik kan naar iemands beroep en nationaliteit vragen.",
+    "Ik kan van een land de mannelijke en vrouwelijke inwoner afleiden.",
+    "Ik kan een misverstand corrigeren met 'niet ..., maar ...'.",
+    "Ik kan me redden in een taxi."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.02.zanimanja",
+      "title_nl": "Beroepen — mannelijke en vrouwelijke vorm",
+      "cefr": "A1.1",
+      "explanation_nl": "Bijna elk beroep heeft twee vormen. De vrouwelijke wordt van de mannelijke gemaakt met een achtervoegsel: meestal -ica (liječnik → liječnica), soms -ka (novinar → novinarka). Welke van de twee je krijgt, hangt af van hoe het mannelijke woord eindigt — daar is geen waterdichte regel voor, dus je leert het paar samen.",
+      "contrast_nl": "In het Nederlands verdwijnt het onderscheid juist ('de arts', 'de journalist' voor iedereen). In het Kroatisch is de vrouwelijke vorm de normale, verwachte keuze voor een vrouw: 'Ana je liječnica', niet 'Ana je liječnik'.",
+      "paradigm": {
+        "caption_nl": "Vorming van vrouwelijke beroepsnamen",
+        "columns": ["muški rod", "ženski rod", "achtervoegsel"],
+        "rows": [
+          { "label": "1.", "cells": ["liječnik", "liječnica", "-ica"] },
+          { "label": "2.", "cells": ["učitelj", "učiteljica", "-ica"] },
+          { "label": "3.", "cells": ["sportaš", "sportašica", "-ica"] },
+          { "label": "4.", "cells": ["novinar", "novinarka", "-ka"] },
+          { "label": "5.", "cells": ["frizer", "frizerka", "-ka"] },
+          { "label": "6.", "cells": ["političar", "političarka", "-ka"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De mannelijke vorm gebruiken voor een vrouw — dat valt op als fout, niet als neutraal.",
+        "liječnik → liječnica: de k verdwijnt niet, hij zit in -nica verwerkt.",
+        "Bij het beroep hoort geen lidwoord: 'Ja sam student', niet 'Ja sam jedan student'."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.33"
+    },
+    {
+      "id": "g.02.nacionalnosti",
+      "title_nl": "Van land naar inwoner",
+      "cefr": "A1.1",
+      "explanation_nl": "Uit de landsnaam leid je de inwoner af met een vast setje achtervoegsels: -ac (Japan → Japanac), -anac (Austrija → Austrijanac), -anin (Beč → Bečanin), -čanin (Zagreb → Zagrepčanin). De vrouwelijke vorm krijgt daarna -ica, -ka, -inja of -kinja. Landen en nationaliteiten schrijf je altijd met een hoofdletter.",
+      "contrast_nl": "Het Nederlands heeft er ook een handvol ('Kroaat', 'Kroatische'), maar veel minder systematisch. Kroatisch is voorspelbaarder — de moeite van het patroon leren waard, want je krijgt er tientallen woorden gratis bij.",
+      "paradigm": {
+        "caption_nl": "Land → man → vrouw",
+        "columns": ["zemlja", "stanovnik", "stanovnica"],
+        "rows": [
+          { "label": "1.", "cells": ["Hrvatska", "Hrvat", "Hrvatica"] },
+          { "label": "2.", "cells": ["Njemačka", "Nijemac", "Njemica"] },
+          { "label": "3.", "cells": ["Italija", "Talijan", "Talijanka"] },
+          { "label": "4.", "cells": ["Nizozemska", "Nizozemac", "Nizozemka"] },
+          { "label": "5.", "cells": ["Poljska", "Poljak", "Poljakinja"] },
+          { "label": "6.", "cells": ["Engleska", "Englez", "Engleskinja"] },
+          { "label": "7.", "cells": ["Japan", "Japanac", "Japanka"] },
+          { "label": "8.", "cells": ["Rusija", "Rus", "Ruskinja"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Njemačka → Nijemac: de klinker verandert. Dit is een van de weinige echt onregelmatige.",
+        "Italija → Talijan, niet 'Italijan' — de i valt weg.",
+        "Nationaliteiten met een hoofdletter, maar de bijbehorende bijvoeglijke naamwoorden juist niet: 'Hrvat' maar 'hrvatski jezik'."
+      ],
+      "prerequisites": ["g.biti.present.short"],
+      "source": "udzbenik p.35"
+    },
+    {
+      "id": "g.02.nominativ",
+      "title_nl": "De nominatief — de vorm waarin je een woord leert",
+      "cefr": "A1.1",
+      "explanation_nl": "De nominatief antwoordt op tko? (wie?) en što? (wat?). Hij is de vorm van het onderwerp én van het naamwoordelijk deel na biti. In 'Ana je liječnica' staan Ana en liječnica allebei in de nominatief. Dit is ook de vorm waarin woorden in het woordenboek staan — de andere zes naamvallen komen later, telkens met hun eigen taak.",
+      "contrast_nl": "Het Nederlands heeft dit onderscheid nauwelijks (alleen bij 'ik/mij', 'hij/hem'). In het Kroatisch verandert élk zelfstandig naamwoord van vorm naargelang zijn rol in de zin. De nominatief is je startpunt, niet je eindpunt.",
+      "paradigm": {
+        "caption_nl": "Nominatief — vraagwoorden en functie",
+        "columns": ["vraag", "functie", "voorbeeld"],
+        "rows": [
+          { "label": "tko?", "cells": ["onderwerp (persoon)", "Tko je to? — To je Marko."] },
+          { "label": "što?", "cells": ["onderwerp (ding)", "Što je to? — To je knjiga."] },
+          { "label": "—", "cells": ["na biti", "Marko je liječnik."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Denken dat de nominatief 'de gewone vorm' is en de rest uitzonderingen — het zijn zeven gelijkwaardige vormen met elk een eigen taak.",
+        "tko vraagt naar personen, što naar dingen. Ze zijn niet uitwisselbaar."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.33"
+    },
+    {
+      "id": "g.02.nego",
+      "title_nl": "Corrigeren met ne ... nego ...",
+      "cefr": "A1.1",
+      "explanation_nl": "Om een aanname recht te zetten gebruik je: Ne, X nije A, nego B. Het woordje nego betekent 'maar (wel)' en staat alleen ná een ontkenning. Zonder ontkenning ervoor gebruik je ali.",
+      "contrast_nl": "Nederlands gebruikt in beide gevallen 'maar'. Kroatisch splitst dat: nego alleen na een ontkenning ('niet dit, maar dat'), ali voor een gewone tegenstelling ('klein, maar mooi').",
+      "paradigm": {
+        "caption_nl": "nego versus ali",
+        "columns": ["gebruik", "voorbeeld"],
+        "rows": [
+          { "label": "nego", "cells": ["na ontkenning", "Ne, on nije policajac, nego poštar."] },
+          { "label": "ali", "cells": ["gewone tegenstelling", "Stan je malen, ali lijep."] }
+        ]
+      },
+      "pitfalls_nl": [
+        "ali gebruiken na een ontkenning: 'Nije policajac, ali poštar' is fout.",
+        "nego wordt niet gevolgd door een nieuw werkwoord — je herhaalt alleen het verschillende deel."
+      ],
+      "prerequisites": ["g.biti.present.negative"],
+      "source": "udzbenik p.32"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.02.kuhar", "hr": "kuhar", "nl": "kok", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "kuhara", "nom_pl": "kuhari", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.kuharica", "hr": "kuharica", "nl": "kokkin", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "kuharice", "nom_pl": "kuharice", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.lijecnik", "hr": "liječnik", "nl": "arts", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "liječnika", "nom_pl": "liječnici", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.lijecnica", "hr": "liječnica", "nl": "arts (v)", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "liječnice", "nom_pl": "liječnice", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.ekonomist", "hr": "ekonomist", "nl": "econoom", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "ekonomista", "nom_pl": "ekonomisti", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.ekonomistica", "hr": "ekonomistica", "nl": "econoom (v)", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "ekonomistice", "nom_pl": "ekonomistice", "tags": ["beroep"], "source": "vježbenica p.18" },
+    { "id": "v.02.ucitelj", "hr": "učitelj", "nl": "onderwijzer", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "učitelja", "nom_pl": "učitelji", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.uciteljica", "hr": "učiteljica", "nl": "onderwijzeres", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "učiteljice", "nom_pl": "učiteljice", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.novinar", "hr": "novinar", "nl": "journalist", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "novinara", "nom_pl": "novinari", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.novinarka", "hr": "novinarka", "nl": "journaliste", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "novinarke", "nom_pl": "novinarke", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.postar", "hr": "poštar", "nl": "postbode", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "poštara", "nom_pl": "poštari", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.pjevac", "hr": "pjevač", "nl": "zanger", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "pjevača", "nom_pl": "pjevači", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.pjevacica", "hr": "pjevačica", "nl": "zangeres", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "pjevačice", "nom_pl": "pjevačice", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.informaticarka", "hr": "informatičarka", "nl": "informatica (v)", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "informatičarke", "nom_pl": "informatičarke", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.sportas", "hr": "sportaš", "nl": "sporter", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "sportaša", "nom_pl": "sportaši", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.sportasica", "hr": "sportašica", "nl": "sportster", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "sportašice", "nom_pl": "sportašice", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.frizer", "hr": "frizer", "nl": "kapper", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "frizera", "nom_pl": "frizeri", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.frizerka", "hr": "frizerka", "nl": "kapster", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "frizerke", "nom_pl": "frizerke", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.politicar", "hr": "političar", "nl": "politicus", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "političara", "nom_pl": "političari", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.inzenjer", "hr": "inženjer", "nl": "ingenieur", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "inženjera", "nom_pl": "inženjeri", "tags": ["beroep"], "source": "vježbenica p.18" },
+    { "id": "v.02.nogometas", "hr": "nogometaš", "nl": "voetballer", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "nogometaša", "nom_pl": "nogometaši", "tags": ["beroep", "sport"], "source": "udzbenik p.33" },
+    { "id": "v.02.skijasica", "hr": "skijašica", "nl": "skiester", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "skijašice", "nom_pl": "skijašice", "tags": ["beroep", "sport"], "source": "udzbenik p.33" },
+    { "id": "v.02.pisac", "hr": "pisac", "nl": "schrijver", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "pisca", "nom_pl": "pisci", "tags": ["beroep"], "source": "udzbenik p.33" },
+    { "id": "v.02.policajac", "hr": "policajac", "nl": "politieagent", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "policajca", "nom_pl": "policajci", "tags": ["beroep"], "source": "udzbenik p.32" },
+    { "id": "v.02.taksist", "hr": "taksist", "nl": "taxichauffeur", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "taksista", "nom_pl": "taksisti", "tags": ["beroep"], "source": "udzbenik p.34" },
+    { "id": "v.02.zanimanje", "hr": "zanimanje", "nl": "beroep", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "zanimanja", "nom_pl": "zanimanja", "tags": ["basis"], "source": "udzbenik p.33" },
+
+    { "id": "v.02.hrvatska", "hr": "Hrvatska", "nl": "Kroatië", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Hrvatske", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.njemacka", "hr": "Njemačka", "nl": "Duitsland", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Njemačke", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.italija", "hr": "Italija", "nl": "Italië", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "Italije", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.poljska", "hr": "Poljska", "nl": "Polen", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Poljske", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.rusija", "hr": "Rusija", "nl": "Rusland", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "Rusije", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.japan", "hr": "Japan", "nl": "Japan", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "Japana", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.engleska", "hr": "Engleska", "nl": "Engeland", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Engleske", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.francuska", "hr": "Francuska", "nl": "Frankrijk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Francuske", "tags": ["land"], "source": "udzbenik p.35" },
+    { "id": "v.02.nizozemska", "hr": "Nizozemska", "nl": "Nederland", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "adjectival", "gen_sg": "Nizozemske", "tags": ["land"], "source": "aangevuld" },
+    { "id": "v.02.cile", "hr": "Čile", "nl": "Chili", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "Čilea", "tags": ["land"], "source": "udzbenik p.34" },
+
+    { "id": "v.02.hrvat", "hr": "Hrvat", "nl": "Kroaat", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Hrvata", "nom_pl": "Hrvati", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.nijemac", "hr": "Nijemac", "nl": "Duitser", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Nijemca", "nom_pl": "Nijemci", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.njemica", "hr": "Njemica", "nl": "Duitse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Njemice", "nom_pl": "Njemice", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.talijan", "hr": "Talijan", "nl": "Italiaan", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Talijana", "nom_pl": "Talijani", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.talijanka", "hr": "Talijanka", "nl": "Italiaanse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Talijanke", "nom_pl": "Talijanke", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.poljak", "hr": "Poljak", "nl": "Pool", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Poljaka", "nom_pl": "Poljaci", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.poljakinja", "hr": "Poljakinja", "nl": "Poolse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Poljakinje", "nom_pl": "Poljakinje", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.japanac", "hr": "Japanac", "nl": "Japanner", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Japanca", "nom_pl": "Japanci", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.japanka", "hr": "Japanka", "nl": "Japanse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Japanke", "nom_pl": "Japanke", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.englez", "hr": "Englez", "nl": "Engelsman", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Engleza", "nom_pl": "Englezi", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.engleskinja", "hr": "Engleskinja", "nl": "Engelse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Engleskinje", "nom_pl": "Engleskinje", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.rus", "hr": "Rus", "nl": "Rus", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Rusa", "nom_pl": "Rusi", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.ruskinja", "hr": "Ruskinja", "nl": "Russin", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Ruskinje", "nom_pl": "Ruskinje", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.francuz", "hr": "Francuz", "nl": "Fransman", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Francuza", "nom_pl": "Francuzi", "tags": ["nationaliteit"], "source": "udzbenik p.35" },
+    { "id": "v.02.nizozemac", "hr": "Nizozemac", "nl": "Nederlander", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Nizozemca", "nom_pl": "Nizozemci", "tags": ["nationaliteit"], "source": "aangevuld" },
+    { "id": "v.02.nizozemka", "hr": "Nizozemka", "nl": "Nederlandse", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "Nizozemke", "nom_pl": "Nizozemke", "tags": ["nationaliteit"], "source": "aangevuld" },
+    { "id": "v.02.stranac", "hr": "stranac", "nl": "buitenlander", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "stranca", "nom_pl": "stranci", "tags": ["persoon"], "source": "udzbenik p.34" },
+
+    { "id": "v.02.nego", "hr": "nego", "nl": "maar (na ontkenning)", "pos": "conj", "tags": ["basis"], "source": "udzbenik p.32" },
+    { "id": "v.02.ali", "hr": "ali", "nl": "maar", "pos": "conj", "tags": ["basis"], "source": "aangevuld" },
+    { "id": "v.02.gdje", "hr": "gdje", "nl": "waar", "pos": "adv", "tags": ["vraagwoord"], "source": "udzbenik p.34" },
+    { "id": "v.02.blizu", "hr": "blizu", "nl": "dichtbij", "pos": "adv", "tags": ["plaats"], "source": "udzbenik p.34" },
+    { "id": "v.02.daleko", "hr": "daleko", "nl": "ver", "pos": "adv", "tags": ["plaats"], "source": "udzbenik p.34" },
+    { "id": "v.02.umoran", "hr": "umoran", "nl": "moe", "pos": "adj", "tags": ["gevoel"], "source": "udzbenik p.34" },
+    { "id": "v.02.zanimljivo", "hr": "zanimljivo", "nl": "interessant", "pos": "adv", "tags": ["reactie"], "source": "udzbenik p.34" },
+    { "id": "v.02.naravno", "hr": "naravno", "nl": "natuurlijk", "pos": "adv", "tags": ["reactie"], "source": "udzbenik p.34" },
+    { "id": "v.02.novac", "hr": "novac", "nl": "geld", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "novca", "tags": ["ding"], "source": "udzbenik p.34" },
+    { "id": "v.02.ime", "hr": "ime", "nl": "naam", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "imena", "nom_pl": "imena", "tags": ["basis"], "source": "udzbenik p.34" },
+    { "id": "v.02.zemlja", "hr": "zemlja", "nl": "land", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "zemlje", "nom_pl": "zemlje", "tags": ["basis"], "source": "udzbenik p.34" },
+    { "id": "v.02.sutra", "hr": "sutra", "nl": "morgen", "pos": "adv", "tags": ["tijd"], "source": "udzbenik p.34" },
+    { "id": "v.02.laku_noc", "hr": "Laku noć!", "nl": "Welterusten!", "pos": "phrase", "tags": ["afscheid"], "source": "udzbenik p.34" },
+    { "id": "v.02.hvala_lijepa", "hr": "Hvala lijepa!", "nl": "Hartelijk dank!", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.34" },
+    { "id": "v.02.molim_vas", "hr": "Molim Vas", "nl": "Alstublieft / Pardon (aanspreken)", "pos": "phrase", "tags": ["beleefdheid"], "source": "udzbenik p.34" },
+    { "id": "v.02.sto_ste_po_zanimanju", "hr": "Što ste po zanimanju?", "nl": "Wat bent u van beroep?", "pos": "phrase", "tags": ["vraag"], "source": "udzbenik p.34" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.02.1",
+      "title_nl": "In de taxi",
+      "kind": "input",
+      "text_hr": "Pablo: Dobra večer! Molim Vas, gdje je hotel Dubrovnik?\nTaksist: Dobra večer! Hotel Dubrovnik je blizu. Uđite!\nPablo: Hvala lijepa!\nTaksist: Oprostite, Vi ste stranac?\nPablo: Da, da. Ja sam Čileanac.\nTaksist: Uh, Čile je daleko! Jeste li umorni?\nPablo: Hvala na pitanju, jako sam umoran.\nTaksist: Evo, ovo je hotel Dubrovnik.\nPablo: Hvala! Izvolite novac!\nTaksist: Hvala lijepa! Ugodan boravak i laku noć!\nPablo: Hvala Vam! Laku noć!",
+      "translation_nl": "Pablo: Goedenavond! Pardon, waar is hotel Dubrovnik?\nTaxichauffeur: Goedenavond! Hotel Dubrovnik is dichtbij. Stapt u in!\nPablo: Hartelijk dank!\nTaxichauffeur: Neemt u mij niet kwalijk, bent u buitenlander?\nPablo: Ja, ja. Ik ben Chileen.\nTaxichauffeur: Oeh, Chili is ver! Bent u moe?\nPablo: Dank voor het vragen, ik ben erg moe.\nTaxichauffeur: Kijk, dit is hotel Dubrovnik.\nPablo: Dank u! Alstublieft, het geld!\nTaxichauffeur: Hartelijk dank! Een prettig verblijf en welterusten!\nPablo: Dank u wel! Welterusten!",
+      "source": "udzbenik p.34",
+      "exercises": [
+        {
+          "id": "e.02.001",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vraag naar de locatie aan.",
+          "given": "Molim Vas, ___ je hotel Dubrovnik?",
+          "answer": "gdje",
+          "accepts": ["gdje"],
+          "explain_nl": "gdje = waar. Let op: gdje vraagt naar een plaats waar iets ís, niet waarheen je gaat.",
+          "targets": ["v.02.gdje"],
+          "difficulty": 1,
+          "audio": "Molim Vas, gdje je hotel Dubrovnik?",
+          "source": "vježbenica p.16"
+        },
+        {
+          "id": "e.02.002",
+          "type": "translate_hr_nl",
+          "mode": "receptive",
+          "prompt_nl": "Vertaal naar het Nederlands.",
+          "given": "Oprostite, Vi ste stranac?",
+          "answer": "Neemt u mij niet kwalijk, bent u buitenlander?",
+          "accepts": [
+            "Neemt u mij niet kwalijk, bent u buitenlander?",
+            "Sorry, bent u buitenlander?",
+            "Pardon, bent u buitenlander?"
+          ],
+          "targets": ["v.02.stranac"],
+          "difficulty": 2,
+          "source": "udzbenik p.34"
+        },
+        {
+          "id": "e.02.003",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Hvala na pitanju, jako sam umoran.",
+          "answer": "Hvala na pitanju, jako sam umoran.",
+          "accepts": ["Hvala na pitanju, jako sam umoran.", "Hvala na pitanju jako sam umoran."],
+          "targets": ["v.02.umoran"],
+          "difficulty": 3,
+          "source": "udzbenik p.34"
+        }
+      ]
+    },
+    {
+      "id": "s.02.2",
+      "title_nl": "Beroepen",
+      "kind": "grammar",
+      "source": "udzbenik p.32-33",
+      "exercises": [
+        {
+          "id": "e.02.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee vormen per beroep",
+          "body_nl": "Elk beroep heeft een mannelijke en een vrouwelijke vorm, en je hoort ze allebei te kennen. De vrouwelijke maak je meestal met **-ica** (liječnik → liječnica) of **-ka** (novinar → novinarka).\n\nWelke van de twee het wordt, is niet uit de vorm af te leiden — leer het paar daarom als één brok, net zoals je bij een zelfstandig naamwoord het geslacht meeleert.\n\nEn let op: er komt geen lidwoord bij. *Ja sam student*, niet *ja sam jedan student*.",
+          "targets": ["g.02.zanimanja"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.02.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Geef de vrouwelijke vorm.",
+          "given": "On je liječnik, a ona je ___.",
+          "answer": "liječnica",
+          "accepts": ["liječnica"],
+          "explain_nl": "liječnik → liječnica, met -ica.",
+          "targets": ["g.02.zanimanja", "v.02.lijecnica"],
+          "difficulty": 2,
+          "audio": "On je liječnik, a ona je liječnica.",
+          "source": "udzbenik p.33"
+        },
+        {
+          "id": "e.02.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Geef de vrouwelijke vorm.",
+          "given": "On je novinar, a ona je ___.",
+          "answer": "novinarka",
+          "accepts": ["novinarka"],
+          "explain_nl": "novinar → novinarka, met -ka. Niet *novinarica.",
+          "targets": ["g.02.zanimanja", "v.02.novinarka"],
+          "difficulty": 3,
+          "audio": "On je novinar, a ona je novinarka.",
+          "source": "udzbenik p.33"
+        },
+        {
+          "id": "e.02.013",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort bij Ana?",
+          "given": "Ana je ___.",
+          "answer": "učiteljica",
+          "distractors": ["učitelj", "učiteljka", "učiteljina"],
+          "explain_nl": "učitelj → učiteljica. De -ica is hier de juiste uitgang.",
+          "targets": ["g.02.zanimanja", "v.02.uciteljica"],
+          "difficulty": 2,
+          "source": "udzbenik p.32"
+        },
+        {
+          "id": "e.02.014",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Corrigeren met nego",
+          "body_nl": "Om iemand te verbeteren gebruik je **ne ... nego ...**:\n\n*Je li Jerko policajac?* — *Ne, on nije policajac, **nego** poštar.*\n\nnego betekent 'maar wel' en kan alleen ná een ontkenning staan. Voor een gewone tegenstelling gebruik je **ali**: *Stan je malen, ali lijep.*\n\nDit is een val voor Nederlandstaligen, omdat het Nederlands voor allebei gewoon 'maar' zegt.",
+          "targets": ["g.02.nego"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.02.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Corrigeer de aanname. Vul aan met de juiste vorm.",
+          "given": "Je li Josip kuhar? — Ne, Josip nije kuhar, ___ liječnik.",
+          "answer": "nego",
+          "accepts": ["nego"],
+          "explain_nl": "Na een ontkenning altijd nego, nooit ali.",
+          "targets": ["g.02.nego"],
+          "difficulty": 2,
+          "audio": "Ne, Josip nije kuhar, nego liječnik.",
+          "source": "udzbenik p.32"
+        },
+        {
+          "id": "e.02.016",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ne, Nina nije učiteljica, ali pjevačica.",
+          "answer": "Ne, Nina nije učiteljica, nego pjevačica.",
+          "accepts": ["Ne, Nina nije učiteljica, nego pjevačica.", "Ne, Nina nije učiteljica nego pjevačica."],
+          "explain_nl": "Er staat een ontkenning voor, dus nego in plaats van ali.",
+          "targets": ["g.02.nego", "v.02.pjevacica"],
+          "difficulty": 4,
+          "source": "udzbenik p.32"
+        },
+        {
+          "id": "e.02.017",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Wat bent u van beroep? — Ik ben journaliste.",
+          "answer": "Što ste po zanimanju? Ja sam novinarka.",
+          "accepts": [
+            "Što ste po zanimanju? Ja sam novinarka.",
+            "Što ste po zanimanju? Novinarka sam.",
+            "Što ste po zanimanju? — Ja sam novinarka."
+          ],
+          "explain_nl": "Vaste vraag: Što ste po zanimanju? Het antwoord staat in de nominatief, zonder lidwoord.",
+          "targets": ["v.02.sto_ste_po_zanimanju", "v.02.novinarka", "g.02.nominativ"],
+          "difficulty": 4,
+          "audio": "Što ste po zanimanju? Ja sam novinarka.",
+          "source": "udzbenik p.34"
+        }
+      ]
+    },
+    {
+      "id": "s.02.3",
+      "title_nl": "Nationaliteiten",
+      "kind": "practice",
+      "source": "udzbenik p.35",
+      "exercises": [
+        {
+          "id": "e.02.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Van land naar mens",
+          "body_nl": "Uit een landsnaam bouw je de inwoner met een klein setje achtervoegsels:\n\n**-ac**: Japan → Japan*ac* · **-anac**: Austrija → Austrij*anac* · **-anin**: Beč → Beč*anin* · **-čanin**: Zagreb → Zagrep*čanin*\n\nDe vrouwelijke vorm komt daar bovenop: -ica, -ka, -inja of -kinja.\n\nTwee die je uit je hoofd moet leren omdat ze niet meedoen: **Njemačka → Nijemac / Njemica** en **Italija → Talijan / Talijanka**.",
+          "targets": ["g.02.nacionalnosti"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.02.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de mannelijke en vrouwelijke inwoner in.",
+          "given": "NJEMAČKA — On je ___, a ona je Njemica.",
+          "answer": "Nijemac",
+          "accepts": ["Nijemac"],
+          "explain_nl": "Onregelmatig: Njemačka → Nijemac. De klinker verandert.",
+          "targets": ["g.02.nacionalnosti", "v.02.nijemac"],
+          "difficulty": 4,
+          "audio": "On je Nijemac, a ona je Njemica.",
+          "source": "vježbenica p.17"
+        },
+        {
+          "id": "e.02.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vrouwelijke inwoner in.",
+          "given": "JAPAN — On je Japanac, a ona je ___.",
+          "answer": "Japanka",
+          "accepts": ["Japanka"],
+          "targets": ["g.02.nacionalnosti", "v.02.japanka"],
+          "difficulty": 2,
+          "audio": "On je Japanac, a ona je Japanka.",
+          "source": "vježbenica p.17"
+        },
+        {
+          "id": "e.02.023",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het land aan de mannelijke inwoner.",
+          "pairs": [
+            { "hr": "Hrvatska", "nl": "Hrvat" },
+            { "hr": "Italija", "nl": "Talijan" },
+            { "hr": "Poljska", "nl": "Poljak" },
+            { "hr": "Engleska", "nl": "Englez" }
+          ],
+          "targets": ["g.02.nacionalnosti", "v.02.hrvat", "v.02.talijan", "v.02.poljak", "v.02.englez"],
+          "difficulty": 2,
+          "source": "udzbenik p.35"
+        },
+        {
+          "id": "e.02.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Antwoord bevestigend met de lange vorm.",
+          "given": "Je li Davor Hrvat? — Da, ___. Davor je Hrvat.",
+          "answer": "jest",
+          "accepts": ["jest", "jeste"],
+          "explain_nl": "Kort antwoord in de 3e persoon enkelvoud: jest. Herhaling uit les 1.",
+          "targets": ["g.biti.present.long", "v.02.hrvat"],
+          "difficulty": 3,
+          "audio": "Je li Davor Hrvat? Da, jest.",
+          "source": "vježbenica p.17"
+        },
+        {
+          "id": "e.02.025",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Ne", "ja", "nisam", "Talijanka", "Ja", "sam", "Hrvatica"],
+          "answer": "Ne, ja nisam Talijanka. Ja sam Hrvatica.",
+          "accepts": [
+            "Ne, ja nisam Talijanka. Ja sam Hrvatica.",
+            "Ne ja nisam Talijanka Ja sam Hrvatica"
+          ],
+          "explain_nl": "Ontkenning met nisam, daarna de bevestiging in een nieuwe zin.",
+          "targets": ["g.biti.present.negative", "v.02.talijanka"],
+          "difficulty": 3,
+          "audio": "Ne, ja nisam Talijanka. Ja sam Hrvatica.",
+          "source": "vježbenica p.17"
+        },
+        {
+          "id": "e.02.026",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Zij (meervoud, vrouwen) zijn Italiaansen.",
+          "answer": "One su Talijanke.",
+          "accepts": ["One su Talijanke."],
+          "explain_nl": "one = uitsluitend vrouwelijke groep; Talijanka → Talijanke in het meervoud.",
+          "targets": ["g.pron.personal", "v.02.talijanka", "g.02.nacionalnosti"],
+          "difficulty": 4,
+          "audio": "One su Talijanke.",
+          "source": "vježbenica p.17"
+        },
+        {
+          "id": "e.02.027",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Što ste po zanimanju i odakle ste?",
+          "given": "Što ste po zanimanju i odakle ste?",
+          "model_answer": "Ja sam student. Ja sam Nizozemac.",
+          "rubric_nl": [
+            "Noemt een beroep in de nominatief",
+            "Noemt een nationaliteit met hoofdletter",
+            "Gebruikt biti correct in de 1e persoon"
+          ],
+          "targets": ["g.02.zanimanja", "g.02.nacionalnosti", "g.biti.present.short"],
+          "difficulty": 4,
+          "source": "udzbenik p.34"
+        }
+      ]
+    },
+    {
+      "id": "s.02.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.02.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Nee, hij is geen kok, maar arts.",
+          "answer": "Ne, on nije kuhar, nego liječnik.",
+          "accepts": ["Ne, on nije kuhar, nego liječnik.", "Ne, on nije kuhar nego liječnik."],
+          "explain_nl": "Ontkenning met nije, correctie met nego, beroepen zonder lidwoord.",
+          "targets": ["g.02.nego", "g.biti.present.negative", "v.02.kuhar", "v.02.lijecnik"],
+          "difficulty": 5,
+          "audio": "Ne, on nije kuhar, nego liječnik.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.02.031",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ana je liječnik.",
+          "answer": "Ana je liječnica.",
+          "accepts": ["Ana je liječnica."],
+          "explain_nl": "Bij een vrouw hoort de vrouwelijke beroepsvorm — dat is in het Kroatisch de norm, niet een keuze.",
+          "targets": ["g.02.zanimanja", "v.02.lijecnica"],
+          "difficulty": 3,
+          "source": "aangevuld"
+        }
+      ]
+    }
+  ]
+}

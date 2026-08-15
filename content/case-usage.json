@@ -1,0 +1,254 @@
+{
+  "$about": "Usage-based naamvaltraining. Bij Russische naamvalsmorfologie scoorde een usage-based groep 90% tegen 66% voor rule-based instructie. Het principe: je oefent niet de uitgang maar de kéuze — waarom vraagt deze context deze naamval? Elke zin is uitgeschreven, er wordt niets verbogen wat de brondata niet geeft.",
+  "$source": "aangevuld",
+  "cases": [
+    { "key": "nominativ", "label": "nominatief", "lesson": 1 },
+    { "key": "akuzativ", "label": "accusatief", "lesson": 5 },
+    { "key": "lokativ", "label": "locatief", "lesson": 10 },
+    { "key": "dativ", "label": "datief", "lesson": 12 },
+    { "key": "genitiv", "label": "genitief", "lesson": 14 },
+    { "key": "instrumental", "label": "instrumentalis", "lesson": 15 }
+  ],
+  "items": [
+    {
+      "id": "cu.001",
+      "sentence_hr": "Idem u Zagreb.",
+      "sentence_nl": "Ik ga naar Zagreb.",
+      "focus": "Zagreb",
+      "case": "akuzativ",
+      "lesson": 7,
+      "why_nl": "Er is beweging naar een plaats toe. Bij richting vraagt «u» de accusatief.",
+      "contrast_nl": "Vergelijk «Živim u Zagrebu» — daar is geen beweging, dus locatief."
+    },
+    {
+      "id": "cu.002",
+      "sentence_hr": "Živim u Zagrebu.",
+      "sentence_nl": "Ik woon in Zagreb.",
+      "focus": "Zagrebu",
+      "case": "lokativ",
+      "lesson": 10,
+      "why_nl": "Dit is een plaats waar iets is, geen richting. Bij plaats vraagt «u» de locatief.",
+      "contrast_nl": "Vergelijk «Idem u Zagreb» — daar ga je ergens heen, dus accusatief."
+    },
+    {
+      "id": "cu.003",
+      "sentence_hr": "Čekam autobus.",
+      "sentence_nl": "Ik wacht op de bus.",
+      "focus": "autobus",
+      "case": "akuzativ",
+      "lesson": 5,
+      "why_nl": "De bus ondergaat de handeling: hij is lijdend voorwerp. Autobus is mannelijk en levenloos, dus de vorm verandert niet — maar de naamval is wel de accusatief.",
+      "contrast_nl": "Bij een levend mannelijk woord zie je het wél: «Čekam brata», niet «brat»."
+    },
+    {
+      "id": "cu.004",
+      "sentence_hr": "Idem na tržnicu.",
+      "sentence_nl": "Ik ga naar de markt.",
+      "focus": "tržnicu",
+      "case": "akuzativ",
+      "lesson": 7,
+      "why_nl": "Richting, dus accusatief. Vrouwelijk -a wordt -u: tržnica → tržnicu.",
+      "contrast_nl": "Vergelijk «Na tržnici je gužva» (op de markt is het druk) — plaats, dus locatief."
+    },
+    {
+      "id": "cu.005",
+      "sentence_hr": "Kava je na stolu.",
+      "sentence_nl": "De koffie staat op tafel.",
+      "focus": "stolu",
+      "case": "lokativ",
+      "lesson": 10,
+      "why_nl": "«Na» met een plaats waar iets zich bevindt vraagt de locatief.",
+      "contrast_nl": "«Stavljam kavu na stol» — daar zet je iets ergens op, dus accusatief."
+    },
+    {
+      "id": "cu.006",
+      "sentence_hr": "Putujem autobusom.",
+      "sentence_nl": "Ik reis met de bus.",
+      "focus": "autobusom",
+      "case": "instrumental",
+      "lesson": 15,
+      "why_nl": "Het middel waarmee je iets doet staat in de instrumentalis — en zonder voorzetsel.",
+      "contrast_nl": "Let op: geen «s». «S autobusom» zou betekenen dat de bus met je meereist."
+    },
+    {
+      "id": "cu.007",
+      "sentence_hr": "Idem s Petrom.",
+      "sentence_nl": "Ik ga met Petra.",
+      "focus": "Petrom",
+      "case": "instrumental",
+      "lesson": 15,
+      "why_nl": "Gezelschap — samen mét iemand. Dan gebruik je «s» plus de instrumentalis.",
+      "contrast_nl": "Bij een middel valt «s» juist weg: «pišem olovkom» (ik schrijf met een pen)."
+    },
+    {
+      "id": "cu.008",
+      "sentence_hr": "Ovo je knjiga moje sestre.",
+      "sentence_nl": "Dit is het boek van mijn zus.",
+      "focus": "sestre",
+      "case": "genitiv",
+      "lesson": 14,
+      "why_nl": "Bezit: van wie is het boek? De bezitter staat in de genitief.",
+      "contrast_nl": "Bij één persoon kan het ook met een bijvoeglijk naamwoord: «sestrina knjiga»."
+    },
+    {
+      "id": "cu.009",
+      "sentence_hr": "Nemam vremena.",
+      "sentence_nl": "Ik heb geen tijd.",
+      "focus": "vremena",
+      "case": "genitiv",
+      "lesson": 14,
+      "why_nl": "Na een ontkend «imati» komt het lijdend voorwerp in de genitief, niet in de accusatief.",
+      "contrast_nl": "Bevestigend is het wél accusatief: «Imam vrijeme»."
+    },
+    {
+      "id": "cu.010",
+      "sentence_hr": "Kupujem kilogram jabuka.",
+      "sentence_nl": "Ik koop een kilo appels.",
+      "focus": "jabuka",
+      "case": "genitiv",
+      "lesson": 14,
+      "why_nl": "Na een maat of hoeveelheid (kilogram, litra, mnogo, malo) volgt de genitief.",
+      "contrast_nl": "Zonder maat is het gewoon accusatief: «Kupujem jabuke»."
+    },
+    {
+      "id": "cu.011",
+      "sentence_hr": "Dajem knjigu prijatelju.",
+      "sentence_nl": "Ik geef het boek aan een vriend.",
+      "focus": "prijatelju",
+      "case": "dativ",
+      "lesson": 12,
+      "why_nl": "De ontvanger van iets staat in de datief: aan wie geef je het?",
+      "contrast_nl": "Het boek zelf is lijdend voorwerp en staat in de accusatief: knjigu."
+    },
+    {
+      "id": "cu.012",
+      "sentence_hr": "Hladno mi je.",
+      "sentence_nl": "Ik heb het koud.",
+      "focus": "mi",
+      "case": "dativ",
+      "lesson": 19,
+      "why_nl": "Bij gevoelens is degene die iets ervaart de datief. Letterlijk: «het is koud aan mij».",
+      "contrast_nl": "Niet «Ja sam hladan» — dat betekent dat jij koud aanvoelt voor anderen."
+    },
+    {
+      "id": "cu.013",
+      "sentence_hr": "Sviđa mi se ovaj grad.",
+      "sentence_nl": "Deze stad bevalt me.",
+      "focus": "mi",
+      "case": "dativ",
+      "lesson": 19,
+      "why_nl": "Bij «sviđati se» is het ding het onderwerp en de persoon de datief — omgekeerd aan het Nederlands.",
+      "contrast_nl": "Meervoud verandert het werkwoord, niet de persoon: «Sviđaju mi se ovi gradovi»."
+    },
+    {
+      "id": "cu.014",
+      "sentence_hr": "Ovo je moja sestra.",
+      "sentence_nl": "Dit is mijn zus.",
+      "focus": "sestra",
+      "case": "nominativ",
+      "lesson": 2,
+      "why_nl": "Na «biti» blijft het naamwoord in de nominatief staan — het is geen lijdend voorwerp maar een gelijkstelling.",
+      "contrast_nl": "Vergelijk «Vidim sestru» — daar ondergaat ze de handeling, dus accusatief."
+    },
+    {
+      "id": "cu.015",
+      "sentence_hr": "Dolazim iz Nizozemske.",
+      "sentence_nl": "Ik kom uit Nederland.",
+      "focus": "Nizozemske",
+      "case": "genitiv",
+      "lesson": 16,
+      "why_nl": "Herkomst: «iz» vraagt altijd de genitief.",
+      "contrast_nl": "De tegenhanger «u» + accusatief geeft juist de bestemming: «Idem u Nizozemsku»."
+    },
+    {
+      "id": "cu.016",
+      "sentence_hr": "Knjiga je pored prozora.",
+      "sentence_nl": "Het boek ligt naast het raam.",
+      "focus": "prozora",
+      "case": "genitiv",
+      "lesson": 16,
+      "why_nl": "Plaatsvoorzetsels als pored, blizu, iznad en ispod vragen de genitief, niet de locatief.",
+      "contrast_nl": "Alleen u, na, o en pri gaan met de locatief; de rest van de plaatsbepalingen niet."
+    },
+    {
+      "id": "cu.017",
+      "sentence_hr": "Razgovaramo o filmu.",
+      "sentence_nl": "We praten over de film.",
+      "focus": "filmu",
+      "case": "lokativ",
+      "lesson": 10,
+      "why_nl": "«O» in de betekenis 'over, aangaande' vraagt de locatief.",
+      "contrast_nl": "Dit is het enige veelgebruikte voorzetsel met de locatief dat niets met plaats te maken heeft."
+    },
+    {
+      "id": "cu.018",
+      "sentence_hr": "Boli me glava.",
+      "sentence_nl": "Ik heb hoofdpijn.",
+      "focus": "me",
+      "case": "akuzativ",
+      "lesson": 18,
+      "why_nl": "Bij «boljeti» is het lichaamsdeel het onderwerp en de persoon het lijdend voorwerp. Letterlijk: «het hoofd doet mij pijn».",
+      "contrast_nl": "Let op het verschil met gevoelens, die de datief nemen: «hladno mi je»."
+    },
+    {
+      "id": "cu.019",
+      "sentence_hr": "Idem k liječniku.",
+      "sentence_nl": "Ik ga naar de dokter.",
+      "focus": "liječniku",
+      "case": "dativ",
+      "lesson": 12,
+      "why_nl": "Richting náár een persoon gaat met «k» plus de datief — niet met «u» of «na».",
+      "contrast_nl": "Bij een plaats gebruik je wel u of na: «Idem u bolnicu» (ik ga naar het ziekenhuis)."
+    },
+    {
+      "id": "cu.020",
+      "sentence_hr": "Pišem pismo olovkom.",
+      "sentence_nl": "Ik schrijf een brief met een potlood.",
+      "focus": "olovkom",
+      "case": "instrumental",
+      "lesson": 15,
+      "why_nl": "Het gereedschap waarmee je iets doet: instrumentalis, zonder voorzetsel.",
+      "contrast_nl": "Het lijdend voorwerp «pismo» staat in de accusatief — twee naamvallen in één zin."
+    },
+    {
+      "id": "cu.021",
+      "sentence_hr": "Vidim brata.",
+      "sentence_nl": "Ik zie mijn broer.",
+      "focus": "brata",
+      "case": "akuzativ",
+      "lesson": 5,
+      "why_nl": "Lijdend voorwerp, dus accusatief. Brat is mannelijk én levend, en dan lijkt de accusatief op de genitief: brata.",
+      "contrast_nl": "Bij een levenloos woord verandert er niets: «Vidim stol»."
+    },
+    {
+      "id": "cu.022",
+      "sentence_hr": "Čaša je bez vode.",
+      "sentence_nl": "Het glas is zonder water.",
+      "focus": "vode",
+      "case": "genitiv",
+      "lesson": 16,
+      "why_nl": "«Bez» betekent zonder en vraagt de genitief — de afwezigheid van iets.",
+      "contrast_nl": "Ontkenning en afwezigheid trekken in het Kroatisch vaak de genitief aan."
+    },
+    {
+      "id": "cu.023",
+      "sentence_hr": "Radim u uredu.",
+      "sentence_nl": "Ik werk op kantoor.",
+      "focus": "uredu",
+      "case": "lokativ",
+      "lesson": 10,
+      "why_nl": "Waar je bent terwijl je iets doet: locatief.",
+      "contrast_nl": "«Idem u ured» zou betekenen dat je erheen gaat — dan accusatief."
+    },
+    {
+      "id": "cu.024",
+      "sentence_hr": "Ovo je poklon za tebe.",
+      "sentence_nl": "Dit is een cadeau voor jou.",
+      "focus": "tebe",
+      "case": "akuzativ",
+      "lesson": 13,
+      "why_nl": "«Za» in de betekenis 'bestemd voor' vraagt de accusatief.",
+      "contrast_nl": "Verwar het niet met de datief: die gebruik je bij werkwoorden van geven, niet na «za»."
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   JADRAN — het ontwerpsysteem van dit platform
+   ═══════════════════════════════════════════════════════════════════════════
+
+   De aanleiding is de taal zelf. Kroatisch leer je niet uit een neutrale doos;
+   je leert het omdat je naar een plek toe wilt. Dus komt het palet uit die
+   plek: de Adriatische zee als accent, zonverbleekt kalksteen als papier en
+   terracotta dakpannen als warmte. Alles vlak en massief — geen gradients,
+   geen textuur. Het enige ornament is de šahovnica, als klein plat dambord
+   (de Checker-component), en die verdient zijn plek als merkteken, niet als
+   versiering.
+
+   Drie letters, elk met één taak:
+     Fraunces      — display. Een variabele schreef met optische as; geeft de
+                     koppen karakter zonder decoratief te worden.
+     Plus Jakarta  — interface. Geometrisch, vriendelijk, en met complete
+                     Latin-Extended zodat č/ć/š/ž/đ echt getekend zijn en niet
+                     uit een fallback komen vallen.
+     Literata      — lezen. Ontworpen voor schermlezen; draagt de verhalen.
+
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ------------------------------------------------------------- webfonts --- */
+/* Zelf gehost. Geen CDN, geen verzoek dat de machine verlaat — dat is dezelfde
+   regel als voor de rest van het platform. */
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/jakarta-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/jakarta-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/literata-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/literata-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --------------------------------------------------------------- tokens --- */
+
+@theme {
+  /* Ondergronden — kalksteen, papier, zee.
+     `plane` is bewust niet wit: een warme grond maakt de witte kaart erop een
+     echt object in plaats van een rand op niets. */
+  --color-plane: #faf7f1;
+  --color-plane-deep: #f2ede3;
+  --color-surface: #ffffff;
+  --color-sunken: #f4f1e9;
+
+  /* Inkt */
+  --color-ink: #10202f;
+  --color-ink-secondary: #4a5768;
+  --color-ink-muted: #8b95a5;
+
+  /* Lijnen — warm, zodat ze bij het kalksteen horen en niet bij het grijs. */
+  --color-line: #e7e2d6;
+  --color-line-soft: #f0ece2;
+  --color-line-strong: #cdc6b6;
+
+  /* Accent — Adriatisch blauw. 6.10:1 op wit, dus ook als tekst bruikbaar. */
+  --color-accent: #0e5ec7;
+  --color-accent-hover: #0a4a9e;
+  --color-accent-bright: #2f86f0;
+  --color-accent-wash: #ecf3fd;
+  --color-accent-ring: #b3d2f7;
+
+  /* Vlagrood — alleen voor het merkteken, de šahovnica. Bewust geen
+     interface-kleur: dat het nergens anders opduikt, is precies waarom het
+     merk zich onderscheidt van een waarschuwing. */
+  --color-flag: #d81e2c;
+
+  /* Terracotta — de daken. Dit is de kleur van energie: reeks, XP, vuur. */
+  --color-warm: #c2410c;
+  --color-warm-bright: #f0724a;
+  --color-warm-wash: #fdf0ea;
+
+  /* Goud — laat licht op steen. Alleen voor XP en mijlpalen. */
+  --color-gold: #b45309;
+  --color-gold-bright: #f5a524;
+  --color-gold-wash: #fdf6e7;
+
+  /* Semantiek */
+  --color-good: #0e7a48;
+  --color-good-ink: #0b5a35;
+  --color-good-wash: #ecf8f1;
+  --color-warn: #a05a00;
+  --color-warn-wash: #fdf5e7;
+  --color-bad: #d63b3b;
+  --color-bad-ink: #a82525;
+  --color-bad-wash: #fdf0f0;
+
+  /* Ordinale ramp voor de heatmap. Gevalideerd tegen wit: monotone lichtheid,
+     kleinste stap 0.079 ΔL*, lichtste stap 2.25:1, hue-spreiding 3°.
+     Niet wijzigen zonder opnieuw te valideren. */
+  --color-ramp-0: #ece7dc;
+  --color-ramp-1: #7db0ef;
+  --color-ramp-2: #4a93e8;
+  --color-ramp-3: #1f74dc;
+  --color-ramp-4: #0e5ec7;
+  --color-ramp-5: #0a3a7d;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-reading: "Literata", ui-serif, Georgia, serif;
+
+  --radius-card: 22px;
+  --radius-tile: 16px;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+/* Schaduwen als variabelen: Tailwind's schaduwen zijn neutraal grijs, wat op een
+   warme grond vuil oogt. Deze zijn getint naar de inkt. */
+:root {
+  --lift-1: 0 1px 2px rgba(16, 32, 47, 0.05);
+  --lift-2:
+    0 1px 2px rgba(16, 32, 47, 0.04),
+    0 8px 24px -12px rgba(16, 32, 47, 0.14);
+  --lift-3:
+    0 2px 4px rgba(16, 32, 47, 0.05),
+    0 18px 42px -18px rgba(16, 32, 47, 0.22);
+}
+
+/* ----------------------------------------------------------------- basis --- */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-plane);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv05" 1;
+}
+
+/* Koppen: Fraunces met een lage optische as — dat maakt de vormen strak in
+   plaats van sierlijk, precies wat een studieomgeving nodig heeft. */
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 96, "SOFT" 0;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.06;
+}
+
+.display-soft {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 48;
+  font-weight: 500;
+  letter-spacing: -0.014em;
+}
+
+/* Kroatische tekst. Iets ruimer gespatieerd: de diakritische tekens zitten
+   bovenop de letter en hebben lucht nodig om als teken herkenbaar te blijven. */
+.hr-text {
+  letter-spacing: -0.004em;
+  font-feature-settings: "kern" 1;
+}
+
+.reading {
+  font-family: var(--font-reading);
+  font-variation-settings: "opsz" 18;
+  letter-spacing: -0.003em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------- componenten --- */
+
+@layer components {
+  /* De kaart. Rand als haarlijn, schaduw doet het scheidende werk. */
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--lift-2);
+  }
+
+  /* Interactieve kaart: komt omhoog onder de cursor. */
+  .card-lift {
+    transition:
+      transform 260ms var(--ease-out-quint),
+      box-shadow 260ms var(--ease-out-quint),
+      border-color 260ms var(--ease-out-quint);
+  }
+  .card-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--lift-3);
+    border-color: var(--color-accent-ring);
+  }
+
+  /* Het herovlak: een lichte wash van het accent. Fris en open — het "nu" van
+     de dag krijgt kleur, maar geen donker scherm. */
+  .hero {
+    background-color: var(--color-accent-wash);
+    border: 1px solid var(--color-accent-ring);
+    border-radius: var(--radius-card);
+    box-shadow: var(--lift-2);
+  }
+
+  /* Pil-knoppen. `press` geeft de indruk van indrukken — kleine dingen die
+     een interface levend maken in plaats van geprint. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: -0.008em;
+    white-space: nowrap;
+    transition:
+      background-color 160ms ease,
+      color 160ms ease,
+      border-color 160ms ease,
+      transform 110ms var(--ease-out-quint),
+      box-shadow 160ms ease;
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(1.5px) scale(0.994);
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(10, 74, 158, 0.28);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-accent-hover);
+  }
+  .btn-primary:disabled {
+    background: var(--color-line-strong);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  .btn-ghost {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    color: var(--color-ink-secondary);
+    box-shadow: var(--lift-1);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-accent-ring);
+    color: var(--color-accent);
+    background-color: var(--color-accent-wash);
+  }
+
+  /* Etiket: kleine categorieaanduiding. */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    padding: 0.15rem 0.6rem;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+
+  /* Onderstreping die bij hover doorloopt — gebruikt op tekstlinks in koppen. */
+  .link-sweep {
+    background-image: linear-gradient(var(--color-accent), var(--color-accent));
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 280ms var(--ease-out-quint);
+  }
+  .link-sweep:hover {
+    background-size: 100% 1.5px;
+  }
+}
+
+/* ---------------------------------------------------------------- motie --- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(1.07) translateY(-1px);
+    opacity: 0.92;
+  }
+}
+
+.animate-rise {
+  animation: rise 420ms var(--ease-out-quint) both;
+}
+
+.animate-shake {
+  animation: shake 320ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate-pop {
+  animation: pop 340ms var(--ease-spring) both;
+}
+
+.animate-flicker {
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+/* Staggering: elk kind zet zijn eigen --i, de vertraging volgt daaruit.
+   Zo hoeft geen enkele component een timer of state bij te houden. */
+.stagger > * {
+  animation: rise 460ms var(--ease-out-quint) both;
+  animation-delay: calc(var(--i, 0) * 55ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-shake,
+  .animate-pop,
+  .animate-flicker,
+  .stagger > * {
+    animation: none;
+  }
+  .card-lift,
+  .btn {
+    transition: none;
+  }
+  .card-lift:hover {
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------- rest --- */
+
+::selection {
+  background-color: var(--color-accent-ring);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Smalle, terughoudende scrollbalk in de leesweergave. */
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 9999px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,559 @@
+{
+  "id": "lesson-04",
+  "number": 4,
+  "title_hr": "Karakteristike stvari i ljudi",
+  "title_nl": "Eigenschappen van dingen en mensen",
+  "cefr": "A1.1",
+  "source": { "udzbenik_pages": "57-70", "vjezbenica_pages": "24-27" },
+  "can_do_nl": [
+    "Ik kan kleuren benoemen en er dingen mee beschrijven.",
+    "Ik kan een bijvoeglijk naamwoord laten kloppen met geslacht en getal.",
+    "Ik kan vragen hoe iets is met Kakav? Kakva? Kakvo?",
+    "Ik herken bijvoeglijke naamwoorden met een vluchtige a (dobar → dobra).",
+    "Ik herken bijvoeglijke naamwoorden waarin l een o wordt (veseo → vesela).",
+    "Ik kan bezit uitdrukken met -ov / -ev / -in en herkomst met -ski."
+  ],
+
+  "grammar": [
+    {
+      "id": "g.04.pridjevi",
+      "title_nl": "Bijvoeglijke naamwoorden — congruentie",
+      "cefr": "A1.1",
+      "explanation_nl": "Een bijvoeglijk naamwoord past zich aan aan het zelfstandig naamwoord waar het bij hoort: geslacht én getal. De mannelijke vorm is de kale stam (nov), vrouwelijk krijgt -a (nova), onzijdig -o (novo). In het meervoud: -i, -e, -a.",
+      "contrast_nl": "Nederlands heeft één buigings-e die je er soms wel en soms niet achter plakt ('een nieuw huis' / 'het nieuwe huis'). Kroatisch koppelt de uitgang aan het geslacht van het woord, niet aan lidwoord of bepaaldheid. Je moet dus altijd weten welk geslacht het zelfstandig naamwoord heeft — daarom leer je dat vanaf les 1 mee.",
+      "paradigm": {
+        "caption_nl": "nov (nieuw) — nominatief",
+        "columns": ["muški rod", "ženski rod", "srednji rod"],
+        "rows": [
+          { "label": "jednina", "cells": ["nov stan", "nova kuća", "novo pismo"] },
+          { "label": "množina", "cells": ["novi stanovi", "nove kuće", "nova pisma"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De onzijdige meervoudsuitgang -a lijkt op een vrouwelijk enkelvoud: 'nova pisma' is meervoud, 'nova kuća' enkelvoud.",
+        "Bij djeca en braća gebruik je de vrouwelijke enkelvoudsvorm: 'Djeca su lijepa.'",
+        "Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord, net als in het Nederlands."
+      ],
+      "prerequisites": ["g.noun.gender.nom.sg"],
+      "source": "udzbenik p.58"
+    },
+    {
+      "id": "g.04.kakav",
+      "title_nl": "Kakav? — hoe is het?",
+      "cefr": "A1.1",
+      "explanation_nl": "Om naar een eigenschap te vragen gebruik je kakav, dat zelf ook meebuigt met het woord waarnaar je vraagt: Kakav je stan? Kakva je kuća? Kakvo je pismo? In het meervoud: Kakvi? Kakve? Kakva?",
+      "contrast_nl": "Nederlands heeft één 'hoe' of 'wat voor'. Kroatisch dwingt je het geslacht al in de vraag te kiezen — je kunt dus niet vragen zonder te weten wat voor woord er komt.",
+      "paradigm": {
+        "caption_nl": "Upitne zamjenice — kakav",
+        "columns": ["muški rod", "ženski rod", "srednji rod"],
+        "rows": [
+          { "label": "jednina", "cells": ["Kakav?", "Kakva?", "Kakvo?"] },
+          { "label": "množina", "cells": ["Kakvi?", "Kakve?", "Kakva?"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "kakav verwarren met kako. kako = hoe (op welke manier), kakav = wat voor / hoe is het.",
+        "Vergeten dat kakav zelf verbuigt: 'Kakav je kuća?' is fout, het moet Kakva zijn."
+      ],
+      "prerequisites": ["g.04.pridjevi"],
+      "source": "udzbenik p.58"
+    },
+    {
+      "id": "g.04.nepostojano_a_pridjevi",
+      "title_nl": "Bijvoeglijke naamwoorden met een vluchtige a",
+      "cefr": "A1.1",
+      "explanation_nl": "Veel bijvoeglijke naamwoorden hebben in de mannelijke vorm een a die in alle andere vormen verdwijnt: dobar → dobra, dobro; udoban → udobna; kratak → kratka. Herken ze aan de mannelijke uitgang op -ak, -an of -ar met een medeklinker ervoor.",
+      "contrast_nl": "Dit is dezelfde regel als bij de zelfstandige naamwoorden in les 3 (policajac → policajci), maar nu bij bijvoeglijke naamwoorden. De a zit er alleen om de mannelijke vorm uitspreekbaar te maken.",
+      "paradigm": {
+        "caption_nl": "Vluchtige a in bijvoeglijke naamwoorden",
+        "columns": ["muški rod", "ženski rod", "srednji rod"],
+        "rows": [
+          { "label": "1.", "cells": ["dobar", "dobra", "dobro"] },
+          { "label": "2.", "cells": ["udoban", "udobna", "udobno"] },
+          { "label": "3.", "cells": ["kratak", "kratka", "kratko"] },
+          { "label": "4.", "cells": ["gladan", "gladna", "gladno"] },
+          { "label": "5.", "cells": ["simpatičan", "simpatična", "simpatično"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "De a laten staan: *dobara, *udobana bestaan niet.",
+        "In het mannelijk meervoud verdwijnt de a ook: dobri, niet *dobari.",
+        "Niet elk bijvoeglijk naamwoord op -an doet mee; leer de veelgebruikte als paar."
+      ],
+      "prerequisites": ["g.04.pridjevi"],
+      "source": "vježbenica p.24"
+    },
+    {
+      "id": "g.04.l_o",
+      "title_nl": "Wanneer l een o wordt",
+      "cefr": "A1.1",
+      "explanation_nl": "Bij een handjevol bijvoeglijke naamwoorden staat er in de mannelijke vorm een o waar in de andere vormen een l staat: veseo → vesela, debeo → debela, zreo → zrela, topao → topla. De l aan het eind van een lettergreep is in het Kroatisch historisch een o geworden — je ziet het fossiel alleen nog in de mannelijke vorm.",
+      "contrast_nl": "Er is geen Nederlands equivalent. Het gevolg is wel praktisch: uit 'veseo' kun je 'vesela' niet raden, dus je moet het paar leren.",
+      "paradigm": {
+        "caption_nl": "l → o in de mannelijke vorm",
+        "columns": ["muški rod", "ženski rod", "srednji rod"],
+        "rows": [
+          { "label": "1.", "cells": ["veseo", "vesela", "veselo"] },
+          { "label": "2.", "cells": ["debeo", "debela", "debelo"] },
+          { "label": "3.", "cells": ["zreo", "zrela", "zrelo"] },
+          { "label": "4.", "cells": ["topao", "topla", "toplo"] },
+          { "label": "5.", "cells": ["zao", "zla", "zlo"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "topao en zao hebben én de l→o-wissel én een vluchtige a: topao → topla, zao → zla.",
+        "*veseoa of *debeoa bestaan niet — de o verdwijnt volledig.",
+        "In het meervoud ook met l: veseli, debeli."
+      ],
+      "prerequisites": ["g.04.nepostojano_a_pridjevi"],
+      "source": "vježbenica p.24"
+    },
+    {
+      "id": "g.04.posvojni_pridjevi_zivo",
+      "title_nl": "Bezittelijke bijvoeglijke naamwoorden — van personen",
+      "cefr": "A1.1",
+      "explanation_nl": "Om te zeggen dat iets van een specifieke persoon is, maak je van die persoon een bijvoeglijk naamwoord: -ov na een harde medeklinker (brat → bratov), -ev na een zachte (Šenoa → Šenoin, muž → mužev), en -in bij woorden op -a (tata → tatin, Marija → Marijin, sestra → sestrin). Dat bijvoeglijk naamwoord buigt daarna gewoon mee met het bezeten ding.",
+      "contrast_nl": "Nederlands gebruikt 'van' of een genitief-s ('Ana's boek', 'het boek van Ana'). Kroatisch maakt er op dit niveau een bijvoeglijk naamwoord van — dus het past zich aan aan het ding, niet aan de eigenaar: 'Anina knjiga', 'Anin stan'.",
+      "paradigm": {
+        "caption_nl": "Van persoon naar bezittelijk bijvoeglijk naamwoord",
+        "columns": ["persoon", "achtervoegsel", "voorbeeld"],
+        "rows": [
+          { "label": "brat", "cells": ["-ov", "bratov motor"] },
+          { "label": "djed", "cells": ["-ov", "djedova kuća"] },
+          { "label": "sestra", "cells": ["-in", "sestrin mladić"] },
+          { "label": "tata", "cells": ["-in", "tatine knjige"] },
+          { "label": "Marija", "cells": ["-in", "Marijino računalo"] },
+          { "label": "šefica", "cells": ["-in", "šefičin stol"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "šefica → šefičin: de c wordt č. Datzelfde geldt voor kolegica → kolegičin.",
+        "Petar heeft een vluchtige a: Petar → Petrov, niet *Petarov.",
+        "Het bijvoeglijk naamwoord volgt het bezeten ding: 'tatine knjige' (v. mv.), niet 'tatin knjige'."
+      ],
+      "prerequisites": ["g.04.pridjevi"],
+      "source": "udzbenik p.60, vježbenica p.27"
+    },
+    {
+      "id": "g.04.posvojni_pridjevi_nezivo",
+      "title_nl": "Herkomst met -ski / -čki",
+      "cefr": "A1.1",
+      "explanation_nl": "Van een land of stad maak je een bijvoeglijk naamwoord met -ski: Švicarska → švicarski, Francuska → francuski, Italija → talijanski. Na k of č wordt het -čki: Grčka → grčki. Deze woorden krijgen géén hoofdletter, ook al komt de landsnaam er wel een.",
+      "contrast_nl": "Nederlands schrijft 'Zwitserse kaas' met hoofdletter. Kroatisch schrijft juist 'švicarski sir' met kleine letter — de hoofdletter is voorbehouden aan het land zelf en aan de inwoner.",
+      "paradigm": {
+        "caption_nl": "Land → bijvoeglijk naamwoord",
+        "columns": ["zemlja", "pridjev", "voorbeeld"],
+        "rows": [
+          { "label": "1.", "cells": ["Švicarska", "švicarski, -a, -o", "švicarski sir"] },
+          { "label": "2.", "cells": ["Francuska", "francuski, -a, -o", "francusko vino"] },
+          { "label": "3.", "cells": ["Italija", "talijanski, -a, -o", "talijanske cipele"] },
+          { "label": "4.", "cells": ["Njemačka", "njemački, -a, -o", "njemački auto"] },
+          { "label": "5.", "cells": ["Grčka", "grčki, -a, -o", "grčki hram"] },
+          { "label": "6.", "cells": ["Hrvatska", "hrvatski, -a, -o", "hrvatska kravata"] }
+        ]
+      },
+      "pitfalls_nl": [
+        "Hoofdletter gebruiken: het is 'hrvatski jezik', niet 'Hrvatski jezik'.",
+        "Italija → talijanski, niet *italijanski — dezelfde onregelmatigheid als bij Talijan in les 2.",
+        "Grčka → grčki met -čki, niet -ski."
+      ],
+      "prerequisites": ["g.04.pridjevi", "g.02.nacionalnosti"],
+      "source": "udzbenik p.60"
+    }
+  ],
+
+  "vocab": [
+    { "id": "v.04.crven", "hr": "crven", "nl": "rood", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.plav", "hr": "plav", "nl": "blauw", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.zut", "hr": "žut", "nl": "geel", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.narancast", "hr": "narančast", "nl": "oranje", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.zelen", "hr": "zelen", "nl": "groen", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.ljubicast", "hr": "ljubičast", "nl": "paars", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.ruzicast", "hr": "ružičast", "nl": "roze", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.smed", "hr": "smeđ", "nl": "bruin", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.bijel", "hr": "bijel", "nl": "wit", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.crn", "hr": "crn", "nl": "zwart", "pos": "adj", "tags": ["kleur"], "source": "udzbenik p.59" },
+    { "id": "v.04.boja", "hr": "boja", "nl": "kleur", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "boje", "nom_pl": "boje", "tags": ["kleur"], "source": "udzbenik p.59" },
+
+    { "id": "v.04.nov", "hr": "nov", "nl": "nieuw", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.star", "hr": "star", "nl": "oud", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.velik", "hr": "velik", "nl": "groot", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.malen", "hr": "malen", "nl": "klein", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.visok", "hr": "visok", "nl": "hoog, lang (persoon)", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.brz", "hr": "brz", "nl": "snel", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.spor", "hr": "spor", "nl": "langzaam", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.los", "hr": "loš", "nl": "slecht", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.skup", "hr": "skup", "nl": "duur", "pos": "adj", "tags": ["eigenschap"], "source": "udzbenik p.58" },
+    { "id": "v.04.lijep", "hr": "lijep", "nl": "mooi", "pos": "adj", "tags": ["eigenschap"], "source": "vježbenica p.24" },
+    { "id": "v.04.sirok", "hr": "širok", "nl": "breed", "pos": "adj", "tags": ["eigenschap"], "source": "vježbenica p.24" },
+    { "id": "v.04.vruc", "hr": "vruć", "nl": "heet", "pos": "adj", "tags": ["eigenschap"], "source": "vježbenica p.24" },
+    { "id": "v.04.drag", "hr": "drag", "nl": "lief, dierbaar", "pos": "adj", "tags": ["eigenschap"], "source": "vježbenica p.24" },
+
+    { "id": "v.04.dobar", "hr": "dobar", "nl": "goed", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.udoban", "hr": "udoban", "nl": "comfortabel", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.simpatican", "hr": "simpatičan", "nl": "sympathiek", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.kratak", "hr": "kratak", "nl": "kort", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.odlican", "hr": "odličan", "nl": "uitstekend", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.dugacak", "hr": "dugačak", "nl": "lang", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.jednostavan", "hr": "jednostavan", "nl": "eenvoudig", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.smijesan", "hr": "smiješan", "nl": "grappig", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.gladan", "hr": "gladan", "nl": "hongerig", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.zedan", "hr": "žedan", "nl": "dorstig", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.tuzan", "hr": "tužan", "nl": "verdrietig", "pos": "adj", "tags": ["eigenschap", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.ljut", "hr": "ljut", "nl": "boos, pittig", "pos": "adj", "tags": ["eigenschap"], "source": "vježbenica p.24" },
+
+    { "id": "v.04.veseo", "hr": "veseo", "nl": "vrolijk", "pos": "adj", "tags": ["eigenschap", "l-o"], "source": "vježbenica p.24" },
+    { "id": "v.04.debeo", "hr": "debeo", "nl": "dik", "pos": "adj", "tags": ["eigenschap", "l-o"], "source": "vježbenica p.24" },
+    { "id": "v.04.zreo", "hr": "zreo", "nl": "rijp", "pos": "adj", "tags": ["eigenschap", "l-o"], "source": "vježbenica p.24" },
+    { "id": "v.04.topao", "hr": "topao", "nl": "warm", "pos": "adj", "tags": ["eigenschap", "l-o", "vluchtige-a"], "source": "vježbenica p.24" },
+    { "id": "v.04.zao", "hr": "zao", "nl": "kwaadaardig", "pos": "adj", "tags": ["eigenschap", "l-o", "vluchtige-a"], "source": "vježbenica p.24" },
+
+    { "id": "v.04.kakav", "hr": "kakav, kakva, kakvo", "nl": "wat voor, hoe is", "pos": "pron", "tags": ["vraagwoord"], "source": "udzbenik p.58" },
+    { "id": "v.04.stan", "hr": "stan", "nl": "appartement", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "stana", "nom_pl": "stanovi", "tags": ["wonen"], "source": "vježbenica p.24" },
+    { "id": "v.04.zgrada", "hr": "zgrada", "nl": "gebouw", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "zgrade", "nom_pl": "zgrade", "tags": ["stad"], "source": "vježbenica p.24" },
+    { "id": "v.04.crkva", "hr": "crkva", "nl": "kerk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "crkve", "nom_pl": "crkve", "tags": ["stad"], "source": "vježbenica p.24" },
+    { "id": "v.04.kavana", "hr": "kavana", "nl": "café", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kavane", "nom_pl": "kavane", "tags": ["stad"], "source": "vježbenica p.24" },
+    { "id": "v.04.haljina", "hr": "haljina", "nl": "jurk", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "haljine", "nom_pl": "haljine", "tags": ["kleding"], "source": "vježbenica p.24" },
+    { "id": "v.04.dzemper", "hr": "džemper", "nl": "trui", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "džempera", "nom_pl": "džemperi", "tags": ["kleding"], "source": "vježbenica p.24" },
+    { "id": "v.04.cipele", "hr": "cipele", "nl": "schoenen", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "cipele", "nom_pl": "cipele", "tags": ["kleding"], "source": "udzbenik p.58" },
+    { "id": "v.04.racunalo", "hr": "računalo", "nl": "computer", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "računala", "nom_pl": "računala", "tags": ["ding"], "source": "vježbenica p.24" },
+    { "id": "v.04.ideja", "hr": "ideja", "nl": "idee", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ideje", "nom_pl": "ideje", "tags": ["abstract"], "source": "vježbenica p.24" },
+    { "id": "v.04.vrt", "hr": "vrt", "nl": "tuin", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "vrta", "nom_pl": "vrtovi", "tags": ["wonen"], "source": "vježbenica p.24" },
+    { "id": "v.04.jelo", "hr": "jelo", "nl": "gerecht", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "jela", "nom_pl": "jela", "tags": ["eten"], "source": "vježbenica p.24" },
+    { "id": "v.04.muskarac", "hr": "muškarac", "nl": "man", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "muškarca", "nom_pl": "muškarci", "tags": ["persoon"], "source": "vježbenica p.24" },
+    { "id": "v.04.zena", "hr": "žena", "nl": "vrouw", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "žene", "nom_pl": "žene", "tags": ["persoon"], "source": "vježbenica p.24" },
+    { "id": "v.04.sir", "hr": "sir", "nl": "kaas", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sira", "nom_pl": "sirevi", "tags": ["eten"], "source": "udzbenik p.61" },
+    { "id": "v.04.kravata", "hr": "kravata", "nl": "stropdas", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kravate", "nom_pl": "kravate", "tags": ["kleding"], "source": "udzbenik p.61" }
+  ],
+
+  "sections": [
+    {
+      "id": "s.04.1",
+      "title_nl": "Kleuren",
+      "kind": "input",
+      "text_hr": "Kakav je auto? Auto je crven.\nKakva je haljina? Haljina je plava.\nKakvo je more? More je plavo i zeleno.\nSjena je crna. Sunce je žuto. Lavanda je ljubičasta.\nRajčice su crvene. Zemlja je smeđa.",
+      "translation_nl": "Wat voor auto is het? De auto is rood.\nWat voor jurk is het? De jurk is blauw.\nHoe is de zee? De zee is blauw en groen.\nDe schaduw is zwart. De zon is geel. De lavendel is paars.\nDe tomaten zijn rood. De aarde is bruin.",
+      "source": "udzbenik p.59",
+      "exercises": [
+        {
+          "id": "e.04.001",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het bijvoeglijk naamwoord volgt het zelfstandig naamwoord",
+          "body_nl": "De kale vorm is de mannelijke: **crven**. Daarna plak je de uitgang van het geslacht erachter:\n\n*crven auto* (m) · *crvena haljina* (v) · *crveno more* (o)\n\nIn het meervoud: *crveni, crvene, crvena*.\n\nDit betekent dat je het geslacht van élk zelfstandig naamwoord moet kennen vóór je er een bijvoeglijk naamwoord bij kunt zetten. Daarom staat het geslacht vanaf les 1 bij elk woord.",
+          "targets": ["g.04.pridjevi"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.04.002",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm van het bijvoeglijk naamwoord in.",
+          "given": "Haljina je ___. (crven)",
+          "answer": "crvena",
+          "accepts": ["crvena"],
+          "explain_nl": "haljina is vrouwelijk → -a.",
+          "targets": ["g.04.pridjevi", "v.04.crven"],
+          "difficulty": 1,
+          "audio": "Haljina je crvena.",
+          "source": "udzbenik p.59"
+        },
+        {
+          "id": "e.04.003",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm van het bijvoeglijk naamwoord in.",
+          "given": "Sunce je ___. (žut)",
+          "answer": "žuto",
+          "accepts": ["žuto"],
+          "explain_nl": "sunce is onzijdig → -o.",
+          "targets": ["g.04.pridjevi", "v.04.zut", "v.01.sunce"],
+          "difficulty": 2,
+          "audio": "Sunce je žuto.",
+          "source": "udzbenik p.59"
+        },
+        {
+          "id": "e.04.004",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Let op het getal.",
+          "given": "Rajčice su ___. (crven)",
+          "answer": "crvene",
+          "accepts": ["crvene"],
+          "explain_nl": "Vrouwelijk meervoud → -e.",
+          "targets": ["g.04.pridjevi", "v.04.crven"],
+          "difficulty": 3,
+          "audio": "Rajčice su crvene.",
+          "source": "udzbenik p.59"
+        },
+        {
+          "id": "e.04.005",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk vraagwoord hoort bij 'kuća'?",
+          "given": "___ je kuća?",
+          "answer": "Kakva",
+          "distractors": ["Kakav", "Kakvo", "Kako"],
+          "explain_nl": "kuća is vrouwelijk → Kakva. Let op: kako betekent 'hoe (op welke manier)' en is iets anders.",
+          "targets": ["g.04.kakav", "v.04.kakav"],
+          "difficulty": 2,
+          "source": "udzbenik p.58"
+        }
+      ]
+    },
+    {
+      "id": "s.04.2",
+      "title_nl": "Stammen die veranderen",
+      "kind": "grammar",
+      "source": "vježbenica p.24",
+      "exercises": [
+        {
+          "id": "e.04.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee groepen die je niet kunt raden",
+          "body_nl": "**Vluchtige a.** De mannelijke vorm heeft een a die verderop verdwijnt:\ndobar → dobr*a*, dobr*o* · udoban → udobn*a* · kratak → kratk*a* · gladan → gladn*a*\n\n**l wordt o.** In de mannelijke vorm staat een o waar elders een l staat:\nveseo → vesel*a* · debeo → debel*a* · zreo → zrel*a*\n\nEn twee doen allebei tegelijk: **topao → topla**, **zao → zla**.\n\nUit de mannelijke vorm kun je de rest dus niet afleiden. Leer het paar.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "g.04.l_o"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.04.011",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Marija je ___. (dobar)",
+          "answer": "dobra",
+          "accepts": ["dobra"],
+          "explain_nl": "Vluchtige a: dobar → dobra.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "v.04.dobar"],
+          "difficulty": 2,
+          "audio": "Marija je dobra.",
+          "source": "vježbenica p.24"
+        },
+        {
+          "id": "e.04.012",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Stan je ___. (udoban)",
+          "answer": "udoban",
+          "accepts": ["udoban"],
+          "explain_nl": "stan is mannelijk, dus hier blíjft de a staan. De vluchtige a verdwijnt pas in de andere vormen.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "v.04.udoban", "v.04.stan"],
+          "difficulty": 4,
+          "audio": "Stan je udoban.",
+          "source": "vježbenica p.24"
+        },
+        {
+          "id": "e.04.013",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Ulica je ___. (kratak)",
+          "answer": "kratka",
+          "accepts": ["kratka"],
+          "explain_nl": "ulica is vrouwelijk en kratak heeft een vluchtige a → kratka.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "v.04.kratak", "v.03.ulica"],
+          "difficulty": 3,
+          "audio": "Ulica je kratka.",
+          "source": "vježbenica p.24"
+        },
+        {
+          "id": "e.04.014",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Let op de l/o-wissel.",
+          "given": "Djeca su ___. (veseo)",
+          "answer": "vesela",
+          "accepts": ["vesela"],
+          "explain_nl": "veseo → vesela. En djeca telt als vrouwelijk enkelvoud, dus ook daarom -a.",
+          "targets": ["g.04.l_o", "v.04.veseo", "g.03.nepravilna_mnozina"],
+          "difficulty": 4,
+          "audio": "Djeca su vesela.",
+          "source": "vježbenica p.24"
+        },
+        {
+          "id": "e.04.015",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Dit woord doet allebei de trucs.",
+          "given": "Dani su ___. (topao)",
+          "answer": "topli",
+          "accepts": ["topli"],
+          "explain_nl": "topao → topli: de o wordt weer l én de vluchtige a verdwijnt.",
+          "targets": ["g.04.l_o", "g.04.nepostojano_a_pridjevi", "v.04.topao"],
+          "difficulty": 5,
+          "audio": "Dani su topli.",
+          "source": "vježbenica p.24"
+        },
+        {
+          "id": "e.04.016",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Jabuka nije zreo.",
+          "answer": "Jabuka nije zrela.",
+          "accepts": ["Jabuka nije zrela."],
+          "explain_nl": "jabuka is vrouwelijk, en zreo → zrela met de l terug.",
+          "targets": ["g.04.l_o", "v.04.zreo"],
+          "difficulty": 4,
+          "source": "vježbenica p.24"
+        }
+      ]
+    },
+    {
+      "id": "s.04.3",
+      "title_nl": "Van wie, en waarvandaan",
+      "kind": "practice",
+      "source": "udzbenik p.60, vježbenica p.27",
+      "exercises": [
+        {
+          "id": "e.04.020",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Bezit wordt een bijvoeglijk naamwoord",
+          "body_nl": "Waar het Nederlands 'van' of een 's gebruikt, maakt het Kroatisch van de eigenaar een bijvoeglijk naamwoord:\n\n**-ov** na een harde medeklinker: brat → *bratov* motor\n**-in** bij woorden op -a: tata → *tatin*, Marija → *Marijin*, sestra → *sestrin*\n\nEn daarna buigt dat bijvoeglijk naamwoord gewoon mee met het bezeten ding: *tatine knjige* (v. mv.), *Marijino računalo* (o.).\n\nTwee valstrikken: **šefica → šefičin** (c wordt č) en **Petar → Petrov** (vluchtige a).",
+          "targets": ["g.04.posvojni_pridjevi_zivo"],
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.04.021",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak een bezittelijk bijvoeglijk naamwoord.",
+          "given": "Ovo je ___ kuća. (djed)",
+          "answer": "djedova",
+          "accepts": ["djedova"],
+          "explain_nl": "djed → djedov, en kuća is vrouwelijk → djedova.",
+          "targets": ["g.04.posvojni_pridjevi_zivo", "v.03.djed"],
+          "difficulty": 3,
+          "audio": "Ovo je djedova kuća.",
+          "source": "vježbenica p.27"
+        },
+        {
+          "id": "e.04.022",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak een bezittelijk bijvoeglijk naamwoord.",
+          "given": "Ovo su ___ knjige. (tata)",
+          "answer": "tatine",
+          "accepts": ["tatine"],
+          "explain_nl": "tata eindigt op -a → tatin, en knjige is vrouwelijk meervoud → tatine.",
+          "targets": ["g.04.posvojni_pridjevi_zivo", "v.01.tata"],
+          "difficulty": 4,
+          "audio": "Ovo su tatine knjige.",
+          "source": "vježbenica p.27"
+        },
+        {
+          "id": "e.04.023",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak een bezittelijk bijvoeglijk naamwoord. Let op de medeklinker.",
+          "given": "Ovo je ___ stol. (šefica)",
+          "answer": "šefičin",
+          "accepts": ["šefičin"],
+          "explain_nl": "šefica → šefičin: de c wordt č vóór de -in.",
+          "targets": ["g.04.posvojni_pridjevi_zivo"],
+          "difficulty": 5,
+          "audio": "Ovo je šefičin stol.",
+          "source": "vježbenica p.27"
+        },
+        {
+          "id": "e.04.024",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak een bijvoeglijk naamwoord van het land.",
+          "given": "To je ___ vino. (Francuska)",
+          "answer": "francusko",
+          "accepts": ["francusko"],
+          "explain_nl": "Francuska → francuski, en vino is onzijdig → francusko. Kleine letter!",
+          "targets": ["g.04.posvojni_pridjevi_nezivo", "v.02.francuska", "v.01.vino"],
+          "difficulty": 3,
+          "audio": "To je francusko vino.",
+          "source": "udzbenik p.60"
+        },
+        {
+          "id": "e.04.025",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het bijvoeglijk naamwoord aan wat erbij hoort.",
+          "pairs": [
+            { "hr": "švicarski", "nl": "sir" },
+            { "hr": "grčki", "nl": "hram" },
+            { "hr": "talijanske", "nl": "cipele" },
+            { "hr": "hrvatska", "nl": "kravata" }
+          ],
+          "targets": ["g.04.posvojni_pridjevi_nezivo"],
+          "difficulty": 3,
+          "source": "udzbenik p.61"
+        },
+        {
+          "id": "e.04.026",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "To je Njemački auto.",
+          "answer": "To je njemački auto.",
+          "accepts": ["To je njemački auto."],
+          "explain_nl": "Bijvoeglijke naamwoorden van landen krijgen een kleine letter, ook al schrijf je Njemačka met een hoofdletter.",
+          "targets": ["g.04.posvojni_pridjevi_nezivo"],
+          "difficulty": 4,
+          "source": "udzbenik p.60"
+        },
+        {
+          "id": "e.04.027",
+          "type": "listen_type",
+          "mode": "productive",
+          "prompt_nl": "Luister en typ wat je hoort.",
+          "audio": "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
+          "answer": "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
+          "accepts": [
+            "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
+            "Kakav je tvoj stan? Moj stan je malen ali udoban."
+          ],
+          "targets": ["g.04.kakav", "v.04.stan", "v.04.udoban", "v.02.ali"],
+          "difficulty": 4,
+          "source": "aangevuld"
+        }
+      ]
+    },
+    {
+      "id": "s.04.4",
+      "title_nl": "Gemengde herhaling",
+      "kind": "mixed_review",
+      "source": "aangevuld",
+      "exercises": [
+        {
+          "id": "e.04.030",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Onze buren zijn sympathiek.",
+          "answer": "Naši susjedi su simpatični.",
+          "accepts": ["Naši susjedi su simpatični.", "Naši su susjedi simpatični."],
+          "explain_nl": "Mannelijk meervoud: naši, susjedi, en simpatičan verliest de vluchtige a → simpatični.",
+          "targets": ["g.04.nepostojano_a_pridjevi", "g.03.posvojne_zamjenice", "v.03.susjed", "v.04.simpatican"],
+          "difficulty": 5,
+          "audio": "Naši susjedi su simpatični.",
+          "source": "aangevuld"
+        },
+        {
+          "id": "e.04.031",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beantwoord in het Kroatisch: Kakav je tvoj stan?",
+          "given": "Kakav je tvoj stan?",
+          "model_answer": "Moj stan je velik i svijetao. Nije nov, ali je udoban.",
+          "rubric_nl": [
+            "Minimaal twee bijvoeglijke naamwoorden",
+            "Uitgangen kloppen met het geslacht van stan (mannelijk)",
+            "Gebruikt een volledige zin met biti"
+          ],
+          "targets": ["g.04.pridjevi", "g.04.kakav", "v.04.stan"],
+          "difficulty": 4,
+          "source": "vježbenica p.24"
+        }
+      ]
+    }
+  ]
+}

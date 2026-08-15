@@ -1,0 +1,964 @@
+{
+  "id": "story-03",
+  "slug": "vikend-u-samoboru",
+  "series": "Nina u Zagrebu",
+  "part": 3,
+  "title_hr": "Vikend u Samoboru",
+  "title_nl": "Een weekend in Samobor",
+  "cefr": "A2.1",
+  "requires_lesson": 11,
+  "blurb_nl": "Nina vertelt over gisteren: een uitstapje naar Samobor. Het hele verhaal staat in de perfekt — de verleden tijd die les 11 introduceert — plus de locatief uit les 10.",
+  "motif": "izlet",
+  "focus_nl": [
+    "perfekt",
+    "locatief",
+    "biti + deelwoord",
+    "u/na + locatief"
+  ],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "hr": "Jučer sam bila u Samoboru.",
+          "nl": "Gisteren was ik in Samobor."
+        },
+        {
+          "hr": "Samobor je mali grad blizu Zagreba.",
+          "nl": "Samobor is een stadje bij Zagreb."
+        },
+        {
+          "hr": "Petra i ja smo putovale autobusom.",
+          "nl": "Petra en ik reisden met de bus."
+        },
+        {
+          "hr": "Vožnja je bila kratka.",
+          "nl": "De rit was kort."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "hr": "U Samoboru smo šetale po starom gradu.",
+          "nl": "In Samobor wandelden we door het oude stadje."
+        },
+        {
+          "hr": "Na trgu smo vidjele malu crkvu i stare kuće.",
+          "nl": "Op het plein zagen we een kerkje en oude huizen."
+        },
+        {
+          "hr": "Sunce je sjalo cijeli dan.",
+          "nl": "De zon scheen de hele dag."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "hr": "U kafiću smo naručile kremšnite.",
+          "nl": "In het café bestelden we kremšnita's."
+        },
+        {
+          "hr": "Kremšnita je slavni kolač iz Samobora.",
+          "nl": "De kremšnita is het beroemde gebak uit Samobor."
+        },
+        {
+          "hr": "Petra je pojela dvije!",
+          "nl": "Petra at er twee op!"
+        },
+        {
+          "hr": "„Nisam mogla stati“, rekla je.",
+          "nl": "\"Ik kon niet stoppen\", zei ze."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "hr": "Navečer smo se vratile u Zagreb.",
+          "nl": "'s Avonds keerden we terug naar Zagreb."
+        },
+        {
+          "hr": "Bila sam umorna, ali sretna.",
+          "nl": "Ik was moe, maar gelukkig."
+        },
+        {
+          "hr": "Sada razumijem zašto ljudi vole male gradove.",
+          "nl": "Nu begrijp ik waarom mensen van stadjes houden."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "jučer": {
+      "hr": "jučer",
+      "nl": "gisteren",
+      "info": "bijwoord van tijd",
+      "item": "v.pr3.jucer"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "ben",
+      "lemma": "biti",
+      "info": "hulpwerkwoord van de perfekt; sam bila = ik was"
+    },
+    "bila": {
+      "hr": "bila",
+      "nl": "geweest",
+      "lemma": "biti",
+      "info": "vrouwelijk deelwoord — Nina praat, dus -la"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "in; naar",
+      "info": "hier met locatief: plaats (u Samoboru)"
+    },
+    "samoboru": {
+      "hr": "Samoboru",
+      "nl": "Samobor",
+      "lemma": "Samobor",
+      "info": "locatief enkelvoud: -u"
+    },
+    "samobor": {
+      "hr": "Samobor",
+      "nl": "Samobor",
+      "info": "stadje ten westen van Zagreb"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "3e persoon enkelvoud"
+    },
+    "mali": {
+      "hr": "mali",
+      "nl": "klein",
+      "lemma": "malen",
+      "info": "mannelijk enkelvoud"
+    },
+    "grad": {
+      "hr": "grad",
+      "nl": "stad",
+      "info": "mannelijk"
+    },
+    "blizu": {
+      "hr": "blizu",
+      "nl": "dichtbij",
+      "info": "voorzetsel met genitief: blizu Zagreba"
+    },
+    "zagreba": {
+      "hr": "Zagreba",
+      "nl": "Zagreb",
+      "lemma": "Zagreb",
+      "info": "genitief enkelvoud, na blizu"
+    },
+    "zagreb": {
+      "hr": "Zagreb",
+      "nl": "Zagreb",
+      "info": "de hoofdstad"
+    },
+    "petra": {
+      "hr": "Petra",
+      "nl": "Petra",
+      "info": "eigennaam"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en; ook",
+      "info": "voegwoord"
+    },
+    "ja": {
+      "hr": "ja",
+      "nl": "ik",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "smo": {
+      "hr": "smo",
+      "nl": "zijn (wij)",
+      "lemma": "biti",
+      "info": "hulpwerkwoord van de perfekt; smo putovale = wij reisden"
+    },
+    "putovale": {
+      "hr": "putovale",
+      "nl": "gereisd",
+      "lemma": "putovati",
+      "info": "deelwoord, vrouwelijk meervoud — twee vrouwen: -le",
+      "item": "v.pr3.putovati"
+    },
+    "autobusom": {
+      "hr": "autobusom",
+      "nl": "met de bus",
+      "lemma": "autobus",
+      "info": "instrumentalis: het vervoermiddel. Komt officieel pas in les 15 — hier alvast als vaste uitdrukking"
+    },
+    "vožnja": {
+      "hr": "vožnja",
+      "nl": "rit",
+      "info": "vrouwelijk",
+      "item": "v.pr3.voznja"
+    },
+    "kratka": {
+      "hr": "kratka",
+      "nl": "kort",
+      "lemma": "kratak",
+      "info": "vrouwelijke vorm; mannelijk kratak heeft een vluchtige a",
+      "item": "v.pr3.kratak"
+    },
+    "šetale": {
+      "hr": "šetale",
+      "nl": "gewandeld",
+      "lemma": "šetati",
+      "info": "deelwoord, vrouwelijk meervoud",
+      "item": "v.pr3.setati"
+    },
+    "po": {
+      "hr": "po",
+      "nl": "door, langs",
+      "info": "voorzetsel met locatief: po starom gradu"
+    },
+    "starom": {
+      "hr": "starom",
+      "nl": "oude",
+      "lemma": "star",
+      "info": "locatief mannelijk enkelvoud van het bijvoeglijk naamwoord"
+    },
+    "gradu": {
+      "hr": "gradu",
+      "nl": "stad",
+      "lemma": "grad",
+      "info": "locatief enkelvoud: -u"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "op",
+      "info": "hier met locatief: plaats (na trgu)"
+    },
+    "trgu": {
+      "hr": "trgu",
+      "nl": "plein",
+      "lemma": "trg",
+      "info": "locatief enkelvoud",
+      "item": "v.pr3.trg"
+    },
+    "vidjele": {
+      "hr": "vidjele",
+      "nl": "gezien",
+      "lemma": "vidjeti",
+      "info": "deelwoord, vrouwelijk meervoud"
+    },
+    "malu": {
+      "hr": "malu",
+      "nl": "kleine",
+      "lemma": "malen",
+      "info": "accusatief vrouwelijk enkelvoud"
+    },
+    "crkvu": {
+      "hr": "crkvu",
+      "nl": "kerk",
+      "lemma": "crkva",
+      "info": "accusatief enkelvoud: -a → -u",
+      "item": "v.pr3.crkva"
+    },
+    "stare": {
+      "hr": "stare",
+      "nl": "oude",
+      "lemma": "star",
+      "info": "accusatief vrouwelijk meervoud"
+    },
+    "kuće": {
+      "hr": "kuće",
+      "nl": "huizen",
+      "lemma": "kuća",
+      "info": "accusatief meervoud"
+    },
+    "sunce": {
+      "hr": "sunce",
+      "nl": "zon",
+      "info": "onzijdig",
+      "item": "v.pr3.sunce"
+    },
+    "sjalo": {
+      "hr": "sjalo",
+      "nl": "geschenen",
+      "lemma": "sjati",
+      "info": "deelwoord, onzijdig — het richt zich naar sunce",
+      "item": "v.pr3.sjati"
+    },
+    "cijeli": {
+      "hr": "cijeli",
+      "nl": "heel, geheel",
+      "lemma": "cijel",
+      "info": "mannelijk enkelvoud; cijeli dan = de hele dag",
+      "item": "v.pr3.cijel"
+    },
+    "dan": {
+      "hr": "dan",
+      "nl": "dag",
+      "info": "mannelijk; accusatief van tijdsduur: cijeli dan"
+    },
+    "kafiću": {
+      "hr": "kafiću",
+      "nl": "café",
+      "lemma": "kafić",
+      "info": "locatief enkelvoud: -u"
+    },
+    "naručile": {
+      "hr": "naručile",
+      "nl": "besteld",
+      "lemma": "naručiti",
+      "info": "deelwoord, vrouwelijk meervoud",
+      "item": "v.pr3.naruciti"
+    },
+    "kremšnite": {
+      "hr": "kremšnite",
+      "nl": "kremšnita's",
+      "lemma": "kremšnita",
+      "info": "accusatief meervoud",
+      "item": "v.pr3.kremsnita"
+    },
+    "kremšnita": {
+      "hr": "kremšnita",
+      "nl": "kremšnita",
+      "info": "custardgebak tussen bladerdeeg — dé specialiteit van Samobor",
+      "item": "v.pr3.kremsnita"
+    },
+    "slavni": {
+      "hr": "slavni",
+      "nl": "beroemde",
+      "lemma": "slavan",
+      "info": "mannelijk enkelvoud, bepaalde vorm",
+      "item": "v.pr3.slavan"
+    },
+    "kolač": {
+      "hr": "kolač",
+      "nl": "gebak",
+      "info": "mannelijk"
+    },
+    "iz": {
+      "hr": "iz",
+      "nl": "uit",
+      "info": "voorzetsel met genitief: iz Samobora"
+    },
+    "samobora": {
+      "hr": "Samobora",
+      "nl": "Samobor",
+      "lemma": "Samobor",
+      "info": "genitief enkelvoud, na iz"
+    },
+    "pojela": {
+      "hr": "pojela",
+      "nl": "opgegeten",
+      "lemma": "pojesti",
+      "info": "deelwoord, vrouwelijk; po- maakt jesti 'af': helemaal opeten",
+      "item": "v.pr3.pojesti"
+    },
+    "dvije": {
+      "hr": "dvije",
+      "nl": "twee",
+      "lemma": "dva",
+      "info": "vrouwelijke vorm van dva — bij kremšnite"
+    },
+    "nisam": {
+      "hr": "nisam",
+      "nl": "ik ben niet",
+      "lemma": "biti",
+      "info": "ontkende perfekt: nisam mogla = ik kon niet"
+    },
+    "mogla": {
+      "hr": "mogla",
+      "nl": "gekund",
+      "lemma": "moći",
+      "info": "deelwoord, vrouwelijk; g in plaats van ć: moći → mogla"
+    },
+    "stati": {
+      "hr": "stati",
+      "nl": "stoppen",
+      "info": "infinitief na een modaal werkwoord",
+      "item": "v.pr3.stati"
+    },
+    "rekla": {
+      "hr": "rekla",
+      "nl": "gezegd",
+      "lemma": "reći",
+      "info": "deelwoord, vrouwelijk; onregelmatig: reći → rekla",
+      "item": "v.pr3.reci"
+    },
+    "navečer": {
+      "hr": "navečer",
+      "nl": "'s avonds",
+      "info": "bijwoord van tijd",
+      "item": "v.pr3.navecer"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend; vratiti se = terugkeren. Let op de plaats: smo se vratile"
+    },
+    "vratile": {
+      "hr": "vratile",
+      "nl": "teruggekeerd",
+      "lemma": "vratiti",
+      "info": "deelwoord, vrouwelijk meervoud; met se: terugkeren",
+      "item": "v.pr3.vratiti"
+    },
+    "umorna": {
+      "hr": "umorna",
+      "nl": "moe",
+      "lemma": "umoran",
+      "info": "vrouwelijke vorm; mannelijk umoran heeft een vluchtige a",
+      "item": "v.pr3.umoran"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "info": "sterk tegenstellend voegwoord"
+    },
+    "sretna": {
+      "hr": "sretna",
+      "nl": "gelukkig, blij",
+      "lemma": "sretan",
+      "info": "vrouwelijke vorm; mannelijk: sretan",
+      "item": "v.pr3.sretan"
+    },
+    "sada": {
+      "hr": "sada",
+      "nl": "nu",
+      "info": "bijwoord"
+    },
+    "razumijem": {
+      "hr": "razumijem",
+      "nl": "ik begrijp",
+      "lemma": "razumjeti",
+      "info": "1e persoon enkelvoud",
+      "item": "v.pr3.razumjeti"
+    },
+    "zašto": {
+      "hr": "zašto",
+      "nl": "waarom",
+      "info": "vraagwoord"
+    },
+    "ljudi": {
+      "hr": "ljudi",
+      "nl": "mensen",
+      "lemma": "čovjek",
+      "info": "onregelmatig meervoud van čovjek"
+    },
+    "vole": {
+      "hr": "vole",
+      "nl": "houden van",
+      "lemma": "voljeti",
+      "info": "3e persoon meervoud"
+    },
+    "male": {
+      "hr": "male",
+      "nl": "kleine",
+      "lemma": "malen",
+      "info": "accusatief mannelijk meervoud"
+    },
+    "gradove": {
+      "hr": "gradove",
+      "nl": "steden",
+      "lemma": "grad",
+      "info": "accusatief meervoud, lange vorm: grad → gradovi → gradove"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Kremšnita",
+    "body_nl": "Samobor is voor Zagrepčani wat een strandtentje voor een kustbewoner is: op zondag ga je erheen om er één ding te doen. Dat ding is de kremšnita — een trillende laag custard tussen twee vellen bladerdeeg, geserveerd terwijl hij nog lauw is. Het recept van café U prolazu geldt sinds de jaren vijftig als het origineel. Wie in Samobor is geweest en geen kremšnita heeft gegeten, is er volgens de lokale logica simpelweg niet geweest."
+  },
+  "vocab": [
+    {
+      "id": "v.pr3.jucer",
+      "hr": "jučer",
+      "nl": "gisteren",
+      "pos": "adv",
+      "tags": [
+        "tijd",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.navecer",
+      "hr": "navečer",
+      "nl": "'s avonds",
+      "pos": "adv",
+      "tags": [
+        "tijd",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.putovati",
+      "hr": "putovati",
+      "nl": "reizen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "putujem",
+      "verb_class": "-ovati",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.setati",
+      "hr": "šetati",
+      "nl": "wandelen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "šetam",
+      "verb_class": "-ati",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.naruciti",
+      "hr": "naručiti",
+      "nl": "bestellen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "naručim",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.pojesti",
+      "hr": "pojesti",
+      "nl": "opeten",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "pojedem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.vratiti",
+      "hr": "vratiti se",
+      "nl": "terugkeren",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "vratim se",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.reci",
+      "hr": "reći",
+      "nl": "zeggen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "kažem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.stati",
+      "hr": "stati",
+      "nl": "stoppen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "stanem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.razumjeti",
+      "hr": "razumjeti",
+      "nl": "begrijpen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "razumijem",
+      "verb_class": "-jeti",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.sjati",
+      "hr": "sjati",
+      "nl": "schijnen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "sjam",
+      "verb_class": "-ati",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.voznja",
+      "hr": "vožnja",
+      "nl": "rit",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "vožnje",
+      "nom_pl": "vožnje",
+      "tags": [
+        "reizen",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.trg",
+      "hr": "trg",
+      "nl": "plein",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "trga",
+      "nom_pl": "trgovi",
+      "tags": [
+        "stad",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.crkva",
+      "hr": "crkva",
+      "nl": "kerk",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "crkve",
+      "nom_pl": "crkve",
+      "tags": [
+        "stad",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.sunce",
+      "hr": "sunce",
+      "nl": "zon",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "sunca",
+      "nom_pl": null,
+      "tags": [
+        "natuur",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.kremsnita",
+      "hr": "kremšnita",
+      "nl": "kremšnita (custardgebak)",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "kremšnite",
+      "nom_pl": "kremšnite",
+      "tags": [
+        "eten",
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.kratak",
+      "hr": "kratak",
+      "nl": "kort",
+      "pos": "adj",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.umoran",
+      "hr": "umoran",
+      "nl": "moe",
+      "pos": "adj",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.sretan",
+      "hr": "sretan",
+      "nl": "gelukkig, blij",
+      "pos": "adj",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.slavan",
+      "hr": "slavan",
+      "nl": "beroemd",
+      "pos": "adj",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr3.cijel",
+      "hr": "cijel",
+      "nl": "heel, geheel",
+      "pos": "adj",
+      "tags": [
+        "verhaal-03"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr3.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Nina vertelt over een dagje uit naar Samobor.",
+      "distractors": [
+        "De geschiedenis van het stadje Samobor.",
+        "Hoe je kremšnite bakt.",
+        "Waarom Petra te veel eet."
+      ],
+      "explain_nl": "Alles staat in de verleden tijd en volgt één dag: heenreis, wandeling, café, terugreis. Geen geschiedenis, geen recept. Let op de eerste zin — die zet vaak meteen het onderwerp neer: «Jučer sam bila u Samoboru.»",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr3.002",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "«Petra je pojela dvije!» — twee wát?",
+      "answer": "Twee kremšnite.",
+      "distractors": [
+        "Twee koffie.",
+        "Twee uur.",
+        "Twee kerken."
+      ],
+      "explain_nl": "Het zelfstandig naamwoord is weggelaten omdat het in de zin ervóór staat: «naručile smo kremšnite». Bovendien is «dvije» de vrouwelijke vorm van twee — dat past bij kremšnita, niet bij sat (mannelijk). Grammatica helpt je hier het verwijswoord vinden.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr3.003",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "«Nisam mogla stati», rekla je. Wat zegt dit over de kremšnite?",
+      "answer": "Ze waren erg lekker.",
+      "distractors": [
+        "Ze waren heel klein.",
+        "Ze waren gratis.",
+        "Petra had de hele dag niet gegeten."
+      ],
+      "explain_nl": "Niet kunnen stoppen met eten zegt iets over de smaak. Dat er twee op gingen én dat ze zich moet verontschuldigen, wijst dezelfde kant op. De tekst zegt nergens «heel lekker» — dat leid je af uit gedrag.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr3.004",
+      "skill": "verband",
+      "type": "choice",
+      "prompt_nl": "«Bila sam umorna, ali sretna.» Welk verband legt «ali»?",
+      "answer": "Een tegenstelling: moe zijn en toch blij zijn.",
+      "distractors": [
+        "Een oorzaak: ze was blij omdat ze moe was.",
+        "Een opsomming: twee dingen die bij elkaar horen.",
+        "Een tijdsverband: eerst moe, daarna blij."
+      ],
+      "explain_nl": "«Ali» is het sterkste tegenstellende voegwoord van het Kroatisch. Je verwacht dat moe zijn niet samengaat met blij zijn — en juist die botsing maakt de zin. Vergelijk «a», dat veel zwakker tegenstelt.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr3.005",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "De laatste zin is: «Sada razumijem zašto ljudi vole male gradove.» Wat kun je hieruit concluderen?",
+      "answer": "Ze begrijpt het nu doordat ze het zelf heeft meegemaakt.",
+      "distractors": [
+        "Ze wil verhuizen naar Samobor.",
+        "Ze vindt Zagreb nu lelijk.",
+        "Iemand heeft het haar in Samobor uitgelegd."
+      ],
+      "explain_nl": "Het woordje «sada» (nu) impliceert dat ze het eerder níet begreep. Wat er tussen zit is de dag zelf — dus de ervaring is de verklaring. Van verhuizen of afkeer van Zagreb staat niets; dat zou verder gaan dan de tekst toelaat.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr3.006",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Kremšnita je slavni kolač iz Samobora.» Wat betekent «slavni» hier?",
+      "answer": "Beroemd.",
+      "distractors": [
+        "Zoet.",
+        "Groot.",
+        "Goedkoop."
+      ],
+      "explain_nl": "De zin legt uit wat een kremšnita is en waar hij vandaan komt — dat is een reden om iets bekend te noemen. Smaak of prijs zou hier niets verklaren. Kijk bij zo'n vraag naar de functie van de zin, niet alleen naar het woord.",
+      "difficulty": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr3.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Hoe zijn Nina en Petra naar Samobor gereisd?",
+      "answer": "Met de bus.",
+      "distractors": [
+        "Met de trein.",
+        "Met de auto.",
+        "Te voet."
+      ],
+      "explain_nl": "«Petra i ja smo putovale autobusom.» De instrumentalis autobusom zegt: met de bus.",
+      "targets": [
+        "v.pr3.putovati"
+      ],
+      "difficulty": 1,
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul het deelwoord in: 'Gisteren was ik (Nina) in Samobor.'",
+      "given": "Jučer sam ___ u Samoboru.",
+      "answer": "bila",
+      "accepts": [
+        "bila"
+      ],
+      "explain_nl": "Het deelwoord richt zich naar de spreker. Nina is een vrouw, dus bila — een man zou bio zeggen.",
+      "targets": [
+        "v.pr3.jucer"
+      ],
+      "difficulty": 2,
+      "audio": "Jučer sam bila u Samoboru.",
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom eindigt «putovale» op -le?",
+      "answer": "Twee vrouwen: vrouwelijk meervoud.",
+      "distractors": [
+        "Het rijmt op autobusom.",
+        "Na smo komt altijd -le.",
+        "Putovati is een -ovati-werkwoord."
+      ],
+      "explain_nl": "Het deelwoord congrueert in geslacht én getal: Petra en Nina zijn twee vrouwen → -le. Twee mannen: putovali.",
+      "targets": [
+        "v.pr3.putovati"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.004",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul de locatief in: 'In het café bestelden we kremšnita's.'",
+      "given": "U ___ smo naručile kremšnite.",
+      "answer": "kafiću",
+      "accepts": [
+        "kafiću"
+      ],
+      "explain_nl": "Plaats (geen richting) = locatief: kafić → u kafiću. Vergelijk verhaal 2, waar «u kafić» juist richting was.",
+      "targets": [
+        "v.pr3.naruciti"
+      ],
+      "difficulty": 3,
+      "audio": "U kafiću smo naručile kremšnite.",
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.005",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er zit één fout in deze zin. Schrijf de zin correct op.",
+      "given": "Petra je pojeo dvije kremšnite.",
+      "answer": "Petra je pojela dvije kremšnite.",
+      "accepts": [
+        "Petra je pojela dvije kremšnite.",
+        "Petra je pojela dvije kremšnite"
+      ],
+      "explain_nl": "Pojeo is mannelijk. Petra is een vrouw, dus het deelwoord moet pojela zijn.",
+      "targets": [
+        "v.pr3.pojesti"
+      ],
+      "difficulty": 3,
+      "audio": "Petra je pojela dvije kremšnite.",
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.006",
+      "type": "word_order",
+      "mode": "productive",
+      "prompt_nl": "Zet in de juiste volgorde: ''s Avonds keerden we terug naar Zagreb.' Let op de plaats van se.",
+      "tokens": [
+        "Navečer",
+        "smo",
+        "se",
+        "vratile",
+        "u",
+        "Zagreb."
+      ],
+      "answer": "Navečer smo se vratile u Zagreb.",
+      "explain_nl": "De clitica staan op de tweede plaats in de zin, in vaste volgorde: eerst smo, dan se.",
+      "targets": [
+        "v.pr3.vratiti"
+      ],
+      "difficulty": 4,
+      "audio": "Navečer smo se vratile u Zagreb.",
+      "source": "verhaal-03"
+    },
+    {
+      "id": "e.pr3.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Waar was jij gisteren? Schrijf drie zinnen in de perfekt.",
+      "hint": "Jučer sam bio/bila … + waar (locatief) + wat je deed.",
+      "model_answer": "Jučer sam bila u Amsterdamu. Šetala sam po starom gradu. Navečer sam pila kavu.",
+      "rubric_nl": [
+        "Drie zinnen in de perfekt: sam + deelwoord.",
+        "Het deelwoord past bij wie je bent: bio (m) of bila (v).",
+        "Minstens één plaats in de locatief (u Amsterdamu, na trgu)."
+      ],
+      "targets": [
+        "v.pr3.setati"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-03"
+    }
+  ]
+}
