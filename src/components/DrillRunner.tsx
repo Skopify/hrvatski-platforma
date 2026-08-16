@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { drillBatch, endSession, startSession, submitDrill } from "@/app/actions";
 import type { DrillFeedback, DrillKind, DrillMeta, DrillQuestion } from "@/lib/drills";
-import { useCroatianTts } from "@/lib/tts";
+import { TTS_RATES, useCroatianTts } from "@/lib/tts";
 import { SpecialChars } from "./SpecialChars";
 import { Bolt } from "./ui";
 
@@ -287,7 +287,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
               ) : null}
             </>
           ) : meta.kind === "diktat" ? (
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-5 flex flex-wrap items-center gap-3">
               <button
                 type="button"
                 onClick={() => tts.speak(question.audio ?? "")}
@@ -296,14 +296,25 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
               >
                 ▶ Opnieuw
               </button>
-              <button
-                type="button"
-                onClick={() => tts.speak(question.audio ?? "", 0.6)}
-                disabled={!tts.voice}
-                className="text-[13px] text-ink-muted underline underline-offset-2 hover:text-accent"
-              >
-                langzamer
-              </button>
+              {/* Dezelfde onthouden snelheid als in de lessen — één instelling
+                  voor het hele platform, niet per scherm opnieuw kiezen. */}
+              <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
+                {TTS_RATES.map((r) => (
+                  <button
+                    key={r.value}
+                    type="button"
+                    onClick={() => tts.setRate(r.value)}
+                    aria-pressed={tts.rate === r.value}
+                    className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
+                      tts.rate === r.value
+                        ? "bg-surface text-accent shadow-[var(--lift-1)]"
+                        : "text-ink-muted hover:text-ink-secondary"
+                    }`}
+                  >
+                    {r.label}
+                  </button>
+                ))}
+              </div>
             </div>
           ) : (
             <p className="hr-text display mt-4 text-[44px] leading-tight text-ink">

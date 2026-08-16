@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 import type { PresentedExercise } from "@/lib/present";
 import { SpecialChars } from "./SpecialChars";
-import type { TtsState } from "@/lib/tts";
+import { TTS_RATES, type TtsState } from "@/lib/tts";
 
 export type Answer =
   | { kind: "text"; value: string }
@@ -89,6 +89,36 @@ function PlayButton({ text, tts }: { text: string; tts: TtsState }) {
       </svg>
       {tts.speaking ? "Speelt af" : "Beluister"}
     </button>
+  );
+}
+
+/**
+ * Spreeksnelheid, en die keuze blijft staan.
+ *
+ * Er stond hier eerst een losse knop "langzamer" die één keer langzaam
+ * afspeelde. Omdat de volgende luisteroefening zichzelf meteen op normaal
+ * tempo afspeelt, was dat effect telkens weg voordat je het merkte.
+ */
+function SpeedPicker({ tts }: { tts: TtsState }) {
+  if (!tts.supported || !tts.voice) return null;
+  return (
+    <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
+      {TTS_RATES.map((r) => (
+        <button
+          key={r.value}
+          type="button"
+          onClick={() => tts.setRate(r.value)}
+          aria-pressed={tts.rate === r.value}
+          className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
+            tts.rate === r.value
+              ? "bg-surface text-accent shadow-[var(--lift-1)]"
+              : "text-ink-muted hover:text-ink-secondary"
+          }`}
+        >
+          {r.label}
+        </button>
+      ))}
+    </div>
   );
 }
 
@@ -314,7 +344,7 @@ export function ExerciseView({
     case "word_order": {
       const chosen = answer.kind === "order" ? answer.value : [];
       const pool = (exercise.tokens ?? []).filter(
-        (t, i) => !chosen.includes(`${t} ${i}`) && !chosen.includes(t),
+        (t, i) => !chosen.includes(`${t}\u0000${i}`) && !chosen.includes(t),
       );
       return (
         <div className="space-y-4">
@@ -360,16 +390,9 @@ export function ExerciseView({
     case "listen_type":
       return (
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <PlayButton text={exercise.audio ?? ""} tts={tts} />
-            <button
-              type="button"
-              onClick={() => tts.speak(exercise.audio ?? "", 0.65)}
-              disabled={!tts.voice}
-              className="text-[13px] text-ink-muted underline underline-offset-2 hover:text-accent disabled:cursor-not-allowed disabled:no-underline disabled:opacity-40"
-            >
-              langzamer
-            </button>
+            <SpeedPicker tts={tts} />
           </div>
           {tts.ready && !tts.voice ? (
             <p className="rounded-lg border border-line bg-warn-wash px-3.5 py-2.5 text-[12.5px] leading-relaxed text-ink-secondary">

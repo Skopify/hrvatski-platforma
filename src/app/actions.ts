@@ -653,12 +653,38 @@ export async function endSession(
     .run();
 }
 
+/**
+ * Onthoudt dat deze stap gehad is, zodat "Les hervatten" verdergaat in plaats
+ * van opnieuw te beginnen.
+ *
+ * Er wordt een lijst met oefening-id's bijgehouden en geen positie in de rij.
+ * Dat is met opzet: de laatste sectie van een les mengt er vervallen items van
+ * vroeger doorheen, en welke dat zijn hangt af van je herhaalplanning. Die rij
+ * ziet er morgen dus anders uit, en een opgeslagen index zou je dan midden in
+ * iets anders laten landen.
+ */
+export async function markStepDone(lesson: number, exerciseId: string): Promise<void> {
+  const row = db.select().from(lessonProgress).where(eq(lessonProgress.lesson, lesson)).get();
+  if (!row || row.status === "done") return;
+
+  const done = new Set((row.sectionsDone as string[] | null) ?? []);
+  if (done.has(exerciseId)) return;
+  done.add(exerciseId);
+
+  db.update(lessonProgress)
+    .set({ sectionsDone: [...done] })
+    .where(eq(lessonProgress.lesson, lesson))
+    .run();
+}
+
 export async function completeLesson(lesson: number): Promise<void> {
+  // sectionsDone leegmaken: de les is af, dus wie hem opnieuw doet begint
+  // vooraan in plaats van meteen op het eindscherm te belanden.
   db.insert(lessonProgress)
     .values({ lesson, status: "done", sectionsDone: [], completedAt: Date.now() })
     .onConflictDoUpdate({
       target: lessonProgress.lesson,
-      set: { status: "done", completedAt: Date.now() },
+      set: { status: "done", sectionsDone: [], completedAt: Date.now() },
     })
     .run();
 

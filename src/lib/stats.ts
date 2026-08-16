@@ -402,6 +402,17 @@ export function lessonStatuses() {
   return db.select().from(lessonProgress).all();
 }
 
+/** De oefeningen die je in deze les al gehad hebt — de basis voor hervatten. */
+export function stepsDoneIn(lesson: number): Set<string> {
+  const row = db
+    .select({ done: lessonProgress.sectionsDone, status: lessonProgress.status })
+    .from(lessonProgress)
+    .where(eq(lessonProgress.lesson, lesson))
+    .get();
+  if (!row || row.status === "done") return new Set();
+  return new Set((row.done as string[] | null) ?? []);
+}
+
 /** Leesvoortgang per verhaal, als map op slug. */
 export function storyStatuses(): Map<
   string,

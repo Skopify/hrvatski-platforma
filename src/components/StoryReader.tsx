@@ -62,7 +62,7 @@ export function StoryReader({
           setPlaying(null);
           return;
         }
-        tts.speak(para.sentences[i++].hr, 0.88, next);
+        tts.speak(para.sentences[i++].hr, undefined, next);
       };
       next();
     },

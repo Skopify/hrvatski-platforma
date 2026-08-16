@@ -31,6 +31,32 @@ export function VoiceCheck() {
           >
             Test de uitspraak
           </button>
+
+          {/* macOS installeert standaard de compacte stem. Die klinkt blikkerig
+              en slikt medeklinkers in — bij een taal waar het verschil tussen
+              č en ć het hele punt is, is dat geen detail. De betere versie is
+              een aparte download onder dezelfde naam. */}
+          <div className="mt-4 rounded-lg bg-sunken px-4 py-3">
+            <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+              Klinkt het blikkerig?
+            </p>
+            <p className="mt-2 text-[12.5px] leading-relaxed text-ink-secondary">
+              macOS installeert standaard de compacte versie van een stem. Er bestaat een
+              tweede, veel duidelijkere versie met dezelfde naam — die moet je apart
+              downloaden. Het verschil is groot, juist bij č, ć, š en ž.
+            </p>
+            <ol className="mt-2.5 space-y-1 text-[12.5px] leading-relaxed text-ink-secondary">
+              <li>1. Systeeminstellingen → Toegankelijkheid → Gesproken materiaal</li>
+              <li>2. Systeemstem → Stemmen beheren</li>
+              <li>3. Zoek Kroatisch en kies de variant met (Verbeterd) of (Premium)</li>
+              <li>4. Herstart je browser</li>
+            </ol>
+          </div>
+
+          <p className="mt-3 text-[12px] leading-relaxed text-ink-muted">
+            Te snel? De spreeksnelheid staat bij elke luisteroefening en bij het dictee,
+            en die keuze wordt onthouden.
+          </p>
         </>
       ) : (
         <>

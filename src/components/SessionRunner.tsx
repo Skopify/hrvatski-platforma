@@ -8,6 +8,7 @@ import {
   acknowledgeTeaching,
   completeLesson,
   endSession,
+  markStepDone,
   markStoryQuizDone,
   selfAssess,
   startSession,
@@ -107,6 +108,11 @@ export function SessionRunner({
 
   const advance = useCallback(() => {
     setFeedback(null);
+    // Vastleggen dat deze stap gehad is, vóór het doorschakelen. Sluit je nu
+    // het tabblad, dan pakt "Les hervatten" hier weer op.
+    if (kind === "lesson" && lessonNumber !== null && step) {
+      void markStepDone(lessonNumber, step.exercise.id);
+    }
     if (isLast) {
       void finish();
       return;
@@ -114,7 +120,7 @@ export function SessionRunner({
     const next = index + 1;
     setIndex(next);
     setAnswer(emptyAnswer(steps[next].exercise));
-  }, [finish, index, isLast, steps]);
+  }, [finish, index, isLast, kind, lessonNumber, step, steps]);
 
   const check = useCallback(async () => {
     // setBusy werkt pas bij de volgende render, dus een ref is de enige betrouwbare
