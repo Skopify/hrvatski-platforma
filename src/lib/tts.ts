@@ -1,13 +1,45 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-/** De spreeksnelheden die je kunt kiezen, van traag naar gewoon. */
+/*
+  De spreeksnelheden.
+
+  Waarom hier meer staat dan een getal: de rate van de Web Speech API werkt maar
+  één kant op. Sneller vragen gaat prima, langzamer nauwelijks — de compacte stem
+  van macOS heeft een ondergrens en negeert de rest. Gemeten op deze machine met
+  dezelfde zin:
+
+      rate 0.85  →  4111 ms      rate 0.5  →  4911 ms   (slechts 19% trager)
+      rate 1.5   →  2661 ms                             (wél evenredig sneller)
+
+  Vandaar dat traag afspelen niet met de rate wordt gedaan maar door de zin in
+  stukken te knippen en er stilte tussen te zetten. Diezelfde zin per woord met
+  220 ms ertussen duurt 8470 ms — 76% trager, en dát is te volgen.
+*/
 export const TTS_RATES = [
-  { value: 0.5, label: "Heel langzaam" },
-  { value: 0.7, label: "Langzaam" },
-  { value: 0.85, label: "Normaal" },
+  { value: 0.5, label: "Heel langzaam", split: "word" as const, gap: 260 },
+  { value: 0.7, label: "Langzaam", split: "word" as const, gap: 90 },
+  { value: 0.85, label: "Normaal", split: "none" as const, gap: 0 },
 ] as const;
+
+/**
+ * In welke happen een zin wordt uitgesproken.
+ *
+ * Ook de middelste stand knipt per woord. Knippen op leestekens klonk logischer,
+ * maar een korte zin heeft er vaak maar één — dan bleef het bij twee happen en
+ * was "Langzaam" nauwelijks te onderscheiden van "Normaal". Het verschil tussen
+ * de twee trage standen zit nu in de lengte van de stilte, niet in de plek.
+ */
+function chunk(text: string, rate: number): string[] {
+  const preset = TTS_RATES.find((r) => r.value === rate);
+  if (!preset || preset.split === "none") return [text];
+  return text.split(/\s+/).filter(Boolean);
+}
+
+function gapFor(rate: number): number {
+  return TTS_RATES.find((r) => r.value === rate)?.gap ?? 0;
+}
 
 const RATE_KEY = "hrvatski.tts.rate";
 const VOICE_KEY = "hrvatski.tts.voice";
@@ -73,6 +105,8 @@ export function useCroatianTts(): TtsState {
   // "langzamer" klikken — precies de knop waarvan je dacht dat hij niets deed.
   const [rate, setRateState] = useState(DEFAULT_RATE);
   const [voiceName, setVoiceNameState] = useState<string | null>(null);
+  /** Volgnummer van de lopende opdracht, om een ketting te kunnen afbreken. */
+  const speakToken = useRef(0);
   // Bewust als state en niet tijdens de render bepaald: op de server bestaat
   // window niet, dus een directe check zou een andere HTML opleveren dan de
   // eerste client-render en de hydratie breken.
@@ -141,24 +175,44 @@ export function useCroatianTts(): TtsState {
         return;
       }
       const wanted = rateOverride ?? rate;
+      const parts = chunk(text, wanted);
+      const gap = gapFor(wanted);
 
-      const utter = () => {
-        const u = new SpeechSynthesisUtterance(text);
+      // Elke nieuwe opdracht krijgt een eigen nummer. Een ketting die nog loopt
+      // ziet dat het nummer veranderd is en stopt zichzelf — zonder dat zou een
+      // tweede klik twee stemmen door elkaar laten praten.
+      const mine = ++speakToken.current;
+      const afgebroken = () => mine !== speakToken.current;
+
+      const finish = () => {
+        if (afgebroken()) return;
+        setSpeaking(false);
+        onEnd?.();
+      };
+
+      const zeg = (i: number) => {
+        if (afgebroken()) return;
+        if (i >= parts.length) {
+          finish();
+          return;
+        }
+        const u = new SpeechSynthesisUtterance(parts[i]!);
         u.voice = voice;
         u.lang = voice.lang;
         u.rate = wanted;
         u.pitch = 1;
         u.volume = 1;
-        let done = false;
-        const finish = () => {
-          if (done) return;
-          done = true;
-          setSpeaking(false);
-          onEnd?.();
+        let stepDone = false;
+        const next = () => {
+          if (stepDone) return;
+          stepDone = true;
+          if (afgebroken()) return;
+          // Stilte tussen de happen: dát maakt het traag, niet de rate.
+          setTimeout(() => zeg(i + 1), i + 1 < parts.length ? gap : 0);
         };
         u.onstart = () => setSpeaking(true);
-        u.onend = finish;
-        u.onerror = finish;
+        u.onend = next;
+        u.onerror = next;
         window.speechSynthesis.speak(u);
       };
 
@@ -166,13 +220,16 @@ export function useCroatianTts(): TtsState {
       // annulering is dan nog bezig en de nieuwe utterance krijgt de standaard
       // instellingen. Eén tick wachten is genoeg om dat te voorkomen.
       window.speechSynthesis.cancel();
-      setTimeout(utter, 60);
+      setTimeout(() => zeg(0), 60);
     },
     [rate, supported, voice],
   );
 
   const stop = useCallback(() => {
     if (!supported) return;
+    // Het nummer ophogen breekt een lopende ketting af; zonder dat zou de
+    // volgende hap na de pauze alsnog beginnen.
+    speakToken.current++;
     window.speechSynthesis.cancel();
     setSpeaking(false);
   }, [supported]);
