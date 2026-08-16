@@ -17,3 +17,8 @@ data/
 
 # Machine-eigen instellingen van Claude Code.
 .claude/settings.local.json
+
+# Je Azure-sleutel. Hoort nooit in versiebeheer, ook niet in een privérepo:
+# een sleutel die eenmaal in de geschiedenis staat, staat er voorgoed in.
+.env.local
+.env*.local

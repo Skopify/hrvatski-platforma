@@ -1,6 +1,7 @@
 import { AreaChart, BarList, LineChart, StatTile } from "@/components/charts";
 import { Bolt, Page, PageHeader } from "@/components/ui";
 import { VoiceCheck } from "@/components/VoiceCheck";
+import { VoiceLab } from "@/components/VoiceLab";
 import { milestones, type Milestone } from "@/lib/milestones";
 import {
   dailyStats,
@@ -322,7 +323,10 @@ export default function ProgressPage() {
         </div>
       </section>
 
-      <VoiceCheck />
+      <div className="space-y-5">
+        <VoiceCheck />
+        <VoiceLab />
+      </div>
     </Page>
   );
 }

@@ -66,9 +66,23 @@ function voiceScore(v: SpeechSynthesisVoice): number {
   return v.localService ? 1 : 0;
 }
 
+/** Een neurale stem van de server; klinkt beter dan wat de browser heeft. */
+export interface ServerVoice {
+  id: string;
+  label: string;
+  gender: "vrouw" | "man";
+}
+
+const SERVER_VOICE_KEY = "hrvatski.tts.servervoice";
+
 export interface TtsState {
   /** Alle stemmen die de browser aanbiedt (leeg tot voiceschanged vuurt). */
   voices: SpeechSynthesisVoice[];
+  /** Neurale stemmen van Azure; leeg als er geen sleutel is ingesteld. */
+  serverVoices: ServerVoice[];
+  /** Welke serverstem in gebruik is, of null als de browserstem het doet. */
+  serverVoice: string | null;
+  setServerVoice: (id: string) => void;
   /** De gekozen Kroatische stem, of null als die er niet is. */
   voice: SpeechSynthesisVoice | null;
   /** Alle Kroatische stemmen, beste eerst — de keuzelijst. */
@@ -107,6 +121,10 @@ export function useCroatianTts(): TtsState {
   const [voiceName, setVoiceNameState] = useState<string | null>(null);
   /** Volgnummer van de lopende opdracht, om een ketting te kunnen afbreken. */
   const speakToken = useRef(0);
+  const [serverVoices, setServerVoices] = useState<ServerVoice[]>([]);
+  const [serverVoiceName, setServerVoiceName] = useState<string | null>(null);
+  /** Het element dat serveraudio afspeelt; hergebruikt zodat stoppen werkt. */
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   // Bewust als state en niet tijdens de render bepaald: op de server bestaat
   // window niet, dus een directe check zou een andere HTML opleveren dan de
   // eerste client-render en de hydratie breken.
@@ -118,7 +136,33 @@ export function useCroatianTts(): TtsState {
     const stored = Number(window.localStorage.getItem(RATE_KEY));
     if (TTS_RATES.some((r) => r.value === stored)) setRateState(stored);
     setVoiceNameState(window.localStorage.getItem(VOICE_KEY));
+    setServerVoiceName(window.localStorage.getItem(SERVER_VOICE_KEY));
+
+    // Eén keer vragen of er neurale stemmen zijn. Zo niet, dan blijft alles bij
+    // het oude en merkt de rest van het platform hier niets van.
+    let cancelled = false;
+    fetch("/api/spraak/status")
+      .then((r) => r.json())
+      .then((d: { available: boolean; voices: ServerVoice[] }) => {
+        if (!cancelled && d.available) setServerVoices(d.voices);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, []);
+
+  const setServerVoice = useCallback((id: string) => {
+    setServerVoiceName(id);
+    window.localStorage.setItem(SERVER_VOICE_KEY, id);
+  }, []);
+
+  /** De serverstem die gebruikt wordt, of null als er geen beschikbaar is. */
+  const serverVoice = useMemo(() => {
+    if (!serverVoices.length) return null;
+    const chosen = serverVoices.find((v) => v.id === serverVoiceName);
+    return (chosen ?? serverVoices[0]!).id;
+  }, [serverVoices, serverVoiceName]);
 
   const setRate = useCallback((next: number) => {
     setRateState(next);
@@ -168,13 +212,13 @@ export function useCroatianTts(): TtsState {
     return croatianVoices.find((v) => v.name === voiceName) ?? croatianVoices[0];
   }, [croatianVoices, voiceName]);
 
-  const speak = useCallback(
-    (text: string, rateOverride?: number, onEnd?: () => void) => {
-      if (!supported || !voice || !text) {
+  /** De oude weg: de stem van het besturingssysteem, in happen als het traag moet. */
+  const browserSpeak = useCallback(
+    (text: string, wanted: number, onEnd?: () => void) => {
+      if (!supported || !voice) {
         onEnd?.();
         return;
       }
-      const wanted = rateOverride ?? rate;
       const parts = chunk(text, wanted);
       const gap = gapFor(wanted);
 
@@ -225,12 +269,54 @@ export function useCroatianTts(): TtsState {
     [rate, supported, voice],
   );
 
+  const speak = useCallback(
+    (text: string, rateOverride?: number, onEnd?: () => void) => {
+      if (!text) {
+        onEnd?.();
+        return;
+      }
+      const wanted = rateOverride ?? rate;
+
+      // Is er een neurale stem, dan die. Azure volgt de snelheid wél netjes op,
+      // dus daar is het hakken in woorden niet nodig — de zin blijft heel en
+      // klinkt alsnog trager.
+      if (serverVoice) {
+        const mine = ++speakToken.current;
+        audioRef.current?.pause();
+        const url = `/api/spraak?tekst=${encodeURIComponent(text)}&stem=${serverVoice}&tempo=${wanted}`;
+        const el = new Audio(url);
+        audioRef.current = el;
+        const done = () => {
+          if (mine !== speakToken.current) return;
+          setSpeaking(false);
+          onEnd?.();
+        };
+        el.onplaying = () => setSpeaking(true);
+        el.onended = done;
+        // Mislukt het ophalen — geen netwerk, sleutel ingetrokken — dan alsnog
+        // de browserstem, zodat een oefening nooit stil blijft.
+        el.onerror = () => {
+          if (mine !== speakToken.current) return;
+          browserSpeak(text, wanted, onEnd);
+        };
+        void el.play().catch(() => {
+          if (mine === speakToken.current) browserSpeak(text, wanted, onEnd);
+        });
+        return;
+      }
+
+      browserSpeak(text, wanted, onEnd);
+    },
+
+    [browserSpeak, rate, serverVoice],
+  );
+
   const stop = useCallback(() => {
-    if (!supported) return;
     // Het nummer ophogen breekt een lopende ketting af; zonder dat zou de
     // volgende hap na de pauze alsnog beginnen.
     speakToken.current++;
-    window.speechSynthesis.cancel();
+    audioRef.current?.pause();
+    if (supported) window.speechSynthesis.cancel();
     setSpeaking(false);
   }, [supported]);
 
@@ -239,6 +325,9 @@ export function useCroatianTts(): TtsState {
     voice,
     croatianVoices,
     setVoiceName,
+    serverVoices,
+    serverVoice,
+    setServerVoice,
     supported,
     ready,
     speaking,

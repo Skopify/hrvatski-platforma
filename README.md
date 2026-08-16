@@ -105,16 +105,19 @@ src/
     milestones.ts   Mijlpalen, berekend uit de echte tellers
     stats.ts        Alle dashboardquery's
     present.ts      Wat de browser mag zien (antwoorden blijven op de server)
-    tts.ts          Kroatische spraak via de Web Speech API
+    tts.ts          Kroatische spraak: Azure als die er is, anders de systeemstem
+    speech/azure.ts Neurale stemmen van Azure, met schijfcache in data/audio/
 data/hrvatski.db    SQLite — je volledige voortgang, één bestand
 scripts/            seed en zelfcontrole
 public/fonts/       Zelf gehoste letters: Fraunces, Plus Jakarta Sans, Literata
 start.command       Dubbelklikken om te starten (zoekt zelf een werkende node)
+.env.local.example  Sjabloon voor de optionele Azure-sleutel
 ```
 
 **Stack:** Next.js 15 · React 19 · TypeScript · Tailwind 4 · SQLite (better-sqlite3 +
-Drizzle) · ts-fsrs · Web Speech API. Geen externe diensten, geen API-sleutels, geen
-data die de machine verlaat.
+Drizzle) · ts-fsrs · Web Speech API. Alles draait lokaal. De enige uitzondering is
+optioneel: zet je een Azure-sleutel in, dan gaat de tekst van luisteroefeningen naar
+Microsoft om er een opname van te maken — zie Audio.
 
 ## De ontwerpkeuzes, kort
 
@@ -324,29 +327,47 @@ en redactie gescheiden blijven.
 
 ## Audio
 
-Luisteroefeningen gebruiken de Web Speech API met een `hr-HR`-stem. Op deze machine is
-**Lana (hr-HR)** aanwezig, dus audio werkt zonder installatie. Is er geen Kroatische
-stem, dan worden luisteroefeningen overgeslagen in plaats van met een Engelse stem
-voorgelezen — dat laatste zou de uitspraak actief bederven. **Voortgang → Audio** laat
-de status zien en legt uit hoe je een stem installeert.
+Luisteroefeningen gebruiken standaard de Web Speech API met een `hr-HR`-stem van je
+besturingssysteem. Op deze machine is dat **Lana (hr-HR)**, dus audio werkt zonder
+installatie. Is er geen Kroatische stem, dan worden luisteroefeningen overgeslagen in
+plaats van met een Engelse stem voorgelezen — dat laatste zou de uitspraak actief
+bederven. **Voortgang → Audio** laat de status zien.
 
-## Herkomst en gebruik
+### Betere stemmen (optioneel, gratis)
 
-Dit is een persoonlijk studieproject, gebouwd voor één leerder.
+De stem die macOS standaard installeert is de compacte versie: blikkerig, en met een
+ondergrens waardoor traag afspelen nauwelijks werkt. Gemeten op deze machine duurt
+dezelfde zin op rate 0.85 4111 ms en op rate 0.5 nog altijd 4911 ms — 19% verschil
+terwijl je 40% vraagt. Daarom knipt het platform bij traag afspelen de zin in woorden
+met stilte ertussen; dat levert wél +87% en +124% op.
 
-De lesinhoud in `content/` is afgeleid van **Hrvatski za početnike 1** (Croaticum,
-Filozofski fakultet Zagreb, 2006), udžbenik en vježbenica — de woordenlijsten,
-grammatica en oefeningen zijn omgezet naar een gestructureerd formaat, met bij
-vrijwel elk item een verwijzing naar de bronpagina. Het auteursrecht op dat materiaal
-ligt bij de oorspronkelijke uitgever en auteurs. De boeken zelf staan **niet** in deze
-repository en horen er ook niet in.
+Wil je het echt goed hebben, dan levert **Azure Speech** twee Kroatische neurale
+stemmen: **Gabrijela** (vrouw) en **Srećko** (man). Dezelfde stemmen die Microsoft Edge
+gebruikt, maar dan als opgeslagen bestand, zodat elke browser ze kan afspelen en de
+uitspraak elke keer identiek is.
 
-Wat hier wél van mij is: de code, de vijf verhalen in `content/stories/`, de
-naamvalzinnen in `content/case-usage.json`, de verbuigingsmotor en het ontwerp.
+**Wat het kost.** De gratis laag (prijsklasse F0) is 500.000 tekens per maand. Alle
+lesteksten, verhalen en oefeningen samen zijn ongeveer 60.000 tekens, en elke zin wordt
+na de eerste keer van schijf gespeeld — een zin die je honderd keer herhaalt kost dus
+één keer. Je komt er in de praktijk niet aan. Er is geen creditcard nodig voor F0, maar
+Azure vraagt er wel om bij het aanmaken van een account.
 
-Gebruik dit als studiemateriaal of als voorbeeld van hoe zo'n platform in elkaar kan
-zitten — niet als vervanging van het boek. Ben je van de uitgeverij en wil je dat de
-afgeleide content offline gaat, laat het weten via een issue.
+**Instellen:**
 
-De lettertypes in `public/fonts/` (Fraunces, Plus Jakarta Sans, Literata) staan onder
-de SIL Open Font License.
+1. Maak op <https://portal.azure.com> een *Speech Service* aan, prijsklasse **F0**
+2. Ga naar **Keys and Endpoint** en kopieer **KEY 1** en de **Location/Region**
+3. Kopieer `.env.local.example` naar `.env.local` en vul beide in
+4. Herstart de server
+
+Daarna staat op **Voortgang → Stemmen vergelijken** een testscherm waarin je dezelfde
+zin door elke stem kunt laten uitspreken. De proefzinnen zijn gekozen op de klanken
+waar het misgaat — č tegenover ć, en š, ž, đ, dž achter elkaar.
+
+Zonder sleutel doet dit alles niets en gedraagt het platform zich precies zoals
+hiervoor. De opnames belanden in `data/audio/` en blijven dus buiten versiebeheer.
+
+### Gratis alternatief zonder sleutel
+
+Open het platform in **Microsoft Edge**. Die brengt dezelfde neurale stemmen mee via de
+browser, zonder account. Ze verschijnen vanzelf in de stemkeuze op Voortgang. Nadeel:
+ze werken alleen met internet en alleen in Edge.
