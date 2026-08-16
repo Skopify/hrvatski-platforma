@@ -163,6 +163,44 @@
       "source": "udzbenik p.248",
       "exercises": [
         {
+          "id": "e.18.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het gesprek bij de dokter. Let op enkelvoud of meervoud.",
+          "given": "Pacijent: Boli me glava i boli me grlo. ___ me i leđa.",
+          "answer": "Bole",
+          "accepts": ["Bole","bole"],
+          "explain_nl": "leđa is meervoud, dus bole. Bij glava en grlo staat boli, want die zijn enkelvoud.",
+          "targets": ["g.18.boljeti","v.18.leda"],
+          "difficulty": 4,
+          "source": "udzbenik p.253"
+        },
+        {
+          "id": "e.18.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar is de patiënt allergisch voor?",
+          "given": "Pacijent: Da, alergičan sam na ___ i na ___.",
+          "answer": "pelud en prašinu",
+          "distractors": ["penicilin en dlaku","mlijeko en jaja","pelud en penicilin"],
+          "explain_nl": "'na pelud i na prašinu' — pollen en stof. Na alergičan na volgt de accusatief.",
+          "targets": ["g.18.alergican"],
+          "difficulty": 3,
+          "source": "udzbenik p.253"
+        },
+        {
+          "id": "e.18.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf een eigen gesprek bij de dokter: vier regels, met minstens twee klachten.",
+          "model_answer": "Liječnica: Što vas boli? — Pacijent: Boli me želudac, a bole me i noge. Ne mogu spavati. — Liječnica: Jeste li alergični na nešto? — Pacijent: Da, alergičan sam na prašinu.",
+          "rubric_nl": ["Het lichaamsdeel is het onderwerp, niet de persoon.","boli bij enkelvoud, bole bij meervoud.","Je gebruikt me, te of vas op de goede plek.","Minstens vier regels."],
+          "placeholder": "Schrijf het gesprek in het Kroatisch…",
+          "targets": ["g.18.boljeti","g.18.alergican"],
+          "difficulty": 5,
+          "source": "vježbenica p.90"
+        },
+        {
           "id": "e.18.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -374,15 +412,16 @@
         },
         {
           "id": "e.18.025",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Što vas boli? Boli me glava i bole me leđa.",
+          "prompt_nl": "Vertaal naar het Kroatisch. Let op wat het onderwerp is.",
+          "given": "Wat heeft u? Ik heb hoofdpijn en mijn rug doet pijn.",
           "answer": "Što vas boli? Boli me glava i bole me leđa.",
           "accepts": ["Što vas boli? Boli me glava i bole me leđa."],
-          "targets": ["g.18.boljeti", "v.18.glava", "v.18.leda"],
+          "explain_nl": "Het lichaamsdeel is het onderwerp, niet de persoon. leđa is meervoud, dus bole en niet boli.",
+          "targets": ["g.18.boljeti","v.18.glava","v.18.leda"],
           "difficulty": 5,
-          "source": "udzbenik p.248"
+          "source": "aangevuld"
         }
       ]
     },

@@ -10,7 +10,8 @@
     "seed": "tsx scripts/seed.ts",
     "check": "tsx scripts/check-grading.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "db:reset": "rm -f data/hrvatski.db data/hrvatski.db-wal data/hrvatski.db-shm && npm run seed"
+    "db:reset": "rm -f data/hrvatski.db data/hrvatski.db-wal data/hrvatski.db-shm && npm run seed",
+    "patch": "tsx scripts/apply-patch.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

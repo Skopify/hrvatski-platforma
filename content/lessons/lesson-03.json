@@ -231,6 +231,44 @@
       "source": "vježbenica p.19",
       "exercises": [
         {
+          "id": "e.03.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens de tekst over de familie.",
+          "given": "Moj brat ___ ___ Luka. On je liječnik.",
+          "answer": "zove se",
+          "accepts": ["zove se"],
+          "explain_nl": "zvati se in de derde persoon: zove se. De se hoort er altijd bij en staat achter het werkwoord.",
+          "targets": ["g.03.zvati_se","v.03.brat"],
+          "difficulty": 3,
+          "source": "udzbenik p.45"
+        },
+        {
+          "id": "e.03.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wie is in de tekst kok?",
+          "given": "Moja mama zove se Marta. Ona je kuharica.",
+          "answer": "de moeder",
+          "distractors": ["de vader","de zus","de broer"],
+          "explain_nl": "kuharica is de vrouwelijke vorm van kuhar. De vader is inženjer, de zus studentica en de broer liječnik.",
+          "targets": ["g.02.zanimanja","v.03.majka"],
+          "difficulty": 2,
+          "source": "udzbenik p.45"
+        },
+        {
+          "id": "e.03.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen over je eigen familie, naar het model van de tekst.",
+          "model_answer": "Moja majka zove se Anneke. Ona je učiteljica. Moj otac zove se Peter. On je informatičar. Moja sestra zove se Lisa. Naša obitelj nije velika.",
+          "rubric_nl": ["Elke zin heeft een bezittelijk voornaamwoord dat klopt bij het geslacht (moj / moja).","Je gebruikt zove se voor de naam.","Je noemt minstens één beroep.","on verwijst naar een man, ona naar een vrouw."],
+          "placeholder": "Schrijf over je familie in het Kroatisch…",
+          "targets": ["g.03.zvati_se","g.03.posvojne_zamjenice"],
+          "difficulty": 4,
+          "source": "vježbenica p.20"
+        },
+        {
           "id": "e.03.001",
           "type": "teaching_moment",
           "mode": "receptive",

@@ -158,6 +158,44 @@
       "source": "udzbenik p.180",
       "exercises": [
         {
+          "id": "e.13.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de datief in, volgens het gesprek op het postkantoor.",
+          "given": "Ana: Tri šaljem ___, a dvije bratu.",
+          "answer": "sestri",
+          "accepts": ["sestri"],
+          "explain_nl": "De ontvanger staat in de datief: sestra → sestri, brat → bratu.",
+          "targets": ["g.13.dativ_objekt","g.13.slati_pisati"],
+          "difficulty": 4,
+          "source": "udzbenik p.183"
+        },
+        {
+          "id": "e.13.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel ansichtkaarten verstuurt Ana in totaal?",
+          "given": "Službenik: Koliko razglednica šaljete? — Ana: …",
+          "answer": "vijf",
+          "distractors": ["twee","drie","acht"],
+          "explain_nl": "'Pet.' Daarna splitst ze het uit: drie naar haar zus en twee naar haar broer.",
+          "targets": ["v.13.razglednica"],
+          "difficulty": 2,
+          "source": "udzbenik p.183"
+        },
+        {
+          "id": "e.13.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen over aan wie jij iets stuurt, geeft of schrijft.",
+          "model_answer": "Šaljem paket majci. Pišem razglednicu prijatelju. Dajem knjigu sestri. Zahvaljujem profesoru na pomoći.",
+          "rubric_nl": ["Elke zin heeft een ontvanger in de datief.","Wat je stuurt of geeft staat in de accusatief.","Je gebruikt minstens twee verschillende werkwoorden.","Minstens vier zinnen."],
+          "placeholder": "Schrijf je zinnen in het Kroatisch…",
+          "targets": ["g.13.dativ_objekt","g.13.glagoli_dativ"],
+          "difficulty": 5,
+          "source": "vježbenica p.78"
+        },
+        {
           "id": "e.13.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -383,15 +421,16 @@
         },
         {
           "id": "e.13.023",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Sretan Božić i sretna Nova godina!",
+          "prompt_nl": "Schrijf de wens die op een Kroatische kerstkaart staat.",
+          "given": "Vrolijk kerstfeest en een gelukkig nieuwjaar!",
           "answer": "Sretan Božić i sretna Nova godina!",
           "accepts": ["Sretan Božić i sretna Nova godina!"],
-          "targets": ["v.13.sretan_bozic", "v.13.sretna_nova"],
+          "explain_nl": "Božić is mannelijk → sretan; godina is vrouwelijk → sretna. Twee geslachten in één wens.",
+          "targets": ["v.13.sretan_bozic","v.13.sretna_nova"],
           "difficulty": 3,
-          "source": "udzbenik p.182"
+          "source": "aangevuld"
         },
         {
           "id": "e.13.024",

@@ -198,6 +198,44 @@
       "source": "udzbenik p.34",
       "exercises": [
         {
+          "id": "e.02.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het gesprek in de taxi.",
+          "given": "Taksist: Oprostite, Vi ste ___?",
+          "answer": "stranac",
+          "accepts": ["stranac"],
+          "explain_nl": "stranac = buitenlander. De chauffeur gebruikt de beleefde Vi, dus ste en niet si.",
+          "targets": ["g.02.nominativ","g.biti.present.short"],
+          "difficulty": 2,
+          "source": "udzbenik p.31"
+        },
+        {
+          "id": "e.02.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar komt Pablo vandaan, volgens het gesprek?",
+          "given": "Pablo: Da, da. Ja sam Čileanac.",
+          "answer": "uit Chili",
+          "distractors": ["uit Kroatië","uit Argentinië","uit Spanje"],
+          "explain_nl": "Čileanac is de mannelijke inwoner van Čile. De chauffeur bevestigt het: 'Uh, Čile je daleko!'",
+          "targets": ["g.02.nacionalnosti"],
+          "difficulty": 2,
+          "source": "udzbenik p.31"
+        },
+        {
+          "id": "e.02.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Werkboekopdracht: maak van deze gegevens twee zinnen. — Mark Pfeifer · Njemačka, Berlin · liječnik",
+          "model_answer": "Ovo je Mark Pfeifer. On je Nijemac iz Berlina i on je liječnik.",
+          "rubric_nl": ["Je noemt de persoon (Ovo je … / On se zove …).","Je maakt van het land de inwoner: Njemačka → Nijemac.","Je noemt het beroep in de nominatief.","De werkwoordsvorm je staat op de goede plek."],
+          "placeholder": "Schrijf de twee zinnen in het Kroatisch…",
+          "targets": ["g.02.nacionalnosti","g.02.zanimanja"],
+          "difficulty": 4,
+          "source": "vježbenica p.15"
+        },
+        {
           "id": "e.02.001",
           "type": "cloze",
           "mode": "productive",
@@ -229,15 +267,16 @@
         },
         {
           "id": "e.02.003",
-          "type": "listen_type",
+          "type": "word_order",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Hvala na pitanju, jako sam umoran.",
+          "prompt_nl": "Zet de woorden in de juiste volgorde. Pablo antwoordt de taxichauffeur.",
+          "tokens": ["Hvala","na","pitanju","jako","sam","umoran"],
           "answer": "Hvala na pitanju, jako sam umoran.",
-          "accepts": ["Hvala na pitanju, jako sam umoran.", "Hvala na pitanju jako sam umoran."],
+          "accepts": ["Hvala na pitanju, jako sam umoran.","Hvala na pitanju jako sam umoran"],
+          "explain_nl": "sam is een aanleunwoord en kan niet vooraan; het staat achter het eerste zinsdeel jako.",
           "targets": ["v.02.umoran"],
           "difficulty": 3,
-          "source": "udzbenik p.34"
+          "source": "aangevuld"
         }
       ]
     },

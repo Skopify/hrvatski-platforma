@@ -159,6 +159,44 @@
       "source": "udzbenik p.164",
       "exercises": [
         {
+          "id": "e.12.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de toekomende tijd in, volgens het gesprek.",
+          "given": "B: ___ ću u Hrvatsku. Idemo prema moru.",
+          "answer": "Putovat",
+          "accepts": ["Putovat","putovat","Putovati","putovati"],
+          "explain_nl": "Bij de toekomende tijd verliest de infinitief op -ti zijn i als ću erachter staat: putovati → putovat ću.",
+          "targets": ["g.12.futur","v.12.planirati"],
+          "difficulty": 4,
+          "source": "udzbenik p.169"
+        },
+        {
+          "id": "e.12.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat voor weer wordt het op woensdag, volgens het gesprek?",
+          "given": "B: Bit će sunčano, ali u srijedu …",
+          "answer": "regen",
+          "distractors": ["zonnig","sneeuw","wind"],
+          "explain_nl": "'u srijedu će padati kiša' — er zal regen vallen. Sunčano geldt voor de andere dagen.",
+          "targets": ["g.12.futur","v.12.vrijeme"],
+          "difficulty": 2,
+          "source": "udzbenik p.169"
+        },
+        {
+          "id": "e.12.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf wat je volgende week gaat doen. Minstens vier zinnen in de toekomende tijd.",
+          "model_answer": "Sljedeći tjedan ću raditi. U srijedu ću ići na tečaj. U petak ćemo putovati u Zagreb. Neće biti dosadno!",
+          "rubric_nl": ["Elke zin heeft een vorm van htjeti (ću, ćeš, će, ćemo).","De infinitief op -ti verliest zijn i waar dat hoort (radit ću).","Minstens één ontkenning met neću of neće.","Minstens vier zinnen."],
+          "placeholder": "Schrijf je plannen in het Kroatisch…",
+          "targets": ["g.12.futur","g.12.futur_negacija"],
+          "difficulty": 5,
+          "source": "vježbenica p.72"
+        },
+        {
           "id": "e.12.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -372,15 +410,16 @@
         },
         {
           "id": "e.12.025",
-          "type": "listen_type",
+          "type": "word_order",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Bit će sunčano, ali u srijedu će padati kiša.",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Bit","će","sunčano","ali","u","srijedu","će","padati","kiša"],
           "answer": "Bit će sunčano, ali u srijedu će padati kiša.",
           "accepts": ["Bit će sunčano, ali u srijedu će padati kiša."],
-          "targets": ["g.12.futur", "v.12.kisa"],
+          "explain_nl": "će is een aanleunwoord: het staat achter het eerste zinsdeel, dus achter u srijedu en niet ervoor.",
+          "targets": ["g.12.futur","v.12.kisa"],
           "difficulty": 5,
-          "source": "udzbenik p.168"
+          "source": "aangevuld"
         },
         {
           "id": "e.12.026",

@@ -176,6 +176,50 @@
       "source": "udzbenik p.13",
       "exercises": [
         {
+          "id": "e.00.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het overzicht dat je net gelezen hebt.",
+          "given": "GLAVNI GRAD: ___",
+          "answer": "Zagreb",
+          "accepts": ["Zagreb"],
+          "explain_nl": "glavni grad = hoofdstad. Het staat er letterlijk; deze vraag test of je de tekst ook echt gelezen hebt.",
+          "targets": ["v.00.auto"],
+          "difficulty": 1,
+          "source": "udzbenik p.14"
+        },
+        {
+          "id": "e.00.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel nationale parken heeft Kroatië volgens de tekst?",
+          "given": "NACIONALNI PARKOVI: …",
+          "answer": "osam",
+          "distractors": ["deset","dvadeset jedan","tisuću dvjesto četrdeset šest"],
+          "explain_nl": "osam = acht. Let op: dvadeset jedna is het aantal provincies en 1246 is het aantal eilanden — allemaal getallen uit dezelfde tekst.",
+          "targets": ["g.00.brojevi","v.00.osam"],
+          "difficulty": 2,
+          "source": "udzbenik p.14"
+        },
+        {
+          "id": "e.00.t3",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel het Kroatische opschrift aan de betekenis.",
+          "pairs": [
+            {"hr":"ZASTAVA","nl":"vlag"},
+            {"hr":"GRB","nl":"wapen"},
+            {"hr":"JEZIK","nl":"taal"},
+            {"hr":"PISMO","nl":"schrift"},
+            {"hr":"VALUTA","nl":"munteenheid"}
+          ],
+          "answer": "gekoppeld",
+          "explain_nl": "Dit zijn de woorden die op elk Kroatisch landenoverzicht terugkomen.",
+          "targets": ["v.00.auto"],
+          "difficulty": 2,
+          "source": "udzbenik p.14"
+        },
+        {
           "id": "e.00.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -199,29 +243,29 @@
         },
         {
           "id": "e.00.003",
-          "type": "listen_type",
-          "mode": "productive",
-          "prompt_nl": "Luister en typ het woord.",
-          "audio": "šešir",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "In welk woord hoor je de š van 'sjaal'?",
+          "given": "šešir · sesija · susjed",
           "answer": "šešir",
-          "accepts": ["šešir"],
-          "explain_nl": "Twee keer de š-klank, als het Nederlandse 'sj'.",
-          "targets": ["g.00.palatali", "v.00.sesir_a"],
-          "difficulty": 3,
-          "source": "udzbenik p.14"
+          "distractors": ["sesija","susjed"],
+          "explain_nl": "Het teken maakt het verschil: s is een gewone s, š klinkt als 'sj'. Zonder het dakje verandert het woord.",
+          "targets": ["g.00.palatali","v.00.sesir_a"],
+          "difficulty": 1,
+          "source": "aangevuld"
         },
         {
           "id": "e.00.004",
-          "type": "listen_type",
+          "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Luister en typ het woord.",
-          "audio": "čokolada",
-          "answer": "čokolada",
-          "accepts": ["čokolada"],
-          "explain_nl": "Harde č aan het begin — als het Engelse 'match'.",
-          "targets": ["g.00.palatali", "v.00.cokolada"],
-          "difficulty": 3,
-          "source": "udzbenik p.14"
+          "prompt_nl": "Vul het juiste teken in: c, č of ć?",
+          "given": "___okolada (chocolade — spreek uit als 'tsj')",
+          "answer": "č",
+          "accepts": ["č","Č"],
+          "explain_nl": "č is de harde 'tsj', zoals in het Engelse match. De gewone c klinkt als 'ts' en zou 'tsokolada' opleveren.",
+          "targets": ["g.00.palatali","v.00.cokolada"],
+          "difficulty": 2,
+          "source": "aangevuld"
         }
       ]
     },
@@ -283,29 +327,29 @@
         },
         {
           "id": "e.00.014",
-          "type": "listen_type",
-          "mode": "productive",
-          "prompt_nl": "Luister en typ het woord.",
-          "audio": "đak",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk woord begint met de zachte đ?",
+          "given": "đak (leerling) · džem (jam) · dan (dag)",
           "answer": "đak",
-          "accepts": ["đak"],
-          "explain_nl": "Zachte đ — één letter, geen dj.",
-          "targets": ["g.00.palatali", "v.00.dak"],
-          "difficulty": 4,
-          "source": "udzbenik p.14"
+          "distractors": ["džem","dan"],
+          "explain_nl": "đ is zacht, als in 'djembé'. dž is hard, als in het Engelse jungle. Ze lijken op papier op elkaar maar zijn twee letters.",
+          "targets": ["g.00.palatali","v.00.dak"],
+          "difficulty": 2,
+          "source": "aangevuld"
         },
         {
           "id": "e.00.015",
-          "type": "listen_type",
+          "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Luister en typ het woord.",
-          "audio": "džemper",
-          "answer": "džemper",
-          "accepts": ["džemper"],
-          "explain_nl": "Harde dž aan het begin. In het alfabet is dž één letter.",
-          "targets": ["g.00.palatali", "v.00.dzemper"],
-          "difficulty": 4,
-          "source": "udzbenik p.14"
+          "prompt_nl": "Vul in: đ of dž? Het woord komt van het Engelse 'jumper'.",
+          "given": "___emper",
+          "answer": "dž",
+          "accepts": ["dž","Dž","DŽ"],
+          "explain_nl": "Leenwoorden met een Engelse j krijgen de harde dž. Onthoud het paar džemper–džem: allebei hard.",
+          "targets": ["g.00.palatali","v.00.dzemper"],
+          "difficulty": 2,
+          "source": "aangevuld"
         }
       ]
     },
@@ -326,15 +370,15 @@
         },
         {
           "id": "e.00.021",
-          "type": "listen_type",
-          "mode": "productive",
-          "prompt_nl": "Luister en typ het woord. Let op de klinkende r.",
-          "audio": "prst",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "In welk woord is de r een klinker — het woord heeft geen a, e, i, o of u?",
+          "given": "prst (vinger) · brat (broer) · more (zee)",
           "answer": "prst",
-          "accepts": ["prst"],
-          "explain_nl": "Geen klinker in het woord — de r is de klinker.",
-          "targets": ["g.00.izgovor", "v.00.prst_r"],
-          "difficulty": 4,
+          "distractors": ["brat","more"],
+          "explain_nl": "In prst draagt de r de lettergreep; je spreekt het uit als 'purst'. Kroatisch kent woorden zonder klinker: vrt, krv, trg.",
+          "targets": ["g.00.izgovor","v.00.prst_r"],
+          "difficulty": 2,
           "source": "aangevuld"
         },
         {
@@ -352,15 +396,15 @@
         },
         {
           "id": "e.00.023",
-          "type": "listen_type",
-          "mode": "productive",
-          "prompt_nl": "Luister en typ het woord.",
-          "audio": "hvala",
-          "answer": "hvala",
-          "accepts": ["hvala"],
-          "explain_nl": "De h wordt echt uitgesproken, niet ingeslikt.",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel letters spreek je uit in 'hvala'?",
+          "given": "hvala (dank je)",
+          "answer": "alle vijf — ook de h",
+          "distractors": ["vier — de h is stom","vier — de a aan het eind valt weg"],
+          "explain_nl": "Anders dan in het Nederlands wordt élke letter uitgesproken. De h in hvala en hrvatski hoor je echt.",
           "targets": ["g.00.izgovor"],
-          "difficulty": 3,
+          "difficulty": 1,
           "source": "aangevuld"
         },
         {
@@ -393,15 +437,16 @@
         },
         {
           "id": "e.00.026",
-          "type": "listen_type",
+          "type": "word_order",
           "mode": "productive",
-          "prompt_nl": "Luister en typ de getallen die je hoort.",
-          "audio": "jedan, dva, tri, četiri, pet",
-          "answer": "jedan, dva, tri, četiri, pet",
-          "accepts": ["jedan, dva, tri, četiri, pet", "jedan dva tri četiri pet"],
-          "targets": ["g.00.brojevi"],
-          "difficulty": 3,
-          "source": "udzbenik p.16"
+          "prompt_nl": "Zet de getallen op volgorde, van 1 tot 5.",
+          "tokens": ["četiri","jedan","pet","dva","tri"],
+          "answer": "jedan dva tri četiri pet",
+          "accepts": ["jedan dva tri četiri pet","jedan, dva, tri, četiri, pet"],
+          "explain_nl": "Let op četiri: vier lettergrepen, met de klemtoon vooraan.",
+          "targets": ["g.00.brojevi","v.00.jedan","v.00.pet"],
+          "difficulty": 2,
+          "source": "aangevuld"
         },
         {
           "id": "e.00.027",
@@ -428,15 +473,19 @@
       "exercises": [
         {
           "id": "e.00.030",
-          "type": "listen_type",
-          "mode": "productive",
-          "prompt_nl": "Luister en typ. Alle vier de lastige letters komen langs.",
-          "audio": "čaj, kuća, džemper, đak",
-          "answer": "čaj, kuća, džemper, đak",
-          "accepts": ["čaj, kuća, džemper, đak", "čaj kuća džemper đak"],
-          "explain_nl": "Hard-zacht-hard-zacht: č, ć, dž, đ. Dit is de reeks die je oor moet leren scheiden.",
+          "type": "match",
+          "mode": "receptive",
+          "prompt_nl": "Koppel elk woord aan de klank die erin zit.",
+          "pairs": [
+            {"hr":"čaj","nl":"hard, als Engels 'match'"},
+            {"hr":"kuća","nl":"zacht, als 'tja'"},
+            {"hr":"džemper","nl":"hard, als Engels 'jungle'"},
+            {"hr":"đak","nl":"zacht, als 'djembé'"}
+          ],
+          "answer": "gekoppeld",
+          "explain_nl": "Twee harde tekens (č, dž) en twee zachte (ć, đ). Dit onderscheid blijft de rest van de cursus terugkomen.",
           "targets": ["g.00.palatali"],
-          "difficulty": 5,
+          "difficulty": 3,
           "source": "aangevuld"
         },
         {

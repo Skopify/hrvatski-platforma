@@ -236,6 +236,44 @@
       "source": "udzbenik p.59",
       "exercises": [
         {
+          "id": "e.04.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm van de kleur in, volgens de tekst.",
+          "given": "Kakvo je more? More je ___ i zeleno.",
+          "answer": "plavo",
+          "accepts": ["plavo"],
+          "explain_nl": "more is onzijdig, dus plavo. Bij haljina zou het plava zijn en bij auto plav.",
+          "targets": ["g.04.pridjevi","v.04.plav"],
+          "difficulty": 3,
+          "source": "udzbenik p.57"
+        },
+        {
+          "id": "e.04.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vraagvorm hoort bij haljina in de tekst?",
+          "given": "___ je haljina? Haljina je plava.",
+          "answer": "Kakva",
+          "distractors": ["Kakav","Kakvo","Kakvi"],
+          "explain_nl": "haljina is vrouwelijk, dus Kakva. De vraagvorm past zich net zo aan als het bijvoeglijk naamwoord.",
+          "targets": ["g.04.kakav"],
+          "difficulty": 3,
+          "source": "udzbenik p.57"
+        },
+        {
+          "id": "e.04.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf vier dingen om je heen met een kleur, in de stijl van de tekst. Kies woorden van elk geslacht.",
+          "model_answer": "Moj stol je smeđ. Moja knjiga je crvena. Moje računalo je crno. Vrata su bijela.",
+          "rubric_nl": ["Minstens één mannelijk, één vrouwelijk en één onzijdig woord.","De kleur is aangepast aan het geslacht (-∅ / -a / -o).","Je gebruikt je of su op de goede plek.","De kleuren komen uit de woordenlijst van deze les."],
+          "placeholder": "Beschrijf de dingen in het Kroatisch…",
+          "targets": ["g.04.pridjevi","v.04.boja"],
+          "difficulty": 4,
+          "source": "vježbenica p.25"
+        },
+        {
           "id": "e.04.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -502,16 +540,14 @@
         },
         {
           "id": "e.04.027",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Hoe is jouw appartement? Mijn appartement is klein, maar comfortabel.",
           "answer": "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
-          "accepts": [
-            "Kakav je tvoj stan? Moj stan je malen, ali udoban.",
-            "Kakav je tvoj stan? Moj stan je malen ali udoban."
-          ],
-          "targets": ["g.04.kakav", "v.04.stan", "v.04.udoban", "v.02.ali"],
+          "accepts": ["Kakav je tvoj stan? Moj stan je malen, ali udoban."],
+          "explain_nl": "stan is mannelijk, dus kakav (niet kakva). udoban houdt zijn vluchtige a in de mannelijke vorm.",
+          "targets": ["g.04.kakav","v.04.stan","v.04.udoban","v.02.ali"],
           "difficulty": 4,
           "source": "aangevuld"
         }

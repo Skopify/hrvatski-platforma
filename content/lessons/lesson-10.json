@@ -249,6 +249,44 @@
       "source": "udzbenik p.130",
       "exercises": [
         {
+          "id": "e.10.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de locatief in, volgens de tekst.",
+          "given": "Ja živim u ___, u centru.",
+          "answer": "Zagrebu",
+          "accepts": ["Zagrebu"],
+          "explain_nl": "Wonen is plaats, dus locatief: Zagreb → Zagrebu. Ging je erheen, dan was het u Zagreb.",
+          "targets": ["g.10.lokativ","g.10.gdje_kamo"],
+          "difficulty": 3,
+          "source": "udzbenik p.141"
+        },
+        {
+          "id": "e.10.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar wonen de ouders volgens de tekst?",
+          "given": "Moji roditelji žive ___, u velikoj kući.",
+          "answer": "na selu",
+          "distractors": ["u centru","u Berlinu","na otoku Braču"],
+          "explain_nl": "na selu = op het platteland. Berlijn is waar de zus woont, Brač waar ze 's zomers heen gaan.",
+          "targets": ["g.10.prijedlozi_lokativ","v.10.stanovati"],
+          "difficulty": 3,
+          "source": "udzbenik p.141"
+        },
+        {
+          "id": "e.10.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf waar jij woont, naar het model van de tekst. Minstens vier zinnen.",
+          "model_answer": "Živim u Amsterdamu, u centru. Stanujem u malom stanu na drugom katu. U stanu imam kuhinju i spavaću sobu. Moji roditelji žive u Utrechtu.",
+          "rubric_nl": ["Minstens drie locatieven na u of na.","Je gebruikt živjeti of stanovati correct vervoegd.","Er staat minstens één bijvoeglijk naamwoord in de locatief (u malom stanu).","Minstens vier zinnen."],
+          "placeholder": "Beschrijf je woonplek in het Kroatisch…",
+          "targets": ["g.10.lokativ","g.10.prezent.ovati"],
+          "difficulty": 5,
+          "source": "vježbenica p.62"
+        },
+        {
           "id": "e.10.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -528,13 +566,14 @@
         },
         {
           "id": "e.10.027",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Živim u Zagrebu, ali radim na fakultetu u Rijeci.",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik woon in Zagreb, maar ik werk aan de universiteit in Rijeka.",
           "answer": "Živim u Zagrebu, ali radim na fakultetu u Rijeci.",
           "accepts": ["Živim u Zagrebu, ali radim na fakultetu u Rijeci."],
-          "targets": ["g.10.lokativ", "g.10.sibilarizacija_lokativ"],
+          "explain_nl": "Drie locatieven achter elkaar. Let op Rijeka → Rijeci: de k wordt een c vóór de -i.",
+          "targets": ["g.10.lokativ","g.10.sibilarizacija_lokativ"],
           "difficulty": 5,
           "source": "aangevuld"
         }

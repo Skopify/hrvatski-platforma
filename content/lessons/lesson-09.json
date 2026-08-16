@@ -137,6 +137,44 @@
       "source": "udzbenik p.120",
       "exercises": [
         {
+          "id": "e.09.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het gesprek in de kledingwinkel.",
+          "given": "Kupac: Da, ___ košulju. Nosim veličinu 40.",
+          "answer": "tražim",
+          "accepts": ["tražim"],
+          "explain_nl": "tražiti is een -iti-werkwoord: tražim, tražiš, traži. De verkoopster vroeg 'Tražite li nešto?'",
+          "targets": ["g.09.prezent.iti","v.09.kosulja"],
+          "difficulty": 3,
+          "source": "udzbenik p.127"
+        },
+        {
+          "id": "e.09.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom koopt de klant het overhemd uiteindelijk niet?",
+          "given": "Kupac: Dobro izgleda, ali je preskupa.",
+          "answer": "het is te duur",
+          "distractors": ["het is te klein","de kleur bevalt niet","het is niet modern"],
+          "explain_nl": "preskupa = te duur. Het voorvoegsel pre- betekent 'te': skup → preskup.",
+          "targets": ["v.09.kosulja"],
+          "difficulty": 2,
+          "source": "udzbenik p.127"
+        },
+        {
+          "id": "e.09.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf hetzelfde gesprek na, maar dan koop je het kledingstuk wél.",
+          "model_answer": "Prodavačica: Tražite li nešto? — Kupac: Da, tražim jaknu. — Prodavačica: Ova crna jakna je vrlo moderna. — Kupac: Koliko košta? — Prodavačica: Pedeset eura. — Kupac: Dobro, želim je!",
+          "rubric_nl": ["Het kledingstuk staat in de accusatief.","Het bijvoeglijk naamwoord past bij het geslacht.","Je vraagt naar de prijs (Koliko košta?).","Minstens vier regels."],
+          "placeholder": "Schrijf het gesprek in het Kroatisch…",
+          "targets": ["g.09.prezent.iti","g.04.pridjevi"],
+          "difficulty": 5,
+          "source": "vježbenica p.56"
+        },
+        {
           "id": "e.09.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -353,15 +391,16 @@
         },
         {
           "id": "e.09.024",
-          "type": "listen_type",
+          "type": "error_correction",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Ova bijela košulja je vrlo moderna.",
+          "prompt_nl": "Er zit één fout in deze zin. Verbeter hem.",
+          "given": "Ova bijeli košulja je vrlo moderna.",
           "answer": "Ova bijela košulja je vrlo moderna.",
           "accepts": ["Ova bijela košulja je vrlo moderna."],
-          "targets": ["g.04.pridjevi", "v.09.kosulja"],
-          "difficulty": 4,
-          "source": "udzbenik p.120"
+          "explain_nl": "košulja is vrouwelijk, dus bijela. Het bijvoeglijk naamwoord past zich aan het geslacht aan, niet andersom.",
+          "targets": ["g.04.pridjevi","v.09.kosulja"],
+          "difficulty": 3,
+          "source": "aangevuld"
         },
         {
           "id": "e.09.025",

@@ -158,6 +158,44 @@
       "source": "vježbenica p.75",
       "exercises": [
         {
+          "id": "e.15.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de instrumentalis in, volgens het gesprek.",
+          "given": "Jasna: Da, idem. Idemo onda ___.",
+          "answer": "autobusom",
+          "accepts": ["autobusom"],
+          "explain_nl": "Het vervoermiddel staat in de kale instrumentalis, zonder voorzetsel: autobus → autobusom.",
+          "targets": ["g.15.instrumental","g.15.sredstvo"],
+          "difficulty": 4,
+          "source": "udzbenik p.211"
+        },
+        {
+          "id": "e.15.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom wil Goranka niet met de bus?",
+          "given": "Goranka: Autobusom? Ne dolazi u obzir! …",
+          "answer": "ze kan er niet lezen",
+          "distractors": ["het duurt te lang","het is te duur","ze wordt er misselijk van"],
+          "explain_nl": "'Ja u autobusu ne mogu čitati.' Let op het verschil: autobusom is waarmee, u autobusu is waarin.",
+          "targets": ["g.15.sredstvo","g.10.lokativ"],
+          "difficulty": 3,
+          "source": "udzbenik p.211"
+        },
+        {
+          "id": "e.15.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen over hoe en met wie jij reist.",
+          "model_answer": "Idem na posao biciklom. Putujem u Hrvatsku avionom. S bratom idem vlakom. Ljeti plovimo brodom do otoka.",
+          "rubric_nl": ["Minstens drie vervoermiddelen in de kale instrumentalis.","Minstens één keer s of sa voor gezelschap.","Het verschil tussen waarmee (zonder s) en met wie (met s) klopt.","Minstens vier zinnen."],
+          "placeholder": "Schrijf over je reizen in het Kroatisch…",
+          "targets": ["g.15.sredstvo","g.15.s_instrumental"],
+          "difficulty": 5,
+          "source": "vježbenica p.90"
+        },
+        {
           "id": "e.15.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -372,15 +410,16 @@
         },
         {
           "id": "e.15.024",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "S kim putujete i čime idete na more?",
+          "prompt_nl": "Vertaal de twee vragen.",
+          "given": "Met wie reizen jullie, en waarmee gaan jullie naar zee?",
           "answer": "S kim putujete i čime idete na more?",
           "accepts": ["S kim putujete i čime idete na more?"],
-          "targets": ["v.15.s_kim", "v.15.cime"],
-          "difficulty": 5,
-          "source": "vježbenica p.80"
+          "explain_nl": "s kim vraagt naar gezelschap, čime naar het vervoermiddel. Allebei instrumentalis, maar alleen bij gezelschap staat er s.",
+          "targets": ["v.15.s_kim","v.15.cime"],
+          "difficulty": 4,
+          "source": "aangevuld"
         },
         {
           "id": "e.15.025",

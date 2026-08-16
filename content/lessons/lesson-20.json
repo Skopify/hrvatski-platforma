@@ -182,6 +182,44 @@
       "source": "vježbenica p.98",
       "exercises": [
         {
+          "id": "e.20.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vocatief in, volgens de tekst.",
+          "given": "Gospodine ___, doviđenja!",
+          "answer": "Jankoviću",
+          "accepts": ["Jankoviću"],
+          "explain_nl": "Janković eindigt op een zachte medeklinker (ć), dus de vocatief is -u en niet -e.",
+          "targets": ["g.20.vokativ","v.20.gospodin"],
+          "difficulty": 4,
+          "source": "udzbenik p.281"
+        },
+        {
+          "id": "e.20.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm van Marica gebruikt de tekst om haar aan te spreken?",
+          "given": "___, dođi molim te!",
+          "answer": "Marice",
+          "distractors": ["Marica","Marico","Marici"],
+          "explain_nl": "Namen op -ica krijgen -e in de vocatief, net als prijateljica → prijateljice. Gewone vrouwelijke woorden krijgen -o.",
+          "targets": ["g.20.vokativ"],
+          "difficulty": 4,
+          "source": "udzbenik p.281"
+        },
+        {
+          "id": "e.20.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf een afscheidsberichtje van vier regels: spreek iemand aan en geef drie aansporingen.",
+          "model_answer": "Prijatelju, čuvaj se! Dođi opet u Nizozemsku! Pozdravi svoje roditelje! Piši mi, molim te!",
+          "rubric_nl": ["Je spreekt iemand aan in de vocatief.","Minstens drie imperatieven.","Minstens één onregelmatige imperatief (dođi, budi, reci).","Minstens vier regels."],
+          "placeholder": "Schrijf je berichtje in het Kroatisch…",
+          "targets": ["g.20.imperativ","g.20.vokativ"],
+          "difficulty": 5,
+          "source": "vježbenica p.97"
+        },
+        {
           "id": "e.20.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -422,15 +460,16 @@
         },
         {
           "id": "e.20.026",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Dođi večeras na zabavu! Obećaj mi da ćeš doći!",
+          "prompt_nl": "Vertaal de twee aansporingen.",
+          "given": "Kom vanavond naar het feest! Beloof me dat je komt!",
           "answer": "Dođi večeras na zabavu! Obećaj mi da ćeš doći!",
           "accepts": ["Dođi večeras na zabavu! Obećaj mi da ćeš doći!"],
-          "targets": ["g.20.imperativ_nepravilni", "v.20.obecati"],
+          "explain_nl": "dođi is de onregelmatige imperatief van doći. Na da volgt de toekomende tijd: ćeš doći.",
+          "targets": ["g.20.imperativ_nepravilni","v.20.obecati"],
           "difficulty": 5,
-          "source": "vježbenica p.98"
+          "source": "aangevuld"
         }
       ]
     },

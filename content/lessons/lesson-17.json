@@ -156,6 +156,44 @@
       "source": "vježbenica p.86",
       "exercises": [
         {
+          "id": "e.17.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in, volgens de tekst.",
+          "given": "Hrvatska ima oko četiri ___ stanovnika.",
+          "answer": "milijuna",
+          "accepts": ["milijuna"],
+          "explain_nl": "Na 2, 3 en 4 volgt de genitief enkelvoud: milijun → milijuna.",
+          "targets": ["g.17.brojevi_padez","v.17.broj"],
+          "difficulty": 4,
+          "source": "udzbenik p.239"
+        },
+        {
+          "id": "e.17.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel inwoners heeft Zagreb volgens de tekst?",
+          "given": "Zagreb ima oko ___ stanovnika.",
+          "answer": "osamsto tisuća",
+          "distractors": ["četiri milijuna","pedeset šest tisuća","sto tisuća"],
+          "explain_nl": "56.000 is de oppervlakte in vierkante kilometers, vier miljoen het inwonertal van het hele land.",
+          "targets": ["g.17.brojevi_padez","v.17.tisuca"],
+          "difficulty": 3,
+          "source": "udzbenik p.239"
+        },
+        {
+          "id": "e.17.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen met prijzen en aantallen: wat kost iets, en hoeveel heb je ervan?",
+          "model_answer": "Kava košta dva eura. Novine koštaju jedan euro. Imam tri knjige i pet olovaka. U razredu je dvadeset studenata.",
+          "rubric_nl": ["Na 2, 3 en 4 staat de genitief enkelvoud.","Vanaf 5 staat de genitief meervoud.","Minstens één vrouwelijk woord met dvije in plaats van dva.","Minstens vier zinnen."],
+          "placeholder": "Schrijf je zinnen in het Kroatisch…",
+          "targets": ["g.17.brojevi_padez","g.17.dva_dvije"],
+          "difficulty": 5,
+          "source": "vježbenica p.86"
+        },
+        {
           "id": "e.17.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -371,13 +409,14 @@
         },
         {
           "id": "e.17.026",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Koliko je sati? Pet sati i deset minuta.",
+          "prompt_nl": "Vertaal de vraag en het antwoord.",
+          "given": "Hoe laat is het? Tien over vijf.",
           "answer": "Koliko je sati? Pet sati i deset minuta.",
           "accepts": ["Koliko je sati? Pet sati i deset minuta."],
-          "targets": ["g.17.sati_datum", "v.17.minuta"],
+          "explain_nl": "Vanaf vijf volgt de genitief meervoud: pet sati, deset minuta.",
+          "targets": ["g.17.sati_datum","v.17.minuta"],
           "difficulty": 4,
           "source": "aangevuld"
         }

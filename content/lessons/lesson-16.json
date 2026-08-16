@@ -139,6 +139,44 @@
       "source": "vježbenica p.81",
       "exercises": [
         {
+          "id": "e.16.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief in, volgens de tekst.",
+          "given": "Christian je iz Berlina, iz ___.",
+          "answer": "Njemačke",
+          "accepts": ["Njemačke"],
+          "explain_nl": "Njemačka is een adjectivische landnaam: de genitief is Njemačke. Na iz volgt altijd de genitief.",
+          "targets": ["g.16.genitiv_prijedlozi","g.16.iz_od"],
+          "difficulty": 4,
+          "source": "udzbenik p.225"
+        },
+        {
+          "id": "e.16.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar komt de moeder van Laura's man vandaan?",
+          "given": "Moj suprug je iz Japana. Njegov otac je iz Japana, a majka je …",
+          "answer": "Talijanka iz Amerike",
+          "distractors": ["Japanka iz Tokija","Hrvatica iz Vukovara","Amerikanka iz Bostona"],
+          "explain_nl": "Ze is Italiaanse maar komt uit Amerika — nationaliteit en herkomst zijn twee verschillende dingen.",
+          "targets": ["g.02.nacionalnosti","g.16.iz_od"],
+          "difficulty": 3,
+          "source": "udzbenik p.225"
+        },
+        {
+          "id": "e.16.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Werkboekopdracht: schrijf van vier mensen die je kent waar ze vandaan komen, stad én land.",
+          "model_answer": "Moja majka je iz Utrechta, iz Nizozemske. Moj prijatelj Marco je iz Milana, iz Italije. Kolegica je iz Varšave, iz Poljske. Susjed je iz Ankare, iz Turske.",
+          "rubric_nl": ["Elke zin heeft twee genitieven: de stad en het land.","Na iz staat altijd de genitief.","Landen op -ska buigen adjectivisch (Nizozemske, Poljske).","Minstens vier zinnen."],
+          "placeholder": "Schrijf je zinnen in het Kroatisch…",
+          "targets": ["g.16.genitiv_prijedlozi","g.16.iz_od"],
+          "difficulty": 5,
+          "source": "vježbenica p.96"
+        },
+        {
           "id": "e.16.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -368,15 +406,16 @@
         },
         {
           "id": "e.16.025",
-          "type": "listen_type",
+          "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Gradić Cavtat je nedaleko od Dubrovnika.",
-          "answer": "Gradić Cavtat je nedaleko od Dubrovnika.",
-          "accepts": ["Gradić Cavtat je nedaleko od Dubrovnika."],
-          "targets": ["g.16.genitiv_prijedlozi", "v.16.nedaleko_od"],
-          "difficulty": 4,
-          "source": "vježbenica p.82"
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Gradić Cavtat je nedaleko od ___. (Dubrovnik)",
+          "answer": "Dubrovnika",
+          "accepts": ["Dubrovnika"],
+          "explain_nl": "nedaleko od vraagt de genitief, net als blizu, do en pokraj.",
+          "targets": ["g.16.genitiv_prijedlozi","v.16.nedaleko_od"],
+          "difficulty": 3,
+          "source": "aangevuld"
         }
       ]
     },

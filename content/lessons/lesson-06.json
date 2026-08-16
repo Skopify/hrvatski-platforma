@@ -174,6 +174,44 @@
       "source": "vježbenica p.35",
       "exercises": [
         {
+          "id": "e.06.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het gesprek.",
+          "given": "A: ___ li ovdje pušiti? — B: Ne, ne smijete.",
+          "answer": "Smijemo",
+          "accepts": ["Smijemo","smijemo"],
+          "explain_nl": "Het antwoord staat in de vi-vorm (smijete), dus de vraag ging over 'wij': smijemo li.",
+          "targets": ["g.06.modalni","v.06.smjeti"],
+          "difficulty": 4,
+          "source": "udzbenik p.85"
+        },
+        {
+          "id": "e.06.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "B wil geen koffie. Wat drinkt B wel, volgens het gesprek?",
+          "given": "A: Hitno trebam kavu! A ti? — B: Ja neću kavu. …",
+          "answer": "čaj",
+          "distractors": ["kavu","vodu","sok"],
+          "explain_nl": "'Hoću čaj.' neću is de ontkennende vorm van hoću — willen en niet-willen in twee woorden.",
+          "targets": ["g.06.htjeti"],
+          "difficulty": 2,
+          "source": "udzbenik p.85"
+        },
+        {
+          "id": "e.06.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen over vandaag: wat moet je, wat mag je niet, wat kun je niet en wat wil je niet.",
+          "model_answer": "Danas moram raditi. Ne smijem pušiti u uredu. Ne mogu doći na kavu. Neću gledati televiziju.",
+          "rubric_nl": ["Alle vier de werkwoorden komen voor: morati, smjeti, moći, htjeti.","Achter het modale werkwoord staat een infinitief.","Het verschil tussen ne moram (niet hoeven) en ne smijem (niet mogen) klopt.","neću is één woord, niet ne hoću."],
+          "placeholder": "Schrijf je vier zinnen in het Kroatisch…",
+          "targets": ["g.06.modalni","g.06.morati_smjeti"],
+          "difficulty": 5,
+          "source": "vježbenica p.38"
+        },
+        {
           "id": "e.06.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -421,15 +459,16 @@
         },
         {
           "id": "e.06.026",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Mogu li Vam pomoći? Hvala, nije potrebno.",
+          "prompt_nl": "Vertaal dit beleefde aanbod en het antwoord erop.",
+          "given": "Kan ik u helpen? Dank u, dat is niet nodig.",
           "answer": "Mogu li Vam pomoći? Hvala, nije potrebno.",
           "accepts": ["Mogu li Vam pomoći? Hvala, nije potrebno."],
+          "explain_nl": "li maakt er een vraag van en staat direct achter het werkwoord. De beleefde Vam krijgt een hoofdletter.",
           "targets": ["g.06.moci"],
           "difficulty": 4,
-          "source": "vježbenica p.35"
+          "source": "aangevuld"
         }
       ]
     },

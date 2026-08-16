@@ -158,6 +158,44 @@
       "source": "udzbenik p.148",
       "exercises": [
         {
+          "id": "e.11.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de perfectvorm in, volgens het gesprek.",
+          "given": "B: Bio sam u Varaždinu. ___ sam s prijateljima.",
+          "answer": "Putovao",
+          "accepts": ["Putovao","putovao"],
+          "explain_nl": "Het deelwoord van putovati is putovao bij een man. De hulpwerkwoordsvorm sam staat erachter.",
+          "targets": ["g.11.perfekt","g.11.particip"],
+          "difficulty": 4,
+          "source": "udzbenik p.155"
+        },
+        {
+          "id": "e.11.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom is Ana niet meegegaan?",
+          "given": "A: A Ana? Nije htjela ići? — B: Nije. …",
+          "answer": "ze zei dat ze moe was",
+          "distractors": ["ze moest werken","ze was ziek","ze had geen geld"],
+          "explain_nl": "'Rekla je da je umorna.' Let op rekla: het deelwoord van reći is onregelmatig en staat in de vrouwelijke vorm.",
+          "targets": ["g.11.perfekt_nepravilni"],
+          "difficulty": 3,
+          "source": "udzbenik p.155"
+        },
+        {
+          "id": "e.11.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf over je afgelopen weekend, in de verleden tijd. Minstens vier zinnen.",
+          "model_answer": "Prošli vikend sam bio u Rotterdamu. Putovao sam vlakom. Išli smo na koncert, a poslije smo jeli u restoranu. Vratili smo se u ponoć.",
+          "rubric_nl": ["Elke zin heeft een deelwoord plus een vorm van biti.","Het deelwoord klopt met wie er spreekt (bio / bila).","Minstens één meervoud (smo … -li).","Minstens vier zinnen."],
+          "placeholder": "Schrijf over je weekend in het Kroatisch…",
+          "targets": ["g.11.perfekt","g.11.particip"],
+          "difficulty": 5,
+          "source": "vježbenica p.68"
+        },
+        {
           "id": "e.11.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -401,15 +439,16 @@
         },
         {
           "id": "e.11.025",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Gdje si bio jučer? Zvao sam te cijeli dan.",
+          "prompt_nl": "Vertaal naar het Kroatisch. Je spreekt een man aan.",
+          "given": "Waar was je gisteren? Ik heb je de hele dag gebeld.",
           "answer": "Gdje si bio jučer? Zvao sam te cijeli dan.",
           "accepts": ["Gdje si bio jučer? Zvao sam te cijeli dan."],
-          "targets": ["g.11.perfekt", "v.11.cijeli_dan"],
+          "explain_nl": "Het deelwoord richt zich naar wie er wordt aangesproken: bio bij een man, bila bij een vrouw.",
+          "targets": ["g.11.perfekt","v.11.cijeli_dan"],
           "difficulty": 5,
-          "source": "udzbenik p.148"
+          "source": "aangevuld"
         }
       ]
     },

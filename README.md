@@ -52,6 +52,7 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | Commando | Wat het doet |
 |---|---|
 | `npm run seed` | Zet `content/` om in leerbare items in de database (idempotent, raakt voortgang niet aan) |
+| `npm run patch` | Verwerkt content/patch-*.json in de lessen (idempotent, raakt alleen de gewijzigde fragmenten aan) |
 | `npm run check` | Zelfcontrole van de beoordelingsladder — laat zien hoe antwoorden door exact/diakritisch/tikfout/fout vallen |
 | `npm run check:content` | Valideert de content: dubbele id's, oefeningen zonder antwoord, targets die nergens naar wijzen, vreemde tekens, en de afgeleide naamvalsvormen |
 | `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang, zonder kopie.** Wil je alleen opnieuw beginnen, gebruik dan de knop op Voortgang: die maakt eerst een back-up |
@@ -86,6 +87,7 @@ content/            Leerstof als JSON — de enige plek waar content leeft
   lessons/          Eén bestand per les
   stories/          Eén bestand per verhaal (tekst, glossarium, vragen)
   case-usage.json   Zinnen voor de naamvalkeuze-drill, met contrastuitleg
+  patch-*.json      Contentwijzigingen die scripts/apply-patch.ts in de lessen zet
 src/
   app/              Next.js App Router — pagina's en server actions
     oefenen/        Hub met herhaling (/herhalen) en de drills (/drill/<soort>)

@@ -166,6 +166,44 @@
       "source": "udzbenik p.188",
       "exercises": [
         {
+          "id": "e.14.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief in na de hoeveelheid, volgens de tekst.",
+          "given": "Za doručak jedem malo ___ i pijem kavu.",
+          "answer": "kruha",
+          "accepts": ["kruha"],
+          "explain_nl": "Na malo, mnogo en previše volgt de genitief: kruh → kruha.",
+          "targets": ["g.14.genitiv_kolicina","g.14.genitiv"],
+          "difficulty": 4,
+          "source": "udzbenik p.197"
+        },
+        {
+          "id": "e.14.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoe laat komt de schrijver thuis, volgens de tekst?",
+          "given": "U ___ sati vraćam se kući.",
+          "answer": "pet",
+          "distractors": ["sedam","osam","devet"],
+          "explain_nl": "'U pet sati vraćam se kući.' Sedam sati is het moment van opstaan, aan het begin van de tekst.",
+          "targets": ["g.17.sati_datum","v.14.vracati_se"],
+          "difficulty": 2,
+          "source": "udzbenik p.197"
+        },
+        {
+          "id": "e.14.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf je eigen dag, naar het model van de tekst. Gebruik minstens drie wederkerende werkwoorden.",
+          "model_answer": "Budim se u šest sati. Tuširam se i oblačim se. Radim u uredu. U šest sati vraćam se kući i odmaram se. Navečer čitam.",
+          "rubric_nl": ["Minstens drie werkwoorden met se.","De se staat op de goede plek, niet vooraan de zin.","Minstens één tijdsaanduiding met u … sati.","Minstens vier zinnen."],
+          "placeholder": "Beschrijf je dag in het Kroatisch…",
+          "targets": ["g.14.povratni","v.14.buditi_se"],
+          "difficulty": 5,
+          "source": "vježbenica p.84"
+        },
+        {
           "id": "e.14.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -404,15 +442,16 @@
         },
         {
           "id": "e.14.025",
-          "type": "listen_type",
+          "type": "word_order",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Budim se u sedam sati, tuširam se i oblačim se.",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Budim","se","u","sedam","sati","tuširam","se","i","oblačim","se"],
           "answer": "Budim se u sedam sati, tuširam se i oblačim se.",
           "accepts": ["Budim se u sedam sati, tuširam se i oblačim se."],
-          "targets": ["g.14.povratni", "v.14.tusirati_se", "v.14.oblaciti_se"],
-          "difficulty": 5,
-          "source": "udzbenik p.188"
+          "explain_nl": "Elk wederkerend werkwoord houdt zijn eigen se; die kun je niet één keer noemen voor de hele zin.",
+          "targets": ["g.14.povratni","v.14.tusirati_se","v.14.oblaciti_se"],
+          "difficulty": 4,
+          "source": "aangevuld"
         }
       ]
     },

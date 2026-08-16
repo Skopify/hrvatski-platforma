@@ -138,6 +138,44 @@
       "source": "udzbenik p.108",
       "exercises": [
         {
+          "id": "e.08.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens het gesprek in het restaurant.",
+          "given": "Gost: Ja pijem mineralnu vodu, a moja sestra ___ bijelu kavu.",
+          "answer": "pije",
+          "accepts": ["pije"],
+          "explain_nl": "piti in de derde persoon: pije. De j blijft staan — pijem, piješ, pije.",
+          "targets": ["g.08.piti","v.08.piti"],
+          "difficulty": 3,
+          "source": "udzbenik p.113"
+        },
+        {
+          "id": "e.08.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat bestelt de zus om te eten?",
+          "given": "Gost: Ja jedem juhu i ribu. Sestra jede ___.",
+          "answer": "salatu",
+          "distractors": ["juhu","ribu","kolač"],
+          "explain_nl": "salata → salatu in de accusatief. De gast zelf neemt de soep en de vis.",
+          "targets": ["g.08.akuzativ.objekt"],
+          "difficulty": 2,
+          "source": "udzbenik p.113"
+        },
+        {
+          "id": "e.08.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf een eigen bestelling in het restaurant: vier regels tussen ober en gast.",
+          "model_answer": "Konobar: Izvolite? — Gost: Molim juhu i ribu. — Konobar: A za piće? — Gost: Pijem vodu, molim. Račun, molim!",
+          "rubric_nl": ["Alles wat je bestelt staat in de accusatief.","Je gebruikt molim minstens één keer.","Er staat een vorm van jesti of piti in.","Minstens vier regels, met beide sprekers."],
+          "placeholder": "Schrijf je bestelling in het Kroatisch…",
+          "targets": ["g.08.akuzativ.objekt","g.08.jesti"],
+          "difficulty": 4,
+          "source": "vježbenica p.50"
+        },
+        {
           "id": "e.08.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -353,15 +391,16 @@
         },
         {
           "id": "e.08.025",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Molim jelovnik. Što želite piti?",
+          "prompt_nl": "Vertaal het gesprekje in het restaurant.",
+          "given": "De menukaart, alstublieft. Wat wilt u drinken?",
           "answer": "Molim jelovnik. Što želite piti?",
           "accepts": ["Molim jelovnik. Što želite piti?"],
-          "targets": ["v.08.jelovnik", "g.08.piti"],
+          "explain_nl": "jelovnik is mannelijk en levenloos, dus de accusatief is gelijk aan de nominatief.",
+          "targets": ["v.08.jelovnik","g.08.piti"],
           "difficulty": 3,
-          "source": "udzbenik p.108"
+          "source": "aangevuld"
         },
         {
           "id": "e.08.026",

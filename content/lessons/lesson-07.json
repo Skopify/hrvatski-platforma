@@ -226,6 +226,44 @@
       "source": "vježbenica p.38",
       "exercises": [
         {
+          "id": "e.07.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens de weekagenda in de tekst.",
+          "given": "U utorak idem na ___, na predavanje.",
+          "answer": "fakultet",
+          "accepts": ["fakultet"],
+          "explain_nl": "Bij een instelling waar je studeert hoort na, niet u. En fakultet is levenloos, dus de accusatief is gelijk aan de nominatief.",
+          "targets": ["g.07.u_na_akuzativ","v.07.fakultet"],
+          "difficulty": 3,
+          "source": "udzbenik p.99"
+        },
+        {
+          "id": "e.07.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Op welke dag gaat de schrijver nergens heen?",
+          "given": "U ___ ne idem nigdje. Odmaram se.",
+          "answer": "nedjelju",
+          "distractors": ["subotu","petak","srijedu"],
+          "explain_nl": "nedjelja = zondag. Let niet op de gelijkenis met het Nederlandse 'week': tjedan is de week, nedjelja is de zondag.",
+          "targets": ["g.07.dani","v.07.nedjelja"],
+          "difficulty": 3,
+          "source": "udzbenik p.99"
+        },
+        {
+          "id": "e.07.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf je eigen week op, naar het model van de tekst. Minstens vier dagen.",
+          "model_answer": "U ponedjeljak idem na posao. U srijedu idem u trgovinu. U četvrtak idem na tečaj hrvatskoga. U subotu idem na more.",
+          "rubric_nl": ["Elke zin begint met u + de dag in de accusatief (u subotu, u nedjelju).","Je kiest bewust tussen u en na.","De vorm van ići klopt (idem).","Minstens vier verschillende dagen."],
+          "placeholder": "Schrijf je week in het Kroatisch…",
+          "targets": ["g.07.ici","g.07.dani","g.07.u_na_akuzativ"],
+          "difficulty": 5,
+          "source": "vježbenica p.44"
+        },
+        {
           "id": "e.07.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -521,13 +559,14 @@
         },
         {
           "id": "e.07.031",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Kamo ideš? Idem po kruh, a poslije idem na tržnicu.",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Waar ga je heen? Ik ga brood halen, en daarna ga ik naar de markt.",
           "answer": "Kamo ideš? Idem po kruh, a poslije idem na tržnicu.",
           "accepts": ["Kamo ideš? Idem po kruh, a poslije idem na tržnicu."],
-          "targets": ["g.07.ici", "g.07.po_akuzativ", "v.07.trznica"],
+          "explain_nl": "po + accusatief betekent iets gaan halen. tržnica is een open plek, dus na en niet u.",
+          "targets": ["g.07.ici","g.07.po_akuzativ","v.07.trznica"],
           "difficulty": 5,
           "source": "aangevuld"
         },

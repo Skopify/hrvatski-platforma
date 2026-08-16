@@ -209,6 +209,44 @@
       "source": "vježbenica p.93",
       "exercises": [
         {
+          "id": "e.19.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens de tekst. Let op enkelvoud of meervoud.",
+          "given": "Sviđa mi se more i ___ mi se otoci.",
+          "answer": "sviđaju",
+          "accepts": ["sviđaju"],
+          "explain_nl": "otoci is meervoud, dus sviđaju. Wat je leuk vindt is het onderwerp — dáár richt het werkwoord zich naar.",
+          "targets": ["g.19.svidati_se","v.19.svidati_se"],
+          "difficulty": 4,
+          "source": "udzbenik p.267"
+        },
+        {
+          "id": "e.19.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom bevalt het nieuwe appartement Dijana?",
+          "given": "Dijani se sviđa novi stan. Sviđa joj se jer je …",
+          "answer": "svijetao i udoban",
+          "distractors": ["velik i nov","blizu centra","jeftin i lijep"],
+          "explain_nl": "svijetao = licht. Let op joj: de datief van ona, hier in de korte vorm.",
+          "targets": ["g.19.dativ_dug_kratak"],
+          "difficulty": 3,
+          "source": "udzbenik p.267"
+        },
+        {
+          "id": "e.19.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf vier zinnen over wat jij leuk vindt en hoe je je ergens voelt.",
+          "model_answer": "Sviđa mi se hrvatski jezik. Sviđaju mi se Plitvice. Meni je lijepo na moru. Njemu je dosadno u uredu.",
+          "rubric_nl": ["Minstens één keer sviđa en één keer sviđaju, correct naar enkel- of meervoud.","De persoon staat in de datief (mi, ti, mu, joj).","Minstens één gevoelszin van het type Hladno mi je.","Minstens vier zinnen."],
+          "placeholder": "Schrijf je zinnen in het Kroatisch…",
+          "targets": ["g.19.svidati_se","g.19.dativ_dozivljavaca"],
+          "difficulty": 5,
+          "source": "vježbenica p.93"
+        },
+        {
           "id": "e.19.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -421,13 +459,14 @@
         },
         {
           "id": "e.19.026",
-          "type": "listen_type",
+          "type": "translate_nl_hr",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Sviđa mi se Hrvatska, ali bojim se zime.",
+          "prompt_nl": "Vertaal naar het Kroatisch.",
+          "given": "Ik vind Kroatië leuk, maar ik ben bang voor de winter.",
           "answer": "Sviđa mi se Hrvatska, ali bojim se zime.",
           "accepts": ["Sviđa mi se Hrvatska, ali bojim se zime."],
-          "targets": ["g.19.svidati_se", "g.19.bojati_se"],
+          "explain_nl": "Bij sviđati se is Hrvatska het onderwerp; bij bojati se volgt de genitief: zima → zime.",
+          "targets": ["g.19.svidati_se","g.19.bojati_se"],
           "difficulty": 5,
           "source": "aangevuld"
         }

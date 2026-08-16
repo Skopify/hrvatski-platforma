@@ -234,6 +234,44 @@
       "source": "udzbenik p.73",
       "exercises": [
         {
+          "id": "e.05.t1",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan volgens de tekst over Kroatië.",
+          "given": "Ima glavni grad Zagreb i dvadeset jednu ___.",
+          "answer": "županiju",
+          "accepts": ["županiju"],
+          "explain_nl": "Na jedan staat de accusatief enkelvoud: županija → županiju. Vrouwelijke woorden krijgen -u.",
+          "targets": ["g.05.akuzativ.nezivo","v.05.zupanija"],
+          "difficulty": 4,
+          "source": "udzbenik p.71"
+        },
+        {
+          "id": "e.05.t2",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat heeft Kroatië volgens de tekst níet?",
+          "given": "A što Hrvatska nema?",
+          "answer": "een metro",
+          "distractors": ["eilanden","bergen","meren"],
+          "explain_nl": "'Nema ni metro.' Otoke, planine en jezera staan juist in het rijtje van wat Kroatië wél heeft.",
+          "targets": ["g.05.imati"],
+          "difficulty": 2,
+          "source": "udzbenik p.71"
+        },
+        {
+          "id": "e.05.t3",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf hetzelfde overzicht voor Nederland: vier dingen die het land heeft en twee die het niet heeft.",
+          "model_answer": "Nizozemska ima more, rijeke i kanale. Ima glavni grad Amsterdam. Ima kraljicu i kralja. Nizozemska nema planine. Nema ni otoke kao Hrvatska.",
+          "rubric_nl": ["Je gebruikt ima voor wat er is en nema voor wat er niet is.","De dingen staan in de accusatief.","Minstens één meervoud (otoke, rijeke).","Minstens vier zinnen."],
+          "placeholder": "Schrijf over Nederland in het Kroatisch…",
+          "targets": ["g.05.imati","g.05.akuzativ.mnozina"],
+          "difficulty": 5,
+          "source": "vježbenica p.32"
+        },
+        {
           "id": "e.05.001",
           "type": "teaching_moment",
           "mode": "receptive",
@@ -560,15 +598,16 @@
         },
         {
           "id": "e.05.026",
-          "type": "listen_type",
+          "type": "word_order",
           "mode": "productive",
-          "prompt_nl": "Luister en typ wat je hoort.",
-          "audio": "Ivica pjeva i svira rock-glazbu.",
+          "prompt_nl": "Zet de woorden in de juiste volgorde.",
+          "tokens": ["Ivica","pjeva","i","svira","rock-glazbu"],
           "answer": "Ivica pjeva i svira rock-glazbu.",
-          "accepts": ["Ivica pjeva i svira rock-glazbu.", "Ivica pjeva i svira rock glazbu."],
-          "targets": ["g.05.prezent.ati", "v.05.pjevati", "v.05.svirati"],
-          "difficulty": 4,
-          "source": "udzbenik p.77"
+          "accepts": ["Ivica pjeva i svira rock-glazbu.","Ivica pjeva i svira rock-glazbu"],
+          "explain_nl": "Twee werkwoorden op -ati bij hetzelfde onderwerp: pjeva, svira. Het lijdend voorwerp glazba wordt glazbu.",
+          "targets": ["g.05.prezent.ati","v.05.pjevati","v.05.svirati"],
+          "difficulty": 3,
+          "source": "aangevuld"
         },
         {
           "id": "e.05.027",
