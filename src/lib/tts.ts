@@ -10,13 +10,39 @@ export const TTS_RATES = [
 ] as const;
 
 const RATE_KEY = "hrvatski.tts.rate";
+const VOICE_KEY = "hrvatski.tts.voice";
 const DEFAULT_RATE = 0.85;
+
+/**
+ * Hoe goed een stem waarschijnlijk klinkt, alleen af te leiden uit de naam.
+ *
+ * De Web Speech API geeft geen kwaliteitsveld, maar de aanbieders zetten het
+ * wél in de naam. Microsoft levert via Edge gratis neurale stemmen ("Natural",
+ * "Online") die hoorbaar beter zijn dan de compacte stem die macOS standaard
+ * installeert; Apple hangt er "Enhanced" of "Premium" achter zodra je de
+ * grotere download hebt gehaald.
+ *
+ * Zonder deze weging koos het platform altijd de lokale stem, en dat is precies
+ * de slechtste die er is.
+ */
+function voiceScore(v: SpeechSynthesisVoice): number {
+  const n = v.name.toLowerCase();
+  if (n.includes("natural") || n.includes("neural")) return 3;
+  if (n.includes("premium")) return 3;
+  if (n.includes("enhanced") || n.includes("verbeterd")) return 2;
+  if (n.includes("online")) return 2;
+  return v.localService ? 1 : 0;
+}
 
 export interface TtsState {
   /** Alle stemmen die de browser aanbiedt (leeg tot voiceschanged vuurt). */
   voices: SpeechSynthesisVoice[];
   /** De gekozen Kroatische stem, of null als die er niet is. */
   voice: SpeechSynthesisVoice | null;
+  /** Alle Kroatische stemmen, beste eerst — de keuzelijst. */
+  croatianVoices: SpeechSynthesisVoice[];
+  /** Zelf een stem kiezen; blijft bewaard. */
+  setVoiceName: (name: string) => void;
   /** Of de browser überhaupt spraaksynthese aanbiedt. */
   supported: boolean;
   /** Klaar met laden — pas dan zegt `voice === null` echt iets. */
@@ -46,6 +72,7 @@ export function useCroatianTts(): TtsState {
   // normaal tempo zodra hij automatisch afspeelde, en moest je opnieuw op
   // "langzamer" klikken — precies de knop waarvan je dacht dat hij niets deed.
   const [rate, setRateState] = useState(DEFAULT_RATE);
+  const [voiceName, setVoiceNameState] = useState<string | null>(null);
   // Bewust als state en niet tijdens de render bepaald: op de server bestaat
   // window niet, dus een directe check zou een andere HTML opleveren dan de
   // eerste client-render en de hydratie breken.
@@ -56,11 +83,17 @@ export function useCroatianTts(): TtsState {
     // een afwijkende eerste client-render zou de hydratie breken.
     const stored = Number(window.localStorage.getItem(RATE_KEY));
     if (TTS_RATES.some((r) => r.value === stored)) setRateState(stored);
+    setVoiceNameState(window.localStorage.getItem(VOICE_KEY));
   }, []);
 
   const setRate = useCallback((next: number) => {
     setRateState(next);
     window.localStorage.setItem(RATE_KEY, String(next));
+  }, []);
+
+  const setVoiceName = useCallback((name: string) => {
+    setVoiceNameState(name);
+    window.localStorage.setItem(VOICE_KEY, name);
   }, []);
 
   useEffect(() => {
@@ -87,11 +120,19 @@ export function useCroatianTts(): TtsState {
     };
   }, []);
 
-  const voice = useMemo(() => {
+  /** Alle Kroatische stemmen, beste eerst. */
+  const croatianVoices = useMemo(() => {
     const hr = voices.filter((v) => v.lang?.toLowerCase().replace("_", "-").startsWith("hr"));
-    if (hr.length) return hr.find((v) => v.localService) ?? hr[0];
-    return null;
+    return [...hr].sort((a, b) => voiceScore(b) - voiceScore(a) || a.name.localeCompare(b.name));
   }, [voices]);
+
+  const voice = useMemo(() => {
+    if (!croatianVoices.length) return null;
+    // Eerder gekozen stem wint; anders de best scorende. Vroeger stond hier een
+    // voorkeur voor localService, wat betekende dat een neurale stem uit Edge
+    // altijd verloor van de compacte stem van het systeem.
+    return croatianVoices.find((v) => v.name === voiceName) ?? croatianVoices[0];
+  }, [croatianVoices, voiceName]);
 
   const speak = useCallback(
     (text: string, rateOverride?: number, onEnd?: () => void) => {
@@ -136,5 +177,17 @@ export function useCroatianTts(): TtsState {
     setSpeaking(false);
   }, [supported]);
 
-  return { voices, voice, supported, ready, speaking, rate, setRate, speak, stop };
+  return {
+    voices,
+    voice,
+    croatianVoices,
+    setVoiceName,
+    supported,
+    ready,
+    speaking,
+    rate,
+    setRate,
+    speak,
+    stop,
+  };
 }
