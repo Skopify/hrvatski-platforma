@@ -355,6 +355,10 @@ Azure vraagt er wel om bij het aanmaken van een account.
 **Instellen:**
 
 1. Maak op <https://portal.azure.com> een *Speech Service* aan, prijsklasse **F0**
+   — krijg je *"region is currently not accepting new customers"*, dan zit die regio
+   vol; kies een andere (northeurope, swedencentral, francecentral, eastus). Dat is
+   een capaciteitsgrens bij Azure en het maakt voor de snelheid niets uit, want elke
+   zin wordt één keer opgehaald en daarna van schijf gespeeld
 2. Ga naar **Keys and Endpoint** en kopieer **KEY 1** en de **Location/Region**
 3. Kopieer `.env.local.example` naar `.env.local` en vul beide in
 4. Herstart de server
