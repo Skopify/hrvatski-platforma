@@ -54,7 +54,7 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | `npm run seed` | Zet `content/` om in leerbare items in de database (idempotent, raakt voortgang niet aan) |
 | `npm run check` | Zelfcontrole van de beoordelingsladder — laat zien hoe antwoorden door exact/diakritisch/tikfout/fout vallen |
 | `npm run check:content` | Valideert de content: dubbele id's, oefeningen zonder antwoord, targets die nergens naar wijzen, vreemde tekens, en de afgeleide naamvalsvormen |
-| `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang.** |
+| `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang, zonder kopie.** Wil je alleen opnieuw beginnen, gebruik dan de knop op Voortgang: die maakt eerst een back-up |
 | `npm run build` | Productiebuild. Mag gerust terwijl de dev-server draait: die schrijft in `.next/`, de build in `.next-build/` |
 
 ### Als de pagina raar doet
@@ -108,6 +108,8 @@ src/
     tts.ts          Kroatische spraak: Azure als die er is, anders de systeemstem
     speech/azure.ts Neurale stemmen van Azure, met schijfcache in data/audio/
 data/hrvatski.db    SQLite — je volledige voortgang, één bestand
+data/backups/       Kopieën, weggeschreven vóór elke reset
+data/audio/         Opgeslagen Azure-opnames (blijven bij een reset staan)
 scripts/            seed en zelfcontrole
 public/fonts/       Zelf gehoste letters: Fraunces, Plus Jakarta Sans, Literata
 start.command       Dubbelklikken om te starten (zoekt zelf een werkende node)

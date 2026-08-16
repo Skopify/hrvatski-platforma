@@ -14,6 +14,7 @@ import { highestActiveLesson } from "@/lib/stats";
 import { db } from "@/lib/db";
 import type { DrillFeedback, DrillKind, DrillQuestion } from "@/lib/drills";
 import { brojAccepts, brojHr } from "@/lib/numbers";
+import { resetProgress } from "@/lib/progress-reset";
 import {
   attempts,
   attemptTargets,
@@ -709,4 +710,28 @@ export async function markLessonStarted(lesson: number): Promise<void> {
     .set({ status: "in_progress", startedAt: row.startedAt ?? Date.now() })
     .where(eq(lessonProgress.lesson, lesson))
     .run();
+}
+
+/* -------------------------------------------------------------- opnieuw --- */
+
+/**
+ * Alle voortgang wissen.
+ *
+ * Er wordt eerst een kopie van de database weggeschreven; zie
+ * src/lib/progress-reset.ts voor wat er precies verdwijnt en wat blijft staan.
+ * Het bevestigingswoord komt van de client mee zodat één misklik nooit genoeg
+ * is — de knop alleen kan de sessiegeschiedenis van maanden niet wissen.
+ */
+export async function resetAllProgress(
+  confirmation: string,
+): Promise<{ ok: boolean; backup?: string; message: string }> {
+  if (confirmation.trim().toUpperCase() !== "RESET") {
+    return { ok: false, message: "Bevestiging klopt niet — er is niets gewist." };
+  }
+  const { backup } = resetProgress();
+  return {
+    ok: true,
+    backup,
+    message: `Voortgang gewist. Er staat een kopie in ${backup}.`,
+  };
 }

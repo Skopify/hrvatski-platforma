@@ -2,7 +2,9 @@ import { AreaChart, BarList, LineChart, StatTile } from "@/components/charts";
 import { Bolt, Page, PageHeader } from "@/components/ui";
 import { VoiceCheck } from "@/components/VoiceCheck";
 import { VoiceLab } from "@/components/VoiceLab";
+import { ResetProgress } from "@/components/ResetProgress";
 import { milestones, type Milestone } from "@/lib/milestones";
+import { progressSummary } from "@/lib/progress-reset";
 import {
   dailyStats,
   dueForecast,
@@ -42,6 +44,7 @@ export default function ProgressPage() {
   const hours = minutes / 60;
 
   const started = accuracy.total > 0;
+  const summary = progressSummary();
 
   return (
     <Page>
@@ -326,6 +329,7 @@ export default function ProgressPage() {
       <div className="space-y-5">
         <VoiceCheck />
         <VoiceLab />
+        <ResetProgress samenvatting={summary} />
       </div>
     </Page>
   );
