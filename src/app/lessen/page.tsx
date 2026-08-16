@@ -58,7 +58,6 @@ export default function LessonsPage() {
   return (
     <Page>
       <PageHeader
-        eyebrow="Hrvatski za početnike 1"
         title="Lessen"
         intro="Eenentwintig eenheden, van het alfabet tot de vocatief. De naamvallen komen in de volgorde van het boek — niet alfabetisch, maar op het moment dat je ze nodig hebt om iets te kunnen zeggen."
       />

@@ -45,7 +45,6 @@ export default function ProgressPage() {
   return (
     <Page>
       <PageHeader
-        eyebrow={`${rank.code} · ${rank.label}`}
         title="Voortgang"
         intro="XP meet inspanning, niet vaardigheid. Daarom staat er naast elke teller ook wat je daadwerkelijk beheerst — geschat met de retentiecurve van FSRS, die meeweegt hoe lang geleden je iets voor het laatst zag."
       />

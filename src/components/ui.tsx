@@ -69,11 +69,14 @@ export function Logo({ size = 38 }: { size?: number }) {
 /**
  * De šahovnica-band: twee rijen plat dambord. Dit is het enige ornament van het
  * platform — een vaste, herkenbare markering boven een kop, nooit sfeer.
+ *
+ * Rood, net als het logo. Daarmee is de band onmiskenbaar het merkteken en niet
+ * zomaar een blauw accentje tussen de andere blauwe accenten.
  */
 export function Checker({
   cols = 9,
   cell = 6,
-  tone = "var(--color-accent)",
+  tone = "var(--color-flag)",
   className = "",
 }: {
   cols?: number;
@@ -291,23 +294,16 @@ export function Page({
 export function PageHeader({
   title,
   intro,
-  eyebrow,
   children,
 }: {
   title: string;
   intro?: ReactNode;
-  eyebrow?: ReactNode;
   /** Extra elementen onder de inleiding, bijvoorbeeld knoppen. */
   children?: ReactNode;
 }) {
   return (
     <header className="mb-9">
       <Checker className="mb-4" />
-      {eyebrow ? (
-        <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.08em] text-accent">
-          {eyebrow}
-        </p>
-      ) : null}
       <h1 className="display text-[40px] text-ink sm:text-[46px]">{title}</h1>
       {intro ? (
         <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-ink-secondary">{intro}</p>

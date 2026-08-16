@@ -117,9 +117,9 @@
   --color-accent-wash: #ecf3fd;
   --color-accent-ring: #b3d2f7;
 
-  /* Vlagrood — alleen voor het merkteken, de šahovnica. Bewust geen
-     interface-kleur: dat het nergens anders opduikt, is precies waarom het
-     merk zich onderscheidt van een waarschuwing. */
+  /* Vlagrood — alleen voor het merkteken: het logo en de šahovnica-band boven
+     de koppen. Bewust geen interface-kleur, want dat het nergens anders opduikt
+     is precies waarom het als merk leest en niet als waarschuwing. */
   --color-flag: #d81e2c;
 
   /* Terracotta — de daken. Dit is de kleur van energie: reeks, XP, vuur. */
