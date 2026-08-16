@@ -2,6 +2,9 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
+import { recordUsage, withinBudget } from "./budget";
+import { azureEnv } from "./env";
+
 /**
  * Kroatische spraak van Azure, met een schijfcache.
  *
@@ -40,7 +43,8 @@ export const DEFAULT_AZURE_VOICE = AZURE_VOICES[0]!.id;
 const CACHE_DIR = path.join(process.cwd(), "data", "audio");
 
 export function azureConfigured(): boolean {
-  return Boolean(process.env.AZURE_SPEECH_KEY && process.env.AZURE_SPEECH_REGION);
+  const { key, region } = azureEnv();
+  return Boolean(key && region);
 }
 
 /**
@@ -80,7 +84,14 @@ export async function croatianSpeech(
 
   fs.mkdirSync(CACHE_DIR, { recursive: true });
   const file = path.join(CACHE_DIR, cacheKey(trimmed, voice, rate));
+  // De cache eerst: wat hier ligt is al betaald en telt nooit opnieuw mee.
   if (fs.existsSync(file)) return fs.readFileSync(file);
+
+  // Pas hier de rem, want alleen een cachemisser kost tekens.
+  if (!withinBudget(trimmed.length)) {
+    console.warn("Maandgrens voor Azure bereikt — terug naar de systeemstem.");
+    return null;
+  }
 
   // Azure drukt de snelheid uit als afwijking van normaal: -50% is half tempo.
   // Anders dan bij de systeemstem wordt dit wél netjes opgevolgd.
@@ -90,11 +101,11 @@ export async function croatianSpeech(
     `<voice name="${voice}"><prosody rate="${pct >= 0 ? "+" : ""}${pct}%">` +
     `${escapeXml(trimmed)}</prosody></voice></speak>`;
 
-  const region = process.env.AZURE_SPEECH_REGION;
+  const { key, region } = azureEnv();
   const res = await fetch(`https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`, {
     method: "POST",
     headers: {
-      "Ocp-Apim-Subscription-Key": process.env.AZURE_SPEECH_KEY!,
+      "Ocp-Apim-Subscription-Key": key!,
       "Content-Type": "application/ssml+xml",
       "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3",
       "User-Agent": "hrvatski-platforma",
@@ -109,6 +120,8 @@ export async function croatianSpeech(
 
   const audio = Buffer.from(await res.arrayBuffer());
   fs.writeFileSync(file, audio);
+  // Pas boeken als het gelukt is; een mislukte aanroep kost geen tekens.
+  recordUsage(trimmed.length);
   return audio;
 }
 
@@ -123,14 +136,14 @@ export async function testAzure(): Promise<{ ok: boolean; message: string }> {
   if (!azureConfigured()) {
     return { ok: false, message: "Geen sleutel ingesteld — zet AZURE_SPEECH_KEY in .env.local." };
   }
-  const region = process.env.AZURE_SPEECH_REGION!;
+  const { key, region } = azureEnv();
   try {
     const res = await fetch(
       `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`,
       {
         method: "POST",
         headers: {
-          "Ocp-Apim-Subscription-Key": process.env.AZURE_SPEECH_KEY!,
+          "Ocp-Apim-Subscription-Key": key!,
           "Content-Type": "application/ssml+xml",
           "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3",
           "User-Agent": "hrvatski-platforma",

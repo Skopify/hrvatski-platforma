@@ -1,7 +1,9 @@
 import { AZURE_VOICES, azureConfigured, cacheStats } from "@/lib/speech/azure";
+import { usage } from "@/lib/speech/budget";
 
 /**
- * Vertelt de client of er neurale stemmen beschikbaar zijn.
+ * Vertelt de client of er neurale stemmen beschikbaar zijn, plus wat er tot nu
+ * toe verbruikt is.
  *
  * Eén keer opvragen bij het laden is genoeg; zonder dit zou elke luisteroefening
  * eerst de server moeten bevragen om te ontdekken dat er geen sleutel is.
@@ -12,5 +14,6 @@ export async function GET() {
     available: on,
     voices: on ? AZURE_VOICES : [],
     cache: on ? cacheStats() : { files: 0, bytes: 0 },
+    usage: on ? usage() : null,
   });
 }

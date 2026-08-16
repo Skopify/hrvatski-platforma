@@ -20,5 +20,11 @@ data/
 
 # Je Azure-sleutel. Hoort nooit in versiebeheer, ook niet in een privérepo:
 # een sleutel die eenmaal in de geschiedenis staat, staat er voorgoed in.
-.env.local
-.env*.local
+# Deze repo is bovendien openbaar, en gelekte sleutels worden binnen minuten
+# door bots opgepikt. Ruim genomen dus, niet krap.
+.env
+.env.*
+!.env.local.example
+*.env
+azure.env
+secrets/

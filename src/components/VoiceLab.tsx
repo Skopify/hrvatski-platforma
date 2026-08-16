@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { TTS_RATES, useCroatianTts } from "@/lib/tts";
 
@@ -150,12 +150,53 @@ export function VoiceLab() {
  * leveren alledrie precies hetzelfde op: geen geluid. Deze knop haalt het
  * antwoord van Azure op en zet de oorzaak op het scherm.
  */
+interface Verbruik {
+  characters: number;
+  requests: number;
+  limit: number;
+  share: number;
+}
+
 function AzureTest() {
   const [uitslag, setUitslag] = useState<{ ok: boolean; message: string } | null>(null);
   const [bezig, setBezig] = useState(false);
+  const [verbruik, setVerbruik] = useState<Verbruik | null>(null);
+
+  useEffect(() => {
+    fetch("/api/spraak/status")
+      .then((r) => r.json())
+      .then((d: { usage: Verbruik | null }) => setVerbruik(d.usage))
+      .catch(() => {});
+  }, []);
 
   return (
     <div className="mt-4">
+      {/* De kostenteller. Dit is de enige plek waar zichtbaar wordt of het
+          gratis blijft, dus die hoort in beeld en niet in een logbestand. */}
+      {verbruik ? (
+        <div className="mb-4 rounded-lg border border-line bg-sunken px-4 py-3">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+              Verbruik deze maand
+            </p>
+            <p className="tabular text-[12.5px] text-ink-secondary">
+              {verbruik.characters.toLocaleString("nl-NL")} van{" "}
+              {verbruik.limit.toLocaleString("nl-NL")} tekens
+            </p>
+          </div>
+          <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-plane-deep">
+            <div
+              className={`h-full rounded-full ${verbruik.share > 0.8 ? "bg-warm" : "bg-good"}`}
+              style={{ width: `${Math.max(verbruik.share * 100, verbruik.characters > 0 ? 1 : 0)}%` }}
+            />
+          </div>
+          <p className="mt-2 text-[12px] leading-relaxed text-ink-muted">
+            De grens ligt op 80% van wat Azure gratis geeft. Erboven stopt het platform met
+            ophalen en gebruikt het weer je systeemstem — er wordt niets in rekening
+            gebracht. Wat al is opgeslagen blijft gewoon werken en telt nooit opnieuw mee.
+          </p>
+        </div>
+      ) : null}
       <button
         type="button"
         disabled={bezig}
