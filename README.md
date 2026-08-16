@@ -359,6 +359,10 @@ Azure vraagt er wel om bij het aanmaken van een account.
 3. Kopieer `.env.local.example` naar `.env.local` en vul beide in
 4. Herstart de server
 
+Klopt er iets niet, klik dan op **Verbinding testen** in datzelfde scherm. Een verkeerde
+sleutel, een verkeerde regio en een dienst die nog niet klaar is geven alledrie precies
+dezelfde stilte; die knop haalt het antwoord van Azure op en noemt de oorzaak.
+
 Daarna staat op **Voortgang → Stemmen vergelijken** een testscherm waarin je dezelfde
 zin door elke stem kunt laten uitspreken. De proefzinnen zijn gekozen op de klanken
 waar het misgaat — č tegenover ć, en š, ž, đ, dž achter elkaar.

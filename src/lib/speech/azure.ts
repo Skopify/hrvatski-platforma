@@ -112,6 +112,60 @@ export async function croatianSpeech(
   return audio;
 }
 
+/**
+ * Probeert één kort zinnetje en vertelt wat Azure ervan vond.
+ *
+ * Nodig omdat elke instelfout dezelfde stilte oplevert: een verkeerde sleutel,
+ * een verkeerde regio en een nog niet uitgerolde dienst leiden allemaal tot
+ * "geen audio", en dan sta je te raden. Dit zet de oorzaak op het scherm.
+ */
+export async function testAzure(): Promise<{ ok: boolean; message: string }> {
+  if (!azureConfigured()) {
+    return { ok: false, message: "Geen sleutel ingesteld — zet AZURE_SPEECH_KEY in .env.local." };
+  }
+  const region = process.env.AZURE_SPEECH_REGION!;
+  try {
+    const res = await fetch(
+      `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`,
+      {
+        method: "POST",
+        headers: {
+          "Ocp-Apim-Subscription-Key": process.env.AZURE_SPEECH_KEY!,
+          "Content-Type": "application/ssml+xml",
+          "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3",
+          "User-Agent": "hrvatski-platforma",
+        },
+        body:
+          `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="hr-HR">` +
+          `<voice name="${DEFAULT_AZURE_VOICE}">Dobar dan</voice></speak>`,
+      },
+    );
+
+    if (res.ok) return { ok: true, message: `Verbonden met regio ${region}.` };
+    if (res.status === 401 || res.status === 403) {
+      return {
+        ok: false,
+        message:
+          `Azure weigert de sleutel (${res.status}). Meestal klopt de regio niet: ` +
+          `je vroeg "${region}". Kijk in de portal onder Keys and Endpoint welke ` +
+          `Location daar staat en neem die exact over.`,
+      };
+    }
+    if (res.status === 404) {
+      return {
+        ok: false,
+        message: `Regio "${region}" bestaat niet. Gebruik bijvoorbeeld westeurope of eastus.`,
+      };
+    }
+    if (res.status === 429) {
+      return { ok: false, message: "Te veel aanvragen of maandquotum op. Probeer later." };
+    }
+    return { ok: false, message: `Azure gaf ${res.status}.` };
+  } catch {
+    return { ok: false, message: `Geen verbinding met ${region}.tts.speech.microsoft.com.` };
+  }
+}
+
 /** Hoeveel er al is opgeslagen — de basis voor de tellers op Voortgang. */
 export function cacheStats(): { files: number; bytes: number } {
   if (!fs.existsSync(CACHE_DIR)) return { files: 0, bytes: 0 };

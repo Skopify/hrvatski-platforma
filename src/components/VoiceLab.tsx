@@ -136,8 +136,55 @@ export function VoiceLab() {
           systeem. Zie <span className="font-medium">README → Betere stemmen</span> voor de
           vijf minuten die het kost — en het blijft binnen de gratis laag.
         </p>
-      ) : null}
+      ) : (
+        <AzureTest />
+      )}
     </section>
+  );
+}
+
+/**
+ * Verbinding testen.
+ *
+ * Een verkeerde sleutel, een verkeerde regio en een dienst die nog niet klaar is
+ * leveren alledrie precies hetzelfde op: geen geluid. Deze knop haalt het
+ * antwoord van Azure op en zet de oorzaak op het scherm.
+ */
+function AzureTest() {
+  const [uitslag, setUitslag] = useState<{ ok: boolean; message: string } | null>(null);
+  const [bezig, setBezig] = useState(false);
+
+  return (
+    <div className="mt-4">
+      <button
+        type="button"
+        disabled={bezig}
+        onClick={async () => {
+          setBezig(true);
+          try {
+            const r = await fetch("/api/spraak/test");
+            setUitslag(await r.json());
+          } catch {
+            setUitslag({ ok: false, message: "De server antwoordde niet." });
+          } finally {
+            setBezig(false);
+          }
+        }}
+        className="rounded-full border border-line bg-surface px-4 py-2 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent disabled:opacity-50"
+      >
+        {bezig ? "Bezig…" : "Verbinding testen"}
+      </button>
+
+      {uitslag ? (
+        <p
+          className={`mt-3 rounded-lg px-4 py-3 text-[12.5px] leading-relaxed ${
+            uitslag.ok ? "bg-good-wash text-good-ink" : "bg-bad-wash text-bad-ink"
+          }`}
+        >
+          {uitslag.message}
+        </p>
+      ) : null}
+    </div>
   );
 }
 
