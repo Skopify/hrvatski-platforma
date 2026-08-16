@@ -55,7 +55,20 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | `npm run check` | Zelfcontrole van de beoordelingsladder — laat zien hoe antwoorden door exact/diakritisch/tikfout/fout vallen |
 | `npm run check:content` | Valideert de content: dubbele id's, oefeningen zonder antwoord, targets die nergens naar wijzen, vreemde tekens, en de afgeleide naamvalsvormen |
 | `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang.** |
-| `npm run build` | Productiebuild — **stop eerst `npm run dev`**, want beide schrijven in `.next/` en een build onder een draaiende dev-server laat die met "Cannot find module" omvallen |
+| `npm run build` | Productiebuild. Mag gerust terwijl de dev-server draait: die schrijft in `.next/`, de build in `.next-build/` |
+
+### Als de pagina raar doet
+
+Zie je **"missing required error components, refreshing…"**, of laadt de opmaak niet
+terwijl de tekst er wel staat, dan is `.next/` in de war geraakt — bijvoorbeeld doordat
+de server halverwege het compileren is afgebroken. Het is geen fout in de code en je
+voortgang staat er los van. Stop de server en gooi de map weg:
+
+```bash
+rm -rf .next
+```
+
+Bij de volgende start bouwt hij zichzelf opnieuw op.
 
 ## Architectuur
 
