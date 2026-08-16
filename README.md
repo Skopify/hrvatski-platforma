@@ -59,6 +59,13 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 
 ### Als de pagina raar doet
 
+**Start het platform maar één keer tegelijk.** Twee dev-servers op hetzelfde project
+compileren allebei in `.next/` en overschrijven elkaars brokken; het gevolg is een
+pagina die zijn opmaak kwijtraakt zodra je navigeert. Verraderlijk is dat Next bij een
+bezette poort gewoon de volgende kiest, dus je ziet twee werkende adressen en niet
+meteen dat er iets mis is. `start.command` weigert daarom een tweede server te starten.
+
+
 Zie je **"missing required error components, refreshing…"**, of laadt de opmaak niet
 terwijl de tekst er wel staat, dan is `.next/` in de war geraakt — bijvoorbeeld doordat
 de server halverwege het compileren is afgebroken. Het is geen fout in de code en je

@@ -32,6 +32,22 @@ fi
 export PATH="$(dirname "$node_bin"):$PATH"
 echo "node $("$node_bin" -v) — $node_bin"
 
+# Draait er al een server? Dan niet nog een starten.
+#
+# Twee dev-servers op hetzelfde project is stiller kapot dan het klinkt: ze
+# compileren allebei in .next/ en overschrijven elkaars brokken. Het resultaat
+# is een pagina die zijn opmaak kwijtraakt zodra je navigeert. Next kiest bij
+# een bezette poort namelijk gewoon de volgende, dus je merkt het niet meteen.
+if lsof -ti:3000 >/dev/null 2>&1; then
+  echo ""
+  echo "Er draait al een server op poort 3000 — die gebruiken we."
+  echo "Wil je opnieuw beginnen, sluit dan eerst het andere venster."
+  open http://localhost:3000
+  echo ""
+  read -r "?Druk op enter om dit venster te sluiten."
+  exit 0
+fi
+
 if [ ! -d node_modules ]; then
   echo "Pakketten ontbreken, even installeren..."
   npm install || exit 1
