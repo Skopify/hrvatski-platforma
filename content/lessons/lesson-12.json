@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.12.dativ",
+      "code": "LOCDAT-FORM",
       "title_nl": "DATIEF — dezelfde vorm als de locatief",
       "cefr": "A2.1",
       "explanation_nl": "Goed nieuws: de datief enkelvoud heeft precies dezelfde uitgangen als de locatief. Mannelijk en onzijdig krijgen -u, vrouwelijk op -a krijgt -i. Gradu, selu, kući. Je hoeft dus geen nieuwe vormen te leren — alleen een nieuwe functie.",
@@ -43,6 +44,7 @@
     },
     {
       "id": "g.12.prijedlozi_dativ",
+      "code": "DAT-GOAL",
       "title_nl": "Voorzetsels met de datief",
       "cefr": "A2.1",
       "explanation_nl": "Vier voorzetsels vragen de datief: prema (richting, naar), k / ka (naar, bij een persoon), nasuprot (tegenover) en unatoč / usprkos (ondanks). Idemo prema moru. Idem k liječniku. Sjedi nasuprot meni.",
@@ -67,6 +69,7 @@
     },
     {
       "id": "g.12.futur",
+      "code": "FUTUR-1",
       "title_nl": "FUTUR I — de toekomende tijd",
       "cefr": "A2.1",
       "explanation_nl": "De toekomende tijd bouw je met de onbeklemtoonde vorm van htjeti plus de infinitief: ću, ćeš, će, ćemo, ćete, će. Ja ću raditi. Staat het werkwoord voorop, dan verliest de infinitief zijn slot-i en schuift het hulpwerkwoord erachter: Radit ću. Bij werkwoorden op -ći gebeurt dat niet: Ići ću.",
@@ -93,6 +96,7 @@
     },
     {
       "id": "g.12.futur_negacija",
+      "code": "FUTUR-1",
       "title_nl": "Toekomst ontkennen en bevragen",
       "cefr": "A2.1",
       "explanation_nl": "Ontkennen doe je met neću, nećeš, neće, nećemo, nećete, neće plus de volledige infinitief: Neću raditi. Hier valt de slot-i dus níét weg. Vragen doe je met de lange vorm: Hoćeš li raditi? of Hoće li doći?",

@@ -16,6 +16,7 @@
   "grammar": [
     {
       "id": "g.pron.personal",
+      "code": "PRON-PERS",
       "title_nl": "Persoonlijke voornaamwoorden",
       "cefr": "A1.1",
       "explanation_nl": "Het Kroatisch heeft geen aparte vorm voor 'het' — onzijdige dingen zijn 'ono'. Belangrijker: het onderwerpsvoornaamwoord wordt meestal wéggelaten, omdat de werkwoordsuitgang al verraadt wie er handelt. 'Sam studentica' is normaal; 'Ja sam studentica' benadrukt juist 'ík'.",
@@ -39,6 +40,7 @@
     },
     {
       "id": "g.biti.present.short",
+      "code": "BITI-CLITIC",
       "title_nl": "biti (zijn) — korte vorm",
       "cefr": "A1.1",
       "explanation_nl": "De korte vorm is de gewone vorm in mededelende zinnen. Hij is onbeklemtoond (een clitisch woordje) en kan daarom nooit als eerste woord in de zin staan.",
@@ -61,6 +63,7 @@
     },
     {
       "id": "g.biti.present.long",
+      "code": "BITI-FULL",
       "title_nl": "biti — lange vorm (in vragen en korte antwoorden)",
       "cefr": "A1.1",
       "explanation_nl": "De lange, beklemtoonde vorm gebruik je in ja/nee-vragen met het vraagpartikel li, en in korte antwoorden. Een ja/nee-vraag bouw je als: lange vorm + li + rest. 'Jesi li ti student?' Het antwoord is 'Da, jesam.' — niet 'Da, sam.'",
@@ -84,6 +87,7 @@
     },
     {
       "id": "g.biti.present.negative",
+      "code": "BITI-NEG",
       "title_nl": "biti — ontkennende vorm (nisam ...)",
       "cefr": "A1.1",
       "explanation_nl": "De ontkenning van biti is één woord: ne + sam is samengetrokken tot nisam. Je zet dus nooit 'ne' los vóór de korte vorm. Anders dan de korte vorm mág nisam wél vooraan staan, want hij is beklemtoond.",
@@ -106,6 +110,7 @@
     },
     {
       "id": "g.noun.gender.nom.sg",
+      "code": "NOM-GENDER",
       "title_nl": "Zelfstandige naamwoorden — de drie geslachten",
       "cefr": "A1.1",
       "explanation_nl": "Het geslacht lees je bijna altijd af van de uitgang in de nominatief enkelvoud: medeklinker = mannelijk (avion, hotel), -a = vrouwelijk (kuća, knjiga), -o of -e = onzijdig (pismo, sunce). Dit is geen decoratie: het geslacht bepaalt álle latere naamvalsuitgangen, dus je leert een woord altijd mét zijn geslacht.",
@@ -129,6 +134,7 @@
     },
     {
       "id": "g.pron.demonstrative",
+      "code": "PRON-PERS",
       "title_nl": "Aanwijzend: ovo / to / ono",
       "cefr": "A1.1",
       "explanation_nl": "Om iets aan te wijzen gebruik je een onveranderlijke vorm: ovo (dit, hier bij mij), to (dat, bij jou), ono (dat daar, verderop). De zin is altijd 'Ovo je ...' of 'To su ...' — het werkwoord past zich aan het aantal aan, het aanwijswoord niet.",

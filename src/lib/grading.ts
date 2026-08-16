@@ -39,7 +39,8 @@ export function normalize(s: string): string {
     .trim();
 }
 
-function levenshtein(a: string, b: string): number {
+/** Tekenafstand tussen twee woorden. Ook gebruikt door de foutclassificatie. */
+export function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
   if (!a.length) return b.length;
   if (!b.length) return a.length;

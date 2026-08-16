@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.13.dativ_objekt",
+      "code": "DAT-IOBJ",
       "title_nl": "De datief als meewerkend voorwerp",
       "cefr": "A2.1",
       "explanation_nl": "Naast richting (les 12) heeft de datief een tweede taak: hij markeert de ontvanger. Dajem knjigu prijatelju. Šaljem pismo majci. De vraag is kome? (aan wie?). Hier staat de datief zonder voorzetsel — dat kan alleen de datief, de locatief nooit.",
@@ -41,6 +42,7 @@
     },
     {
       "id": "g.13.red_klitika",
+      "code": "CLITIC-ORDER",
       "title_nl": "De volgorde van clitica: datief vóór accusatief",
       "cefr": "A2.1",
       "explanation_nl": "Vervang je beide objecten door korte voornaamwoorden, dan is de volgorde vast: eerst de datief, dan de accusatief. Dajem mu je. (Ik geef het hem.) De datiefclitica zijn mi, ti, mu, joj, nam, vam, im.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.13.slati_pisati",
+      "code": "PRES-CLASSES",
       "title_nl": "slati en pisati — stam met een klankwisseling",
       "cefr": "A2.1",
       "explanation_nl": "Twee veelgebruikte werkwoorden veranderen hun stammedeklinker in het presens: slati → šaljem, pisati → pišem. Zo ook kazati → kažem en plakati → plačem. Het patroon heet jotacija; je hoeft het niet te kunnen uitleggen, wel te herkennen.",
@@ -94,6 +97,7 @@
     },
     {
       "id": "g.13.glagoli_dativ",
+      "code": "DAT-IOBJ",
       "title_nl": "Werkwoorden die een datief vragen",
       "cefr": "A2.1",
       "explanation_nl": "Sommige werkwoorden nemen geen accusatief maar een datief, ook al voelt dat voor ons als een lijdend voorwerp. De belangrijkste: pomoći (helpen), javiti se (contact opnemen), zahvaliti (bedanken), vjerovati (geloven), smetati (storen). Pomažem prijatelju. Vjerujem ti.",

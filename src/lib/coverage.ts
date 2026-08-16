@@ -3,7 +3,9 @@ import { State } from "ts-fsrs";
 
 import { glossKey, loadLessons, loadStories, storySentences, type Story } from "./content";
 import { db } from "./db";
-import { encounters, items, srs } from "./db/schema";
+import { card, encounters, items, srs } from "./db/schema";
+import { analyze } from "./analyze";
+import { FUNCTION_WORDS } from "./forms";
 import { retrievability, type SrsRow } from "./srs";
 
 /*
@@ -62,54 +64,30 @@ function vocabForms(): Map<string, string> {
   return map;
 }
 
-/**
- * Kroatische functiewoorden — gesloten klasse.
- *
- * Deze lijst is nodig voor een eerlijke meting. Sommige voorzetsels en
- * voornaamwoorden staan óók in de woordenlijst van een les, en zonder deze lijst
- * zou een verhaal dat toevallig veel «u» en «i» bevat lager scoren dan een veel
- * moeilijkere tekst. Dat is precies wat er gebeurde: het A1.2-verhaal kwam
- * onder het A2.2-verhaal uit.
- *
- * Functiewoorden zijn niet wat een tekst zwaar maakt — ze komen met de
- * grammatica mee en herhalen zich zo vaak dat ze vanzelf blijven zitten. Nation
- * rekent zijn drempels over álle lopende woorden, met de aanname dat de
- * structuurwoorden bekend zijn. Deze lijst maakt die aanname expliciet.
- */
-const FUNCTION_WORDS = new Set<string>([
-  // voorzetsels
-  "u", "na", "s", "sa", "iz", "od", "do", "za", "po", "pred", "kod", "prije", "poslije",
-  "blizu", "o", "pri", "prema", "bez", "nakon", "pokraj", "iznad", "ispod", "između", "zbog",
-  // voegwoorden en signaalwoorden
-  "i", "a", "ali", "ili", "da", "jer", "nego", "kad", "kada", "dok", "zato", "pa", "te",
-  // persoonlijke en wederkerende voornaamwoorden
-  "ja", "ti", "on", "ona", "ono", "mi", "vi", "oni", "one", "me", "te", "ga", "ju", "nas",
-  "vas", "ih", "mu", "joj", "nam", "vam", "im", "se", "sebe", "si", "njoj", "njemu", "njima",
-  "mene", "tebe", "njega", "nje",
-  // bezittelijk en aanwijzend
-  "moj", "moja", "moje", "mog", "moju", "mojim", "tvoj", "tvoja", "njegov", "njegova",
-  "njezin", "njezina", "njezinu", "naš", "naša", "vaš", "njihov", "svoj", "svoja", "svojim",
-  "ovo", "to", "ovaj", "ova", "taj", "ta", "onaj",
-  // vraagwoorden
-  "tko", "što", "koji", "koja", "koje", "koju", "kojim", "gdje", "zašto", "kako", "kakav",
-  // biti, htjeti en hun ontkenningen
-  "sam", "si", "je", "smo", "ste", "su", "bio", "bila", "bilo", "bili", "bile", "biti",
-  "nisam", "nisi", "nije", "nismo", "niste", "nisu", "bit", "budem",
-  "ću", "ćeš", "će", "ćemo", "ćete", "hoću", "hoćeš",
-  // partikels en ontkenning
-  "ne", "ni", "li", "već", "još", "samo", "tek", "baš",
-  // onbepaalde woorden
-  "sve", "svaki", "svaka", "neki", "nešto", "netko", "nekoliko", "nikada", "ništa",
-]);
 
 export type WordClass =
   | { kind: "content"; itemId: string }
   /** Eigennaam — hoef je niet te leren, telt in Nations methode als bekend. */
   | { kind: "proper" }
   /** Functiewoord of grammaticale vorm; komt met de grammatica mee, niet als woordje. */
-  | { kind: "function" };
+  | { kind: "function" }
+  /** Niemand kent dit woord: geen glossary, geen vormcatalogus, geen functiewoord. */
+  | { kind: "unknown" };
 
-/** Waar hoort deze woordvorm uit een verhaal toe? */
+/**
+ * Waar hoort deze woordvorm uit een verhaal toe?
+ *
+ * Let op de laatste tak. Tot voor kort viel alles wat níet in de glossary stond
+ * en geen functiewoord was, stilzwijgend in de bak "functiewoord" — en die telt
+ * als bekend. Dat maakte de dekking systematisch te hoog: gemeten over de vijf
+ * verhalen kregen 24 van de 566 lopende woorden zo gratis een vinkje, waaronder
+ * gewone inhoudswoorden als «problem», «sekundi» en «litre». Vier procent klinkt
+ * klein, maar het is precies het verschil tussen 95% en 99% — de twee getallen
+ * waar de hele leesvolgorde op draait.
+ *
+ * Nu wordt de vormcatalogus als tweede kans geraadpleegd, en wat ook die niet
+ * kent heet onbekend. Onbekend telt niet als bekend.
+ */
 export function classify(story: Story, token: string): WordClass | null {
   const key = glossKey(token);
   if (!key) return null;
@@ -119,20 +97,29 @@ export function classify(story: Story, token: string): WordClass | null {
   if (FUNCTION_WORDS.has(key)) return { kind: "function" };
 
   const gloss = story.glossary[key];
-  if (!gloss) return { kind: "function" };
+  if (gloss) {
+    if (gloss.item) return { kind: "content", itemId: gloss.item };
 
-  if (gloss.item) return { kind: "content", itemId: gloss.item };
+    const index = vocabForms();
+    for (const candidate of [gloss.lemma, gloss.hr, key]) {
+      if (!candidate) continue;
+      const hit = index.get(glossKey(candidate));
+      if (hit) return { kind: "content", itemId: hit };
+    }
 
-  const index = vocabForms();
-  for (const candidate of [gloss.lemma, gloss.hr, key]) {
-    if (!candidate) continue;
-    const hit = index.get(glossKey(candidate));
-    if (hit) return { kind: "content", itemId: hit };
+    // Hoofdletter in de woordenboekvorm betekent een naam: Nina, Zagreb, Dolac.
+    if (gloss.hr && gloss.hr[0] !== gloss.hr[0].toLowerCase()) return { kind: "proper" };
   }
 
-  // Hoofdletter in de woordenboekvorm betekent een naam: Nina, Zagreb, Dolac.
-  if (gloss.hr && gloss.hr[0] !== gloss.hr[0].toLowerCase()) return { kind: "proper" };
-  return { kind: "function" };
+  // Geen glossary-ingang: nog één kans via de vormcatalogus, dan is het op.
+  const [ontleed] = analyze(token);
+  if (ontleed && !ontleed.unknown) {
+    if (ontleed.klasse === "proper") return { kind: "proper" };
+    if (ontleed.klasse === "function") return { kind: "function" };
+    if (ontleed.lemmaId) return { kind: "content", itemId: ontleed.lemmaId };
+  }
+
+  return { kind: "unknown" };
 }
 
 /* ------------------------------------------------------------- dekking --- */
@@ -148,6 +135,8 @@ export interface Coverage {
   freshItems: string[];
   /** Hoeveel lopende woorden aan een woordkaart gekoppeld konden worden. */
   contentWords: number;
+  /** Woorden die niemand thuis kon brengen. Tellen als niet-bekend. */
+  unrecognisedWords: number;
 }
 
 export type CoverageVerdict = "ideaal" | "goed" | "pittig" | "hoog";
@@ -171,7 +160,7 @@ export function knownItemIds(): Set<string> {
   const now = new Date();
   const rows = db
     .select({
-      itemId: srs.itemId,
+      itemId: card.itemId,
       due: srs.due,
       stability: srs.stability,
       difficulty: srs.difficulty,
@@ -180,9 +169,11 @@ export function knownItemIds(): Set<string> {
       reps: srs.reps,
       lapses: srs.lapses,
       state: srs.state,
+      learningSteps: srs.learningSteps,
       lastReview: srs.lastReview,
     })
     .from(srs)
+    .innerJoin(card, eq(card.id, srs.cardId))
     .all();
 
   const known = new Set<string>();
@@ -212,6 +203,7 @@ export function storyCoverage(
   let total = 0;
   let knownWords = 0;
   let contentWords = 0;
+  let onherkend = 0;
   const unknown = new Set<string>();
   const fresh = new Set<string>();
 
@@ -226,6 +218,11 @@ export function storyCoverage(
         if (known.has(cls.itemId)) knownWords++;
         else unknown.add(cls.itemId);
         if ((seenCounts?.get(cls.itemId) ?? 0) < ENCOUNTERS_TARGET) fresh.add(cls.itemId);
+      } else if (cls.kind === "unknown") {
+        // Niet thuis te brengen. Dit is waar de meting eerlijk moet blijven: als
+        // onbekend gratis als bekend telt, meet je jezelf een te hoge dekking aan
+        // en krijg je teksten die te zwaar zijn.
+        onherkend++;
       } else {
         // Eigennamen en functiewoorden tellen als bekend: die hoef je niet als
         // woordje te leren, en Nations drempels zijn over álle lopende woorden.
@@ -241,6 +238,7 @@ export function storyCoverage(
     unknownItems: [...unknown],
     freshItems: [...fresh],
     contentWords,
+    unrecognisedWords: onherkend,
   };
 }
 

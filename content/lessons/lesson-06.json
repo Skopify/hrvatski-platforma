@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.06.modalni",
+      "code": "MODAL",
       "title_nl": "Modale werkwoorden — de bouw van de zin",
       "cefr": "A1.2",
       "explanation_nl": "Een modaal werkwoord vervoeg je, en het werkwoord dat erachter komt blijft in de infinitief: Moram kuhati. Hoću piti kavu. Ne mogu doći. De infinitief verandert dus nooit — alleen het modale werkwoord past zich aan de persoon aan.",
@@ -42,6 +43,7 @@
     },
     {
       "id": "g.06.htjeti",
+      "code": "PRES-BIG4",
       "title_nl": "htjeti — willen, en zijn onregelmatige nee",
       "cefr": "A1.2",
       "explanation_nl": "htjeti is het onregelmatigste werkwoord van de vijf: hoću, hoćeš, hoće, hoćemo, hoćete, hoće. De ontkenning is niet 'ne hoću' maar één samengetrokken woord: neću, nećeš, neće, nećemo, nećete, neće.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.06.moci",
+      "code": "MODAL",
       "title_nl": "moći — kunnen",
       "cefr": "A1.2",
       "explanation_nl": "moći is onregelmatig in de eerste persoon: mogu, niet *možem. Verder loopt hij regelmatig door met ž: možeš, može, možemo, možete. De derde persoon meervoud is weer mogu, gelijk aan de ik-vorm.",
@@ -91,6 +94,7 @@
     },
     {
       "id": "g.06.morati_smjeti",
+      "code": "MODAL",
       "title_nl": "Niet hoeven versus niet mogen",
       "cefr": "A1.2",
       "explanation_nl": "Dit is de belangrijkste val van deze les. Ne moram betekent 'ik hoef niet' — er is geen verplichting. Ne smijem betekent 'ik mag niet' — er is een verbod. Ze zijn niet uitwisselbaar, en de fout verandert de betekenis volledig.",

@@ -3,23 +3,57 @@ import path from "node:path";
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 
-import { DDL } from "./schema";
+import { LATEST_VERSION, currentVersion, migrate, pendingMigrations } from "./migrate";
 import * as schema from "./schema";
 
-const DB_DIR = path.join(process.cwd(), "data");
-const DB_PATH = path.join(DB_DIR, "hrvatski.db");
+/**
+ * HRVATSKI_DB laat de acceptatietests tegen een kopie draaien in plaats van
+ * tegen je echte voortgang. In gewoon gebruik staat hij niet, en dan is het
+ * gewoon data/hrvatski.db.
+ */
+const DB_PATH = process.env.HRVATSKI_DB
+  ? path.resolve(process.env.HRVATSKI_DB)
+  : path.join(process.cwd(), "data", "hrvatski.db");
+const DB_DIR = path.dirname(DB_PATH);
 
 declare global {
   // eslint-disable-next-line no-var
   var __hrvatskiDb: ReturnType<typeof create> | undefined;
 }
 
+/**
+ * Een bestaande database wordt hier nooit gemigreerd.
+ *
+ * Dat is geen voorzichtigheid maar ervaring: toen de migratie wél bij het
+ * openen draaide, hoefde er alleen een bestand veranderd te worden om een
+ * draaiende dev-server het schema van de échte leerhistorie te laten omgooien —
+ * zonder back-up, zonder dat iemand erom vroeg. Een hot reload hoort geen
+ * datamodel te verbouwen.
+ *
+ * Een database die nog niet bestaat, mag wel meteen opgezet worden: daar valt
+ * niets te verliezen. Loopt een bestaande database achter, dan weigert de server
+ * te starten en verwijst hij naar `npm run migrate` — dat script maakt eerst een
+ * kopie en laat zien wat het doet.
+ */
 function create() {
   fs.mkdirSync(DB_DIR, { recursive: true });
+  const nieuw = !fs.existsSync(DB_PATH);
   const sqlite = new Database(DB_PATH);
   sqlite.pragma("journal_mode = WAL");
   sqlite.pragma("foreign_keys = ON");
-  sqlite.exec(DDL);
+
+  if (nieuw) {
+    migrate(sqlite);
+  } else {
+    const achterstand = pendingMigrations(sqlite);
+    if (achterstand.length > 0) {
+      throw new Error(
+        `De database staat op versie ${currentVersion(sqlite)}, de code verwacht ${LATEST_VERSION}. ` +
+          `Openstaand: ${achterstand.join(", ")}.\n` +
+          `Draai eerst  npm run migrate  — dat maakt een back-up en past ze toe.`,
+      );
+    }
+  }
 
   const now = Date.now();
   sqlite

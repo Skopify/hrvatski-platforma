@@ -15,48 +15,48 @@
     {
       "id": "p1",
       "sentences": [
-        { "hr": "U srijedu je stigao paket iz Nizozemske.", "nl": "Op woensdag kwam er een pakket uit Nederland." },
-        { "hr": "Nina je odmah prepoznala majčin rukopis na adresi.", "nl": "Nina herkende meteen het handschrift van haar moeder op het adres." },
-        { "hr": "Unutra je bila stara bilježnica u smeđem uvezu.", "nl": "Binnenin zat een oud schrift in een bruine band." },
-        { "hr": "Na prvoj stranici pisalo je: Kuharica. Marija Kovač, 1961.", "nl": "Op de eerste bladzijde stond: Kookboek. Marija Kovač, 1961." }
+        { "id": "bakina-kuharica.p1.s1", "hr": "U srijedu je stigao paket iz Nizozemske.", "nl": "Op woensdag kwam er een pakket uit Nederland." },
+        { "id": "bakina-kuharica.p1.s2", "hr": "Nina je odmah prepoznala majčin rukopis na adresi.", "nl": "Nina herkende meteen het handschrift van haar moeder op het adres." },
+        { "id": "bakina-kuharica.p1.s3", "hr": "Unutra je bila stara bilježnica u smeđem uvezu.", "nl": "Binnenin zat een oud schrift in een bruine band." },
+        { "id": "bakina-kuharica.p1.s4", "hr": "Na prvoj stranici pisalo je: Kuharica. Marija Kovač, 1961.", "nl": "Op de eerste bladzijde stond: Kookboek. Marija Kovač, 1961." }
       ]
     },
     {
       "id": "p2",
       "sentences": [
-        { "hr": "Bila je to bakina kuharica.", "nl": "Het was oma's kookboek." },
-        { "hr": "Nikada je nije upoznala.", "nl": "Ze had haar nooit gekend." },
-        { "hr": "Baka je umrla prije nego što se Nina rodila.", "nl": "Oma stierf voordat Nina geboren werd." },
-        { "hr": "Recepti su bili napisani rukom, sitnim slovima.", "nl": "De recepten waren met de hand geschreven, in kleine lettertjes." },
-        { "hr": "Nina je čitala polako, ali je razumjela gotovo sve.", "nl": "Nina las langzaam, maar begreep bijna alles." }
+        { "id": "bakina-kuharica.p2.s1", "hr": "Bila je to bakina kuharica.", "nl": "Het was oma's kookboek." },
+        { "id": "bakina-kuharica.p2.s2", "hr": "Nikada je nije upoznala.", "nl": "Ze had haar nooit gekend." },
+        { "id": "bakina-kuharica.p2.s3", "hr": "Baka je umrla prije nego što se Nina rodila.", "nl": "Oma stierf voordat Nina geboren werd." },
+        { "id": "bakina-kuharica.p2.s4", "hr": "Recepti su bili napisani rukom, sitnim slovima.", "nl": "De recepten waren met de hand geschreven, in kleine lettertjes." },
+        { "id": "bakina-kuharica.p2.s5", "hr": "Nina je čitala polako, ali je razumjela gotovo sve.", "nl": "Nina las langzaam, maar begreep bijna alles." }
       ]
     },
     {
       "id": "p3",
       "sentences": [
-        { "hr": "Prije dvije godine nije razumjela ni naslove.", "nl": "Twee jaar geleden begreep ze niet eens de titels." },
-        { "hr": "Sada je znala što znači „pola litre mlijeka“ i „dvije žlice brašna“.", "nl": "Nu wist ze wat \"een halve liter melk\" en \"twee lepels bloem\" betekenen." },
-        { "hr": "Okrenula je zadnju stranicu.", "nl": "Ze sloeg de laatste bladzijde om." },
-        { "hr": "Tamo, na rubu, stajala je rečenica koju baka nije napisala za sebe:", "nl": "Daar, in de kantlijn, stond een zin die oma niet voor zichzelf had geschreven:" },
-        { "hr": "„Za Anu, za njezinu prvu kuću.“", "nl": "\"Voor Ana, voor haar eerste huis.\"" }
+        { "id": "bakina-kuharica.p3.s1", "hr": "Prije dvije godine nije razumjela ni naslove.", "nl": "Twee jaar geleden begreep ze niet eens de titels." },
+        { "id": "bakina-kuharica.p3.s2", "hr": "Sada je znala što znači „pola litre mlijeka“ i „dvije žlice brašna“.", "nl": "Nu wist ze wat \"een halve liter melk\" en \"twee lepels bloem\" betekenen." },
+        { "id": "bakina-kuharica.p3.s3", "hr": "Okrenula je zadnju stranicu.", "nl": "Ze sloeg de laatste bladzijde om." },
+        { "id": "bakina-kuharica.p3.s4", "hr": "Tamo, na rubu, stajala je rečenica koju baka nije napisala za sebe:", "nl": "Daar, in de kantlijn, stond een zin die oma niet voor zichzelf had geschreven:" },
+        { "id": "bakina-kuharica.p3.s5", "hr": "„Za Anu, za njezinu prvu kuću.“", "nl": "\"Voor Ana, voor haar eerste huis.\"" }
       ]
     },
     {
       "id": "p4",
       "sentences": [
-        { "hr": "Ana nikada nije naučila dobro čitati hrvatski.", "nl": "Ana heeft nooit goed Kroatisch leren lezen." },
-        { "hr": "Kad je bila mala, kod kuće se govorilo nizozemski.", "nl": "Toen ze klein was, werd er thuis Nederlands gesproken." },
-        { "hr": "Nina je uzela telefon i nazvala majku.", "nl": "Nina pakte de telefoon en belde haar moeder." },
-        { "hr": "„Mama“, rekla je, „sjedni. Pročitat ću ti nešto.“", "nl": "\"Mama\", zei ze, \"ga zitten. Ik ga je iets voorlezen.\"" }
+        { "id": "bakina-kuharica.p4.s1", "hr": "Ana nikada nije naučila dobro čitati hrvatski.", "nl": "Ana heeft nooit goed Kroatisch leren lezen." },
+        { "id": "bakina-kuharica.p4.s2", "hr": "Kad je bila mala, kod kuće se govorilo nizozemski.", "nl": "Toen ze klein was, werd er thuis Nederlands gesproken." },
+        { "id": "bakina-kuharica.p4.s3", "hr": "Nina je uzela telefon i nazvala majku.", "nl": "Nina pakte de telefoon en belde haar moeder." },
+        { "id": "bakina-kuharica.p4.s4", "hr": "„Mama“, rekla je, „sjedni. Pročitat ću ti nešto.“", "nl": "\"Mama\", zei ze, \"ga zitten. Ik ga je iets voorlezen.\"" }
       ]
     },
     {
       "id": "p5",
       "sentences": [
-        { "hr": "Čitala je polako, riječ po riječ.", "nl": "Ze las langzaam, woord voor woord." },
-        { "hr": "S druge strane linije bilo je tiho.", "nl": "Aan de andere kant van de lijn was het stil." },
-        { "hr": "Onda je Ana rekla samo: „Hvala.“", "nl": "Toen zei Ana alleen: \"Dank je.\"" },
-        { "hr": "Nina je tek tada shvatila zašto je zapravo došla u Zagreb.", "nl": "Pas toen begreep Nina waarom ze eigenlijk naar Zagreb was gekomen." }
+        { "id": "bakina-kuharica.p5.s1", "hr": "Čitala je polako, riječ po riječ.", "nl": "Ze las langzaam, woord voor woord." },
+        { "id": "bakina-kuharica.p5.s2", "hr": "S druge strane linije bilo je tiho.", "nl": "Aan de andere kant van de lijn was het stil." },
+        { "id": "bakina-kuharica.p5.s3", "hr": "Onda je Ana rekla samo: „Hvala.“", "nl": "Toen zei Ana alleen: \"Dank je.\"" },
+        { "id": "bakina-kuharica.p5.s4", "hr": "Nina je tek tada shvatila zašto je zapravo došla u Zagreb.", "nl": "Pas toen begreep Nina waarom ze eigenlijk naar Zagreb was gekomen." }
       ]
     }
   ],

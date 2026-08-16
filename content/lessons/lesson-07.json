@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.07.ici",
+      "code": "PRES-BIG4",
       "title_nl": "ići — gaan",
       "cefr": "A1.2",
       "explanation_nl": "ići is onregelmatig: de infinitief heeft niets gemeen met de presensstam id-. idem, ideš, ide, idemo, idete, idu. Het is een van de meest gebruikte werkwoorden van het Kroatisch, dus deze paradigma leer je uit je hoofd.",
@@ -40,6 +41,7 @@
     },
     {
       "id": "g.07.u_na_akuzativ",
+      "code": "ACC-MOTION",
       "title_nl": "Richting: u en na + ACCUSATIEF",
       "cefr": "A1.2",
       "explanation_nl": "Om te zeggen waar je naartoe gaat, gebruik je u of na met de accusatief. De vraag is kamo? (waarheen?). Idem u trgovinu. Idemo na koncert. Let op: het is dezelfde accusatief als in les 5 — kuća → kuću, fakultet → fakultet.",
@@ -66,6 +68,7 @@
     },
     {
       "id": "g.07.po_akuzativ",
+      "code": "ACC-MOTION",
       "title_nl": "po + ACCUSATIEF — iets gaan halen",
       "cefr": "A1.2",
       "explanation_nl": "po met de accusatief betekent 'om te halen': Idem po kruh. Idemo po dijete. De vraag is po što? (waarvoor?) of po koga? (voor wie?). Het gaat altijd om ophalen en meenemen — niet om ergens naartoe gaan.",
@@ -90,6 +93,7 @@
     },
     {
       "id": "g.07.za_akuzativ",
+      "code": "ACC-OBJECT",
       "title_nl": "za + ACCUSATIEF — bestemd voor",
       "cefr": "A1.2",
       "explanation_nl": "za met de accusatief geeft aan voor wie of waarvoor iets is: Kava je za sestru. Ovaj novac je za hranu. De vraag is za koga? of za što?",
@@ -113,6 +117,7 @@
     },
     {
       "id": "g.07.zamjenice_akuzativ",
+      "code": "PRON-PERS",
       "title_nl": "Persoonlijke voornaamwoorden in de accusatief",
       "cefr": "A1.2",
       "explanation_nl": "Er zijn twee sets. De korte (onbeklemtoonde) vormen me, te, ga, je/ju, nas, vas, ih zijn de gewone keuze en kunnen nooit vooraan de zin staan. De lange (beklemtoonde) vormen mene, tebe, njega, nju, nas, vas, njih gebruik je na een voorzetsel en wanneer je nadruk legt.",
@@ -140,6 +145,7 @@
     },
     {
       "id": "g.07.dani",
+      "code": "NUM-ORD",
       "title_nl": "Dagen van de week",
       "cefr": "A1.2",
       "explanation_nl": "De week begint op maandag. Om te zeggen 'op maandag' gebruik je u met de accusatief: u ponedjeljak, u utorak. Bij srijeda (vrouwelijk) wordt dat u srijedu. Uitzondering: 'op zondag' is u nedjelju, maar 'in de week' is u tjednu.",

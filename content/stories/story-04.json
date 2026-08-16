@@ -15,47 +15,47 @@
     {
       "id": "p1",
       "sentences": [
-        { "hr": "U petak navečer Nina je stajala pred svojim vratima.", "nl": "Op vrijdagavond stond Nina voor haar deur." },
-        { "hr": "Ključ nije bio u torbi.", "nl": "De sleutel zat niet in haar tas." },
-        { "hr": "Nije bio ni u džepu.", "nl": "Hij zat ook niet in haar zak." },
-        { "hr": "Tražila je deset minuta, ali ključa nije bilo.", "nl": "Ze zocht tien minuten, maar de sleutel was er niet." }
+        { "id": "kljuc.p1.s1", "hr": "U petak navečer Nina je stajala pred svojim vratima.", "nl": "Op vrijdagavond stond Nina voor haar deur." },
+        { "id": "kljuc.p1.s2", "hr": "Ključ nije bio u torbi.", "nl": "De sleutel zat niet in haar tas." },
+        { "id": "kljuc.p1.s3", "hr": "Nije bio ni u džepu.", "nl": "Hij zat ook niet in haar zak." },
+        { "id": "kljuc.p1.s4", "hr": "Tražila je deset minuta, ali ključa nije bilo.", "nl": "Ze zocht tien minuten, maar de sleutel was er niet." }
       ]
     },
     {
       "id": "p2",
       "sentences": [
-        { "hr": "Onda su se otvorila vrata susjednog stana.", "nl": "Toen ging de deur van het appartement ernaast open." },
-        { "hr": "Gospodin Horvat je stajao na pragu.", "nl": "Meneer Horvat stond in de deuropening." },
-        { "hr": "Nina ga je viđala svaki dan, ali nikada nije rekao ni riječ.", "nl": "Nina zag hem elke dag, maar hij had nooit een woord gezegd." },
-        { "hr": "Uvijek je gledao u pod.", "nl": "Hij keek altijd naar de grond." },
-        { "hr": "Zato je Nina mislila da je neljubazan.", "nl": "Daarom dacht Nina dat hij onvriendelijk was." }
+        { "id": "kljuc.p2.s1", "hr": "Onda su se otvorila vrata susjednog stana.", "nl": "Toen ging de deur van het appartement ernaast open." },
+        { "id": "kljuc.p2.s2", "hr": "Gospodin Horvat je stajao na pragu.", "nl": "Meneer Horvat stond in de deuropening." },
+        { "id": "kljuc.p2.s3", "hr": "Nina ga je viđala svaki dan, ali nikada nije rekao ni riječ.", "nl": "Nina zag hem elke dag, maar hij had nooit een woord gezegd." },
+        { "id": "kljuc.p2.s4", "hr": "Uvijek je gledao u pod.", "nl": "Hij keek altijd naar de grond." },
+        { "id": "kljuc.p2.s5", "hr": "Zato je Nina mislila da je neljubazan.", "nl": "Daarom dacht Nina dat hij onvriendelijk was." }
       ]
     },
     {
       "id": "p3",
       "sentences": [
-        { "hr": "„Imate li problem?“ pitao je tiho.", "nl": "\"Heeft u een probleem?\" vroeg hij zacht." },
-        { "hr": "„Izgubila sam ključ. Bravar dolazi tek za sat vremena.“", "nl": "\"Ik ben mijn sleutel kwijt. De slotenmaker komt pas over een uur.\"" },
-        { "hr": "Gospodin Horvat je šutio nekoliko sekundi.", "nl": "Meneer Horvat zweeg een paar seconden." },
-        { "hr": "Onda je rekao: „Uđite. Skuhat ću vam kavu.“", "nl": "Toen zei hij: \"Komt u binnen. Ik zal koffie voor u zetten.\"" }
+        { "id": "kljuc.p3.s1", "hr": "„Imate li problem?“ pitao je tiho.", "nl": "\"Heeft u een probleem?\" vroeg hij zacht." },
+        { "id": "kljuc.p3.s2", "hr": "„Izgubila sam ključ. Bravar dolazi tek za sat vremena.“", "nl": "\"Ik ben mijn sleutel kwijt. De slotenmaker komt pas over een uur.\"" },
+        { "id": "kljuc.p3.s3", "hr": "Gospodin Horvat je šutio nekoliko sekundi.", "nl": "Meneer Horvat zweeg een paar seconden." },
+        { "id": "kljuc.p3.s4", "hr": "Onda je rekao: „Uđite. Skuhat ću vam kavu.“", "nl": "Toen zei hij: \"Komt u binnen. Ik zal koffie voor u zetten.\"" }
       ]
     },
     {
       "id": "p4",
       "sentences": [
-        { "hr": "Njegov stan je bio pun fotografija.", "nl": "Zijn appartement hing vol foto's." },
-        { "hr": "Na jednoj je bila mlada žena s dugom crnom kosom.", "nl": "Op één ervan stond een jonge vrouw met lang zwart haar." },
-        { "hr": "„To je moja žena“, rekao je. „Umrla je prije tri godine.“", "nl": "\"Dat is mijn vrouw\", zei hij. \"Ze is drie jaar geleden gestorven.\"" },
-        { "hr": "Nina nije znala što reći.", "nl": "Nina wist niet wat ze moest zeggen." },
-        { "hr": "„Ne volim razgovarati na stubištu“, dodao je. „Ali u kući je drugačije.“", "nl": "\"Ik praat niet graag in het trappenhuis\", voegde hij eraan toe. \"Maar binnen is het anders.\"" }
+        { "id": "kljuc.p4.s1", "hr": "Njegov stan je bio pun fotografija.", "nl": "Zijn appartement hing vol foto's." },
+        { "id": "kljuc.p4.s2", "hr": "Na jednoj je bila mlada žena s dugom crnom kosom.", "nl": "Op één ervan stond een jonge vrouw met lang zwart haar." },
+        { "id": "kljuc.p4.s3", "hr": "„To je moja žena“, rekao je. „Umrla je prije tri godine.“", "nl": "\"Dat is mijn vrouw\", zei hij. \"Ze is drie jaar geleden gestorven.\"" },
+        { "id": "kljuc.p4.s4", "hr": "Nina nije znala što reći.", "nl": "Nina wist niet wat ze moest zeggen." },
+        { "id": "kljuc.p4.s5", "hr": "„Ne volim razgovarati na stubištu“, dodao je. „Ali u kući je drugačije.“", "nl": "\"Ik praat niet graag in het trappenhuis\", voegde hij eraan toe. \"Maar binnen is het anders.\"" }
       ]
     },
     {
       "id": "p5",
       "sentences": [
-        { "hr": "Kad je bravar došao, kava je već bila hladna.", "nl": "Toen de slotenmaker kwam, was de koffie al koud." },
-        { "hr": "Nina se sada svaki dan javlja gospodinu Horvatu.", "nl": "Nina groet meneer Horvat nu elke dag." },
-        { "hr": "I on njoj.", "nl": "En hij haar." }
+        { "id": "kljuc.p5.s1", "hr": "Kad je bravar došao, kava je već bila hladna.", "nl": "Toen de slotenmaker kwam, was de koffie al koud." },
+        { "id": "kljuc.p5.s2", "hr": "Nina se sada svaki dan javlja gospodinu Horvatu.", "nl": "Nina groet meneer Horvat nu elke dag." },
+        { "id": "kljuc.p5.s3", "hr": "I on njoj.", "nl": "En hij haar." }
       ]
     }
   ],

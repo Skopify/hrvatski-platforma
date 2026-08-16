@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.14.genitiv",
+      "code": "GEN-POSS",
       "title_nl": "GENITIEF — de vorm",
       "cefr": "A2.1",
       "explanation_nl": "De genitief antwoordt op koga? čega? (van wie? van wat?). De uitgangen enkelvoud: mannelijk en onzijdig krijgen -a, vrouwelijk op -a krijgt -e. Grad → grada, selo → sela, kuća → kuće. Je kent deze vorm al: hij staat vanaf les 1 bij elk zelfstandig naamwoord in de woordenlijst.",
@@ -43,6 +44,7 @@
     },
     {
       "id": "g.14.genitiv_kolicina",
+      "code": "GEN-QUANT",
       "title_nl": "Hoeveelheidswoorden vragen de genitief",
       "cefr": "A2.1",
       "explanation_nl": "Na een hoeveelheidswoord staat altijd de genitief: mnogo, puno (veel), malo (weinig), dovoljno (genoeg), previše (te veel), premalo (te weinig), nekoliko (enkele). Imamo dovoljno kruha. Imam previše posla.",
@@ -69,6 +71,7 @@
     },
     {
       "id": "g.14.genitiv_jd_mn",
+      "code": "GEN-NUM",
       "title_nl": "Enkelvoud of meervoud na de hoeveelheid?",
       "cefr": "A2.1",
       "explanation_nl": "Kun je het tellen, dan staat de genitief in het meervoud: nekoliko sokova, puno jabuka. Kun je het niet tellen, dan blijft hij enkelvoud: mnogo mesa, malo vina, dovoljno kruha. De genitief meervoud eindigt meestal op -a: jabuka, sokova, kolača.",
@@ -95,6 +98,7 @@
     },
     {
       "id": "g.14.povratni",
+      "code": "REFLEXIVE",
       "title_nl": "Wederkerende werkwoorden met se",
       "cefr": "A2.1",
       "explanation_nl": "Veel werkwoorden voor dagelijkse handelingen dragen een se: zvati se (heten), odmarati se (uitrusten), buditi se (wakker worden), tuširati se (douchen), oblačiti se (zich aankleden), vraćati se (terugkeren). Het se verandert nooit van vorm, maar het is een clitisch woordje: het staat op de tweede plaats in de zin.",

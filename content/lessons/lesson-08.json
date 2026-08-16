@@ -16,6 +16,7 @@
   "grammar": [
     {
       "id": "g.08.jesti",
+      "code": "PRES-CLASSES",
       "title_nl": "jesti — eten",
       "cefr": "A1.2",
       "explanation_nl": "jesti heeft een andere stam in het presens: jed-. Dus jedem, jedeš, jede, jedemo, jedete, jedu. De uitgangen zijn -em, -eš, -e, -emo, -ete, -u — een derde patroon naast de -ati groep (znam) en de -iti groep die in les 9 komt.",
@@ -39,6 +40,7 @@
     },
     {
       "id": "g.08.piti",
+      "code": "PRES-CLASSES",
       "title_nl": "piti — drinken",
       "cefr": "A1.2",
       "explanation_nl": "piti krijgt in het presens een j in de stam: pij-. Dus pijem, piješ, pije, pijemo, pijete, piju. Net als bij jesti staat wat je drinkt in de accusatief: Pijem kavu.",
@@ -62,6 +64,7 @@
     },
     {
       "id": "g.08.akuzativ.objekt",
+      "code": "ACC-OBJECT",
       "title_nl": "De accusatief als lijdend voorwerp — nu bij eten en drinken",
       "cefr": "A1.2",
       "explanation_nl": "Elk werkwoord dat een lijdend voorwerp neemt, vraagt de accusatief. Bij eten en drinken zie je dat constant: Jedem salatu (salata → salatu). Pijem bijelu kavu. Naručujem juhu i ribu. Dit is geen nieuwe regel, maar de plek waar je hem het vaakst nodig hebt.",

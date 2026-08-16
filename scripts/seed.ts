@@ -228,6 +228,45 @@ function main() {
     }
   }
 
+  // Verhaalzinnen adresseerbaar in de database. De id's komen uit de brondata
+  // (zie scripts/zin-ids.ts); hier worden ze alleen bijgewerkt. Zinnen die uit
+  // een verhaal zijn verdwenen, gaan er ook uit — anders blijven er kaarten naar
+  // een zin wijzen die niet meer bestaat.
+  const zinIds = new Set<string>();
+  let zinnen = 0;
+  for (const story of stories) {
+    let volgnummer = 0;
+    for (const alinea of story.paragraphs) {
+      for (const zin of alinea.sentences) {
+        if (!zin.id) continue;
+        zinIds.add(zin.id);
+        sqlite
+          .prepare(
+            `INSERT INTO sentence (id, story_slug, paragraph_id, idx, hr, nl)
+             VALUES (?, ?, ?, ?, ?, ?)
+             ON CONFLICT (id) DO UPDATE SET
+               story_slug = excluded.story_slug,
+               paragraph_id = excluded.paragraph_id,
+               idx = excluded.idx,
+               hr = excluded.hr,
+               nl = excluded.nl`,
+          )
+          .run(zin.id, story.slug, alinea.id, volgnummer++, zin.hr, zin.nl);
+        zinnen++;
+      }
+    }
+  }
+
+  const wezen = sqlite
+    .prepare("SELECT id FROM sentence")
+    .all()
+    .map((r) => (r as { id: string }).id)
+    .filter((id) => !zinIds.has(id));
+  if (wezen.length) {
+    const weg = sqlite.prepare("DELETE FROM sentence WHERE id = ?");
+    for (const id of wezen) weg.run(id);
+  }
+
   // Vormen die de motor niet meer maakt, moeten weg. Upserten alleen is niet
   // genoeg: toen de vocatief van levenloze woorden verdween, bleven *ručče en
   // *Hrvatsci gewoon in de database staan en dus in de drills opduiken.
@@ -260,6 +299,12 @@ function main() {
   console.log(`${count} items geseed uit ${lessons.length} les(sen):\n${perLesson}`);
   if (stale.length) {
     console.log(`\n${stale.length} verouderde vormen verwijderd, bv. ${stale.slice(0, 5).join(", ")}`);
+  }
+  if (zinnen) {
+    console.log(
+      `\n${zinnen} verhaalzinnen geïndexeerd` +
+        (wezen.length ? `, ${wezen.length} verdwenen zin(nen) opgeruimd` : ""),
+    );
   }
   if (stories.length) {
     console.log(

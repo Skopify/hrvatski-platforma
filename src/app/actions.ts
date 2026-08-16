@@ -10,6 +10,7 @@ import {
   type VocabEntry,
 } from "@/lib/content";
 import { recordStoryEncounters } from "@/lib/coverage";
+import { classifyError, recordError } from "@/lib/errors";
 import { highestActiveLesson } from "@/lib/stats";
 import { db } from "@/lib/db";
 import type { DrillFeedback, DrillKind, DrillQuestion } from "@/lib/drills";
@@ -18,6 +19,7 @@ import { resetProgress } from "@/lib/progress-reset";
 import {
   attempts,
   attemptTargets,
+  card,
   items,
   lessonProgress,
   profile,
@@ -119,6 +121,20 @@ function record(
   for (const itemId of targets) {
     db.insert(attemptTargets).values({ attemptId: inserted.id, itemId }).run();
   }
+
+  // Een fout wordt niet alleen geteld maar ontleed. Uitlegmomenten en het lezen
+  // van een tekst vallen erbuiten: daar valt niets fout te doen.
+  if (!result.correct && type !== "teaching_moment" && type !== "reading" && given) {
+    const ctx = {
+      exerciseId,
+      type,
+      targets,
+      expected: result.expected,
+      given,
+      attemptId: inserted.id,
+    };
+    recordError(classifyError(ctx), ctx);
+  }
 }
 
 export async function submitAnswer(
@@ -180,9 +196,9 @@ export async function submitAnswer(
     targets,
   );
 
-  ensureCards(targets);
+  const kaarten = ensureCards(targets);
   const rating = ratingFor(result, exercise, durationMs);
-  for (const itemId of targets) applyReview(itemId, rating, durationMs);
+  for (const kaartId of kaarten) applyReview(kaartId, rating, durationMs);
 
   bumpStreak();
   const totalXp = addXp(xp);
@@ -238,9 +254,9 @@ export async function selfAssess(
     targets,
   );
 
-  ensureCards(targets);
+  const kaarten = ensureCards(targets);
   const rating = ratingFor(result, exercise, durationMs);
-  for (const itemId of targets) applyReview(itemId, rating, durationMs);
+  for (const kaartId of kaarten) applyReview(kaartId, rating, durationMs);
 
   bumpStreak();
   const totalXp = addXp(xp);
@@ -544,9 +560,9 @@ export async function submitDrill(
 
   record(fake.id, lesson, `drill_${kind}`, mode, result, answer, durationMs, xp, targets);
   if (targets.length) {
-    ensureCards(targets);
+    const kaarten = ensureCards(targets);
     const rating = ratingFor(result, fake, durationMs);
-    for (const t of targets) applyReview(t, rating, durationMs);
+    for (const kaartId of kaarten) applyReview(kaartId, rating, durationMs);
   }
   bumpStreak();
   addXp(xp);
@@ -574,7 +590,14 @@ export async function collectWord(slug: string, itemId: string): Promise<{ added
   const exists = db.select({ id: items.id }).from(items).where(eq(items.id, itemId)).get();
   if (!exists) return { added: false };
 
-  const already = db.select({ id: srs.itemId }).from(srs).where(eq(srs.itemId, itemId)).get();
+  // Had dit woord al een kaart? Zo ja, dan is het geen nieuwe aanwinst maar een
+  // woord dat je nog eens opzoekt — dat verdient geen "toegevoegd"-melding.
+  const already = db
+    .select({ id: card.id })
+    .from(card)
+    .innerJoin(srs, eq(srs.cardId, card.id))
+    .where(eq(card.itemId, itemId))
+    .get();
   ensureCards([itemId]);
 
   db.insert(storyProgress)

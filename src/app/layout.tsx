@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Nav } from "@/components/Nav";
 import { getProfile } from "@/lib/stats";
-import { dueCount } from "@/lib/srs";
+import { reviewableCount } from "@/lib/planner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
-  const due = dueCount();
+  const due = reviewableCount();
 
   return (
     <html lang="nl">

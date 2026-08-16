@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.16.genitiv_prijedlozi",
+      "code": "GEN-PREP",
       "title_nl": "De voorzetsels van de genitief",
       "cefr": "A2.2",
       "explanation_nl": "De genitief heeft veruit de meeste voorzetsels van alle naamvallen. De belangrijkste: iz (uit), od (van), do (tot), blizu (dichtbij), pokraj (naast), iznad (boven), ispod (onder), između (tussen), zbog (vanwege), bez (zonder), oko (rond), poslije (na).",
@@ -46,6 +47,7 @@
     },
     {
       "id": "g.16.iz_od",
+      "code": "GEN-PREP",
       "title_nl": "iz of od — waar kom je vandaan?",
       "cefr": "A2.2",
       "explanation_nl": "iz gebruik je bij plaatsen en landen: Ja sam iz Nizozemske. Dolazim iz Amsterdama. od gebruik je bij personen en bij een startpunt van een afstand: Dolazim od liječnika. Osijek je istočno od Zagreba.",
@@ -71,6 +73,7 @@
     },
     {
       "id": "g.16.genitiv_mnozina",
+      "code": "GEN-PL",
       "title_nl": "GENITIEF MEERVOUD",
       "cefr": "A2.2",
       "explanation_nl": "De genitief meervoud eindigt bijna altijd op -a. Mannelijk: gradova, prijatelja, otoka. Vrouwelijk op -a: kuća, žena, jabuka — zonder uitgang maar met een lange klinker. Onzijdig: sela, mora. Vrouwelijke woorden op een medeklinker krijgen -i: noći, riječi.",

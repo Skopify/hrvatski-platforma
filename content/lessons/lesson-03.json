@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.03.zvati_se",
+      "code": "REFLEXIVE",
       "title_nl": "zvati se — heten",
       "cefr": "A1.1",
       "explanation_nl": "zvati se betekent letterlijk 'zich noemen'. Het se hoort er onlosmakelijk bij en verandert nooit van vorm. Let op de stam: de infinitief is zvati, maar de presensstam is zov-. In de vraag komt se meestal direct na het vraagwoord: Kako se zoveš?",
@@ -40,6 +41,7 @@
     },
     {
       "id": "g.03.posvojne_zamjenice",
+      "code": "POSS-PRON",
       "title_nl": "Bezittelijke voornaamwoorden",
       "cefr": "A1.1",
       "explanation_nl": "Een bezittelijk voornaamwoord past zich aan aan het bezeten ding, niet aan de bezitter: moj stan, moja kuća, moje pismo. Vraag ernaar met čiji? — dat verbuigt mee: Čiji je stol? Čija je torba? Čije je pismo?",
@@ -67,6 +69,7 @@
     },
     {
       "id": "g.03.duga_mnozina",
+      "code": "PLURAL-LONG",
       "title_nl": "Lang meervoud bij korte mannelijke woorden (-ovi / -evi)",
       "cefr": "A1.1",
       "explanation_nl": "Eenlettergrepige mannelijke woorden krijgen in het meervoud een extra stuk: -ovi na een harde medeklinker (stol → stolovi), -evi na een zachte (nož → noževi, ključ → ključevi). Zachte medeklinkers zijn c, č, ć, dž, đ, j, lj, nj, š, ž.",
@@ -92,6 +95,7 @@
     },
     {
       "id": "g.03.sibilarizacija",
+      "code": "SOUND-SIBIL",
       "title_nl": "Sibilarisatie — k, g, h worden c, z, s",
       "cefr": "A1.1",
       "explanation_nl": "Staat er een k, g of h vlak vóór de meervoudsuitgang -i, dan verandert die medeklinker: k → c, g → z, h → s. Dus rječnik → rječnici, jastuk → jastuci, Poljak → Poljaci. Dit is geen uitzondering maar een klankregel die je door het hele Kroatisch tegenkomt — hij komt terug in de locatief (les 10).",
@@ -117,6 +121,7 @@
     },
     {
       "id": "g.03.nepostojano_a",
+      "code": "SOUND-FLEET-A",
       "title_nl": "De vluchtige a (nepostojano a)",
       "cefr": "A1.1",
       "explanation_nl": "Sommige mannelijke woorden hebben in de nominatief enkelvoud een a die in alle andere vormen verdwijnt: policajac → policajci, kupac → kupci, Danac → Danci, stranac → stranci. De a zit er alleen om het woord uitspreekbaar te maken; zodra er een uitgang achter komt, is hij overbodig.",
@@ -142,6 +147,7 @@
     },
     {
       "id": "g.03.nepravilna_mnozina",
+      "code": "PLURAL-IRREG",
       "title_nl": "Drie onregelmatige meervouden",
       "cefr": "A1.1",
       "explanation_nl": "Drie veelgebruikte woorden vormen hun meervoud met een heel andere stam: čovjek → ljudi (mens → mensen), dijete → djeca (kind → kinderen), brat → braća (broer → broers). Let op: djeca en braća zijn grammaticaal vrouwelijk enkelvoud, ook al betekenen ze iets meervoudigs — daarom zeg je 'Djeca su lijepa' met een vrouwelijke uitgang op het bijvoeglijk naamwoord.",
