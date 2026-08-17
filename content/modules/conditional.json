@@ -1,0 +1,482 @@
+{
+  "code": "CONDITIONAL",
+  "title_hr": "Htio bih kavu",
+  "title_nl": "Wat je zou doen",
+  "cefr": "B1",
+  "blurb_nl": "Beleefd iets vragen, en zeggen wat je zou doen als. Het goede nieuws: je hebt hier niets nieuws voor nodig — dezelfde vorm als de verleden tijd, met één ander woordje ervoor.",
+  "prerequisites": ["PERFEKT"],
+  "can_do_nl": [
+    "Ik kan beleefd iets bestellen of vragen met htio bih.",
+    "Ik kan zeggen wat ik zou doen als iets anders was.",
+    "Ik gebruik hetzelfde deelwoord als bij de verleden tijd.",
+    "Ik weet dat bih op de tweede plek staat, net als sam."
+  ],
+  "grammar": {
+    "id": "g.mod.conditional",
+    "code": "CONDITIONAL",
+    "title_nl": "Conditionalis — zou",
+    "cefr": "B1",
+    "explanation_nl": "De voorwaardelijke wijs is **bih, bi, bi, bismo, biste, bi** plus hetzelfde deelwoord dat je bij de verleden tijd gebruikt. *Radio bih* — ik zou werken.",
+    "contrast_nl": "Het Nederlands zegt 'zou' plus een infinitief: 'ik zou werken'. Het Kroatisch gebruikt geen infinitief maar het deelwoord — dus precies de vorm die je al kent van *radio sam*. Je hoeft alleen het hulpwoordje te wisselen.",
+    "paradigm": {
+      "caption_nl": "raditi — werken, voorwaardelijk",
+      "columns": ["mannelijk", "vrouwelijk"],
+      "rows": [
+        { "label": "ja", "cells": ["radio bih", "radila bih"] },
+        { "label": "ti", "cells": ["radio bi", "radila bi"] },
+        { "label": "on / ona", "cells": ["radio bi", "radila bi"] },
+        { "label": "mi", "cells": ["radili bismo", "radile bismo"] },
+        { "label": "vi", "cells": ["radili biste", "radile biste"] },
+        { "label": "oni / one", "cells": ["radili bi", "radile bi"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "bih vooraan zetten. Net als sam en ću hoort het op de tweede plek: Ja bih radio, of Radio bih.",
+      "Een infinitief gebruiken. Het is radio bih, niet «bih raditi».",
+      "Bij ik hoort bih, niet bi. In spreektaal hoor je vaak overal bi, maar geschreven onderscheid je bih, bismo en biste."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Naast elke voorwaardelijke zin staat de verleden tijd. Kijk hoe weinig er verandert.",
+      "exercises": [
+        {
+          "id": "m.cond.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Links verleden tijd, rechts voorwaardelijk.",
+          "given": "Radio sam.  —  Radio bih.\nHtio sam kavu.  —  Htio bih kavu.\nIšla sam u grad.  —  Išla bih u grad.\nDošli smo ranije.  —  Došli bismo ranije.\n\nKad bih imao vremena, čitao bih više.",
+          "body_nl": "Ik heb gewerkt. — Ik zou werken.\nIk wilde koffie. — Ik zou graag koffie willen.\nIk ging naar de stad. — Ik zou naar de stad gaan.\nWe kwamen eerder. — We zouden eerder komen.\n\nAls ik tijd had, zou ik meer lezen.",
+          "targets": []
+        },
+        {
+          "id": "m.cond.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Het werkwoord verandert **niet**. *Radio* blijft *radio*, *išla* blijft *išla*, *došli* blijft *došli*.\n\nAlleen het kleine woordje wisselt: *sam* wordt **bih**, *smo* wordt **bismo**.\n\nDat betekent dat je hier bijna niets nieuws voor hoeft te leren. Ken je de verleden tijd, dan ken je de voorwaardelijke wijs ook — je hoeft alleen één woordje te vervangen.\n\nEn let op waar dat woordje staat: nog steeds op de tweede plek.",
+          "targets": ["g.mod.conditional"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén rijtje woordjes plus het deelwoord dat je al kent.",
+      "exercises": [
+        {
+          "id": "m.cond.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "bih plus het deelwoord dat je al kent",
+          "body_nl": "De voorwaardelijke wijs is **bih, bi, bi, bismo, biste, bi** plus het **deelwoord** — dezelfde vorm als bij de verleden tijd.\n\n*Radio sam* → *Radio bih.*\n*Radila sam* → *Radila bih.*\n\nHet Nederlands gebruikt hier 'zou' plus een infinitief: 'ik zou werken'. Het Kroatisch gebruikt géén infinitief. Dus **niet** *bih raditi*, maar *radio bih*.\n\nEn omdat het deelwoord meebuigt, verandert het nog steeds met wie er praat: een vrouw zegt *radila bih*.",
+          "table": {
+            "caption_nl": "raditi — werken, voorwaardelijk",
+            "columns": ["mannelijk", "vrouwelijk"],
+            "rows": [
+              { "label": "ja", "cells": ["radio bih", "radila bih"] },
+              { "label": "ti", "cells": ["radio bi", "radila bi"] },
+              { "label": "on / ona", "cells": ["radio bi", "radila bi"] },
+              { "label": "mi", "cells": ["radili bismo", "radile bismo"] },
+              { "label": "vi", "cells": ["radili biste", "radile biste"] },
+              { "label": "oni / one", "cells": ["radili bi", "radile bi"] }
+            ]
+          },
+          "targets": ["g.mod.conditional", "g.mod.perfekt", "v.06.raditi"]
+        },
+        {
+          "id": "m.cond.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Waarvoor je het het vaakst gebruikt: beleefdheid",
+          "body_nl": "In het dagelijks leven hoor je deze vorm vooral bij beleefd vragen en bestellen.\n\n*Htio bih kavu.* — Ik zou graag koffie willen. (man)\n*Htjela bih kavu.* — idem, door een vrouw.\n*Htjeli bismo dva piva.* — Wij zouden graag twee bier willen.\n\nZonder deze vorm klinkt een bestelling al snel bot: *Hoću kavu* is 'ik wil koffie', wat in het Kroatisch net zo direct overkomt als in het Nederlands.\n\nOok handig: *Mogao bih…* (ik zou kunnen) en *Volio bih…* (ik zou graag).",
+          "targets": ["g.mod.conditional", "v.01.kava"]
+        },
+        {
+          "id": "m.cond.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Als-zinnen: twee keer voorwaardelijk",
+          "body_nl": "In een als-zin staat de voorwaardelijke wijs in **beide** helften, met *kad* of *da*:\n\n*Kad bih imao vremena, čitao bih više.*\n— Als ik tijd had, zou ik meer lezen.\n\n*Da imam vremena, čitao bih više.*\n— Zelfde betekenis, iets gewoner in spreektaal.\n\nHet Nederlands zet in de eerste helft een verleden tijd ('als ik tijd hád') en in de tweede 'zou'. Het Kroatisch is consequenter: twee keer dezelfde vorm.",
+          "targets": ["g.mod.conditional"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Echt of hypothetisch?",
+      "why_nl": "Nog niets invullen. Eén woordje verschil bepaalt of iets gebeurd is of alleen bedacht.",
+      "exercises": [
+        {
+          "id": "m.cond.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Is dit gebeurd of niet?",
+          "given": "Radio sam u uredu.",
+          "nudge": "Kijk naar het kleine woordje achter het deelwoord. Hoort dat bij iets echts of bij iets bedachts?",
+          "answer": "Het is gebeurd — ik heb op kantoor gewerkt.",
+          "distractors": ["Het is niet gebeurd — ik zou op kantoor werken."],
+          "explain_nl": "sam maakt er verleden tijd van: het is echt gebeurd.",
+          "targets": ["g.mod.perfekt", "v.06.raditi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Is dit gebeurd of niet?",
+          "given": "Radio bih u uredu.",
+          "nudge": "Kijk naar het kleine woordje achter het deelwoord. Hoort dat bij iets echts of bij iets bedachts?",
+          "answer": "Het is niet gebeurd — ik zou op kantoor werken.",
+          "distractors": ["Het is gebeurd — ik heb op kantoor gewerkt."],
+          "explain_nl": "bih maakt het hypothetisch. Hetzelfde deelwoord, ander woordje, andere wereld.",
+          "targets": ["g.mod.conditional", "v.06.raditi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe klinkt dit in een café?",
+          "given": "Hoću kavu.",
+          "nudge": "Denk aan het verschil tussen 'ik wil koffie' en 'ik zou graag koffie willen'.",
+          "answer": "Direct, bijna bot — 'ik wil koffie'.",
+          "distractors": ["Beleefd — 'ik zou graag koffie willen'.", "Een vraag — 'wil ik koffie?'"],
+          "explain_nl": "De tegenwoordige tijd van htjeti is een mededeling van je wil. In een café gebruik je de voorwaardelijke vorm.",
+          "targets": ["g.mod.conditional", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zegt dit?",
+          "given": "Htjela bih kavu.",
+          "nudge": "Kijk naar de laatste letters van het deelwoord, net als bij de verleden tijd.",
+          "answer": "Een vrouw, beleefd.",
+          "distractors": ["Een man, beleefd.", "Een vrouw, kortaf.", "Meerdere mensen."],
+          "explain_nl": "htjela is de vrouwelijke vorm; een man zou htio bih zeggen. Het deelwoord buigt hier net zo mee als in de verleden tijd.",
+          "targets": ["g.mod.conditional", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: Bih radio sutra.\nB: Radio bih sutra.",
+          "nudge": "Waar mogen de korte woordjes staan, en waar nooit?",
+          "answer": "B — bih kan nooit vooraan.",
+          "distractors": ["A — zo staat de nadruk goed.", "Allebei goed.", "Geen van beide."],
+          "explain_nl": "bih hoort bij dezelfde familie als sam en ću: tweede plek, nooit vooraan.",
+          "targets": ["g.mod.conditional", "g.mod.clitic_order"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Da imam novca, kupio bih auto.",
+          "nudge": "Staat er iets over wat er werkelijk is, of over wat er zou zijn als?",
+          "answer": "Als ik geld had, zou ik een auto kopen — maar ik heb het niet.",
+          "distractors": [
+            "Ik heb geld en koop een auto.",
+            "Ik had geld en heb een auto gekocht.",
+            "Als ik geld krijg, koop ik een auto."
+          ],
+          "explain_nl": "De voorwaardelijke vorm in de tweede helft maakt duidelijk dat het niet zo is. Vergelijk: 'als ik geld hád'.",
+          "targets": ["g.mod.conditional", "v.02.novac", "v.00.auto"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde beweging: neem het deelwoord dat je al kent en vervang het hulpwoordje.",
+      "exercises": [
+        {
+          "id": "m.cond.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een voorwaardelijke zin van. Een man is aan het woord.",
+          "given": "Radio sam. → Radio ___.",
+          "answer": "bih",
+          "accepts": ["bih"],
+          "explain_nl": "sam wordt bih; het deelwoord blijft staan.",
+          "targets": ["g.mod.conditional", "v.06.raditi"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.cond.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een voorwaardelijke zin van. Een vrouw is aan het woord.",
+          "given": "Išla sam u grad. → Išla ___ u grad.",
+          "answer": "bih",
+          "accepts": ["bih"],
+          "explain_nl": "Ook bij een vrouw is het bih — alleen het deelwoord verschilt.",
+          "targets": ["g.mod.conditional", "v.07.ici"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een voorwaardelijke zin van. Het gaat over wij.",
+          "given": "Došli smo ranije. → Došli ___ ranije.",
+          "answer": "bismo",
+          "accepts": ["bismo"],
+          "explain_nl": "smo wordt bismo. Dit is de vorm die je geschreven moet gebruiken.",
+          "targets": ["g.mod.conditional", "v.06.doci"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.033",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een man bestelt.",
+          "given": "Ik zou graag koffie willen.",
+          "answer": "Htio bih kavu.",
+          "accepts": ["Htio bih kavu.", "Htio bih kavu"],
+          "explain_nl": "De standaardmanier om iets te bestellen.",
+          "targets": ["g.mod.conditional", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.034",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een vrouw bestelt.",
+          "given": "Ik zou graag koffie willen.",
+          "answer": "Htjela bih kavu.",
+          "accepts": ["Htjela bih kavu.", "Htjela bih kavu"],
+          "explain_nl": "htjela is het vrouwelijke deelwoord van htjeti.",
+          "targets": ["g.mod.conditional", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan. Een man is aan het woord.",
+          "given": "Kad bih imao vremena, ___ (čitati) više.",
+          "answer": "čitao bih",
+          "accepts": ["čitao bih"],
+          "explain_nl": "In beide helften van een als-zin staat de voorwaardelijke vorm.",
+          "targets": ["g.mod.conditional", "v.05.citati", "v.12.vrijeme"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.cond.036",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": ["Ja", "bih", "radio", "sutra"],
+          "answer": "Ja bih radio sutra",
+          "accepts": ["Ja bih radio sutra", "Ja bih radio sutra."],
+          "explain_nl": "Ja op plek één, bih op plek twee.",
+          "targets": ["g.mod.conditional", "g.mod.clitic_order"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.037",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Bih htio kavu.",
+          "answer": "Htio bih kavu.",
+          "accepts": ["Htio bih kavu.", "Htio bih kavu"],
+          "explain_nl": "bih kan niet vooraan; het deelwoord schuift naar plek één.",
+          "targets": ["g.mod.conditional", "g.mod.clitic_order", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Bih raditi u uredu.",
+          "answer": "Radio bih u uredu.",
+          "accepts": ["Radio bih u uredu.", "Radio bih u uredu", "Radila bih u uredu."],
+          "hint": "Het Kroatisch gebruikt hier geen infinitief.",
+          "explain_nl": "Geen infinitief maar het deelwoord: radio bih, niet bih raditi. Dit is de fout die het Nederlands je influistert.",
+          "targets": ["g.mod.conditional", "v.06.raditi", "v.14.ured"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.cond.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed. Het gaat over wij.",
+          "given": "Došli bi ranije da smo znali.",
+          "answer": "Došli bismo ranije da smo znali.",
+          "accepts": ["Došli bismo ranije da smo znali.", "Došli bismo ranije da smo znali"],
+          "explain_nl": "Bij wij hoort bismo. In spreektaal hoor je overal bi, maar geschreven maak je het onderscheid.",
+          "targets": ["g.mod.conditional", "v.06.doci"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Verleden, toekomst en voorwaardelijk lijken op elkaar: alle drie een klein woordje plus een vorm. Kies de goede.",
+      "exercises": [
+        {
+          "id": "m.cond.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Jučer ___ u uredu.",
+          "answer": "sam radio",
+          "distractors": ["bih radio", "ću raditi"],
+          "explain_nl": "Jučer = gisteren, dus verleden tijd.",
+          "targets": ["g.mod.perfekt", "v.06.raditi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Kad bih imao vremena, ___ više.",
+          "answer": "čitao bih",
+          "distractors": ["čitao sam", "čitat ću"],
+          "explain_nl": "Een als-zin vraagt in beide helften de voorwaardelijke vorm.",
+          "targets": ["g.mod.conditional", "v.05.citati"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.052",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Sutra ___ u grad.",
+          "answer": "ću ići",
+          "distractors": ["bih išao", "sam išao"],
+          "explain_nl": "Sutra = morgen en het is een plan, dus de toekomende tijd.",
+          "targets": ["g.mod.futur", "v.07.ici"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.cond.053",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Htio bih ići u ___ (grad).",
+          "answer": "grad",
+          "accepts": ["grad"],
+          "explain_nl": "ići = beweging → accusatief. De voorwaardelijke vorm verandert daar niets aan.",
+          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.054",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een vrouw is aan het woord.",
+          "given": "Ik zou graag een nieuwe auto willen.",
+          "answer": "Htjela bih nov auto.",
+          "accepts": ["Htjela bih nov auto.", "Htjela bih nov auto", "Htjela bih novi auto."],
+          "explain_nl": "htjela bih voor een vrouw, en nov in de korte vorm omdat je iets introduceert.",
+          "targets": ["g.mod.conditional", "g.mod.adj_def", "v.00.auto"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Een gesprek in een café en een dagdroom. Twee plekken waar deze vorm de hele tijd voorbijkomt.",
+      "text_hr": "— Dobar dan. Htjela bih kavu i čašu vode, molim.\n— Odmah. Želite li nešto za jesti?\n— Ne, hvala. Možda kasnije.\n\nAna sjedi na terasi i gleda more. Kad bi imala više novca, kupila bi mali stan ovdje. Ne bi radila u uredu; radila bi kod kuće i pisala. Ujutro bi plivala, poslije podne bi čitala. Njezin prijatelj kaže da bi se brzo dosadila. Ana misli da ne bi.",
+      "translation_nl": "— Goedendag. Ik zou graag koffie en een glas water willen, alstublieft.\n— Komt eraan. Wilt u iets te eten?\n— Nee, dank u. Misschien later.\n\nAna zit op het terras en kijkt naar de zee. Als ze meer geld had, zou ze hier een klein appartement kopen. Ze zou niet op kantoor werken; ze zou thuis werken en schrijven. 's Ochtends zou ze zwemmen, 's middags zou ze lezen. Haar vriend zegt dat ze zich snel zou vervelen. Ana denkt van niet.",
+      "exercises": [
+        {
+          "id": "m.cond.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat bestelt Ana?",
+          "answer": "Koffie en een glas water.",
+          "distractors": ["Koffie en iets te eten.", "Alleen water.", "Koffie en wijn."],
+          "explain_nl": "«Htjela bih kavu i čašu vode.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.cond.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Heeft Ana een appartement aan zee gekocht?",
+          "given": "Kad bi imala više novca, kupila bi mali stan ovdje.",
+          "nudge": "Welk klein woordje staat er achter kupila? Hoort dat bij iets echts of bij iets bedachts?",
+          "answer": "Nee — ze zou het kopen als ze meer geld had.",
+          "distractors": [
+            "Ja, ze heeft het gekocht.",
+            "Ja, en ze woont er nu.",
+            "Ze gaat het morgen kopen."
+          ],
+          "explain_nl": "bi maakt het hypothetisch. Met kupila je zou er staan dat het echt gebeurd was.",
+          "targets": ["g.mod.conditional", "v.04.stan"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er «Htjela bih» en niet «Hoću»?",
+          "given": "Htjela bih kavu i čašu vode, molim.",
+          "nudge": "Denk aan het verschil tussen 'ik wil koffie' en 'ik zou graag koffie willen' aan een tafeltje.",
+          "answer": "Omdat het beleefd is; Hoću kavu klinkt kortaf.",
+          "distractors": [
+            "Omdat ze het nog niet zeker weet.",
+            "Omdat het over het verleden gaat.",
+            "Omdat er twee dingen besteld worden."
+          ],
+          "explain_nl": "Dit is de gewone manier om in het Kroatisch iets te bestellen — net zoals wij 'ik zou graag' zeggen in plaats van 'ik wil'.",
+          "targets": ["g.mod.conditional", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.cond.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst. Het gaat over Ana.",
+          "given": "Ujutro ___ (plivati), poslije podne ___ (čitati).",
+          "answer": "bi plivala, poslije podne bi čitala",
+          "accepts": ["bi plivala, poslije podne bi čitala", "bi plivala poslije podne bi čitala"],
+          "hint": "Ana is vrouwelijk, en bij on/ona hoort bi.",
+          "explain_nl": "Twee keer dezelfde vorm: bi plus het vrouwelijke deelwoord.",
+          "targets": ["g.mod.conditional", "v.05.citati"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.cond.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen: bestel iets beleefd, en zeg wat je zou doen als je meer tijd had.",
+          "model_answer": "Htio bih kavu, molim. Kad bih imao više vremena, čitao bih više.",
+          "rubric_nl": [
+            "De bestelling gebruikt htio bih of htjela bih.",
+            "De tweede zin gebruikt de voorwaardelijke vorm in beide helften.",
+            "Het deelwoord past bij jouw geslacht.",
+            "bih staat op de tweede plek, niet vooraan."
+          ],
+          "explain_nl": "Met deze twee zinnen kun je in een café bestellen en over je plannen dagdromen — de twee dingen waar deze vorm voor bestaat.",
+          "targets": ["g.mod.conditional"],
+          "difficulty": 5
+        }
+      ]
+    }
+  ],
+  "source": "curriculum CONDITIONAL, vanaf nul geschreven — komt in de 21 lessen niet voor"
+}

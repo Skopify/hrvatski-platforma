@@ -271,6 +271,12 @@ let exerciseIndex: Map<string, { exercise: Exercise; lesson: { number: number } 
 export function findExercise(
   id: string,
 ): { exercise: Exercise; lesson: { number: number } } | undefined {
+  // In ontwikkeling elke keer opnieuw: wie content toevoegt, wil hem meteen
+  // kunnen nakijken. Zonder dit blijft de index hangen op de stand van de
+  // eerste vraag, en dan bestaat een nieuwe oefening wel op het scherm maar
+  // niet voor de server — die antwoordt dan "Onbekende oefening".
+  if (process.env.NODE_ENV !== "production") exerciseIndex = null;
+
   // Gebouwd bij de eerste vraag en daarna hergebruikt. De foutenpagina zoekt per
   // fout één oefening op; zonder index betekende dat per fout een lineaire
   // doorloop van alle lessen én verhalen.

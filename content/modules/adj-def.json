@@ -1,0 +1,487 @@
+{
+  "code": "ADJ-DEF",
+  "title_hr": "nov ili novi?",
+  "title_nl": "Een nieuwe of de nieuwe",
+  "cefr": "A2/B1",
+  "blurb_nl": "Kroatische bijvoeglijke naamwoorden hebben een korte en een lange vorm — en het Nederlands doet iets verrassend soortgelijks met zijn -e. Wie dat verband ziet, heeft de helft al te pakken.",
+  "prerequisites": ["ADJ-AGREE"],
+  "can_do_nl": [
+    "Ik weet wanneer ik nov zeg en wanneer novi.",
+    "Ik gebruik de korte vorm na biti en de lange na ovaj of moj.",
+    "Ik hoor het verschil tussen de vraag kakav? en koji?",
+    "Ik weet dat het verschil vooral bij mannelijke woorden zichtbaar is."
+  ],
+  "grammar": {
+    "id": "g.mod.adj_def",
+    "code": "ADJ-DEF",
+    "title_nl": "Korte en lange bijvoeglijke naamwoorden",
+    "cefr": "A2/B1",
+    "explanation_nl": "Veel Kroatische bijvoeglijke naamwoorden bestaan in twee vormen: kort (*nov*) en lang (*novi*). De korte hoort bij iets nieuws in het gesprek, de lange bij iets bekends of bij een soort.",
+    "contrast_nl": "Dit lijkt sterker op het Nederlands dan je zou denken. Wij zeggen 'een nieuw huis' zonder -e en 'het nieuwe huis' mét, en 'het huis is nieuw' weer zonder. Dezelfde drie situaties, dezelfde verdeling — alleen met -i in plaats van -e.",
+    "paradigm": {
+      "caption_nl": "Waar het verschil zichtbaar is: mannelijk enkelvoud",
+      "columns": ["kort", "lang"],
+      "rows": [
+        { "label": "nieuw", "cells": ["nov", "novi"] },
+        { "label": "groot", "cells": ["velik", "veliki"] },
+        { "label": "oud", "cells": ["star", "stari"] },
+        { "label": "rood", "cells": ["crven", "crveni"] },
+        { "label": "goed", "cells": ["dobar", "dobri"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Na biti hoort de korte vorm: Auto je nov, niet Auto je novi.",
+      "Na ovaj, taj, moj hoort de lange vorm: ovaj novi auto.",
+      "Bij vrouwelijke en onzijdige woorden zie je in de nominatief geen verschil: nova is nova. Oefen daarom op mannelijke woorden."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Drie paren Kroatisch met hun Nederlandse vertaling ernaast. Let op wat er in béíde talen verandert.",
+      "exercises": [
+        {
+          "id": "m.adjdef.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Kroatisch links, Nederlands rechts. Wat gebeurt er in allebei?",
+          "given": "Ovo je nov auto.\nOvaj novi auto je moj.\nAuto je nov.\n\nOvo je velik stan.\nOvaj veliki stan je skup.\nStan je velik.",
+          "body_nl": "Dit is een nieuwe auto.\nDeze nieuwe auto is van mij.\nDe auto is nieuw.\n\nDit is een groot appartement.\nDit grote appartement is duur.\nHet appartement is groot.",
+          "targets": []
+        },
+        {
+          "id": "m.adjdef.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In het Kroatisch komt er een **-i** bij: *nov* wordt *novi*, *velik* wordt *veliki*.\n\nMaar kijk nu naar het Nederlands. Daar gebeurt bijna hetzelfde met een **-e**:\n\n'een **nieuw** huis' — 'het **nieuwe** huis' — 'het huis is **nieuw**'\n\nDrie situaties, en in allebei de talen krijgt precies de middelste een extra letter. Je kent dit patroon dus al; je gebruikt het alleen nooit bewust.",
+          "targets": ["g.mod.adj_def"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Drie situaties, drie keuzes. En de Nederlandse -e is je geheugensteun.",
+      "exercises": [
+        {
+          "id": "m.adjdef.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Kort of lang — dezelfde verdeling als de Nederlandse -e",
+          "body_nl": "**Kort** gebruik je als je iets nieuws introduceert of iets over het onderwerp zegt:\n\n*Ovo je nov auto.* — Dit is een nieuwe auto.\n*Auto je nov.* — De auto is nieuw.\n\n**Lang** gebruik je als het al bekend is, of als je een soort aanduidt:\n\n*Ovaj novi auto je moj.* — Deze nieuwe auto is van mij.\n\nVergelijk met het Nederlands en je ziet dezelfde verdeling: 'een nieuw huis', 'het huis is nieuw' — geen -e. 'Het nieuwe huis' — wél.\n\nNa **biti** dus altijd kort. Na **ovaj, taj, onaj, moj, tvoj** altijd lang.",
+          "table": {
+            "caption_nl": "Waar het verschil zichtbaar is: mannelijk enkelvoud",
+            "columns": ["kort", "lang"],
+            "rows": [
+              { "label": "nieuw", "cells": ["nov", "novi"] },
+              { "label": "groot", "cells": ["velik", "veliki"] },
+              { "label": "oud", "cells": ["star", "stari"] },
+              { "label": "rood", "cells": ["crven", "crveni"] },
+              { "label": "goed", "cells": ["dobar", "dobri"] }
+            ]
+          },
+          "targets": ["g.mod.adj_def", "g.04.pridjevi", "v.04.nov", "v.04.velik"]
+        },
+        {
+          "id": "m.adjdef.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De vraag verklapt welke vorm je nodig hebt",
+          "body_nl": "**Kakav?** vraagt naar een eigenschap — en het antwoord is **kort**.\n\n*Kakav je auto?* — *Nov je.* (Wat voor auto is het? — Hij is nieuw.)\n\n**Koji?** vraagt welke van meerdere — en het antwoord is **lang**.\n\n*Koji auto je tvoj?* — *Novi.* (Welke auto is van jou? — De nieuwe.)\n\nDat is een handige controle: kun je de zin beantwoorden met 'wat voor een', dan kort. Kun je hem beantwoorden met 'welke', dan lang.",
+          "targets": ["g.mod.adj_def", "g.04.kakav"]
+        },
+        {
+          "id": "m.adjdef.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Waar je het verschil wél en niet ziet",
+          "body_nl": "Het onderscheid is het duidelijkst bij **mannelijke woorden in het enkelvoud**: *nov* tegenover *novi*.\n\nBij vrouwelijke en onzijdige woorden zie je in de nominatief niets: *nova* blijft *nova*, *novo* blijft *novo*.\n\nDat is geruststellend nieuws: je hoeft maar op één plek op te letten. Oefen dus op mannelijke woorden — daar zit alle winst.\n\nIn de andere naamvallen komt het verschil terug (*novog* tegenover *nova*), maar in de praktijk gebruikt modern Kroatisch daar bijna altijd de lange vorm.",
+          "targets": ["g.mod.adj_def"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wat wordt er bedoeld?",
+      "why_nl": "Nog niets invullen. Eén letter verschil, en het gaat over iets anders.",
+      "exercises": [
+        {
+          "id": "m.adjdef.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Kupio sam nov auto.",
+          "nudge": "Kijk of er een -i aan het bijvoeglijk naamwoord zit. Introduceert de spreker iets, of wijst hij iets bekends aan?",
+          "answer": "Ik heb een nieuwe auto gekocht — je hoorde er nog niet van.",
+          "distractors": ["Ik heb de nieuwe auto gekocht — die je al kende."],
+          "explain_nl": "nov is kort: nieuwe informatie. Vergelijk het Nederlandse 'een nieuwe auto'.",
+          "targets": ["g.mod.adj_def", "v.00.auto", "v.04.nov"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Kupio sam novi auto.",
+          "nudge": "Kijk of er een -i aan het bijvoeglijk naamwoord zit. Introduceert de spreker iets, of wijst hij iets bekends aan?",
+          "answer": "Ik heb de nieuwe auto gekocht — die we het al over hadden.",
+          "distractors": ["Ik heb een nieuwe auto gekocht — je hoorde er nog niet van."],
+          "explain_nl": "novi is lang: het gaat om iets bekends, zoals de Nederlandse -e in 'de nieuwe auto'.",
+          "targets": ["g.mod.adj_def", "v.00.auto", "v.04.nov"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vraag wordt hier beantwoord?",
+          "given": "— Novi.",
+          "nudge": "Lang of kort? En welke vraag hoort bij welke vorm?",
+          "answer": "Koji auto je tvoj? — Welke auto is van jou?",
+          "distractors": ["Kakav je auto? — Wat voor auto is het?"],
+          "explain_nl": "De lange vorm hoort bij koji: je kiest er één uit meerdere.",
+          "targets": ["g.mod.adj_def"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vraag wordt hier beantwoord?",
+          "given": "— Nov je.",
+          "nudge": "Lang of kort? En welke vraag hoort bij welke vorm?",
+          "answer": "Kakav je auto? — Wat voor auto is het?",
+          "distractors": ["Koji auto je tvoj? — Welke auto is van jou?"],
+          "explain_nl": "De korte vorm beschrijft een eigenschap, en dat is precies wat kakav vraagt.",
+          "targets": ["g.mod.adj_def", "g.04.kakav"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed?",
+          "given": "A: Stan je veliki.\nB: Stan je velik.",
+          "nudge": "Wat staat er vóór het bijvoeglijk naamwoord? Denk aan het Nederlands: 'het huis is nieuw', niet 'nieuwe'.",
+          "answer": "B — na biti hoort de korte vorm.",
+          "distractors": [
+            "A — na biti hoort de lange vorm.",
+            "Allebei goed.",
+            "Geen van beide; het moet Stan velik je zijn."
+          ],
+          "explain_nl": "Precies zoals wij 'het appartement is groot' zeggen en niet 'is grote'.",
+          "targets": ["g.mod.adj_def", "v.04.stan", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Bij welk woord zou je het verschil níet zien?",
+          "given": "auto (m) · knjiga (v) · vino (o)",
+          "nudge": "Bij welk geslacht valt de korte en de lange vorm in de nominatief samen?",
+          "answer": "Bij knjiga en vino — daar is de vorm in de nominatief hetzelfde.",
+          "distractors": [
+            "Bij auto — mannelijke woorden hebben maar één vorm.",
+            "Bij alle drie is het verschil zichtbaar.",
+            "Bij geen van drie."
+          ],
+          "explain_nl": "nova blijft nova, novo blijft novo. Alleen bij mannelijke woorden zie je nov tegenover novi.",
+          "targets": ["g.mod.adj_def", "v.01.knjiga", "v.01.vino"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf kiezen",
+      "why_nl": "Tien keer dezelfde vraag: staat er biti vóór, of een aanwijzend woord? Dat beslist.",
+      "exercises": [
+        {
+          "id": "m.adjdef.030",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Auto je ___.",
+          "answer": "nov",
+          "distractors": ["novi"],
+          "explain_nl": "Na biti altijd kort.",
+          "targets": ["g.mod.adj_def", "v.00.auto", "v.04.nov"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.adjdef.031",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Ovaj ___ auto je moj.",
+          "answer": "novi",
+          "distractors": ["nov"],
+          "explain_nl": "Na ovaj altijd lang.",
+          "targets": ["g.mod.adj_def", "v.00.auto", "v.04.nov"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.adjdef.032",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Stan je ___.",
+          "answer": "velik",
+          "distractors": ["veliki"],
+          "explain_nl": "Na biti kort. Denk aan 'het appartement is groot'.",
+          "targets": ["g.mod.adj_def", "v.04.stan", "v.04.velik"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.adjdef.033",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Moj ___ stan je u gradu.",
+          "answer": "veliki",
+          "distractors": ["velik"],
+          "explain_nl": "Na een bezittelijk woord als moj hoort de lange vorm.",
+          "targets": ["g.mod.adj_def", "v.04.stan", "v.04.velik"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adjdef.034",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Ovo je ___ grad.",
+          "answer": "star",
+          "distractors": ["stari"],
+          "explain_nl": "«Dit is een oude stad» — je introduceert iets, dus kort.",
+          "targets": ["g.mod.adj_def", "v.05.grad", "v.04.star"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adjdef.035",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Taj ___ grad mi se sviđa.",
+          "answer": "stari",
+          "distractors": ["star"],
+          "explain_nl": "Na taj hoort de lange vorm.",
+          "targets": ["g.mod.adj_def", "v.05.grad", "v.04.star"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adjdef.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Kakav je stan? — ___ (velik) je.",
+          "answer": "Velik",
+          "accepts": ["Velik", "velik"],
+          "explain_nl": "Kakav vraagt naar een eigenschap → korte vorm.",
+          "targets": ["g.mod.adj_def", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.037",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Koji stan je tvoj? — ___ (velik).",
+          "answer": "Veliki",
+          "accepts": ["Veliki", "veliki"],
+          "explain_nl": "Koji vraagt welke van meerdere → lange vorm.",
+          "targets": ["g.mod.adj_def", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Auto je novi.",
+          "answer": "Auto je nov.",
+          "accepts": ["Auto je nov.", "Auto je nov"],
+          "explain_nl": "Na biti hoort de korte vorm — net als 'de auto is nieuw' zonder -e.",
+          "targets": ["g.mod.adj_def", "v.00.auto"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adjdef.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovaj crven auto je skup.",
+          "answer": "Ovaj crveni auto je skup.",
+          "accepts": ["Ovaj crveni auto je skup.", "Ovaj crveni auto je skup"],
+          "explain_nl": "Na ovaj hoort de lange vorm: crveni. Skup blijft kort, want dat staat na je.",
+          "targets": ["g.mod.adj_def", "v.04.crven", "v.00.auto"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu komen de tijden en de naamvallen erbij. De vorm van het bijvoeglijk naamwoord is maar één van de dingen die moeten kloppen.",
+      "exercises": [
+        {
+          "id": "m.adjdef.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Jučer sam kupio ___ auto.",
+          "answer": "nov",
+          "distractors": ["novi"],
+          "explain_nl": "Je vertelt iets nieuws, dus kort. En kupio is de verleden tijd voor een man.",
+          "targets": ["g.mod.adj_def", "g.mod.perfekt", "v.00.auto"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Sutra ću ići u ___ (grad).",
+          "answer": "grad",
+          "accepts": ["grad"],
+          "explain_nl": "ići = beweging → accusatief. En sutra ću is de toekomst.",
+          "targets": ["g.mod.loc_vs_acc", "g.mod.futur", "v.05.grad"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.052",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovaj stan je veliki i skup.",
+          "answer": "Ovaj stan je velik i skup.",
+          "accepts": ["Ovaj stan je velik i skup.", "Ovaj stan je velik i skup"],
+          "hint": "Let op wat er vlak vóór veliki staat.",
+          "explain_nl": "Ovaj hoort bij stan, niet bij veliki. Vlak vóór veliki staat je, en dan is het kort.",
+          "targets": ["g.mod.adj_def", "v.04.stan"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adjdef.053",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Deze oude stad is mooi.",
+          "answer": "Ovaj stari grad je lijep.",
+          "accepts": ["Ovaj stari grad je lijep.", "Ovaj stari grad je lijep"],
+          "explain_nl": "Na ovaj lang (stari), na je kort (lijep). Twee bijvoeglijke naamwoorden, twee verschillende keuzes.",
+          "targets": ["g.mod.adj_def", "v.05.grad", "v.04.star"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adjdef.054",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed?",
+          "given": "Ik heb gisteren de nieuwe film gezien.",
+          "answer": "Jučer sam gledao novi film.",
+          "distractors": [
+            "Jučer sam gledao nov film.",
+            "Jučer sam gledala novi film.",
+            "Jučer ću gledati novi film."
+          ],
+          "explain_nl": "«De nieuwe» is bekend → lang. Een man zegt gledao. En jučer vraagt de verleden tijd.",
+          "targets": ["g.mod.adj_def", "g.mod.perfekt", "v.05.film"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk bijvoeglijk naamwoord: staat er een -i achter, en waarom wel of niet?",
+      "text_hr": "Tražim stan. Jučer sam vidio jedan velik stan u starom dijelu grada. Vlasnik je rekao da je stan nov, ali nije. Kuhinja je mala i prozori su stari. Onda sam vidio drugi stan. Taj mali stan je bio svijetao i tih. Nije velik, ali je dovoljno. Mislim da ću uzeti mali stan. Veliki je preskup.",
+      "translation_nl": "Ik zoek een appartement. Gisteren heb ik een groot appartement gezien in het oude deel van de stad. De eigenaar zei dat het appartement nieuw is, maar dat is het niet. De keuken is klein en de ramen zijn oud. Toen heb ik een tweede appartement gezien. Dat kleine appartement was licht en stil. Het is niet groot, maar het is genoeg. Ik denk dat ik het kleine appartement neem. Het grote is te duur.",
+      "exercises": [
+        {
+          "id": "m.adjdef.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk appartement neemt de verteller waarschijnlijk?",
+          "answer": "Het kleine.",
+          "distractors": ["Het grote.", "Geen van beide.", "Allebei."],
+          "explain_nl": "«Mislim da ću uzeti mali stan.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.adjdef.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «jedan velik stan» en later «Taj mali stan». Waarom de ene keer kort en de andere keer lang?",
+          "given": "jedan velik stan … Taj mali stan",
+          "nudge": "Kijk welk woord er vlak vóór staat. Introduceert dat iets, of wijst het iets aan dat je al kent?",
+          "answer": "Het eerste wordt geïntroduceerd, het tweede is al bekend en staat na taj.",
+          "distractors": [
+            "Omdat velik en mali verschillende woorden zijn.",
+            "Omdat het eerste in de verleden tijd staat.",
+            "Het is willekeurig; allebei mag."
+          ],
+          "explain_nl": "Precies de Nederlandse verdeling: 'een groot appartement' tegenover 'dat kleine appartement'.",
+          "targets": ["g.mod.adj_def", "v.04.stan"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adjdef.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «da je stan nov». Waarom nov en niet novi?",
+          "given": "Vlasnik je rekao da je stan nov, ali nije.",
+          "nudge": "Welk werkwoord staat er vlak vóór? Dat bepaalt het.",
+          "answer": "Omdat er je (van biti) vlak vóór staat.",
+          "distractors": [
+            "Omdat het een ontkenning is.",
+            "Omdat de eigenaar het zegt.",
+            "Omdat stan mannelijk is."
+          ],
+          "explain_nl": "Na biti altijd de korte vorm — de vaste regel uit stap 2.",
+          "targets": ["g.mod.adj_def"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adjdef.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "___ (velik) je preskup.",
+          "answer": "Veliki",
+          "accepts": ["Veliki", "veliki"],
+          "hint": "Hier staat het bijvoeglijk naamwoord in plaats van het zelfstandig naamwoord: «het grote».",
+          "explain_nl": "Als een bijvoeglijk naamwoord op zichzelf staat en naar iets bekends verwijst, is het altijd lang.",
+          "targets": ["g.mod.adj_def", "v.04.velik"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adjdef.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen over iets van jou: één waarin je het introduceert, één waarin je het aanwijst.",
+          "model_answer": "Imam nov auto. Ovaj novi auto je brz.",
+          "rubric_nl": [
+            "De eerste zin gebruikt de korte vorm.",
+            "De tweede zin gebruikt de lange vorm, na ovaj of moj.",
+            "Het bijvoeglijk naamwoord past bij het geslacht van het woord."
+          ],
+          "explain_nl": "Wie beide zinnen kan maken, hoort het verschil voortaan ook bij anderen.",
+          "targets": ["g.mod.adj_def"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum ADJ-DEF, vanaf nul geschreven — de 21 lessen behandelen wel congruentie maar niet kort tegenover lang"
+}
