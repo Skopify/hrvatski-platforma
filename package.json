@@ -16,7 +16,8 @@
     "patch": "tsx scripts/apply-patch.ts",
     "zin-ids": "tsx scripts/zin-ids.ts",
     "codes": "tsx scripts/grammatica-codes.ts",
-    "check:fase05": "tsx scripts/check-fase05.ts"
+    "check:fase05": "tsx scripts/check-fase05.ts",
+    "check:fase1": "tsx scripts/check-fase1.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

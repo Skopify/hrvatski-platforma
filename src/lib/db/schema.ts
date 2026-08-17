@@ -51,6 +51,10 @@ export const card = sqliteTable("card", {
   itemId: text("item_id").notNull().references(() => items.id),
   context: text("context").notNull().default(""),
   createdAt: integer("created_at").notNull(),
+  /** Uit de rotatie gehaald — zie migratie 006. */
+  suspended: integer("suspended").notNull().default(0),
+  suspendedAt: integer("suspended_at"),
+  suspendedReason: text("suspended_reason"),
 });
 
 /** De soorten kaarten. Fase 0 gebruikt alleen de eerste drie. */

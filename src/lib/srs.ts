@@ -257,7 +257,15 @@ export function dueCards(now = new Date(), limit = 200): DueCard[] {
     .select({ cardId: srs.cardId, itemId: card.itemId, kind: card.kind, due: srs.due })
     .from(srs)
     .innerJoin(card, eq(card.id, srs.cardId))
-    .where(and(lte(srs.due, now.getTime()), sql`${srs.state} != ${State.New}`))
+    .where(
+      and(
+        lte(srs.due, now.getTime()),
+        sql`${srs.state} != ${State.New}`,
+        // Geschorste kaarten (leeches) blijven bestaan maar komen niet langs;
+        // zie src/lib/stages.ts voor waarom dat geen mildheid is.
+        eq(card.suspended, 0),
+      ),
+    )
     .orderBy(srs.due)
     .limit(limit)
     .all() as DueCard[];
@@ -270,13 +278,45 @@ export function dueItemIds(now = new Date(), limit = 200): string[] {
   return [...gezien];
 }
 
+/**
+ * Kaarten die nog nooit gezien zijn.
+ *
+ * Deze horen bewust níet bij `dueCards()`. Herhalen en nieuw leren zijn twee
+ * verschillende dingen met een verschillende regel: herhalingen moet je
+ * inhalen, nieuw materiaal mag je doseren. §8 noemt een cap op nieuwe items per
+ * dag zelfs de belangrijkste reden dat SRS-systemen sneuvelen — zonder rem
+ * groeit de herhaalschuld sneller dan je hem ooit inloopt.
+ *
+ * Zonder deze functie zou een scherm dat op de wachtrij draait nooit iets
+ * nieuws laten zien: `dueCards()` filtert `state = New` eruit, en een kaart
+ * komt die staat pas uit ná zijn eerste review. Dat viel niet op zolang alleen
+ * lesoefeningen kaarten aanraakten, want die roepen `applyReview` rechtstreeks
+ * aan.
+ */
+export function newCards(limit = 20): DueCard[] {
+  return db
+    .select({ cardId: srs.cardId, itemId: card.itemId, kind: card.kind, due: srs.due })
+    .from(srs)
+    .innerJoin(card, eq(card.id, srs.cardId))
+    .where(and(sql`${srs.state} = ${State.New}`, eq(card.suspended, 0)))
+    .orderBy(card.id)
+    .limit(limit)
+    .all() as DueCard[];
+}
+
 /** Kaarten die ná dit moment vervallen, eerstvolgende eerst. */
 export function upcomingCards(now = new Date(), limit = 200): DueCard[] {
   return db
     .select({ cardId: srs.cardId, itemId: card.itemId, kind: card.kind, due: srs.due })
     .from(srs)
     .innerJoin(card, eq(card.id, srs.cardId))
-    .where(and(sql`${srs.due} > ${now.getTime()}`, sql`${srs.state} != ${State.New}`))
+    .where(
+      and(
+        sql`${srs.due} > ${now.getTime()}`,
+        sql`${srs.state} != ${State.New}`,
+        eq(card.suspended, 0),
+      ),
+    )
     .orderBy(srs.due)
     .limit(limit)
     .all() as DueCard[];

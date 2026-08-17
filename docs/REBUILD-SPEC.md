@@ -310,9 +310,22 @@ Kandidaat-thema's voor latere series (gekozen op nut voor iemand die in/rond Kro
 7. **Mining** — geselecteerde woorden + de zin worden SRS-kaarten
 8. **Hervertelling (optioneel, later)** — 3 zinnen zelf schrijven; LLM geeft feedback op vorm
 
-### 5.4 Genereren of schrijven?
+### 5.4 Wie schrijft de hoofdstukken? — besloten 17-08-2026
 
-Genereren met een LLM is prima — **mits gevalideerd**. Zie §7. Nooit direct wat het model produceert aan jezelf voorschotelen: Kroatisch is een taal waar LLM's regelmatig Servische varianten, verkeerde aspectparen of te hoog niveau in mengen.
+Er is **geen generatiepipeline** (§12.4). De vraag is dus niet "genereren of niet" maar: welke route naar 2500 gevalideerde woorden kost de nakijker — de schaarste — het minst?
+
+**Gekozen: route (i).** De hoofdstukken worden geschreven tegen een vooraf vastgesteld lexicon, als onderdeel van gewone taken met zichtbare diffs, daarna door de poorten van §7 en langs de nakijker in batches per hoofdstuk.
+
+De doorslag: in route (i) schaalt de tijd van de nakijker met het **aantal gevonden fouten**, in de alternatieven met het **aantal woorden**. Correcties op een redelijk concept zijn puntwerk; leerderskroatisch herschrijven of register van gevonden teksten bijstellen is doorlopend werk. Bij een schaarse nakijker is dat het hele verschil.
+
+De twee afgevallen routes en waarom:
+
+- **Zelf schrijven, dan valideren.** Didactisch draait dit de zaak om: comprehensible input hoort dingen te bevatten die je nog niet weet. Een tekst die je zelf hebt geschreven, bevat per definitie alleen wat je al kon. Bovendien kost het corrigeren van leerderskroatisch de nakijker méér tijd dan het controleren van een concept, niet minder.
+- **Bestaande teksten herschrijven.** Vrij-gelicenseerd Kroatisch op A1/A2 bestaat nauwelijks; wat er is, is te moeilijk (nieuws, Wikipedia) of archaïsch (volksverhalen, met vormen die je juist niet wilt leren). En het naar een budget van vier nieuwe lemma's per hoofdstuk terugbrengen is herschrijven vanaf nul, met een licentievraag erbij — de repo is openbaar.
+
+**Het risico van route (i) is echt en wordt niet weggepoetst:** een model produceert vloeiend Kroatisch dat op de verkeerde plekken misgaat — Servische varianten, verkeerde aspectpartners, collocaties die kloppen maar niemand zegt. Wat mechanisch te vangen is, hoort in de poorten van §7 (Servismenlijst, lemma's moeten in de catalogus bestaan, verboden structuren). Wat daar níet uit komt is idioom en aspectkeuze, en dat staat expliciet op de checklist van de nakijker. Zolang `ASPECT-PAIRS` geen data heeft (§4.3), is aspect een bekende blinde vlek die alleen een mens kan afdekken.
+
+Nooit direct aan de leerder voorschotelen wat er geschreven is: eerst de poorten, dan de mens.
 
 ---
 
@@ -518,12 +531,18 @@ Stond oorspronkelijk nergens; komt hier omdat de dekkingsmeter zonder gevulde `k
 - [ ] Dashboard (§9)
 - **Acceptatie:** één knop "start sessie" doorloopt alle vijf de blokken
 
-### Fase 5 — Audio & productie
-- [ ] TTS voor alle zinnen en woorden (cache als bestand, niet runtime)
-- [ ] Luisteren-terwijl-je-leest met tekstmarkering
-- [ ] Audio-kaarttype
-- [ ] Schrijfopdrachten met LLM-feedback op vorm
-- [ ] (Optioneel) spraakherkenning voor uitspraak
+### Fase 5 — Schrijven (audio grotendeels uit scope, 17-08-2026)
+
+Het doel is lezen en schrijven, niet spreken. Wat daarmee vervalt:
+
+- ~~TTS voor alle zinnen en woorden~~ — de bestaande Azure-TTS met maandrem blijft staan zoals hij is en wordt niet uitgebreid
+- ~~Audio-kaarttype~~ — vervalt, ook kaarttype 4 uit §6.2
+- ~~Spraakherkenning voor uitspraak~~ — vervalt
+
+Wat blijft:
+
+- [ ] Schrijfopdrachten met feedback op vorm. Zonder generatiepipeline betekent dat: de foutclassificatie uit Fase 0.3 toepassen op vrije tekst, plus zelfbeoordeling tegen een modelantwoord — niet een dienst die per aanroep beoordeelt.
+- [ ] *Geparkeerd, optioneel:* luisteren-terwijl-je-leest met tekstmarkering. Niet geschrapt, wel achteraan — het koppelt klank aan schrift en dat blijft nuttig, ook als spreken geen doel is.
 
 ---
 
@@ -581,17 +600,34 @@ Daaruit volgt de plaatsingstoets van Fase 1.5: diagnostisch per grammaticapunt, 
 
 > **Harde regel die hieruit volgt:** vertrouw de zelfinschatting niet. Modulestatus volgt altijd uit prestatie.
 
-### 2. Doel — **open**
-Lezen en schrijven, of ook spreken op termijn? Bij spreken schuiven audio- en productiekaarten naar voren. *Nog niet beantwoord; Fase 5 blijft voorlopig achteraan.*
+### 2. Doel — beantwoord
+**Vooral lezen en schrijven.** Daaruit volgt scope die eruit gaat:
+
+- **Audiokaarten, TTS-uitbreiding en spraakherkenning vervallen.** Geschrapt uit Fase 5.
+- **Reading-while-listening blijft geparkeerd** als optionele uitbreiding — niet geschrapt, wel achteraan.
+- De bestaande Azure-TTS met maandrem **blijft staan zoals hij is** en wordt niet uitgebreid.
+
+Kaarttype 4 uit §6.2 (audio-herkenning) vervalt daarmee ook; de stadiaprogressie loopt van herkenning → cloze → productie → chunk.
 
 ### 3. Stack en tweede runtime — beantwoord
 Next.js 15 / TypeScript / SQLite / `ts-fsrs`. **Geen tweede runtime nu.** CLASSLA is uitgesteld ten gunste van een lokale `analyze()`; zie §10, Fase 0.7. Met één toevoeging op de oorspronkelijke opzet: de `unknown`-vlag per token, want zonder die vlag telt `coverage.ts` onbekende woorden als bekend.
 
-### 4. LLM-generatie — **open, met vastgelegde randvoorwaarden**
-Of er gegenereerd wordt en met welk plafond, is nog niet beslist. Wat wél vaststaat: **alleen offline, in batch, en alleen als de gebruiker het zelf aanzet. Nooit tijdens een sessie.**
+### 4. LLM-generatie — beantwoord: **geen generatiepipeline**
 
-### 5. Native check — **open**
-Is er iemand die Kroatisch spreekt en af en toe 20 items kan nakijken?
+Geen aparte dienst die per aanroep geld kost en die van buitenaf niet te overzien is. Nooit tijdens een sessie, geen runtime-generatie, geen API-plafond om te bewaken.
+
+**Dat is iets anders dan "er wordt geen tekst geschreven".** Content die als onderdeel van een gewone taak wordt geschreven — in een commit, zichtbaar in een diff, daarna door de validatiepoorten en langs een menselijke nakijker — valt hier niet onder. Het verschil zit in overzicht en kosten, niet in wie de pen vasthoudt. Zie §5.4 voor de gekozen route.
+
+### 5. Native check — beantwoord: **ja, er is een nakijker**
+
+En dat verandert de planning, want **die persoon is de schaarste van dit project**. Zijn tijd is de duurste bron die er is; alles wat elders bespaard wordt is goedkoper dan een uur van hem.
+
+Daaruit volgt het reviewscherm van §7, met eisen die uit die schaarste voortkomen:
+
+- Statusladder `generated → validated → human_approved`. Alleen `human_approved` grammatica-uitleg wordt geserveerd.
+- **Nakijken in batches**, ongeveer 30 items per sessie — niet losse vragen. Losse vragen kosten per stuk aanlooptijd; een batch van dertig verwante items kost die één keer.
+- Elke batch is coherent: één hoofdstuk met zijn woorden en zijn oefeningen, niet dertig willekeurige items uit vijf lessen.
+- Wat mechanisch te controleren is, komt niet bij hem terecht. De poorten van §7 draaien vóór de batch, niet erna.
 
 ### 6. Lessen tegenover curriculum — beantwoord
 Lessen blijven de bron en de volgorde; de curriculumlaag komt erbovenop. Zie §4.3.
