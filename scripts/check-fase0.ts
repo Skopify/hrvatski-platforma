@@ -526,8 +526,18 @@ await test("3", "Een fout antwoord in een échte oefening wordt onderweg ontleed
 
     assert(na === voor + 1, `${na - voor} regels erbij in error_log, verwacht 1`);
     assert(rij.exercise_id === doelwit.id, `verkeerde oefening gelogd: ${rij.exercise_id}`);
-    assert(rij.attempt_id !== null, "de fout is niet aan een poging gekoppeld");
     assert(rij.error_type !== "unknown", "de fout kon niet geclassificeerd worden");
+
+    // attempt_id is hier bewust leeg. Sinds Fase 0.5 escaleert de feedback: een
+    // eerste misser levert een hint op en nog géén poging, want een oefening
+    // telt pas als hij is opgelost. Fout en poging hebben daardoor een
+    // verschillende korrel — meerdere missers kunnen aan één oplossing
+    // voorafgaan — en alleen de laatste, waarbij het antwoord getoond wordt,
+    // draagt een attempt_id.
+    assert(
+      rij.attempt_id === null,
+      `een eerste misser hoort nog geen poging te hebben (attempt_id = ${rij.attempt_id})`,
+    );
 
     return `${doelwit.id}: "${doelwit.fout}" voor "${doelwit.answer}" → ${rij.error_type}`;
   });

@@ -15,7 +15,8 @@
     "db:reset": "rm -f data/hrvatski.db data/hrvatski.db-wal data/hrvatski.db-shm && npm run seed",
     "patch": "tsx scripts/apply-patch.ts",
     "zin-ids": "tsx scripts/zin-ids.ts",
-    "codes": "tsx scripts/grammatica-codes.ts"
+    "codes": "tsx scripts/grammatica-codes.ts",
+    "check:fase05": "tsx scripts/check-fase05.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

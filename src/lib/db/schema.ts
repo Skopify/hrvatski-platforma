@@ -138,6 +138,8 @@ export const attempts = sqliteTable("attempts", {
   expected: text("expected"),
   durationMs: integer("duration_ms").notNull().default(0),
   xp: integer("xp").notNull().default(0),
+  /** Op welke trede van de escalerende feedback dit werd opgelost. Zie migratie 005. */
+  stage: integer("stage").notNull().default(0),
   createdAt: integer("created_at").notNull(),
 });
 
@@ -201,6 +203,11 @@ export const errorLog = sqliteTable("error_log", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   ts: integer("ts").notNull(),
   exerciseId: text("exercise_id").notNull(),
+  /**
+   * De poging waarin deze fout de doorslag gaf — leeg zolang de escalatie loopt.
+   * Fouten en pogingen hebben sinds Fase 0.5 een verschillende korrel: meerdere
+   * missers kunnen aan één opgeloste oefening voorafgaan.
+   */
   attemptId: integer("attempt_id"),
   itemId: text("item_id"),
   lemmaId: text("lemma_id"),

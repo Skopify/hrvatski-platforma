@@ -192,12 +192,21 @@ export function gradeWordOrder(exercise: Exercise, tokens: string[]): GradeResul
  * XP-systeem dat dat verschil wegpoetst beloont precies het gedrag waarop
  * Duolingo-achtige apps stukloopt.
  */
-export function xpFor(exercise: Exercise, result: GradeResult): number {
+/**
+ * `stage` is de trede waarop het antwoord kwam: 0 meteen, 1 na de hint, 2 na de
+ * keuze. Later toegeven levert minder op, en dat is geen strafpunt maar een
+ * eerlijke prijs: een vorm die je pas uit drie opties herkent, ken je anders dan
+ * een vorm die je zelf opriep. Zou het evenveel opleveren, dan wordt doorklikken
+ * naar de keuze de goedkoopste weg naar XP.
+ */
+export function xpFor(exercise: Exercise, result: GradeResult, stage = 0): number {
   if (exercise.type === "teaching_moment") return 2;
   const base = exercise.mode === "productive" ? 10 : 4;
   const difficulty = exercise.difficulty ?? 1;
   const multiplier = 1 + (difficulty - 1) * 0.25;
   if (!result.correct) return 1; // inspanningscrediet — fout maken is ook leren
   const earned = Math.round(base * multiplier);
-  return result.nearMiss ? Math.round(earned * 0.7) : earned;
+  const naMiss = result.nearMiss ? earned * 0.7 : earned;
+  const tredeFactor = stage === 0 ? 1 : stage === 1 ? 0.6 : 0.3;
+  return Math.max(1, Math.round(naMiss * tredeFactor));
 }

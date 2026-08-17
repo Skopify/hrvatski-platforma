@@ -458,14 +458,24 @@ Twee eigenschappen zijn niet onderhandelbaar:
 
 **Vóór CLASSLA erachter schuift, wordt eerst de recall van de eigen implementatie op de bestaande verhalen gemeten.** Misschien is hij niet nodig.
 
-### Fase 0.5 — Escalerende feedback (eerst, vóór alles wat oefeningen genereert)
+### Fase 0.5 — Escalerende feedback — ✅ afgerond 17-08-2026
 
-De harde regel "feedback escaleert: hint → keuze → antwoord + uitleg" wordt op dit moment overal geschonden: bij een fout verschijnt meteen het juiste antwoord. Dat is de grootste gedragsmatige afwijking van de spec, en het is zinloos om oefeningen te gaan genereren die die fout op grotere schaal maken.
+De harde regel "feedback escaleert: hint → keuze → antwoord + uitleg" werd overal geschonden: bij een fout verscheen meteen het juiste antwoord. Dat was de grootste gedragsmatige afwijking van de spec.
 
-- [ ] Trede 1: de metalinguïstische hint uit `hintFor()` (bestaat al, wordt nog niet getoond)
-- [ ] Trede 2: keuze uit 2–3 vormen, opgebouwd uit de vormcatalogus — echte verkeerde naamvalsvormen van hetzelfde woord, geen willekeurige woorden
-- [ ] Trede 3: het antwoord met uitleg en een verwijzing naar de regel
-- **Acceptatie:** een fout antwoord geeft nooit meteen de vorm; na drie tredes is het antwoord er wel; elke trede wordt vastgelegd, zodat "in één keer goed na een hint" te onderscheiden is van "pas na het antwoord".
+- [x] Trede 1: de metalinguïstische hint uit `hintFor()`
+- [x] Trede 2: keuze uit vormen via `choicesFor()` — echte verbogen vormen van hetzelfde woord, mét de vorm die de leerder zelf invulde, want precies díe verwarring moet uitgezocht worden. Zijn er geen plausibele afleiders (een antwoord van meerdere woorden), dan wordt trede 2 overgeslagen: een keuze uit willekeurige woorden is erger dan geen keuze.
+- [x] Trede 3: het antwoord met uitleg
+- [x] `attempts.stage` (migratie 005): 0 meteen goed, 1 na de hint, 2 na de keuze, 3 antwoord getoond
+
+**Drie ontwerpkeuzes die het gedrag bepalen:**
+
+*Het antwoord staat niet in de netwerkrespons zolang de escalatie loopt.* `Feedback.expected` blijft leeg op trede 1 en 2. Zou het meekomen, dan is de hint een formaliteit — je hoeft alleen maar te kijken.
+
+*Eén poging per opgeloste oefening, niet één per trede.* Anders zou de accuratesse kelderen door het escaleren zelf, en zou een woord drie keer als fout de planning in gaan terwijl je het uiteindelijk wist. De missers gaan wél allemaal het foutenlogboek in — daar horen ze. Gevolg: `error_log.attempt_id` is leeg zolang de escalatie loopt; fouten en pogingen hebben sindsdien een verschillende korrel.
+
+*De trede telt mee in de planning en de XP.* Goed na de hint geeft FSRS-rating `Hard` en 60% van de XP; goed na de keuze geeft `Again` en 30%. Kiezen uit drie vormen is herkennen, niet oproepen — en dat verschil hoort de planning te weten. Zou het evenveel opleveren, dan wordt doorklikken naar de keuze de goedkoopste weg naar XP.
+
+**Acceptatie (`npm run check:fase05`, 9 controles):** een eerste fout geeft een hint zonder de vorm; een tweede geeft een keuze, nog steeds zonder de vorm; de afleiders zijn aantoonbaar vormen van hetzelfde lemma; de derde geeft het antwoord met uitleg; goed-na-hint is aan `attempts.stage` te onderscheiden van goed-in-één-keer; elke misser staat in `error_log`; de XP loopt af per trede; in één keer goed en vrije productie gedragen zich onveranderd.
 
 ### Fase 1 — Woordenschatsectie
 - [ ] Kaarttypes 1–3, stadia-promotie, leech-afhandeling

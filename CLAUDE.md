@@ -43,6 +43,7 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run check` | nakijklogica |
 | `npm run check:content` | contentvalidatie |
 | `npm run check:fase0` | acceptatietests Fase 0 |
+| `npm run check:fase05` | acceptatietests Fase 0.5 (escalerende feedback) |
 | `npm run codes` | grammaticacodes + dekking van het curriculum |
 | `npm run zin-ids` | vaste id's op verhaalzinnen |
 | `npm run patch` | contentwijzigingen uit `content/patch-*.json` |

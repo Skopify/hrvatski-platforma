@@ -10,7 +10,7 @@ import {
   type VocabEntry,
 } from "@/lib/content";
 import { recordStoryEncounters } from "@/lib/coverage";
-import { classifyError, recordError } from "@/lib/errors";
+import { choicesFor, classifyError, hintFor, recordError } from "@/lib/errors";
 import { highestActiveLesson } from "@/lib/stats";
 import { db } from "@/lib/db";
 import type { DrillFeedback, DrillKind, DrillQuestion } from "@/lib/drills";
@@ -36,16 +36,40 @@ import {
   type GradeResult,
 } from "@/lib/grading";
 import { applyReview, ensureCards, ratingFor } from "@/lib/srs";
+import { Rating, type Grade } from "ts-fsrs";
+
+/**
+ * Waar je in de escalatie staat.
+ *
+ *   correct     opgelost — op welke trede dan ook
+ *   hint        eerste misser: een metalinguïstische aanwijzing, geen vorm
+ *   choice      tweede misser: kiezen uit echte vormen van hetzelfde woord
+ *   answer      derde misser: het antwoord met uitleg
+ *   selfAssess  vrije productie; die kent geen tredes
+ */
+export type FeedbackStage = "correct" | "hint" | "choice" | "answer" | "selfAssess";
 
 export interface Feedback {
   correct: boolean;
   nearMiss: boolean;
   verdict: GradeResult["verdict"];
   message: string;
+  /**
+   * Het juiste antwoord — leeg zolang de escalatie loopt.
+   *
+   * Dat is de kern van deze fase. Zolang hier iets in staat, staat het ook in de
+   * netwerkrespons, en dan is de hint een formaliteit: je hoeft alleen maar te
+   * kijken. Pas op trede 3 wordt dit gevuld.
+   */
   expected: string;
   explain_nl?: string;
   xp: number;
   totalXp: number;
+  stage: FeedbackStage;
+  /** Trede 1: benoemt de categorie van de fout, nooit de vorm. */
+  hint?: string;
+  /** Trede 2: het juiste antwoord tussen plausibele afleiders. Leeg = overslaan. */
+  options?: string[];
   /** Alleen bij vrije productie: de leerder beoordeelt zichzelf. */
   selfAssess?: { model_answer?: string; rubric_nl?: string[] };
 }
@@ -99,6 +123,7 @@ function record(
   durationMs: number,
   xp: number,
   targets: string[],
+  stage = 0,
 ): void {
   const inserted = db
     .insert(attempts)
@@ -113,6 +138,7 @@ function record(
       expected: result.expected,
       durationMs,
       xp,
+      stage,
       createdAt: Date.now(),
     })
     .returning({ id: attempts.id })
@@ -137,10 +163,24 @@ function record(
   }
 }
 
+/**
+ * Een antwoord inleveren.
+ *
+ * `stage` is de trede waarop de leerder staat: 0 bij de eerste poging, 1 nadat
+ * hij een hint kreeg, 2 nadat hij een keuze kreeg. De client houdt hem bij; de
+ * server bepaalt wat er op die trede gedeeld mag worden.
+ *
+ * Bij een fout op trede 0 en 1 wordt er bewust géén poging weggeschreven en géén
+ * herhaling ingepland. Een oefening telt één keer, op het moment dat hij is
+ * opgelost — anders zou de accuratesse kelderen door het escaleren zelf, en zou
+ * een woord drie keer als "fout" de planning in gaan terwijl je het uiteindelijk
+ * gewoon wist. De missers zelf gaan wel het foutenlogboek in: dáár horen ze.
+ */
 export async function submitAnswer(
   exerciseId: string,
   payload: AnswerPayload,
   durationMs: number,
+  stage = 0,
 ): Promise<Feedback> {
   const found = findExercise(exerciseId);
   if (!found) throw new Error(`Onbekende oefening: ${exerciseId}`);
@@ -155,6 +195,7 @@ export async function submitAnswer(
       expected: exercise.model_answer ?? "",
       xp: 0,
       totalXp: db.select({ xp: profile.xp }).from(profile).where(eq(profile.id, 1)).get()?.xp ?? 0,
+      stage: "selfAssess",
       selfAssess: { model_answer: exercise.model_answer, rubric_nl: exercise.rubric_nl },
     };
   }
@@ -181,8 +222,59 @@ export async function submitAnswer(
       result = gradeText(exercise, payload.value);
   }
 
-  const xp = xpFor(exercise, result);
   const targets = exercise.targets ?? [];
+  const huidigeXp = () =>
+    db.select({ xp: profile.xp }).from(profile).where(eq(profile.id, 1)).get()?.xp ?? 0;
+
+  /* ── Nog niet opgelost: escaleren in plaats van het antwoord geven ── */
+  if (!result.correct && stage < 2) {
+    const ctx = {
+      exerciseId,
+      type: exercise.type,
+      targets,
+      expected: result.expected,
+      given,
+    };
+    const ontleding = classifyError(ctx);
+    recordError(ontleding, ctx);
+
+    if (stage === 0) {
+      return {
+        correct: false,
+        nearMiss: false,
+        verdict: result.verdict,
+        message: "Nog niet — kijk hier eens naar.",
+        expected: "",
+        xp: 0,
+        totalXp: huidigeXp(),
+        stage: "hint",
+        hint: hintFor(ontleding),
+      };
+    }
+
+    // Trede 2 heeft alleen zin met plausibele afleiders. Zijn die er niet — een
+    // antwoord van meerdere woorden bijvoorbeeld — dan is een keuze uit
+    // willekeurige woorden erger dan geen keuze, en gaan we door naar trede 3.
+    const opties = choicesFor(ontleding, result.expected, given);
+    if (opties.length >= 2) {
+      return {
+        correct: false,
+        nearMiss: false,
+        verdict: result.verdict,
+        message: "Nog niet. Welke van deze vormen hoort hier?",
+        expected: "",
+        xp: 0,
+        totalXp: huidigeXp(),
+        stage: "choice",
+        hint: hintFor(ontleding),
+        options: opties,
+      };
+    }
+  }
+
+  /* ── Opgelost, of de escalatie is op: vastleggen en inplannen ── */
+  const xp = xpFor(exercise, result, stage);
+  const opgelostOp = result.correct ? stage : 3;
 
   record(
     exerciseId,
@@ -194,10 +286,11 @@ export async function submitAnswer(
     durationMs,
     xp,
     targets,
+    opgelostOp,
   );
 
   const kaarten = ensureCards(targets);
-  const rating = ratingFor(result, exercise, durationMs);
+  const rating = ratingForStage(result, exercise, durationMs, stage);
   for (const kaartId of kaarten) applyReview(kaartId, rating, durationMs);
 
   bumpStreak();
@@ -207,12 +300,33 @@ export async function submitAnswer(
     correct: result.correct,
     nearMiss: result.nearMiss,
     verdict: result.verdict,
-    message: result.message,
+    message: result.correct ? result.message : "Nog niet. Dit was het antwoord.",
     expected: result.expected,
     explain_nl: exercise.explain_nl,
     xp,
     totalXp,
+    stage: result.correct ? "correct" : "answer",
   };
+}
+
+/**
+ * De FSRS-beoordeling, met de trede erin verwerkt.
+ *
+ * Een vorm die je pas uit drie opties herkent, ken je niet — herkennen is iets
+ * anders dan oproepen. Daarom telt "goed na de keuze" als een misser voor de
+ * planning, net als het antwoord krijgen. "Goed na de hint" is milder: je hebt
+ * hem zelf opgeroepen, alleen met een duwtje.
+ */
+function ratingForStage(
+  result: GradeResult,
+  exercise: Exercise,
+  durationMs: number,
+  stage: number,
+): Grade {
+  if (!result.correct) return Rating.Again;
+  if (stage === 0) return ratingFor(result, exercise, durationMs);
+  if (stage === 1) return Rating.Hard;
+  return Rating.Again;
 }
 
 /**
@@ -261,7 +375,9 @@ export async function selfAssess(
   bumpStreak();
   const totalXp = addXp(xp);
 
-  return { ...result, explain_nl: exercise.explain_nl, xp, totalXp };
+  // Zelfbeoordeling is altijd het eindpunt: er is niets meer om naartoe te
+  // escaleren als de leerder zelf het oordeel geeft.
+  return { ...result, explain_nl: exercise.explain_nl, xp, totalXp, stage: "correct" };
 }
 
 /**

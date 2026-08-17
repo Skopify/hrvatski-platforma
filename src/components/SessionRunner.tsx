@@ -68,6 +68,12 @@ export function SessionRunner({
   const [correct, setCorrect] = useState(0);
   const [graded, setGraded] = useState(0);
   const [finished, setFinished] = useState(false);
+  /**
+   * Op welke trede van de escalatie deze oefening staat. 0 = eerste poging.
+   * Leeft hier en niet op de server: de server bepaalt wát er op een trede
+   * gedeeld mag worden, de client alleen waar je bent.
+   */
+  const [stage, setStage] = useState(0);
 
   const sessionId = useRef<number | null>(null);
   const stepStart = useRef<number>(Date.now());
@@ -77,6 +83,8 @@ export function SessionRunner({
   const step = steps[index];
   const isLast = index >= steps.length - 1;
   const awaitingSelfAssess = Boolean(feedback?.selfAssess);
+  /** Feedback die om een nieuwe poging vraagt in plaats van om doorschakelen. */
+  const escalating = feedback?.stage === "hint" || feedback?.stage === "choice";
 
   useEffect(() => {
     let cancelled = false;
@@ -108,6 +116,7 @@ export function SessionRunner({
 
   const advance = useCallback(() => {
     setFeedback(null);
+    setStage(0);
     // Vastleggen dat deze stap gehad is, vóór het doorschakelen. Sluit je nu
     // het tabblad, dan pakt "Les hervatten" hier weer op.
     if (kind === "lesson" && lessonNumber !== null && step) {
@@ -121,6 +130,12 @@ export function SessionRunner({
     setIndex(next);
     setAnswer(emptyAnswer(steps[next].exercise));
   }, [finish, index, isLast, kind, lessonNumber, step, steps]);
+
+  /** Terug naar het invoerveld voor de volgende trede; het antwoord blijft staan. */
+  const retry = useCallback(() => {
+    setStage((t) => t + 1);
+    setFeedback(null);
+  }, []);
 
   const check = useCallback(async () => {
     // setBusy werkt pas bij de volgende render, dus een ref is de enige betrouwbare
@@ -158,10 +173,12 @@ export function SessionRunner({
               ? ({ kind: "order", value: answer.value } as const)
               : ({ kind: "match", value: answer.value } as const);
 
-      const result = await submitAnswer(step.exercise.id, payload, duration);
+      const result = await submitAnswer(step.exercise.id, payload, duration, stage);
       setFeedback(result);
 
-      if (!result.selfAssess) {
+      // Een hint of keuze is geen uitkomst: pas als de oefening is opgelost
+      // telt hij mee, anders zou één opgave drie keer in de score belanden.
+      if (!result.selfAssess && result.stage !== "hint" && result.stage !== "choice") {
         totals.current.xp += result.xp;
         totals.current.total += 1;
         if (result.correct) totals.current.correct += 1;
@@ -173,7 +190,38 @@ export function SessionRunner({
     } finally {
       inFlight.current = false;
     }
-  }, [advance, answer, busy, step]);
+  }, [advance, answer, busy, stage, step]);
+
+  /**
+   * Trede 2: de leerder kiest een van de aangeboden vormen.
+   *
+   * Gaat als trede 2 naar de server, dus goed rekenen levert de laagste XP op en
+   * telt voor de planning als een misser. Kiezen uit drie vormen is herkennen,
+   * niet oproepen — en dat is precies het verschil dat de planning moet weten.
+   */
+  const pick = useCallback(
+    async (value: string) => {
+      if (!step || inFlight.current) return;
+      inFlight.current = true;
+      setBusy(true);
+      try {
+        const duration = Date.now() - stepStart.current;
+        const result = await submitAnswer(step.exercise.id, { kind: "text", value }, duration, 2);
+        setStage(2);
+        setFeedback(result);
+        totals.current.xp += result.xp;
+        totals.current.total += 1;
+        if (result.correct) totals.current.correct += 1;
+        setXp((v) => v + result.xp);
+        setGraded((v) => v + 1);
+        if (result.correct) setCorrect((v) => v + 1);
+      } finally {
+        setBusy(false);
+        inFlight.current = false;
+      }
+    },
+    [step],
+  );
 
   const assess = useCallback(
     async (ok: boolean) => {
@@ -202,12 +250,13 @@ export function SessionRunner({
       const target = e.target as HTMLElement | null;
       if (target?.tagName === "TEXTAREA") return;
       e.preventDefault();
-      if (feedback) advance();
+      if (escalating) retry();
+      else if (feedback) advance();
       else void check();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [advance, awaitingSelfAssess, busy, check, feedback]);
+  }, [advance, awaitingSelfAssess, busy, check, escalating, feedback, retry]);
 
   /* ------------------------------------------------------------ afgerond --- */
 
@@ -332,11 +381,11 @@ export function SessionRunner({
           exercise={step.exercise}
           answer={answer}
           setAnswer={setAnswer}
-          locked={Boolean(feedback)}
+          locked={Boolean(feedback) && !escalating}
           tts={tts}
         />
 
-        {feedback ? <FeedbackPanel feedback={feedback} onAssess={assess} busy={busy} /> : null}
+        {feedback ? <FeedbackPanel feedback={feedback} onAssess={assess} onPick={pick} busy={busy} /> : null}
 
         <div className="mt-7 flex items-center justify-between gap-4">
           <button
@@ -351,10 +400,12 @@ export function SessionRunner({
             <button
               type="button"
               disabled={busy || (!feedback && !canCheck)}
-              onClick={() => (feedback ? advance() : void check())}
+              onClick={() => (escalating ? retry() : feedback ? advance() : void check())}
               className="btn btn-primary px-7 py-3 text-[14.5px]"
             >
-              {feedback
+              {escalating
+                ? "Nog een poging"
+                : feedback
                 ? isLast
                   ? "Afronden"
                   : "Verder"
@@ -374,10 +425,13 @@ export function SessionRunner({
 function FeedbackPanel({
   feedback,
   onAssess,
+  onPick,
   busy,
 }: {
   feedback: Feedback;
   onAssess: (ok: boolean) => void;
+  /** Trede 2: de leerder kiest een van de aangeboden vormen. */
+  onPick?: (value: string) => void;
   busy: boolean;
 }) {
   if (feedback.selfAssess) {
@@ -417,6 +471,52 @@ function FeedbackPanel({
           >
             Nog niet
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  /**
+   * Trede 1 en 2: wél zeggen dat het mis is, niet wát het moest zijn.
+   *
+   * Bewust in de gouden tint en niet in de rode: dit is geen eindoordeel maar
+   * een tussenstap. Rood zegt "fout, klaar"; goud zegt "bijna, kijk nog eens" —
+   * en dat is precies wat er aan de hand is zolang je nog een poging krijgt.
+   */
+  if (feedback.stage === "hint" || feedback.stage === "choice") {
+    return (
+      <div className="animate-rise mt-6 rounded-card bg-gold-wash px-5 py-5">
+        <div className="flex items-start gap-3">
+          <span
+            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-bright text-[13px] font-bold text-white"
+            aria-hidden
+          >
+            ?
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="text-[14.5px] font-bold text-gold">{feedback.message}</p>
+            {feedback.hint ? (
+              <p className="mt-2 text-[13.5px] leading-relaxed text-ink-secondary">
+                {feedback.hint}
+              </p>
+            ) : null}
+
+            {feedback.stage === "choice" && feedback.options?.length ? (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {feedback.options.map((optie) => (
+                  <button
+                    key={optie}
+                    type="button"
+                    disabled={busy}
+                    onClick={() => onPick?.(optie)}
+                    className="hr-text btn btn-ghost px-4 py-2 text-[15px] font-semibold hover:border-accent hover:bg-accent-wash hover:text-accent disabled:opacity-50"
+                  >
+                    {optie}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     );

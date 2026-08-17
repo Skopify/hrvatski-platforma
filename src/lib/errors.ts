@@ -4,6 +4,7 @@ import { errorLog } from "./db/schema";
 import {
   NAAMVAL_CODE,
   NAAMVAL_NAAM,
+  formIndex,
   formKey,
   readingsFor,
   type Features,
@@ -257,6 +258,51 @@ export function hintFor(c: Classification): string {
     default:
       return "Nog niet. Kijk welke vorm de zin vraagt.";
   }
+}
+
+/* -------------------------------------------------------- keuzevormen --- */
+
+/**
+ * Trede 2: een keuze uit een handvol vormen.
+ *
+ * §7 stelt de eis dat afleiders plausibel zijn — echte verkeerde naamvalsvormen
+ * van hetzelfde woord, geen willekeurige woorden. Dat is geen nettigheid: kiezen
+ * uit «kući, stol, zelen» is geen naamvalstoets maar een spelletje uitsluiten,
+ * en het levert dus geen enkel bewijs dat je de naamval kent.
+ *
+ * De vorm die de leerder zélf invulde gaat altijd mee als die van hetzelfde
+ * woord is. Precies díe verwarring moet uitgezocht worden.
+ *
+ * Geeft een lege lijst als er niets plausibels te maken valt — dan slaat de
+ * escalatie trede 2 over in plaats van een slechte keuze voor te schotelen.
+ */
+export function choicesFor(c: Classification, expected: string, given: string): string[] {
+  if (!c.lemmaId) return [];
+
+  const juist = expected.trim();
+  const anders = new Map<string, Reading>();
+  for (const lezingen of formIndex().values()) {
+    for (const l of lezingen) {
+      if (l.lemmaId !== c.lemmaId) continue;
+      if (formKey(l.surface) === formKey(juist)) continue;
+      if (!anders.has(formKey(l.surface))) anders.set(formKey(l.surface), l);
+    }
+  }
+  if (anders.size === 0) return [];
+
+  const uit: string[] = [];
+  const eigen = [...anders.values()].find((l) => formKey(l.surface) === formKey(given));
+  if (eigen) uit.push(eigen.surface);
+
+  for (const l of anders.values()) {
+    if (uit.length >= 2) break;
+    if (uit.some((s) => formKey(s) === formKey(l.surface))) continue;
+    uit.push(l.surface);
+  }
+
+  // Vaste volgorde uit de vormen zelf, zodat dezelfde fout dezelfde keuze geeft
+  // en het antwoord niet aan zijn positie te herkennen is.
+  return [juist, ...uit].sort((a, b) => a.localeCompare(b, "hr"));
 }
 
 /* ---------------------------------------------------------- vastleggen --- */
