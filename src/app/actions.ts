@@ -241,6 +241,7 @@ export async function submitAnswer(
       targets,
       expected: result.expected,
       given,
+      nudge: exercise.nudge,
     };
     const ontleding = classifyError(ctx);
     recordError(ontleding, ctx);

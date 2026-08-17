@@ -45,6 +45,16 @@ export interface Exercise {
   explain_nl?: string;
   /** Overschrijft de placeholder — begrijpend lezen beantwoord je in het Nederlands. */
   placeholder?: string;
+  /**
+   * Het zetje bij een fout antwoord — trede 1 van de escalerende feedback.
+   *
+   * Nodig omdat de foutclassificatie niet kan weten waar een betekenisvraag
+   * óver gaat. Bij «u kuću of u kući» moet je naar de uitgang kijken, bij
+   * «Dao sam mu ga of Dao mi ga je» naar wie het hulpwerkwoord aanwijst. Eén
+   * algemene tekst dekt die twee niet, en een hint die langs de vraag heen
+   * praat is erger dan geen hint.
+   */
+  nudge?: string;
   /** Paradigmatabel bij een uitlegmoment. */
   table?: Paradigm;
   targets?: string[];

@@ -1,0 +1,690 @@
+{
+  "code": "ASPECT-PAIRS",
+  "title_hr": "čitati ili pročitati?",
+  "title_nl": "Bezig of af?",
+  "cefr": "A2",
+  "blurb_nl": "Elk Kroatisch werkwoord bestaat in twee smaken: bezig zijn, of klaar zijn. Het Nederlands zegt dat met woorden eromheen, het Kroatisch stopt het in het werkwoord zelf. Zonder dit verschil kun je geen correcte verleden tijd maken.",
+  "prerequisites": [
+    "PRES-CLASSES"
+  ],
+  "can_do_nl": [
+    "Ik hoor aan het werkwoord of iets bezig was of afgemaakt is.",
+    "Ik leer werkwoorden als paar in plaats van los.",
+    "Ik weet waarom ik pročitam niet kan gebruiken voor wat ik nu doe.",
+    "Ik kies het juiste werkwoord bij svaki dan, jučer en odjednom."
+  ],
+  "grammar": {
+    "id": "g.mod.aspect_pairs",
+    "code": "ASPECT-PAIRS",
+    "title_nl": "Aspect — twee werkwoorden voor één handeling",
+    "cefr": "A2",
+    "explanation_nl": "Elk Kroatisch werkwoord bestaat in twee vormen. Niet twee tijden, maar twee manieren om naar dezelfde handeling te kijken. De **onvoltooide** vorm kijkt naar het verloop: bezig zijn, herhalen, gewoonte. De **voltooide** vorm kijkt naar het geheel: één keer, af, klaar.",
+    "contrast_nl": "Het Nederlands doet dit met woorden eromheen — 'ik was aan het lezen' tegenover 'ik heb het uitgelezen'. Het Kroatisch stopt het in het werkwoord zelf, meestal met een voorvoegsel. Daarom leer je ze als paar: wie alleen čitati kent, kan niet zeggen dat hij een boek uit heeft.",
+    "paradigm": {
+      "caption_nl": "Zes paren om mee te beginnen",
+      "columns": [
+        "onvoltooid — bezig",
+        "voltooid — af"
+      ],
+      "rows": [
+        {
+          "label": "lezen",
+          "cells": [
+            "čitati",
+            "pročitati"
+          ]
+        },
+        {
+          "label": "schrijven",
+          "cells": [
+            "pisati",
+            "napisati"
+          ]
+        },
+        {
+          "label": "leren",
+          "cells": [
+            "učiti",
+            "naučiti"
+          ]
+        },
+        {
+          "label": "drinken",
+          "cells": [
+            "piti",
+            "popiti"
+          ]
+        },
+        {
+          "label": "eten",
+          "cells": [
+            "jesti",
+            "pojesti"
+          ]
+        },
+        {
+          "label": "kopen",
+          "cells": [
+            "kupovati",
+            "kupiti"
+          ]
+        }
+      ]
+    },
+    "pitfalls_nl": [
+      "Een voltooid werkwoord in de tegenwoordige tijd betekent níet 'nu'. Wat je op dit moment doet, zeg je altijd met de onvoltooide vorm.",
+      "Bij svaki dan, često en obično hoort de onvoltooide vorm: het gaat om herhaling.",
+      "Het voorvoegsel is niet altijd hetzelfde (pro-, na-, po-, s-) en soms verandert de stam helemaal: kupovati wordt kupiti. Leer het paar, niet de regel."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Vier paren. In elk paar is het werkwoord bijna hetzelfde, en de Nederlandse vertaling toch heel anders.",
+      "exercises": [
+        {
+          "id": "m.aspect.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Vier paren. Let op het begin van het werkwoord.",
+          "given": "Jučer sam čitao knjigu.  —  Jučer sam pročitao knjigu.\nPisao sam pismo.  —  Napisao sam pismo.\nUčio sam hrvatski.  —  Naučio sam deset riječi.\nPio sam kavu.  —  Popio sam kavu.",
+          "body_nl": "Gisteren was ik in een boek aan het lezen. — Gisteren heb ik het boek uitgelezen.\nIk was een brief aan het schrijven. — Ik heb de brief geschreven, hij is af.\nIk was Kroatisch aan het leren. — Ik heb tien woorden geleerd, ze zitten.\nIk zat koffie te drinken. — Ik heb mijn koffie opgedronken.",
+          "targets": []
+        },
+        {
+          "id": "m.aspect.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Rechts staat er een stukje **vóór** het werkwoord: *pro-*, *na-*, *po-*. Verder is het hetzelfde woord.\n\nEn kijk naar de Nederlandse kant: links gaat het over **bezig zijn**, rechts over **klaar zijn**. Het Nederlands heeft daar een hele omschrijving voor nodig — 'aan het lezen', 'uitgelezen'. Het Kroatisch heeft er twee lettergrepen voor.\n\nDat verschil heet aspect, en het zit in élk Kroatisch werkwoord.",
+          "targets": [
+            "g.mod.aspect_pairs"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Twee manieren om naar dezelfde handeling te kijken. Niet twee tijden.",
+      "exercises": [
+        {
+          "id": "m.aspect.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Bezig of af — dat kies je in het werkwoord",
+          "body_nl": "Elk Kroatisch werkwoord bestaat in twee vormen. De **onvoltooide** kijkt naar het verloop: bezig zijn, herhalen, gewoonte. De **voltooide** kijkt naar het geheel: één keer, af, klaar.\n\n*Čitao sam knjigu* — ik was bezig, misschien ben ik nooit klaargekomen.\n*Pročitao sam knjigu* — hij is uit.\n\nHet Nederlands heeft hier geen aparte werkwoorden voor en lost het op met woorden eromheen. Daarom leer je ze in het Kroatisch **als paar**, nooit los.",
+          "table": {
+            "caption_nl": "Zes paren om mee te beginnen",
+            "columns": [
+              "onvoltooid — bezig",
+              "voltooid — af"
+            ],
+            "rows": [
+              {
+                "label": "lezen",
+                "cells": [
+                  "čitati",
+                  "pročitati"
+                ]
+              },
+              {
+                "label": "schrijven",
+                "cells": [
+                  "pisati",
+                  "napisati"
+                ]
+              },
+              {
+                "label": "leren",
+                "cells": [
+                  "učiti",
+                  "naučiti"
+                ]
+              },
+              {
+                "label": "drinken",
+                "cells": [
+                  "piti",
+                  "popiti"
+                ]
+              },
+              {
+                "label": "eten",
+                "cells": [
+                  "jesti",
+                  "pojesti"
+                ]
+              },
+              {
+                "label": "kopen",
+                "cells": [
+                  "kupovati",
+                  "kupiti"
+                ]
+              }
+            ]
+          },
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati",
+            "v.13.pisati",
+            "v.09.uciti"
+          ]
+        },
+        {
+          "id": "m.aspect.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De val waar iedereen in trapt",
+          "body_nl": "Een **voltooid** werkwoord in de tegenwoordige tijd betekent niet 'nu'.\n\n*Čitam knjigu* = ik ben nu een boek aan het lezen. ✓\n*Pročitam knjigu* = niet 'ik lees nu'. Deze vorm gebruik je na woorden als *kad* of *ako*: **Kad pročitam knjigu, idem spavati.** — Als ik het boek uit heb, ga ik slapen.\n\nDus: wil je zeggen wat je op dit moment doet, dan is er maar één keuze — de onvoltooide vorm. Altijd.",
+          "targets": [
+            "g.mod.aspect_pairs"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wat betekent het?",
+      "why_nl": "Nog niets invullen. Twee zinnen die bijna gelijk zijn — alleen het werkwoord verschilt, en dat verandert alles.",
+      "exercises": [
+        {
+          "id": "m.aspect.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is er gebeurd?",
+          "given": "Sinoć sam pisao pismo.",
+          "hint": "sinoć = gisteravond",
+          "answer": "Ik was aan een brief bezig — of hij af is, weet je niet.",
+          "distractors": [
+            "De brief is af."
+          ],
+          "explain_nl": "pisao is de onvoltooide vorm: hij zegt alleen dat je bezig was, niet dat je klaar bent.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.13.pisati"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar het begin van het werkwoord. Staat er een voorvoegsel voor, of niet? Dat bepaalt of iets liep of af was."
+        },
+        {
+          "id": "m.aspect.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is er gebeurd?",
+          "given": "Sinoć sam napisao pismo.",
+          "hint": "sinoć = gisteravond",
+          "answer": "De brief is af.",
+          "distractors": [
+            "Ik was aan een brief bezig — of hij af is, weet je niet."
+          ],
+          "explain_nl": "napisao is de voltooide vorm: de handeling is als geheel afgerond.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.13.pisati"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar het begin van het werkwoord. Staat er een voorvoegsel voor, of niet? Dat bepaalt of iets liep of af was."
+        },
+        {
+          "id": "m.aspect.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is er gebeurd?",
+          "given": "Pio sam kavu kad je Ana došla.",
+          "hint": "kad = toen",
+          "answer": "Ik was koffie aan het drinken toen Ana binnenkwam.",
+          "distractors": [
+            "Ik dronk mijn koffie op en toen kwam Ana."
+          ],
+          "explain_nl": "pio is onvoltooid: het drinken liep nog, en Ana's komst valt daarbinnen.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.08.piti"
+          ],
+          "difficulty": 3,
+          "nudge": "Twee dingen in één zin: liep het ene nog toen het andere gebeurde, of was het eerste eerst klaar? Het werkwoord verklapt het."
+        },
+        {
+          "id": "m.aspect.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is er gebeurd?",
+          "given": "Popio sam kavu i otišao.",
+          "hint": "otići = weggaan",
+          "answer": "Ik heb mijn koffie opgedronken en ben toen weggegaan.",
+          "distractors": [
+            "Ik zat koffie te drinken en ging ondertussen weg."
+          ],
+          "explain_nl": "popio is voltooid: eerst was de koffie op, daarna het weggaan. Twee afgeronde stappen na elkaar.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.08.piti"
+          ],
+          "difficulty": 3,
+          "nudge": "Twee dingen in één zin: liep het ene nog toen het andere gebeurde, of was het eerste eerst klaar? Het werkwoord verklapt het."
+        },
+        {
+          "id": "m.aspect.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wanneer gebeurt dit?",
+          "given": "Kad pročitam knjigu, dat ću ti je.",
+          "hint": "dat ću ti je = ik geef hem aan je",
+          "answer": "Zodra ik het boek uit heb, geef ik hem aan je.",
+          "distractors": [
+            "Terwijl ik het boek lees, geef ik hem aan je."
+          ],
+          "explain_nl": "Een voltooid werkwoord in de tegenwoordige tijd wijst niet naar nu, maar naar een moment dat af is. Vandaar «zodra».",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.01.knjiga"
+          ],
+          "difficulty": 4,
+          "nudge": "Een voltooid werkwoord in de tegenwoordige tijd wijst nooit naar nu. Waar wijst het dan wel naar?"
+        },
+        {
+          "id": "m.aspect.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat doet deze persoon?",
+          "given": "Svaki dan čitam novine.",
+          "hint": "novine = krant",
+          "answer": "Elke dag lees ik de krant — het is een gewoonte.",
+          "distractors": [
+            "Ik heb de krant uitgelezen."
+          ],
+          "explain_nl": "Herhaling vraagt de onvoltooide vorm. Bij svaki dan, često en obično is dat de gewone keuze.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 2,
+          "nudge": "Let op svaki dan. Gaat het over één keer of over een gewoonte?"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf kiezen",
+      "why_nl": "Tien keer dezelfde vraag: bezig of af? Kijk naar de woorden eromheen — die verklappen het meestal.",
+      "exercises": [
+        {
+          "id": "m.aspect.030",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Svaki dan ___ hrvatski.",
+          "answer": "učim",
+          "distractors": [
+            "naučim"
+          ],
+          "explain_nl": "svaki dan = herhaling → onvoltooid.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.09.uciti"
+          ],
+          "difficulty": 1
+        },
+        {
+          "id": "m.aspect.031",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Jučer sam ___ deset novih riječi.",
+          "answer": "naučio",
+          "distractors": [
+            "učio"
+          ],
+          "explain_nl": "Tien woorden zitten er nu in: een afgerond resultaat → voltooid.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.09.uciti"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.032",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Sada ___ knjigu, ne smetaj mi.",
+          "answer": "čitam",
+          "distractors": [
+            "pročitam"
+          ],
+          "explain_nl": "sada = nu. Een voltooid werkwoord kan dat nooit uitdrukken.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.033",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Kad ___ knjigu, idem spavati.",
+          "answer": "pročitam",
+          "distractors": [
+            "čitam"
+          ],
+          "explain_nl": "Na kad wijst de voltooide vorm op het moment dat het af is: «als ik hem uit heb».",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.aspect.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de voltooide vorm in, in de verleden tijd.",
+          "given": "Ana ___ (popiti) kavu i otišla je na posao.",
+          "answer": "je popila",
+          "accepts": [
+            "je popila",
+            "popila je"
+          ],
+          "hint": "Ana is vrouwelijk.",
+          "explain_nl": "De koffie was op vóór het weggaan → voltooid. En omdat Ana vrouwelijk is: popila, niet popio.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.08.piti"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.aspect.035",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Obično ___ kruh na tržnici.",
+          "answer": "kupujem",
+          "distractors": [
+            "kupim"
+          ],
+          "explain_nl": "obično = meestal, dus gewoonte → onvoltooid kupovati.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.10.kupovati"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.036",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Jučer sam ___ novu knjigu.",
+          "answer": "kupio",
+          "distractors": [
+            "kupovao"
+          ],
+          "explain_nl": "Eén keer, afgerond → voltooid kupiti.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.06.kupiti"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.037",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Dok sam ___ ručak, zvonio je telefon.",
+          "answer": "kuhao",
+          "distractors": [
+            "skuhao"
+          ],
+          "explain_nl": "dok = terwijl. Twee dingen die tegelijk lopen → onvoltooid.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.kuhati"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.aspect.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één werkwoord verkeerd. Schrijf de zin goed.",
+          "given": "Sada pročitam novine.",
+          "answer": "Sada čitam novine.",
+          "accepts": [
+            "Sada čitam novine.",
+            "Sada čitam novine"
+          ],
+          "explain_nl": "sada = nu, en dat kan alleen met de onvoltooide vorm.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.aspect.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één werkwoord verkeerd. Schrijf de zin goed.",
+          "given": "Svaki dan popijem tri kave i naučim sve riječi.",
+          "answer": "Svaki dan pijem tri kave i učim sve riječi.",
+          "accepts": [
+            "Svaki dan pijem tri kave i učim sve riječi.",
+            "Svaki dan pijem tri kave i učim sve riječi"
+          ],
+          "hint": "Er zitten twee werkwoorden in; kijk naar svaki dan.",
+          "explain_nl": "svaki dan = gewoonte, dus allebei onvoltooid: pijem en učim.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.08.piti",
+            "v.09.uciti"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu komt er naamvalwerk tussendoor. Je moet nu op twee dingen tegelijk letten — precies zoals in een echt gesprek.",
+      "exercises": [
+        {
+          "id": "m.aspect.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Idem u ___ (grad) i kupit ću knjigu.",
+          "answer": "grad",
+          "accepts": [
+            "grad"
+          ],
+          "explain_nl": "idem = beweging → accusatief. Deze had je al.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "U kafiću sam ___ tri kave.",
+          "answer": "popio",
+          "distractors": [
+            "pio"
+          ],
+          "explain_nl": "Drie koffie op: een afgerond aantal → voltooid. En kafiću is lokatief, want je zát er.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.07.kafic"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.aspect.052",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Knjiga je na ___ (stol) — pročitao sam je.",
+          "answer": "stolu",
+          "accepts": [
+            "stolu"
+          ],
+          "explain_nl": "je = ligt, dus plaats → lokatief. Het werkwoord in het tweede deel is voltooid: hij is uit.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.stol"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Dok sam bio u ___, čitao sam novine.",
+          "answer": "vlaku",
+          "distractors": [
+            "vlak"
+          ],
+          "explain_nl": "bio sam = ik was ergens, dus plaats → lokatief vlaku. Het aspect klopt al: dok vraagt onvoltooid.",
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.aspect.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Jučer sam pisao cijelo pismo i poslao ga.",
+          "answer": "Jučer sam napisao cijelo pismo i poslao ga.",
+          "accepts": [
+            "Jučer sam napisao cijelo pismo i poslao ga.",
+            "Jučer sam napisao cijelo pismo i poslao ga"
+          ],
+          "hint": "cijelo = de hele. Wat zegt dat over af of niet af?",
+          "explain_nl": "«De hele brief» plus «en verstuurd» wijst op iets afgerond → napisao.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.01.pismo"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Beide vormen door elkaar, zoals ze in echte tekst staan. Let bij het lezen op wat af is en wat liep.",
+      "text_hr": "U nedjelju sam bio doma. Cijelo jutro sam čitao novine i pio kavu. Onda sam napisao dva pisma i poslao ih. Poslije podne sam kuhao ručak. Dok sam kuhao, slušao sam radio. Kad sam skuhao ručak, jeli smo zajedno. Navečer sam pročitao cijelu knjigu. Bila je kratka. Prije spavanja sam popio čaj i legao. Svaki tjedan radim isto, ali knjigu ne pročitam uvijek.",
+      "translation_nl": "Op zondag was ik thuis. De hele ochtend zat ik de krant te lezen en koffie te drinken. Toen heb ik twee brieven geschreven en verstuurd. 's Middags stond ik te koken. Terwijl ik kookte, luisterde ik naar de radio. Toen het eten klaar was, hebben we samen gegeten. 's Avonds heb ik een heel boek uitgelezen. Het was kort. Voor het slapen heb ik thee gedronken en ben ik gaan liggen. Elke week doe ik hetzelfde, maar het boek lees ik niet altijd uit.",
+      "exercises": [
+        {
+          "id": "m.aspect.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Heeft de schrijver het boek uitgelezen?",
+          "answer": "Ja, helemaal.",
+          "distractors": [
+            "Nee, hij is halverwege gestopt.",
+            "Dat staat er niet.",
+            "Hij begon er pas aan."
+          ],
+          "explain_nl": "«Navečer sam pročitao cijelu knjigu» — pročitao is voltooid, dus af.",
+          "targets": [],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Cijelo jutro sam čitao novine». Waarom čitao en niet pročitao?",
+          "given": "Cijelo jutro sam čitao novine.",
+          "answer": "Het gaat om de hele ochtend bezig zijn, niet om een afgerond resultaat.",
+          "distractors": [
+            "Omdat novine meervoud is.",
+            "Omdat het in de ochtend was.",
+            "Omdat er geen voorvoegsel bestaat bij čitati."
+          ],
+          "explain_nl": "«Cijelo jutro» beschrijft een periode waarin iets liep. Dat is bij uitstek onvoltooid.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 3,
+          "nudge": "Cijelo jutro beschrijft een periode. Past daar iets afgerond bij, of iets dat liep?"
+        },
+        {
+          "id": "m.aspect.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "De laatste zin zegt: «knjigu ne pročitam uvijek». Wat betekent dat?",
+          "given": "Svaki tjedan radim isto, ali knjigu ne pročitam uvijek.",
+          "answer": "Elke week hetzelfde, maar het boek krijg ik niet altijd uit.",
+          "distractors": [
+            "Elke week hetzelfde, maar ik begin niet altijd aan een boek.",
+            "Ik lees nooit boeken uit.",
+            "Ik lees elke week een ander boek."
+          ],
+          "explain_nl": "pročitam is hier voltooid in de tegenwoordige tijd, en dat wijst niet naar nu maar naar het bereiken van het eind — hier binnen een gewoonte.",
+          "targets": [
+            "g.mod.aspect_pairs"
+          ],
+          "difficulty": 4,
+          "nudge": "pročitam is voltooid én tegenwoordige tijd. Wat betekent dat samen, binnen een gewoonte?"
+        },
+        {
+          "id": "m.aspect.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Dok sam ___ (kuhati), slušao sam radio.",
+          "answer": "kuhao",
+          "accepts": [
+            "kuhao"
+          ],
+          "explain_nl": "dok = terwijl: twee dingen die tegelijk liepen → onvoltooid.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.kuhati"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.aspect.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen over gisteren: één over iets waar je mee bezig was, één over iets dat je hebt afgemaakt.",
+          "model_answer": "Jučer sam čitao knjigu. Navečer sam napisao pismo.",
+          "rubric_nl": [
+            "De eerste zin heeft een onvoltooid werkwoord.",
+            "De tweede zin heeft een voltooid werkwoord, meestal met een voorvoegsel.",
+            "Beide zinnen staan in de verleden tijd."
+          ],
+          "explain_nl": "Als je zelf tussen de twee kunt kiezen, heb je het aspect te pakken.",
+          "targets": [
+            "g.mod.aspect_pairs"
+          ],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum ASPECT-PAIRS, vanaf nul geschreven — de 21 lessen dekken aspect niet"
+}

@@ -50,10 +50,14 @@ export interface ErrorContext {
   expected: string;
   given: string;
   attemptId?: number;
+  /** Zetje dat de oefening zelf meegeeft; gaat vóór de standaardtekst. */
+  nudge?: string;
 }
 
 export interface Classification {
   type: ErrorType;
+  /** Overschrijft de standaardhint. */
+  nudge?: string;
   /** Het vormitem dat gevraagd werd, als dat te bepalen was. */
   itemId?: string;
   lemmaId?: string;
@@ -110,7 +114,8 @@ export function classifyError(ctx: ErrorContext): Classification {
   // Het "antwoord" is hier een Nederlandse zin, dus de vormcatalogus heeft er
   // niets over te zeggen — en een hint over naamvalsuitgangen zou langs de vraag
   // heen praten.
-  if (ctx.type === "interpret") return { type: "interpretation", grammarPointId: punt };
+  if (ctx.type === "interpret")
+    return { type: "interpretation", grammarPointId: punt, nudge: ctx.nudge };
 
   // Alleen de tekens mis. Apart gehouden omdat het de structurele fout van een
   // Nederlandstalige is en een eigen remedie heeft.
@@ -216,6 +221,9 @@ const CONTRASTEN: { paar: [Naamval, Naamval]; vraag: string }[] = [
  * en daarna pas het antwoord met uitleg.
  */
 export function hintFor(c: Classification): string {
+  // Een zetje dat de oefening zelf meegeeft, weet meer dan welke regel ook.
+  if (c.nudge) return c.nudge;
+
   switch (c.type) {
     case "empty":
       return "Er staat nog niets. Gok gerust — een mis levert meer op dan overslaan.";
@@ -252,9 +260,8 @@ export function hintFor(c: Classification): string {
 
     case "interpretation":
       return (
-        "Lees het eind van het woord in de Kroatische zin nog eens. Gaat er iets " +
-        "ergens heen, of is er iets ergens? Het werkwoord is bij beide hetzelfde — " +
-        "de uitgang is je enige aanwijzing."
+        "Lees de Kroatische zin nog eens woord voor woord. Er zit één klein " +
+        "verschil in dat de betekenis bepaalt — de rest van de zin helpt je niet."
       );
 
     case "word_order":

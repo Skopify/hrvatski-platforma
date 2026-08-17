@@ -54,7 +54,9 @@ const DIR = path.join(process.cwd(), "content", "modules");
 let cache: GrammarModule[] | null = null;
 
 export function loadModules(): GrammarModule[] {
-  if (cache) return cache;
+  // In ontwikkeling niet cachen: wie een module toevoegt, wil hem zien zonder
+  // de server te herstarten. In productie wél, want dan verandert content niet.
+  if (cache && process.env.NODE_ENV === "production") return cache;
   if (!fs.existsSync(DIR)) return (cache = []);
   cache = fs
     .readdirSync(DIR)

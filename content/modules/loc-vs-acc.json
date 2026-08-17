@@ -4,7 +4,10 @@
   "title_nl": "Naar huis of thuis?",
   "cefr": "A1/A2",
   "blurb_nl": "Het Kroatisch gebruikt hetzelfde voorzetsel voor «ergens heen» en «ergens zijn». Het verschil zit aan het eind van het woord — en dat is precies waar Nederlandstaligen struikelen.",
-  "prerequisites": ["ACC-MOTION", "LOC-PREP"],
+  "prerequisites": [
+    "ACC-MOTION",
+    "LOC-PREP"
+  ],
   "can_do_nl": [
     "Ik kan zeggen waar ik heen ga en waar ik ben, met u en na.",
     "Ik hoor aan de uitgang of een zin over beweging of over plaats gaat.",
@@ -20,13 +23,46 @@
     "contrast_nl": "Waar het Nederlands twee verschillende voorzetsels gebruikt, gebruikt het Kroatisch er één en laat het woord zelf het werk doen. Je kunt dus niet op het voorzetsel vertrouwen: bij «u» weet je nog niets.",
     "paradigm": {
       "caption_nl": "Hetzelfde voorzetsel, twee uitgangen",
-      "columns": ["waarheen? (accusatief)", "waar? (lokatief)"],
+      "columns": [
+        "waarheen? (accusatief)",
+        "waar? (lokatief)"
+      ],
       "rows": [
-        { "label": "grad — stad", "cells": ["u grad", "u gradu"] },
-        { "label": "škola — school", "cells": ["u školu", "u školi"] },
-        { "label": "more — zee", "cells": ["u more", "u moru"] },
-        { "label": "plaža — strand", "cells": ["na plažu", "na plaži"] },
-        { "label": "stol — tafel", "cells": ["na stol", "na stolu"] }
+        {
+          "label": "grad — stad",
+          "cells": [
+            "u grad",
+            "u gradu"
+          ]
+        },
+        {
+          "label": "škola — school",
+          "cells": [
+            "u školu",
+            "u školi"
+          ]
+        },
+        {
+          "label": "more — zee",
+          "cells": [
+            "u more",
+            "u moru"
+          ]
+        },
+        {
+          "label": "plaža — strand",
+          "cells": [
+            "na plažu",
+            "na plaži"
+          ]
+        },
+        {
+          "label": "stol — tafel",
+          "cells": [
+            "na stol",
+            "na stolu"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -57,7 +93,9 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Het **voorzetsel blijft hetzelfde**. In elk paar staat links en rechts dezelfde *u* of *na*.\n\nWat verandert is het **eind van het woord**: *kuću* wordt *kući*, *grad* wordt *gradu*, *stol* wordt *stolu*.\n\nEn kijk naar de Nederlandse kant: daar verandert juist het voorzetsel — *naar* school tegenover *op* school. Precies omgekeerd.",
-          "targets": ["g.mod.loc_vs_acc"]
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ]
         }
       ]
     },
@@ -75,16 +113,53 @@
           "body_nl": "In het Nederlands zie je het verschil aan het voorzetsel: je gaat *naar* school, maar je bent *op* school. Het Kroatisch gebruikt in beide gevallen **hetzelfde** voorzetsel en verandert het einde van het woord.\n\nGaat er iets ergens **heen** → accusatief: *Idem u školu.*\nIs er iets ergens → lokatief: *Ja sam u školi.*\n\nHet voorzetsel zegt dus niets. Het **werkwoord** verklapt het: bij *ići, doći, putovati, staviti* volgt de accusatief, bij *biti, živjeti, raditi, sjediti* de lokatief.",
           "table": {
             "caption_nl": "Hetzelfde voorzetsel, twee uitgangen",
-            "columns": ["waarheen? (accusatief)", "waar? (lokatief)"],
+            "columns": [
+              "waarheen? (accusatief)",
+              "waar? (lokatief)"
+            ],
             "rows": [
-              { "label": "grad — stad", "cells": ["u grad", "u gradu"] },
-              { "label": "škola — school", "cells": ["u školu", "u školi"] },
-              { "label": "more — zee", "cells": ["u more", "u moru"] },
-              { "label": "plaža — strand", "cells": ["na plažu", "na plaži"] },
-              { "label": "stol — tafel", "cells": ["na stol", "na stolu"] }
+              {
+                "label": "grad — stad",
+                "cells": [
+                  "u grad",
+                  "u gradu"
+                ]
+              },
+              {
+                "label": "škola — school",
+                "cells": [
+                  "u školu",
+                  "u školi"
+                ]
+              },
+              {
+                "label": "more — zee",
+                "cells": [
+                  "u more",
+                  "u moru"
+                ]
+              },
+              {
+                "label": "plaža — strand",
+                "cells": [
+                  "na plažu",
+                  "na plaži"
+                ]
+              },
+              {
+                "label": "stol — tafel",
+                "cells": [
+                  "na stol",
+                  "na stolu"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.loc_vs_acc", "g.07.u_na_akuzativ", "g.10.lokativ"]
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "g.07.u_na_akuzativ",
+            "g.10.lokativ"
+          ]
         },
         {
           "id": "m.locacc.011",
@@ -92,7 +167,9 @@
           "mode": "receptive",
           "prompt_nl": "Eén uitzondering die je vaak gaat horen",
           "body_nl": "**Idem kući** betekent 'ik ga naar huis'. Geen voorzetsel, en toch beweging.\n\nDit is een oude vorm die is blijven hangen in een paar vaste uitdrukkingen. Leer hem als geheel, niet als regel — net zoals je in het Nederlands 'naar huis' zegt en niet 'naar het huis'.\n\nLet op het verschil: *Idem kući* = ik ga naar huis. *Ja sam u kući* = ik ben in het huis.",
-          "targets": ["g.mod.loc_vs_acc"]
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ]
         }
       ]
     },
@@ -110,10 +187,16 @@
           "given": "Trčim u sobu.",
           "hint": "trčati = rennen",
           "answer": "Ik ren de kamer in.",
-          "distractors": ["Ik ren rond in de kamer."],
+          "distractors": [
+            "Ik ren rond in de kamer."
+          ],
           "explain_nl": "sobu is accusatief: er is beweging naar binnen. Hetzelfde werkwoord, andere uitgang, andere betekenis.",
-          "targets": ["g.mod.loc_vs_acc", "v.03.soba"],
-          "difficulty": 2
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.soba"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar het eind van sobu. Wijst die uitgang naar binnen gaan, of naar binnen zijn? Het werkwoord helpt je niet — dat is bij beide hetzelfde."
         },
         {
           "id": "m.locacc.021",
@@ -123,10 +206,16 @@
           "given": "Trčim u sobi.",
           "hint": "trčati = rennen",
           "answer": "Ik ren rond in de kamer.",
-          "distractors": ["Ik ren de kamer in."],
+          "distractors": [
+            "Ik ren de kamer in."
+          ],
           "explain_nl": "sobi is lokatief: het rennen gebeurt bínnen de kamer, er is geen beweging naar binnen.",
-          "targets": ["g.mod.loc_vs_acc", "v.03.soba"],
-          "difficulty": 2
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.soba"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar het eind van sobi. Wijst die uitgang naar binnen gaan, of naar binnen zijn? Het werkwoord helpt je niet — dat is bij beide hetzelfde."
         },
         {
           "id": "m.locacc.022",
@@ -136,10 +225,16 @@
           "given": "Plivam u more.",
           "hint": "plivati = zwemmen",
           "answer": "Ik zwem de zee in.",
-          "distractors": ["Ik zwem in de zee."],
+          "distractors": [
+            "Ik zwem in de zee."
+          ],
           "explain_nl": "more is hier accusatief — bij onzijdige woorden zien accusatief en nominatief er hetzelfde uit. De betekenis is beweging: van het strand het water in.",
-          "targets": ["g.mod.loc_vs_acc", "v.01.more"],
-          "difficulty": 3
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.more"
+          ],
+          "difficulty": 3,
+          "nudge": "more ziet er bij beide naamvallen hetzelfde uit. Denk aan wat zwemmen náár de zee zou betekenen tegenover zwemmen ín de zee."
         },
         {
           "id": "m.locacc.023",
@@ -149,10 +244,16 @@
           "given": "Plivam u moru.",
           "hint": "plivati = zwemmen",
           "answer": "Ik zwem in de zee.",
-          "distractors": ["Ik zwem de zee in."],
+          "distractors": [
+            "Ik zwem de zee in."
+          ],
           "explain_nl": "moru is lokatief: je bent al in het water en zwemt daar rond.",
-          "targets": ["g.mod.loc_vs_acc", "v.01.more"],
-          "difficulty": 2
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.more"
+          ],
+          "difficulty": 2,
+          "nudge": "Let op de -u aan het eind van moru. Welke van de twee naamvallen krijgt die uitgang?"
         },
         {
           "id": "m.locacc.024",
@@ -162,10 +263,16 @@
           "given": "Vozim u grad.",
           "hint": "voziti = rijden",
           "answer": "Ik rijd naar de stad.",
-          "distractors": ["Ik rijd rond in de stad."],
+          "distractors": [
+            "Ik rijd rond in de stad."
+          ],
           "explain_nl": "grad zonder uitgang is accusatief bij een mannelijk levenloos woord: de rit gaat ergens heen.",
-          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
-          "difficulty": 3
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
+          "difficulty": 3,
+          "nudge": "grad staat er kaal. Welke naamval ziet er bij een mannelijk levenloos woord uit als de woordenboekvorm?"
         },
         {
           "id": "m.locacc.025",
@@ -175,10 +282,16 @@
           "given": "Vozim u gradu.",
           "hint": "voziti = rijden",
           "answer": "Ik rijd rond in de stad.",
-          "distractors": ["Ik rijd naar de stad."],
+          "distractors": [
+            "Ik rijd naar de stad."
+          ],
           "explain_nl": "gradu is lokatief: het rijden gebeurt binnen de stad. Dit paar is het duidelijkste bewijs dat het voorzetsel niets zegt.",
-          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
-          "difficulty": 2
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
+          "difficulty": 2,
+          "nudge": "gradu heeft een uitgang die grad niet heeft. Welke naamval is dat, en wat betekent die hier?"
         }
       ]
     },
@@ -195,9 +308,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Idem u ___ (kuća).",
           "answer": "kuću",
-          "accepts": ["kuću"],
+          "accepts": [
+            "kuću"
+          ],
           "explain_nl": "idem = beweging → accusatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.01.kuca"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.kuca"
+          ],
           "difficulty": 1
         },
         {
@@ -207,9 +325,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sada sam u ___ (kuća).",
           "answer": "kući",
-          "accepts": ["kući"],
+          "accepts": [
+            "kući"
+          ],
           "explain_nl": "sam = ik ben, plaats → lokatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.01.kuca"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.kuca"
+          ],
           "difficulty": 1
         },
         {
@@ -219,9 +342,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Marko ide na ___ (plaža).",
           "answer": "plažu",
-          "accepts": ["plažu"],
+          "accepts": [
+            "plažu"
+          ],
           "explain_nl": "ide = gaat → accusatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.plaza"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.plaza"
+          ],
           "difficulty": 1
         },
         {
@@ -231,9 +359,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Marko je na ___ (plaža).",
           "answer": "plaži",
-          "accepts": ["plaži"],
+          "accepts": [
+            "plaži"
+          ],
           "explain_nl": "je = is, plaats → lokatief. Let op: ž blijft ž.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.plaza"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.plaza"
+          ],
           "difficulty": 2
         },
         {
@@ -243,9 +376,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Putujemo u ___ (grad).",
           "answer": "grad",
-          "accepts": ["grad"],
+          "accepts": [
+            "grad"
+          ],
           "explain_nl": "Mannelijk en levenloos: de accusatief ziet eruit als de woordenboekvorm. Er verandert niets — en dat is het antwoord.",
-          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
           "difficulty": 3
         },
         {
@@ -255,9 +393,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Živimo u ___ (grad).",
           "answer": "gradu",
-          "accepts": ["gradu"],
+          "accepts": [
+            "gradu"
+          ],
           "explain_nl": "živimo = we wonen, plaats → lokatief -u.",
-          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
           "difficulty": 1
         },
         {
@@ -267,9 +410,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Stavi knjigu na ___ (stol).",
           "answer": "stol",
-          "accepts": ["stol"],
+          "accepts": [
+            "stol"
+          ],
           "explain_nl": "stavi = leg, beweging → accusatief, en die is hier gelijk aan de woordenboekvorm.",
-          "targets": ["g.mod.loc_vs_acc", "v.03.stol"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.stol"
+          ],
           "difficulty": 2
         },
         {
@@ -279,9 +427,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Knjiga je na ___ (stol).",
           "answer": "stolu",
-          "accepts": ["stolu"],
+          "accepts": [
+            "stolu"
+          ],
           "explain_nl": "je = ligt, plaats → lokatief -u.",
-          "targets": ["g.mod.loc_vs_acc", "v.03.stol"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.stol"
+          ],
           "difficulty": 1
         },
         {
@@ -291,9 +444,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Djeca idu u ___ (škola).",
           "answer": "školu",
-          "accepts": ["školu"],
+          "accepts": [
+            "školu"
+          ],
           "explain_nl": "idu = gaan → accusatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.skola"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.skola"
+          ],
           "difficulty": 1
         },
         {
@@ -303,9 +461,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Djeca su u ___ (škola).",
           "answer": "školi",
-          "accepts": ["školi"],
+          "accepts": [
+            "školi"
+          ],
           "explain_nl": "su = zijn, plaats → lokatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.skola"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.skola"
+          ],
           "difficulty": 1
         }
       ]
@@ -323,9 +486,13 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Dolazim iz ___ (Zagreb).",
           "answer": "Zagreba",
-          "accepts": ["Zagreba"],
+          "accepts": [
+            "Zagreba"
+          ],
           "explain_nl": "iz vraagt altijd de genitief — dit voorzetsel kent maar één naamval. Anders dan u en na.",
-          "targets": ["g.16.genitiv_prijedlozi"],
+          "targets": [
+            "g.16.genitiv_prijedlozi"
+          ],
           "difficulty": 3
         },
         {
@@ -335,9 +502,13 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sutra idem u ___ (Zagreb).",
           "answer": "Zagreb",
-          "accepts": ["Zagreb"],
+          "accepts": [
+            "Zagreb"
+          ],
           "explain_nl": "idem = beweging → accusatief, gelijk aan de woordenboekvorm.",
-          "targets": ["g.mod.loc_vs_acc"],
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ],
           "difficulty": 2
         },
         {
@@ -347,9 +518,13 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sada sam u ___ (Zagreb).",
           "answer": "Zagrebu",
-          "accepts": ["Zagrebu"],
+          "accepts": [
+            "Zagrebu"
+          ],
           "explain_nl": "sam = ik ben, plaats → lokatief.",
-          "targets": ["g.mod.loc_vs_acc"],
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ],
           "difficulty": 2
         },
         {
@@ -359,9 +534,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Idemo do ___ (trg).",
           "answer": "trga",
-          "accepts": ["trga"],
+          "accepts": [
+            "trga"
+          ],
           "explain_nl": "do vraagt de genitief. Ook al is er beweging — het voorzetsel bepaalt het hier, niet de betekenis.",
-          "targets": ["g.16.genitiv_prijedlozi", "v.07.trg"],
+          "targets": [
+            "g.16.genitiv_prijedlozi",
+            "v.07.trg"
+          ],
           "difficulty": 4
         },
         {
@@ -371,9 +551,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sjedimo na ___ (trg).",
           "answer": "trgu",
-          "accepts": ["trgu"],
+          "accepts": [
+            "trgu"
+          ],
           "explain_nl": "sjedimo = we zitten, plaats → lokatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.trg"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.trg"
+          ],
           "difficulty": 2
         },
         {
@@ -383,9 +568,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ana sjedi u kafić i pije kavu.",
           "answer": "Ana sjedi u kafiću i pije kavu.",
-          "accepts": ["Ana sjedi u kafiću i pije kavu.", "Ana sjedi u kafiću i pije kavu"],
+          "accepts": [
+            "Ana sjedi u kafiću i pije kavu.",
+            "Ana sjedi u kafiću i pije kavu"
+          ],
           "explain_nl": "sjedi = zit, dus plaats: kafiću. Het werkwoord verklapt het, niet het voorzetsel.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.kafic"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.kafic"
+          ],
           "difficulty": 3
         }
       ]
@@ -404,7 +595,11 @@
           "mode": "receptive",
           "prompt_nl": "Waar koopt Ana brood?",
           "answer": "Op de markt.",
-          "distractors": ["In het café.", "Op het strand.", "Thuis."],
+          "distractors": [
+            "In het café.",
+            "Op het strand.",
+            "Thuis."
+          ],
           "explain_nl": "«Prvo ide na tržnicu jer kupuje kruh» — ze gaat naar de markt om brood te kopen.",
           "targets": [],
           "difficulty": 1
@@ -415,7 +610,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat doet Ana op het strand?",
           "answer": "Ze zit en leest.",
-          "distractors": ["Ze zwemt.", "Ze drinkt koffie.", "Ze koopt fruit."],
+          "distractors": [
+            "Ze zwemt.",
+            "Ze drinkt koffie.",
+            "Ze koopt fruit."
+          ],
           "explain_nl": "«Na plaži sjedi dva sata i čita knjigu.»",
           "targets": [],
           "difficulty": 1
@@ -433,8 +632,12 @@
             "Het is een spelfout in de tekst."
           ],
           "explain_nl": "Precies het punt van deze module: hetzelfde voorzetsel na, en het werkwoord bepaalt de uitgang. vozi is beweging, sjedi is plaats.",
-          "targets": ["g.mod.loc_vs_acc", "v.07.plaza"],
-          "difficulty": 2
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.07.plaza"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar de twee werkwoorden: vozi en sjedi. Gaat er bij allebei iets ergens heen?"
         },
         {
           "id": "m.locacc.063",
@@ -443,10 +646,17 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "Doma stavlja voće na ___ (stol) i sjedi u ___ (soba).",
           "answer": "stol i sjedi u sobi",
-          "accepts": ["stol i sjedi u sobi", "stol, sjedi u sobi"],
+          "accepts": [
+            "stol i sjedi u sobi",
+            "stol, sjedi u sobi"
+          ],
           "hint": "Twee gaten: eerst beweging, dan plaats.",
           "explain_nl": "stavlja = zet (beweging) → na stol. sjedi = zit (plaats) → u sobi. Dezelfde zin, beide naamvallen.",
-          "targets": ["g.mod.loc_vs_acc", "v.03.stol", "v.03.soba"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.03.stol",
+            "v.03.soba"
+          ],
           "difficulty": 4
         },
         {
@@ -461,7 +671,9 @@
             "Beide zinnen gebruiken u of na."
           ],
           "explain_nl": "Als je het verschil zelf kunt maken, zit de regel waar hij hoort.",
-          "targets": ["g.mod.loc_vs_acc"],
+          "targets": [
+            "g.mod.loc_vs_acc"
+          ],
           "difficulty": 4
         }
       ]

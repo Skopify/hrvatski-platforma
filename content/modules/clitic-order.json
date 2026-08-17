@@ -1,0 +1,758 @@
+{
+  "code": "CLITIC-ORDER",
+  "title_hr": "Dao mi ga je",
+  "title_nl": "De korte woordjes op hun plek",
+  "cefr": "A2/B1",
+  "blurb_nl": "Sam, mi, ga, se, je — de kleinste woorden van het Kroatisch staan altijd op dezelfde plek, in altijd dezelfde volgorde. Bijna geen enkele cursus legt dat uit, en het is precies wat een zin Kroatisch of on-Kroatisch laat klinken.",
+  "prerequisites": [
+    "PERFEKT",
+    "DAT-CLITIC"
+  ],
+  "can_do_nl": [
+    "Ik weet dat de korte woordjes op de tweede plek in de zin staan.",
+    "Ik ken hun onderlinge volgorde en hoef niet meer te gokken.",
+    "Ik hoor aan de woordjes wie iets aan wie gaf.",
+    "Ik weet waarom je achteraan staat en niet vooraan."
+  ],
+  "grammar": {
+    "id": "g.mod.clitic_order",
+    "code": "CLITIC-ORDER",
+    "title_nl": "De volgorde van de korte woordjes",
+    "cefr": "A2/B1",
+    "explanation_nl": "Een handvol Kroatische woordjes heeft geen eigen klemtoon: *sam, si, je, smo, ste, su*, de korte voornaamwoorden *mi, ti, mu, joj, me, te, ga, ih*, en *se* en *li*. Ze kunnen niet alleen staan en niet vooraan in de zin. Ze klitten samen tot één trosje op de **tweede plek**: direct achter het eerste woord.",
+    "contrast_nl": "Het Nederlands schuift korte woordjes ook naar voren — 'ik heb het hem gegeven' — maar de volgorde is daar losser en de plek minder streng. In het Kroatisch ligt allebei vast, en een zin met de woordjes op de verkeerde plek klinkt meteen fout, ook als elk woord op zich klopt.",
+    "paradigm": {
+      "caption_nl": "De vaste volgorde binnen het trosje",
+      "columns": [
+        "woordjes",
+        "voorbeeld"
+      ],
+      "rows": [
+        {
+          "label": "1. vraag",
+          "cells": [
+            "li",
+            "Jesi li…?"
+          ]
+        },
+        {
+          "label": "2. hulpwerkwoord",
+          "cells": [
+            "sam, si, smo, ste, su",
+            "Dao sam…"
+          ]
+        },
+        {
+          "label": "3. aan wie",
+          "cells": [
+            "mi, ti, mu, joj, nam, vam, im",
+            "Dao mi…"
+          ]
+        },
+        {
+          "label": "4. wat",
+          "cells": [
+            "me, te, ga, je, nas, vas, ih",
+            "Dao mi ga…"
+          ]
+        },
+        {
+          "label": "5. se",
+          "cells": [
+            "se",
+            "Sviđa mi se."
+          ]
+        },
+        {
+          "label": "6. je (hij/zij was)",
+          "cells": [
+            "je",
+            "Dao mi ga je."
+          ]
+        }
+      ]
+    },
+    "pitfalls_nl": [
+      "Het trosje vooraan zetten. Nooit «Sam radio jučer» — er moet altijd iets vóór staan.",
+      "je bij de andere hulpwerkwoorden zetten. Sam staat vooraan in het trosje, maar je hoort helemaal achteraan: Dao mi ga je.",
+      "In de standaardtaal valt je weg als er ook se staat: Vratio se, niet «Vratio se je»."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes zinnen. Kijk niet naar wat ze betekenen, maar naar wáár de kleine woordjes staan.",
+      "exercises": [
+        {
+          "id": "m.clitic.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Waar staan de korte woordjes?",
+          "given": "Jučer sam radio.\nIvan mi ga je dao.\nDao sam mu knjigu.\nJesi li mu ga dao?\nSviđa mi se.\nVratio se u pet sati.",
+          "body_nl": "Gisteren heb ik gewerkt.\nIvan heeft het mij gegeven.\nIk heb hem het boek gegeven.\nHeb jij het hem gegeven?\nIk vind het leuk.\nHij is om vijf uur teruggekomen.",
+          "targets": []
+        },
+        {
+          "id": "m.clitic.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In élke zin staan de kleine woordjes **op de tweede plek**. Er gaat altijd precies één ding aan vooraf: *Jučer*, *Ivan*, *Dao*, *Jesi*, *Sviđa*, *Vratio*.\n\nNooit vooraan. En als er meer dan één klein woordje is, staan ze **bij elkaar** — niet verspreid door de zin.\n\nKijk ook naar *Ivan mi ga je dao*: daar staan er drie achter elkaar, in een volgorde die niet toevallig is. Die volgorde is altijd dezelfde, en dat is het goede nieuws.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.13.red_klitika"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Twee dingen: waar het trosje staat, en in welke volgorde de woordjes erin staan.",
+      "exercises": [
+        {
+          "id": "m.clitic.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Altijd de tweede plek",
+          "body_nl": "Sommige Kroatische woordjes hebben geen eigen klemtoon: *sam, si, je, smo, ste, su*, de korte voornaamwoorden *mi, mu, joj, me, ga, ih*, en *se* en *li*.\n\nZe kunnen niet alleen staan en **nooit vooraan**. Ze leunen op het woord ervóór en vormen samen één trosje op de **tweede plek**.\n\n*Jučer* **sam** *radio.* ✓\n**Sam** *jučer radio.* ✗\n\nWat er op de eerste plek staat, mag je zelf kiezen — en daarmee bepaal je waar de nadruk ligt:\n\n*Ivan mi ga je dao.* — Ivan gaf het me.\n*Knjigu mi je dao.* — Het bóek gaf hij me.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.13.red_klitika"
+          ]
+        },
+        {
+          "id": "m.clitic.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "En binnen het trosje: altijd deze volgorde",
+          "body_nl": "Staan er meerdere woordjes, dan is hun onderlinge volgorde vast. Van links naar rechts:\n\n**li** — **sam** — **aan wie** — **wat** — **se** — **je**\n\nOnthoud het als een zinnetje: *vraag, hulp, aan wie, wat, se, en je achteraan.*\n\nDie laatste is de gemene: *je* is óók een hulpwerkwoord, maar hij hoort niet bij *sam* vooraan — hij staat helemaal achteraan.\n\n*Dao sam mu ga.* — ik gaf het hem.\n*Dao mi ga je.* — hij gaf het mij.",
+          "table": {
+            "caption_nl": "De vaste volgorde binnen het trosje",
+            "columns": [
+              "woordjes",
+              "voorbeeld"
+            ],
+            "rows": [
+              {
+                "label": "1. vraag",
+                "cells": [
+                  "li",
+                  "Jesi li…?"
+                ]
+              },
+              {
+                "label": "2. hulpwerkwoord",
+                "cells": [
+                  "sam, si, smo, ste, su",
+                  "Dao sam…"
+                ]
+              },
+              {
+                "label": "3. aan wie",
+                "cells": [
+                  "mi, ti, mu, joj, nam, vam, im",
+                  "Dao mi…"
+                ]
+              },
+              {
+                "label": "4. wat",
+                "cells": [
+                  "me, te, ga, je, nas, vas, ih",
+                  "Dao mi ga…"
+                ]
+              },
+              {
+                "label": "5. se",
+                "cells": [
+                  "se",
+                  "Sviđa mi se."
+                ]
+              },
+              {
+                "label": "6. je",
+                "cells": [
+                  "je",
+                  "Dao mi ga je."
+                ]
+              }
+            ]
+          },
+          "targets": [
+            "g.mod.clitic_order",
+            "g.13.red_klitika"
+          ]
+        },
+        {
+          "id": "m.clitic.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Eén samenloop om te onthouden",
+          "body_nl": "Komen *se* en *je* in dezelfde zin samen, dan valt **je** in de standaardtaal weg.\n\n*Vratio se.* ✓ — hij is teruggekomen.\n*Vratio se je.* ✗\n\nJe hoort het gesproken soms wel, vooral in het noorden, maar geschreven laat je het weg.\n\nBij alle andere personen blijft alles gewoon staan: *Vratio sam se.* — ik ben teruggekomen.",
+          "targets": [
+            "g.mod.clitic_order"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wie deed wat, aan wie?",
+      "why_nl": "Nog niets invullen. Dezelfde drie woordjes, andere volgorde — en dan is het een heel ander verhaal.",
+      "exercises": [
+        {
+          "id": "m.clitic.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie gaf, en aan wie?",
+          "given": "Dao sam mu ga.",
+          "hint": "dati = geven",
+          "answer": "Ik gaf het aan hem.",
+          "distractors": [
+            "Hij gaf het aan mij."
+          ],
+          "explain_nl": "sam = ik, mu = aan hem. Het hulpwerkwoord verklapt wie er handelt.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 3,
+          "nudge": "Welk klein woordje zegt wie er handelt, en welk zegt aan wie? Kijk naar het hulpwerkwoord."
+        },
+        {
+          "id": "m.clitic.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie gaf, en aan wie?",
+          "given": "Dao mi ga je.",
+          "hint": "dati = geven",
+          "answer": "Hij gaf het aan mij.",
+          "distractors": [
+            "Ik gaf het aan hem."
+          ],
+          "explain_nl": "je (achteraan) = hij, mi = aan mij. Bijna dezelfde woordjes als de vorige zin, precies de omgekeerde betekenis.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 4,
+          "nudge": "Welk klein woordje zegt wie er handelt, en welk zegt aan wie? Let vooral op het laatste woordje."
+        },
+        {
+          "id": "m.clitic.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zag wie?",
+          "given": "Vidio sam ga.",
+          "hint": "vidjeti = zien",
+          "answer": "Ik heb hem gezien.",
+          "distractors": [
+            "Hij heeft mij gezien."
+          ],
+          "explain_nl": "sam = ik ben degene die zag, ga = hem.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.09.vidjeti"
+          ],
+          "difficulty": 2,
+          "nudge": "Sam hoort bij ik. Wat blijft er dan over voor het andere woordje?"
+        },
+        {
+          "id": "m.clitic.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zag wie?",
+          "given": "Vidio me je.",
+          "hint": "vidjeti = zien",
+          "answer": "Hij heeft mij gezien.",
+          "distractors": [
+            "Ik heb hem gezien."
+          ],
+          "explain_nl": "me = mij, en je achteraan = hij. Precies de spiegel van de vorige zin.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.09.vidjeti"
+          ],
+          "difficulty": 3,
+          "nudge": "Hier staat geen sam. Welk woordje neemt die rol over, en wie is dat?"
+        },
+        {
+          "id": "m.clitic.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waar ligt hier de nadruk op?",
+          "given": "Knjigu mi je dao.",
+          "hint": "Vergelijk met: Dao mi je knjigu.",
+          "answer": "Op het boek — hij gaf me het bóek (en niet iets anders).",
+          "distractors": [
+            "Op wie het gaf.",
+            "Er is geen verschil met Dao mi je knjigu.",
+            "Op wanneer het gebeurde."
+          ],
+          "explain_nl": "Wat je op de eerste plek zet, krijgt de nadruk. Het trosje schuift gewoon mee naar de tweede plek.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.01.knjiga"
+          ],
+          "difficulty": 4,
+          "nudge": "Wat er op de eerste plek staat, krijgt de nadruk. Wat staat hier vooraan?"
+        },
+        {
+          "id": "m.clitic.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke van deze twee is goed Kroatisch?",
+          "given": "A: Vratio se u pet sati.\nB: Vratio se je u pet sati.",
+          "answer": "A — als se en je samenkomen, valt je weg.",
+          "distractors": [
+            "B — je hoort er altijd bij.",
+            "Allebei goed, het is een kwestie van smaak.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Dit is de enige plek waar een woordje uit het trosje verdwijnt. Geschreven laat je je altijd weg als er se staat.",
+          "targets": [
+            "g.mod.clitic_order"
+          ],
+          "difficulty": 4,
+          "nudge": "Er is één plek waar een woordje uit het trosje verdwijnt. Welke twee woordjes botsen hier?"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf ordenen",
+      "why_nl": "Tien keer dezelfde puzzel: zet de woordjes op de tweede plek, in de volgorde vraag–hulp–aan wie–wat–se–je.",
+      "exercises": [
+        {
+          "id": "m.clitic.030",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Jučer",
+            "sam",
+            "ga",
+            "vidio"
+          ],
+          "answer": "Jučer sam ga vidio",
+          "accepts": [
+            "Jučer sam ga vidio",
+            "Jučer sam ga vidio."
+          ],
+          "explain_nl": "Jučer op één, dan het trosje: sam (hulp) vóór ga (wat).",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.09.vidjeti"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.clitic.031",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Ivan",
+            "mi",
+            "ga",
+            "je",
+            "dao"
+          ],
+          "answer": "Ivan mi ga je dao",
+          "accepts": [
+            "Ivan mi ga je dao",
+            "Ivan mi ga je dao."
+          ],
+          "explain_nl": "Ivan op één. Dan: aan wie (mi), wat (ga), en je helemaal achteraan.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.032",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde. Het is een vraag.",
+          "tokens": [
+            "Jesi",
+            "li",
+            "mu",
+            "ga",
+            "dao"
+          ],
+          "answer": "Jesi li mu ga dao",
+          "accepts": [
+            "Jesi li mu ga dao",
+            "Jesi li mu ga dao?"
+          ],
+          "explain_nl": "li staat als eerste van het trosje, dan aan wie (mu), dan wat (ga).",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.033",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Dao",
+            "sam",
+            "mu",
+            "knjigu"
+          ],
+          "answer": "Dao sam mu knjigu",
+          "accepts": [
+            "Dao sam mu knjigu",
+            "Dao sam mu knjigu."
+          ],
+          "explain_nl": "Als er niets anders vooraan staat, gaat het werkwoord op de eerste plek en volgt het trosje meteen.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.01.knjiga"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.clitic.034",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Sviđa",
+            "mi",
+            "se",
+            "grad"
+          ],
+          "answer": "Sviđa mi se grad",
+          "accepts": [
+            "Sviđa mi se grad",
+            "Sviđa mi se grad."
+          ],
+          "explain_nl": "aan wie (mi) komt vóór se. Letterlijk: de stad bevalt aan mij.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.05.grad"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.clitic.035",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Sam jučer radio u uredu.",
+          "answer": "Jučer sam radio u uredu.",
+          "accepts": [
+            "Jučer sam radio u uredu.",
+            "Jučer sam radio u uredu"
+          ],
+          "explain_nl": "sam kan nooit vooraan. Zet jučer op de eerste plek en het trosje schuift naar plek twee.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.14.ured"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.clitic.036",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ivan je mi ga dao.",
+          "answer": "Ivan mi ga je dao.",
+          "accepts": [
+            "Ivan mi ga je dao.",
+            "Ivan mi ga je dao"
+          ],
+          "explain_nl": "je hoort achteraan, niet bij de andere hulpwerkwoorden vooraan. Dit is de fout die je het vaakst gaat maken.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 5
+        },
+        {
+          "id": "m.clitic.037",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Vratio se je u pet sati.",
+          "answer": "Vratio se u pet sati.",
+          "accepts": [
+            "Vratio se u pet sati.",
+            "Vratio se u pet sati"
+          ],
+          "explain_nl": "se en je samen: je valt weg.",
+          "targets": [
+            "g.mod.clitic_order"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Dao sam ga mu.",
+          "answer": "Dao sam mu ga.",
+          "accepts": [
+            "Dao sam mu ga.",
+            "Dao sam mu ga"
+          ],
+          "explain_nl": "Eerst aan wie (mu), dan wat (ga). In het Nederlands mag het allebei — in het Kroatisch niet.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.039",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een man is aan het woord.",
+          "given": "Ik heb het hem gegeven.",
+          "answer": "Dao sam mu ga.",
+          "accepts": [
+            "Dao sam mu ga.",
+            "Dao sam mu ga"
+          ],
+          "explain_nl": "Werkwoord op één, dan sam, dan mu (aan wie), dan ga (wat).",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu komen de verleden tijd en de naamvallen erbij. Het trosje moet kloppen én de rest ook.",
+      "exercises": [
+        {
+          "id": "m.clitic.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Ana vertelt. Vul het deelwoord in.",
+          "given": "Jučer sam mu ga ___ (dati).",
+          "answer": "dala",
+          "accepts": [
+            "dala"
+          ],
+          "explain_nl": "Ana is vrouwelijk → dala. Het trosje stond al goed: sam, mu, ga.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.mod.clitic_order",
+            "v.13.dati"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Vratio se u ___ (kuća) u pet sati.",
+          "answer": "kuću",
+          "accepts": [
+            "kuću"
+          ],
+          "explain_nl": "vratio se = hij kwam terug, dus beweging → accusatief.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.kuca"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.clitic.052",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Ana",
+            "mi",
+            "je",
+            "napisala",
+            "pismo"
+          ],
+          "answer": "Ana mi je napisala pismo",
+          "accepts": [
+            "Ana mi je napisala pismo",
+            "Ana mi je napisala pismo."
+          ],
+          "explain_nl": "Ana op één, dan mi (aan wie) en je (achteraan). En napisala is voltooid én vrouwelijk — drie dingen tegelijk goed.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.mod.perfekt",
+            "g.mod.aspect_pairs",
+            "v.01.pismo"
+          ],
+          "difficulty": 5
+        },
+        {
+          "id": "m.clitic.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed?",
+          "given": "Ik heb hem gisteren op het strand gezien.",
+          "answer": "Jučer sam ga vidio na plaži.",
+          "distractors": [
+            "Jučer ga sam vidio na plaži.",
+            "Jučer sam ga vidio na plažu.",
+            "Sam ga jučer vidio na plaži."
+          ],
+          "explain_nl": "sam vóór ga, het trosje op plek twee, en plaži in de lokatief want je zág hem daar — er was geen beweging naartoe.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.mod.loc_vs_acc",
+            "v.07.plaza"
+          ],
+          "difficulty": 5
+        },
+        {
+          "id": "m.clitic.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Ana je mi dao knjigu.",
+          "answer": "Ana mi je dala knjigu.",
+          "accepts": [
+            "Ana mi je dala knjigu.",
+            "Ana mi je dala knjigu"
+          ],
+          "hint": "Eén fout zit in de volgorde, één in het deelwoord.",
+          "explain_nl": "je hoort achter mi, en Ana is vrouwelijk dus dala.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.mod.perfekt",
+            "v.13.dati"
+          ],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Tel bij het lezen hoe vaak het trosje op de tweede plek staat. Je zult het niet één keer ergens anders vinden.",
+      "text_hr": "Ivan mi je jučer poslao poruku. Pitao me je jesam li slobodan. Odgovorio sam mu da jesam. Našli smo se u kafiću na trgu. Donio mi je knjigu koju sam tražio mjesecima. Dao mi ju je bez riječi. Zahvalio sam mu i platio kavu. Vratili smo se kući pješice. Sviđa mi se što je došao.",
+      "translation_nl": "Ivan heeft me gisteren een bericht gestuurd. Hij vroeg me of ik vrij was. Ik antwoordde hem dat ik dat was. We hebben elkaar in het café op het plein getroffen. Hij bracht me het boek dat ik al maanden zocht. Hij gaf het me zonder een woord. Ik bedankte hem en betaalde de koffie. We zijn te voet naar huis teruggelopen. Ik vind het fijn dat hij gekomen is.",
+      "exercises": [
+        {
+          "id": "m.clitic.060",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Dao mi ju je bez riječi». Wie gaf aan wie?",
+          "given": "Dao mi ju je bez riječi.",
+          "hint": "ju = haar/hem, hier: het boek (knjiga is vrouwelijk)",
+          "answer": "Ivan gaf het boek aan mij.",
+          "distractors": [
+            "Ik gaf het boek aan Ivan.",
+            "Ivan gaf mij aan iemand anders.",
+            "Het boek gaf iets aan Ivan."
+          ],
+          "explain_nl": "je achteraan = hij, mi = aan mij, ju = het boek. Precies de volgorde uit de tabel: aan wie, wat, en je als laatste.",
+          "targets": [
+            "g.mod.clitic_order",
+            "v.13.dati",
+            "v.01.knjiga"
+          ],
+          "difficulty": 4,
+          "nudge": "Drie woordjes: mi, ju en je. Ga de tabel af — aan wie, wat, en wie handelt er?"
+        },
+        {
+          "id": "m.clitic.061",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar hebben ze elkaar ontmoet?",
+          "answer": "In het café op het plein.",
+          "distractors": [
+            "Thuis bij Ivan.",
+            "Op het strand.",
+            "In de winkel."
+          ],
+          "explain_nl": "«Našli smo se u kafiću na trgu.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.clitic.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Vratili smo se kući». Waarom staat er geen je?",
+          "given": "Vratili smo se kući pješice.",
+          "answer": "Omdat het over wij gaat: het hulpwerkwoord is smo, niet je.",
+          "distractors": [
+            "Omdat je altijd wegvalt bij se.",
+            "Omdat het een vraag is.",
+            "Omdat kući geen voorzetsel heeft."
+          ],
+          "explain_nl": "De regel dat je wegvalt geldt alleen bij hij of zij. Bij wij staat smo er gewoon, vóór se.",
+          "targets": [
+            "g.mod.clitic_order"
+          ],
+          "difficulty": 5,
+          "nudge": "De regel over het wegvallen van je geldt maar voor één persoon. Om wie gaat deze zin?"
+        },
+        {
+          "id": "m.clitic.063",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet deze zin uit de tekst in de goede volgorde.",
+          "tokens": [
+            "Ivan",
+            "mi",
+            "je",
+            "poslao",
+            "poruku"
+          ],
+          "answer": "Ivan mi je poslao poruku",
+          "accepts": [
+            "Ivan mi je poslao poruku",
+            "Ivan mi je poslao poruku."
+          ],
+          "explain_nl": "Ivan op één, dan mi (aan wie), dan je (achteraan), dan pas het werkwoord.",
+          "targets": [
+            "g.mod.clitic_order"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.clitic.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen: één waarin je iemand iets gaf, en één waarin iemand jou iets gaf.",
+          "model_answer": "Dao sam mu knjigu. Ana mi je dala kavu.",
+          "rubric_nl": [
+            "De korte woordjes staan op de tweede plek, niet vooraan.",
+            "In de tweede zin staat je achteraan in het trosje.",
+            "Aan wie komt vóór wat.",
+            "Het deelwoord past bij wie het deed."
+          ],
+          "explain_nl": "Wie deze twee zinnen zonder nadenken goed krijgt, heeft iets te pakken waar veel gevorderden nog over struikelen.",
+          "targets": [
+            "g.mod.clitic_order",
+            "g.mod.perfekt"
+          ],
+          "difficulty": 5
+        }
+      ]
+    }
+  ],
+  "source": "curriculum CLITIC-ORDER, gebouwd op les 13 (g.13.red_klitika) en flink uitgebreid"
+}

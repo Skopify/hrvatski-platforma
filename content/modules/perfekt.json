@@ -1,0 +1,697 @@
+{
+  "code": "PERFEKT",
+  "title_hr": "Što si jučer radio?",
+  "title_nl": "Praten over gisteren",
+  "cefr": "A2",
+  "blurb_nl": "De verleden tijd lijkt op het Nederlands: een hulpwerkwoord plus een deelwoord. Eén ding is anders, en daar gaat het altijd mis — het deelwoord past zich aan aan wie het deed.",
+  "prerequisites": [
+    "BITI-CLITIC",
+    "ASPECT-PAIRS"
+  ],
+  "can_do_nl": [
+    "Ik kan vertellen wat ik gisteren gedaan heb.",
+    "Ik gebruik radio of radila, afhankelijk van wie er praat.",
+    "Ik kan de verleden tijd ontkennen en er een vraag van maken.",
+    "Ik herken de deelwoorden die niet volgens de regel gaan: išao, jeo, mogao."
+  ],
+  "grammar": {
+    "id": "g.mod.perfekt",
+    "code": "PERFEKT",
+    "title_nl": "Perfekt — de verleden tijd",
+    "cefr": "A2",
+    "explanation_nl": "De Kroatische verleden tijd bestaat uit twee delen: een korte vorm van **biti** (sam, si, je, smo, ste, su) plus het **deelwoord** van het werkwoord. Het deelwoord maak je meestal door de -ti van de infinitief te vervangen: *raditi* wordt *radio*.",
+    "contrast_nl": "Tot zover is het bijna Nederlands: 'ik heb gewerkt' heeft ook een hulpwerkwoord en een deelwoord. Het verschil is dat het Kroatische deelwoord meebuigt met wie het deed. Een man zegt radio sam, een vrouw radila sam, en samen zeggen ze radili smo. In het Nederlands verandert 'gewerkt' nooit.",
+    "paradigm": {
+      "caption_nl": "raditi — werken, in de verleden tijd",
+      "columns": [
+        "mannelijk",
+        "vrouwelijk",
+        "meervoud"
+      ],
+      "rows": [
+        {
+          "label": "ja",
+          "cells": [
+            "radio sam",
+            "radila sam",
+            "—"
+          ]
+        },
+        {
+          "label": "ti",
+          "cells": [
+            "radio si",
+            "radila si",
+            "—"
+          ]
+        },
+        {
+          "label": "on / ona",
+          "cells": [
+            "radio je",
+            "radila je",
+            "—"
+          ]
+        },
+        {
+          "label": "mi / vi / oni",
+          "cells": [
+            "—",
+            "—",
+            "radili smo / ste / su"
+          ]
+        }
+      ]
+    },
+    "pitfalls_nl": [
+      "Het deelwoord vergeten aan te passen. Als vrouw zeg je radila sam, ook al staat radio in het woordenboek.",
+      "De korte vorm van biti staat op de tweede plek in de zin, niet vooraan: Jučer sam radio, niet Sam jučer radio.",
+      "Bij ontkenning verdwijnt de korte vorm en komt nisam: nisam radio, niet ne sam radio."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Dezelfde handeling, vier keer. Er verandert steeds maar één ding.",
+      "exercises": [
+        {
+          "id": "m.perfekt.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wie zegt wat?",
+          "given": "Marko: Jučer sam radio u uredu.\nAna: Jučer sam radila u uredu.\nMarko i Ana: Jučer smo radili u uredu.\n\nMarko: Nisam radio.\nAna: Nisam radila.\nAna: Jesi li radio, Marko?",
+          "body_nl": "Marko: Gisteren heb ik op kantoor gewerkt.\nAna: Gisteren heb ik op kantoor gewerkt.\nMarko en Ana: Gisteren hebben we op kantoor gewerkt.\n\nMarko: Ik heb niet gewerkt.\nAna: Ik heb niet gewerkt.\nAna: Heb jij gewerkt, Marko?",
+          "targets": []
+        },
+        {
+          "id": "m.perfekt.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In het Nederlands staat er zes keer hetzelfde: **gewerkt**.\n\nIn het Kroatisch staat er *radio*, *radila*, *radili* — het werkwoord past zich aan aan **wie het deed**. Marko zegt radio, Ana zegt radila, samen zeggen ze radili.\n\nEn kijk waar *sam* staat: nooit vooraan. Het schuift naar de tweede plek, achter *jučer*.\n\nBij de ontkenning verdwijnt *sam* helemaal en komt er **nisam** voor in de plaats.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Twee delen: een hulpwerkwoord en een deelwoord. Alleen dat tweede deel buigt mee.",
+      "exercises": [
+        {
+          "id": "m.perfekt.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Hulpwerkwoord plus deelwoord",
+          "body_nl": "De verleden tijd is: korte vorm van **biti** + **deelwoord**.\n\nHet deelwoord maak je door de **-ti** van de infinitief te vervangen: *raditi* → *radi-* → **radio** (man), **radila** (vrouw), **radili** (meervoud).\n\nDat meebuigen is het enige echte verschil met het Nederlands. 'Gewerkt' blijft altijd 'gewerkt'; *radio* niet.\n\nEn let op de plek van *sam*: die staat op de **tweede** plek in de zin, nooit vooraan.",
+          "table": {
+            "caption_nl": "raditi — werken, in de verleden tijd",
+            "columns": [
+              "mannelijk",
+              "vrouwelijk",
+              "meervoud"
+            ],
+            "rows": [
+              {
+                "label": "ja",
+                "cells": [
+                  "radio sam",
+                  "radila sam",
+                  "—"
+                ]
+              },
+              {
+                "label": "ti",
+                "cells": [
+                  "radio si",
+                  "radila si",
+                  "—"
+                ]
+              },
+              {
+                "label": "on / ona",
+                "cells": [
+                  "radio je",
+                  "radila je",
+                  "—"
+                ]
+              },
+              {
+                "label": "mi / vi / oni",
+                "cells": [
+                  "—",
+                  "—",
+                  "radili smo / ste / su"
+                ]
+              }
+            ]
+          },
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt",
+            "g.11.particip",
+            "v.06.raditi"
+          ]
+        },
+        {
+          "id": "m.perfekt.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Ontkennen en vragen",
+          "body_nl": "**Ontkennen:** *sam* verdwijnt, *nisam* komt ervoor in de plaats.\n\n*Radio sam.* → *Nisam radio.*\nNooit *ne sam*. De ontkenning en het hulpwerkwoord zitten in één woord.\n\n**Vragen:** met de lange vorm plus *li*.\n\n*Jesi li radio?* — Heb je gewerkt?\n*Je li Ana radila?* — Heeft Ana gewerkt?\n\nEn het antwoord: *Jesam.* of *Nisam.* — één woord is genoeg.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt_negacija"
+          ]
+        },
+        {
+          "id": "m.perfekt.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Zeven die niet volgens de regel gaan",
+          "body_nl": "De meeste deelwoorden zijn voorspelbaar. Deze niet — en het zijn juist de werkwoorden die je het vaakst nodig hebt.\n\n**ići** → išao, išla, išli (gaan)\n**doći** → došao, došla, došli (komen)\n**jesti** → jeo, jela, jeli (eten)\n**piti** → pio, pila, pili (drinken)\n**moći** → mogao, mogla, mogli (kunnen)\n**htjeti** → htio, htjela, htjeli (willen)\n**biti** → bio, bila, bili (zijn)\n\nLeer ze als rijtje. Ze komen in bijna elk gesprek voorbij.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt_nepravilni",
+            "v.07.ici",
+            "v.08.jesti"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wie deed het?",
+      "why_nl": "Nog niets invullen. Je leest alleen wie er aan het woord is — en dat kan alleen aan de uitgang van het deelwoord.",
+      "exercises": [
+        {
+          "id": "m.perfekt.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zegt dit?",
+          "given": "Jučer sam bila u Zagrebu.",
+          "answer": "Een vrouw.",
+          "distractors": [
+            "Een man."
+          ],
+          "explain_nl": "bila is de vrouwelijke vorm. Een man zou bio zeggen. Het woordje sam verandert niet mee — het deelwoord doet het werk.",
+          "targets": [
+            "g.mod.perfekt"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar de laatste letters van het deelwoord, niet naar sam. Sam is voor iedereen hetzelfde."
+        },
+        {
+          "id": "m.perfekt.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zegt dit?",
+          "given": "Jučer sam bio u Zagrebu.",
+          "answer": "Een man.",
+          "distractors": [
+            "Een vrouw."
+          ],
+          "explain_nl": "bio is de mannelijke vorm. Precies dezelfde zin, één letter anders, andere spreker.",
+          "targets": [
+            "g.mod.perfekt"
+          ],
+          "difficulty": 2,
+          "nudge": "Kijk naar de laatste letters van het deelwoord, niet naar sam. Sam is voor iedereen hetzelfde."
+        },
+        {
+          "id": "m.perfekt.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Over hoeveel mensen gaat dit?",
+          "given": "Išli smo na plažu.",
+          "answer": "Over meer dan één — wij.",
+          "distractors": [
+            "Over één persoon."
+          ],
+          "explain_nl": "išli is meervoud, en smo hoort bij mi. Allebei de delen wijzen dezelfde kant op.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.07.plaza"
+          ],
+          "difficulty": 2,
+          "nudge": "Twee aanwijzingen wijzen dezelfde kant op: de uitgang van het deelwoord én het hulpwerkwoord."
+        },
+        {
+          "id": "m.perfekt.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Nisam mogla doći.",
+          "answer": "Een vrouw zegt dat ze niet kon komen.",
+          "distractors": [
+            "Een vrouw zegt dat ze niet wilde komen.",
+            "Een man zegt dat hij niet kon komen."
+          ],
+          "explain_nl": "mogla is het onregelmatige deelwoord van moći (kunnen), in de vrouwelijke vorm. nisam maakt er een ontkenning van.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.06.moci"
+          ],
+          "difficulty": 3,
+          "nudge": "Twee dingen om te lezen: welk werkwoord het is (mogla hoort bij moći), en of er ontkend wordt."
+        },
+        {
+          "id": "m.perfekt.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Is dit een vraag of een mededeling?",
+          "given": "Jesi li jela?",
+          "answer": "Een vraag aan een vrouw: heb je gegeten?",
+          "distractors": [
+            "Een mededeling: ik heb gegeten.",
+            "Een vraag aan een man: heb je gegeten?"
+          ],
+          "explain_nl": "Het woordje li maakt er een vraag van, en jela is de vrouwelijke vorm van jesti.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.08.jesti"
+          ],
+          "difficulty": 3,
+          "nudge": "Welk woordje maakt van een mededeling een vraag? En waar zie je aan wie hij gesteld wordt?"
+        },
+        {
+          "id": "m.perfekt.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wanneer gebeurt dit?",
+          "given": "Ana je pisala pismo.",
+          "answer": "In het verleden — Ana was een brief aan het schrijven.",
+          "distractors": [
+            "Nu — Ana schrijft een brief.",
+            "In de toekomst — Ana gaat een brief schrijven."
+          ],
+          "explain_nl": "je + deelwoord is verleden tijd. Zonder je zou pisala helemaal geen zin zijn: het deelwoord staat nooit alleen.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.13.pisati",
+            "v.01.pismo"
+          ],
+          "difficulty": 2,
+          "nudge": "Kan een deelwoord in zijn eentje een zin maken? Kijk wat er nog meer staat."
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde beweging: kies het deelwoord dat past bij wie er praat, en zet het hulpwerkwoord op de tweede plek.",
+      "exercises": [
+        {
+          "id": "m.perfekt.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Ana vertelt. Vul in.",
+          "given": "Jučer sam ___ (raditi) u uredu.",
+          "answer": "radila",
+          "accepts": [
+            "radila"
+          ],
+          "explain_nl": "Ana is vrouwelijk → radila.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.06.raditi",
+            "v.14.ured"
+          ],
+          "difficulty": 1
+        },
+        {
+          "id": "m.perfekt.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Marko vertelt. Vul in.",
+          "given": "Jučer sam ___ (raditi) u uredu.",
+          "answer": "radio",
+          "accepts": [
+            "radio"
+          ],
+          "explain_nl": "Marko is mannelijk → radio.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.06.raditi"
+          ],
+          "difficulty": 1
+        },
+        {
+          "id": "m.perfekt.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het deelwoord in.",
+          "given": "Marko i Ana su ___ (čitati) knjige.",
+          "answer": "čitali",
+          "accepts": [
+            "čitali"
+          ],
+          "explain_nl": "Twee mensen → meervoud čitali, bij su.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.05.citati",
+            "v.01.knjiga"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.perfekt.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het onregelmatige deelwoord in.",
+          "given": "Ana je ___ (ići) u školu.",
+          "answer": "išla",
+          "accepts": [
+            "išla"
+          ],
+          "hint": "ići gaat niet volgens de regel.",
+          "explain_nl": "ići → išao / išla / išli. Niet *idila of *ićila.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.07.ici",
+            "v.07.skola"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het onregelmatige deelwoord in.",
+          "given": "Nisam ___ (moći) doći.",
+          "answer": "mogao",
+          "accepts": [
+            "mogao",
+            "mogla"
+          ],
+          "hint": "moći gaat niet volgens de regel.",
+          "explain_nl": "moći → mogao (man) / mogla (vrouw). Allebei goed, het hangt ervan af wie het zegt.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.06.moci"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.035",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een vrouw is aan het woord.",
+          "given": "Ik heb niet gewerkt.",
+          "answer": "Nisam radila.",
+          "accepts": [
+            "Nisam radila.",
+            "Nisam radila"
+          ],
+          "explain_nl": "Ontkenning: nisam in plaats van sam, en radila omdat een vrouw spreekt.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt_negacija",
+            "v.06.raditi"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.036",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Je vraagt het aan Marko.",
+          "given": "Heb je gegeten?",
+          "answer": "Jesi li jeo?",
+          "accepts": [
+            "Jesi li jeo?",
+            "Jesi li jeo"
+          ],
+          "explain_nl": "Vraag met de lange vorm jesi plus li, en jeo want Marko is mannelijk.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.08.jesti"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.perfekt.037",
+          "type": "word_order",
+          "mode": "productive",
+          "prompt_nl": "Zet in de goede volgorde.",
+          "tokens": [
+            "Jučer",
+            "sam",
+            "pio",
+            "kavu"
+          ],
+          "answer": "Jučer sam pio kavu",
+          "accepts": [
+            "Jučer sam pio kavu",
+            "Jučer sam pio kavu."
+          ],
+          "explain_nl": "sam staat op de tweede plek — achter jučer, niet vooraan.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.08.piti",
+            "v.01.kava"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Ana zegt dit. Er staat één fout in.",
+          "given": "Jučer sam bio u kafiću.",
+          "answer": "Jučer sam bila u kafiću.",
+          "accepts": [
+            "Jučer sam bila u kafiću.",
+            "Jučer sam bila u kafiću"
+          ],
+          "explain_nl": "Ana is vrouwelijk, dus bila. Dit is de fout die Nederlandstaligen het vaakst maken, omdat 'geweest' bij ons nooit verandert.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.07.kafic"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ne sam radio jučer.",
+          "answer": "Nisam radio jučer.",
+          "accepts": [
+            "Nisam radio jučer.",
+            "Nisam radio jučer",
+            "Jučer nisam radio."
+          ],
+          "explain_nl": "Ontkenning en hulpwerkwoord zitten in één woord: nisam. Nooit ne sam.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.11.perfekt_negacija"
+          ],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu komen aspect en naamvallen erbij. Drie dingen tegelijk — zo is het in het echt ook.",
+      "exercises": [
+        {
+          "id": "m.perfekt.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk werkwoord hoort hier?",
+          "given": "Cijelo jutro sam ___ novine.",
+          "answer": "čitao",
+          "distractors": [
+            "pročitao"
+          ],
+          "explain_nl": "«De hele ochtend» beschrijft een periode waarin iets liep → onvoltooid. Dat had je bij aspect geleerd.",
+          "targets": [
+            "g.mod.aspect_pairs",
+            "v.05.citati"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Ana je išla u ___ (grad).",
+          "answer": "grad",
+          "accepts": [
+            "grad"
+          ],
+          "explain_nl": "išla = beweging → accusatief. Bij een mannelijk levenloos woord verandert er niets.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
+          "difficulty": 3
+        },
+        {
+          "id": "m.perfekt.052",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Ana je bila u ___ (grad) cijeli dan.",
+          "answer": "gradu",
+          "accepts": [
+            "gradu"
+          ],
+          "explain_nl": "bila = ze was ergens, dus plaats → lokatief.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": "m.perfekt.053",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Een man is aan het woord.",
+          "given": "Gisteren ben ik naar het strand gegaan.",
+          "answer": "Jučer sam išao na plažu.",
+          "accepts": [
+            "Jučer sam išao na plažu.",
+            "Jučer sam išao na plažu"
+          ],
+          "explain_nl": "Drie dingen tegelijk: išao (onregelmatig deelwoord, mannelijk), sam op de tweede plek, en plažu in de accusatief want er is beweging.",
+          "targets": [
+            "g.mod.perfekt",
+            "g.mod.loc_vs_acc",
+            "v.07.plaza"
+          ],
+          "difficulty": 5
+        },
+        {
+          "id": "m.perfekt.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Marko je bio u kuću cijelo jutro.",
+          "answer": "Marko je bio u kući cijelo jutro.",
+          "accepts": [
+            "Marko je bio u kući cijelo jutro.",
+            "Marko je bio u kući cijelo jutro"
+          ],
+          "explain_nl": "bio = hij was ergens, dus plaats → kući. Het deelwoord klopte al.",
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.01.kuca"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Een vrouw vertelt over haar dag. Let bij het lezen op de uitgangen — ze verraden steeds wie er iets deed.",
+      "text_hr": "Jučer sam ustala u sedam sati. Popila sam kavu i otišla na posao. U uredu sam radila do četiri. Marko je došao u dva i donio kolače. Jeli smo ih zajedno. Poslije posla sam išla u trgovinu i kupila kruh. Navečer smo gledali film. Bio je dobar, ali nisam ga dogledala — zaspala sam. Marko je rekao da je kraj bio najbolji.",
+      "translation_nl": "Gisteren ben ik om zeven uur opgestaan. Ik heb koffie gedronken en ben naar mijn werk gegaan. Op kantoor heb ik tot vier uur gewerkt. Marko kwam om twee uur en bracht gebak mee. We hebben het samen opgegeten. Na het werk ben ik naar de winkel gegaan en heb brood gekocht. 's Avonds hebben we een film gekeken. Hij was goed, maar ik heb hem niet uitgekeken — ik ben in slaap gevallen. Marko zei dat het eind het beste was.",
+      "exercises": [
+        {
+          "id": "m.perfekt.060",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Is de verteller een man of een vrouw? Waaraan zie je dat?",
+          "given": "Jučer sam ustala u sedam sati.",
+          "answer": "Een vrouw — aan de -la aan het eind van ustala.",
+          "distractors": [
+            "Een man — aan het woordje sam.",
+            "Dat kun je niet zien.",
+            "Een vrouw — aan het woordje jučer."
+          ],
+          "explain_nl": "sam is voor iedereen hetzelfde. Het deelwoord verraadt het geslacht, en dat is precies waarom je erop moet letten.",
+          "targets": [
+            "g.mod.perfekt"
+          ],
+          "difficulty": 2,
+          "nudge": "Sam zegt niets over man of vrouw. Welk woord in de zin doet dat wel?"
+        },
+        {
+          "id": "m.perfekt.061",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat bracht Marko mee?",
+          "answer": "Gebak.",
+          "distractors": [
+            "Brood.",
+            "Koffie.",
+            "Een film."
+          ],
+          "explain_nl": "«Marko je došao u dva i donio kolače.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.perfekt.062",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Heeft ze de film helemaal gezien?",
+          "answer": "Nee, ze viel in slaap.",
+          "distractors": [
+            "Ja, helemaal.",
+            "Ze is er niet aan begonnen.",
+            "Dat staat er niet."
+          ],
+          "explain_nl": "«nisam ga dogledala — zaspala sam.» De ontkenning nisam plus dogledala zegt het.",
+          "targets": [],
+          "difficulty": 2
+        },
+        {
+          "id": "m.perfekt.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Marko vertelt nu hetzelfde. Vul aan.",
+          "given": "Jučer sam ___ (ustati) u sedam sati i ___ (popiti) kavu.",
+          "answer": "ustao i popio",
+          "accepts": [
+            "ustao i popio",
+            "ustao, popio"
+          ],
+          "hint": "Marko is een man — beide deelwoorden veranderen mee.",
+          "explain_nl": "Dezelfde zin, andere spreker: ustala wordt ustao en popila wordt popio. Twee keer dezelfde aanpassing.",
+          "targets": [
+            "g.mod.perfekt",
+            "v.08.piti"
+          ],
+          "difficulty": 4
+        },
+        {
+          "id": "m.perfekt.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen over jouw gisteren: wat je deed, waar je was, en iets dat niet lukte.",
+          "model_answer": "Jučer sam radio u uredu. Poslije sam bio u kafiću. Nisam pročitao knjigu.",
+          "rubric_nl": [
+            "Alle drie de zinnen staan in de verleden tijd.",
+            "De deelwoorden passen bij jouw geslacht.",
+            "De derde zin gebruikt nisam, niet ne sam.",
+            "Het hulpwerkwoord staat op de tweede plek."
+          ],
+          "explain_nl": "Wie zijn eigen dag kan navertellen, heeft de verleden tijd te pakken.",
+          "targets": [
+            "g.mod.perfekt"
+          ],
+          "difficulty": 5
+        }
+      ]
+    }
+  ],
+  "source": "curriculum PERFEKT, gebouwd op les 11 (g.11.perfekt, particip, negacija, nepravilni)"
+}
