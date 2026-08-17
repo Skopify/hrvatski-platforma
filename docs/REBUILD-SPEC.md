@@ -221,16 +221,32 @@ Twee afwijkingen van de boekindeling zijn wél doorgevoerd:
 
 **De curriculumlaag bevat de volledige §4.2-boom**, inclusief fase 0 (klank en schrift) en alle dwarsdoorsnijdende modules. Dat is geen volledigheidsdrang: modules die in de boom staan maar door geen enkele les gedekt worden, zijn dan een zichtbaar gat in plaats van een vergeten hoofdstuk.
 
-De boom staat in `content/curriculum.json` (54 modules over 8 fases). `npm run codes` legt de 97 lespunten ertegenaan en drukt de dekking af. Stand op 16-08-2026: **46 van de 54 modules gedekt, 8 gaten.**
+De boom staat in `content/curriculum.json` (54 modules over 8 fases). `npm run codes` legt de 97 lespunten ertegenaan en drukt de dekking af. Stand op 17-08-2026: **48 van de 54 modules gedekt, 6 gaten.**
 
-| Fase | Ontbreekt |
-|---|---|
-| 0 — klank en schrift | `PHON-R` rollende en vocalische r (*vrt*, *prst*) |
-| 1 — nominatief en werkwoordskader | `Q-WORDS` vraagwoorden, da/ne, li · `NEG-VERB` negatie ne + werkwoord |
-| 4 — genitief | `GEN-NEG-IMATI` *nemam vremena* |
-| dwarsdoorsnijdend | `ASPECT-PAIRS` aspect per werkwoordspaar · `CONDITIONAL` bih/bi/bismo · `ADJ-DEF` bepaald/onbepaald (*nov* / *novi*) · `SOUND-PALAT` palatalisatie |
+Een lespunt kan meer dan één module raken (`OOK_GEDEKT` in het script). Dat was nodig omdat het overzicht anders liegt: `g.00.izgovor` heet "uitspraakregels" en telde alleen als klemtoonmodule, waardoor de vocalische r als gat verscheen — terwijl de uitleg letterlijk *prst*, *vrt* en *krv* behandelt. Een gat dat er niet is, stuurt het schrijfwerk net zo hard de verkeerde kant op als een gat dat je niet ziet.
 
-`ASPECT-PAIRS` is de zwaarste van de acht: aspect is geen bijzaak in het Kroatisch en het staat nergens in de 21 lessen. Clitische woordvolgorde daarentegen wórdt gedekt (`g.13.red_klitika`).
+#### De zes gaten, gewogen
+
+| Module | Verdict | Wat er al ligt |
+|---|---|---|
+| `ASPECT-PAIRS` | **vanaf nul** | Alle 120 werkwoorden dragen al een `aspect`-veld, maar **nul** hebben een aspectpartner. Geen enkel grammaticapunt noemt aspect. |
+| `CONDITIONAL` | **vanaf nul** | Niets. `bih`/`bismo` komt in de hele content geen enkele keer voor. |
+| `ADJ-DEF` | **vanaf nul** (uitleg) | Het onderscheid *nov* / *novi* komt nergens voor. De congruentie-infrastructuur van `g.04.pridjevi` en de paradigmatabellen zijn wel bruikbaar. |
+| `Q-WORDS` | **afleidbaar** | Vraagwoorden worden 22× gebruikt en `li` 7×, verspreid over de lessen — alleen nooit uitgelegd. Module samen te stellen uit bestaande voorbeelden. |
+| `NEG-VERB` | **afleidbaar** | `g.biti.present.negative`, `g.11.perfekt_negacija`, `g.12.futur_negacija` en `g.20.imperativ_negacija` dekken elk hun eigen geval; de algemene regel `ne` + werkwoord ontbreekt als kapstok. |
+| `GEN-NEG-IMATI` | **afleidbaar, klein** | `g.05.imati` behandelt *imati / nemati*, de genitief komt in les 14. Alleen de koppeling — *nemam vremena* — is er niet. |
+
+#### `ASPECT-PAIRS` is geen gewoon gat
+
+Aspect heeft geen equivalent in het Nederlands en je kunt er geen correcte verleden tijd zonder maken. Het boek slaat het over; het curriculum mag dat niet. De module wordt daarom vanaf nul geschreven, met drie delen:
+
+1. **Eigen uitleg**, met het contrast expliciet tegen het Nederlands: waar het Nederlands met bijwoorden en context werkt (*ik las* tegenover *ik heb het uitgelezen*), zit het in het Kroatisch in het werkwoord zelf.
+2. **Eigen oefeningen**, en aspect wordt geleerd **per werkwoordspaar, nooit als abstracte regel** — dat is de vorm waarin het blijft hangen.
+3. **Werkwoordsparen als woordenschatitem.** `čitati` / `pročitati` wordt één kaart met beide vormen plus de 1e persoon presens, conform §6.3. Dat vraagt datawerk: `aspect_partner_id` invullen voor de 120 werkwoorden die nu wel een aspectlabel maar geen partner hebben.
+
+**In de planning staat `ASPECT-PAIRS` vóór `PERFEKT`.** Dat is al vastgelegd: `PERFEKT` heeft `ASPECT-PAIRS` als prerequisite in `curriculum.json`. De 21 lessen doen het andersom — perfekt in les 11, aspect nergens — en dát is precies wat de curriculumlaag nu zichtbaar maakt.
+
+Clitische woordvolgorde daarentegen wórdt gedekt (`g.13.red_klitika`).
 
 ---
 
@@ -261,6 +277,20 @@ Niet 50 losse verhaaltjes, maar **series** met vaste personages, plaats en thema
 > **Er komt eerst één serie van 10 hoofdstukken van ongeveer 250 woorden.** Pas als die loop aantoonbaar werkt (coverage-meting klopt, gemijnde woorden komen terug in de reviews, begripsvragen doen wat ze moeten doen) wordt er geschaald. Het niveau van die eerste serie wordt bepaald ná de plaatsingstoets, niet nu — zonder gevulde `known_set` is elke niveaukeuze een gok.
 >
 > **Randvoorwaarde vóór het schrijven begint:** de bestaande verhalen halen hun eigen coverage-plafond niet. Met álle 894 woorden als bekend gerekend komen `ovo-je-nina` op 94,6%, `kljuc` op 95,5% en `bakina-kuharica` op 94,0% — onder of net op de 95%-grens, door gaten in hun glossaries. Een verhaal dat zijn eigen drempel niet kan halen, kan nooit als "goed leesbaar" gemeten worden. Die glossaries moeten eerst dicht.
+
+#### Lexicon eerst, dan pas schrijven
+
+Dát die drie verhalen onder de 95% blijven terwijl alle woorden bekend zijn, is geen toeval. Ze zijn vrij geschreven en achteráf van een glossary voorzien. Dan is de dekking een uitkomst waar je machteloos tegenover staat: het verhaal is af, de woorden staan erin, en je kunt alleen nog repareren.
+
+**Voor de nieuwe serie wordt de volgorde omgedraaid:**
+
+1. **Lexicon per hoofdstuk vaststellen.** Welke lemma's mogen erin? Dat is `known_set` ∪ `pre_taught`, waarbij pre_taught de maximaal 5 nieuwe sleutelwoorden van dit hoofdstuk zijn (§5.3, stap 1). De lijst is de opdracht, niet de nabeschouwing.
+2. **Dan pas schrijven**, binnen dat lexicon en binnen de doelgrammatica.
+3. **Dan valideren** tegen de poorten van §7.
+
+Het verschil: bij vrij schrijven is coverage een meting achteraf waar je niets meer aan kunt doen, bij lexicon-eerst is het een **randvoorwaarde vooraf**. Elk woord dat niet in de lijst staat, is een bewuste keuze — en verschijnt in de glossary omdat het pre-taught is, niet omdat het toevallig in de tekst belandde.
+
+Dit is ook de enige manier waarop het getal van §1.6 te halen is: elk nieuw lemma moet **minstens drie keer** in het hoofdstuk terugkomen, en dat plan je vooraf of niet.
 
 Kandidaat-thema's voor latere series (gekozen op nut voor iemand die in/rond Kroatië is):
 1. *Novi susjed* — verhuizen naar een dorp aan de kust: begroeten, wonen, buren (fase 1–2)
@@ -326,14 +356,18 @@ Item met ≥6 lapses → uit de normale rotatie halen, en aanbieden voor "herste
 **Dit is de sectie die het verschil maakt tussen een leuk prototype en iets waar je echt van leert.** Genereer content offline in een pipeline met validatiepoorten, sla het op als data, en serveer alleen gevalideerde content.
 
 ```
-[LLM-generatie]
+[Lexicon vaststellen]  known_set ∪ pre_taught (max 5 nieuwe lemma's)
+      ↓                 ← dit is de opdracht, niet de nabeschouwing
+[Schrijven of genereren]  binnen dat lexicon, binnen de doelgrammatica
       ↓
-[CLASSLA: tokenize + lemmatize + morfosyntactische tags]
+[analyze(): tokenize + lemmatize + tags + unknown-vlag]
       ↓
-[Validatiepoorten]  ── faalt → regenereren met foutfeedback (max 3x) → anders naar review-queue
+[Validatiepoorten]  ── faalt → herschrijven met foutfeedback (max 3x) → anders naar review-queue
       ↓
 [Opslaan in DB met coverage-stats]
 ```
+
+**De eerste stap is nieuw en niet optioneel.** De bestaande vijf verhalen zijn vrij geschreven en achteraf van een glossary voorzien; drie ervan halen daardoor hun eigen 95%-grens niet, ook niet als je álle woorden in het platform als bekend rekent. Wie het lexicon pas achteraf vaststelt, kan alleen nog repareren. Zie §5.2.
 
 **Validatiepoorten voor een verhaal:**
 

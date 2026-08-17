@@ -28,10 +28,11 @@ import path from "node:path";
  * als hóófdonderwerp heeft, en de andere wordt door een ander punt gedekt.
  */
 const KOPPELING: Record<string, string> = {
+  // Eén lespunt kan meer dan één module raken; zie OOK_GEDEKT hieronder.
   // fase 0 — klank en schrift
   "g.00.abeceda": "PHON-ALPHABET",
   "g.00.palatali": "PHON-DIACRITICS",
-  "g.00.izgovor": "PHON-STRESS",
+  "g.00.izgovor": "PHON-R",
   "g.00.brojevi": "NUM-CARD",
 
   // fase 1 — nominatief en werkwoordskader
@@ -144,6 +145,20 @@ const KOPPELING: Record<string, string> = {
   "g.19.ost": "NOM-GENDER",
 };
 
+/**
+ * Modules die een lespunt naast zijn hoofdmodule óók behandelt.
+ *
+ * Nodig omdat een dekkingsoverzicht anders liegt. `g.00.izgovor` heet
+ * "uitspraakregels" en telde als klemtoonmodule, waardoor de vocalische r als
+ * gat verscheen — terwijl de uitleg letterlijk *prst*, *vrt* en *krv* behandelt.
+ * Een gat dat er niet is, is net zo schadelijk als een gat dat je niet ziet:
+ * allebei sturen ze het schrijfwerk de verkeerde kant op.
+ */
+const OOK_GEDEKT: Record<string, string[]> = {
+  "g.00.izgovor": ["PHON-STRESS"],
+  "g.20.vokativ": ["SOUND-PALAT"],
+};
+
 interface Module {
   code: string;
   titel_nl: string;
@@ -166,7 +181,10 @@ for (const fase of curriculum.fases) {
 
 /* ------------------------------------------------------------ controle --- */
 
-const onbekend = Object.entries(KOPPELING).filter(([, code]) => !alleModules.has(code));
+const onbekend = [
+  ...Object.entries(KOPPELING),
+  ...Object.entries(OOK_GEDEKT).flatMap(([id, codes]) => codes.map((c) => [id, c] as [string, string])),
+].filter(([, code]) => !alleModules.has(code));
 if (onbekend.length) {
   console.error("Koppeling verwijst naar modules die niet bestaan:");
   for (const [id, code] of onbekend) console.error(`  ${id} → ${code}`);
@@ -193,6 +211,7 @@ for (const bestand of fs.readdirSync(DIR).filter((f) => f.endsWith(".json")).sor
       continue;
     }
     gedekt.add(code);
+    for (const extra of OOK_GEDEKT[punt.id] ?? []) gedekt.add(extra);
 
     if (punt.code) {
       bestond++;

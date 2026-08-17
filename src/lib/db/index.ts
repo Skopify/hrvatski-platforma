@@ -45,12 +45,27 @@ function create() {
   if (nieuw) {
     migrate(sqlite);
   } else {
+    const versie = currentVersion(sqlite);
     const achterstand = pendingMigrations(sqlite);
+
     if (achterstand.length > 0) {
       throw new Error(
-        `De database staat op versie ${currentVersion(sqlite)}, de code verwacht ${LATEST_VERSION}. ` +
+        `De database staat op versie ${versie}, de code verwacht ${LATEST_VERSION}. ` +
           `Openstaand: ${achterstand.join(", ")}.\n` +
           `Draai eerst  npm run migrate  — dat maakt een back-up en past ze toe.`,
+      );
+    }
+
+    // De database kán ook nieuwer zijn dan de code, en dat is de gevaarlijkste
+    // van de twee: hij start dan gewoon op en loopt pas veel later stuk op een
+    // kolom die nog niet bestond. Dat overkomt je zodra je naar een oudere
+    // branch schakelt terwijl je database al gemigreerd is. Dus liever meteen
+    // stoppen met een melding die zegt wat er aan de hand is.
+    if (versie > LATEST_VERSION) {
+      throw new Error(
+        `De database staat op versie ${versie}, maar deze code kent er maar ${LATEST_VERSION}. ` +
+          `Je staat waarschijnlijk op een oudere branch dan waarmee je database is bijgewerkt.\n` +
+          `Schakel terug naar de nieuwste code, of zet een kopie uit data/backups/ terug.`,
       );
     }
   }

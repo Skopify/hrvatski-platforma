@@ -13,6 +13,7 @@ import {
   type Lesson,
 } from "../src/lib/content";
 import { db, sqlite } from "../src/lib/db";
+import { backupDatabase } from "../src/lib/db/backup";
 import { items, lessonProgress } from "../src/lib/db/schema";
 import { conjugateVerb, declineNoun } from "../src/lib/morphology";
 
@@ -150,6 +151,16 @@ function main() {
   if (!lessons.length) {
     console.error("Geen lessen gevonden in content/lessons/.");
     process.exit(1);
+  }
+
+  // Eerst een kopie. De seed werkt content bij en laat voortgang met rust, maar
+  // hij verwijdert wél rijen (verouderde vormen, met hun SRS-toestand). Een bug
+  // in die opruiming is niet terug te draaien zonder kopie.
+  const kopie = backupDatabase(sqlite, "voor-seed");
+  if (kopie.file) {
+    console.log(
+      `Back-up: ${kopie.file}` + (kopie.opgeruimd ? ` (${kopie.opgeruimd} oude opgeruimd)` : ""),
+    );
   }
 
   let count = 0;

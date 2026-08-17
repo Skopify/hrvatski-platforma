@@ -11,6 +11,7 @@ import Database from "better-sqlite3";
 import fs from "node:fs";
 import path from "node:path";
 
+import { backupDatabase } from "../src/lib/db/backup";
 import { LATEST_VERSION, MIGRATIES, migrate } from "../src/lib/db/migrate";
 
 const DB_PATH = process.env.HRVATSKI_DB
@@ -40,12 +41,8 @@ if (huidig >= LATEST_VERSION) {
 
 // Alleen back-uppen als er echt iets verandert aan een bestaande database.
 if (bestond && huidig > 0) {
-  const dir = path.join(path.dirname(DB_PATH), "backups");
-  fs.mkdirSync(dir, { recursive: true });
-  const stamp = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
-  const doel = path.join(dir, `voor-migratie-${stamp}.db`);
-  sqlite.prepare("VACUUM INTO ?").run(doel);
-  console.log(`Back-up: ${path.relative(process.cwd(), doel)}`);
+  const kopie = backupDatabase(sqlite, "voor-migratie", DB_PATH);
+  if (kopie.file) console.log(`Back-up: ${kopie.file}`);
 }
 
 const { versie, toegepast } = migrate(sqlite);

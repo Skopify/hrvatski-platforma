@@ -24,8 +24,9 @@ Lees die spec vóór elke taak — en §12 het eerst, want daar staat wat er al 
 
 ## Database
 
+- **Geen enkel script schrijft naar `data/hrvatski.db` zonder eerst een kopie te maken.** Niet alleen migraties — ook `seed`, en elk toekomstig script dat de database aanraakt. Gebruik `backupDatabase()` uit `src/lib/db/backup.ts`; die houdt de laatste vijftien kopieën in `data/backups/` en ruimt de rest op.
+  Het onderscheid "migraties veranderen het schema, de rest alleen content" houdt geen stand: de seed verwijdert rijen (verouderde vormen, mét hun SRS-toestand), en een bug daarin is zonder kopie niet terug te draaien. Het reviewlogboek is het enige hier dat je niet kunt terugverdienen door harder te studeren.
 - **Migreer nooit vanuit de draaiende applicatie.** `src/lib/db/index.ts` zet een bestaande database alleen op als hij nog niet bestaat; loopt hij achter, dan weigert de server te starten en verwijst hij naar `npm run migrate`. Dat is geen voorzichtigheid maar ervaring: toen de migratie bij het openen draaide, hoefde er alleen een bestand veranderd te worden om een draaiende dev-server het schema van de echte leerhistorie te laten omgooien, zonder back-up.
-- `npm run migrate` maakt eerst een kopie in `data/backups/`.
 - Een migratie die gedraaid heeft, verandert nooit meer. Wil je iets anders, schrijf een nieuwe.
 
 ## Node
