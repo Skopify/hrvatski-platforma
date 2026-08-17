@@ -286,6 +286,78 @@ await test("3", "Herkennen en produceren vragen tegengestelde richtingen", async
   return `herkennen: "${a.prompt}" → "${a.answer}" · produceren: "${b.prompt}" → "${b.answer}"`;
 });
 
+/* ═══════════════════════════ 3b. tempo in plaats van knoppen ══ */
+
+await test("3b", "Traag-maar-goed telt zwaarder dan vlot-en-goed", async () => {
+  const { gradeByTempo, resetTempo } = await import("../src/lib/tempo");
+  const { Rating } = await import("ts-fsrs");
+  resetTempo();
+
+  // Zonder eigen historie gelden de vaste terugvaldrempels.
+  const vlot = gradeByTempo(2000, "geen_historie", "receptive");
+  const gewoon = gradeByTempo(8000, "geen_historie", "receptive");
+  const traag = gradeByTempo(30000, "geen_historie", "receptive");
+
+  assert(vlot === Rating.Easy, `2 s → ${vlot}, verwacht Easy`);
+  assert(gewoon === Rating.Good, `8 s → ${gewoon}, verwacht Good`);
+  assert(traag === Rating.Hard, `30 s → ${traag}, verwacht Hard`);
+  return "2 s → Easy · 8 s → Good · 30 s → Hard";
+});
+
+await test("3b", "De drempel volgt jouw eigen tempo, niet een vast getal", async () => {
+  const { gradeByTempo, medianFor, resetTempo } = await import("../src/lib/tempo");
+  const { Rating } = await import("ts-fsrs");
+
+  // Een trage typer: twintig goede antwoorden rond de 20 seconden.
+  const d = new Database(WERK_DB);
+  const zet = d.prepare(
+    `INSERT INTO attempts (exercise_id, lesson, type, mode, correct, near_miss,
+                           duration_ms, xp, stage, created_at)
+     VALUES (?, 0, 'tempo_test', 'receptive', 1, 0, ?, 1, 0, ?)`,
+  );
+  for (let i = 0; i < 20; i++) zet.run(`t${i}`, 19000 + i * 100, Date.now());
+  d.close();
+  resetTempo();
+
+  const gemeten = medianFor("tempo_test");
+  assert(gemeten, "geen mediaan berekend terwijl er twintig metingen staan");
+  assert(
+    gemeten.mediaan > 15000,
+    `mediaan ${gemeten.mediaan} ms — de testgegevens zijn niet aangekomen`,
+  );
+
+  // Exact dezelfde elf seconden, twee oordelen. Voor iemand zonder historie is
+  // dat een gewoon tempo; voor deze trage typer is het opvallend vlot. Dat de
+  // uitkomst verschilt bij gelijke invoer, ís de kalibratie.
+  const vastOordeel = gradeByTempo(11000, "geen_historie", "receptive");
+  const eigenOordeel = gradeByTempo(11000, "tempo_test", "receptive");
+
+  assert(vastOordeel === Rating.Good, `vast: 11 s → ${vastOordeel}, verwacht Good`);
+  assert(
+    eigenOordeel === Rating.Easy,
+    `eigen tempo: 11 s → ${eigenOordeel}, verwacht Easy bij mediaan ${gemeten.mediaan} ms`,
+  );
+
+  return `dezelfde 11 s: zonder historie Good, bij mediaan ${(gemeten.mediaan / 1000).toFixed(1)} s (n=${gemeten.n}) Easy`;
+});
+
+await test("3b", "Te weinig metingen worden niet vertrouwd", async () => {
+  const { medianFor, resetTempo } = await import("../src/lib/tempo");
+  const d = new Database(WERK_DB);
+  const zet = d.prepare(
+    `INSERT INTO attempts (exercise_id, lesson, type, mode, correct, near_miss,
+                           duration_ms, xp, stage, created_at)
+     VALUES (?, 0, 'te_weinig', 'receptive', 1, 0, 30000, 1, 0, ?)`,
+  );
+  for (let i = 0; i < 3; i++) zet.run(`w${i}`, Date.now());
+  d.close();
+  resetTempo();
+
+  // Drie metingen is ruis. Daarop kalibreren is slechter dan een vaste drempel.
+  assert(medianFor("te_weinig") === null, "een mediaan over drie metingen wordt wél gebruikt");
+  return "onder de acht metingen valt hij terug op de vaste drempel";
+});
+
 /* ══════════════════════════════════════ 4. dertig dagen simuleren ══ */
 
 await test("4", "Dertig dagen leren geeft een geloofwaardige planning", async () => {
@@ -343,6 +415,7 @@ const TITELS: Record<string, string> = {
   "1": "De stadialadder: promoveren op het juiste moment",
   "2": "Leeches vallen uit de rotatie en zijn te herstellen",
   "3": "Vragen komen uit de woordgegevens, niet uit geschreven oefeningen",
+  "3b": "Tempo in plaats van zelfbeoordelingsknoppen",
   "4": "Dertig dagen simuleren",
 };
 

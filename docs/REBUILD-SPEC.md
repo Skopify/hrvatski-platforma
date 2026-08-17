@@ -316,7 +316,11 @@ Er is **geen generatiepipeline** (§12.4). De vraag is dus niet "genereren of ni
 
 **Gekozen: route (i).** De hoofdstukken worden geschreven tegen een vooraf vastgesteld lexicon, als onderdeel van gewone taken met zichtbare diffs, daarna door de poorten van §7 en langs de nakijker in batches per hoofdstuk.
 
-De doorslag: in route (i) schaalt de tijd van de nakijker met het **aantal gevonden fouten**, in de alternatieven met het **aantal woorden**. Correcties op een redelijk concept zijn puntwerk; leerderskroatisch herschrijven of register van gevonden teksten bijstellen is doorlopend werk. Bij een schaarse nakijker is dat het hele verschil.
+**De doorslag — en dit is het criterium waarlangs elke toekomstige contentkeuze gelegd wordt:** in route (i) schaalt de tijd van de nakijker met het **aantal gevonden fouten**, in de alternatieven met het **aantal woorden**.
+
+Correcties op een redelijk concept zijn puntwerk: je leest, je ziet drie dingen, je markeert ze. Leerderskroatisch herschrijven of het register van gevonden teksten bijstellen is doorlopend werk — elke zin vraagt aandacht, of hij nu fout is of niet. Bij tweeënhalfduizend woorden is dat het verschil tussen een middag en een week.
+
+Zolang de nakijker de schaarste is (§12.5), is dit het beslissende argument, en het geldt breder dan alleen deze keuze: **werk dat mensen alleen maar hoeven te *controleren* is goedkoper dan werk dat ze moeten *maken*.** Vandaar ook dat alles wat machinaal te controleren valt vóór de batch draait en nooit bij hem terechtkomt.
 
 De twee afgevallen routes en waarom:
 

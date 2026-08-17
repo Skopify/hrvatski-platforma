@@ -956,7 +956,7 @@ export async function submitVocab(
     [vraag.itemId],
   );
 
-  const rating = ratingFor(result, fake, durationMs);
+  const rating = ratingFor(result, fake, durationMs, `vocab_${vraag.kind.toLowerCase()}`);
   applyReview(cardId, rating, durationMs);
 
   // Volgorde telt: eerst kijken of dit een leech werd, want een geschorste kaart

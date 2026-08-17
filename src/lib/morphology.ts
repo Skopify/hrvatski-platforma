@@ -446,17 +446,57 @@ export function conjugateVerb(v: VocabEntry): GeneratedForm[] {
  * patronen en zijn de overige vormen te vertrouwen. Waar het misgaat, staat het
  * woord in de uitkomst zodat het handmatig nagelopen kan worden.
  */
-export function validateNoun(v: VocabEntry): { ok: boolean; expected?: string; got?: string } {
-  if (v.pos !== "noun" || !v.gen_sg) return { ok: true };
+/**
+ * De uitkomst van een controle op een zelfstandig naamwoord.
+ *
+ * Drie uitkomsten en niet twee, en dat onderscheid is het hele punt. Een
+ * genitief die afwijkt van het regelmatige patroon is niet automatisch fout:
+ * `novac → novca` is de vluchtige a, en dat is een regel. `vrijeme → vremena`
+ * is een stam op -men-, en die valt niet uit de nominatief te voorspellen.
+ *
+ * Het eerste kan een machine bevestigen. Het tweede kan alleen een mens. Ze op
+ * één hoop gooien betekent of correcte woorden afkeuren, of foute doorlaten.
+ */
+export type NounCheck =
+  /** Klopt met een regel die de motor kent. */
+  | { verdict: "ok"; rule?: string }
+  /** Wijkt af op een manier die niet uit de nominatief volgt — mens nodig. */
+  | { verdict: "unverifiable"; expected: string; got: string }
+  /** Wijkt af én er is een voorspelling die het had moeten zijn. */
+  | { verdict: "wrong"; expected: string; got: string };
+
+/**
+ * De vluchtige a: een `a` in de laatste lettergreep die in de naamvallen
+ * wegvalt. `muškarac → muškarca`, `novac → novca`, `tjedan → tjedna`. Geen
+ * uitzondering maar een productieve regel, dus mechanisch te bevestigen.
+ */
+function fleetingGenitive(lemma: string): string | null {
+  // …aC → …Ca  (a vóór de slotconsonant valt weg)
+  const m = /^(.*)a([^aeiou])$/.exec(lemma);
+  if (m) return `${m[1]}${m[2]}a`;
+  // posao → posla: vluchtige a plus de l/o-wisseling.
+  const l = /^(.*)ao$/.exec(lemma);
+  if (l) return `${l[1]}la`;
+  return null;
+}
+
+export function validateNoun(v: VocabEntry): NounCheck {
+  if (v.pos !== "noun" || !v.gen_sg) return { verdict: "ok" };
 
   // Voorspel gen_sg uit de nominatief en vergelijk met wat er staat.
   let predicted: string | null = null;
   if (v.gender === "f" && v.hr.endsWith("a")) predicted = v.hr.slice(0, -1) + "e";
   else if (v.gender === "n" && /[oe]$/.test(v.hr)) predicted = v.hr.slice(0, -1) + "a";
   else if (v.gender === "m" && !/[aoe]$/.test(v.hr)) predicted = v.hr + "a";
+  else if (v.gender === "m" && v.hr.endsWith("ao")) predicted = v.hr + "a";
 
-  if (!predicted) return { ok: true };
-  return predicted === v.gen_sg
-    ? { ok: true }
-    : { ok: false, expected: predicted, got: v.gen_sg };
+  if (!predicted) return { verdict: "ok" };
+  if (predicted === v.gen_sg) return { verdict: "ok", rule: "regelmatig" };
+
+  const vluchtig = fleetingGenitive(v.hr);
+  if (vluchtig && vluchtig === v.gen_sg) return { verdict: "ok", rule: "vluchtige a" };
+
+  // Onvoorspelbaar. Dat betekent niet fout — het betekent dat deze controle er
+  // niets over kan zeggen, en dat een mens ernaar moet kijken.
+  return { verdict: "unverifiable", expected: predicted, got: v.gen_sg };
 }

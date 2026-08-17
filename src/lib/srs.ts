@@ -13,6 +13,7 @@ import { db } from "./db";
 import { card, DEFAULT_CARD_KIND, items, reviewLog, srs, type CardKind } from "./db/schema";
 import type { Exercise } from "./content";
 import type { GradeResult } from "./grading";
+import { gradeByTempo } from "./tempo";
 
 export type { CardKind };
 
@@ -81,12 +82,18 @@ function toCard(row: SrsRow | undefined, now: Date): Card {
  * ("hoe moeilijk vond je dit?") is bij getypte productie overbodig — het antwoord
  * zegt het al — en zelfbeoordeling is systematisch te mild.
  */
-export function ratingFor(result: GradeResult, exercise: Exercise, durationMs: number): Grade {
+export function ratingFor(
+  result: GradeResult,
+  exercise: Exercise,
+  durationMs: number,
+  /** Waartegen het tempo gemeten wordt; standaard het oefentype. */
+  tempoKey?: string,
+): Grade {
   if (!result.correct) return Rating.Again;
+  // Bijna goed — een teken vergeten, een tikfout — is altijd Hard. De tijd zegt
+  // daar niets over: je kunt razendsnel het verkeerde teken typen.
   if (result.nearMiss) return Rating.Hard;
-  const fastThreshold = exercise.mode === "productive" ? 9000 : 4000;
-  if (durationMs > 0 && durationMs < fastThreshold) return Rating.Easy;
-  return Rating.Good;
+  return gradeByTempo(durationMs, tempoKey ?? exercise.type, exercise.mode ?? "receptive");
 }
 
 /**
