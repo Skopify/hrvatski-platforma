@@ -1,5 +1,7 @@
 "use client";
 
+import type { Paradigm } from "@/lib/content";
+
 import { useEffect, useRef } from "react";
 
 import type { PresentedExercise } from "@/lib/present";
@@ -14,6 +16,7 @@ export type Answer =
 
 export function emptyAnswer(ex: PresentedExercise): Answer {
   switch (ex.type) {
+    case "interpret":
     case "choice":
       return { kind: "choice", value: "" };
     case "match":
@@ -32,6 +35,52 @@ export function isAnswered(a: Answer): boolean {
 }
 
 /** Minimale opmaak in uitlegteksten: **vet**, *cursief* en alinea's. */
+/**
+ * Een paradigmatabel binnen een uitlegmoment.
+ *
+ * Voor dit soort regels is een tabel geen versiering: het contrast tussen twee
+ * kolommen ís de les. In lopende tekst moet je vijf voorbeelden onthouden om het
+ * patroon te zien; naast elkaar zie je het in één blik.
+ */
+function MiniParadigm({ table }: { table: Paradigm }) {
+  return (
+    <figure className="mt-4 overflow-x-auto">
+      <table className="w-full border-collapse text-left">
+        <thead>
+          <tr>
+            <th className="pb-2 pr-3 text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted" />
+            {table.columns.map((c) => (
+              <th
+                key={c}
+                className="pb-2 pr-3 text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted"
+              >
+                {c}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row) => (
+            <tr key={row.label} className="border-t border-line/60">
+              <th className="py-2 pr-3 text-[12.5px] font-medium text-ink-secondary">
+                {row.label}
+              </th>
+              {row.cells.map((cell, i) => (
+                <td key={i} className="hr-text py-2 pr-3 text-[15.5px] font-semibold text-ink">
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {table.caption_nl ? (
+        <figcaption className="mt-2 text-[12px] text-ink-muted">{table.caption_nl}</figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
 function RichText({ text }: { text: string }) {
   return (
     <>
@@ -263,6 +312,7 @@ export function ExerciseView({
             {exercise.prompt_nl}
           </p>
           {exercise.body_nl ? <RichText text={exercise.body_nl} /> : null}
+          {exercise.table ? <MiniParadigm table={exercise.table} /> : null}
         </div>
       );
 
@@ -303,6 +353,50 @@ export function ExerciseView({
     }
 
     /* ------------------------------------------------------------ choice --- */
+    case "interpret":
+      // Kies de betekenis, niet de vorm. De Kroatische zin staat groot en alleen;
+      // de opties zijn Nederlands en krijgen dus géén hr-text. Dat onderscheid is
+      // niet cosmetisch: het maakt zichtbaar dat de vráág Kroatisch is en het
+      // ántwoord over betekenis gaat.
+      return (
+        <div className="space-y-4">
+          {exercise.given ? (
+            <p className="hr-text rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
+              {exercise.given}
+            </p>
+          ) : null}
+          {exercise.hint ? (
+            <p className="text-center text-[12.5px] text-ink-muted">{exercise.hint}</p>
+          ) : null}
+          <div className="grid gap-2">
+            {(exercise.options ?? []).map((opt) => {
+              const selected = answer.kind === "choice" && answer.value === opt;
+              return (
+                <button
+                  key={opt}
+                  type="button"
+                  disabled={locked}
+                  onClick={() => setAnswer({ kind: "choice", value: opt })}
+                  className={`flex items-start gap-3 rounded-2xl border px-4 py-3 text-left text-[15px] leading-snug transition-all duration-200 ${
+                    selected
+                      ? "border-accent bg-accent-wash text-accent shadow-[0_0_0_3px_var(--color-accent-ring)]"
+                      : "border-line bg-surface text-ink hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash"
+                  } disabled:cursor-not-allowed`}
+                >
+                  <span
+                    aria-hidden
+                    className={`mt-0.5 h-4 w-4 shrink-0 rounded-full border-2 transition-colors ${
+                      selected ? "border-accent bg-accent" : "border-line-strong bg-transparent"
+                    }`}
+                  />
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+
     case "choice":
       return (
         <div className="space-y-3">

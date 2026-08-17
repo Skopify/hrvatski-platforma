@@ -16,6 +16,7 @@ import { db, sqlite } from "../src/lib/db";
 import { backupDatabase } from "../src/lib/db/backup";
 import { items, lessonProgress } from "../src/lib/db/schema";
 import { conjugateVerb, declineNoun } from "../src/lib/morphology";
+import { loadModules } from "../src/lib/modules";
 
 /**
  * Vanaf welke les een naamval bestaat, volgens de syllabus.
@@ -239,6 +240,30 @@ function main() {
     }
   }
 
+  // Grammaticapunten uit de modules. Zonder deze rijen bestaan de doelen van
+  // moduleoefeningen niet als item, en dan plant de herhaling ze nooit in.
+  let moduleItems = 0;
+  for (const m of loadModules()) {
+    const g = m.grammar;
+    db.insert(items)
+      .values({
+        id: g.id,
+        kind: "grammar",
+        lesson: 0,
+        topic: "Grammaticamodule",
+        grammaticalCase: null,
+        cefr: g.cefr ?? m.cefr,
+        label: g.title_nl,
+        payload: g,
+      })
+      .onConflictDoUpdate({
+        target: items.id,
+        set: { cefr: g.cefr ?? m.cefr, label: g.title_nl, payload: g },
+      })
+      .run();
+    moduleItems++;
+  }
+
   // Verhaalzinnen adresseerbaar in de database. De id's komen uit de brondata
   // (zie scripts/zin-ids.ts); hier worden ze alleen bijgewerkt. Zinnen die uit
   // een verhaal zijn verdwenen, gaan er ook uit — anders blijven er kaarten naar
@@ -311,6 +336,7 @@ function main() {
   if (stale.length) {
     console.log(`\n${stale.length} verouderde vormen verwijderd, bv. ${stale.slice(0, 5).join(", ")}`);
   }
+  if (moduleItems) console.log(`\n${moduleItems} grammaticamodule(s) geseed`);
   if (zinnen) {
     console.log(
       `\n${zinnen} verhaalzinnen geïndexeerd` +

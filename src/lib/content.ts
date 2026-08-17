@@ -13,6 +13,15 @@ export type ExerciseType =
   | "translate_hr_nl"
   | "word_order"
   | "listen_type"
+  /**
+   * Kies de betekenis, niet de vorm.
+   *
+   * VanPatten: laat de leerder eerst de vorm interpreteren om de betekenis te
+   * snappen, vóór hij hem moet produceren. De opgaven zijn zo gebouwd dat de
+   * uitgang de énige aanwijzing is — «Trčim u sobu» en «Trčim u sobi» hebben
+   * hetzelfde werkwoord. Wie op het werkwoord gokt, valt door de mand.
+   */
+  | "interpret"
   | "error_correction"
   | "free_production";
 
@@ -36,6 +45,8 @@ export interface Exercise {
   explain_nl?: string;
   /** Overschrijft de placeholder — begrijpend lezen beantwoord je in het Nederlands. */
   placeholder?: string;
+  /** Paradigmatabel bij een uitlegmoment. */
+  table?: Paradigm;
   targets?: string[];
   difficulty?: number;
   audio?: string;
@@ -136,6 +147,8 @@ export interface Syllabus {
 }
 
 /* --------------------------------------------------------------- loading --- */
+
+import { loadModules } from "./modules";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -258,6 +271,15 @@ export function findExercise(
         exerciseIndex.set(exercise.id, { exercise, lesson });
       }
     }
+    // Moduleoefeningen doen mee: zonder dit kan de server een antwoord uit een
+    // module niet nakijken.
+    for (const m of loadModules()) {
+      const lesson = { number: 0 };
+      for (const p of m.phases) {
+        for (const exercise of p.exercises) exerciseIndex.set(exercise.id, { exercise, lesson });
+      }
+    }
+
     for (const story of loadStories()) {
       const lesson = { number: story.requires_lesson };
       for (const exercise of story.exercises) exerciseIndex.set(exercise.id, { exercise, lesson });

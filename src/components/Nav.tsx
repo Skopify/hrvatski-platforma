@@ -22,6 +22,16 @@ const ICONS: Record<string, React.ReactNode> = {
       <path d="M3 16.9 12 21l9-4.1" />
     </>
   ),
+  grammatica: (
+    <>
+      <path d="M4 4.5h16" />
+      <path d="M4 9.5h16" />
+      <path d="M4 14.5h9" />
+      <path d="M4 19.5h9" />
+      <path d="M17.5 14.5v5" />
+      <path d="M15 17h5" />
+    </>
+  ),
   verhalen: (
     <>
       <path d="M12 6.6C10.6 5.2 8.6 4.5 6 4.5c-1.1 0-2 .1-2.6.3v13c.6-.2 1.5-.3 2.6-.3 2.6 0 4.6.7 6 2.1" />
@@ -55,6 +65,7 @@ const ICONS: Record<string, React.ReactNode> = {
 const LINKS = [
   { href: "/", label: "Overzicht", icon: "overzicht" },
   { href: "/lessen", label: "Lessen", icon: "lessen" },
+  { href: "/grammatica", label: "Grammatica", icon: "grammatica" },
   { href: "/verhalen", label: "Verhalen", icon: "verhalen" },
   { href: "/oefenen", label: "Oefenen", icon: "herhalen" },
   { href: "/woorden", label: "Woorden", icon: "woorden" },

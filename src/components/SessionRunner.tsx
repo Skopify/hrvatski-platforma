@@ -46,6 +46,7 @@ export function SessionRunner({
   title,
   storySlug,
   backHref,
+  doneLabel,
 }: {
   steps: Step[];
   kind: "lesson" | "review";
@@ -54,6 +55,8 @@ export function SessionRunner({
   /** Bij een verhaalquiz: markeert de quiz als afgerond bij het einde. */
   storySlug?: string;
   backHref?: string;
+  /** Wat er op het eindscherm staat. Standaard hangt het af van `kind`. */
+  doneLabel?: string;
 }) {
   const router = useRouter();
   const tts = useCroatianTts();
@@ -279,7 +282,7 @@ export function SessionRunner({
           </div>
 
           <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-ink-muted">
-            {kind === "lesson" ? "Les afgerond" : "Herhaling afgerond"}
+            {doneLabel ?? (kind === "lesson" ? "Les afgerond" : "Herhaling afgerond")}
           </p>
           <h1 className="hr-text display mt-2.5 text-[38px] text-ink">Bravo!</h1>
 

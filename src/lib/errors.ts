@@ -39,6 +39,7 @@ export type ErrorType =
   | "word_order"
   | "lexical"
   | "spelling"
+  | "interpretation"
   | "unknown";
 
 export interface ErrorContext {
@@ -104,6 +105,12 @@ export function classifyError(ctx: ErrorContext): Classification {
   const punt = grammaticapunt(ctx.targets);
 
   if (!gegeven) return { type: "empty", grammarPointId: punt };
+
+  // Bij een betekenisvraag gaat het mis in de interpretatie, niet in de vorm.
+  // Het "antwoord" is hier een Nederlandse zin, dus de vormcatalogus heeft er
+  // niets over te zeggen — en een hint over naamvalsuitgangen zou langs de vraag
+  // heen praten.
+  if (ctx.type === "interpret") return { type: "interpretation", grammarPointId: punt };
 
   // Alleen de tekens mis. Apart gehouden omdat het de structurele fout van een
   // Nederlandstalige is en een eigen remedie heeft.
@@ -242,6 +249,13 @@ export function hintFor(c: Classification): string {
 
     case "wrong_participle":
       return "Het deelwoord past zich aan aan wie het deed — man, vrouw of meervoud.";
+
+    case "interpretation":
+      return (
+        "Lees het eind van het woord in de Kroatische zin nog eens. Gaat er iets " +
+        "ergens heen, of is er iets ergens? Het werkwoord is bij beide hetzelfde — " +
+        "de uitgang is je enige aanwijzing."
+      );
 
     case "word_order":
       return "Alle woorden kloppen, de volgorde nog niet. Let op waar de korte vormen staan.";

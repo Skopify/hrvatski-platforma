@@ -1,4 +1,4 @@
-import type { Exercise, ExerciseMode, ExerciseType } from "./content";
+import type { Exercise, ExerciseMode, ExerciseType, Paradigm } from "./content";
 
 /**
  * Wat de browser te zien krijgt. Het juiste antwoord zit hier bewust NIET in:
@@ -26,6 +26,8 @@ export interface PresentedExercise {
   tokens?: string[];
   /** free_production */
   rubric_nl?: string[];
+  /** Paradigmatabel bij een uitlegmoment. */
+  table?: Paradigm;
 }
 
 /** Stabiele hash → dezelfde volgorde bij elke render, en reproduceerbaar. */
@@ -67,9 +69,11 @@ export function present(exercise: Exercise): PresentedExercise {
     difficulty: exercise.difficulty ?? 1,
     source: exercise.source,
     placeholder: exercise.placeholder,
+    table: exercise.table,
   };
 
   switch (exercise.type) {
+    case "interpret":
     case "choice": {
       const options = [exercise.answer ?? "", ...(exercise.distractors ?? [])].filter(Boolean);
       return { ...base, options: seededShuffle(options, exercise.id) };

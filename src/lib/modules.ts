@@ -1,0 +1,78 @@
+import fs from "node:fs";
+import path from "node:path";
+
+import type { Exercise, GrammarPoint } from "./content";
+
+/**
+ * Een grammaticamodule: één punt, in zeven stappen doorlopen.
+ *
+ * Het verschil met een les is de vórm, niet de inhoud. Een les is een hoofdstuk
+ * uit het boek en gaat over vijf dingen tegelijk. Een module gaat over één punt
+ * en doorloopt altijd dezelfde weg: eerst kijken, dan de regel, dan de betekenis
+ * interpreteren, dan geblokt oefenen, dan door elkaar, dan in lopende tekst.
+ *
+ * Die vaste vorm is het punt. De stap die in de meeste cursussen ontbreekt is de
+ * derde: de betekenis kiezen zonder iets te hoeven produceren. Daar wordt de
+ * koppeling tussen vorm en betekenis gelegd, en zonder die stap leer je de tabel
+ * in plaats van de taal.
+ */
+
+export type PhaseKind =
+  | "noticing"
+  | "rule"
+  | "interpretation"
+  | "blocked"
+  | "interleaved"
+  | "context";
+
+export interface ModulePhase {
+  step: number;
+  kind: PhaseKind;
+  title_nl: string;
+  /** Eén regel voor de leerder: waaróm deze stap er is. */
+  why_nl: string;
+  text_hr?: string;
+  translation_nl?: string;
+  exercises: Exercise[];
+}
+
+export interface GrammarModule {
+  code: string;
+  title_hr: string;
+  title_nl: string;
+  cefr: string;
+  blurb_nl: string;
+  prerequisites: string[];
+  can_do_nl: string[];
+  grammar: GrammarPoint;
+  phases: ModulePhase[];
+  source?: string;
+}
+
+const DIR = path.join(process.cwd(), "content", "modules");
+
+let cache: GrammarModule[] | null = null;
+
+export function loadModules(): GrammarModule[] {
+  if (cache) return cache;
+  if (!fs.existsSync(DIR)) return (cache = []);
+  cache = fs
+    .readdirSync(DIR)
+    .filter((f) => f.endsWith(".json"))
+    .sort()
+    .map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), "utf-8")) as GrammarModule);
+  return cache;
+}
+
+export function loadModule(code: string): GrammarModule | undefined {
+  return loadModules().find((m) => m.code.toLowerCase() === code.toLowerCase());
+}
+
+/** Alle oefeningen van een module, plat — voor de index en het nakijken. */
+export function moduleExercises(m: GrammarModule): Exercise[] {
+  return m.phases.flatMap((p) => p.exercises);
+}
+
+export function moduleStepCount(m: GrammarModule): number {
+  return m.phases.reduce((n, p) => n + p.exercises.length + (p.text_hr ? 1 : 0), 0);
+}
