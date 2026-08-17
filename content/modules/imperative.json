@@ -1,0 +1,483 @@
+{
+  "code": "IMPERATIVE",
+  "title_hr": "Dođi! Nemoj!",
+  "title_nl": "Zeg het maar",
+  "cefr": "A2",
+  "blurb_nl": "Iemand iets vragen of zeggen wat hij moet doen. Het Nederlands gebruikt gewoon de stam, het Kroatisch heeft uitgangen — en voor 'niet doen' zijn er twee manieren, waarvan er één veel vriendelijker klinkt.",
+  "prerequisites": ["PRES-CLASSES", "NEG-VERB"],
+  "can_do_nl": [
+    "Ik kan iemand vragen iets te doen: čitaj, radi, dođi.",
+    "Ik weet dat er een aparte vorm is voor jullie en voor wij.",
+    "Ik kan verbieden met nemoj en weet waarom dat vriendelijker klinkt.",
+    "Ik ken de onregelmatige vormen: idi, dođi, jedi, budi, daj."
+  ],
+  "grammar": {
+    "id": "g.mod.imperative",
+    "code": "IMPERATIVE",
+    "title_nl": "Imperatief — de gebiedende wijs",
+    "cefr": "A2",
+    "explanation_nl": "De gebiedende wijs heeft drie vormen: voor **jij**, voor **wij** en voor **jullie/u**. De uitgang hangt af van de werkwoordsklasse: *-aj / -ajmo / -ajte* of *-i / -imo / -ite*.",
+    "contrast_nl": "Het Nederlands heeft één vorm: 'lees!'. Voor 'laten we lezen' hebben wij een omschrijving nodig, en 'leest u' klinkt ouderwets. Het Kroatisch heeft voor alle drie een eigen uitgang, en gebruikt ze allemaal dagelijks.",
+    "paradigm": {
+      "caption_nl": "Twee patronen, drie vormen",
+      "columns": ["jij", "wij", "jullie / u"],
+      "rows": [
+        { "label": "čitati — lezen", "cells": ["čitaj!", "čitajmo!", "čitajte!"] },
+        { "label": "raditi — werken", "cells": ["radi!", "radimo!", "radite!"] },
+        { "label": "pisati — schrijven", "cells": ["piši!", "pišimo!", "pišite!"] },
+        { "label": "ići — gaan", "cells": ["idi!", "idimo!", "idite!"] },
+        { "label": "doći — komen", "cells": ["dođi!", "dođimo!", "dođite!"] },
+        { "label": "biti — zijn", "cells": ["budi!", "budimo!", "budite!"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De vorm voor jullie gebruiken tegen één persoon die je tutoyeert, of omgekeerd. Radi! is tegen een vriend, Radite! tegen uw baas.",
+      "Ne radi! klinkt als een bevel; Nemoj raditi! klinkt als een verzoek. Gebruik in de omgang de tweede.",
+      "De onregelmatige vormen zijn juist de frequentste: idi, dođi, jedi, budi, daj."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Dezelfde opdracht, drie keer: tegen één iemand, tegen ons samen, en tegen meerdere mensen.",
+      "exercises": [
+        {
+          "id": "m.imp.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Let op de uitgangen.",
+          "given": "Čitaj! — Čitajmo! — Čitajte!\nRadi! — Radimo! — Radite!\nDođi! — Dođimo! — Dođite!\n\nDođi ovdje, molim te.\nDođite ovdje, molim Vas.\n\nNe idi tamo!\nNemoj ići tamo.",
+          "body_nl": "Lees! — Laten we lezen! — Leest u! / Lezen jullie!\nWerk! — Laten we werken! — Werkt u!\nKom! — Laten we komen! — Komt u!\n\nKom hier, alsjeblieft.\nKomt u hier, alstublieft.\n\nGa daar niet naartoe! (streng)\nGa daar maar niet naartoe. (vriendelijk)",
+          "targets": []
+        },
+        {
+          "id": "m.imp.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Het Nederlands heeft één vorm: **lees!** Voor de rest hebben wij omschrijvingen nodig — 'laten we', 'leest u'.\n\nHet Kroatisch heeft drie uitgangen: *-∅*, *-mo* en *-te*. Die *-te* is dezelfde als bij het beleefde *Vi*, dus je gebruikt hem ook tegen één persoon die je met u aanspreekt.\n\nEn kijk naar de laatste twee regels. *Ne idi* en *Nemoj ići* betekenen hetzelfde, maar klinken heel anders — net als het verschil tussen 'ga daar niet naartoe!' en 'ga daar maar niet naartoe'.",
+          "targets": ["g.mod.imperative", "g.20.imperativ"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Twee patronen voor de uitgangen, en twee manieren om iets te verbieden.",
+      "exercises": [
+        {
+          "id": "m.imp.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie vormen, twee patronen",
+          "body_nl": "Je maakt de gebiedende wijs uit de **presensstam** — de vorm bij *oni*, zonder uitgang.\n\nWerkwoorden op **-ati** krijgen *-aj / -ajmo / -ajte*:\n*čitati* → čita-ju → **čitaj, čitajmo, čitajte**\n\nDe rest krijgt *-i / -imo / -ite*:\n*raditi* → rad-e → **radi, radimo, radite**\n*pisati* → piš-u → **piši, pišimo, pišite**\n\nLet op die laatste: het is *piši*, niet *pisaj*, want de presensstam is *piš-*. Wie de ja-vorm kent, kent de gebiedende wijs.\n\nDe vorm op **-te** gebruik je tegen meerdere mensen én tegen één persoon die je met *Vi* aanspreekt.",
+          "table": {
+            "caption_nl": "Twee patronen, drie vormen",
+            "columns": ["jij", "wij", "jullie / u"],
+            "rows": [
+              { "label": "čitati — lezen", "cells": ["čitaj!", "čitajmo!", "čitajte!"] },
+              { "label": "raditi — werken", "cells": ["radi!", "radimo!", "radite!"] },
+              { "label": "pisati — schrijven", "cells": ["piši!", "pišimo!", "pišite!"] },
+              { "label": "ići — gaan", "cells": ["idi!", "idimo!", "idite!"] },
+              { "label": "doći — komen", "cells": ["dođi!", "dođimo!", "dođite!"] },
+              { "label": "biti — zijn", "cells": ["budi!", "budimo!", "budite!"] }
+            ]
+          },
+          "targets": ["g.mod.imperative", "g.20.imperativ", "v.05.citati", "v.06.raditi", "v.13.pisati"]
+        },
+        {
+          "id": "m.imp.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee manieren om nee te zeggen — en ze klinken anders",
+          "body_nl": "**Ne** plus de gebiedende wijs is streng, bijna een bevel:\n*Ne idi tamo!* — Ga daar niet naartoe!\n\n**Nemoj** plus de **infinitief** is vriendelijk, een verzoek:\n*Nemoj ići tamo.* — Ga daar maar niet naartoe.\n\nDie tweede is wat je in de omgang gebruikt. Tegen meerdere mensen of met *Vi*: **nemojte**.\n*Nemojte se brinuti.* — Maakt u zich geen zorgen.\n\nHet verschil is precies zo groot als tussen 'niet doen!' en 'doe dat maar niet'. Wie altijd *ne* gebruikt, komt onbedoeld hard over.",
+          "targets": ["g.mod.imperative", "g.20.imperativ_negacija", "g.mod.neg_verb"]
+        },
+        {
+          "id": "m.imp.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De onregelmatige vormen — en dat zijn juist de nuttigste",
+          "body_nl": "**ići** → *idi!* (ga)\n**doći** → *dođi!* (kom)\n**jesti** → *jedi!* (eet)\n**biti** → *budi!* (wees)\n**dati** → *daj!* (geef)\n**vidjeti** → *vidi!* (kijk)\n\n*Daj* hoor je constant, ook als aansporing: *Daj, reci mi!* — Kom op, zeg het!\n\nEn voor 'laat hem' gebruik je **neka** plus de gewone tegenwoordige tijd:\n*Neka dođe.* — Laat hem komen.\n*Neka čekaju.* — Laat ze wachten.",
+          "targets": ["g.mod.imperative", "g.20.imperativ_nepravilni", "g.20.neka", "v.07.ici", "v.06.doci", "v.08.jesti", "v.13.dati"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Tegen wie, en hoe streng?",
+      "why_nl": "Nog niets invullen. Je leest aan de vorm tegen wie het gezegd wordt — en hoe het klinkt.",
+      "exercises": [
+        {
+          "id": "m.imp.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Tegen wie wordt dit gezegd?",
+          "given": "Dođi ovdje.",
+          "nudge": "Kijk of er een -te achter staat. Wat betekent het als die er niet is?",
+          "answer": "Tegen één iemand die je tutoyeert — een vriend of familie.",
+          "distractors": ["Tegen meerdere mensen of iemand die je met u aanspreekt."],
+          "explain_nl": "Zonder -te is het de vorm voor ti.",
+          "targets": ["g.mod.imperative", "v.06.doci"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.imp.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Tegen wie wordt dit gezegd?",
+          "given": "Dođite ovdje.",
+          "nudge": "Kijk of er een -te achter staat. Wat betekent het als die er wél is?",
+          "answer": "Tegen meerdere mensen, of tegen iemand die je met u aanspreekt.",
+          "distractors": ["Tegen één iemand die je tutoyeert."],
+          "explain_nl": "De -te is dezelfde als bij Vi, dus hij doet dubbel werk: meervoud én beleefdheid.",
+          "targets": ["g.mod.imperative", "v.06.doci"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.imp.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe klinkt dit?",
+          "given": "Ne idi tamo!",
+          "nudge": "Er zijn twee manieren om iets te verbieden. Welke van de twee is dit, en welke toon hoort daarbij?",
+          "answer": "Streng, als een bevel.",
+          "distractors": ["Vriendelijk, als een verzoek.", "Als een vraag."],
+          "explain_nl": "ne plus de gebiedende wijs is de harde variant. Voor de omgang gebruik je nemoj.",
+          "targets": ["g.mod.imperative", "v.07.ici"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe klinkt dit?",
+          "given": "Nemoj ići tamo.",
+          "nudge": "Er zijn twee manieren om iets te verbieden. Welke van de twee is dit, en welke toon hoort daarbij?",
+          "answer": "Vriendelijk, als een verzoek.",
+          "distractors": ["Streng, als een bevel.", "Als een vraag."],
+          "explain_nl": "nemoj plus de infinitief is de vriendelijke variant — 'ga daar maar niet naartoe'.",
+          "targets": ["g.mod.imperative", "v.07.ici"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent dit?",
+          "given": "Neka dođe.",
+          "nudge": "Wie moet er iets doen: de persoon tegen wie je praat, of iemand anders?",
+          "answer": "Laat hem komen — het gaat over een derde persoon.",
+          "distractors": ["Kom binnen.", "Laten we komen.", "Komt u binnen."],
+          "explain_nl": "Voor 'laat hem' gebruikt het Kroatisch neka plus de gewone tegenwoordige tijd, niet de gebiedende wijs.",
+          "targets": ["g.mod.imperative", "v.06.doci"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm is goed voor pisati?",
+          "given": "A: Pisaj!\nB: Piši!",
+          "nudge": "De gebiedende wijs komt van de presensstam, niet van de infinitief. Wat is de ja-vorm van pisati?",
+          "answer": "B — de stam is piš-, want de ja-vorm is pišem.",
+          "distractors": [
+            "A — de uitgang komt van de infinitief pisati.",
+            "Allebei goed.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Wie pišem kent, weet dat de stam piš- is. Daaruit volgt piši, niet pisaj.",
+          "targets": ["g.mod.imperative", "v.13.pisati"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf zeggen",
+      "why_nl": "Tien keer dezelfde beweging: neem de presensstam en kies de uitgang die bij je gesprekspartner past.",
+      "exercises": [
+        {
+          "id": "m.imp.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zeg het tegen een vriend.",
+          "given": "___ (čitati) ovu knjigu!",
+          "answer": "Čitaj",
+          "accepts": ["Čitaj", "čitaj"],
+          "explain_nl": "Werkwoord op -ati → uitgang -aj.",
+          "targets": ["g.mod.imperative", "v.05.citati", "v.01.knjiga"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.imp.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zeg het tegen uw baas.",
+          "given": "___ (čitati) ovu knjigu!",
+          "answer": "Čitajte",
+          "accepts": ["Čitajte", "čitajte"],
+          "explain_nl": "Met Vi hoort de vorm op -te.",
+          "targets": ["g.mod.imperative", "v.05.citati"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.imp.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zeg het tegen een vriend.",
+          "given": "___ (raditi) sada!",
+          "answer": "Radi",
+          "accepts": ["Radi", "radi"],
+          "explain_nl": "Werkwoord op -iti → uitgang -i.",
+          "targets": ["g.mod.imperative", "v.06.raditi"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.imp.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Stel het samen voor.",
+          "given": "___ (ići) u kafić!",
+          "answer": "Idimo",
+          "accepts": ["Idimo", "idimo"],
+          "hint": "ići is onregelmatig; de stam is id-.",
+          "explain_nl": "«Laten we naar het café gaan» → de wij-vorm idimo.",
+          "targets": ["g.mod.imperative", "v.07.ici", "v.07.kafic"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zeg het tegen een vriend.",
+          "given": "___ (doći) u pet sati!",
+          "answer": "Dođi",
+          "accepts": ["Dođi", "dođi"],
+          "explain_nl": "doći is onregelmatig: dođi.",
+          "targets": ["g.mod.imperative", "v.06.doci"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.imp.035",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal vriendelijk, tegen een vriend.",
+          "given": "Ga daar maar niet naartoe.",
+          "answer": "Nemoj ići tamo.",
+          "accepts": ["Nemoj ići tamo.", "Nemoj ići tamo"],
+          "explain_nl": "nemoj plus de infinitief — de vriendelijke variant.",
+          "targets": ["g.mod.imperative", "v.07.ici"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.036",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal vriendelijk, tegen iemand die u met u aanspreekt.",
+          "given": "Maakt u zich geen zorgen.",
+          "answer": "Nemojte se brinuti.",
+          "accepts": ["Nemojte se brinuti.", "Nemojte se brinuti"],
+          "hint": "brinuti se = zich zorgen maken",
+          "explain_nl": "Met Vi wordt nemoj nemojte. Het woordje se komt erachter.",
+          "targets": ["g.mod.imperative", "g.mod.clitic_order"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.037",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Pisaj mi pismo!",
+          "answer": "Piši mi pismo!",
+          "accepts": ["Piši mi pismo!", "Piši mi pismo"],
+          "explain_nl": "De stam is piš- (van pišem), dus piši.",
+          "targets": ["g.mod.imperative", "v.13.pisati", "v.01.pismo"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Nemoj idi tamo.",
+          "answer": "Nemoj ići tamo.",
+          "accepts": ["Nemoj ići tamo.", "Nemoj ići tamo"],
+          "explain_nl": "Na nemoj komt de infinitief, niet de gebiedende wijs.",
+          "targets": ["g.mod.imperative", "v.07.ici"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Je spreekt iemand met u aan. Er staat één fout in.",
+          "given": "Dođi ovdje, molim Vas.",
+          "answer": "Dođite ovdje, molim Vas.",
+          "accepts": ["Dođite ovdje, molim Vas.", "Dođite ovdje, molim Vas"],
+          "explain_nl": "molim Vas verraadt dat je iemand met u aanspreekt, dus dođite.",
+          "targets": ["g.mod.imperative", "v.06.doci"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Bevelen, vragen en ontkennen door elkaar, met de naamvallen erbij.",
+      "exercises": [
+        {
+          "id": "m.imp.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Dođi u ___ (kuća)!",
+          "answer": "kuću",
+          "accepts": ["kuću"],
+          "explain_nl": "dođi = beweging → accusatief.",
+          "targets": ["g.mod.loc_vs_acc", "v.01.kuca"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.imp.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin klinkt vriendelijk?",
+          "given": "Je wilt dat een vriend niet zoveel werkt.",
+          "answer": "Nemoj toliko raditi.",
+          "distractors": ["Ne radi toliko!", "Nemojte toliko raditi.", "Ne radite toliko!"],
+          "explain_nl": "nemoj plus infinitief is vriendelijk, en de vorm zonder -te past bij een vriend.",
+          "targets": ["g.mod.imperative", "v.06.raditi"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Je stelt het samen voor.",
+          "given": "Laten we morgen naar het strand gaan.",
+          "answer": "Idimo sutra na plažu.",
+          "accepts": ["Idimo sutra na plažu.", "Idimo sutra na plažu", "Sutra idimo na plažu."],
+          "explain_nl": "De wij-vorm idimo, en plažu in de accusatief want er is beweging.",
+          "targets": ["g.mod.imperative", "g.mod.loc_vs_acc", "v.07.plaza"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.053",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan.",
+          "given": "Nemoj ___ (piti) toliko kave!",
+          "answer": "piti",
+          "accepts": ["piti"],
+          "explain_nl": "Na nemoj komt de infinitief, dus piti blijft zoals hij is.",
+          "targets": ["g.mod.imperative", "v.08.piti", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Nemoj idi u kući!",
+          "answer": "Nemoj ići u kuću!",
+          "accepts": ["Nemoj ići u kuću!", "Nemoj ići u kuću"],
+          "hint": "Eén fout in de vorm na nemoj, één in de naamval.",
+          "explain_nl": "Na nemoj de infinitief ići, en beweging vraagt kuću.",
+          "targets": ["g.mod.imperative", "g.mod.loc_vs_acc", "v.01.kuca"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een gesprekje",
+      "why_nl": "Een recept en een gesprek. Twee plekken waar de gebiedende wijs de hele tijd voorbijkomt.",
+      "text_hr": "Bakin recept za palačinke:\nUzmi tri jaja i pomiješaj ih s mlijekom. Dodaj malo soli. Nemoj dodavati previše šećera — palačinke nisu kolači. Zagrij tavu i ulij tijesto. Čekaj minutu, onda okreni. Ne peci ih predugo!\n\n— Mama, dođi vidjeti!\n— Čekaj, dolazim. Nemoj dirati tavu, vruća je.\n— Znam, znam.\n— I nemoj jesti sve sam. Ostavi nešto za brata.",
+      "translation_nl": "Oma's recept voor pannenkoeken:\nNeem drie eieren en meng ze met melk. Voeg een beetje zout toe. Doe er niet te veel suiker bij — pannenkoeken zijn geen koekjes. Verhit de pan en giet het beslag erin. Wacht een minuut, draai hem dan om. Bak ze niet te lang!\n\n— Mama, kom kijken!\n— Wacht, ik kom. Raak de pan niet aan, hij is heet.\n— Ik weet het, ik weet het.\n— En eet niet alles zelf op. Laat iets over voor je broer.",
+      "exercises": [
+        {
+          "id": "m.imp.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom mag er niet te veel suiker in?",
+          "answer": "Omdat pannenkoeken geen koekjes zijn.",
+          "distractors": ["Omdat het dan aanbrandt.", "Omdat oma het niet lust.", "Dat staat er niet."],
+          "explain_nl": "«Nemoj dodavati previše šećera — palačinke nisu kolači.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.imp.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In het recept staat «Ne peci ih predugo!» en «Nemoj dodavati previše šećera». Wat is het verschil in toon?",
+          "given": "Ne peci ih predugo! … Nemoj dodavati previše šećera.",
+          "nudge": "Welke van de twee manieren om te verbieden staat er in elk geval? En welke daarvan klinkt harder?",
+          "answer": "De eerste is strenger; de tweede klinkt als een goede raad.",
+          "distractors": [
+            "De eerste is vriendelijker.",
+            "Er is geen verschil in toon.",
+            "De tweede is een vraag."
+          ],
+          "explain_nl": "ne plus gebiedende wijs is streng, nemoj plus infinitief is milder. In een recept mag dat allebei.",
+          "targets": ["g.mod.imperative"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Spreekt oma haar kleinkind met jij of met u aan in het recept?",
+          "given": "Uzmi tri jaja i pomiješaj ih s mlijekom.",
+          "nudge": "Staat er een -te achter de werkwoorden, of niet?",
+          "answer": "Met jij — er staat geen -te achter de werkwoorden.",
+          "distractors": [
+            "Met u — dat hoort bij een recept.",
+            "Tegen meerdere mensen.",
+            "Dat is niet te zien."
+          ],
+          "explain_nl": "Uzmi en pomiješaj zijn de vormen voor ti. Met Vi zou er Uzmite en pomiješajte staan.",
+          "targets": ["g.mod.imperative"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.imp.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Schrijf het recept om voor iemand die u met u aanspreekt.",
+          "given": "___ (uzeti) tri jaja i ___ (pomiješati) ih s mlijekom.",
+          "answer": "Uzmite i pomiješajte",
+          "accepts": ["Uzmite i pomiješajte", "Uzmite, pomiješajte"],
+          "hint": "Beide werkwoorden krijgen dezelfde uitgang.",
+          "explain_nl": "Met Vi krijgen allebei de vorm op -te.",
+          "targets": ["g.mod.imperative"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.imp.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen: vraag een vriend iets te doen, stel iets samen voor, en verbied iets vriendelijk.",
+          "model_answer": "Dođi u pet sati. Idimo u kafić. Nemoj zaboraviti knjigu.",
+          "rubric_nl": [
+            "De eerste zin gebruikt de vorm voor ti, zonder -te.",
+            "De tweede zin gebruikt de wij-vorm op -mo.",
+            "De derde zin gebruikt nemoj plus een infinitief."
+          ],
+          "explain_nl": "Met deze drie kun je afspreken, voorstellen en waarschuwen — het grootste deel van wat je met de gebiedende wijs doet.",
+          "targets": ["g.mod.imperative"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum IMPERATIVE, gebouwd op les 20 (g.20.imperativ, nepravilni, negacija, neka)"
+}

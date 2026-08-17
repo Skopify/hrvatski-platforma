@@ -1,0 +1,486 @@
+{
+  "code": "Q-WORDS",
+  "title_hr": "Govoriš li hrvatski?",
+  "title_nl": "Vragen stellen",
+  "cefr": "A1",
+  "blurb_nl": "Het Nederlands draait de woorden om als je iets vraagt. Het Kroatisch laat de zin staan en zet er één woordje bij: li. En bij vraagwoorden zit er één paar waar Nederlandstaligen altijd op struikelen.",
+  "prerequisites": ["BITI-FULL", "PRES-CLASSES"],
+  "can_do_nl": [
+    "Ik kan van elke mededeling een ja-nee-vraag maken met li.",
+    "Ik ken de vraagwoorden en weet welk antwoord ze verwachten.",
+    "Ik weet wanneer ik gdje zeg en wanneer kamo.",
+    "Ik weet dat li op de tweede plek staat, net als sam."
+  ],
+  "grammar": {
+    "id": "g.mod.q_words",
+    "code": "Q-WORDS",
+    "title_nl": "Vragen: li en de vraagwoorden",
+    "cefr": "A1",
+    "explanation_nl": "Een ja-nee-vraag maak je door **li** achter het werkwoord te zetten: *Govoriš li hrvatski?* De rest van de zin blijft staan zoals hij was.\n\nVoor de andere vragen zijn er vraagwoorden, en die staan vooraan.",
+    "contrast_nl": "Het Nederlands draait de woordorde om: 'jij spreekt' wordt 'spreek jij?'. Het Kroatisch verandert de volgorde niet en voegt alleen li toe. Dat is makkelijker — maar li is een clitic, dus hij moet wél op de tweede plek staan.",
+    "paradigm": {
+      "caption_nl": "De vraagwoorden",
+      "columns": ["Kroatisch", "Nederlands"],
+      "rows": [
+        { "label": "personen", "cells": ["tko?", "wie?"] },
+        { "label": "dingen", "cells": ["što?", "wat?"] },
+        { "label": "plaats", "cells": ["gdje?", "waar?"] },
+        { "label": "richting", "cells": ["kamo?", "waarheen?"] },
+        { "label": "tijd", "cells": ["kada? / kad?", "wanneer?"] },
+        { "label": "reden", "cells": ["zašto?", "waarom?"] },
+        { "label": "manier", "cells": ["kako?", "hoe?"] },
+        { "label": "aantal", "cells": ["koliko?", "hoeveel?"] },
+        { "label": "keuze", "cells": ["koji?", "welke?"] },
+        { "label": "eigenschap", "cells": ["kakav?", "wat voor?"] },
+        { "label": "bezit", "cells": ["čiji?", "wiens?"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "li vooraan zetten. Nooit «Li govoriš hrvatski» — er moet altijd een woord vóór staan.",
+      "gdje gebruiken voor een richting. Gdje si? is 'waar ben je?', Kamo ideš? is 'waar ga je heen?'.",
+      "Het Kroatisch zegt tko, niet ko. Dat laatste is Servisch."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Links een mededeling, rechts een vraag. Kijk hoe weinig er verandert.",
+      "exercises": [
+        {
+          "id": "m.qw.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Mededeling en vraag naast elkaar.",
+          "given": "Govoriš hrvatski.  —  Govoriš li hrvatski?\nAna je doma.  —  Je li Ana doma?\nImaš vremena.  —  Imaš li vremena?\nMarko radi u uredu.  —  Gdje Marko radi?\n\nKamo ideš? — U grad.\nGdje si? — U gradu.",
+          "body_nl": "Je spreekt Kroatisch. — Spreek je Kroatisch?\nAna is thuis. — Is Ana thuis?\nJe hebt tijd. — Heb je tijd?\nMarko werkt op kantoor. — Waar werkt Marko?\n\nWaar ga je heen? — Naar de stad.\nWaar ben je? — In de stad.",
+          "targets": []
+        },
+        {
+          "id": "m.qw.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Bij de ja-nee-vragen verandert er bijna niets. Er komt alleen **li** achter het werkwoord bij, en de rest blijft staan.\n\nIn het Nederlands moet je de woorden omdraaien: 'jij spreekt' wordt 'spreek jij'. Het Kroatisch hoeft dat niet.\n\nEn kijk naar de laatste twee regels. **Kamo** hoort bij een antwoord met beweging (*u grad*), **gdje** bij een antwoord over plaats (*u gradu*). Dat is precies het verschil dat je bij *u kuću / u kući* al hebt geleerd — nu in de vraag.",
+          "targets": ["g.mod.q_words"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén woordje voor ja-nee-vragen, en een rijtje vraagwoorden voor de rest.",
+      "exercises": [
+        {
+          "id": "m.qw.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Ja-nee-vragen: werkwoord plus li",
+          "body_nl": "Zet **li** achter het werkwoord en je hebt een vraag:\n\n*Radiš.* → *Radiš li?*\n*Imaš vremena.* → *Imaš li vremena?*\n\nBij *biti* gebruik je de lange vorm: *Je li Ana doma?*, *Jesi li ti student?*\n\nLet op: **li** is een clitic, net als *sam* en *ću*. Hij staat dus op de **tweede plek** en nooit vooraan.\n\nEn nog makkelijker: in spreektaal kun je ook gewoon je stem laten stijgen. *Govoriš hrvatski?* is ook een vraag — maar met *li* klinkt het netter.",
+          "targets": ["g.mod.q_words", "g.mod.clitic_order", "v.09.govoriti"]
+        },
+        {
+          "id": "m.qw.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De vraagwoorden",
+          "body_nl": "Deze staan altijd vooraan in de zin. Elk vraagwoord verwacht een bepaald soort antwoord — en dat helpt je bij het kiezen.\n\nTwee opmerkingen. Het Kroatisch zegt **tko**, niet *ko*: dat laatste is Servisch. En **koliko** vraagt om een getal, dus het antwoord komt vaak in de genitief: *Koliko imaš vremena?*",
+          "table": {
+            "caption_nl": "De vraagwoorden",
+            "columns": ["Kroatisch", "Nederlands"],
+            "rows": [
+              { "label": "personen", "cells": ["tko?", "wie?"] },
+              { "label": "dingen", "cells": ["što?", "wat?"] },
+              { "label": "plaats", "cells": ["gdje?", "waar?"] },
+              { "label": "richting", "cells": ["kamo?", "waarheen?"] },
+              { "label": "tijd", "cells": ["kada? / kad?", "wanneer?"] },
+              { "label": "reden", "cells": ["zašto?", "waarom?"] },
+              { "label": "manier", "cells": ["kako?", "hoe?"] },
+              { "label": "aantal", "cells": ["koliko?", "hoeveel?"] },
+              { "label": "keuze", "cells": ["koji?", "welke?"] },
+              { "label": "eigenschap", "cells": ["kakav?", "wat voor?"] },
+              { "label": "bezit", "cells": ["čiji?", "wiens?"] }
+            ]
+          },
+          "targets": ["g.mod.q_words"]
+        },
+        {
+          "id": "m.qw.012",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "gdje of kamo — hetzelfde verschil als u kući en u kuću",
+          "body_nl": "**Gdje?** vraagt naar een plaats. Het antwoord staat in de lokatief.\n*Gdje si?* — *U gradu.*\n\n**Kamo?** vraagt naar een richting. Het antwoord staat in de accusatief.\n*Kamo ideš?* — *U grad.*\n\nHet Nederlands doet dit met 'waar' tegenover 'waarheen', maar wij zijn slordig: 'waar ga je naartoe' hoor je constant. In het Kroatisch is het onderscheid duidelijker — en je kent het al, want het is hetzelfde contrast als tussen *u kući* en *u kuću*.\n\nIn spreektaal hoor je *Gdje ideš?* ook wel. Het is niet netjes, maar je zult het tegenkomen.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc", "g.10.gdje_kamo"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Welke vraag hoort erbij?",
+      "why_nl": "Nog niets invullen. Je krijgt een antwoord te zien en kiest welke vraag erbij past — en de naamval van het antwoord verklapt het.",
+      "exercises": [
+        {
+          "id": "m.qw.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Op welke vraag is dit het antwoord?",
+          "given": "— U gradu.",
+          "nudge": "Kijk naar het eind van het woord. Is dit een plaats of een richting?",
+          "answer": "Gdje si? — Waar ben je?",
+          "distractors": ["Kamo ideš? — Waar ga je heen?"],
+          "explain_nl": "gradu is lokatief, dus het gaat over een plaats → gdje.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Op welke vraag is dit het antwoord?",
+          "given": "— U grad.",
+          "nudge": "Kijk naar het eind van het woord. Is dit een plaats of een richting?",
+          "answer": "Kamo ideš? — Waar ga je heen?",
+          "distractors": ["Gdje si? — Waar ben je?"],
+          "explain_nl": "grad zonder uitgang is accusatief, dus richting → kamo.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gevraagd?",
+          "given": "Čiji je ovo auto?",
+          "nudge": "Vergelijk met koji en kakav. Vraagt dit naar welke, naar wat voor, of naar iemands bezit?",
+          "answer": "Van wie is deze auto?",
+          "distractors": ["Welke auto is dit?", "Wat voor auto is dit?"],
+          "explain_nl": "čiji vraagt naar bezit. koji zou 'welke' zijn, kakav 'wat voor'.",
+          "targets": ["g.mod.q_words", "v.00.auto"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: Li govoriš hrvatski?\nB: Govoriš li hrvatski?",
+          "nudge": "li hoort bij dezelfde familie als sam en ću. Waar mogen die staan?",
+          "answer": "B — li kan nooit vooraan.",
+          "distractors": ["A — zo begint de vraag duidelijk.", "Allebei goed.", "Geen van beide."],
+          "explain_nl": "li is een clitic en staat op de tweede plek. Bij A staat er niets vóór.",
+          "targets": ["g.mod.q_words", "g.mod.clitic_order", "v.09.govoriti"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Is dit een vraag of een mededeling?",
+          "given": "Ana je doma.",
+          "nudge": "Staat er een li in? Waar zou die staan als het een vraag was?",
+          "answer": "Een mededeling: Ana is thuis.",
+          "distractors": ["Een vraag: is Ana thuis?"],
+          "explain_nl": "Zonder li is het een mededeling. Als vraag zou het Je li Ana doma? zijn, met de lange vorm van biti.",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gevraagd?",
+          "given": "Koliko imaš vremena?",
+          "nudge": "Wat voor soort antwoord past hierop: een naam, een plaats, of een hoeveelheid?",
+          "answer": "Hoeveel tijd heb je?",
+          "distractors": ["Wanneer heb je tijd?", "Waarom heb je tijd?", "Heb je tijd?"],
+          "explain_nl": "koliko vraagt om een aantal of hoeveelheid, en daarom staat vremena in de genitief.",
+          "targets": ["g.mod.q_words", "v.12.vrijeme"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf vragen",
+      "why_nl": "Tien keer dezelfde beweging: zet li op de tweede plek, of kies het juiste vraagwoord.",
+      "exercises": [
+        {
+          "id": "m.qw.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een vraag van.",
+          "given": "Govoriš hrvatski. → ___ hrvatski?",
+          "answer": "Govoriš li",
+          "accepts": ["Govoriš li", "govoriš li"],
+          "explain_nl": "li komt direct achter het werkwoord.",
+          "targets": ["g.mod.q_words", "v.09.govoriti"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.qw.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Maak er een vraag van.",
+          "given": "Ana je doma. → ___ Ana doma?",
+          "answer": "Je li",
+          "accepts": ["Je li", "je li"],
+          "explain_nl": "Bij biti gebruik je de lange vorm: Je li…?",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.032",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk vraagwoord hoort hier?",
+          "given": "___ ideš? — U grad.",
+          "answer": "Kamo",
+          "distractors": ["Gdje"],
+          "explain_nl": "Het antwoord staat in de accusatief, dus het gaat om een richting.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.033",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk vraagwoord hoort hier?",
+          "given": "___ si bio jučer? — U kafiću.",
+          "answer": "Gdje",
+          "distractors": ["Kamo"],
+          "explain_nl": "kafiću is lokatief, dus een plaats → gdje.",
+          "targets": ["g.mod.q_words", "v.07.kafic"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.034",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk vraagwoord hoort hier?",
+          "given": "___ radi u uredu? — Marko.",
+          "answer": "Tko",
+          "distractors": ["Što", "Kako", "Čiji"],
+          "explain_nl": "Het antwoord is een persoon → tko. En let op: tko, niet ko.",
+          "targets": ["g.mod.q_words", "v.14.ured"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.qw.035",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk vraagwoord hoort hier?",
+          "given": "___ ne radiš danas? — Jer sam bolestan.",
+          "answer": "Zašto",
+          "distractors": ["Kada", "Kako", "Koliko"],
+          "explain_nl": "Het antwoord begint met jer (want), dus er werd naar een reden gevraagd.",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.036",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Heb je tijd?",
+          "answer": "Imaš li vremena?",
+          "accepts": ["Imaš li vremena?", "Imaš li vremena"],
+          "explain_nl": "li achter het werkwoord, en vremena in de genitief — dat hoort bij imati in een vraag.",
+          "targets": ["g.mod.q_words", "v.12.vrijeme"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Waar ga je heen?",
+          "answer": "Kamo ideš?",
+          "accepts": ["Kamo ideš?", "Kamo ideš"],
+          "explain_nl": "Richting → kamo.",
+          "targets": ["g.mod.q_words", "v.07.ici"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Li imaš vremena?",
+          "answer": "Imaš li vremena?",
+          "accepts": ["Imaš li vremena?", "Imaš li vremena"],
+          "explain_nl": "li kan niet vooraan. Het werkwoord gaat op plek één.",
+          "targets": ["g.mod.q_words", "g.mod.clitic_order"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.qw.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ko radi u uredu?",
+          "answer": "Tko radi u uredu?",
+          "accepts": ["Tko radi u uredu?", "Tko radi u uredu"],
+          "explain_nl": "Het Kroatisch zegt tko. Ko is de Servische vorm.",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Vragen in de verleden tijd en de toekomst, met de naamvallen erbij.",
+      "exercises": [
+        {
+          "id": "m.qw.050",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Je vraagt het aan Marko.",
+          "given": "Heb je gisteren gewerkt?",
+          "answer": "Jesi li jučer radio?",
+          "accepts": ["Jesi li jučer radio?", "Jesi li jučer radio", "Jesi li radio jučer?"],
+          "explain_nl": "Vraag in de verleden tijd: jesi li plus het deelwoord, mannelijk want Marko.",
+          "targets": ["g.mod.q_words", "g.mod.perfekt", "v.06.raditi"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.qw.051",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Kom je morgen?",
+          "answer": "Hoćeš li doći sutra?",
+          "accepts": ["Hoćeš li doći sutra?", "Hoćeš li doći sutra", "Hoćeš li sutra doći?"],
+          "explain_nl": "Vraag in de toekomst: hoćeš li plus de infinitief.",
+          "targets": ["g.mod.q_words", "g.mod.futur", "v.06.doci"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.qw.052",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Kamo ideš? — U ___ (škola).",
+          "answer": "školu",
+          "accepts": ["školu"],
+          "explain_nl": "kamo vraagt een richting → accusatief.",
+          "targets": ["g.mod.loc_vs_acc", "v.07.skola"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.053",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Gdje si? — U ___ (škola).",
+          "answer": "školi",
+          "accepts": ["školi"],
+          "explain_nl": "gdje vraagt een plaats → lokatief.",
+          "targets": ["g.mod.loc_vs_acc", "v.07.skola"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Gdje ideš? U gradu.",
+          "answer": "Kamo ideš? U grad.",
+          "accepts": ["Kamo ideš? U grad.", "Kamo ideš? U grad"],
+          "hint": "Eén fout in het vraagwoord, één in de naamval.",
+          "explain_nl": "ideš is beweging, dus kamo plus de accusatief. De vraag en het antwoord moeten bij elkaar passen.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een gesprekje",
+      "why_nl": "Een gesprek bestaat uit vragen. Tel er maar eens hoeveel manieren van vragen erin zitten.",
+      "text_hr": "— Dobar dan! Kako se zoveš?\n— Zovem se Nina. A ti?\n— Ja sam Marko. Odakle si?\n— Iz Nizozemske. Živim ovdje već dvije godine.\n— Govoriš li dobro hrvatski?\n— Ne baš. Razumijem više nego što govorim.\n— Gdje radiš?\n— U jednoj školi u centru. A ti, čime se baviš?\n— Ja sam kuhar. Imaš li vremena za kavu sutra?\n— Imam. Kamo idemo?\n— U kafić na trgu. Kada ti odgovara?\n— U pet?\n— Odlično.",
+      "translation_nl": "— Goedendag! Hoe heet je?\n— Ik heet Nina. En jij?\n— Ik ben Marko. Waar kom je vandaan?\n— Uit Nederland. Ik woon hier al twee jaar.\n— Spreek je goed Kroatisch?\n— Niet echt. Ik begrijp meer dan ik spreek.\n— Waar werk je?\n— Op een school in het centrum. En jij, wat doe je voor werk?\n— Ik ben kok. Heb je morgen tijd voor koffie?\n— Ja. Waar gaan we heen?\n— Naar het café op het plein. Wanneer komt het jou uit?\n— Om vijf uur?\n— Uitstekend.",
+      "exercises": [
+        {
+          "id": "m.qw.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat doet Marko voor werk?",
+          "answer": "Hij is kok.",
+          "distractors": ["Hij werkt op een school.", "Hij is student.", "Dat staat er niet."],
+          "explain_nl": "«Ja sam kuhar.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.qw.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In het gesprek staat «Gdje radiš?» en later «Kamo idemo?». Waarom twee verschillende vraagwoorden?",
+          "given": "Gdje radiš? … Kamo idemo?",
+          "nudge": "Kijk naar de werkwoorden: raditi en ići. Gaat er bij allebei iets ergens heen?",
+          "answer": "Werken gebeurt op een plaats, gaan heeft een richting.",
+          "distractors": [
+            "Omdat de eerste vraag aan één persoon is en de tweede aan twee.",
+            "Omdat de tweede in de toekomst staat.",
+            "Het is willekeurig; allebei mag."
+          ],
+          "explain_nl": "gdje bij plaats, kamo bij richting — hetzelfde onderscheid als tussen u kući en u kuću.",
+          "targets": ["g.mod.q_words", "g.mod.loc_vs_acc"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.qw.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Nina antwoordt «Imam.» Op welke vraag?",
+          "given": "— Imaš li vremena za kavu sutra?\n— Imam.",
+          "nudge": "Bij een ja-nee-vraag met li kun je in het Kroatisch antwoorden met het werkwoord zelf. Wat is hier het werkwoord?",
+          "answer": "Op een ja-nee-vraag; ze antwoordt met het werkwoord in plaats van met 'ja'.",
+          "distractors": [
+            "Op een vraag met een vraagwoord.",
+            "Op de vraag waar ze heen gaat.",
+            "Ze antwoordt op niets; het is een nieuwe vraag."
+          ],
+          "explain_nl": "In het Kroatisch antwoord je op een li-vraag graag met het werkwoord: Imam, Jesam, Govorim. Dat klinkt natuurlijker dan Da.",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.qw.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in het gesprek.",
+          "given": "___ (govoriti) dobro hrvatski?",
+          "answer": "Govoriš li",
+          "accepts": ["Govoriš li", "govoriš li"],
+          "explain_nl": "Werkwoord op plek één, li op plek twee.",
+          "targets": ["g.mod.q_words", "v.09.govoriti"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.qw.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie vragen die je aan een nieuwe kennis zou stellen: één ja-nee-vraag, één met gdje, één met kamo.",
+          "model_answer": "Govoriš li engleski? Gdje živiš? Kamo ideš sutra?",
+          "rubric_nl": [
+            "De eerste vraag heeft li op de tweede plek.",
+            "De tweede vraag gebruikt gdje en gaat over een plaats.",
+            "De derde vraag gebruikt kamo en gaat over een richting."
+          ],
+          "explain_nl": "Met deze drie kun je een gesprek beginnen — en dat is waar vragen voor zijn.",
+          "targets": ["g.mod.q_words"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum Q-WORDS, vanaf nul geschreven — vraagwoorden worden in de 21 lessen wel gebruikt maar nooit uitgelegd"
+}
