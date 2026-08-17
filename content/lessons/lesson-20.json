@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.20.imperativ",
+      "code": "IMPERATIVE",
       "title_nl": "IMPERATIEF — bevelen en verzoeken",
       "cefr": "A2.2",
       "explanation_nl": "De imperatief maak je uit de stam van de derde persoon meervoud. Haal de uitgang eraf en plak -i, -imo, -ite (of -j, -jmo, -jte als de stam op een klinker eindigt). rade → radi, radimo, radite. čitaju → čitaj, čitajmo, čitajte.",
@@ -42,6 +43,7 @@
     },
     {
       "id": "g.20.imperativ_nepravilni",
+      "code": "IMPERATIVE",
       "title_nl": "Onregelmatige imperatieven",
       "cefr": "A2.2",
       "explanation_nl": "Een handvol veelgebruikte werkwoorden heeft een eigen imperatief: ići → idi, doći → dođi, biti → budi, reći → reci, jesti → jedi, ući → uđi, izići → iziđi, vući → vuci, obući se → obuci se.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.20.imperativ_negacija",
+      "code": "IMPERATIVE",
       "title_nl": "Niet doen: nemoj of ne",
       "cefr": "A2.2",
       "explanation_nl": "Er zijn twee manieren om iets te verbieden. De gewone: nemoj, nemojmo, nemojte plus de infinitief — Nemoj ići! De directere: ne plus de imperatief — Ne idi! De eerste klinkt vriendelijker en is de veiligste keuze.",
@@ -92,6 +95,7 @@
     },
     {
       "id": "g.20.neka",
+      "code": "IMPERATIVE",
       "title_nl": "neka — laat hem, laat haar",
       "cefr": "A2.2",
       "explanation_nl": "Voor een bevel aan een derde persoon gebruik je neka plus de gewone tegenwoordige tijd: Neka on radi! (Laat hem werken.) Neka dođu! (Laat ze komen.) Er bestaat geen aparte imperatiefvorm voor de derde persoon.",
@@ -116,6 +120,7 @@
     },
     {
       "id": "g.20.vokativ",
+      "code": "VOC-ADDRESS",
       "title_nl": "VOCATIEF — iemand aanspreken",
       "cefr": "A2.2",
       "explanation_nl": "De vocatief is de vorm waarmee je iemand roept of aanspreekt. Mannelijk krijgt -e na een harde medeklinker (Ivan → Ivane, doktor → doktore) en -u na een zachte (prijatelj → prijatelju, mladić → mladiću). Vrouwelijk op -a krijgt -o (mama → mamo, gospođa → gospođo), maar woorden op -ica krijgen -e (Marica → Marice, kolegica → kolegice). Onzijdig verandert niet.",

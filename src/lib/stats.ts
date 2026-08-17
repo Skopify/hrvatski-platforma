@@ -6,6 +6,8 @@ import { db } from "./db";
 import {
   attempts,
   attemptTargets,
+  card,
+  defaultCardJoin,
   items,
   lessonProgress,
   profile,
@@ -89,10 +91,12 @@ export function topicMastery(): TopicMastery[] {
       reps: srs.reps,
       lapses: srs.lapses,
       state: srs.state,
+      learningSteps: srs.learningSteps,
       lastReview: srs.lastReview,
     })
     .from(items)
-    .leftJoin(srs, eq(srs.itemId, items.id))
+    .leftJoin(card, defaultCardJoin)
+    .leftJoin(srs, eq(srs.cardId, card.id))
     .all();
 
   const acc = db
@@ -127,6 +131,7 @@ export function topicMastery(): TopicMastery[] {
           reps: r.reps ?? 0,
           lapses: r.lapses ?? 0,
           state: r.state ?? 0,
+          learningSteps: r.learningSteps ?? 0,
           lastReview: r.lastReview,
         } as SrsRow,
         now,
@@ -219,7 +224,8 @@ export function vocabStats() {
   const rows = db
     .select({ state: srs.state, stability: srs.stability })
     .from(items)
-    .leftJoin(srs, eq(srs.itemId, items.id))
+    .leftJoin(card, defaultCardJoin)
+    .leftJoin(srs, eq(srs.cardId, card.id))
     .where(eq(items.kind, "vocab"))
     .all();
 
@@ -722,10 +728,12 @@ export function allVocab(): VocabRecord[] {
       reps: srs.reps,
       lapses: srs.lapses,
       state: srs.state,
+      learningSteps: srs.learningSteps,
       lastReview: srs.lastReview,
     })
     .from(items)
-    .leftJoin(srs, eq(srs.itemId, items.id))
+    .leftJoin(card, defaultCardJoin)
+    .leftJoin(srs, eq(srs.cardId, card.id))
     .where(eq(items.kind, "vocab"))
     .all()
     .map((r) => {
@@ -757,6 +765,7 @@ export function allVocab(): VocabRecord[] {
                 reps: r.reps ?? 0,
                 lapses: r.lapses ?? 0,
                 state: r.state ?? 0,
+                learningSteps: r.learningSteps ?? 0,
                 lastReview: r.lastReview,
               } as SrsRow,
               now,
@@ -854,7 +863,8 @@ export function wordOfTheDay(): {
   const rows = db
     .select({ id: items.id, lesson: items.lesson, payload: items.payload, state: srs.state })
     .from(items)
-    .leftJoin(srs, eq(srs.itemId, items.id))
+    .leftJoin(card, defaultCardJoin)
+    .leftJoin(srs, eq(srs.cardId, card.id))
     .where(sql`${items.kind} = 'vocab' and ${items.lesson} <= ${maxLesson}`)
     .all();
 

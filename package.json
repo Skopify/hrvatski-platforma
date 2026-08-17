@@ -10,8 +10,12 @@
     "seed": "tsx scripts/seed.ts",
     "check": "tsx scripts/check-grading.ts",
     "check:content": "tsx scripts/check-content.ts",
+    "check:fase0": "tsx scripts/check-fase0.ts",
+    "migrate": "tsx scripts/migrate.ts",
     "db:reset": "rm -f data/hrvatski.db data/hrvatski.db-wal data/hrvatski.db-shm && npm run seed",
-    "patch": "tsx scripts/apply-patch.ts"
+    "patch": "tsx scripts/apply-patch.ts",
+    "zin-ids": "tsx scripts/zin-ids.ts",
+    "codes": "tsx scripts/grammatica-codes.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",
@@ -19,7 +23,7 @@
     "next": "^15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "ts-fsrs": "^4.6.0"
+    "ts-fsrs": "^5.4.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",

@@ -21,18 +21,22 @@
       "id": "p1",
       "sentences": [
         {
+          "id": "ovo-je-nina.p1.s1",
           "hr": "Bok! Ja sam Nina.",
           "nl": "Hoi! Ik ben Nina."
         },
         {
+          "id": "ovo-je-nina.p1.s2",
           "hr": "Zovem se Nina Vermeer.",
           "nl": "Ik heet Nina Vermeer."
         },
         {
+          "id": "ovo-je-nina.p1.s3",
           "hr": "Ja sam Nizozemka.",
           "nl": "Ik ben Nederlandse."
         },
         {
+          "id": "ovo-je-nina.p1.s4",
           "hr": "Nisam studentica — ja sam novinarka.",
           "nl": "Ik ben geen studente — ik ben journaliste."
         }
@@ -42,22 +46,27 @@
       "id": "p2",
       "sentences": [
         {
+          "id": "ovo-je-nina.p2.s1",
           "hr": "Ovo je moja obitelj.",
           "nl": "Dit is mijn familie."
         },
         {
+          "id": "ovo-je-nina.p2.s2",
           "hr": "Moj otac je Jan. On je liječnik.",
           "nl": "Mijn vader is Jan. Hij is arts."
         },
         {
+          "id": "ovo-je-nina.p2.s3",
           "hr": "Moja majka je Ana. Ona je profesorica.",
           "nl": "Mijn moeder is Ana. Zij is lerares."
         },
         {
+          "id": "ovo-je-nina.p2.s4",
           "hr": "Ana je Hrvatica!",
           "nl": "Ana is Kroatische!"
         },
         {
+          "id": "ovo-je-nina.p2.s5",
           "hr": "Hrvatski je i moj jezik.",
           "nl": "Kroatisch is ook mijn taal."
         }
@@ -67,18 +76,22 @@
       "id": "p3",
       "sentences": [
         {
+          "id": "ovo-je-nina.p3.s1",
           "hr": "Moj brat se zove Tim.",
           "nl": "Mijn broer heet Tim."
         },
         {
+          "id": "ovo-je-nina.p3.s2",
           "hr": "On je visok i mlad. Tim je student.",
           "nl": "Hij is lang en jong. Tim is student."
         },
         {
+          "id": "ovo-je-nina.p3.s3",
           "hr": "Njegova mačka je crna i vrlo lijena.",
           "nl": "Zijn kat is zwart en erg lui."
         },
         {
+          "id": "ovo-je-nina.p3.s4",
           "hr": "Mačka se zove Mrvica.",
           "nl": "De kat heet Mrvica (Kruimeltje)."
         }
@@ -88,22 +101,27 @@
       "id": "p4",
       "sentences": [
         {
+          "id": "ovo-je-nina.p4.s1",
           "hr": "A tko je ovo?",
           "nl": "En wie is dit?"
         },
         {
+          "id": "ovo-je-nina.p4.s2",
           "hr": "To je Petra, moja dobra prijateljica.",
           "nl": "Dat is Petra, mijn goede vriendin."
         },
         {
+          "id": "ovo-je-nina.p4.s3",
           "hr": "Petra i ja smo dobre prijateljice.",
           "nl": "Petra en ik zijn goede vriendinnen."
         },
         {
+          "id": "ovo-je-nina.p4.s4",
           "hr": "Petra je Hrvatica. Zagreb je njezin grad.",
           "nl": "Petra is Kroatische. Zagreb is haar stad."
         },
         {
+          "id": "ovo-je-nina.p4.s5",
           "hr": "Sada je i moj.",
           "nl": "Nu is het ook de mijne."
         }

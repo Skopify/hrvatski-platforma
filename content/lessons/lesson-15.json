@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.15.instrumental",
+      "code": "INS-MEANS",
       "title_nl": "INSTRUMENTALIS — de vorm",
       "cefr": "A2.2",
       "explanation_nl": "De instrumentalis antwoordt op čime? (waarmee?) en s kim? (met wie?). Mannelijk en onzijdig krijgen -om, of -em na een zachte medeklinker. Vrouwelijk op -a krijgt -om. Vlak → vlakom, prijatelj → prijateljem, kuća → kućom.",
@@ -45,6 +46,7 @@
     },
     {
       "id": "g.15.sredstvo",
+      "code": "INS-MEANS",
       "title_nl": "Waarmee? — de kale instrumentalis",
       "cefr": "A2.2",
       "explanation_nl": "Om een middel of vervoermiddel aan te geven gebruik je de instrumentalis zónder voorzetsel. Idem autobusom. Putujemo vlakom. Pišem olovkom. De vraag is čime?",
@@ -70,6 +72,7 @@
     },
     {
       "id": "g.15.s_instrumental",
+      "code": "INS-COMPANY",
       "title_nl": "Met wie? — s / sa + instrumentalis",
       "cefr": "A2.2",
       "explanation_nl": "Gezelschap krijgt wél een voorzetsel: s of sa plus de instrumentalis. Idem s bratom. Putujem sa sestrom. Je gebruikt sa vóór woorden die met s, š, z, ž beginnen en vóór het voornaamwoord mnom, anders s.",
@@ -95,6 +98,7 @@
     },
     {
       "id": "g.15.instrumental_zamjenice",
+      "code": "INS-COMPANY",
       "title_nl": "Voornaamwoorden in de instrumentalis",
       "cefr": "A2.2",
       "explanation_nl": "De instrumentalis heeft alleen lange voornaamwoorden, want er staat bijna altijd een voorzetsel voor: sa mnom, s tobom, s njim, s njom, s nama, s vama, s njima.",

@@ -21,18 +21,22 @@
       "id": "p1",
       "sentences": [
         {
+          "id": "nina-ide-na-trznicu.p1.s1",
           "hr": "Subota je.",
           "nl": "Het is zaterdag."
         },
         {
+          "id": "nina-ide-na-trznicu.p1.s2",
           "hr": "Nina ide na tržnicu.",
           "nl": "Nina gaat naar de markt."
         },
         {
+          "id": "nina-ide-na-trznicu.p1.s3",
           "hr": "Tržnica se zove Dolac.",
           "nl": "De markt heet Dolac."
         },
         {
+          "id": "nina-ide-na-trznicu.p1.s4",
           "hr": "Ona treba mlijeko i kruh.",
           "nl": "Ze heeft melk en brood nodig."
         }
@@ -42,22 +46,27 @@
       "id": "p2",
       "sentences": [
         {
+          "id": "nina-ide-na-trznicu.p2.s1",
           "hr": "Nina kupuje kruh, sir i mlijeko.",
           "nl": "Nina koopt brood, kaas en melk."
         },
         {
+          "id": "nina-ide-na-trznicu.p2.s2",
           "hr": "Gleda rajčice.",
           "nl": "Ze bekijkt de tomaten."
         },
         {
+          "id": "nina-ide-na-trznicu.p2.s3",
           "hr": "Prodavačica pita: „Što želite, gospođo?“",
           "nl": "De marktvrouw vraagt: \"Wat wenst u, mevrouw?\""
         },
         {
+          "id": "nina-ide-na-trznicu.p2.s4",
           "hr": "„Želim jednu rajčicu i jednu jabuku, molim.“",
           "nl": "\"Ik wil één tomaat en één appel, graag.\""
         },
         {
+          "id": "nina-ide-na-trznicu.p2.s5",
           "hr": "„Izvolite!“",
           "nl": "\"Alstublieft!\""
         }
@@ -67,18 +76,22 @@
       "id": "p3",
       "sentences": [
         {
+          "id": "nina-ide-na-trznicu.p3.s1",
           "hr": "Nina vidi Petru.",
           "nl": "Nina ziet Petra."
         },
         {
+          "id": "nina-ide-na-trznicu.p3.s2",
           "hr": "Petra također kupuje voće.",
           "nl": "Petra koopt ook fruit."
         },
         {
+          "id": "nina-ide-na-trznicu.p3.s3",
           "hr": "„Bok, Nina! Idemo na kavu?“",
           "nl": "\"Hoi Nina! Zullen we koffie gaan drinken?\""
         },
         {
+          "id": "nina-ide-na-trznicu.p3.s4",
           "hr": "„Može! Ja častim.“",
           "nl": "\"Prima! Ik trakteer.\""
         }
@@ -88,18 +101,22 @@
       "id": "p4",
       "sentences": [
         {
+          "id": "nina-ide-na-trznicu.p4.s1",
           "hr": "One idu u kafić.",
           "nl": "Ze gaan naar een café."
         },
         {
+          "id": "nina-ide-na-trznicu.p4.s2",
           "hr": "Nina pije kavu, a Petra pije čaj.",
           "nl": "Nina drinkt koffie en Petra drinkt thee."
         },
         {
+          "id": "nina-ide-na-trznicu.p4.s3",
           "hr": "Jedu i kolač.",
           "nl": "Ze eten ook gebak."
         },
         {
+          "id": "nina-ide-na-trznicu.p4.s4",
           "hr": "Nina voli subotu.",
           "nl": "Nina houdt van zaterdag."
         }

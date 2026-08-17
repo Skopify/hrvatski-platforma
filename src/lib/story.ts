@@ -6,6 +6,13 @@
 import type { Exercise, VocabEntry } from "./content";
 
 export interface StorySentence {
+  /**
+   * Vast id, bijvoorbeeld `kljuc.p1.s3`. Een woord dat je uit een verhaal
+   * bewaart, houdt hiermee de zin vast waarin je het tegenkwam — en een
+   * volgnummer zou daarvoor niet deugen, want dat schuift zodra er ergens een
+   * zin bij komt. Toegekend door scripts/zin-ids.ts.
+   */
+  id: string;
   hr: string;
   nl: string;
 }

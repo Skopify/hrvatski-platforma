@@ -16,6 +16,7 @@
   "grammar": [
     {
       "id": "g.02.zanimanja",
+      "code": "NOM-GENDER",
       "title_nl": "Beroepen — mannelijke en vrouwelijke vorm",
       "cefr": "A1.1",
       "explanation_nl": "Bijna elk beroep heeft twee vormen. De vrouwelijke wordt van de mannelijke gemaakt met een achtervoegsel: meestal -ica (liječnik → liječnica), soms -ka (novinar → novinarka). Welke van de twee je krijgt, hangt af van hoe het mannelijke woord eindigt — daar is geen waterdichte regel voor, dus je leert het paar samen.",
@@ -42,6 +43,7 @@
     },
     {
       "id": "g.02.nacionalnosti",
+      "code": "NOM-GENDER",
       "title_nl": "Van land naar inwoner",
       "cefr": "A1.1",
       "explanation_nl": "Uit de landsnaam leid je de inwoner af met een vast setje achtervoegsels: -ac (Japan → Japanac), -anac (Austrija → Austrijanac), -anin (Beč → Bečanin), -čanin (Zagreb → Zagrepčanin). De vrouwelijke vorm krijgt daarna -ica, -ka, -inja of -kinja. Landen en nationaliteiten schrijf je altijd met een hoofdletter.",
@@ -70,6 +72,7 @@
     },
     {
       "id": "g.02.nominativ",
+      "code": "NOM-GENDER",
       "title_nl": "De nominatief — de vorm waarin je een woord leert",
       "cefr": "A1.1",
       "explanation_nl": "De nominatief antwoordt op tko? (wie?) en što? (wat?). Hij is de vorm van het onderwerp én van het naamwoordelijk deel na biti. In 'Ana je liječnica' staan Ana en liječnica allebei in de nominatief. Dit is ook de vorm waarin woorden in het woordenboek staan — de andere zes naamvallen komen later, telkens met hun eigen taak.",
@@ -92,6 +95,7 @@
     },
     {
       "id": "g.02.nego",
+      "code": "COMPARISON",
       "title_nl": "Corrigeren met ne ... nego ...",
       "cefr": "A1.1",
       "explanation_nl": "Om een aanname recht te zetten gebruik je: Ne, X nije A, nego B. Het woordje nego betekent 'maar (wel)' en staat alleen ná een ontkenning. Zonder ontkenning ervoor gebruik je ali.",

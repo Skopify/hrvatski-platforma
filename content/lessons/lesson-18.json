@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.18.boljeti",
+      "code": "DAT-EXPERIENCER",
       "title_nl": "boljeti — de pijn is het onderwerp",
       "cefr": "A2.2",
       "explanation_nl": "In het Kroatisch doet het lichaamsdeel de handeling: Boli me glava betekent letterlijk 'het hoofd doet mij pijn'. Het lichaamsdeel is het onderwerp en staat in de nominatief; de persoon staat in de accusatief. Is er één lichaamsdeel, dan boli; zijn het er meer, dan bole.",
@@ -42,6 +43,7 @@
     },
     {
       "id": "g.18.zenski_suglasnik",
+      "code": "NOM-GENDER",
       "title_nl": "Vrouwelijke woorden op een medeklinker",
       "cefr": "A2.2",
       "explanation_nl": "Een aparte groep vrouwelijke woorden eindigt niet op -a maar op een medeklinker: bolest, kost, riječ, noć, ljubav, stvar, sol, pomoć. Ze verbuigen anders: de genitief, datief en locatief krijgen allemaal -i, en de accusatief blijft gelijk aan de nominatief.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.18.baviti_se",
+      "code": "INS-MEANS",
       "title_nl": "baviti se + INSTRUMENTALIS",
       "cefr": "A2.2",
       "explanation_nl": "Om te zeggen welke sport of hobby je beoefent, gebruik je baviti se met de instrumentalis: Bavim se plivanjem. Bavi se nogometom. Let op het verschil met trenirati, dat gewoon een accusatief neemt: Treniram košarku.",
@@ -93,6 +96,7 @@
     },
     {
       "id": "g.18.alergican",
+      "code": "ACC-OBJECT",
       "title_nl": "alergičan na + ACCUSATIEF",
       "cefr": "A2.2",
       "explanation_nl": "Een allergie druk je uit met alergičan (mannelijk), alergična (vrouwelijk), alergično (onzijdig) plus na met de accusatief: Alergičan sam na pelud. Ivona je alergična na prašinu.",

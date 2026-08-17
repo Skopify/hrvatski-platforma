@@ -1,0 +1,124 @@
+{
+  "$comment": "De volledige leerboom uit §4.2 van docs/REBUILD-SPEC.md, los van de 21 lessen. Dit bestand is de maat waarlangs de lessen gelegd worden: een module die hier staat maar door geen enkele les gedekt wordt, is een zichtbaar gat en geen vergeten hoofdstuk. Volgorde is gekozen op frequentie x communicatief nut x cognitieve last, niet op de schoolvolgorde N-G-D-A-V-L-I.",
+  "fases": [
+    {
+      "fase": 0,
+      "titel_nl": "Klank en schrift",
+      "level": "A1",
+      "modules": [
+        { "code": "PHON-ALPHABET", "titel_nl": "Alfabet en de een-op-een klank-tekenrelatie", "prerequisites": [] },
+        { "code": "PHON-DIACRITICS", "titel_nl": "č/ć, dž/đ, š, ž, lj, nj", "prerequisites": ["PHON-ALPHABET"] },
+        { "code": "PHON-R", "titel_nl": "Rollende en vocalische r (vrt, prst)", "prerequisites": ["PHON-ALPHABET"] },
+        { "code": "PHON-STRESS", "titel_nl": "Klemtoonbasis: nooit op de laatste lettergreep", "prerequisites": ["PHON-ALPHABET"] }
+      ]
+    },
+    {
+      "fase": 1,
+      "titel_nl": "Nominatief en het werkwoordskader",
+      "level": "A1",
+      "modules": [
+        { "code": "NOM-GENDER", "titel_nl": "Geslacht (-a/-∅/-o/-e) en nominatief ev/mv", "prerequisites": ["PHON-ALPHABET"] },
+        { "code": "BITI-FULL", "titel_nl": "biti: volledige vormen (jesam)", "prerequisites": ["NOM-GENDER"] },
+        { "code": "BITI-CLITIC", "titel_nl": "biti: clitische vormen op positie 2", "prerequisites": ["BITI-FULL"] },
+        { "code": "BITI-NEG", "titel_nl": "Negatie: nisam", "prerequisites": ["BITI-FULL"] },
+        { "code": "PRES-CLASSES", "titel_nl": "Presens: de drie klassen -am / -im / -em", "prerequisites": ["NOM-GENDER"] },
+        { "code": "PRES-BIG4", "titel_nl": "De grote vier: imati, biti, ici, htjeti", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "Q-WORDS", "titel_nl": "Vraagwoorden, da/ne, li", "prerequisites": ["BITI-FULL"] },
+        { "code": "NEG-VERB", "titel_nl": "Negatie ne + werkwoord", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "PRON-PERS", "titel_nl": "Persoonlijke voornaamwoorden, en waarom je ze weglaat", "prerequisites": ["BITI-FULL"] }
+      ]
+    },
+    {
+      "fase": 2,
+      "titel_nl": "Accusatief",
+      "level": "A1",
+      "modules": [
+        { "code": "ACC-OBJECT", "titel_nl": "Lijdend voorwerp", "prerequisites": ["NOM-GENDER", "PRES-CLASSES"] },
+        { "code": "ACC-ANIM", "titel_nl": "Animaatheid: vidim psa tegenover vidim stol", "prerequisites": ["ACC-OBJECT"] },
+        { "code": "ACC-FEM", "titel_nl": "Vrouwelijk -u en de meervouden", "prerequisites": ["ACC-OBJECT"] },
+        { "code": "ACC-MOTION", "titel_nl": "u/na + accusatief bij beweging", "prerequisites": ["ACC-OBJECT"] }
+      ]
+    },
+    {
+      "fase": 3,
+      "titel_nl": "Locatief en datief: een vorm, twee functies",
+      "level": "A1/A2",
+      "$comment": "Bewust samengevoegd. De uitgangen zijn vrijwel identiek; ze los onderwijzen verdubbelt het leerwerk zonder dat er iets tegenover staat. De lessen 10 en 12 van het boek vallen hier allebei onder.",
+      "modules": [
+        { "code": "LOCDAT-FORM", "titel_nl": "De gedeelde vorm van locatief en datief", "prerequisites": ["ACC-OBJECT"] },
+        { "code": "LOC-PREP", "titel_nl": "u/na/o/po/pri + locatief", "prerequisites": ["LOCDAT-FORM"] },
+        { "code": "LOC-VS-ACC", "titel_nl": "Kerncontrast: u kucu tegenover u kuci", "prerequisites": ["LOC-PREP", "ACC-MOTION"] },
+        { "code": "DAT-GOAL", "titel_nl": "Datief als doel van beweging", "prerequisites": ["LOCDAT-FORM"] }
+      ]
+    },
+    {
+      "fase": 4,
+      "titel_nl": "Genitief",
+      "level": "A2",
+      "modules": [
+        { "code": "GEN-POSS", "titel_nl": "Bezit: knjiga moje sestre", "prerequisites": ["LOCDAT-FORM"] },
+        { "code": "GEN-NEG-IMATI", "titel_nl": "nemam vremena", "prerequisites": ["GEN-POSS"] },
+        { "code": "GEN-QUANT", "titel_nl": "Hoeveelheden: casa vode, puno ljudi", "prerequisites": ["GEN-POSS"] },
+        { "code": "GEN-NUM", "titel_nl": "Getallen: 2/3/4 + gen. ev. tegenover 5+ + gen. mv.", "prerequisites": ["GEN-QUANT"] },
+        { "code": "GEN-PREP", "titel_nl": "od, do, iz, kod, bez, poslije, prije", "prerequisites": ["GEN-POSS"] },
+        { "code": "GEN-PL", "titel_nl": "Genitief meervoud en de onvaste a", "prerequisites": ["GEN-POSS"] }
+      ]
+    },
+    {
+      "fase": 5,
+      "titel_nl": "Datief als ontvanger en ervaarder",
+      "level": "A2",
+      "modules": [
+        { "code": "DAT-IOBJ", "titel_nl": "Meewerkend voorwerp: dati, reci, pomoci", "prerequisites": ["LOCDAT-FORM"] },
+        { "code": "DAT-CLITIC", "titel_nl": "Datief-clitica: mi, ti, mu, joj, nam, vam, im", "prerequisites": ["DAT-IOBJ"] },
+        { "code": "DAT-EXPERIENCER", "titel_nl": "svida mi se, treba mi, hladno mi je", "prerequisites": ["DAT-CLITIC"] }
+      ]
+    },
+    {
+      "fase": 6,
+      "titel_nl": "Instrumentalis",
+      "level": "A2",
+      "modules": [
+        { "code": "INS-MEANS", "titel_nl": "Middel: pisem olovkom", "prerequisites": ["LOCDAT-FORM"] },
+        { "code": "INS-COMPANY", "titel_nl": "Gezelschap: s prijateljem", "prerequisites": ["INS-MEANS"] }
+      ]
+    },
+    {
+      "fase": 7,
+      "titel_nl": "Vocatief",
+      "level": "A2",
+      "modules": [
+        { "code": "VOC-ADDRESS", "titel_nl": "Aanspreekvorm en palatalisatie: junak → junace", "prerequisites": ["NOM-GENDER", "SOUND-PALAT"] }
+      ]
+    },
+    {
+      "fase": null,
+      "titel_nl": "Dwarsdoorsnijdend",
+      "level": "A1/A2",
+      "$comment": "Verweven, niet aan het eind. Deze modules lopen door de fases heen en hebben eigen ingangen.",
+      "modules": [
+        { "code": "ASPECT-PAIRS", "titel_nl": "Aspect per werkwoordspaar (citati/procitati), receptief vanaf fase 2", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "PERFEKT", "titel_nl": "Verleden tijd: sam + l-participium, congruentie", "prerequisites": ["BITI-CLITIC", "ASPECT-PAIRS"] },
+        { "code": "CLITIC-ORDER", "titel_nl": "Clitische woordvolgorde: li → sam → dat → acc/gen → se → je", "prerequisites": ["PERFEKT", "DAT-CLITIC"] },
+        { "code": "FUTUR-1", "titel_nl": "Futur I: cu/ces/ce + infinitief, en raditi cu → radit cu", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "IMPERATIVE", "titel_nl": "Imperatief", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "CONDITIONAL", "titel_nl": "Conditionaal: bih/bi/bismo", "prerequisites": ["PERFEKT"] },
+        { "code": "ADJ-AGREE", "titel_nl": "Bijvoeglijke congruentie", "prerequisites": ["NOM-GENDER"] },
+        { "code": "ADJ-DEF", "titel_nl": "Bepaald en onbepaald: nov tegenover novi", "prerequisites": ["ADJ-AGREE"] },
+        { "code": "SOUND-PALAT", "titel_nl": "Palatalisatie: k→c, g→z, h→s", "prerequisites": ["PHON-DIACRITICS"] },
+        { "code": "SOUND-SIBIL", "titel_nl": "Sibilarisatie: k→c, g→z, h→s voor -i", "prerequisites": ["PHON-DIACRITICS"] },
+        { "code": "SOUND-FLEET-A", "titel_nl": "Vluchtige a: pas → psa", "prerequisites": ["NOM-GENDER"] },
+        { "code": "SOUND-IJE-JE", "titel_nl": "ije/je-wisseling", "prerequisites": ["PHON-DIACRITICS"] },
+        { "code": "NUM-CARD", "titel_nl": "Hoofdtelwoorden", "prerequisites": ["NOM-GENDER"] },
+        { "code": "NUM-ORD", "titel_nl": "Rangtelwoorden, klok en datum", "prerequisites": ["NUM-CARD", "ADJ-AGREE"] },
+        { "code": "REFLEXIVE", "titel_nl": "Wederkerende werkwoorden met se", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "MODAL", "titel_nl": "Modale werkwoorden: moci, morati, smjeti, htjeti", "prerequisites": ["PRES-CLASSES"] },
+        { "code": "POSS-PRON", "titel_nl": "Bezittelijke voornaamwoorden en cij?", "prerequisites": ["NOM-GENDER"] },
+        { "code": "POSS-ADJ", "titel_nl": "Bezittelijke bijvoeglijke naamwoorden: majcin, bakina", "prerequisites": ["POSS-PRON"] },
+        { "code": "PLURAL-LONG", "titel_nl": "Lange meervouden -ovi/-evi", "prerequisites": ["NOM-GENDER"] },
+        { "code": "PLURAL-IRREG", "titel_nl": "Onregelmatige meervouden: covjek → ljudi, dijete → djeca", "prerequisites": ["NOM-GENDER"] },
+        { "code": "COMPARISON", "titel_nl": "Trappen van vergelijking en nego", "prerequisites": ["ADJ-AGREE"] }
+      ]
+    }
+  ]
+}

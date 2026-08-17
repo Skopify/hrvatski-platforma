@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.19.svidati_se",
+      "code": "DAT-EXPERIENCER",
       "title_nl": "sviđati se — wat je leuk vindt is het onderwerp",
       "cefr": "A2.2",
       "explanation_nl": "Net als bij boljeti draait het Kroatisch de zin om. Sviđa mi se Hrvatska betekent letterlijk 'Kroatië bevalt aan mij'. Het ding dat je leuk vindt is het onderwerp; de persoon staat in de datief. Is dat ding enkelvoud, dan sviđa; is het meervoud, dan sviđaju.",
@@ -41,6 +42,7 @@
     },
     {
       "id": "g.19.dativ_dozivljavaca",
+      "code": "DAT-EXPERIENCER",
       "title_nl": "Toestanden met de datief",
       "cefr": "A2.2",
       "explanation_nl": "Voor gevoelens en toestanden gebruikt het Kroatisch een onpersoonlijke zin met een bijwoord plus de datief: Hladno mi je (ik heb het koud), Dosadno nam je (wij vervelen ons), Lijepo joj je (zij heeft het naar haar zin). Er is geen onderwerp.",
@@ -67,6 +69,7 @@
     },
     {
       "id": "g.19.dativ_dug_kratak",
+      "code": "DAT-CLITIC",
       "title_nl": "meni of mi — twee manieren om hetzelfde te zeggen",
       "cefr": "A2.2",
       "explanation_nl": "De datief heeft net als de accusatief een korte en een lange set. Kort: mi, ti, mu, joj, nam, vam, im. Lang: meni, tebi, njemu, njoj, nama, vama, njima. De korte vorm is de gewone keuze en staat nooit vooraan; de lange gebruik je aan het begin van de zin en bij nadruk.",
@@ -94,6 +97,7 @@
     },
     {
       "id": "g.19.bojati_se",
+      "code": "GEN-POSS",
       "title_nl": "bojati se + GENITIEF",
       "cefr": "A2.2",
       "explanation_nl": "Waar je bang voor bent staat in de genitief: Bojim se mačke. Bojim se tramvaja. Het werkwoord vervoegt als bojim se, bojiš se, boji se, bojimo se, bojite se, boje se.",
@@ -119,6 +123,7 @@
     },
     {
       "id": "g.19.zaljubljen_u",
+      "code": "ACC-OBJECT",
       "title_nl": "zaljubljen u + ACCUSATIEF",
       "cefr": "A2.2",
       "explanation_nl": "Verliefd zijn druk je uit met zaljubljen (m), zaljubljena (v), zaljubljeni / zaljubljene (mv) plus u met de accusatief: Pavle je zaljubljen u Doru. Het kan ook over dingen gaan: Zaljubljen je u svoj posao.",
@@ -143,6 +148,7 @@
     },
     {
       "id": "g.19.ost",
+      "code": "NOM-GENDER",
       "title_nl": "Afleidingen op -ost",
       "cefr": "A2.2",
       "explanation_nl": "Van bijvoeglijke naamwoorden maak je abstracte zelfstandige naamwoorden met -ost: mogućnost (mogelijkheid), budućnost (toekomst), sadašnjost (heden), glupost (domheid), nezaposlenost (werkloosheid). Ze zijn allemaal vrouwelijk op een medeklinker en verbuigen dus als de groep uit les 18.",

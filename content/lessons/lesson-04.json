@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.04.pridjevi",
+      "code": "ADJ-AGREE",
       "title_nl": "Bijvoeglijke naamwoorden — congruentie",
       "cefr": "A1.1",
       "explanation_nl": "Een bijvoeglijk naamwoord past zich aan aan het zelfstandig naamwoord waar het bij hoort: geslacht én getal. De mannelijke vorm is de kale stam (nov), vrouwelijk krijgt -a (nova), onzijdig -o (novo). In het meervoud: -i, -e, -a.",
@@ -39,6 +40,7 @@
     },
     {
       "id": "g.04.kakav",
+      "code": "ADJ-AGREE",
       "title_nl": "Kakav? — hoe is het?",
       "cefr": "A1.1",
       "explanation_nl": "Om naar een eigenschap te vragen gebruik je kakav, dat zelf ook meebuigt met het woord waarnaar je vraagt: Kakav je stan? Kakva je kuća? Kakvo je pismo? In het meervoud: Kakvi? Kakve? Kakva?",
@@ -60,6 +62,7 @@
     },
     {
       "id": "g.04.nepostojano_a_pridjevi",
+      "code": "SOUND-FLEET-A",
       "title_nl": "Bijvoeglijke naamwoorden met een vluchtige a",
       "cefr": "A1.1",
       "explanation_nl": "Veel bijvoeglijke naamwoorden hebben in de mannelijke vorm een a die in alle andere vormen verdwijnt: dobar → dobra, dobro; udoban → udobna; kratak → kratka. Herken ze aan de mannelijke uitgang op -ak, -an of -ar met een medeklinker ervoor.",
@@ -85,6 +88,7 @@
     },
     {
       "id": "g.04.l_o",
+      "code": "SOUND-IJE-JE",
       "title_nl": "Wanneer l een o wordt",
       "cefr": "A1.1",
       "explanation_nl": "Bij een handjevol bijvoeglijke naamwoorden staat er in de mannelijke vorm een o waar in de andere vormen een l staat: veseo → vesela, debeo → debela, zreo → zrela, topao → topla. De l aan het eind van een lettergreep is in het Kroatisch historisch een o geworden — je ziet het fossiel alleen nog in de mannelijke vorm.",
@@ -110,6 +114,7 @@
     },
     {
       "id": "g.04.posvojni_pridjevi_zivo",
+      "code": "POSS-ADJ",
       "title_nl": "Bezittelijke bijvoeglijke naamwoorden — van personen",
       "cefr": "A1.1",
       "explanation_nl": "Om te zeggen dat iets van een specifieke persoon is, maak je van die persoon een bijvoeglijk naamwoord: -ov na een harde medeklinker (brat → bratov), -ev na een zachte (Šenoa → Šenoin, muž → mužev), en -in bij woorden op -a (tata → tatin, Marija → Marijin, sestra → sestrin). Dat bijvoeglijk naamwoord buigt daarna gewoon mee met het bezeten ding.",
@@ -136,6 +141,7 @@
     },
     {
       "id": "g.04.posvojni_pridjevi_nezivo",
+      "code": "POSS-ADJ",
       "title_nl": "Herkomst met -ski / -čki",
       "cefr": "A1.1",
       "explanation_nl": "Van een land of stad maak je een bijvoeglijk naamwoord met -ski: Švicarska → švicarski, Francuska → francuski, Italija → talijanski. Na k of č wordt het -čki: Grčka → grčki. Deze woorden krijgen géén hoofdletter, ook al komt de landsnaam er wel een.",

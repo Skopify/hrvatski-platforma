@@ -12,7 +12,7 @@ import {
 } from "./content";
 import { db } from "./db";
 import { items } from "./db/schema";
-import { dueItemIds } from "./srs";
+import { dueItemIds, upcomingCards } from "./srs";
 
 export interface PlannedStep {
   exercise: Exercise;
@@ -253,6 +253,46 @@ export function planReview(limit = 20): PlannedStep[] {
 /** Alle oefeningen die een bepaald item aanspreken (voor de itemdetailweergave). */
 export function exercisesForItem(itemId: string): PlannedStep[] {
   return index().get(itemId) ?? [];
+}
+
+/* --------------------------------------------------- wat er klaarstaat --- */
+
+/**
+ * Hoeveel herhalingen de sessie je werkelijk gaat voorschotelen.
+ *
+ * Dit is niet hetzelfde als het aantal vervallen kaarten, en dat verschil was
+ * een bug die elke dag zichtbaar was: de balk telde álles wat vervallen was,
+ * terwijl `planReview()` per vervallen item een oefening opzoekt en het
+ * overslaat als die niet bestaat. Er stond dus "12 te herhalen" waar de sessie
+ * er zeven gaf, en dat verschil groeit: van de 6290 items worden er maar 405
+ * door een oefening aangesproken. Alle vormkaarten die via een drill zijn
+ * ontstaan, vallen erbuiten.
+ *
+ * Het getal op het scherm hoort te beloven wat het waarmaakt. Tot de
+ * oefeningengenerator van Fase 2 er is, is dit het eerlijke getal.
+ */
+export function reviewableCount(now = new Date()): number {
+  const idx = index();
+  return dueItemIds(now, 10_000).filter((id) => idx.has(id)).length;
+}
+
+/** Wanneer de eerstvolgende herhaling klaarstaat die ook écht te oefenen is. */
+export function nextReviewableAt(now = new Date()): Date | null {
+  const idx = index();
+  for (const kaart of upcomingCards(now, 1000)) {
+    if (idx.has(kaart.itemId)) return new Date(kaart.due);
+  }
+  return null;
+}
+
+/**
+ * Vervallen kaarten waar geen enkele oefening bij hoort. Puur informatief: dit
+ * getal hoort nul te zijn en is het niet, en dat verdient zichtbaarheid in
+ * plaats van stilte.
+ */
+export function unreachableDueCount(now = new Date()): number {
+  const idx = index();
+  return dueItemIds(now, 10_000).filter((id) => !idx.has(id)).length;
 }
 
 export function totalExerciseCount(): number {

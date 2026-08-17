@@ -16,6 +16,7 @@
   "grammar": [
     {
       "id": "g.09.prezent.iti",
+      "code": "PRES-CLASSES",
       "title_nl": "Tegenwoordige tijd van werkwoorden op -iti",
       "cefr": "A1.2",
       "explanation_nl": "De tweede grote werkwoordsgroep. Haal -iti van de infinitief en plak erachter: -im, -iš, -i, -imo, -ite, -e. raditi → radim, radiš, radi, radimo, radite, rade. Zo gaan ook nositi, govoriti, učiti, kupiti, misliti.",
@@ -39,6 +40,7 @@
     },
     {
       "id": "g.09.prezent.jeti",
+      "code": "PRES-CLASSES",
       "title_nl": "Werkwoorden op -jeti",
       "cefr": "A1.2",
       "explanation_nl": "Werkwoorden op -jeti vervoegen precies als de -iti groep: vidjeti → vidim, vidiš, vidi, vidimo, vidite, vide. Zo ook živjeti (živim), voljeti (volim), željeti (želim). De je van de infinitief verdwijnt volledig in het presens.",
@@ -64,6 +66,7 @@
     },
     {
       "id": "g.09.treca_mnozina",
+      "code": "PRES-CLASSES",
       "title_nl": "Het verschil dat je moet horen: -e versus -aju",
       "cefr": "A1.2",
       "explanation_nl": "In de derde persoon meervoud lopen de twee grote groepen uiteen. De -ati groep krijgt -aju: čitaju, gledaju, kuhaju. De -iti en -jeti groepen krijgen -e: rade, nose, vide, vole. Dat is vaak het enige verschil tussen 'hij doet' en 'zij doen', dus je moet het horen én produceren.",

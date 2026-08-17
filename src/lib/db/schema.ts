@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 /**
@@ -36,9 +36,64 @@ export const items = sqliteTable("items", {
   payload: text("payload", { mode: "json" }).notNull(),
 });
 
-/** FSRS-toestand per item. Eén rij per item zodra het voor het eerst gezien is. */
+/**
+ * Eén geheugenkaart. Een item kan er meerdere dragen, want kennen is niet één
+ * ding: `kuća → huis` herkennen lukt maanden nadat `huis → kuća` produceren al
+ * weg is. Aparte kaarten betekent aparte planning en een eerlijker beeld.
+ *
+ * `context` is leeg voor gewone kaarten en draagt bij gemijnde woorden het id
+ * van de zin waaruit ze komen — zodat dezelfde woordvorm uit twee verschillende
+ * verhalen twee kaarten kan zijn, elk met zijn eigen zin.
+ */
+export const card = sqliteTable("card", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  kind: text("kind").notNull(),
+  itemId: text("item_id").notNull().references(() => items.id),
+  context: text("context").notNull().default(""),
+  createdAt: integer("created_at").notNull(),
+});
+
+/** De soorten kaarten. Fase 0 gebruikt alleen de eerste drie. */
+export const CARD_KINDS = [
+  "LEX_RECOG",
+  "LEX_PROD",
+  "FORM",
+  "GRAM",
+  "CHUNK",
+  "CLOZE",
+  "AUDIO",
+] as const;
+
+export type CardKind = (typeof CARD_KINDS)[number];
+
+/** Welke kaartsoort een item krijgt als er niets anders gevraagd wordt. */
+export const DEFAULT_CARD_KIND: Record<string, CardKind> = {
+  vocab: "LEX_RECOG",
+  grammar: "GRAM",
+  form: "FORM",
+};
+
+/**
+ * Koppelvoorwaarde voor "de standaardkaart van dit item".
+ *
+ * Statistieken gaan over items ("hoeveel woorden ken ik"), niet over kaarten.
+ * Zolang elk item één kaart heeft maakt dat niets uit, maar zodra een woord een
+ * herkennings- én een productiekaart draagt, zou een koppeling zonder deze
+ * voorwaarde elk woord dubbel tellen. Vandaar dat de statistiek nu al expliciet
+ * zegt wélke kaart hij bedoelt.
+ */
+export const defaultCardJoin = and(
+  eq(card.itemId, items.id),
+  eq(card.context, ""),
+  sql`${card.kind} = CASE ${items.kind}
+        WHEN 'vocab' THEN 'LEX_RECOG'
+        WHEN 'grammar' THEN 'GRAM'
+        WHEN 'form' THEN 'FORM' END`,
+);
+
+/** FSRS-toestand per kaart. Eén rij per kaart zodra hij voor het eerst gezien is. */
 export const srs = sqliteTable("srs", {
-  itemId: text("item_id").primaryKey().references(() => items.id),
+  cardId: integer("card_id").primaryKey().references(() => card.id),
   due: integer("due").notNull(),
   stability: real("stability").notNull().default(0),
   difficulty: real("difficulty").notNull().default(0),
@@ -57,7 +112,7 @@ export const srs = sqliteTable("srs", {
  */
 export const reviewLog = sqliteTable("review_log", {
   id: integer("id").primaryKey({ autoIncrement: true }),
-  itemId: text("item_id").notNull(),
+  cardId: integer("card_id").notNull().references(() => card.id),
   rating: integer("rating").notNull(),
   state: integer("state").notNull(),
   due: integer("due").notNull(),
@@ -138,114 +193,39 @@ export const studySessions = sqliteTable("study_sessions", {
   total: integer("total").notNull().default(0),
 });
 
-export const DDL = `
-CREATE TABLE IF NOT EXISTS profile (
-  id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL DEFAULT 'Leerder',
-  xp INTEGER NOT NULL DEFAULT 0,
-  streak_current INTEGER NOT NULL DEFAULT 0,
-  streak_longest INTEGER NOT NULL DEFAULT 0,
-  last_study_date TEXT,
-  daily_goal_xp INTEGER NOT NULL DEFAULT 60,
-  created_at INTEGER NOT NULL
-);
+/**
+ * Het foutenlogboek: niet dát een antwoord fout was, maar wát er fout was.
+ * Zie src/lib/db/migrations/003-fouten.ts voor de redenering.
+ */
+export const errorLog = sqliteTable("error_log", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  ts: integer("ts").notNull(),
+  exerciseId: text("exercise_id").notNull(),
+  attemptId: integer("attempt_id"),
+  itemId: text("item_id"),
+  lemmaId: text("lemma_id"),
+  grammarPointId: text("grammar_point_id"),
+  errorType: text("error_type").notNull(),
+  expectedCase: text("expected_case"),
+  givenCase: text("given_case"),
+  expectedNumber: text("expected_number"),
+  givenNumber: text("given_number"),
+  expected: text("expected").notNull(),
+  given: text("given").notNull(),
+});
 
-CREATE TABLE IF NOT EXISTS items (
-  id TEXT PRIMARY KEY,
-  kind TEXT NOT NULL,
-  lesson INTEGER NOT NULL,
-  topic TEXT NOT NULL,
-  grammatical_case TEXT,
-  cefr TEXT NOT NULL,
-  label TEXT NOT NULL,
-  payload TEXT NOT NULL
-);
-CREATE INDEX IF NOT EXISTS items_lesson_idx ON items(lesson);
-CREATE INDEX IF NOT EXISTS items_topic_idx ON items(topic);
+/** Verhaalzinnen, adresseerbaar — zodat een gemijnd woord zijn bronzin houdt. */
+export const sentence = sqliteTable("sentence", {
+  id: text("id").primaryKey(),
+  storySlug: text("story_slug").notNull(),
+  paragraphId: text("paragraph_id").notNull(),
+  idx: integer("idx").notNull(),
+  hr: text("hr").notNull(),
+  nl: text("nl").notNull(),
+});
 
-CREATE TABLE IF NOT EXISTS srs (
-  item_id TEXT PRIMARY KEY REFERENCES items(id),
-  due INTEGER NOT NULL,
-  stability REAL NOT NULL DEFAULT 0,
-  difficulty REAL NOT NULL DEFAULT 0,
-  elapsed_days REAL NOT NULL DEFAULT 0,
-  scheduled_days REAL NOT NULL DEFAULT 0,
-  reps INTEGER NOT NULL DEFAULT 0,
-  lapses INTEGER NOT NULL DEFAULT 0,
-  state INTEGER NOT NULL DEFAULT 0,
-  learning_steps INTEGER NOT NULL DEFAULT 0,
-  last_review INTEGER
-);
-CREATE INDEX IF NOT EXISTS srs_due_idx ON srs(due);
-
-CREATE TABLE IF NOT EXISTS review_log (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  item_id TEXT NOT NULL,
-  rating INTEGER NOT NULL,
-  state INTEGER NOT NULL,
-  due INTEGER NOT NULL,
-  stability REAL NOT NULL,
-  difficulty REAL NOT NULL,
-  elapsed_days REAL NOT NULL,
-  last_elapsed_days REAL NOT NULL,
-  scheduled_days REAL NOT NULL,
-  reviewed_at INTEGER NOT NULL,
-  duration_ms INTEGER NOT NULL DEFAULT 0
-);
-CREATE INDEX IF NOT EXISTS review_log_item_idx ON review_log(item_id);
-
-CREATE TABLE IF NOT EXISTS attempts (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  exercise_id TEXT NOT NULL,
-  lesson INTEGER NOT NULL,
-  type TEXT NOT NULL,
-  mode TEXT NOT NULL,
-  correct INTEGER NOT NULL,
-  near_miss INTEGER NOT NULL DEFAULT 0,
-  answer_given TEXT,
-  expected TEXT,
-  duration_ms INTEGER NOT NULL DEFAULT 0,
-  xp INTEGER NOT NULL DEFAULT 0,
-  created_at INTEGER NOT NULL
-);
-CREATE INDEX IF NOT EXISTS attempts_created_idx ON attempts(created_at);
-
-CREATE TABLE IF NOT EXISTS attempt_targets (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  attempt_id INTEGER NOT NULL,
-  item_id TEXT NOT NULL
-);
-CREATE INDEX IF NOT EXISTS attempt_targets_item_idx ON attempt_targets(item_id);
-
-CREATE TABLE IF NOT EXISTS lesson_progress (
-  lesson INTEGER PRIMARY KEY,
-  status TEXT NOT NULL DEFAULT 'locked',
-  sections_done TEXT NOT NULL DEFAULT '[]',
-  started_at INTEGER,
-  completed_at INTEGER
-);
-
-CREATE TABLE IF NOT EXISTS story_progress (
-  slug TEXT PRIMARY KEY,
-  read_at INTEGER,
-  quiz_done_at INTEGER,
-  lookups INTEGER NOT NULL DEFAULT 0
-);
-
-CREATE TABLE IF NOT EXISTS encounters (
-  item_id TEXT PRIMARY KEY,
-  count INTEGER NOT NULL DEFAULT 0,
-  last_at INTEGER
-);
-
-CREATE TABLE IF NOT EXISTS study_sessions (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  kind TEXT NOT NULL,
-  lesson INTEGER,
-  started_at INTEGER NOT NULL,
-  ended_at INTEGER,
-  xp INTEGER NOT NULL DEFAULT 0,
-  correct INTEGER NOT NULL DEFAULT 0,
-  total INTEGER NOT NULL DEFAULT 0
-);
-`;
+/**
+ * Het schema wordt niet meer hier aangemaakt maar door de migraties in
+ * src/lib/db/migrations/. Dit bestand beschrijft alleen nog hoe de tabellen er
+ * nú uitzien; hoe ze zo geworden zijn staat in de reeks.
+ */

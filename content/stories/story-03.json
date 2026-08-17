@@ -21,18 +21,22 @@
       "id": "p1",
       "sentences": [
         {
+          "id": "vikend-u-samoboru.p1.s1",
           "hr": "Jučer sam bila u Samoboru.",
           "nl": "Gisteren was ik in Samobor."
         },
         {
+          "id": "vikend-u-samoboru.p1.s2",
           "hr": "Samobor je mali grad blizu Zagreba.",
           "nl": "Samobor is een stadje bij Zagreb."
         },
         {
+          "id": "vikend-u-samoboru.p1.s3",
           "hr": "Petra i ja smo putovale autobusom.",
           "nl": "Petra en ik reisden met de bus."
         },
         {
+          "id": "vikend-u-samoboru.p1.s4",
           "hr": "Vožnja je bila kratka.",
           "nl": "De rit was kort."
         }
@@ -42,14 +46,17 @@
       "id": "p2",
       "sentences": [
         {
+          "id": "vikend-u-samoboru.p2.s1",
           "hr": "U Samoboru smo šetale po starom gradu.",
           "nl": "In Samobor wandelden we door het oude stadje."
         },
         {
+          "id": "vikend-u-samoboru.p2.s2",
           "hr": "Na trgu smo vidjele malu crkvu i stare kuće.",
           "nl": "Op het plein zagen we een kerkje en oude huizen."
         },
         {
+          "id": "vikend-u-samoboru.p2.s3",
           "hr": "Sunce je sjalo cijeli dan.",
           "nl": "De zon scheen de hele dag."
         }
@@ -59,18 +66,22 @@
       "id": "p3",
       "sentences": [
         {
+          "id": "vikend-u-samoboru.p3.s1",
           "hr": "U kafiću smo naručile kremšnite.",
           "nl": "In het café bestelden we kremšnita's."
         },
         {
+          "id": "vikend-u-samoboru.p3.s2",
           "hr": "Kremšnita je slavni kolač iz Samobora.",
           "nl": "De kremšnita is het beroemde gebak uit Samobor."
         },
         {
+          "id": "vikend-u-samoboru.p3.s3",
           "hr": "Petra je pojela dvije!",
           "nl": "Petra at er twee op!"
         },
         {
+          "id": "vikend-u-samoboru.p3.s4",
           "hr": "„Nisam mogla stati“, rekla je.",
           "nl": "\"Ik kon niet stoppen\", zei ze."
         }
@@ -80,14 +91,17 @@
       "id": "p4",
       "sentences": [
         {
+          "id": "vikend-u-samoboru.p4.s1",
           "hr": "Navečer smo se vratile u Zagreb.",
           "nl": "'s Avonds keerden we terug naar Zagreb."
         },
         {
+          "id": "vikend-u-samoboru.p4.s2",
           "hr": "Bila sam umorna, ali sretna.",
           "nl": "Ik was moe, maar gelukkig."
         },
         {
+          "id": "vikend-u-samoboru.p4.s3",
           "hr": "Sada razumijem zašto ljudi vole male gradove.",
           "nl": "Nu begrijp ik waarom mensen van stadjes houden."
         }

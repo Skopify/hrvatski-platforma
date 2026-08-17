@@ -18,6 +18,7 @@
   "grammar": [
     {
       "id": "g.05.imati",
+      "code": "PRES-BIG4",
       "title_nl": "imati / nemati — hebben en niet hebben",
       "cefr": "A1.2",
       "explanation_nl": "imati vervoegt als een gewoon -ati werkwoord: imam, imaš, ima, imamo, imate, imaju. De ontkenning is één woord: nemati (nemam, nemaš, nema ...) — je zet dus nooit 'ne' los voor imati. Dat is dezelfde uitzondering als bij biti (nisam).",
@@ -44,6 +45,7 @@
     },
     {
       "id": "g.05.akuzativ.nezivo",
+      "code": "ACC-OBJECT",
       "title_nl": "ACCUSATIEF — levenloze dingen",
       "cefr": "A1.2",
       "explanation_nl": "De accusatief is de naamval van het lijdend voorwerp: hij antwoordt op koga? (wie?) en što? (wat?). Voor levenloze dingen is hij verrassend goedkoop: mannelijk en onzijdig veranderen helemaal niet, alleen vrouwelijke woorden op -a krijgen -u. Dus: Imam stan (m, ongewijzigd), Imam kuću (v, -a → -u), Imam pismo (o, ongewijzigd).",
@@ -70,6 +72,7 @@
     },
     {
       "id": "g.05.akuzativ.zivo",
+      "code": "ACC-ANIM",
       "title_nl": "ACCUSATIEF — levende wezens (mannelijk)",
       "cefr": "A1.2",
       "explanation_nl": "Hier zit de kern van de les. Mannelijke woorden die iets levends aanduiden — mensen en dieren — krijgen in de accusatief enkelvoud wél een uitgang: -a. Imam prijatelja. Čekam brata. Vidim psa. Levenloze mannelijke woorden blijven onveranderd. Het Kroatisch maakt dus grammaticaal onderscheid tussen 'ik heb een appartement' en 'ik heb een vriend'.",
@@ -97,6 +100,7 @@
     },
     {
       "id": "g.05.akuzativ.mnozina",
+      "code": "ACC-FEM",
       "title_nl": "ACCUSATIEF — meervoud",
       "cefr": "A1.2",
       "explanation_nl": "In het meervoud verdwijnt het levend/levenloos-onderscheid volledig. Mannelijk en vrouwelijk krijgen allebei -e, onzijdig krijgt -a (gelijk aan de nominatief). Dus: Hrvatska ima otoke, planine i brda. Oni imaju prijatelje.",
@@ -122,6 +126,7 @@
     },
     {
       "id": "g.05.prezent.ati",
+      "code": "PRES-CLASSES",
       "title_nl": "Tegenwoordige tijd van werkwoorden op -ati",
       "cefr": "A1.2",
       "explanation_nl": "De grootste en makkelijkste groep. Haal -ti van de infinitief en plak de uitgangen erachter: -m, -š, -∅, -mo, -te, -ju. znati → znam, znaš, zna, znamo, znate, znaju. Zo gaan ook čitati, gledati, čekati, kuhati, pjevati, igrati, imati.",
@@ -145,6 +150,7 @@
     },
     {
       "id": "g.05.prezent.irati",
+      "code": "PRES-CLASSES",
       "title_nl": "Werkwoorden op -irati",
       "cefr": "A1.2",
       "explanation_nl": "Leenwoorden krijgen in het Kroatisch bijna altijd -irati: telefonirati, planirati, trenirati, reklamirati, parkirati, studirati. Ze vervoegen exact als de -ati groep. Dat maakt ze de goedkoopste woordenschat die er is: herken je het internationale woord, dan heb je het werkwoord.",

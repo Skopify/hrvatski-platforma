@@ -18,6 +18,7 @@
   "grammar": [
     {
       "id": "g.10.lokativ",
+      "code": "LOCDAT-FORM",
       "title_nl": "LOCATIEF — waar iets is",
       "cefr": "A2.1",
       "explanation_nl": "De locatief antwoordt op gdje? (waar?). Hij komt nooit alleen: er staat altijd een voorzetsel voor. De uitgangen zijn eenvoudig: mannelijk en onzijdig krijgen -u, vrouwelijk op -a krijgt -i. Dus: u gradu, u selu, u kući.",
@@ -44,6 +45,7 @@
     },
     {
       "id": "g.10.gdje_kamo",
+      "code": "LOC-VS-ACC",
       "title_nl": "gdje? tegenover kamo? — dezelfde voorzetsels, andere naamval",
       "cefr": "A2.1",
       "explanation_nl": "u en na kunnen allebei twee naamvallen krijgen, en de naamval bepaalt de betekenis. Met de accusatief betekenen ze richting (waarheen), met de locatief plaats (waar). Idem u trgovinu = ik ga naar de winkel. U trgovini sam = ik ben in de winkel.",
@@ -70,6 +72,7 @@
     },
     {
       "id": "g.10.prijedlozi_lokativ",
+      "code": "LOC-PREP",
       "title_nl": "De voorzetsels van de locatief",
       "cefr": "A2.1",
       "explanation_nl": "Vier voorzetsels sturen de locatief aan: u (in), na (op, bij), o (over, betreffende) en pri (bij, nabij). Het voorzetsel o is nieuw en heel bruikbaar: Razgovaramo o filmu — we praten over de film.",
@@ -94,6 +97,7 @@
     },
     {
       "id": "g.10.sibilarizacija_lokativ",
+      "code": "SOUND-SIBIL",
       "title_nl": "Sibilarisatie in de vrouwelijke locatief",
       "cefr": "A2.1",
       "explanation_nl": "De vrouwelijke locatief eindigt op -i, en die -i triggert dezelfde klankregel als het meervoud in les 3: k → c, g → z, h → s. Dus ruka → u ruci, knjiga → u knjizi, majka → o majci.",
@@ -119,6 +123,7 @@
     },
     {
       "id": "g.10.lokativ_ska",
+      "code": "LOC-PREP",
       "title_nl": "Landen op -ska in de locatief",
       "cefr": "A2.1",
       "explanation_nl": "Landen als Hrvatska, Njemačka en Engleska zijn eigenlijk bijvoeglijke naamwoorden geworden. Ze verbuigen daarom ook als bijvoeglijk naamwoord: in de locatief krijgen ze -oj. Dus u Hrvatskoj, u Njemačkoj, u Engleskoj — niet *u Hrvatski.",
@@ -144,6 +149,7 @@
     },
     {
       "id": "g.10.prezent.ovati",
+      "code": "PRES-CLASSES",
       "title_nl": "Werkwoorden op -ovati, -evati en -ivati",
       "cefr": "A2.1",
       "explanation_nl": "Deze werkwoorden vervangen het hele stuk -ovati/-evati/-ivati door -uj- en krijgen dan de gewone uitgangen: kupovati → kupujem, kupuješ, kupuje, kupujemo, kupujete, kupuju. Zo ook putovati → putujem en naručivati → naručujem.",
@@ -167,6 +173,7 @@
     },
     {
       "id": "g.10.mjeseci",
+      "code": "NUM-ORD",
       "title_nl": "De Kroatische maanden",
       "cefr": "A2.1",
       "explanation_nl": "Het Kroatisch gebruikt geen Latijnse maandnamen maar eigen, beschrijvende woorden: siječanj, veljača, ožujak, travanj, svibanj, lipanj, srpanj, kolovoz, rujan, listopad, studeni, prosinac. Om te zeggen 'in maart' gebruik je u met de locatief: u ožujku.",

@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.00.abeceda",
+      "code": "PHON-ALPHABET",
       "title_nl": "Het alfabet — 30 letters, 30 klanken",
       "cefr": "A1.1",
       "explanation_nl": "Het Kroatisch heeft 30 letters. Drie ervan bestaan uit twee tekens die samen één klank vormen: dž, lj en nj. De letters q, w, x en y bestaan niet. Het belangrijkste principe: elke letter heeft altijd precies één klank, en die verandert nooit door de omgeving.",
@@ -41,6 +42,7 @@
     },
     {
       "id": "g.00.palatali",
+      "code": "PHON-DIACRITICS",
       "title_nl": "De lastige paren: č/ć en dž/đ",
       "cefr": "A1.1",
       "explanation_nl": "Vier letters vormen twee paren die voor Nederlandstaligen bijna gelijk klinken. č en dž zijn hard: je tong ligt achter in de mond, de klank lijkt op het Engelse 'match' en 'jungle'. ć en đ zijn zacht: je tong ligt tegen het gehemelte, dichter bij het Nederlandse 'tja' en 'djembé'.",
@@ -67,6 +69,7 @@
     },
     {
       "id": "g.00.izgovor",
+      "code": "PHON-STRESS",
       "title_nl": "Uitspraakregels die altijd gelden",
       "cefr": "A1.1",
       "explanation_nl": "Enkele letters klinken anders dan een Nederlander verwacht. c is altijd 'ts' (cipela = tsipela), j is de Nederlandse j, h wordt echt uitgesproken, en u klinkt als 'oe'. Bijzonder is de r: die kan zelf een klinker zijn, zoals in prst (vinger), vrt (tuin) en krv (bloed) — woorden die op papier geen klinker lijken te hebben.",
@@ -93,6 +96,7 @@
     },
     {
       "id": "g.00.brojevi",
+      "code": "NUM-CARD",
       "title_nl": "Tellen tot tien",
       "cefr": "A1.1",
       "explanation_nl": "De eerste tien getallen: jedan, dva, tri, četiri, pet, šest, sedam, osam, devet, deset. Ze zijn meteen bruikbaar bij het bestellen, bij prijzen en bij tijd. Wat er ná een getal gebeurt met het zelfstandig naamwoord komt pas in les 17 — voorlopig hoef je alleen de getallen zelf te kennen.",

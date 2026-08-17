@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.17.brojevi_padez",
+      "code": "GEN-NUM",
       "title_nl": "Welke naamval na welk getal?",
       "cefr": "A2.2",
       "explanation_nl": "Dit is de regel die je het vaakst nodig hebt bij winkelen en tijd. Na 1 volgt de nominatief enkelvoud. Na 2, 3 en 4 volgt de genitief enkelvoud. Na 5 en hoger volgt de genitief meervoud. Beslissend is het laatste cijfer: 21 gedraagt zich als 1, 22 als 2, 25 als 5.",
@@ -43,6 +44,7 @@
     },
     {
       "id": "g.17.dva_dvije",
+      "code": "NUM-CARD",
       "title_nl": "dva of dvije — het getal buigt mee",
       "cefr": "A2.2",
       "explanation_nl": "De getallen 1 en 2 hebben aparte vormen per geslacht. jedan / jedna / jedno, en dva (mannelijk en onzijdig) tegenover dvije (vrouwelijk). Vanaf 3 verandert het getal niet meer: tri, četiri, pet zijn voor alles gelijk.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.17.redni_brojevi",
+      "code": "NUM-ORD",
       "title_nl": "Rangtelwoorden",
       "cefr": "A2.2",
       "explanation_nl": "Rangtelwoorden zijn bijvoeglijke naamwoorden en buigen dus mee: prvi, druga, treće. Ze worden geschreven met een punt achter het cijfer: 1. dan = prvi dan. De reeks: prvi, drugi, treći, četvrti, peti, šesti, sedmi, osmi, deveti, deseti.",
@@ -94,6 +97,7 @@
     },
     {
       "id": "g.17.sati_datum",
+      "code": "NUM-ORD",
       "title_nl": "Kloktijd en datum",
       "cefr": "A2.2",
       "explanation_nl": "Kloktijd vraag je met Koliko je sati? Het antwoord volgt de getalregel: jedan sat, dva sata, pet sati. 'Om' is u: u pet sati. Een datum bestaat uit een rangtelwoord plus de maand in de genitief: petog svibnja.",

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Page, PageHeader, Pill } from "@/components/ui";
 import { DRILLS, DRILL_KINDS } from "@/lib/drills";
-import { dueCount, nextDueAt } from "@/lib/srs";
+import { nextReviewableAt, reviewableCount } from "@/lib/planner";
 import { drillAvailability, mistakes } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
@@ -83,8 +83,8 @@ const DRILL_ICONS: Record<string, React.ReactNode> = {
 };
 
 export default function PracticePage() {
-  const due = dueCount();
-  const next = nextDueAt();
+  const due = reviewableCount();
+  const next = nextReviewableAt();
   const availability = drillAvailability();
   const mistakeCount = mistakes(200).length;
 

@@ -14,7 +14,7 @@ import {
   weakPoints,
   wordOfTheDay,
 } from "@/lib/stats";
-import { dueCount, nextDueAt } from "@/lib/srs";
+import { nextReviewableAt, reviewableCount } from "@/lib/planner";
 
 export const dynamic = "force-dynamic";
 
@@ -33,8 +33,8 @@ function greeting(): { hr: string; nl: string } {
 export default function DashboardPage() {
   const profile = getProfile();
   const { rank, next } = rankFor(profile.xp);
-  const due = dueCount();
-  const nextReview = nextDueAt();
+  const due = reviewableCount();
+  const nextReview = nextReviewableAt();
   const vocab = vocabStats();
   const accuracy = overallAccuracy();
   const days = dailyStats(30);

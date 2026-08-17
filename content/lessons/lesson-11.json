@@ -17,6 +17,7 @@
   "grammar": [
     {
       "id": "g.11.perfekt",
+      "code": "PERFEKT",
       "title_nl": "PERFEKT — de verleden tijd",
       "cefr": "A2.1",
       "explanation_nl": "Het Kroatisch heeft één gewone verleden tijd: het perfekt. Je bouwt hem uit twee delen: de korte vorm van biti (sam, si, je, smo, ste, su) plus het deelwoord van het hoofdwerkwoord. Radio sam. Čitali smo. Bila je u Zagrebu.",
@@ -43,6 +44,7 @@
     },
     {
       "id": "g.11.particip",
+      "code": "PERFEKT",
       "title_nl": "Het deelwoord vormen",
       "cefr": "A2.1",
       "explanation_nl": "Haal -ti van de infinitief en plak de uitgang erachter: -o voor mannelijk, -la voor vrouwelijk, -lo voor onzijdig, -li / -le / -la voor het meervoud. Bij werkwoorden op -ati en -iti komt er nog een l bij in de mannelijke vorm: raditi → radi + o = radio, čitati → čita + o = čitao.",
@@ -68,6 +70,7 @@
     },
     {
       "id": "g.11.perfekt_negacija",
+      "code": "PERFEKT",
       "title_nl": "Ontkennen en vragen in het verleden",
       "cefr": "A2.1",
       "explanation_nl": "Ontkennen doe je door het hulpwerkwoord te vervangen door de ontkennende vorm van biti: nisam, nisi, nije, nismo, niste, nisu. Nisam radio. Nije bila kod kuće. Een vraag maak je met de lange vorm plus li: Jesi li radio? Jeste li bili u Zagrebu?",
@@ -92,6 +95,7 @@
     },
     {
       "id": "g.11.perfekt_nepravilni",
+      "code": "PERFEKT",
       "title_nl": "Onregelmatige deelwoorden",
       "cefr": "A2.1",
       "explanation_nl": "Een handvol veelgebruikte werkwoorden vormt het deelwoord uit een andere stam. De belangrijkste: ići → išao/išla, reći → rekao/rekla, moći → mogao/mogla, jesti → jeo/jela, piti → pio/pila. Let op dat de mannelijke en de vrouwelijke vorm hier soms flink verschillen.",
