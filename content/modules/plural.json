@@ -1,0 +1,519 @@
+{
+  "code": "PLURAL-LONG",
+  "rank": 6,
+  "band": "Beginnen",
+  "title_hr": "Stol — stolovi, đak — đaci",
+  "title_nl": "Meer dan één",
+  "cefr": "A1/A2",
+  "blurb_nl": "Het meervoud is meestal één letter: žene, piva, studenti. Maar korte mannelijke woorden worden ineens veel langer — stol wordt stolovi — en bij woorden op een k verandert die k in een c. Zonder dit herken je de helft van de meervouden niet als je ze leest.",
+  "prerequisites": ["NOM-GENDER"],
+  "can_do_nl": [
+    "Ik kan het gewone meervoud maken: žene, piva, studenti.",
+    "Ik weet welke mannelijke woorden -ovi krijgen en welke gewoon -i.",
+    "Ik weet wanneer het -evi wordt in plaats van -ovi.",
+    "Ik herken đaci als het meervoud van đak.",
+    "Ik ken de drie meervouden met een heel andere stam: ljudi, djeca, braća.",
+    "Ik weet dat satovi horloges zijn en sati uren."
+  ],
+  "grammar": {
+    "id": "g.mod.plural",
+    "code": "PLURAL-LONG",
+    "title_nl": "Meervoudsvorming",
+    "cefr": "A1/A2",
+    "explanation_nl": "Het gewone meervoud is kort: mannelijk **-i**, vrouwelijk **-e**, onzijdig **-a**. Eenlettergrepige mannelijke woorden krijgen echter een lang meervoud op **-ovi**, of **-evi** na een zachte medeklinker. En een **k** vóór die -i wordt een **c**.",
+    "contrast_nl": "Het Nederlands plakt er -en of -s achter en klaar. Het Kroatisch verandert soms het hele woord, en dat is precies waarom je een meervoud in een tekst niet altijd herkent als het woord dat je geleerd hebt.",
+    "paradigm": {
+      "caption_nl": "Het gewone meervoud",
+      "columns": ["enkelvoud", "meervoud"],
+      "rows": [
+        { "label": "mannelijk", "cells": ["student", "studenti"] },
+        { "label": "vrouwelijk", "cells": ["žena", "žene"] },
+        { "label": "onzijdig", "cells": ["pivo", "piva"] },
+        { "label": "mannelijk kort", "cells": ["stol", "stolovi"] },
+        { "label": "mannelijk kort, zacht", "cells": ["ključ", "ključevi"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Lang meervoud geldt bij eenlettergrepige woorden: stol → stolovi, maar prozor → prozori.",
+      "Na een zachte medeklinker wordt -ovi tot -evi: nož → noževi, ključ → ključevi.",
+      "Een k vóór de -i wordt een c: đak → đaci, liječnik → liječnici, putnik → putnici.",
+      "Sat heeft twee meervouden met een andere betekenis: satovi zijn horloges, sati zijn uren.",
+      "Drie woorden hebben een heel andere stam: čovjek → ljudi, dijete → djeca, brat → braća."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes woorden, telkens enkelvoud en meervoud. Kijk hoeveel er verandert — dat verschilt sterk.",
+      "exercises": [
+        {
+          "id": "m.pl.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel verandert er per woord?",
+          "given": "žena — žene\npivo — piva\nstudent — studenti\n\nstol — stolovi\nključ — ključevi\nđak — đaci\nčovjek — ljudi",
+          "body_nl": "vrouw — vrouwen\nbier — bieren\nstudent — studenten\n\ntafel — tafels\nsleutel — sleutels\nleerling — leerlingen\nmens — mensen",
+          "targets": []
+        },
+        {
+          "id": "m.pl.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "De eerste drie kosten één letter: *žene*, *piva*, *studenti*. Dat is het gewone meervoud, en dat is verreweg het vaakst.\n\nDaarna wordt het onrustiger:\n*stol* wordt *stolovi* — er komt een heel stuk bij.\n*ključ* wordt *ključevi* — bijna hetzelfde stuk, maar met een **e**.\n*đak* wordt *đaci* — de **k** is een **c** geworden.\n*čovjek* wordt *ljudi* — daar is niets van het oorspronkelijke woord over.\n\nDat laatste rijtje is de reden dat je in een tekst soms een woord niet herkent dat je wel degelijk kent. Er zit systeem in, en na deze module zie je het.",
+          "targets": ["g.mod.plural", "g.03.duga_mnozina", "v.03.stol", "v.03.kljuc", "v.00.dak", "v.03.covjek"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén hoofdregel, één regel voor korte mannelijke woorden, en één klankverandering.",
+      "exercises": [
+        {
+          "id": "m.pl.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het gewone meervoud, en het lange",
+          "body_nl": "**Het gewone meervoud:**\nMannelijk krijgt **-i**: *student → studenti*, *prozor → prozori*, *prijatelj → prijatelji*.\nVrouwelijk op -a ruilt de a voor een **-e**: *žena → žene*, *knjiga → knjige*.\nOnzijdig krijgt **-a**: *pivo → piva*, *selo → sela*, *more → mora*.\n\n**Het lange meervoud:**\nMannelijke woorden van **één lettergreep** krijgen **-ovi**:\n*stol → stolovi*, *grad → gradovi*, *brod → brodovi*, *sin → sinovi*, *park → parkovi*.\n\nEindigt zo'n woord op een **zachte medeklinker** — *c, č, ć, dž, đ, j, lj, nj, š, ž* — dan wordt het **-evi**:\n*nož → noževi*, *ključ → ključevi*, *muž → muževi*.\n\nHeeft het woord meer dan één lettergreep, dan blijft het gewoon **-i**: *prozor → prozori*, *kolač → kolači*.",
+          "table": {
+            "caption_nl": "Kort of lang",
+            "columns": ["enkelvoud", "meervoud", "waarom"],
+            "rows": [
+              { "label": "1", "cells": ["stol", "stolovi", "één lettergreep, harde medeklinker"] },
+              { "label": "2", "cells": ["grad", "gradovi", "één lettergreep, harde medeklinker"] },
+              { "label": "3", "cells": ["nož", "noževi", "één lettergreep, zachte medeklinker"] },
+              { "label": "4", "cells": ["ključ", "ključevi", "één lettergreep, zachte medeklinker"] },
+              { "label": "5", "cells": ["prozor", "prozori", "meer lettergrepen, gewoon -i"] },
+              { "label": "6", "cells": ["prijatelj", "prijatelji", "meer lettergrepen, gewoon -i"] }
+            ]
+          },
+          "targets": ["g.mod.plural", "g.03.duga_mnozina", "v.03.stol", "v.05.grad", "v.03.noz", "v.03.kljuc", "v.01.prijatelj"]
+        },
+        {
+          "id": "m.pl.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De k die een c wordt — en drie woorden die alles omgooien",
+          "body_nl": "Staat er een **k** vlak vóór de meervouds-i, dan wordt die k een **c**:\n\n*đak → đaci*\n*liječnik → liječnici*\n*putnik → putnici*\n*jezik → jezici*\n\nDat is geen uitzondering maar een klankregel: k en i gaan in het Kroatisch slecht samen. *G* en *h* doen op die plek hetzelfde, maar die kom je zelden tegen.\n\nEn dan drie woorden waar je niets aan kunt rekenen. Die leer je als paar:\n\n*čovjek → ljudi* — mens, mensen\n*dijete → djeca* — kind, kinderen\n*brat → braća* — broer, broers\n\n*Djeca* en *braća* gedragen zich grammaticaal als een vrouwelijk enkelvoud, ook al betekenen ze iets meervoudigs. Neem die zinnen voorlopig over zoals je ze ziet; er is hier niets aan te redeneren.\n\nTot slot een leuke: *sat* heeft twee meervouden. **Satovi** zijn horloges, **sati** zijn uren.",
+          "table": {
+            "caption_nl": "Klankverandering en onregelmatige meervouden",
+            "columns": ["enkelvoud", "meervoud", "wat er gebeurt"],
+            "rows": [
+              { "label": "1", "cells": ["đak", "đaci", "k wordt c"] },
+              { "label": "2", "cells": ["liječnik", "liječnici", "k wordt c"] },
+              { "label": "3", "cells": ["čovjek", "ljudi", "andere stam"] },
+              { "label": "4", "cells": ["dijete", "djeca", "andere stam"] },
+              { "label": "5", "cells": ["brat", "braća", "andere stam"] },
+              { "label": "6", "cells": ["sat", "satovi / sati", "horloges / uren"] }
+            ]
+          },
+          "targets": ["g.mod.plural", "g.03.nepravilna_mnozina", "v.00.dak", "v.02.lijecnik", "v.03.covjek", "v.03.dijete", "v.03.brat", "v.17.sat_uur"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Welk woord staat hier?",
+      "why_nl": "Nog niets maken. Hier gaat het om de andere kant: een meervoud tegenkomen en zien welk woord het is.",
+      "exercises": [
+        {
+          "id": "m.pl.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk woord is dit het meervoud?",
+          "given": "U parku su đaci.",
+          "nudge": "Denk aan de klankregel: welke letter stond hier oorspronkelijk in plaats van de c?",
+          "answer": "Van đak — de k is voor de i een c geworden.",
+          "distractors": [
+            "Van đac.",
+            "Van đaka.",
+            "Dat is geen meervoud."
+          ],
+          "explain_nl": "Wie deze regel niet kent, zoekt đac op in het woordenboek en vindt niets.",
+          "targets": ["g.mod.plural", "v.00.dak"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom is het stolovi en niet stoli?",
+          "given": "U sobi su stolovi.",
+          "nudge": "Tel de lettergrepen van stol.",
+          "answer": "Omdat stol één lettergreep heeft, en die woorden krijgen een lang meervoud.",
+          "distractors": [
+            "Omdat een tafel groot is.",
+            "Omdat stol op een l eindigt.",
+            "Stoli bestaat ook, het is hetzelfde."
+          ],
+          "explain_nl": "Vergelijk prozor — twee lettergrepen — dat gewoon prozori wordt.",
+          "targets": ["g.mod.plural", "v.03.stol"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm is goed Kroatisch?",
+          "given": "A: Imam dva ključeva.\nB: Ovdje su ključevi.",
+          "nudge": "Eén van de twee is het gewone meervoud, de ander staat na een getal.",
+          "answer": "Allebei — B is het meervoud, A staat na een getal en heeft daarom een andere vorm.",
+          "distractors": [
+            "Alleen A.",
+            "Alleen B.",
+            "Geen van beide; het moet ključi zijn."
+          ],
+          "explain_nl": "Het lange meervoud ključevi zit in beide vormen. Na een getal krijgt het nog een naamvalsuitgang; het woord zelf is niet veranderd.",
+          "targets": ["g.mod.plural", "v.03.kljuc"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Moji satovi ne rade.",
+          "nudge": "Sat heeft twee meervouden. Welk van de twee staat hier?",
+          "answer": "Mijn horloges lopen niet.",
+          "distractors": [
+            "Mijn uren gaan niet door.",
+            "Mijn lessen gaan niet door.",
+            "Ik heb geen tijd."
+          ],
+          "explain_nl": "Satovi zijn horloges. Voor uren is het sati: pet sati.",
+          "targets": ["g.mod.plural", "v.03.sat"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk woord is ljudi het meervoud?",
+          "given": "Na trgu su ljudi.",
+          "nudge": "Er is geen enkele letter die je terugziet. Dit is er één om uit je hoofd te leren.",
+          "answer": "Van čovjek — mens.",
+          "distractors": [
+            "Van ljud.",
+            "Van ljudin.",
+            "Van ljubav."
+          ],
+          "explain_nl": "Čovjek en ljudi hebben niets gemeen. Net als 'mens' en 'lui' in het Nederlands zijn het twee woorden voor één paar.",
+          "targets": ["g.mod.plural", "v.03.covjek"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er noževi en niet nožovi?",
+          "given": "U ladici su noževi.",
+          "nudge": "Kijk naar de laatste medeklinker van nož. Is die hard of zacht?",
+          "answer": "Omdat nož op een zachte medeklinker eindigt, en dan wordt -ovi tot -evi.",
+          "distractors": [
+            "Omdat een mes scherp is.",
+            "Omdat nož kort is.",
+            "Dat is een spelfout."
+          ],
+          "explain_nl": "Dezelfde wisseling die je bij de instrumentalis zag: na c, č, ć, dž, đ, j, lj, nj, š en ž wordt o een e.",
+          "targets": ["g.mod.plural", "v.03.noz"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: hoeveel lettergrepen, welke laatste medeklinker, en welk meervoud hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.pl.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Ovdje su ___ (žena).",
+          "answer": "žene",
+          "accepts": ["žene"],
+          "explain_nl": "Vrouwelijk op -a: de a wordt een e.",
+          "targets": ["g.mod.plural", "v.04.zena"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.pl.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "U razredu su ___ (student).",
+          "answer": "studenti",
+          "accepts": ["studenti"],
+          "explain_nl": "Meerlettergrepig mannelijk woord: gewoon -i.",
+          "targets": ["g.mod.plural", "v.01.student"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.pl.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "U sobi su ___ (stol).",
+          "answer": "stolovi",
+          "accepts": ["stolovi"],
+          "hint": "Hoeveel lettergrepen heeft stol?",
+          "explain_nl": "Eén lettergreep, harde medeklinker: lang meervoud op -ovi.",
+          "targets": ["g.mod.plural", "v.03.stol"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Ovo su moji ___ (ključ).",
+          "answer": "ključevi",
+          "accepts": ["ključevi"],
+          "hint": "Č is een zachte medeklinker.",
+          "explain_nl": "Eén lettergreep, zachte medeklinker: -evi.",
+          "targets": ["g.mod.plural", "v.03.kljuc"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "U bolnici rade ___ (liječnik).",
+          "answer": "liječnici",
+          "accepts": ["liječnici"],
+          "hint": "Wat gebeurt er met een k vóór de i?",
+          "explain_nl": "De k wordt een c: liječnik → liječnici.",
+          "targets": ["g.mod.plural", "v.02.lijecnik"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "Kroz ___ (prozor) se vidi more.",
+          "answer": "prozore",
+          "accepts": ["prozore"],
+          "hint": "Kroz vraagt de accusatief meervoud.",
+          "explain_nl": "Prozor heeft twee lettergrepen, dus het meervoud is prozori — en na kroz wordt dat prozore.",
+          "targets": ["g.mod.plural"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Zet in het meervoud.",
+          "given": "U parku su ___ (dijete).",
+          "answer": "djeca",
+          "accepts": ["djeca"],
+          "hint": "Dit is er één om uit je hoofd te leren.",
+          "explain_nl": "Dijete → djeca, met een heel andere stam.",
+          "targets": ["g.mod.plural", "v.03.dijete"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "In het park zijn mensen.",
+          "answer": "U parku su ljudi.",
+          "accepts": ["U parku su ljudi.", "U parku su ljudi"],
+          "explain_nl": "Ljudi is het meervoud van čovjek, en parku staat in de locatief want er is geen beweging.",
+          "targets": ["g.mod.plural", "v.03.covjek", "v.05.park"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "U sobi su stoli.",
+          "answer": "U sobi su stolovi.",
+          "accepts": ["U sobi su stolovi.", "U sobi su stolovi"],
+          "explain_nl": "Stol heeft één lettergreep en krijgt dus het lange meervoud.",
+          "targets": ["g.mod.plural", "v.03.stol"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pl.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "U školi su đaki.",
+          "answer": "U školi su đaci.",
+          "accepts": ["U školi su đaci.", "U školi su đaci"],
+          "explain_nl": "Een k vóór de meervouds-i wordt een c.",
+          "targets": ["g.mod.plural", "v.00.dak"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de getallen en de hoeveelheden, want daar zie je het meervoud het vaakst.",
+      "exercises": [
+        {
+          "id": "m.pl.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Na stolu su tri ___.",
+          "answer": "ključa",
+          "distractors": ["ključevi", "ključeva", "ključ"],
+          "explain_nl": "Na tri komt de genitief enkelvoud ključa, niet het meervoud. Het meervoud ključevi hoor je pas bij vijf en hoger — en dan als ključeva.",
+          "targets": ["g.mod.plural", "g.mod.brojevi", "v.03.kljuc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het meervoud in.",
+          "given": "U gradu ima puno ___ (park).",
+          "answer": "parkova",
+          "accepts": ["parkova"],
+          "hint": "Puno vraagt de genitief meervoud, en park heeft een lang meervoud.",
+          "explain_nl": "Parkovi is het meervoud, en na puno komt de genitief meervoud parkova. Het lange stuk blijft erin zitten.",
+          "targets": ["g.mod.plural", "g.mod.genpl", "v.05.park"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Mijn vrienden wonen in Split.",
+          "answer": "Moji prijatelji žive u Splitu.",
+          "accepts": ["Moji prijatelji žive u Splitu.", "Moji prijatelji žive u Splitu"],
+          "explain_nl": "Prijatelj heeft meer dan één lettergreep, dus gewoon prijatelji — en het bezittelijke woordje buigt mee: moji.",
+          "targets": ["g.mod.plural", "g.mod.poss", "v.01.prijatelj"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin gaat over horloges?",
+          "answer": "Kupio sam dva sata u toj trgovini.",
+          "distractors": [
+            "Čekam već dva sata.",
+            "Vlak kreće u dva sata.",
+            "Radim dva sata dnevno."
+          ],
+          "explain_nl": "Dezelfde woorden, andere betekenis. Alleen de context vertelt je of het om uren of om horloges gaat — en in het meervoud helpt de vorm: satovi tegenover sati.",
+          "targets": ["g.mod.plural", "v.03.sat"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "U školi su đaki i liječniki.",
+          "answer": "U školi su đaci i liječnici.",
+          "accepts": ["U školi su đaci i liječnici.", "U školi su đaci i liječnici"],
+          "hint": "Beide woorden eindigen in het enkelvoud op een k.",
+          "explain_nl": "Twee keer dezelfde klankregel: de k wordt een c vóór de meervouds-i.",
+          "targets": ["g.mod.plural", "v.00.dak", "v.02.lijecnik"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk meervoud: welk woord staat eronder, en welke soort meervoud is het?",
+      "text_hr": "Naša škola je u centru grada. U razredu su dvadeset i dva đaka. Prozori gledaju na park, a u parku su uvijek djeca i psi. Naši profesori su strogi, ali dobri. Poslije škole idemo u kafić na uglu, gdje su stolovi vani. Moji prijatelji piju sokove, a ja pijem kavu. U torbi nosim knjige, bilježnice i ključeve od stana. Uvijek izgubim ključeve, pa moja majka kaže da trebam dva sata za jednu stvar.",
+      "translation_nl": "Onze school staat in het centrum van de stad. In de klas zitten tweeëntwintig leerlingen. De ramen kijken uit op het park, en in het park zijn altijd kinderen en honden. Onze docenten zijn streng, maar goed. Na school gaan we naar het café op de hoek, waar de tafels buiten staan. Mijn vrienden drinken sap, en ik drink koffie. In mijn tas draag ik boeken, schriften en de sleutels van het appartement. Ik verlies altijd mijn sleutels, dus mijn moeder zegt dat ik twee uur nodig heb voor één ding.",
+      "exercises": [
+        {
+          "id": "m.pl.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat zie je vanuit de ramen?",
+          "answer": "Het park.",
+          "distractors": ["De zee.", "Het centrum.", "Het café."],
+          "explain_nl": "«Prozori gledaju na park.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.pl.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «prozori» en «stolovi». Waarom heeft het ene een kort meervoud en het andere een lang?",
+          "given": "Prozori gledaju na park. Stolovi su vani.",
+          "nudge": "Spreek prozor en stol allebei hardop uit. Hoeveel lettergrepen hoor je?",
+          "answer": "Prozor heeft twee lettergrepen en stol maar één; korte woorden krijgen het lange meervoud.",
+          "distractors": [
+            "Omdat een tafel groter is dan een raam.",
+            "Omdat prozor onzijdig is.",
+            "Het is willekeurig; allebei mag."
+          ],
+          "explain_nl": "De regel klinkt averechts — het kórte woord krijgt het lánge meervoud — maar precies daarom onthoud je hem.",
+          "targets": ["g.mod.plural", "v.03.stol"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pl.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «dvadeset i dva đaka», niet đaci. Waarom?",
+          "given": "U razredu su dvadeset i dva đaka.",
+          "nudge": "Kijk naar het laatste cijfer van tweeëntwintig.",
+          "answer": "Omdat 22 op een twee eindigt, en na 2, 3 en 4 komt de genitief enkelvoud.",
+          "distractors": [
+            "Omdat đaci fout is.",
+            "Omdat het over een klas gaat.",
+            "Omdat đak een k heeft."
+          ],
+          "explain_nl": "Đaci is het meervoud, maar na een getal beslist het getal. Twee regels die elkaar in de weg lijken te zitten en dat niet doen.",
+          "targets": ["g.mod.plural", "g.mod.brojevi", "v.00.dak"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "U torbi nosim knjige, bilježnice i ___ (ključ).",
+          "answer": "ključeve",
+          "accepts": ["ključeve"],
+          "hint": "Het is een lijdend voorwerp in het meervoud.",
+          "explain_nl": "Het meervoud is ključevi, en als lijdend voorwerp wordt dat ključeve.",
+          "targets": ["g.mod.plural", "v.03.kljuc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pl.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen: één met een gewoon meervoud, één met een lang meervoud.",
+          "model_answer": "Moji prijatelji su ovdje. U sobi su stolovi.",
+          "rubric_nl": [
+            "In de eerste zin staat een meerlettergrepig woord met -i, of een vrouwelijk woord met -e.",
+            "In de tweede zin staat een eenlettergrepig mannelijk woord met -ovi of -evi.",
+            "Bij een k vóór de i staat er een c."
+          ],
+          "explain_nl": "Wie deze twee soorten uit elkaar houdt, herkent voortaan elk meervoud dat hij tegenkomt — ook de woorden die er ineens twee lettergrepen langer uitzien.",
+          "targets": ["g.mod.plural"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum PLURAL-LONG/PLURAL-IRREG, gebouwd op les 3"
+}
