@@ -1,0 +1,518 @@
+{
+  "code": "GEN-PL",
+  "rank": 15,
+  "band": "Verfijnen",
+  "title_hr": "Pet žena, pet gradova, pet noći",
+  "title_nl": "De genitief meervoud",
+  "cefr": "A2/B1",
+  "blurb_nl": "De vorm die je nodig hebt na elk getal vanaf vijf, na puno, en na bez. Het goede nieuws: bij vrouwelijke en onzijdige woorden ziet hij er meestal precies zo uit als de woordenboekvorm. Het lastige zit in één plek waar er ineens een a bij komt.",
+  "prerequisites": ["GEN-POSS", "PLURAL-LONG"],
+  "can_do_nl": [
+    "Ik weet dat de genitief meervoud bij de meeste woorden op -a eindigt.",
+    "Ik herken dat pet žena en jedna žena er hetzelfde uitzien, en waarom dat geen fout is.",
+    "Ik weet dat vrouwelijke woorden op een medeklinker -i krijgen: pet noći.",
+    "Ik ken de drie woorden die je dagelijks nodig hebt en op -i eindigen: ljudi, sati, mjeseci.",
+    "Ik kan de a op de juiste plek zetten: sestara, karata, pisama.",
+    "Ik weet dat lange meervouden -ova of -eva krijgen: pet gradova."
+  ],
+  "grammar": {
+    "id": "g.mod.genpl",
+    "code": "GEN-PL",
+    "title_nl": "Genitief meervoud en de onvaste a",
+    "cefr": "A2/B1",
+    "explanation_nl": "De genitief meervoud is de vorm die volgt op een getal vanaf vijf, op *puno* en *mnogo*, en op voorzetsels als *bez* en *iz*. De hoofduitgang is **-a**. Vrouwelijke woorden op een medeklinker krijgen **-i**, en lange meervouden op *-ovi* krijgen **-ova**.",
+    "contrast_nl": "Het Nederlands heeft één meervoud en verder niets. Het Kroatisch heeft naast het gewone meervoud nog deze aparte vorm — en juist die heb je bij elke hoeveelheid nodig, dus in de praktijk kom je hem vaker tegen dan het gewone meervoud.",
+    "paradigm": {
+      "caption_nl": "De uitgangen van de genitief meervoud",
+      "columns": ["woordenboekvorm", "genitief meervoud"],
+      "rows": [
+        { "label": "vrouwelijk op -a", "cells": ["žena — vrouw", "žena"] },
+        { "label": "onzijdig", "cells": ["pivo — bier", "piva"] },
+        { "label": "mannelijk kort", "cells": ["student — student", "studenata"] },
+        { "label": "mannelijk lang meervoud", "cells": ["grad — stad (gradovi)", "gradova"] },
+        { "label": "vrouwelijk op medeklinker", "cells": ["noć — nacht", "noći"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Bij žena, knjiga en pivo is de genitief meervoud gelijk aan de woordenboekvorm. Dat voelt als een fout, maar het klopt: pet žena.",
+      "Woorden waarvan de stam op twee medeklinkers eindigt krijgen er een a tussen: sestra → sestara, karta → karata, pismo → pisama.",
+      "Vrouwelijke woorden op een medeklinker gaan op -i, niet op -a: pet noći, pet stvari, pet riječi.",
+      "Drie veelgebruikte mannelijke woorden gaan ook op -i: pet ljudi, pet sati, pet mjeseci.",
+      "Een lang meervoud houdt zijn ov of ev: gradovi → gradova, stolovi → stolova, sinovi → sinova."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Vier woorden, telkens één keer alleen en één keer met pet ervoor. Kijk wat er verandert — en wat níét.",
+      "exercises": [
+        {
+          "id": "m.gpl.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat verandert er, en wat blijft hetzelfde?",
+          "given": "jedna žena — pet žena\njedno pivo — pet piva\njedan student — pet studenata\njedan grad — pet gradova\njedna noć — pet noći",
+          "body_nl": "één vrouw — vijf vrouwen\néén bier — vijf bier\néén student — vijf studenten\néén stad — vijf steden\néén nacht — vijf nachten",
+          "targets": []
+        },
+        {
+          "id": "m.gpl.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Bij de eerste twee verandert er **niets**: *žena* blijft *žena*, *pivo* wordt *piva* — precies de vormen die je al kende.\n\nBij de laatste drie verandert er wél iets, en telkens anders:\n*student* wordt *studenata* — er komt een **a** bij midden in het woord.\n*grad* wordt *gradova* — het lange meervoud *gradovi* blijft erin zitten.\n*noć* wordt *noći* — een **i** in plaats van een a.\n\nDit is de genitief meervoud. Je hebt hem nodig na elk getal vanaf vijf, na *puno*, en na *bez*. In de praktijk is dat vaker dan het gewone meervoud.\n\nEn de eerste twee zijn geen uitzondering maar de regel: bij vrouwelijke en onzijdige woorden ziet deze vorm er meestal uit als de woordenboekvorm.",
+          "targets": ["g.mod.genpl", "v.04.zena", "v.06.pivo", "v.01.student", "v.05.grad", "v.18.noc"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén hoofduitgang, twee zijpaden, en één plek waar er een a bij komt.",
+      "exercises": [
+        {
+          "id": "m.gpl.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De hoofduitgang is -a",
+          "body_nl": "Verreweg de meeste woorden krijgen **-a**:\n*žena → žena*, *knjiga → knjiga*, *godina → godina*\n*pivo → piva*, *selo → sela*, *more → mora*\n*student → studenata*, *prozor → prozora*\n\nDat de vrouwelijke en onzijdige vormen eruitzien als de woordenboekvorm is puur toeval van de spelling — je hoort in het Kroatisch wel verschil, want deze a is lang. Op papier is er geen verschil, en dat hoeft ook niet: het getal ervoor vertelt je al wat het is.\n\nTwee zijpaden:\n\n**Vrouwelijk op een medeklinker** krijgt **-i**:\n*noć → noći*, *stvar → stvari*, *riječ → riječi*.\n\n**Lang meervoud** houdt zijn *ov* of *ev* en krijgt **-a**:\n*grad → gradovi → gradova*, *stol → stolovi → stolova*, *sin → sinovi → sinova*.",
+          "table": {
+            "caption_nl": "De uitgangen op een rij",
+            "columns": ["woordenboekvorm", "genitief meervoud"],
+            "rows": [
+              { "label": "vrouwelijk op -a", "cells": ["žena", "žena"] },
+              { "label": "onzijdig", "cells": ["pivo", "piva"] },
+              { "label": "mannelijk kort", "cells": ["prozor", "prozora"] },
+              { "label": "mannelijk lang", "cells": ["grad (gradovi)", "gradova"] },
+              { "label": "vrouwelijk op medeklinker", "cells": ["noć", "noći"] }
+            ]
+          },
+          "targets": ["g.mod.genpl", "v.04.zena", "v.06.pivo", "v.05.grad", "v.18.noc", "v.18.stvar"]
+        },
+        {
+          "id": "m.gpl.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De onvaste a — en drie woorden die je uit je hoofd leert",
+          "body_nl": "Eindigt de stam op **twee medeklinkers**, dan komt er een **a** tussen. Anders zou het woord op een onuitspreekbare klomp eindigen.\n\n*sestr-* → *sestara* (vijf zussen)\n*kart-* → *karata* (vijf kaartjes)\n*pism-* → *pisama* (vijf brieven)\n*studentic-* blijft *studentica* — één medeklinker, dus niets nodig\n\nBij *student* gebeurt hetzelfde, alleen valt het minder op: *studenat-* → *studenata*.\n\nEn dan drie woorden die je elke dag gebruikt en die op **-i** gaan, hoewel ze mannelijk zijn:\n*pet ljudi* — vijf mensen\n*pet sati* — vijf uur\n*pet mjeseci* — vijf maanden\n\nDie leer je als los rijtje. Ze zijn het niet waard om een regel voor te zoeken.",
+          "table": {
+            "caption_nl": "Waar de a tussen komt",
+            "columns": ["stam", "genitief meervoud"],
+            "rows": [
+              { "label": "sestra", "cells": ["sestr-", "sestara"] },
+              { "label": "karta", "cells": ["kart-", "karata"] },
+              { "label": "pismo", "cells": ["pism-", "pisama"] },
+              { "label": "djevojka", "cells": ["djevojk-", "djevojaka"] },
+              { "label": "studentica", "cells": ["studentic-", "studentica"] }
+            ]
+          },
+          "targets": ["g.mod.genpl", "v.01.sestra", "v.01.karta", "v.01.pismo", "v.03.djevojka", "v.03.covjek"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Enkelvoud of meervoud?",
+      "why_nl": "Nog niets invullen. Bij deze vorm is de vraag juist wat je vóór je ziet — want soms lijkt hij sprekend op iets anders.",
+      "exercises": [
+        {
+          "id": "m.gpl.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel vrouwen staan er?",
+          "given": "Ondje je pet žena.",
+          "nudge": "Het woord žena ziet er hetzelfde uit als in het woordenboek. Wat vertelt je dan hoeveel het er zijn?",
+          "answer": "Vijf — het getal vertelt het, niet de vorm van het woord.",
+          "distractors": [
+            "Eén, want er staat žena.",
+            "Dat kun je hier niet zien.",
+            "Twee, drie of vier."
+          ],
+          "explain_nl": "Bij vrouwelijke woorden op -a valt de genitief meervoud samen met de woordenboekvorm. Dat is geen fout en ook geen probleem: het getal doet het werk.",
+          "targets": ["g.mod.genpl", "v.04.zena"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gpl.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er noći en niet noća?",
+          "given": "Ostajemo pet noći.",
+          "nudge": "Noć is vrouwelijk, maar eindigt niet op een a. Welke groep is dat?",
+          "answer": "Omdat noć een vrouwelijk woord op een medeklinker is, en die groep krijgt -i.",
+          "distractors": [
+            "Omdat het over nachten gaat en niet over dingen.",
+            "Omdat er pet voor staat.",
+            "Dat is een schrijffout voor noća."
+          ],
+          "explain_nl": "Dezelfde groep als stvar en riječ: pet stvari, pet riječi. Ze eindigen op een medeklinker en gaan hun eigen weg.",
+          "targets": ["g.mod.genpl", "v.18.noc"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm is goed Kroatisch?",
+          "given": "A: Imam pet sestara.\nB: Imam pet sestra.",
+          "nudge": "Spreek sestr hardop uit als laatste stuk van een woord. Waarom zou dat lastig zijn?",
+          "answer": "A — de stam eindigt op twee medeklinkers, dus er komt een a tussen.",
+          "distractors": [
+            "B — sestra is toch al de vorm die je kent.",
+            "Allebei goed.",
+            "Geen van beide; het moet sestri zijn."
+          ],
+          "explain_nl": "De onvaste a is er om het uitspreekbaar te houden. Bij knjiga hoeft het niet, want daar staat maar één medeklinker aan het eind van de stam.",
+          "targets": ["g.mod.genpl", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom is het gradova en niet grada?",
+          "given": "Posjetio sam pet gradova.",
+          "nudge": "Wat is het gewone meervoud van grad? Zie je dat terug in deze vorm?",
+          "answer": "Omdat grad een lang meervoud heeft — gradovi — en dat ov blijft staan.",
+          "distractors": [
+            "Omdat een stad groot is.",
+            "Omdat er pet voor staat en niet dva.",
+            "Grada bestaat niet."
+          ],
+          "explain_nl": "Grada bestáát wel, maar dat is de genitief enkelvoud — de vorm na dva, tri en četiri. Het lange meervoud herken je aan de ov.",
+          "targets": ["g.mod.genpl", "v.05.grad"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Nemam puno prijatelja u Zagrebu.",
+          "nudge": "Puno werkt als een getal boven de vijf. Welke vorm vraagt dat?",
+          "answer": "Ik heb niet veel vrienden in Zagreb.",
+          "distractors": [
+            "Ik heb geen vriend in Zagreb.",
+            "Mijn vriend is niet in Zagreb.",
+            "Ik heb vrienden van Zagreb."
+          ],
+          "explain_nl": "Prijatelja is hier de genitief meervoud na puno. Bij dit woord ziet die er hetzelfde uit als de genitief enkelvoud — de context beslist.",
+          "targets": ["g.mod.genpl", "v.01.prijatelj"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke van deze twee is de genitief meervoud?",
+          "given": "A: dva sata\nB: pet sati",
+          "nudge": "Welke hoort bij de groep vanaf vijf?",
+          "answer": "B — sati, want vanaf vijf komt de genitief meervoud.",
+          "distractors": [
+            "A — sata, want dat is het meervoud.",
+            "Allebei.",
+            "Geen van beide; sat verandert niet."
+          ],
+          "explain_nl": "Sat is een van de drie woorden die op -i gaan. Sata is de genitief enkelvoud, de vorm na dva, tri en četiri.",
+          "targets": ["g.mod.genpl", "v.17.sat_uur"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: welke groep is dit woord, en welke uitgang hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.gpl.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "U razredu je deset ___ (žena).",
+          "answer": "žena",
+          "accepts": ["žena"],
+          "explain_nl": "Vrouwelijk op -a: de genitief meervoud is gelijk aan de woordenboekvorm.",
+          "targets": ["g.mod.genpl", "v.04.zena"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gpl.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "Pročitao sam pet ___ (knjiga).",
+          "answer": "knjiga",
+          "accepts": ["knjiga"],
+          "explain_nl": "Ook hier verandert er niets aan de vorm. De stam eindigt op één medeklinker, dus er komt geen a bij.",
+          "targets": ["g.mod.genpl", "v.01.knjiga"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gpl.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in. Let op de stam.",
+          "given": "Imam pet ___ (sestra).",
+          "answer": "sestara",
+          "accepts": ["sestara"],
+          "hint": "De stam sestr- eindigt op twee medeklinkers.",
+          "explain_nl": "Onvaste a: sestr- wordt sestar-, dus sestara.",
+          "targets": ["g.mod.genpl", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "Kupili smo šest ___ (karta).",
+          "answer": "karata",
+          "accepts": ["karata"],
+          "hint": "Kart- eindigt op rt.",
+          "explain_nl": "Dezelfde onvaste a als bij sestara: karat- wordt karata.",
+          "targets": ["g.mod.genpl", "v.01.karta"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "Ostajemo tamo sedam ___ (noć).",
+          "answer": "noći",
+          "accepts": ["noći"],
+          "explain_nl": "Vrouwelijk op een medeklinker, dus -i.",
+          "targets": ["g.mod.genpl", "v.18.noc"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gpl.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "Posjetili smo pet ___ (grad).",
+          "answer": "gradova",
+          "accepts": ["gradova"],
+          "hint": "Wat is het gewone meervoud van grad?",
+          "explain_nl": "Lang meervoud gradovi, dus genitief meervoud gradova.",
+          "targets": ["g.mod.genpl", "v.05.grad"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de genitief meervoud in.",
+          "given": "Na trgu je puno ___ (čovjek).",
+          "answer": "ljudi",
+          "accepts": ["ljudi"],
+          "hint": "Het meervoud van čovjek is onregelmatig.",
+          "explain_nl": "Čovjek heeft ljudi als meervoud, en de genitief meervoud is ook ljudi.",
+          "targets": ["g.mod.genpl", "v.03.covjek"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik heb vijf brieven geschreven.",
+          "answer": "Napisao sam pet pisama.",
+          "accepts": [
+            "Napisao sam pet pisama.",
+            "Napisala sam pet pisama.",
+            "Napisao sam pet pisama",
+            "Napisala sam pet pisama"
+          ],
+          "hint": "Pism- eindigt op sm.",
+          "explain_nl": "Onvaste a in een onzijdig woord: pisam- wordt pisama.",
+          "targets": ["g.mod.genpl", "v.01.pismo"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gpl.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Imam pet sestra.",
+          "answer": "Imam pet sestara.",
+          "accepts": ["Imam pet sestara.", "Imam pet sestara"],
+          "explain_nl": "De stam eindigt op twee medeklinkers, dus er hoort een a tussen.",
+          "targets": ["g.mod.genpl", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ostajemo pet noća.",
+          "answer": "Ostajemo pet noći.",
+          "accepts": ["Ostajemo pet noći.", "Ostajemo pet noći"],
+          "explain_nl": "Noć is vrouwelijk op een medeklinker en krijgt dus -i, niet -a.",
+          "targets": ["g.mod.genpl", "v.18.noc"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de vormen waar hij makkelijk mee te verwarren is: de genitief enkelvoud en het gewone meervoud.",
+      "exercises": [
+        {
+          "id": "m.gpl.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "U gradu su tri ___.",
+          "answer": "trgovine",
+          "distractors": ["trgovina", "trgovinama", "trgovinu"],
+          "explain_nl": "Drie hoort bij de groep 2/3/4, dus de genitief enkelvoud trgovine. Trgovina zou de vorm na pet zijn.",
+          "targets": ["g.mod.genpl", "g.mod.brojevi", "v.03.trgovina"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gpl.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in.",
+          "given": "Kupio sam dvije ___ (knjiga) i pet ___ (razglednica).",
+          "answer": "knjige razglednica",
+          "accepts": ["knjige razglednica"],
+          "hint": "De eerste hoort bij 2/3/4, de tweede bij 5 en hoger.",
+          "explain_nl": "Twee vormen van hetzelfde soort woord, in één zin, met een ander getal ervoor.",
+          "targets": ["g.mod.genpl", "g.mod.brojevi", "v.01.knjiga"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gpl.052",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Kava je bez ___.",
+          "answer": "šećera",
+          "distractors": ["šećer", "šećeru", "šećerom"],
+          "explain_nl": "Bez vraagt de genitief, hier enkelvoud — geen getal in de buurt. Dezelfde naamval, een andere aanleiding.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gpl.053",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Er zijn veel mensen op straat.",
+          "answer": "Na ulici je puno ljudi.",
+          "accepts": ["Na ulici je puno ljudi.", "Na ulici je puno ljudi", "Na ulici ima puno ljudi.", "Na ulici ima puno ljudi"],
+          "explain_nl": "Puno vraagt de genitief meervoud ljudi, en na met een plaats vraagt de locatief ulici.",
+          "targets": ["g.mod.genpl", "g.mod.loc_vs_acc", "v.03.covjek", "v.03.ulica"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gpl.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Ostali smo pet noća i posjetili tri gradova.",
+          "answer": "Ostali smo pet noći i posjetili tri grada.",
+          "accepts": ["Ostali smo pet noći i posjetili tri grada.", "Ostali smo pet noći i posjetili tri grada"],
+          "hint": "Eén woord heeft de verkeerde uitgang, en één staat in de verkeerde groep.",
+          "explain_nl": "Noć krijgt -i. En tri hoort bij de groep 2/3/4, dus de genitief enkelvoud grada — gradova hoort pas vanaf vijf.",
+          "targets": ["g.mod.genpl", "g.mod.brojevi", "v.18.noc", "v.05.grad"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elke hoeveelheid: welk woord staat erachter, en in welke vorm?",
+      "text_hr": "Prošlog ljeta putovali smo po Hrvatskoj. Posjetili smo pet gradova i ostali sedam noći kod prijatelja. U Splitu je bilo puno ljudi na rivi. Kupili smo šest razglednica i napisali pet pisama. Moja sestra je slikala sve — ima tisuću fotografija. Svaki dan smo pili dvije kave i jeli previše sladoleda. Nakon deset dana vratili smo se kući bez novca, ali s puno priča.",
+      "translation_nl": "Vorige zomer reisden we door Kroatië. We bezochten vijf steden en bleven zeven nachten bij vrienden. In Split waren er veel mensen op de boulevard. We kochten zes ansichtkaarten en schreven vijf brieven. Mijn zus fotografeerde alles — ze heeft duizend foto's. Elke dag dronken we twee koffie en aten we te veel ijs. Na tien dagen kwamen we thuis zonder geld, maar met veel verhalen.",
+      "exercises": [
+        {
+          "id": "m.gpl.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel nachten bleven ze?",
+          "answer": "Zeven.",
+          "distractors": ["Vijf.", "Zes.", "Tien."],
+          "explain_nl": "«Ostali sedam noći.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.gpl.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «pet gradova» en «sedam noći». Waarom niet twee keer dezelfde uitgang?",
+          "given": "Posjetili smo pet gradova i ostali sedam noći.",
+          "nudge": "Beide getallen zijn boven de vijf. Het verschil zit dus in de woorden zelf.",
+          "answer": "Grad heeft een lang meervoud en krijgt -ova; noć is vrouwelijk op een medeklinker en krijgt -i.",
+          "distractors": [
+            "Omdat vijf en zeven verschillende groepen zijn.",
+            "Omdat gradova mannelijk is en noći vrouwelijk — meer zit er niet achter.",
+            "Omdat noći ook het gewone meervoud is."
+          ],
+          "explain_nl": "Allebei genitief meervoud, twee verschillende uitgangen. De groep waar het woord bij hoort beslist, niet het getal.",
+          "targets": ["g.mod.genpl", "v.05.grad", "v.18.noc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gpl.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «napisali pet pisama». Waar komt die tweede a vandaan?",
+          "given": "Kupili smo šest razglednica i napisali pet pisama.",
+          "nudge": "Wat blijft er van pismo over als je de o weghaalt?",
+          "answer": "De stam pism- eindigt op twee medeklinkers, dus er komt een a tussen.",
+          "distractors": [
+            "Omdat pismo onzijdig is.",
+            "Omdat er pet voor staat.",
+            "Omdat het meervoud pisma is."
+          ],
+          "explain_nl": "Dezelfde onvaste a als in sestara en karata — ook in onzijdige woorden.",
+          "targets": ["g.mod.genpl", "v.01.pismo"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gpl.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "U Splitu je bilo puno ___ (čovjek) na rivi.",
+          "answer": "ljudi",
+          "accepts": ["ljudi"],
+          "explain_nl": "Puno werkt als een getal boven de vijf, en het meervoud van čovjek is ljudi.",
+          "targets": ["g.mod.genpl", "v.03.covjek"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gpl.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen over een reis: één met een getal boven de vijf, één met puno.",
+          "model_answer": "Posjetili smo šest gradova. U Zagrebu je bilo puno ljudi.",
+          "rubric_nl": [
+            "Na het getal staat de genitief meervoud.",
+            "Na puno staat ook de genitief meervoud.",
+            "De uitgang past bij de groep: -a, -i of -ova."
+          ],
+          "explain_nl": "Wie deze vorm eenmaal heeft, hoeft er bij elke hoeveelheid niet meer over na te denken — en dat is elke tweede zin.",
+          "targets": ["g.mod.genpl"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum GEN-PL, gebouwd op les 14 en 17"
+}

@@ -1,12 +1,12 @@
 {
   "code": "GEN-NUM",
-  "rank": 15,
+  "rank": 16,
   "band": "Verfijnen",
   "title_hr": "Dva sata, pet sati",
   "title_nl": "Tellen: wat er ná het getal gebeurt",
   "cefr": "A2",
   "blurb_nl": "In het Nederlands verandert er na een getal niets: één boek, twee boeken, vijf boeken. In het Kroatisch verandert het woord drie keer, en welke vorm je nodig hebt hangt af van het laatste cijfer. Dit heb je nodig bij elke prijs, elke tijd en elke bestelling.",
-  "prerequisites": ["GEN-POSS", "NUM-CARD"],
+  "prerequisites": ["GEN-PL", "NUM-CARD"],
   "can_do_nl": [
     "Ik weet welke vorm er na 1, na 2/3/4 en na 5 en hoger hoort.",
     "Ik kan de klok zeggen: jedan sat, dva sata, pet sati.",
