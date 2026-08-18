@@ -1,0 +1,512 @@
+{
+  "code": "ADJ-COLOURS",
+  "rank": 7,
+  "band": "Beginnen",
+  "title_hr": "Crno vino, plava kosa",
+  "title_nl": "Kleuren",
+  "cefr": "A1/A2",
+  "blurb_nl": "Elf kleuren, en het handige is dat ze zich precies gedragen als elk ander bijvoeglijk naamwoord — dus je oefent hier twee dingen tegelijk. Let op twee valstrikken: rode wijn heet in het Kroatisch zwart, en blond haar heet blauw.",
+  "prerequisites": ["ADJ-AGREE"],
+  "can_do_nl": [
+    "Ik ken de elf kleuren die je dagelijks nodig hebt.",
+    "Ik kan een kleur laten meebuigen: crven auto, crvena kuća, crveno vino.",
+    "Ik kan vragen welke kleur iets heeft: Koje je boje?",
+    "Ik weet dat crno vino rode wijn is en plava kosa blond haar.",
+    "Ik weet dat smeđ een e krijgt waar de andere kleuren een o krijgen."
+  ],
+  "grammar": {
+    "id": "g.mod.colours",
+    "code": "ADJ-COLOURS",
+    "title_nl": "Kleuren als bijvoeglijk naamwoord",
+    "cefr": "A1/A2",
+    "explanation_nl": "Kleuren zijn gewone bijvoeglijke naamwoorden: ze passen zich aan aan het woord waar ze bij horen, in geslacht, getal en naamval. *Crven*, *crvena*, *crveno*.",
+    "contrast_nl": "Het Nederlands heeft één extra -e en verder niets: rood, rode. Het Kroatisch buigt volledig mee. Dat is meer werk, maar het maakt kleuren wel de handigste woorden om congruentie mee te oefenen — je hebt ze in elke beschrijving nodig.",
+    "paradigm": {
+      "caption_nl": "De elf kleuren",
+      "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+      "rows": [
+        { "label": "rood", "cells": ["crven", "crvena", "crveno"] },
+        { "label": "blauw", "cells": ["plav", "plava", "plavo"] },
+        { "label": "geel", "cells": ["žut", "žuta", "žuto"] },
+        { "label": "groen", "cells": ["zelen", "zelena", "zeleno"] },
+        { "label": "zwart", "cells": ["crn", "crna", "crno"] },
+        { "label": "wit", "cells": ["bijel", "bijela", "bijelo"] },
+        { "label": "grijs", "cells": ["siv", "siva", "sivo"] },
+        { "label": "bruin", "cells": ["smeđ", "smeđa", "smeđe"] },
+        { "label": "oranje", "cells": ["narančast", "narančasta", "narančasto"] },
+        { "label": "paars", "cells": ["ljubičast", "ljubičasta", "ljubičasto"] },
+        { "label": "roze", "cells": ["ružičast", "ružičasta", "ružičasto"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Crno vino is rode wijn. Letterlijk «zwarte wijn» — het Kroatisch kijkt naar de druif, niet naar het glas.",
+      "Plava kosa is blond haar. Plav dekt blauw én blond; de context beslist.",
+      "Smeđ eindigt op een zachte medeklinker en krijgt daarom -e in het onzijdig: smeđe, niet smeđo.",
+      "Roza hoor je overal, maar het verandert nooit van vorm. De vorm die wél meebuigt is ružičast.",
+      "Naar de kleur vraag je met een genitief: Koje je boje? — letterlijk «van welke kleur is het?»"
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes keer dezelfde kleur, en twee uitdrukkingen die niet betekenen wat er staat.",
+      "exercises": [
+        {
+          "id": "m.col.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er met de kleur, en wat valt op bij de laatste twee?",
+          "given": "crven auto\ncrvena kuća\ncrveno vino\n\ncrno vino\nplava kosa",
+          "body_nl": "een rode auto\neen rood huis\nrode wijn\n\nrode wijn\nblond haar",
+          "targets": []
+        },
+        {
+          "id": "m.col.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "De eerste drie zijn eenvoudig: *crven* past zich aan aan het woord erachter, precies zoals *dobar* dat doet. Auto is mannelijk, kuća vrouwelijk, vino onzijdig.\n\nDaarna wordt het raar. Er staat twee keer «rode wijn», maar de tweede keer met **crno** — zwart.\n\nDat is geen fout. Het Kroatisch noemt rode wijn **crno vino**, letterlijk zwarte wijn, en witte wijn **bijelo vino**. De taal kijkt naar de kleur van de druif in de fles, niet naar wat jij in je glas ziet. Vraag je in Kroatië om «crveno vino», dan word je begrepen én meteen herkend als buitenlander.\n\nEn de laatste: **plava kosa** is blond haar. *Plav* betekent blauw én blond. Blauw haar zou je moeten omschrijven.\n\nTwee woorden dus die je niet uit het Nederlands kunt afleiden — en die je allebei in je eerste week nodig hebt.",
+          "targets": ["g.mod.colours", "v.04.crven", "v.04.crn", "v.04.plav", "v.01.vino"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst het rijtje kleuren, dan de twee dingen die anders werken dan je verwacht.",
+      "exercises": [
+        {
+          "id": "m.col.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De elf kleuren",
+          "body_nl": "**crven** — rood\n**plav** — blauw (en blond)\n**žut** — geel\n**zelen** — groen\n**crn** — zwart\n**bijel** — wit\n**siv** — grijs\n**smeđ** — bruin\n**narančast** — oranje\n**ljubičast** — paars\n**ružičast** — roze\n\nDe laatste drie zijn afgeleid van iets: *naranča* is een sinaasappel, *ljubica* een viooltje, *ruža* een roos. Het achtervoegsel *-ast* betekent «-achtig», en dat verklaart meteen waarom ze zo lang zijn.\n\nZe buigen allemaal als een gewoon bijvoeglijk naamwoord:\n*crven auto* — *crvena kuća* — *crveno vino*\n*crveni auti* — *crvene kuće* — *crvena vina*\n\nEn in de naamvallen gaan ze gewoon mee:\n*Kupujem* **crvenu** *majicu.* — accusatief\n*Živim u* **žutoj** *kući.* — locatief\n\nEén kleur wijkt af. **Smeđ** eindigt op *đ*, een zachte medeklinker, en krijgt daarom **-e** waar de andere **-o** krijgen: *smeđe oko*, niet «smeđo». Dezelfde wisseling die je bij *-om* en *-em* al zag.",
+          "table": {
+            "caption_nl": "De elf kleuren",
+            "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+            "rows": [
+              { "label": "rood", "cells": ["crven", "crvena", "crveno"] },
+              { "label": "blauw / blond", "cells": ["plav", "plava", "plavo"] },
+              { "label": "geel", "cells": ["žut", "žuta", "žuto"] },
+              { "label": "groen", "cells": ["zelen", "zelena", "zeleno"] },
+              { "label": "zwart", "cells": ["crn", "crna", "crno"] },
+              { "label": "wit", "cells": ["bijel", "bijela", "bijelo"] },
+              { "label": "grijs", "cells": ["siv", "siva", "sivo"] },
+              { "label": "bruin", "cells": ["smeđ", "smeđa", "smeđe"] },
+              { "label": "oranje", "cells": ["narančast", "narančasta", "narančasto"] },
+              { "label": "paars", "cells": ["ljubičast", "ljubičasta", "ljubičasto"] },
+              { "label": "roze", "cells": ["ružičast", "ružičasta", "ružičasto"] }
+            ]
+          },
+          "targets": ["g.mod.colours", "v.04.boja", "v.04.crven", "v.04.zut", "v.04.zelen", "v.04.siv", "v.04.smed"]
+        },
+        {
+          "id": "m.col.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Naar de kleur vragen, en de vaste uitdrukkingen",
+          "body_nl": "**Vragen doe je zo:**\n*Koje je boje tvoj auto?* — Welke kleur heeft jouw auto?\n*Koje je boje?* — Welke kleur is het?\n\nLetterlijk staat er «van welke kleur is het» — een genitief. Je kunt het als vaste zin leren; de bouw eronder komt later vanzelf.\n\nAntwoorden mag kort: *Crven.* Of voluit: *Moj auto je crven.*\n\n**En dan de uitdrukkingen waar je niet omheen kunt.** Deze leer je als geheel, niet als kleur plus woord:\n\n*crno vino* — rode wijn\n*bijelo vino* — witte wijn\n*bijela kava* — koffie met melk\n*crna kava* — zwarte koffie\n*plava kosa* — blond haar\n*zelena salata* — kropsla\n\nEn tot slot een woord dat je overal hoort maar dat níét meebuigt: **roza**. *Roza majica*, *roza auto*, *roza vino* — altijd hetzelfde. Het is een leenwoord en gedraagt zich er ook naar. Wil je een vorm die wél meebuigt, dan pak je *ružičast*.",
+          "table": {
+            "caption_nl": "Uitdrukkingen die je als geheel leert",
+            "columns": ["Kroatisch", "Nederlands", "letterlijk"],
+            "rows": [
+              { "label": "1", "cells": ["crno vino", "rode wijn", "zwarte wijn"] },
+              { "label": "2", "cells": ["bijelo vino", "witte wijn", "witte wijn"] },
+              { "label": "3", "cells": ["bijela kava", "koffie met melk", "witte koffie"] },
+              { "label": "4", "cells": ["crna kava", "zwarte koffie", "zwarte koffie"] },
+              { "label": "5", "cells": ["plava kosa", "blond haar", "blauw haar"] },
+              { "label": "6", "cells": ["zelena salata", "kropsla", "groene salade"] }
+            ]
+          },
+          "targets": ["g.mod.colours", "v.04.boja", "v.08.bijela_kava", "v.06.salata", "v.pr4.kosa"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wat wordt hier bedoeld?",
+      "why_nl": "Nog niets invullen. Bij kleuren is de valstrik de betekenis, niet de vorm.",
+      "exercises": [
+        {
+          "id": "m.col.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat bestel je hiermee?",
+          "given": "Jednu čašu crnog vina, molim.",
+          "nudge": "Het Kroatisch kijkt bij wijn naar de druif, niet naar het glas.",
+          "answer": "Een glas rode wijn.",
+          "distractors": ["Een glas witte wijn.", "Een glas donker bier.", "Een kop zwarte koffie."],
+          "explain_nl": "Crno vino is rode wijn. Wie «crveno vino» bestelt wordt begrepen, maar zegt iets wat een Kroaat nooit zou zeggen.",
+          "targets": ["g.mod.colours", "v.01.vino"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe ziet deze persoon eruit?",
+          "given": "Ona ima plavu kosu.",
+          "nudge": "Plav dekt twee dingen. Welk van de twee past bij haar?",
+          "answer": "Ze heeft blond haar.",
+          "distractors": ["Ze heeft blauw geverfd haar.", "Ze heeft grijs haar.", "Ze draagt een blauwe muts."],
+          "explain_nl": "Plav betekent blauw én blond. Bij kosa is het altijd blond — voor echt blauw haar zou een Kroaat het omschrijven.",
+          "targets": ["g.mod.colours", "v.04.plav", "v.pr4.kosa"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er «smeđe» en niet «smeđo»?",
+          "given": "Ima smeđe oko.",
+          "nudge": "Kijk naar de laatste medeklinker van smeđ. Is die hard of zacht?",
+          "answer": "Omdat smeđ op đ eindigt, een zachte medeklinker — dan wordt de o een e.",
+          "distractors": [
+            "Omdat oko onzijdig is.",
+            "Omdat smeđ een leenwoord is.",
+            "Omdat het meervoud is."
+          ],
+          "explain_nl": "Dezelfde wisseling die je bij de instrumentalis zag: na č, ć, đ, j, lj, nj, š, ž en c wordt een o een e.",
+          "targets": ["g.mod.colours", "v.04.smed"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gevraagd?",
+          "given": "Koje je boje tvoja majica?",
+          "nudge": "Boje is een genitief. Letterlijk: «van welke …?»",
+          "answer": "Welke kleur heeft jouw T-shirt?",
+          "distractors": [
+            "Welke maat heeft jouw T-shirt?",
+            "Van wie is dat T-shirt?",
+            "Waar heb je dat T-shirt gekocht?"
+          ],
+          "explain_nl": "Letterlijk «van welke kleur is jouw T-shirt». Het Kroatisch vraagt naar een eigenschap met een genitief; leer de zin als geheel.",
+          "targets": ["g.mod.colours", "v.04.boja", "v.09.majica"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke twee zinnen betekenen hetzelfde?",
+          "given": "A: Imam roza majicu.\nB: Imam ružičastu majicu.\nC: Imam ružičast majicu.",
+          "nudge": "Eén van de drie buigt niet mee omdat hij dat nooit doet; één buigt verkeerd mee.",
+          "answer": "A en B — roza verandert nooit, ružičast buigt mee.",
+          "distractors": ["A en C.", "B en C.", "Alle drie."],
+          "explain_nl": "C is fout: ružičast is een gewoon bijvoeglijk naamwoord en moet dus ružičastu worden bij majicu. Roza blijft roza, wat er ook achter komt.",
+          "targets": ["g.mod.colours", "v.04.ruzicast", "v.09.majica"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat krijg je als je dit bestelt?",
+          "given": "Jednu bijelu kavu, molim.",
+          "nudge": "Denk aan wat er in het Nederlands met melk gebeurt.",
+          "answer": "Koffie met melk.",
+          "distractors": ["Een kop witte chocolademelk.", "Koffie zonder suiker.", "Een glas melk."],
+          "explain_nl": "Bijela kava is de vaste uitdrukking voor koffie met melk. Crna kava is dan gewoon zwarte koffie.",
+          "targets": ["g.mod.colours", "v.08.bijela_kava"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: welk geslacht heeft het woord, en welke vorm van de kleur hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.col.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: rood.",
+          "given": "Ovo je ___ (crven) kuća.",
+          "answer": "crvena",
+          "accepts": ["crvena"],
+          "explain_nl": "Kuća is vrouwelijk, dus crvena.",
+          "targets": ["g.mod.colours", "v.04.crven", "v.01.kuca"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.col.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: geel.",
+          "given": "Imam ___ (žut) auto.",
+          "answer": "žuti",
+          "accepts": ["žuti", "žut"],
+          "explain_nl": "Auto is mannelijk en niet levend, dus de accusatief is gelijk aan de nominatief. Zowel žut als žuti kan; met -i wijs je een bepaalde auto aan.",
+          "targets": ["g.mod.colours", "v.04.zut", "v.00.auto"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.col.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: wit.",
+          "given": "Pijem ___ (bijel) vino.",
+          "answer": "bijelo",
+          "accepts": ["bijelo"],
+          "explain_nl": "Vino is onzijdig, dus bijelo — en dat is meteen de gewone manier om witte wijn te zeggen.",
+          "targets": ["g.mod.colours", "v.04.bijel", "v.01.vino"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.col.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: bruin. Let op de laatste letter.",
+          "given": "To je ___ (smeđ) pivo.",
+          "answer": "smeđe",
+          "accepts": ["smeđe"],
+          "hint": "Đ is een zachte medeklinker.",
+          "explain_nl": "Na een zachte medeklinker wordt de onzijdige -o een -e: smeđe.",
+          "targets": ["g.mod.colours", "v.04.smed", "v.06.pivo"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zwart. Let op de naamval.",
+          "given": "Kupujem ___ (crn) majicu.",
+          "answer": "crnu",
+          "accepts": ["crnu"],
+          "hint": "Majicu staat al in de accusatief.",
+          "explain_nl": "Het bijvoeglijk naamwoord buigt mee met het lijdend voorwerp: crnu majicu.",
+          "targets": ["g.mod.colours", "v.04.crn", "v.09.majica"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: groen, meervoud.",
+          "given": "Volim ___ (zelen) jabuke.",
+          "answer": "zelene",
+          "accepts": ["zelene"],
+          "explain_nl": "Jabuke is vrouwelijk meervoud in de accusatief, en die vorm is gelijk aan de nominatief meervoud: zelene.",
+          "targets": ["g.mod.colours", "v.04.zelen", "v.08.jabuka"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.036",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Denk aan de druif.",
+          "given": "Een glas rode wijn, alstublieft.",
+          "answer": "Jednu čašu crnog vina, molim.",
+          "accepts": ["Jednu čašu crnog vina, molim.", "Jednu čašu crnog vina, molim", "Čašu crnog vina, molim.", "Čašu crnog vina, molim"],
+          "hint": "Rode wijn heet in het Kroatisch niet rood.",
+          "explain_nl": "Crno vino, en na čaša volgt de genitief: crnog vina.",
+          "targets": ["g.mod.colours", "v.01.vino"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.037",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vraag naar de kleur van een T-shirt.",
+          "given": "___ je boje tvoja majica?",
+          "answer": "Koje",
+          "accepts": ["Koje", "koje"],
+          "explain_nl": "«Koje je boje …?» is de vaste vraag: letterlijk «van welke kleur is …?»",
+          "targets": ["g.mod.colours", "v.04.boja"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je crvena vino.",
+          "answer": "Ovo je crno vino.",
+          "accepts": ["Ovo je crno vino.", "Ovo je crno vino"],
+          "hint": "Twee dingen kloppen niet: het geslacht én de kleur.",
+          "explain_nl": "Vino is onzijdig, dus niet crvena. En rode wijn heet crno vino.",
+          "targets": ["g.mod.colours", "v.01.vino"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ona ima ružičast majicu.",
+          "answer": "Ona ima ružičastu majicu.",
+          "accepts": ["Ona ima ružičastu majicu.", "Ona ima ružičastu majicu"],
+          "explain_nl": "Ružičast buigt gewoon mee: bij majicu in de accusatief wordt het ružičastu. Alleen roza blijft onveranderd.",
+          "targets": ["g.mod.colours", "v.04.ruzicast", "v.09.majica"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu in echte zinnen, waar het woord al een naamval heeft en de kleur er dus achteraan moet.",
+      "exercises": [
+        {
+          "id": "m.col.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Živim u ___ kući.",
+          "answer": "žutoj",
+          "distractors": ["žuta", "žutu", "žutom"],
+          "explain_nl": "Kući staat in de locatief, en de vrouwelijke locatiefvorm is žutoj.",
+          "targets": ["g.mod.colours", "g.mod.loc_vs_acc", "v.04.zut", "v.01.kuca"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide kleuren in.",
+          "given": "Imam ___ (crn) auto i ___ (bijel) kuću.",
+          "answer": "crni bijelu",
+          "accepts": ["crni bijelu", "crn bijelu"],
+          "hint": "Het eerste woord is mannelijk en niet levend, het tweede vrouwelijk in de accusatief.",
+          "explain_nl": "Bij auto verandert er niets in de accusatief; bij kuću wel, dus bijelu.",
+          "targets": ["g.mod.colours", "v.04.crn", "v.04.bijel", "v.00.auto", "v.01.kuca"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Mijn zus heeft blond haar.",
+          "answer": "Moja sestra ima plavu kosu.",
+          "accepts": ["Moja sestra ima plavu kosu.", "Moja sestra ima plavu kosu"],
+          "explain_nl": "Blond is plav, en kosa staat in de accusatief: plavu kosu.",
+          "targets": ["g.mod.colours", "v.04.plav", "v.pr4.kosa", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke bestelling levert koffie met melk op?",
+          "answer": "Jednu bijelu kavu, molim.",
+          "distractors": [
+            "Jednu crnu kavu, molim.",
+            "Jednu bijelu kafu, molim.",
+            "Jedno bijelo mlijeko, molim."
+          ],
+          "explain_nl": "Bijela kava is de vaste uitdrukking. Kafa is de Servische vorm; in Kroatië is het kava.",
+          "targets": ["g.mod.colours", "v.08.bijela_kava"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.col.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Pijem crveno vino i jedem zelen salatu.",
+          "answer": "Pijem crno vino i jedem zelenu salatu.",
+          "accepts": ["Pijem crno vino i jedem zelenu salatu.", "Pijem crno vino i jedem zelenu salatu"],
+          "hint": "Eén kleur heet anders dan je denkt, en één buigt niet mee.",
+          "explain_nl": "Rode wijn is crno vino, en salatu staat in de accusatief dus zelenu.",
+          "targets": ["g.mod.colours", "v.01.vino", "v.06.salata"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elke kleur: bij welk woord hoort hij, en waarom heeft hij die uitgang?",
+      "text_hr": "Moja baka ima staru kuću na brdu. Vrata su zelena, prozori bijeli, a krov crven. U dvorištu raste smokva i stoji plavi bicikl koji nitko ne vozi. Baka uvijek nosi sivu pregaču i pije crnu kavu bez šećera. Djed je pio crno vino iz male čaše. Na zidu visi žuta slika mora. Nije lijepa, ali je njegova. Ljeti je dvorište zeleno, zimi je smeđe, i baka kaže da je oboje u redu.",
+      "translation_nl": "Mijn oma heeft een oud huis op een heuvel. De deur is groen, de ramen zijn wit, en het dak is rood. Op de binnenplaats groeit een vijgenboom en staat een blauwe fiets die niemand gebruikt. Oma draagt altijd een grijs schort en drinkt zwarte koffie zonder suiker. Opa dronk rode wijn uit een klein glas. Aan de muur hangt een geel schilderij van de zee. Het is niet mooi, maar het is van hem. 's Zomers is de binnenplaats groen, 's winters bruin, en oma zegt dat allebei goed is.",
+      "exercises": [
+        {
+          "id": "m.col.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke kleur heeft het dak?",
+          "answer": "Rood.",
+          "distractors": ["Groen.", "Wit.", "Blauw."],
+          "explain_nl": "«Vrata su zelena, prozori bijeli, a krov crven.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.col.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «zelena», «bijeli» en «crven». Waarom drie verschillende uitgangen?",
+          "given": "Vrata su zelena, prozori bijeli, a krov crven.",
+          "nudge": "Kijk naar de drie woorden waar ze bij horen, niet naar de kleuren zelf.",
+          "answer": "Omdat vrata onzijdig meervoud is, prozori mannelijk meervoud en krov mannelijk enkelvoud.",
+          "distractors": [
+            "Omdat het drie verschillende kleuren zijn.",
+            "Omdat de zin een opsomming is.",
+            "Omdat er a in het midden staat."
+          ],
+          "explain_nl": "Drie woorden, drie combinaties van geslacht en getal — en de kleur volgt ze alle drie. Dit is congruentie in één zin samengebald.",
+          "targets": ["g.mod.colours", "g.mod.adj_agree"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat dronk opa?",
+          "given": "Djed je pio crno vino iz male čaše.",
+          "nudge": "Kijk uit met de letterlijke kleur.",
+          "answer": "Rode wijn.",
+          "distractors": ["Zwarte koffie.", "Donker bier.", "Witte wijn."],
+          "explain_nl": "Crno vino is rode wijn. De zwarte koffie in deze tekst is van de oma, twee zinnen eerder.",
+          "targets": ["g.mod.colours", "v.01.vino"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.col.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Ljeti je dvorište ___ (zelen), zimi je ___ (smeđ).",
+          "answer": "zeleno smeđe",
+          "accepts": ["zeleno smeđe"],
+          "hint": "Dvorište is onzijdig — en smeđ eindigt op een zachte medeklinker.",
+          "explain_nl": "Allebei onzijdig, maar smeđ krijgt -e in plaats van -o vanwege de đ.",
+          "targets": ["g.mod.colours", "v.04.zelen", "v.04.smed"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.col.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf drie dingen om je heen met hun kleur — één mannelijk, één vrouwelijk en één onzijdig woord.",
+          "model_answer": "Moj auto je siv. Moja majica je crvena. Moje pivo je smeđe.",
+          "rubric_nl": [
+            "Bij een mannelijk woord staat de kale vorm van de kleur.",
+            "Bij een vrouwelijk woord staat de vorm op -a.",
+            "Bij een onzijdig woord staat de vorm op -o, of op -e na een zachte medeklinker."
+          ],
+          "checks": [
+            { "kind": "min_zinnen", "n": 3, "label": "Er staan drie zinnen" },
+            { "kind": "bevat_woord", "woorden": ["crven", "crvena", "crveno", "crveni", "plav", "plava", "plavo", "plavi", "žut", "žuta", "žuto", "žuti", "zelen", "zelena", "zeleno", "zeleni", "crn", "crna", "crno", "crni", "bijel", "bijela", "bijelo", "bijeli", "siv", "siva", "sivo", "sivi", "smeđ", "smeđa", "smeđe", "smeđi", "narančast", "narančasta", "narančasto", "ljubičast", "ljubičasta", "ljubičasto", "ružičast", "ružičasta", "ružičasto", "roza"], "label": "Er staat minstens één kleur in" }
+          ],
+          "explain_nl": "Kleuren zijn de snelste manier om congruentie te oefenen: je hebt ze overal voor nodig en je ziet meteen of de uitgang klopt.",
+          "targets": ["g.mod.colours"],
+          "difficulty": 3
+        }
+      ]
+    }
+  ],
+  "source": "curriculum ADJ-COLOURS, gebouwd op les 4"
+}

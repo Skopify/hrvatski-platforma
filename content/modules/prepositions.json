@@ -1,0 +1,513 @@
+{
+  "code": "PREP-CASES",
+  "rank": 28,
+  "band": "Verfijnen",
+  "title_hr": "Od, do, kroz, s — koji padež?",
+  "title_nl": "Voorzetsels en hun naamval",
+  "cefr": "A2/B1",
+  "blurb_nl": "Het overzicht dat je in geen enkel lesboek in één stuk krijgt: welk voorzetsel vraagt welke naamval. De belangrijkste les is dat je een voorzetsel nooit los leert, maar altijd met zijn naamval erbij — als één woord.",
+  "prerequisites": ["GEN-POSS", "INS-MEANS", "LOC-VS-ACC"],
+  "can_do_nl": [
+    "Ik weet dat verreweg de meeste voorzetsels de genitief vragen.",
+    "Ik ken de vaste voorzetsels per naamval: iz, kroz, prema, o, s.",
+    "Ik weet welke zeven voorzetsels twee naamvallen kunnen krijgen.",
+    "Ik kan bij die zeven kiezen: beweging of plaats.",
+    "Ik weet dat kod de uitzondering is — beweging, en tóch de genitief."
+  ],
+  "grammar": {
+    "id": "g.mod.prepositions",
+    "code": "PREP-CASES",
+    "title_nl": "Welk voorzetsel vraagt welke naamval",
+    "cefr": "A2/B1",
+    "explanation_nl": "Elk voorzetsel regeert een naamval. De meeste hebben er precies één en die verandert nooit; een handvol heeft er **twee**, en dan kiest de betekenis: **beweging** ergens heen tegenover **plaats** waar iets is.",
+    "contrast_nl": "In het Nederlands is een voorzetsel een woordje dat je erbij zet. In het Kroatisch verandert het het woord dáárachter, en welke verandering dat is hangt van het voorzetsel af. Daarom leer je ze niet als vertaling maar als paar: niet «iz = uit», maar «iz + genitief».",
+    "paradigm": {
+      "caption_nl": "De vaste voorzetsels per naamval",
+      "columns": ["voorzetsels", "voorbeeld"],
+      "rows": [
+        { "label": "genitief", "cells": ["od, do, iz, kod, bez, prije, poslije, oko, blizu, iznad, ispod, ispred, iza, preko", "iz Zagreba"] },
+        { "label": "accusatief", "cells": ["kroz, uz, niz, za (bestemd voor)", "kroz prozor"] },
+        { "label": "datief", "cells": ["prema, k / ka", "prema centru"] },
+        { "label": "locatief", "cells": ["o, pri", "o tebi"] },
+        { "label": "instrumentalis", "cells": ["s / sa", "s bratom"] },
+        { "label": "twee naamvallen", "cells": ["u, na, po, pod, nad, pred, među", "u grad / u gradu"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De genitief is verreweg de grootste groep. Moet je gokken, gok genitief.",
+      "Kod betekent «bij» en «naar» maar vraagt altijd de genitief — ook bij beweging: idem kod bake.",
+      "Bij u, na, po, pod, nad, pred en među beslist de betekenis: beweging → accusatief, plaats → locatief of instrumentalis.",
+      "Pod, nad, pred en među krijgen bij plaats de instrumentalis, niet de locatief: pod stolom.",
+      "Za doet twee dingen: met de accusatief is het «voor» (za tebe), met de instrumentalis «achter, aan» (za stolom).",
+      "S wordt sa vóór s, š, z, ž en vóór mnom — puur om het uitspreekbaar te houden."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes keer hetzelfde woord — Split — met telkens een ander voorzetsel ervoor.",
+      "exercises": [
+        {
+          "id": "m.prep.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat doet het voorzetsel met het woord erachter?",
+          "given": "iz Splita\ndo Splita\nkod Splita\n\nkroz Split\nu Split\n\nu Splitu\nprema Splitu",
+          "body_nl": "uit Split\ntot Split\nbij Split\n\ndoor Split\nnaar Split\n\nin Split\nrichting Split",
+          "targets": []
+        },
+        {
+          "id": "m.prep.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Eén stad, vier verschillende vormen:\n\n*Splita* — na *iz*, *do* en *kod*\n*Split* — na *kroz* en na *u* met beweging\n*Splitu* — na *u* zonder beweging, en na *prema*\n\nHet voorzetsel bepaalt de vorm. Niet de betekenis van de zin, niet het werkwoord — het voorzetsel.\n\nDat betekent iets voor hoe je ze leert. Een voorzetsel is geen woordje dat je vertaalt, het is een **paar**: niet «iz = uit», maar «**iz + genitief**». Wie het als paar in zijn hoofd zet, hoeft nooit meer te denken; wie het als vertaling leert, twijfelt elke keer opnieuw.\n\nEn kijk naar *u*: die staat er twee keer, met twee verschillende vormen erachter. Dat is geen uitzondering maar een tweede regel, en die komt zo.",
+          "targets": ["g.mod.prepositions", "v.05.grad"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de voorzetsels met één vaste naamval, dan de zeven die kunnen kiezen.",
+      "exercises": [
+        {
+          "id": "m.prep.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Eén voorzetsel, één naamval",
+          "body_nl": "**De genitief is de grootste groep — met afstand.**\n*od* (van), *do* (tot), *iz* (uit), *kod* (bij), *bez* (zonder), *prije* (vóór), *poslije* (na), *oko* (rond), *blizu* (dichtbij), *iznad* (boven), *ispod* (onder), *ispred* (vóór), *iza* (achter), *preko* (over)\n\n*od Zagreba do Splita* — *iz Nizozemske* — *bez šećera* — *poslije ručka* — *ispod stola*\n\nMoet je ooit gokken, gok genitief. Je hebt statistisch gelijk.\n\n**Altijd accusatief:**\n*kroz* (door), *uz* (langs, omhoog), *niz* (omlaag), *za* in de betekenis «bestemd voor»\n*kroz prozor* — *uz more* — *za tebe*\n\n**Altijd datief:**\n*prema* (richting, tegenover), en het wat formelere *k* / *ka*\n*prema centru* — *idem k liječniku*\n\n**Altijd locatief:**\n*o* (over, betreffende), *pri* (bij, tijdens)\n*Govorimo o tebi.* — *pri ruci*\n\n**Altijd instrumentalis:**\n*s* / *sa* (met)\n*s bratom* — *sa mnom*\n\nEén ding om te onthouden, en het is een klassieke val: **kod betekent ook «naar» maar blijft de genitief vragen.** *Idem kod bake* is «ik ga naar oma». Beweging, en tóch geen accusatief.",
+          "table": {
+            "caption_nl": "De vaste voorzetsels per naamval",
+            "columns": ["voorzetsels", "voorbeeld"],
+            "rows": [
+              { "label": "genitief", "cells": ["od, do, iz, kod, bez, prije, poslije, oko, blizu, iznad, ispod, ispred, iza, preko", "iz Zagreba"] },
+              { "label": "accusatief", "cells": ["kroz, uz, niz, za (bestemd voor)", "kroz prozor"] },
+              { "label": "datief", "cells": ["prema, k / ka", "prema centru"] },
+              { "label": "locatief", "cells": ["o, pri", "o tebi"] },
+              { "label": "instrumentalis", "cells": ["s / sa", "s bratom"] }
+            ]
+          },
+          "targets": ["g.mod.prepositions", "g.16.genitiv_prijedlozi", "g.10.prijedlozi_lokativ", "g.12.prijedlozi_dativ"]
+        },
+        {
+          "id": "m.prep.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De zeven die kunnen kiezen",
+          "body_nl": "Zeven voorzetsels krijgen **twee** naamvallen, en de keuze zegt iets:\n\n**u, na, po, pod, nad, pred, među**\n\nDe vraag is telkens dezelfde: gaat er iets **heen**, of is er iets **ergens**?\n\n**Beweging → accusatief:**\n*Idem u* **grad**. — Ik ga naar de stad.\n*Stavljam knjigu na* **stol**. — Ik leg het boek op tafel.\n*Mačka ide pod* **stol**. — De kat gaat onder de tafel.\n\n**Plaats → locatief of instrumentalis:**\n*Ja sam u* **gradu**. — Ik ben in de stad. *(locatief)*\n*Knjiga je na* **stolu**. — Het boek ligt op tafel. *(locatief)*\n*Mačka je pod* **stolom**. — De kat ligt onder de tafel. *(instrumentalis)*\n\nLet op dat verschil: *u* en *na* en *po* nemen bij plaats de **locatief**, maar *pod*, *nad*, *pred* en *među* nemen de **instrumentalis**. Dat is het enige extra dat je hier moet onthouden.\n\nEn *za* hoort er half bij, want het doet twee verschillende dingen:\n*za tebe* — voor jou *(accusatief)*\n*Sjedimo za stolom.* — We zitten aan tafel. *(instrumentalis)*",
+          "table": {
+            "caption_nl": "Beweging tegenover plaats",
+            "columns": ["beweging", "plaats"],
+            "rows": [
+              { "label": "u", "cells": ["u grad — naar de stad", "u gradu — in de stad"] },
+              { "label": "na", "cells": ["na stol — op tafel (leggen)", "na stolu — op tafel (liggen)"] },
+              { "label": "pod", "cells": ["pod stol", "pod stolom"] },
+              { "label": "nad", "cells": ["nad grad", "nad gradom"] },
+              { "label": "pred", "cells": ["pred kuću", "pred kućom"] },
+              { "label": "među", "cells": ["među ljude", "među ljudima"] },
+              { "label": "po", "cells": ["idem po kruh — brood halen", "po gradu — door de stad heen"] }
+            ]
+          },
+          "targets": ["g.mod.prepositions", "g.mod.loc_vs_acc", "g.mod.instrumental"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Heen of ergens?",
+      "why_nl": "Nog niets invullen. Hier lees je de vorm en zeg je wat er bedoeld wordt — dat is precies waar de twee naamvallen voor dienen.",
+      "exercises": [
+        {
+          "id": "m.prep.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er hier?",
+          "given": "Mačka je pod stolom.",
+          "nudge": "Stolom is de instrumentalis. Wat betekent die keuze bij pod?",
+          "answer": "De kat ligt onder de tafel.",
+          "distractors": [
+            "De kat kruipt onder de tafel.",
+            "De kat komt onder de tafel vandaan.",
+            "De kat zit op de tafel."
+          ],
+          "explain_nl": "Bij pod betekent de instrumentalis «daar zijn». Bewoog de kat ernaartoe, dan had er «pod stol» gestaan, met de accusatief.",
+          "targets": ["g.mod.prepositions", "v.03.stol"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er «bake» en niet «baki»?",
+          "given": "Idem kod bake.",
+          "nudge": "Er is beweging, en toch is dit geen accusatief. Welk voorzetsel staat er?",
+          "answer": "Omdat kod altijd de genitief vraagt, ook als je ergens heen gaat.",
+          "distractors": [
+            "Omdat baka vrouwelijk is.",
+            "Omdat je naar een persoon gaat.",
+            "Dat is een fout; het moet baki zijn."
+          ],
+          "explain_nl": "Dit is dé val van deze module. «Beweging is accusatief» geldt alleen bij de zeven voorzetsels met twee naamvallen. Kod heeft er maar één, en dat is de genitief.",
+          "targets": ["g.mod.prepositions", "g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke twee zinnen betekenen iets anders?",
+          "given": "A: Idem po kruh.\nB: Šetam po gradu.",
+          "nudge": "Po staat er twee keer, met een verschillende naamval erachter.",
+          "answer": "A is «brood halen», B is «door de stad wandelen».",
+          "distractors": [
+            "A is «over het brood praten», B is «naar de stad gaan».",
+            "Ze betekenen hetzelfde; po is één woord.",
+            "A is fout Kroatisch."
+          ],
+          "explain_nl": "Po met de accusatief is «halen»; po met de locatief is «verspreid over». Twee betekenissen die alleen aan de uitgang te zien zijn.",
+          "targets": ["g.mod.prepositions", "v.07.kruh", "v.05.grad"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Sjedimo za stolom.",
+          "nudge": "Stolom is de instrumentalis, niet de accusatief.",
+          "answer": "We zitten aan tafel.",
+          "distractors": [
+            "We zitten voor de tafel.",
+            "Dit is voor de tafel bedoeld.",
+            "We kopen een tafel."
+          ],
+          "explain_nl": "Za met de accusatief is «voor, bestemd voor»: za tebe. Met de instrumentalis is het «achter, aan»: za stolom.",
+          "targets": ["g.mod.prepositions", "v.03.stol"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk voorzetsel hoort bij deze vorm?",
+          "given": "___ tebi",
+          "nudge": "Tebi is de datief- en locatiefvorm van ti.",
+          "answer": "o — «over jou»",
+          "distractors": ["bez", "kroz", "s"],
+          "explain_nl": "Bez vraagt de genitief (bez tebe), kroz de accusatief (kroz tebe), s de instrumentalis (s tobom). Alleen o past bij tebi.",
+          "targets": ["g.mod.prepositions", "g.mod.pron_pers"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke naamval is de beste gok bij een onbekend voorzetsel?",
+          "given": "usprkos, umjesto, tijekom, protiv",
+          "nudge": "Eén groep is veel groter dan alle andere samen.",
+          "answer": "De genitief.",
+          "distractors": ["De accusatief.", "De locatief.", "De instrumentalis."],
+          "explain_nl": "Umjesto, tijekom en protiv vragen inderdaad de genitief. Usprkos is de uitzondering met de datief — maar als gok is de genitief verreweg je beste kans.",
+          "targets": ["g.mod.prepositions"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: welk voorzetsel staat er, en welke naamval hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.prep.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Dolazim iz ___ (Zagreb).",
+          "answer": "Zagreba",
+          "accepts": ["Zagreba"],
+          "explain_nl": "Iz vraagt de genitief.",
+          "targets": ["g.mod.prepositions", "g.16.genitiv_prijedlozi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.prep.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Kava je bez ___ (šećer).",
+          "answer": "šećera",
+          "accepts": ["šećera"],
+          "explain_nl": "Bez vraagt de genitief.",
+          "targets": ["g.mod.prepositions", "g.16.genitiv_prijedlozi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.prep.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Gledam kroz ___ (prozor).",
+          "answer": "prozor",
+          "accepts": ["prozor"],
+          "hint": "Kroz vraagt de accusatief — en prozor is mannelijk en niet levend.",
+          "explain_nl": "Kroz vraagt de accusatief; bij een niet-levend mannelijk woord is die gelijk aan de nominatief.",
+          "targets": ["g.mod.prepositions", "g.mod.acc_anim"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.prep.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Idem kod ___ (baka).",
+          "answer": "bake",
+          "accepts": ["bake"],
+          "hint": "Kod vraagt maar één naamval, ook bij beweging.",
+          "explain_nl": "Kod vraagt altijd de genitief: bake.",
+          "targets": ["g.mod.prepositions", "g.mod.genitive"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in: we praten over jouw broer.",
+          "given": "Govorimo o ___ (tvoj brat).",
+          "answer": "tvom bratu",
+          "accepts": ["tvom bratu", "tvojem bratu"],
+          "hint": "O vraagt de locatief, en het bezittelijke woordje buigt mee.",
+          "explain_nl": "O vraagt altijd de locatief: bratu. Het bezittelijke woordje gaat mee: tvom of tvojem.",
+          "targets": ["g.mod.prepositions", "g.mod.poss"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in: de kat gaat onder de tafel.",
+          "given": "Mačka ide pod ___ (stol).",
+          "answer": "stol",
+          "accepts": ["stol"],
+          "hint": "Er is beweging.",
+          "explain_nl": "Pod met beweging vraagt de accusatief; bij een niet-levend mannelijk woord verandert er niets.",
+          "targets": ["g.mod.prepositions", "v.03.stol"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in: de kat ligt onder de tafel.",
+          "given": "Mačka je pod ___ (stol).",
+          "answer": "stolom",
+          "accepts": ["stolom"],
+          "hint": "Geen beweging — en pod neemt dan niet de locatief.",
+          "explain_nl": "Pod, nad, pred en među nemen bij plaats de instrumentalis: stolom.",
+          "targets": ["g.mod.prepositions", "g.mod.instrumental", "v.03.stol"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Van Zagreb tot Split.",
+          "answer": "Od Zagreba do Splita.",
+          "accepts": ["Od Zagreba do Splita.", "Od Zagreba do Splita"],
+          "explain_nl": "Od en do vragen allebei de genitief — het vaste paar voor «van … tot …».",
+          "targets": ["g.mod.prepositions", "g.16.genitiv_prijedlozi"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.prep.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Idem kod baku.",
+          "answer": "Idem kod bake.",
+          "accepts": ["Idem kod bake.", "Idem kod bake"],
+          "explain_nl": "Beweging maakt hier niets uit: kod vraagt altijd de genitief.",
+          "targets": ["g.mod.prepositions"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Knjiga je na stol.",
+          "answer": "Knjiga je na stolu.",
+          "accepts": ["Knjiga je na stolu.", "Knjiga je na stolu"],
+          "explain_nl": "Het boek ligt er al — geen beweging, dus de locatief: na stolu.",
+          "targets": ["g.mod.prepositions", "g.mod.loc_vs_acc"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu meerdere voorzetsels in één zin, elk met hun eigen eis.",
+      "exercises": [
+        {
+          "id": "m.prep.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul alle drie de vormen in.",
+          "given": "Idem iz ___ (kuća) u ___ (grad) s ___ (brat).",
+          "answer": "kuće grad bratom",
+          "accepts": ["kuće grad bratom"],
+          "hint": "Drie voorzetsels, drie naamvallen.",
+          "explain_nl": "Iz vraagt de genitief, u met beweging de accusatief, s de instrumentalis. Drie regels in één zin.",
+          "targets": ["g.mod.prepositions", "v.01.kuca", "v.05.grad", "v.03.brat"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Poslije ___ idemo na plažu.",
+          "answer": "ručka",
+          "distractors": ["ručak", "ručku", "ručkom"],
+          "explain_nl": "Poslije vraagt de genitief. Na daarachter vraagt de accusatief, want er is beweging: plažu.",
+          "targets": ["g.mod.prepositions", "g.16.genitiv_prijedlozi"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik ga brood halen.",
+          "answer": "Idem po kruh.",
+          "accepts": ["Idem po kruh.", "Idem po kruh"],
+          "explain_nl": "Po met de accusatief betekent «halen». Met de locatief zou po kruhu iets heel anders zijn.",
+          "targets": ["g.mod.prepositions", "v.07.kruh"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.prep.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin zegt dat je ergens al bent?",
+          "answer": "Sjedim u kavani.",
+          "distractors": ["Idem u kavanu.", "Idem kroz kavanu.", "Idem prema kavani."],
+          "explain_nl": "Alleen de eerste heeft de locatief. De andere drie gaan alle drie over beweging, elk met hun eigen naamval: accusatief, accusatief en datief.",
+          "targets": ["g.mod.prepositions", "v.04.kavana"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Idem kod baku i govorim o njega.",
+          "answer": "Idem kod bake i govorim o njemu.",
+          "accepts": ["Idem kod bake i govorim o njemu.", "Idem kod bake i govorim o njemu"],
+          "hint": "Kod vraagt één vaste naamval, en o ook.",
+          "explain_nl": "Kod vraagt de genitief (bake) en o de locatief (njemu). Njega zou de accusatief of genitief zijn.",
+          "targets": ["g.mod.prepositions", "g.mod.pron_pers"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk voorzetsel: welke naamval staat erachter, en had het ook anders gekund?",
+      "text_hr": "Svake subote idem kod bake. Vlak kreće iz Zagreba u osam sati i vozi se preko polja prema jugu. Gledam kroz prozor i pijem kavu bez šećera. Bakina kuća stoji iza crkve, blizu rijeke. Pred kućom raste stara lipa. Ispod nje stoji stol, a na stolu uvijek čeka kruh. Poslije ručka sjedimo za stolom i ne govorimo o poslu. Navečer se vraćam u grad, i cijelim putem mislim o njoj.",
+      "translation_nl": "Elke zaterdag ga ik naar oma. De trein vertrekt om acht uur uit Zagreb en rijdt over de velden richting het zuiden. Ik kijk uit het raam en drink koffie zonder suiker. Oma's huis staat achter de kerk, dicht bij de rivier. Voor het huis groeit een oude linde. Eronder staat een tafel, en op de tafel wacht altijd brood. Na de lunch zitten we aan tafel en praten we niet over werk. 's Avonds ga ik terug naar de stad, en de hele weg denk ik aan haar.",
+      "exercises": [
+        {
+          "id": "m.prep.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar staat het huis van oma?",
+          "answer": "Achter de kerk, dicht bij de rivier.",
+          "distractors": ["Naast de kerk, aan zee.", "Voor de kerk, in het dorp.", "Boven de rivier, op een heuvel."],
+          "explain_nl": "«Bakina kuća stoji iza crkve, blizu rijeke.» Iza en blizu vragen allebei de genitief — twee voorzetsels uit de grootste groep naast elkaar.",
+          "targets": [],
+          "difficulty": 2
+        },
+        {
+          "id": "m.prep.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Pred kućom» en «Ispod nje». Waarom hebben die twee verschillende naamvallen?",
+          "given": "Pred kućom raste stara lipa. Ispod nje stoji stol.",
+          "nudge": "Eén van de twee voorzetsels heeft twee naamvallen, het andere maar één.",
+          "answer": "Pred heeft twee naamvallen en kiest hier de instrumentalis voor plaats; ispod heeft er maar één, de genitief.",
+          "distractors": [
+            "Omdat kuća vrouwelijk is en nje een voornaamwoord.",
+            "Omdat de eerste zin over een boom gaat.",
+            "Het is willekeurig."
+          ],
+          "explain_nl": "Precies het onderscheid van deze module. Pred hoort bij de zeven die kunnen kiezen; ispod hoort bij de grote genitiefgroep en kiest nooit.",
+          "targets": ["g.mod.prepositions"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «na stolu» en «za stolom». Wat is het verschil?",
+          "given": "Na stolu uvijek čeka kruh. Poslije ručka sjedimo za stolom.",
+          "nudge": "Kijk naar wat er ligt en waar de mensen zitten.",
+          "answer": "Na stolu is «op de tafel», za stolom is «aan de tafel».",
+          "distractors": [
+            "Ze betekenen hetzelfde.",
+            "Na stolu is beweging en za stolom plaats.",
+            "Za stolom betekent «achter de tafel gelopen»."
+          ],
+          "explain_nl": "Twee voorzetsels, twee naamvallen, twee posities ten opzichte van hetzelfde meubel. Za met de instrumentalis is de gewone manier om «aan tafel» te zeggen.",
+          "targets": ["g.mod.prepositions", "v.03.stol"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Vlak kreće iz ___ (Zagreb) i vozi se prema ___ (jug).",
+          "answer": "Zagreba jugu",
+          "accepts": ["Zagreba jugu"],
+          "explain_nl": "Iz vraagt de genitief, prema de datief. Twee voorzetsels die allebei maar één naamval kennen.",
+          "targets": ["g.mod.prepositions", "g.12.prijedlozi_dativ"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.prep.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf je route naar iemand toe in drie zinnen: waar je vandaan komt, waar je doorheen gaat, en bij wie je aankomt.",
+          "model_answer": "Idem iz kuće. Vozim se kroz grad. Dolazim kod prijatelja.",
+          "rubric_nl": [
+            "Na iz staat de genitief.",
+            "Na kroz staat de accusatief.",
+            "Na kod staat de genitief, ook al ga je ergens heen."
+          ],
+          "checks": [
+            { "kind": "min_zinnen", "n": 3, "label": "Er staan drie zinnen" },
+            { "kind": "bevat_woord", "woorden": ["iz"], "label": "Er staat iz in" },
+            { "kind": "bevat_woord", "woorden": ["kroz"], "label": "Er staat kroz in" },
+            { "kind": "bevat_woord", "woorden": ["kod"], "label": "Er staat kod in" }
+          ],
+          "explain_nl": "Drie voorzetsels, drie eisen. Wie ze als paar geleerd heeft — iz plus genitief, kroz plus accusatief, kod plus genitief — hoeft er niet meer over na te denken.",
+          "targets": ["g.mod.prepositions"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum PREP-CASES, gebouwd op les 10, 12, 15 en 16"
+}
