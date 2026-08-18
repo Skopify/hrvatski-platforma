@@ -1,0 +1,520 @@
+{
+  "code": "POSS-PRON",
+  "rank": 5,
+  "band": "Beginnen",
+  "title_hr": "Moja sestra, svoja sestra",
+  "title_nl": "Van wie is het",
+  "cefr": "A1/A2",
+  "blurb_nl": "Mijn, jouw, zijn, haar. Het eerste deel is makkelijker dan je denkt: het woordje past zich aan aan het ding, niet aan de eigenaar. Het laatste deel kent het Nederlands helemaal niet — er is een apart woord voor 'zijn eigen', en zonder dat woord zeg je iets anders dan je bedoelt.",
+  "prerequisites": ["NOM-GENDER", "ACC-OBJECT"],
+  "can_do_nl": [
+    "Ik kan zeggen van wie iets is: moj brat, moja sestra, moje pismo.",
+    "Ik kan vragen van wie iets is: Čija je ovo torba?",
+    "Ik weet dat de uitgang bij het ding hoort en niet bij de eigenaar.",
+    "Ik weet wanneer ik svoj moet gebruiken in plaats van moj of njegov.",
+    "Ik hoor het verschil tussen «hij houdt van zijn eigen zus» en «hij houdt van diens zus»."
+  ],
+  "grammar": {
+    "id": "g.mod.poss",
+    "code": "POSS-PRON",
+    "title_nl": "Bezittelijke voornaamwoorden en svoj",
+    "cefr": "A1/A2",
+    "explanation_nl": "Een bezittelijk voornaamwoord past zich aan aan het **bezeten ding**: *moj brat*, *moja sestra*, *moje pismo*. Is de eigenaar tegelijk het onderwerp van de zin, dan gebruik je **svoj** in plaats van moj, tvoj of njegov.",
+    "contrast_nl": "Het eerste stuk lijkt op het Nederlands: ook wij zeggen 'zijn zus' en 'haar broer' naar de eigenaar. Het tweede stuk kent het Nederlands niet. «Hij leest zijn boek» is in het Nederlands dubbelzinnig — van hemzelf of van iemand anders. Het Kroatisch maakt dat verschil hoorbaar.",
+    "paradigm": {
+      "caption_nl": "Bezittelijke voornaamwoorden — nominatief enkelvoud",
+      "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+      "rows": [
+        { "label": "ja — mijn", "cells": ["moj", "moja", "moje"] },
+        { "label": "ti — jouw", "cells": ["tvoj", "tvoja", "tvoje"] },
+        { "label": "on — zijn", "cells": ["njegov", "njegova", "njegovo"] },
+        { "label": "ona — haar", "cells": ["njezin", "njezina", "njezino"] },
+        { "label": "mi — ons", "cells": ["naš", "naša", "naše"] },
+        { "label": "vi — jullie/uw", "cells": ["vaš", "vaša", "vaše"] },
+        { "label": "oni — hun", "cells": ["njihov", "njihova", "njihovo"] },
+        { "label": "eigen bezit", "cells": ["svoj", "svoja", "svoje"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De uitgang hoort bij het ding, niet bij de eigenaar: njegova sestra is «zijn zus», met een a omdat sestra vrouwelijk is.",
+      "Is de eigenaar het onderwerp van de zin, dan is het svoj — ook als je «mijn» of «jouw» bedoelt: Volim svoju sestru.",
+      "Njegovu sestru na een hij-onderwerp betekent de zus van iemand ánders. Dat is geen stijlkwestie maar een betekenisverschil.",
+      "Deze woordjes buigen mee als bijvoeglijke naamwoorden: moju sestru, mojoj sestri, mog brata.",
+      "Čiji vraagt ernaar en buigt ook mee: Čiji je stol? Čija je torba? Čije je pismo?"
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes keer «mijn» en «zijn» in het Nederlands. Kijk wat er in het Kroatisch verandert en waardoor.",
+      "exercises": [
+        {
+          "id": "m.poss.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Waardoor verandert het woordje vooraan?",
+          "given": "moj brat\nmoja sestra\nmoje pismo\n\nnjegov brat\nnjegova sestra\nnjezin brat\nnjezina sestra",
+          "body_nl": "mijn broer\nmijn zus\nmijn brief\n\nzijn broer\nzijn zus\nhaar broer\nhaar zus",
+          "targets": []
+        },
+        {
+          "id": "m.poss.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Het Nederlands zegt drie keer **mijn**, wat er ook achter komt. Het Kroatisch heeft drie vormen: *moj*, *moja*, *moje*.\n\nDie hangen niet af van mij, maar van het **ding**: *brat* is mannelijk, *sestra* vrouwelijk, *pismo* onzijdig.\n\nKijk daarna naar de onderste vier. *Njegov* en *njezin* verschillen wél naar de eigenaar — hij of zij — precies zoals het Nederlandse *zijn* en *haar*. En daar bovenop krijgen ze nog een uitgang van het ding: *njegova sestra*, *njezin brat*.\n\nTwee dingen tegelijk dus, maar allebei ken je al: het ene uit het Nederlands, het andere uit de geslachten die je geleerd hebt.",
+          "targets": ["g.mod.poss", "g.03.posvojne_zamjenice", "v.03.brat", "v.01.sestra", "v.01.pismo"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst het rijtje, dan het woord dat er in het Nederlands niet is.",
+      "exercises": [
+        {
+          "id": "m.poss.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De uitgang hoort bij het ding",
+          "body_nl": "Kies eerst het juiste woord bij de eigenaar, en dan de uitgang bij het ding:\n\n*moj* — mijn\n*tvoj* — jouw\n*njegov* — zijn\n*njezin* — haar\n*naš* — ons\n*vaš* — jullie, en met een hoofdletter uw\n*njihov* — hun\n\nDe uitgang is daarna telkens dezelfde: niets voor mannelijk, **-a** voor vrouwelijk, **-e** of **-o** voor onzijdig.\n\n*naš stan*, *naša kuća*, *naše pismo*\n*njihov auto*, *njihova soba*, *njihovo dijete*\n\nVragen doe je met **čiji**, dat op dezelfde manier meebuigt:\n*Čiji je stol?* — *Čija je torba?* — *Čije je pismo?*",
+          "table": {
+            "caption_nl": "Bezittelijke voornaamwoorden — nominatief enkelvoud",
+            "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+            "rows": [
+              { "label": "ja — mijn", "cells": ["moj", "moja", "moje"] },
+              { "label": "ti — jouw", "cells": ["tvoj", "tvoja", "tvoje"] },
+              { "label": "on — zijn", "cells": ["njegov", "njegova", "njegovo"] },
+              { "label": "ona — haar", "cells": ["njezin", "njezina", "njezino"] },
+              { "label": "mi — ons", "cells": ["naš", "naša", "naše"] },
+              { "label": "vi — jullie/uw", "cells": ["vaš", "vaša", "vaše"] },
+              { "label": "oni — hun", "cells": ["njihov", "njihova", "njihovo"] }
+            ]
+          },
+          "targets": ["g.mod.poss", "g.03.posvojne_zamjenice", "v.03.ciji", "v.01.kuca"]
+        },
+        {
+          "id": "m.poss.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Svoj — het woord dat het Nederlands mist",
+          "body_nl": "Is de eigenaar **tegelijk het onderwerp van de zin**, dan gebruikt het Kroatisch *svoj*:\n\n*Volim* **svoju** *sestru.* — Ik hou van mijn zus.\n*Ti voliš* **svoju** *sestru.* — Jij houdt van jouw zus.\n*On voli* **svoju** *sestru.* — Hij houdt van zijn eigen zus.\n\nHetzelfde woordje voor alle personen. Wie het onderwerp is, staat immers al in het werkwoord.\n\nEn nu het punt waar het om gaat. Vergelijk:\n\n*On voli* **svoju** *sestru.* — Hij houdt van zijn eigen zus.\n*On voli* **njegovu** *sestru.* — Hij houdt van de zus van een ander.\n\nHet Nederlands zegt in beide gevallen «zijn zus» en laat je raden. Het Kroatisch niet. Wie hier *njegov* gebruikt waar *svoj* hoort, zegt dus iets anders dan hij bedoelt — en dat is de fout die Nederlandstaligen het langst blijven maken.\n\nBij *moj* en *tvoj* is het verschil onschuldiger: *Volim moju sestru* wordt begrepen, maar klinkt krom. *Svoju* is wat een Kroaat zegt.",
+          "table": {
+            "caption_nl": "Wanneer svoj, wanneer njegov",
+            "columns": ["zin", "betekenis"],
+            "rows": [
+              { "label": "eigen", "cells": ["On voli svoju sestru.", "zijn eigen zus"] },
+              { "label": "andermans", "cells": ["On voli njegovu sestru.", "de zus van een ander"] },
+              { "label": "eigen", "cells": ["Ana čita svoju knjigu.", "haar eigen boek"] },
+              { "label": "andermans", "cells": ["Ana čita njezinu knjigu.", "het boek van een ander"] },
+              { "label": "geen onderwerp", "cells": ["Njegova sestra je ovdje.", "hier kan svoj niet"] }
+            ]
+          },
+          "targets": ["g.mod.poss", "v.01.sestra", "v.01.knjiga"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wiens dan?",
+      "why_nl": "Nog niets invullen. Hier lees je de zin en zeg je van wie het ding is — dat is precies wat er misgaat als je svoj overslaat.",
+      "exercises": [
+        {
+          "id": "m.poss.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van wie is die zus?",
+          "given": "Marko voli svoju sestru.",
+          "nudge": "Svoj wijst altijd terug naar het onderwerp van de zin. Wie is dat hier?",
+          "answer": "Van Marko zelf.",
+          "distractors": [
+            "Van iemand anders dan Marko.",
+            "Van de spreker.",
+            "Dat kun je niet zien."
+          ],
+          "explain_nl": "Svoj wijst terug naar het onderwerp. Marko is het onderwerp, dus het is zijn eigen zus.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van wie is die zus?",
+          "given": "Marko voli njegovu sestru.",
+          "nudge": "Er staat njegov en niet svoj, hoewel het onderwerp een hij is. Wat betekent die keuze?",
+          "answer": "Van een andere man — niet van Marko.",
+          "distractors": [
+            "Van Marko zelf.",
+            "Van de spreker.",
+            "Dat is dezelfde zin als met svoju."
+          ],
+          "explain_nl": "Precies één woord verschil met de vorige zin, en een heel andere betekenis. Het Nederlands kan dit onderscheid niet maken zonder er woorden bij te zetten.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.poss.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er njegova en niet njegov?",
+          "given": "Njegova sestra živi u Splitu.",
+          "nudge": "Kijk niet naar de eigenaar maar naar het woord erachter.",
+          "answer": "Omdat sestra vrouwelijk is; de uitgang hoort bij het ding.",
+          "distractors": [
+            "Omdat de eigenaar een man is.",
+            "Omdat de zus in Split woont.",
+            "Omdat njegov altijd op een a eindigt."
+          ],
+          "explain_nl": "Njeg-ov zegt dat de eigenaar een hij is; de -a zegt dat het bezit vrouwelijk is. Twee lagen in één woord.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin klinkt als een Kroaat?",
+          "given": "A: Volim svoju sestru.\nB: Volim moju sestru.",
+          "nudge": "Wie is het onderwerp van deze zin, en van wie is de zus?",
+          "answer": "A — de eigenaar is het onderwerp, dus svoju.",
+          "distractors": [
+            "B — moju, want het is mijn zus.",
+            "Allebei even gewoon.",
+            "Geen van beide."
+          ],
+          "explain_nl": "B wordt begrepen maar klinkt krom, zoals «ik hou van de zus van mij». Bij ik en jij is svoj geen betekenisverschil maar wel de gewone manier.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.poss.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Kan svoj hier?",
+          "given": "Njegova sestra je liječnica.",
+          "nudge": "Wat is hier het onderwerp van de zin? Is de eigenaar dat ook?",
+          "answer": "Nee — de zus is zelf het onderwerp, dus er is niets om naar terug te wijzen.",
+          "distractors": [
+            "Ja, svoja sestra is beter.",
+            "Ja, maar alleen als je haar kent.",
+            "Alleen in de verleden tijd."
+          ],
+          "explain_nl": "Svoj wijst terug naar het onderwerp. Staat het bezit zélf op de plek van het onderwerp, dan is er niets om naar terug te wijzen.",
+          "targets": ["g.mod.poss"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gevraagd?",
+          "given": "Čija je ovo torba?",
+          "nudge": "Čiji buigt mee met het ding. Waarom staat er hier een a?",
+          "answer": "Van wie is deze tas? — met een a omdat torba vrouwelijk is.",
+          "distractors": [
+            "Waar is de tas?",
+            "Is dit jouw tas?",
+            "Hoeveel tassen zijn er?"
+          ],
+          "explain_nl": "Čiji werkt precies als moj: Čiji je stol? Čija je torba? Čije je pismo?",
+          "targets": ["g.mod.poss", "v.03.ciji"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde twee vragen: welk woord hoort bij de eigenaar, en welke uitgang bij het ding?",
+      "exercises": [
+        {
+          "id": "m.poss.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: mijn.",
+          "given": "Ovo je ___ sestra.",
+          "answer": "moja",
+          "accepts": ["moja"],
+          "explain_nl": "Sestra is vrouwelijk, dus moja.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.poss.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: mijn.",
+          "given": "Ovo je ___ pismo.",
+          "answer": "moje",
+          "accepts": ["moje"],
+          "explain_nl": "Pismo is onzijdig, dus moje.",
+          "targets": ["g.mod.poss", "v.01.pismo"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.poss.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: haar.",
+          "given": "___ brat radi u Zagrebu.",
+          "answer": "Njezin",
+          "accepts": ["Njezin", "njezin", "Njen", "njen"],
+          "hint": "De eigenaar is een zij, het bezit is mannelijk.",
+          "explain_nl": "Njezin voor een vrouwelijke eigenaar, zonder uitgang omdat brat mannelijk is.",
+          "targets": ["g.mod.poss", "v.03.brat"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zijn.",
+          "given": "___ sestra živi u Splitu.",
+          "answer": "Njegova",
+          "accepts": ["Njegova", "njegova"],
+          "hint": "De eigenaar is een hij, het bezit is vrouwelijk.",
+          "explain_nl": "Njegov voor een mannelijke eigenaar, met -a omdat sestra vrouwelijk is.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ons.",
+          "given": "___ kuća je velika.",
+          "answer": "Naša",
+          "accepts": ["Naša", "naša"],
+          "explain_nl": "Kuća is vrouwelijk, dus naša.",
+          "targets": ["g.mod.poss", "v.01.kuca"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.poss.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: van wie.",
+          "given": "___ je ovo pismo?",
+          "answer": "Čije",
+          "accepts": ["Čije", "čije"],
+          "explain_nl": "Čiji buigt mee met het ding: pismo is onzijdig, dus čije.",
+          "targets": ["g.mod.poss", "v.03.ciji", "v.01.pismo"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in. De eigenaar is het onderwerp.",
+          "given": "Volim ___ sestru.",
+          "answer": "svoju",
+          "accepts": ["svoju"],
+          "hint": "Van wie is de zus? En wie is het onderwerp?",
+          "explain_nl": "De eigenaar is het onderwerp, dus svoj — en svoju omdat sestru in de accusatief staat.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.poss.037",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: Ana leest haar eigen boek.",
+          "given": "Ana čita ___ knjigu.",
+          "answer": "svoju",
+          "accepts": ["svoju"],
+          "hint": "Haar eigen — dus terug naar het onderwerp.",
+          "explain_nl": "Met njezinu zou het het boek van iemand anders zijn.",
+          "targets": ["g.mod.poss", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.poss.038",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Van wie is deze tafel?",
+          "answer": "Čiji je ovo stol?",
+          "accepts": ["Čiji je ovo stol?", "Čiji je ovo stol", "Čiji je ovaj stol?", "Čiji je ovaj stol"],
+          "explain_nl": "Stol is mannelijk, dus čiji zonder uitgang.",
+          "targets": ["g.mod.poss", "v.03.ciji", "v.03.stol"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.poss.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je moj sestra.",
+          "answer": "Ovo je moja sestra.",
+          "accepts": ["Ovo je moja sestra.", "Ovo je moja sestra"],
+          "explain_nl": "De uitgang hoort bij het ding, en sestra is vrouwelijk.",
+          "targets": ["g.mod.poss", "v.01.sestra"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu in echte zinnen, waar het bezit ook nog een naamval krijgt.",
+      "exercises": [
+        {
+          "id": "m.poss.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Idem u ___ sobu.",
+          "answer": "svoju",
+          "distractors": ["svoja", "svojoj", "moju"],
+          "explain_nl": "U met beweging vraagt de accusatief sobu, en het bezittelijke woordje buigt mee: svoju.",
+          "targets": ["g.mod.poss", "g.mod.loc_vs_acc", "v.03.soba"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.poss.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: Ik ben in mijn kamer.",
+          "given": "U ___ sobi sam.",
+          "answer": "svojoj",
+          "accepts": ["svojoj", "mojoj"],
+          "hint": "U zonder beweging vraagt de locatief.",
+          "explain_nl": "Sobi staat in de locatief, dus svojoj. Mojoj wordt begrepen maar svojoj is wat een Kroaat zegt.",
+          "targets": ["g.mod.poss", "g.mod.loc_vs_acc", "v.03.soba"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik ga met mijn broer naar de stad.",
+          "answer": "Idem u grad sa svojim bratom.",
+          "accepts": [
+            "Idem u grad sa svojim bratom.",
+            "Idem u grad sa svojim bratom",
+            "Idem sa svojim bratom u grad.",
+            "Idem sa svojim bratom u grad"
+          ],
+          "explain_nl": "Gezelschap vraagt s of sa met de instrumentalis bratom, en het bezittelijke woordje buigt mee: svojim. Sa omdat svojim met een s begint.",
+          "targets": ["g.mod.poss", "g.mod.instrumental", "v.03.brat", "v.05.grad"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin betekent «Ana leest het boek van haar vriendin»?",
+          "answer": "Ana čita njezinu knjigu.",
+          "distractors": ["Ana čita svoju knjigu.", "Ana čita moju knjigu.", "Ana čita njegovu knjigu."],
+          "explain_nl": "Het boek is niet van Ana zelf, dus juist géén svoju. Njezinu wijst naar een andere vrouw.",
+          "targets": ["g.mod.poss", "v.01.knjiga"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Marko bedoelt zijn eigen auto. Schrijf de zin goed.",
+          "given": "Marko pere njegov auto.",
+          "answer": "Marko pere svoj auto.",
+          "accepts": ["Marko pere svoj auto.", "Marko pere svoj auto"],
+          "hint": "Wie is het onderwerp, en van wie is de auto?",
+          "explain_nl": "Zoals het er stond, waste Marko de auto van iemand anders. Met svoj is het zijn eigen auto.",
+          "targets": ["g.mod.poss", "v.00.auto"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk bezittelijk woordje: van wie is het ding, en waarom staat er svoj of juist niet?",
+      "text_hr": "Moja prijateljica Ana živi u Zagrebu. Njezin brat Marko živi u Splitu. Svake godine Ana posjećuje svog brata na moru. Ovog ljeta putovala je svojim autom, jer je njegov auto bio u kvaru. Marko je pokazao Ani svoj novi stan. Njegova soba gleda na more. Ana je slikala njegov balkon i poslala fotografije svojoj majci. «Čija je ovo kuća?» pitala je majka. «Nije naša», rekla je Ana, «ali pogled je isti.»",
+      "translation_nl": "Mijn vriendin Ana woont in Zagreb. Haar broer Marko woont in Split. Elk jaar bezoekt Ana haar broer aan zee. Deze zomer reisde ze met haar eigen auto, want zijn auto was kapot. Marko liet Ana zijn nieuwe appartement zien. Zijn kamer kijkt uit op zee. Ana fotografeerde zijn balkon en stuurde de foto's naar haar moeder. «Van wie is dit huis?» vroeg haar moeder. «Niet van ons,» zei Ana, «maar het uitzicht is hetzelfde.»",
+      "exercises": [
+        {
+          "id": "m.poss.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar woont Marko?",
+          "answer": "In Split.",
+          "distractors": ["In Zagreb.", "Aan zee bij Ana.", "Bij zijn moeder."],
+          "explain_nl": "«Njezin brat Marko živi u Splitu.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.poss.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «putovala je svojim autom, jer je njegov auto bio u kvaru». Van wie zijn die twee auto's?",
+          "given": "Ovog ljeta putovala je svojim autom, jer je njegov auto bio u kvaru.",
+          "nudge": "Wie is het onderwerp van deze zin? En naar wie wijst njegov?",
+          "answer": "De eerste is van Ana zelf, de tweede van Marko.",
+          "distractors": [
+            "Allebei van Ana.",
+            "Allebei van Marko.",
+            "De eerste van Marko en de tweede van Ana."
+          ],
+          "explain_nl": "Svojim wijst terug naar het onderwerp Ana; njegov wijst naar iemand anders, hier Marko. Eén zin, twee eigenaren, geen twijfel.",
+          "targets": ["g.mod.poss", "v.00.auto"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Marko je pokazao Ani svoj novi stan». Van wie is dat appartement?",
+          "given": "Marko je pokazao Ani svoj novi stan.",
+          "nudge": "Svoj wijst terug naar het onderwerp. Wie doet hier het laten zien?",
+          "answer": "Van Marko — hij is het onderwerp.",
+          "distractors": [
+            "Van Ana.",
+            "Van allebei samen.",
+            "Van de moeder van Ana."
+          ],
+          "explain_nl": "Ani is meewerkend voorwerp, niet onderwerp. Svoj kijkt altijd naar wie de handeling doet.",
+          "targets": ["g.mod.poss"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst: Ana stuurde de foto's naar haar eigen moeder.",
+          "given": "Ana je poslala fotografije ___ majci.",
+          "answer": "svojoj",
+          "accepts": ["svojoj"],
+          "explain_nl": "De eigenaar is het onderwerp Ana, en majci staat in de datief — dus svojoj.",
+          "targets": ["g.mod.poss"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.poss.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen: één over iets van jezelf, één over iets van iemand anders.",
+          "model_answer": "Volim svoju sobu. Njegova soba je veća.",
+          "rubric_nl": [
+            "In de eerste zin staat svoj, want de eigenaar is het onderwerp.",
+            "In de tweede zin staat moj, tvoj, njegov, njezin of njihov.",
+            "De uitgang past bij het geslacht van het ding, niet bij de eigenaar."
+          ],
+          "explain_nl": "Wie svoj op de goede plek zet, laat meteen horen dat hij het verschil begrijpt dat het Nederlands niet maakt.",
+          "targets": ["g.mod.poss"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum POSS-PRON, gebouwd op les 3 en 4"
+}
