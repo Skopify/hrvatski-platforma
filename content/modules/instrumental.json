@@ -1,0 +1,488 @@
+{
+  "code": "INS-MEANS",
+  "rank": 14,
+  "band": "Verfijnen",
+  "title_hr": "Idem autom, idem s bratom",
+  "title_nl": "Waarmee of met wie",
+  "cefr": "A2/B1",
+  "blurb_nl": "Het Nederlands zegt 'met' voor allebei: met een pen, met mijn broer. Het Kroatisch houdt ze uit elkaar — bij een gereedschap laat je het voorzetsel juist wég. Dat is de enige regel die je hier hoeft te onthouden.",
+  "prerequisites": ["NOM-GENDER", "LOCDAT-FORM"],
+  "can_do_nl": [
+    "Ik kan zeggen waarmee ik iets doe: pišem olovkom.",
+    "Ik kan zeggen met wie ik ergens ben: idem s bratom.",
+    "Ik weet dat er bij een gereedschap géén voorzetsel staat.",
+    "Ik weet wanneer het sa wordt in plaats van s."
+  ],
+  "grammar": {
+    "id": "g.mod.instrumental",
+    "code": "INS-MEANS",
+    "title_nl": "Instrumentalis — middel en gezelschap",
+    "cefr": "A2/B1",
+    "explanation_nl": "De instrumentalis doet twee dingen. Hij zegt **waarmee** je iets doet — dan staat hij kaal, zonder voorzetsel. En hij zegt **met wie** je iets doet — dan staat er *s* of *sa* voor.",
+    "contrast_nl": "Het Nederlands gebruikt voor allebei 'met': ik schrijf met een pen, ik ga met mijn broer. Het Kroatisch onderscheidt ze, en wel op een manier die tegen je gevoel ingaat: bij het gereedschap laat je het voorzetsel juist weg.",
+    "paradigm": {
+      "caption_nl": "Kaal bij een middel, met s bij gezelschap",
+      "columns": ["Kroatisch", "Nederlands"],
+      "rows": [
+        { "label": "middel", "cells": ["Pišem olovkom.", "Ik schrijf met een pen."] },
+        { "label": "middel", "cells": ["Idem autom.", "Ik ga met de auto."] },
+        { "label": "middel", "cells": ["Putujem vlakom.", "Ik reis met de trein."] },
+        { "label": "gezelschap", "cells": ["Idem s bratom.", "Ik ga met mijn broer."] },
+        { "label": "gezelschap", "cells": ["Pijem kavu sa sestrom.", "Ik drink koffie met mijn zus."] }
+      ]
+    },
+    "pitfalls_nl": [
+      "s toevoegen bij een gereedschap. «Pišem s olovkom» klinkt fout — het middel staat kaal.",
+      "De uitgang: mannelijk en onzijdig krijgen -om, maar na een zachte medeklinker -em: prijateljem, morem.",
+      "sa in plaats van s vóór s, š, z, ž en vóór mnom: sa sestrom, sa mnom."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes zinnen die in het Nederlands allemaal 'met' hebben. Kijk waar in het Kroatisch een voorzetsel staat en waar niet.",
+      "exercises": [
+        {
+          "id": "m.ins.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Waar staat er een woordje vóór, en waar niet?",
+          "given": "Pišem olovkom.\nIdem autom.\nPutujem vlakom.\n\nIdem s bratom.\nPijem kavu sa sestrom.\nRadim s prijateljem.",
+          "body_nl": "Ik schrijf met een pen.\nIk ga met de auto.\nIk reis met de trein.\n\nIk ga met mijn broer.\nIk drink koffie met mijn zus.\nIk werk met een vriend.",
+          "targets": []
+        },
+        {
+          "id": "m.ins.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In het Nederlands staat er zes keer **met**. In het Kroatisch drie keer wél een woordje (*s*, *sa*) en drie keer niet.\n\nHet verschil is niet willekeurig. Bovenaan staan **dingen waarmee je iets doet**: een pen, een auto, een trein. Onderaan staan **mensen met wie je iets doet**.\n\nEn let op: het is precies andersom dan je zou verwachten. Bij het gereedschap laat je het voorzetsel **weg**, terwijl het Nederlands daar juist 'met' zet.\n\nDe uitgang is in beide gevallen dezelfde: *-om*, of *-em* na een zachte medeklinker.",
+          "targets": ["g.mod.instrumental", "g.15.instrumental"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén vraag, twee uitkomsten: is het een ding of een mens?",
+      "exercises": [
+        {
+          "id": "m.ins.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Kaal bij een middel, met s bij gezelschap",
+          "body_nl": "Stel jezelf één vraag: **doe je iets ermee, of ben je ergens samen mee?**\n\n**Middel** — geen voorzetsel:\n*Pišem* **olovkom**. — Ik schrijf met een pen.\n*Putujem* **vlakom**. — Ik reis met de trein.\n\n**Gezelschap** — met *s* of *sa*:\n*Idem* **s bratom**. — Ik ga met mijn broer.\n\nWie *s* toevoegt bij een gereedschap, klinkt meteen als een buitenlander. *Pišem s olovkom* is de fout die je eigen taal je influistert.\n\nEén handige controle: kun je 'per' of 'via' zeggen in het Nederlands — per trein, per auto — dan is het zeker een middel en dus kaal.",
+          "table": {
+            "caption_nl": "Kaal bij een middel, met s bij gezelschap",
+            "columns": ["Kroatisch", "Nederlands"],
+            "rows": [
+              { "label": "middel", "cells": ["Pišem olovkom.", "Ik schrijf met een pen."] },
+              { "label": "middel", "cells": ["Idem autom.", "Ik ga met de auto."] },
+              { "label": "middel", "cells": ["Putujem vlakom.", "Ik reis met de trein."] },
+              { "label": "gezelschap", "cells": ["Idem s bratom.", "Ik ga met mijn broer."] },
+              { "label": "gezelschap", "cells": ["Pijem kavu sa sestrom.", "Ik drink koffie met mijn zus."] }
+            ]
+          },
+          "targets": ["g.mod.instrumental", "g.15.sredstvo", "g.15.s_instrumental", "v.01.olovka"]
+        },
+        {
+          "id": "m.ins.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De uitgangen, en wanneer het sa wordt",
+          "body_nl": "**Mannelijk en onzijdig** krijgen **-om**: *vlak → vlakom*, *auto → autom*.\nNa een zachte medeklinker (*č, ć, đ, j, lj, nj, š, ž, c*) wordt het **-em**: *prijatelj → prijateljem*, *nož → nožem*, *more → morem*.\n\n**Vrouwelijk op -a** krijgt **-om**: *sestra → sestrom*, *olovka → olovkom*.\n\nEn het voorzetsel: normaal **s**, maar **sa** vóór *s, š, z, ž* en vóór *mnom*.\n\n*s bratom*, *s prijateljem*\n*sa sestrom*, *sa Zagrebom*, *sa mnom*\n\nDat is puur om het uitspreekbaar te houden — twee s-klanken achter elkaar gaan niet.",
+          "targets": ["g.mod.instrumental", "g.15.instrumental", "v.03.noz", "v.01.prijatelj"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Middel of gezelschap?",
+      "why_nl": "Nog niets invullen. Het Nederlands geeft je hier geen houvast — beide zinnen worden met 'met' vertaald.",
+      "exercises": [
+        {
+          "id": "m.ins.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier bedoeld?",
+          "given": "Idem autom.",
+          "nudge": "Staat er een woordje vóór het zelfstandig naamwoord, of niet? Dat bepaalt of het een middel is of gezelschap.",
+          "answer": "Ik ga met de auto — de auto is mijn vervoermiddel.",
+          "distractors": ["Ik ga samen met de auto ergens heen als gezelschap."],
+          "explain_nl": "Geen voorzetsel, dus een middel: per auto.",
+          "targets": ["g.mod.instrumental", "v.00.auto"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ins.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier bedoeld?",
+          "given": "Idem s bratom.",
+          "nudge": "Staat er een woordje vóór het zelfstandig naamwoord, of niet? Dat bepaalt of het een middel is of gezelschap.",
+          "answer": "Ik ga samen met mijn broer.",
+          "distractors": ["Ik ga per broer — hij is mijn vervoermiddel."],
+          "explain_nl": "Met s, dus gezelschap. Precies dezelfde uitgang, ander voorzetsel, andere betekenis.",
+          "targets": ["g.mod.instrumental", "v.03.brat"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ins.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: Pišem olovkom.\nB: Pišem s olovkom.",
+          "nudge": "Is een pen iets waarmee je iets doet, of iemand met wie je iets doet?",
+          "answer": "A — bij een gereedschap staat er geen voorzetsel.",
+          "distractors": [
+            "B — met een pen is toch 'met'.",
+            "Allebei goed.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Dit is dé fout die het Nederlands je influistert. Een middel staat kaal.",
+          "targets": ["g.mod.instrumental", "v.01.olovka"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er sa en niet s?",
+          "given": "Pijem kavu sa sestrom.",
+          "nudge": "Spreek s sestrom eens hardop uit. Waarom zou dat lastig zijn?",
+          "answer": "Omdat sestrom met een s begint; twee s-klanken achter elkaar gaan niet.",
+          "distractors": [
+            "Omdat een zus vrouwelijk is.",
+            "Omdat het over koffie gaat.",
+            "Omdat sa beleefder is."
+          ],
+          "explain_nl": "sa staat vóór s, š, z, ž en vóór mnom. Puur om het uitspreekbaar te houden.",
+          "targets": ["g.mod.instrumental", "v.01.sestra"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er prijateljem en niet prijateljom?",
+          "given": "Radim s prijateljem.",
+          "nudge": "Kijk naar de laatste medeklinker van prijatelj. Is die hard of zacht?",
+          "answer": "Omdat prijatelj op lj eindigt, en na een zachte medeklinker wordt het -em.",
+          "distractors": [
+            "Omdat een vriend een mens is.",
+            "Omdat er s voor staat.",
+            "Dat is een spelfout."
+          ],
+          "explain_nl": "Na č, ć, đ, j, lj, nj, š, ž en c wordt -om een -em. Dezelfde wisseling ken je van andere naamvallen.",
+          "targets": ["g.mod.instrumental", "v.01.prijatelj"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke van deze twee is een middel?",
+          "given": "A: Režem nožem.\nB: Idem s Markom.",
+          "nudge": "Bij welke van de twee gebruik je het ding om iets te doen?",
+          "answer": "A — het mes is waarmee je snijdt.",
+          "distractors": ["B — Marko gaat mee.", "Allebei.", "Geen van beide."],
+          "explain_nl": "nožem staat kaal want het is gereedschap; s Markom heeft een voorzetsel want hij is gezelschap.",
+          "targets": ["g.mod.instrumental", "v.03.noz"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: ding of mens, en welke uitgang hoort erbij?",
+      "exercises": [
+        {
+          "id": "m.ins.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in. Let op of er een voorzetsel bij hoort.",
+          "given": "Pišem ___ (olovka).",
+          "answer": "olovkom",
+          "accepts": ["olovkom"],
+          "explain_nl": "Middel → kaal, vrouwelijk → -om.",
+          "targets": ["g.mod.instrumental", "v.01.olovka"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ins.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in. Let op of er een voorzetsel bij hoort.",
+          "given": "Idem ___ (brat) u kino.",
+          "answer": "s bratom",
+          "accepts": ["s bratom"],
+          "explain_nl": "Een broer is gezelschap → s bratom.",
+          "targets": ["g.mod.instrumental", "v.03.brat"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in.",
+          "given": "Putujem ___ (vlak).",
+          "answer": "vlakom",
+          "accepts": ["vlakom"],
+          "explain_nl": "Vervoermiddel → kaal, mannelijk → -om.",
+          "targets": ["g.mod.instrumental", "v.03.vlak"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ins.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in. Let op het voorzetsel.",
+          "given": "Pijem kavu ___ (sestra).",
+          "answer": "sa sestrom",
+          "accepts": ["sa sestrom"],
+          "hint": "Sestra begint met een s.",
+          "explain_nl": "Gezelschap, en sa omdat sestrom met s begint.",
+          "targets": ["g.mod.instrumental", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in.",
+          "given": "Radim ___ (prijatelj).",
+          "answer": "s prijateljem",
+          "accepts": ["s prijateljem"],
+          "hint": "Let op de zachte medeklinker aan het eind.",
+          "explain_nl": "Gezelschap → s, en na lj wordt het -em.",
+          "targets": ["g.mod.instrumental", "v.01.prijatelj"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in.",
+          "given": "Režem kruh ___ (nož).",
+          "answer": "nožem",
+          "accepts": ["nožem"],
+          "explain_nl": "Middel → kaal, en na ž wordt het -em.",
+          "targets": ["g.mod.instrumental", "v.03.noz"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.036",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik ga met de bus.",
+          "answer": "Idem autobusom.",
+          "accepts": ["Idem autobusom.", "Idem autobusom"],
+          "explain_nl": "Vervoermiddel, dus kaal — geen s.",
+          "targets": ["g.mod.instrumental", "v.01.autobus"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.037",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Pišem s olovkom.",
+          "answer": "Pišem olovkom.",
+          "accepts": ["Pišem olovkom.", "Pišem olovkom"],
+          "explain_nl": "Een pen is gereedschap, dus zonder voorzetsel.",
+          "targets": ["g.mod.instrumental", "v.01.olovka"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Idem bratom u grad.",
+          "answer": "Idem s bratom u grad.",
+          "accepts": ["Idem s bratom u grad.", "Idem s bratom u grad"],
+          "explain_nl": "Een broer is gezelschap, dus er moet s vóór.",
+          "targets": ["g.mod.instrumental", "v.03.brat"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Radim s prijateljom.",
+          "answer": "Radim s prijateljem.",
+          "accepts": ["Radim s prijateljem.", "Radim s prijateljem"],
+          "explain_nl": "Na de zachte lj wordt de uitgang -em.",
+          "targets": ["g.mod.instrumental", "v.01.prijatelj"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de andere naamvallen. Elk voorzetsel heeft zijn eigen eisen.",
+      "exercises": [
+        {
+          "id": "m.ins.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Idem u ___ (grad) ___ (vlak).",
+          "answer": "grad vlakom",
+          "accepts": ["grad vlakom"],
+          "hint": "De eerste is een richting, de tweede een vervoermiddel.",
+          "explain_nl": "u met beweging → accusatief grad; het vervoermiddel staat kaal in de instrumentalis.",
+          "targets": ["g.mod.instrumental", "g.mod.loc_vs_acc", "v.05.grad", "v.03.vlak"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ins.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Dolazim iz ___.",
+          "answer": "Zagreba",
+          "distractors": ["Zagrebom", "Zagreb"],
+          "explain_nl": "iz vraagt de genitief, niet de instrumentalis.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik drink koffie met mijn broer.",
+          "answer": "Pijem kavu s bratom.",
+          "accepts": ["Pijem kavu s bratom.", "Pijem kavu s bratom"],
+          "explain_nl": "kavu is het lijdend voorwerp in de accusatief; s bratom is gezelschap in de instrumentalis. Twee naamvallen in één korte zin.",
+          "targets": ["g.mod.instrumental", "v.01.kava", "v.03.brat"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.053",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Gisteren ben ik met de trein naar Split gegaan.",
+          "answer": "Jučer sam išao u Split vlakom.",
+          "accepts": [
+            "Jučer sam išao u Split vlakom.",
+            "Jučer sam išao vlakom u Split.",
+            "Jučer sam išla u Split vlakom.",
+            "Jučer sam išla vlakom u Split."
+          ],
+          "explain_nl": "Drie dingen: verleden tijd met het onregelmatige išao, Split in de accusatief want beweging, en vlakom kaal want vervoermiddel.",
+          "targets": ["g.mod.instrumental", "g.mod.perfekt", "g.mod.loc_vs_acc", "v.03.vlak"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ins.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Idem s autom sa bratom.",
+          "answer": "Idem autom s bratom.",
+          "accepts": ["Idem autom s bratom.", "Idem autom s bratom"],
+          "hint": "Eén voorzetsel te veel, en één in de verkeerde vorm.",
+          "explain_nl": "De auto is een middel en staat kaal; bratom begint niet met een s-klank, dus s en niet sa.",
+          "targets": ["g.mod.instrumental", "v.00.auto", "v.03.brat"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk 'met': staat er een voorzetsel, en waarom wel of niet?",
+      "text_hr": "Subotom idem na tržnicu s majkom. Ne idemo autom nego pješice, jer je blizu. Ona uvijek nosi veliku torbu i plaća gotovinom. Ja slikam štandove mobitelom. Poslije pijemo kavu s njezinom prijateljicom u kafiću na uglu. Ona reže kolač nožem i dijeli ga s nama. Kući se vraćamo autobusom jer su torbe teške.",
+      "translation_nl": "Op zaterdag ga ik met mijn moeder naar de markt. We gaan niet met de auto maar te voet, want het is dichtbij. Zij draagt altijd een grote tas en betaalt contant. Ik fotografeer de kramen met mijn telefoon. Daarna drinken we koffie met haar vriendin in het café op de hoek. Zij snijdt de taart met een mes en deelt hem met ons. Naar huis gaan we met de bus, want de tassen zijn zwaar.",
+      "exercises": [
+        {
+          "id": "m.ins.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoe gaan ze naar de markt?",
+          "answer": "Te voet.",
+          "distractors": ["Met de auto.", "Met de bus.", "Met de trein."],
+          "explain_nl": "«Ne idemo autom nego pješice.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.ins.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «idem s majkom» en «idemo autom». Waarom één keer wel s en één keer niet?",
+          "given": "Subotom idem na tržnicu s majkom. Ne idemo autom nego pješice.",
+          "nudge": "Bij welk van de twee ga je samen met iemand, en bij welk gebruik je iets om te reizen?",
+          "answer": "De moeder gaat mee als gezelschap, de auto is een vervoermiddel.",
+          "distractors": [
+            "Omdat de tweede zin ontkennend is.",
+            "Omdat majka vrouwelijk is en auto niet.",
+            "Het is willekeurig; allebei mag."
+          ],
+          "explain_nl": "Precies het onderscheid van deze module: mens → s, ding waarmee je iets doet → kaal.",
+          "targets": ["g.mod.instrumental", "v.03.majka", "v.00.auto"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «reže kolač nožem i dijeli ga s nama». Waarom staat nožem kaal en s nama niet?",
+          "given": "Ona reže kolač nožem i dijeli ga s nama.",
+          "nudge": "Eén van de twee is gereedschap en de ander zijn mensen. Welke is welke?",
+          "answer": "Het mes is gereedschap, wij zijn mensen.",
+          "distractors": [
+            "Omdat nožem al een uitgang heeft.",
+            "Omdat nama meervoud is.",
+            "Omdat het tweede deel van de zin is."
+          ],
+          "explain_nl": "Twee instrumentalissen in één zin, met en zonder voorzetsel — dat maakt het verschil zichtbaar.",
+          "targets": ["g.mod.instrumental", "v.03.noz"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ins.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Kući se vraćamo ___ (autobus) jer su torbe teške.",
+          "answer": "autobusom",
+          "accepts": ["autobusom"],
+          "explain_nl": "Vervoermiddel → kaal, mannelijk → -om.",
+          "targets": ["g.mod.instrumental", "v.01.autobus"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ins.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen: één over waarmee je ergens heen gaat, één over met wie.",
+          "model_answer": "Idem u grad vlakom. Idem s bratom.",
+          "rubric_nl": [
+            "In de eerste zin staat het vervoermiddel kaal, zonder s.",
+            "In de tweede zin staat s of sa vóór de persoon.",
+            "Beide woorden hebben de uitgang -om of -em."
+          ],
+          "explain_nl": "Wie die twee uit elkaar houdt, maakt de fout die je aan een buitenlander hoort niet meer.",
+          "targets": ["g.mod.instrumental"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum INS-MEANS/INS-COMPANY, gebouwd op les 15"
+}
