@@ -1,0 +1,516 @@
+{
+  "code": "MODAL",
+  "rank": 12,
+  "band": "Opbouwen",
+  "title_hr": "Moram, mogu, smijem, hoću",
+  "title_nl": "Moeten, kunnen, mogen, willen",
+  "cefr": "A2",
+  "blurb_nl": "Vier werkwoorden waarmee je zegt wat moet, kan, mag en wat je wilt. De vorm is makkelijk — er komt gewoon de infinitief achter. Het lastige zit in de ontkenning: «ik moet niet» en «ik mag niet» zijn in het Kroatisch twee verschillende werkwoorden, en het Nederlands laat je die verwarren.",
+  "prerequisites": ["PRES-CLASSES"],
+  "can_do_nl": [
+    "Ik kan zeggen wat ik moet, kan, mag en wil.",
+    "Ik weet dat er een infinitief achter komt: moram raditi.",
+    "Ik ken het verschil tussen ne moram en ne smijem.",
+    "Ik kan beleefd iets vragen: Mogu li…? Smijem li…?",
+    "Ik herken de da-constructie die je in Kroatië beter niet gebruikt."
+  ],
+  "grammar": {
+    "id": "g.mod.modal",
+    "code": "MODAL",
+    "title_nl": "Modale werkwoorden",
+    "cefr": "A2",
+    "explanation_nl": "*Morati*, *moći*, *smjeti* en *htjeti* zeggen wat moet, kan, mag of gewenst is. Ze staan vervoegd in de zin en het tweede werkwoord blijft in de **infinitief**: *Moram raditi*.",
+    "contrast_nl": "De bouw lijkt precies op het Nederlands: «ik moet werken», «ik kan komen». Eén ding is anders, en het is een verschil dat je in het Nederlands niet hoort: *ne moram* betekent «ik hoef niet» en *ne smijem* betekent «ik mag niet». Wij zeggen voor allebei «ik moet niet».",
+    "paradigm": {
+      "caption_nl": "De vier, in de ik-vorm en de ontkenning",
+      "columns": ["ik", "ontkennend", "betekenis"],
+      "rows": [
+        { "label": "morati", "cells": ["moram", "ne moram", "moeten / hoeven niet"] },
+        { "label": "moći", "cells": ["mogu", "ne mogu", "kunnen / niet kunnen"] },
+        { "label": "smjeti", "cells": ["smijem", "ne smijem", "mogen / niet mogen"] },
+        { "label": "htjeti", "cells": ["hoću", "neću", "willen / niet willen"] },
+        { "label": "trebati", "cells": ["trebam", "ne trebam", "nodig hebben, moeten"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Ne moram is «ik hoef niet», niet «ik mag niet». Voor dat laatste is er ne smijem.",
+      "Htjeti heeft een eigen ontkenning: neću, nećeš, neće — niet «ne hoću».",
+      "Moći is onregelmatig: mogu, možeš, može, možemo, možete, mogu.",
+      "Na een modaal werkwoord komt de infinitief, niet nog een vervoegde vorm.",
+      "«Moram da radim» hoor je in Servië en Bosnië; in Kroatië zeg je «Moram raditi»."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Vier zinnen die precies zo gebouwd zijn als in het Nederlands, en twee die dat niet zijn.",
+      "exercises": [
+        {
+          "id": "m.mod.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat staat er telkens achter het eerste werkwoord?",
+          "given": "Moram raditi.\nMogu doći.\nSmijem ući.\nHoću spavati.\n\nNe moram raditi.\nNe smijem ući.",
+          "body_nl": "Ik moet werken.\nIk kan komen.\nIk mag binnenkomen.\nIk wil slapen.\n\nIk hoef niet te werken.\nIk mag niet binnenkomen.",
+          "targets": []
+        },
+        {
+          "id": "m.mod.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "De bovenste vier zijn een cadeautje: het Kroatisch bouwt ze precies als het Nederlands. Eerst het werkwoord dat vervoegd is, dan het **hele werkwoord** — de vorm zoals hij in het woordenboek staat.\n\n*Moram* **raditi**. — Ik moet **werken**.\n\nEr komt zelfs geen *te* tussen, zoals in «ik hoop **te** komen». Gewoon achter elkaar.\n\nKijk nu naar de onderste twee. In het Nederlands staan daar bijna dezelfde woorden:\n«Ik **hoef niet** te werken» en «Ik **mag niet** binnenkomen».\n\nIn het Kroatisch zijn dat **twee verschillende werkwoorden**: *ne moram* en *ne smijem*. En daar gaat het mis, want in het Nederlands zeggen we in de spreektaal voor allebei «ik moet niet».",
+          "targets": ["g.mod.modal", "v.06.morati", "v.06.moci", "v.06.smjeti", "v.06.htjeti"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de vier rijtjes, dan het verschil dat je moet horen.",
+      "exercises": [
+        {
+          "id": "m.mod.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De vier werkwoorden",
+          "body_nl": "**morati** — moeten: *moram, moraš, mora, moramo, morate, moraju*\nGewone -am-groep, niets bijzonders.\n\n**moći** — kunnen: *mogu, možeš, može, možemo, možete, mogu*\nLet op de ik-vorm *mogu* en de wisseling g/ž. De zij-vorm van het meervoud is óók *mogu*.\n\n**smjeti** — mogen: *smijem, smiješ, smije, smijemo, smijete, smiju*\n\n**htjeti** — willen: *hoću, hoćeš, hoće, hoćemo, hoćete, hoće*\nOntkennend heeft dit werkwoord een eigen vorm: **neću, nećeš, neće, nećemo, nećete, neće**. Niet «ne hoću».\n\nEn een vijfde die je vaak hoort:\n**trebati** — nodig hebben, moeten: *trebam, trebaš, treba…*\n*Trebam odmor.* — Ik heb rust nodig.\n*Trebam raditi.* — Ik moet werken (wat zachter dan *moram*).",
+          "table": {
+            "caption_nl": "De vier, in de ik-vorm en de ontkenning",
+            "columns": ["ik", "ontkennend", "betekenis"],
+            "rows": [
+              { "label": "morati", "cells": ["moram", "ne moram", "moeten / hoeven niet"] },
+              { "label": "moći", "cells": ["mogu", "ne mogu", "kunnen / niet kunnen"] },
+              { "label": "smjeti", "cells": ["smijem", "ne smijem", "mogen / niet mogen"] },
+              { "label": "htjeti", "cells": ["hoću", "neću", "willen / niet willen"] },
+              { "label": "trebati", "cells": ["trebam", "ne trebam", "nodig hebben, moeten"] }
+            ]
+          },
+          "targets": ["g.mod.modal", "v.06.morati", "v.06.moci", "v.06.smjeti", "v.06.htjeti", "v.06.trebati"]
+        },
+        {
+          "id": "m.mod.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Ne moram tegenover ne smijem — en de constructie die je hier niet gebruikt",
+          "body_nl": "Dit is het punt van deze module:\n\n*Ne moram raditi.* — Ik **hoef** niet te werken. Het mag wel, maar het hoeft niet.\n*Ne smijem raditi.* — Ik **mag** niet werken. Het is verboden.\n\nHet Nederlands zegt in beide gevallen makkelijk «ik moet niet werken», en juist daarom pak je in het Kroatisch het verkeerde werkwoord. Onthoud het aan de betekenis, niet aan de vertaling:\n\n*morati* gaat over **verplichting** — er is niets dat je dwingt.\n*smjeti* gaat over **toestemming** — je hebt geen toestemming.\n\nBij vragen werkt hetzelfde onderscheid:\n*Mogu li…?* — Kan ik…? (lukt het, is het mogelijk)\n*Smijem li…?* — Mag ik…? (heb ik toestemming)\n\nIn de praktijk hoor je *Mogu li* ook wel als beleefde vraag om toestemming, net als in het Nederlands.\n\n**Tot slot iets voor het lezen en luisteren.** Je zult ook horen: «*Moram da radim*». Dat is dezelfde betekenis, maar de constructie hoort bij het Servisch en Bosnisch. In Kroatië zeg je de infinitief: **Moram raditi**. Herken het, gebruik het niet.",
+          "table": {
+            "caption_nl": "Het verschil in de ontkenning",
+            "columns": ["Kroatisch", "Nederlands", "wat het betekent"],
+            "rows": [
+              { "label": "verplichting", "cells": ["Ne moram raditi.", "Ik hoef niet te werken.", "het mag wel"] },
+              { "label": "toestemming", "cells": ["Ne smijem raditi.", "Ik mag niet werken.", "het is verboden"] },
+              { "label": "kunnen", "cells": ["Ne mogu raditi.", "Ik kan niet werken.", "het lukt niet"] },
+              { "label": "willen", "cells": ["Neću raditi.", "Ik wil niet werken.", "eigen ontkende vorm"] }
+            ]
+          },
+          "targets": ["g.mod.modal", "v.06.morati", "v.06.smjeti"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Moet het, of mag het?",
+      "why_nl": "Nog niets maken. Hier gaat het om de betekenis, want dat is waar het onderscheid zit.",
+      "exercises": [
+        {
+          "id": "m.mod.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Ne moram raditi danas.",
+          "nudge": "Morati gaat over verplichting. Wat betekent het als die verplichting er niet is?",
+          "answer": "Ik hoef vandaag niet te werken — het mag wel.",
+          "distractors": [
+            "Ik mag vandaag niet werken.",
+            "Ik kan vandaag niet werken.",
+            "Ik wil vandaag niet werken."
+          ],
+          "explain_nl": "Geen verplichting is iets anders dan een verbod. Dit is precies waar het Nederlandse «ik moet niet» je in de war brengt.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Ne smiješ ući.",
+          "nudge": "Smjeti gaat over toestemming.",
+          "answer": "Je mag niet naar binnen — het is verboden.",
+          "distractors": [
+            "Je hoeft niet naar binnen.",
+            "Je kunt er niet in.",
+            "Je wilt er niet in."
+          ],
+          "explain_nl": "Dit is een verbod. Was het «het lukt niet», dan had er ne možeš gestaan.",
+          "targets": ["g.mod.modal", "v.06.smjeti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin zegt dat het niet lukt?",
+          "given": "A: Ne mogu doći.\nB: Ne smijem doći.",
+          "nudge": "Eén gaat over of het kán, de ander over of het mág.",
+          "answer": "A — ne mogu gaat over of het lukt.",
+          "distractors": [
+            "B — ne smijem.",
+            "Allebei.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Ne mogu: het gaat niet, ik heb geen tijd, de trein rijdt niet. Ne smijem: iemand heeft het verboden.",
+          "targets": ["g.mod.modal", "v.06.moci", "v.06.smjeti"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.mod.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er neću en niet ne hoću?",
+          "given": "Neću ići u grad.",
+          "nudge": "Htjeti hoort bij een klein groepje werkwoorden met een eigen ontkende vorm.",
+          "answer": "Omdat htjeti een eigen ontkende vorm heeft, net als biti met nisam.",
+          "distractors": [
+            "Omdat het over de toekomst gaat.",
+            "Omdat neću korter is.",
+            "Ne hoću is ook goed."
+          ],
+          "explain_nl": "Drie werkwoorden plakken hun ontkenning vast: biti → nisam, imati → nemam, htjeti → neću.",
+          "targets": ["g.mod.modal", "g.mod.neg_verb", "v.06.htjeti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin zeg je in Kroatië?",
+          "given": "A: Moram raditi.\nB: Moram da radim.",
+          "nudge": "Eén van de twee gebruikt het hele werkwoord, de ander een vervoegde vorm met da.",
+          "answer": "A — in Kroatië komt de infinitief achter het modale werkwoord.",
+          "distractors": [
+            "B — die klinkt natuurlijker.",
+            "Allebei even gewoon in Kroatië.",
+            "Geen van beide."
+          ],
+          "explain_nl": "B is niet onbegrijpelijk, integendeel — je zult hem vaak horen. Maar hij hoort bij het Servisch en Bosnisch.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat vraagt deze zin?",
+          "given": "Smijem li pušiti ovdje?",
+          "nudge": "Welk van de vier werkwoorden staat er, en waar gaat dat over?",
+          "answer": "Mag ik hier roken? — een vraag om toestemming.",
+          "distractors": [
+            "Kan ik hier roken?",
+            "Moet ik hier roken?",
+            "Wil ik hier roken?"
+          ],
+          "explain_nl": "Met smjeti vraag je expliciet of het toegestaan is. Met mogu li vraag je of het kan — en in de praktijk vaak ook of het mag.",
+          "targets": ["g.mod.modal", "v.06.smjeti"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: welk van de vier, en in welke vorm?",
+      "exercises": [
+        {
+          "id": "m.mod.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik moet.",
+          "given": "___ (morati) raditi.",
+          "answer": "Moram",
+          "accepts": ["Moram", "moram"],
+          "explain_nl": "Gewone -am-groep.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.mod.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: jij kunt.",
+          "given": "___ (moći) doći sutra?",
+          "answer": "Možeš",
+          "accepts": ["Možeš", "možeš"],
+          "hint": "De ik-vorm is mogu, maar de rest heeft een ž.",
+          "explain_nl": "Mogu, možeš, može — de g wordt een ž.",
+          "targets": ["g.mod.modal", "v.06.moci"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.mod.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: wij willen.",
+          "given": "___ (htjeti) kavu.",
+          "answer": "Hoćemo",
+          "accepts": ["Hoćemo", "hoćemo"],
+          "explain_nl": "Hoću, hoćeš, hoće, hoćemo.",
+          "targets": ["g.mod.modal", "v.06.htjeti"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.mod.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik wil niet.",
+          "given": "___ (htjeti, ontkennend) ići.",
+          "answer": "Neću",
+          "accepts": ["Neću", "neću"],
+          "hint": "Dit werkwoord plakt zijn ontkenning vast.",
+          "explain_nl": "Neću, nećeš, neće — geen «ne hoću».",
+          "targets": ["g.mod.modal", "v.06.htjeti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik hoef niet te werken.",
+          "given": "___ raditi.",
+          "answer": "Ne moram",
+          "accepts": ["Ne moram", "ne moram"],
+          "hint": "Hoeven niet gaat over verplichting.",
+          "explain_nl": "Geen verplichting → ne moram.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik mag niet werken.",
+          "given": "___ raditi.",
+          "answer": "Ne smijem",
+          "accepts": ["Ne smijem", "ne smijem"],
+          "hint": "Mogen niet gaat over toestemming.",
+          "explain_nl": "Verbod → ne smijem.",
+          "targets": ["g.mod.modal", "v.06.smjeti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zij moeten.",
+          "given": "___ (morati) učiti.",
+          "answer": "Moraju",
+          "accepts": ["Moraju", "moraju"],
+          "explain_nl": "De -am-groep krijgt in het meervoud -aju.",
+          "targets": ["g.mod.modal", "v.06.morati", "v.09.uciti"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.mod.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik kan vandaag niet komen.",
+          "answer": "Ne mogu doći danas.",
+          "accepts": ["Ne mogu doći danas.", "Ne mogu doći danas", "Danas ne mogu doći.", "Danas ne mogu doći"],
+          "explain_nl": "Het gaat over of het lukt, dus moći — en daarachter de infinitief.",
+          "targets": ["g.mod.modal", "v.06.moci", "v.06.danas"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.mod.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Moram radim.",
+          "answer": "Moram raditi.",
+          "accepts": ["Moram raditi.", "Moram raditi"],
+          "explain_nl": "Achter een modaal werkwoord komt de infinitief, niet nog een vervoegde vorm.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.mod.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ne hoću ići u grad.",
+          "answer": "Neću ići u grad.",
+          "accepts": ["Neću ići u grad.", "Neću ići u grad"],
+          "explain_nl": "Htjeti heeft een eigen ontkende vorm.",
+          "targets": ["g.mod.modal", "v.06.htjeti"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de toekomende tijd, want htjeti zit daar ook in — en naast de korte woordjes.",
+      "exercises": [
+        {
+          "id": "m.mod.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin zegt dat het verboden is?",
+          "answer": "Ovdje se ne smije pušiti.",
+          "distractors": [
+            "Ovdje se ne mora pušiti.",
+            "Ovdje se ne može pušiti.",
+            "Ovdje se neće pušiti."
+          ],
+          "explain_nl": "Een bord met een verbod gebruikt smjeti. De tweede zou betekenen dat roken niet verplicht is.",
+          "targets": ["g.mod.modal", "v.06.smjeti"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik moet je iets zeggen.",
+          "given": "___ ti nešto reći.",
+          "answer": "Moram",
+          "accepts": ["Moram", "moram"],
+          "hint": "Het korte woordje ti staat op de tweede plek, dus het modale werkwoord staat vooraan.",
+          "explain_nl": "Moram staat vooraan, ti op de tweede plek, en de infinitief reći achteraan.",
+          "targets": ["g.mod.modal", "g.mod.clitic_order", "v.06.morati"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Mag ik hier zitten?",
+          "answer": "Smijem li sjesti ovdje?",
+          "accepts": ["Smijem li sjesti ovdje?", "Smijem li sjesti ovdje", "Smijem li ovdje sjesti?", "Smijem li ovdje sjesti"],
+          "explain_nl": "Toestemming vragen doe je met smjeti, en li staat op de tweede plek.",
+          "targets": ["g.mod.modal", "g.mod.q_words", "v.06.smjeti"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin gaat over de toekomst en niet over willen?",
+          "answer": "Radit ću sutra.",
+          "distractors": [
+            "Hoću raditi.",
+            "Moram raditi sutra.",
+            "Mogu raditi sutra."
+          ],
+          "explain_nl": "Ću is de korte vorm van hoću en maakt de toekomende tijd. Hoću raditi is echt «ik wil werken».",
+          "targets": ["g.mod.modal", "g.mod.futur", "v.06.htjeti"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "De spreker bedoelt dat het verboden is. Er staat één fout in.",
+          "given": "Ovdje ne moraš parkirati.",
+          "answer": "Ovdje ne smiješ parkirati.",
+          "accepts": ["Ovdje ne smiješ parkirati.", "Ovdje ne smiješ parkirati"],
+          "hint": "Verplichting of toestemming?",
+          "explain_nl": "Zoals het er stond, betekende het dat parkeren niet verplicht is — wat niemand ooit bedoelt.",
+          "targets": ["g.mod.modal", "v.06.smjeti"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk modaal werkwoord: gaat het over moeten, kunnen, mogen of willen?",
+      "text_hr": "U petak moram raditi do šest sati. Poslije hoću ići na more, ali ne mogu jer nemam auto. Marko kaže da me može odvesti, ali on ne smije voziti — izgubio je vozačku dozvolu prošli mjesec. «Ne moraš ići u petak», kaže mi. «Možeš doći u subotu, kad imam vremena.» Ima pravo. Ne moram žuriti. More neće pobjeći.",
+      "translation_nl": "Op vrijdag moet ik tot zes uur werken. Daarna wil ik naar zee, maar dat kan ik niet want ik heb geen auto. Marko zegt dat hij me kan brengen, maar hij mag niet rijden — hij is vorige maand zijn rijbewijs kwijtgeraakt. «Je hoeft niet op vrijdag te gaan,» zegt hij tegen me. «Je kunt zaterdag komen, als ik tijd heb.» Hij heeft gelijk. Ik hoef me niet te haasten. De zee loopt niet weg.",
+      "exercises": [
+        {
+          "id": "m.mod.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waarom kan Marko niet rijden?",
+          "answer": "Hij is zijn rijbewijs kwijt.",
+          "distractors": ["Hij heeft geen auto.", "Hij moet werken.", "Hij wil niet."],
+          "explain_nl": "«Izgubio je vozačku dozvolu prošli mjesec.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.mod.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «ne mogu» en «ne smije». Waarom niet twee keer hetzelfde?",
+          "given": "Hoću ići na more, ali ne mogu jer nemam auto. Marko me može odvesti, ali on ne smije voziti.",
+          "nudge": "Bij de een ontbreekt iets praktisch, bij de ander ontbreekt toestemming.",
+          "answer": "Bij de spreker lukt het niet; bij Marko is het verboden.",
+          "distractors": [
+            "Het is hetzelfde; de schrijver wisselt af.",
+            "Ne mogu hoort bij ik en ne smije bij hij.",
+            "Ne smije is beleefder."
+          ],
+          "explain_nl": "Geen auto is een praktisch probleem — ne mogu. Geen rijbewijs is een verbod — ne smije. Precies het onderscheid van deze module, in één alinea.",
+          "targets": ["g.mod.modal", "v.06.moci", "v.06.smjeti"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat zegt Marko met «Ne moraš ići u petak»?",
+          "given": "«Ne moraš ići u petak», kaže mi. «Možeš doći u subotu.»",
+          "nudge": "Verbiedt hij iets, of neemt hij een verplichting weg?",
+          "answer": "Dat het niet hoeft — vrijdag is geen verplichting.",
+          "distractors": [
+            "Dat het verboden is om vrijdag te gaan.",
+            "Dat het onmogelijk is om vrijdag te gaan.",
+            "Dat hij niet wil dat je vrijdag gaat."
+          ],
+          "explain_nl": "Had hij het willen verbieden, dan had er ne smiješ gestaan. Nu haalt hij alleen de druk weg.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.mod.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "U petak ___ (morati) raditi do šest sati.",
+          "answer": "moram",
+          "accepts": ["moram"],
+          "explain_nl": "Ik-vorm van morati, met de infinitief raditi erachter.",
+          "targets": ["g.mod.modal", "v.06.morati"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.mod.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen: iets wat je moet, iets wat je niet hoeft, en iets wat niet mag.",
+          "model_answer": "Moram učiti. Ne moram raditi u subotu. Ovdje se ne smije pušiti.",
+          "rubric_nl": [
+            "Achter elk modaal werkwoord staat een infinitief.",
+            "«Hoeft niet» is ne moram, niet ne smijem.",
+            "«Mag niet» is ne smijem, niet ne moram."
+          ],
+          "explain_nl": "Wie deze drie uit elkaar houdt, maakt het misverstand niet meer waar het Nederlands je in duwt.",
+          "targets": ["g.mod.modal"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum MODAL, gebouwd op les 6"
+}

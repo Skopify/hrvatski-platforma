@@ -1,0 +1,510 @@
+{
+  "code": "COMPARISON",
+  "rank": 16,
+  "band": "Verfijnen",
+  "title_hr": "Veći, najveći, veći od",
+  "title_nl": "Groter, grootst",
+  "cefr": "A2/B1",
+  "blurb_nl": "Vergelijken gaat bijna als in het Nederlands: een uitgang erbij voor «groter», en er nog iets vóór voor «grootst». Het handige is dat die tweede stap gratis is — wie de vergrotende trap kent, kent de overtreffende ook. Het lastige zijn vier woorden die je elke dag gebruikt en die alles omgooien.",
+  "prerequisites": ["ADJ-AGREE", "GEN-POSS"],
+  "can_do_nl": [
+    "Ik kan zeggen dat iets groter, ouder of mooier is.",
+    "Ik kan de overtreffende trap maken door naj- ervoor te zetten.",
+    "Ik ken de vier onregelmatige: bolji, gori, veći, manji.",
+    "Ik kan twee dingen vergelijken met od of met nego.",
+    "Ik kan ook bijwoorden vergelijken: brže, bolje."
+  ],
+  "grammar": {
+    "id": "g.mod.comparison",
+    "code": "COMPARISON",
+    "title_nl": "Trappen van vergelijking",
+    "cefr": "A2/B1",
+    "explanation_nl": "De vergrotende trap krijgt meestal **-iji**: *star → stariji*. De overtreffende trap is die vorm met **naj-** ervoor: *najstariji*. Vergelijken doe je met **od** plus de genitief, of met **nego**.",
+    "contrast_nl": "Het Nederlands doet hetzelfde met -er en -st, dus de bouw voelt vertrouwd. Twee dingen zijn anders: de overtreffende trap is hier altijd de vergrotende met een voorvoegsel — je hoeft niets nieuws te leren — en voor «dan» zijn er twee constructies, waarvan er één een naamval vraagt.",
+    "paradigm": {
+      "caption_nl": "De drie trappen",
+      "columns": ["gewoon", "groter", "grootst"],
+      "rows": [
+        { "label": "regelmatig", "cells": ["star — oud", "stariji", "najstariji"] },
+        { "label": "regelmatig", "cells": ["nov — nieuw", "noviji", "najnoviji"] },
+        { "label": "op -ši", "cells": ["lijep — mooi", "ljepši", "najljepši"] },
+        { "label": "onregelmatig", "cells": ["dobar — goed", "bolji", "najbolji"] },
+        { "label": "onregelmatig", "cells": ["velik — groot", "veći", "najveći"] },
+        { "label": "onregelmatig", "cells": ["mali — klein", "manji", "najmanji"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De overtreffende trap is nooit een nieuwe vorm: het is altijd naj- plus de vergrotende.",
+      "Vier veelgebruikte woorden zijn onregelmatig: dobar → bolji, loš → gori, velik → veći, mali → manji.",
+      "Na od komt de genitief: stariji od Marka. Na nego blijft het woord in dezelfde vorm: stariji nego Marko.",
+      "Vergrotende trappen buigen als lange bijvoeglijke naamwoorden: stariji, starija, starije.",
+      "Bijwoorden vergelijken ook: brzo → brže, dobro → bolje, loše → gore."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes woorden in drie trappen. Kijk waar de tweede en de derde vandaan komen.",
+      "exercises": [
+        {
+          "id": "m.comp.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Hoe ontstaat de derde kolom?",
+          "given": "star — stariji — najstariji\nnov — noviji — najnoviji\nlijep — ljepši — najljepši\n\ndobar — bolji — najbolji\nvelik — veći — najveći\nmali — manji — najmanji",
+          "body_nl": "oud — ouder — oudst\nnieuw — nieuwer — nieuwst\nmooi — mooier — mooist\n\ngoed — beter — best\ngroot — groter — grootst\nklein — kleiner — kleinst",
+          "targets": []
+        },
+        {
+          "id": "m.comp.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "De derde kolom is de tweede met **naj-** ervoor. Elke keer, zonder uitzondering.\n\n*stariji* → *najstariji*\n*bolji* → *najbolji*\n*veći* → *najveći*\n\nDat is goed nieuws: je hoeft de overtreffende trap nooit apart te leren. Kun je «ouder» zeggen, dan kun je «oudst» ook.\n\nDe tweede kolom is het echte werk. Meestal komt er **-iji** bij: *star → stariji*, *nov → noviji*. Soms gebeurt er iets anders — *lijep* wordt *ljepši* — en bij vier woorden verandert alles: *dobar* wordt *bolji*, *velik* wordt *veći*.\n\nHerken je dat? Het Nederlands doet precies hetzelfde met goed → beter en veel → meer. De onregelmatige zijn in elke taal de woorden die je het vaakst gebruikt.",
+          "targets": ["g.mod.comparison", "v.04.star", "v.04.dobar", "v.04.velik"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst hoe je de vergrotende trap maakt, dan hoe je twee dingen tegenover elkaar zet.",
+      "exercises": [
+        {
+          "id": "m.comp.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De vergrotende trap, en naj- erbovenop",
+          "body_nl": "**De hoofdregel is -iji:**\n*star → stariji*, *nov → noviji*, *jeftin → jeftiniji*, *hladan → hladniji*, *topao → topliji*.\n\n**Een kleinere groep krijgt -ji**, dat samensmelt met de laatste medeklinker:\n*jak → jači*, *drag → draži*, *skup → skuplji*, *visok → viši*, *brz → brži*.\n\n**Drie krijgen -ši:**\n*lijep → ljepši*, *lak → lakši*, *mek → mekši*.\n\n**En vier gooien alles om:**\n*dobar → bolji*, *loš → gori*, *velik → veći*, *mali → manji*.\n\nDie laatste vier zijn de enige die je echt uit je hoofd moet leren — en het zijn precies de woorden die je het vaakst nodig hebt.\n\n**De overtreffende trap** is altijd de vergrotende met **naj-**:\n*najstariji, najbolji, najveći, najljepši*.\n\nEn omdat het bijvoeglijke naamwoorden blijven, buigen ze mee: *stariji brat*, *starija sestra*, *starije dijete*.",
+          "table": {
+            "caption_nl": "De drie trappen",
+            "columns": ["gewoon", "groter", "grootst"],
+            "rows": [
+              { "label": "-iji", "cells": ["star — oud", "stariji", "najstariji"] },
+              { "label": "-iji", "cells": ["jeftin — goedkoop", "jeftiniji", "najjeftiniji"] },
+              { "label": "-ji", "cells": ["visok — hoog", "viši", "najviši"] },
+              { "label": "-ši", "cells": ["lijep — mooi", "ljepši", "najljepši"] },
+              { "label": "onregelmatig", "cells": ["dobar — goed", "bolji", "najbolji"] },
+              { "label": "onregelmatig", "cells": ["loš — slecht", "gori", "najgori"] },
+              { "label": "onregelmatig", "cells": ["velik — groot", "veći", "najveći"] },
+              { "label": "onregelmatig", "cells": ["mali — klein", "manji", "najmanji"] }
+            ]
+          },
+          "targets": ["g.mod.comparison", "v.04.star", "v.09.jeftin", "v.04.visok", "v.04.lijep", "v.04.dobar", "v.04.los", "v.04.velik", "v.04.malen"]
+        },
+        {
+          "id": "m.comp.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "«Dan» op twee manieren — en vergelijken met bijwoorden",
+          "body_nl": "Om te zeggen waarmee je vergelijkt, heb je twee constructies. Ze betekenen hetzelfde:\n\n**od + genitief**\n*Ana je starija* **od Marka**. — Ana is ouder dan Marko.\n*Zagreb je veći* **od Splita**. — Zagreb is groter dan Split.\n\n**nego + dezelfde vorm**\n*Ana je starija* **nego Marko**.\n*Vlak je brži* **nego autobus**.\n\nHet verschil zit alleen in de vorm van het woord erna. Na *od* gaat het woord in de genitief; na *nego* verandert er niets.\n\nIn de praktijk is *od* korter en hoor je die het vaakst bij twee losse dingen. *Nego* gebruik je als je hele zinnen of andere woordsoorten vergelijkt: *Bolje je hodati nego čekati* — beter lopen dan wachten.\n\n**Bijwoorden doen mee.** Ook *brzo*, *dobro* en *loše* hebben trappen, en die eindigen op **-e**:\n*brzo → brže* — snel, sneller\n*dobro → bolje* — goed, beter\n*loše → gore* — slecht, slechter\n\n*Trči brže!* — Ren sneller!\n*Danas se osjećam bolje.* — Vandaag voel ik me beter.",
+          "table": {
+            "caption_nl": "De twee manieren om «dan» te zeggen",
+            "columns": ["zin", "wat er gebeurt"],
+            "rows": [
+              { "label": "od", "cells": ["Ana je starija od Marka.", "genitief na od"] },
+              { "label": "od", "cells": ["Zagreb je veći od Splita.", "genitief na od"] },
+              { "label": "nego", "cells": ["Ana je starija nego Marko.", "vorm blijft gelijk"] },
+              { "label": "nego", "cells": ["Vlak je brži nego autobus.", "vorm blijft gelijk"] }
+            ]
+          },
+          "targets": ["g.mod.comparison", "g.mod.genitive", "v.04.brz"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wie is groter?",
+      "why_nl": "Nog niets maken. Hier gaat het erom dat je uit de vorm haalt wie of wat er meer van heeft.",
+      "exercises": [
+        {
+          "id": "m.comp.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie is ouder?",
+          "given": "Ana je starija od Marka.",
+          "nudge": "Kijk waar het woordje od staat. Wie komt daarna?",
+          "answer": "Ana.",
+          "distractors": ["Marko.", "Ze zijn even oud.", "Dat staat er niet."],
+          "explain_nl": "Wat na od staat, is waarmee vergeleken wordt. De vergrotende trap hoort bij het onderwerp.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.comp.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk woord komt bolji?",
+          "given": "Ovo je bolji restoran.",
+          "nudge": "Er is geen letter die je terugziet. Dit is er één om uit je hoofd te leren.",
+          "answer": "Van dobar — goed.",
+          "distractors": ["Van bol.", "Van veliki.", "Van bolestan."],
+          "explain_nl": "Dobar → bolji, net als goed → beter. De onregelmatige zijn overal de woorden die je het vaakst gebruikt.",
+          "targets": ["g.mod.comparison", "v.04.dobar"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.comp.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent najveći?",
+          "given": "Zagreb je najveći grad u Hrvatskoj.",
+          "nudge": "Haal het voorvoegsel naj- weg. Wat houd je over?",
+          "answer": "De grootste — naj- plus veći.",
+          "distractors": ["Groter.", "Heel groot.", "Bijna de grootste."],
+          "explain_nl": "Naj- maakt van elke vergrotende trap een overtreffende. Er komt nooit een andere vorm bij kijken.",
+          "targets": ["g.mod.comparison", "v.04.velik", "v.05.grad"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.comp.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke twee zinnen betekenen hetzelfde?",
+          "given": "A: Vlak je brži od autobusa.\nB: Vlak je brži nego autobus.\nC: Autobus je brži od vlaka.",
+          "nudge": "Let op welk woord er ná od of nego staat.",
+          "answer": "A en B — allebei is de trein sneller.",
+          "distractors": ["A en C.", "B en C.", "Alle drie."],
+          "explain_nl": "Het verschil tussen A en B is alleen de vorm: na od komt de genitief autobusa, na nego blijft het autobus. C draait de vergelijking om.",
+          "targets": ["g.mod.comparison", "v.04.brz"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er Splita en niet Split?",
+          "given": "Zagreb je veći od Splita.",
+          "nudge": "Welke naamval vraagt het woordje od?",
+          "answer": "Omdat od de genitief vraagt.",
+          "distractors": [
+            "Omdat Split kleiner is.",
+            "Omdat veći een a nodig heeft.",
+            "Dat is een spelfout."
+          ],
+          "explain_nl": "Od is hetzelfde voorzetsel dat je uit «od Zagreba do Splita» kent. Bij een vergelijking gedraagt het zich niet anders.",
+          "targets": ["g.mod.comparison", "g.mod.genitive"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Danas se osjećam bolje.",
+          "nudge": "Bolje eindigt op een e. Hoort het bij een zelfstandig naamwoord, of bij het werkwoord?",
+          "answer": "Vandaag voel ik me beter — bolje hoort bij het werkwoord.",
+          "distractors": [
+            "Vandaag ben ik de beste.",
+            "Vandaag voel ik een betere.",
+            "Vandaag is beter."
+          ],
+          "explain_nl": "Bijwoorden vergelijken ook, en die eindigen op -e: dobro → bolje, brzo → brže.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: welke uitgang hoort bij dit woord, en is het een van de vier onregelmatige?",
+      "exercises": [
+        {
+          "id": "m.comp.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vergrotende trap in.",
+          "given": "Moj brat je ___ (star) od mene.",
+          "answer": "stariji",
+          "accepts": ["stariji"],
+          "explain_nl": "Hoofdregel: -iji.",
+          "targets": ["g.mod.comparison", "v.04.star"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.comp.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vergrotende trap in.",
+          "given": "Ovaj auto je ___ (jeftin).",
+          "answer": "jeftiniji",
+          "accepts": ["jeftiniji"],
+          "explain_nl": "Ook hier gewoon -iji.",
+          "targets": ["g.mod.comparison", "v.09.jeftin"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.comp.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vergrotende trap in.",
+          "given": "Zagreb je ___ (velik) od Splita.",
+          "answer": "veći",
+          "accepts": ["veći"],
+          "hint": "Dit is er één van de vier onregelmatige.",
+          "explain_nl": "Velik → veći.",
+          "targets": ["g.mod.comparison", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.comp.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de vergrotende trap in.",
+          "given": "Ovo vino je ___ (dobar).",
+          "answer": "bolje",
+          "accepts": ["bolje"],
+          "hint": "Vino is onzijdig.",
+          "explain_nl": "Dobar → bolji, en bij een onzijdig woord wordt dat bolje.",
+          "targets": ["g.mod.comparison", "v.04.dobar"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de overtreffende trap in.",
+          "given": "Ovo je ___ (dobar) restoran u gradu.",
+          "answer": "najbolji",
+          "accepts": ["najbolji"],
+          "explain_nl": "Naj- plus de vergrotende trap.",
+          "targets": ["g.mod.comparison", "v.04.dobar"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.comp.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de overtreffende trap in.",
+          "given": "To je ___ (lijep) grad u Hrvatskoj.",
+          "answer": "najljepši",
+          "accepts": ["najljepši"],
+          "hint": "Lijep hoort bij de groep op -ši.",
+          "explain_nl": "Lijep → ljepši → najljepši.",
+          "targets": ["g.mod.comparison", "v.04.lijep"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan met od.",
+          "given": "Ana je viša ___ (Marko).",
+          "answer": "od Marka",
+          "accepts": ["od Marka"],
+          "hint": "Na od komt de genitief.",
+          "explain_nl": "Od vraagt de genitief: od Marka.",
+          "targets": ["g.mod.comparison", "g.mod.genitive", "v.04.visok"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Deze film is slechter.",
+          "answer": "Ovaj film je gori.",
+          "accepts": ["Ovaj film je gori.", "Ovaj film je gori"],
+          "hint": "Loš is onregelmatig.",
+          "explain_nl": "Loš → gori.",
+          "targets": ["g.mod.comparison", "v.04.los", "v.05.film"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Zagreb je veći od Split.",
+          "answer": "Zagreb je veći od Splita.",
+          "accepts": ["Zagreb je veći od Splita.", "Zagreb je veći od Splita"],
+          "explain_nl": "Na od komt de genitief.",
+          "targets": ["g.mod.comparison", "g.mod.genitive"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.comp.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je najdobri restoran.",
+          "answer": "Ovo je najbolji restoran.",
+          "accepts": ["Ovo je najbolji restoran.", "Ovo je najbolji restoran"],
+          "explain_nl": "Naj- gaat vóór de vergrotende trap, en die is bolji — niet dobri.",
+          "targets": ["g.mod.comparison", "v.04.dobar"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de gewone bijvoeglijke naamwoorden en de naamvallen die eromheen staan.",
+      "exercises": [
+        {
+          "id": "m.comp.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Imam ___ sestru.",
+          "answer": "stariju",
+          "distractors": ["starija", "starije", "stariji"],
+          "explain_nl": "Sestru staat in de accusatief, dus de vergrotende trap buigt mee: stariju.",
+          "targets": ["g.mod.comparison", "g.mod.acc_anim", "v.01.sestra"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.comp.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in.",
+          "given": "Ovaj stan je ___ (velik), ali ___ (skup).",
+          "answer": "veći skuplji",
+          "accepts": ["veći skuplji"],
+          "hint": "Eén onregelmatige en één met -ji dat samensmelt.",
+          "explain_nl": "Velik → veći, skup → skuplji.",
+          "targets": ["g.mod.comparison", "v.04.velik", "v.04.skup"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.comp.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "De trein is sneller dan de bus.",
+          "answer": "Vlak je brži od autobusa.",
+          "accepts": [
+            "Vlak je brži od autobusa.",
+            "Vlak je brži od autobusa",
+            "Vlak je brži nego autobus.",
+            "Vlak je brži nego autobus"
+          ],
+          "explain_nl": "Allebei goed: met od komt de genitief autobusa, met nego blijft het autobus.",
+          "targets": ["g.mod.comparison", "v.04.brz", "v.01.autobus"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin vergelijkt twee handelingen?",
+          "answer": "Bolje je hodati nego čekati.",
+          "distractors": [
+            "Ovo je bolji restoran.",
+            "Ana je bolja od Marka.",
+            "Najbolji je onaj u centru."
+          ],
+          "explain_nl": "Bij twee werkwoorden past nego; met od zou het niet kunnen, want een infinitief heeft geen genitief.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.comp.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Moja sestra je najstarija od ja i ona je više.",
+          "answer": "Moja sestra je starija od mene i ona je viša.",
+          "accepts": [
+            "Moja sestra je starija od mene i ona je viša.",
+            "Moja sestra je starija od mene i ona je viša"
+          ],
+          "hint": "Er worden twee mensen vergeleken, dus geen overtreffende trap. En na od komt de genitief van ja.",
+          "explain_nl": "Bij twee dingen gebruik je de vergrotende trap; naj- pas je toe bij een hele groep. Van ja is de genitief mene. En viša is de vrouwelijke vorm van viši.",
+          "targets": ["g.mod.comparison", "v.04.star", "v.04.visok"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elke vergelijking: welk woord zit eronder, en waarmee wordt vergeleken?",
+      "text_hr": "Tražim stan u Zagrebu. Prvi je bio veći, ali i skuplji. Drugi je jeftiniji, ali je daleko od centra. Treći mi se najviše sviđa: manji je od prvoga, ali je noviji i svjetliji. Vlasnica kaže da je zgrada starija nego što izgleda. «Stariji stanovi su bolji», kaže. «Zidovi su deblji, pa je zimi toplije.» Mislim da ima pravo. Sutra idem opet, ovaj put s bratom — on je praktičniji od mene.",
+      "translation_nl": "Ik zoek een appartement in Zagreb. Het eerste was groter, maar ook duurder. Het tweede is goedkoper, maar het ligt ver van het centrum. Het derde bevalt me het meest: het is kleiner dan het eerste, maar nieuwer en lichter. De eigenaresse zegt dat het gebouw ouder is dan het eruitziet. «Oudere appartementen zijn beter,» zegt ze. «De muren zijn dikker, dus is het 's winters warmer.» Ik denk dat ze gelijk heeft. Morgen ga ik weer, dit keer met mijn broer — hij is praktischer dan ik.",
+      "exercises": [
+        {
+          "id": "m.comp.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk appartement bevalt hem het meest?",
+          "answer": "Het derde.",
+          "distractors": ["Het eerste.", "Het tweede.", "Geen van drie."],
+          "explain_nl": "«Treći mi se najviše sviđa.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.comp.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «manji je od prvoga» en «starija nego što izgleda». Waarom twee verschillende woorden voor «dan»?",
+          "given": "Manji je od prvoga, ali je noviji. Zgrada je starija nego što izgleda.",
+          "nudge": "Bij de een vergelijk je met een ding, bij de ander met een hele zin.",
+          "answer": "Od vergelijkt met een zelfstandig naamwoord in de genitief; nego vergelijkt hier met een hele bijzin.",
+          "distractors": [
+            "Od is voor kleiner en nego voor ouder.",
+            "Nego is beleefder dan od.",
+            "Ze zijn overal verwisselbaar."
+          ],
+          "explain_nl": "Bij twee losse dingen kun je kiezen. Zodra er een werkwoord in het tweede deel staat, kan alleen nego.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.comp.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «pa je zimi toplije». Waarom toplije en niet topliji?",
+          "given": "Zidovi su deblji, pa je zimi toplije.",
+          "nudge": "Hoort dit woord bij een zelfstandig naamwoord, of zegt het hoe iets is?",
+          "answer": "Omdat het geen bijvoeglijk naamwoord is maar een bijwoord: het zegt hoe het er is.",
+          "distractors": [
+            "Omdat zima vrouwelijk is.",
+            "Omdat er twee woorden voor staan.",
+            "Dat is een spelfout voor topliji."
+          ],
+          "explain_nl": "«Het is warmer» heeft geen ding om bij te horen. Bijwoorden in de vergrotende trap eindigen op -e: toplije, bolje, brže.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.comp.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Prvi je bio ___ (velik), ali i ___ (skup).",
+          "answer": "veći skuplji",
+          "accepts": ["veći skuplji"],
+          "explain_nl": "Velik → veći, skup → skuplji.",
+          "targets": ["g.mod.comparison", "v.04.velik", "v.04.skup"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.comp.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Vergelijk twee steden: één zin met od en één met de overtreffende trap.",
+          "model_answer": "Zagreb je veći od Splita. Dubrovnik je najljepši grad u Hrvatskoj.",
+          "rubric_nl": [
+            "De vergrotende trap eindigt op -iji, -ji of -ši, of is een van de vier onregelmatige.",
+            "Na od staat het tweede woord in de genitief.",
+            "De overtreffende trap is naj- plus de vergrotende trap."
+          ],
+          "explain_nl": "Twee zinnen die je in elk gesprek over steden, restaurants of weer nodig hebt — en die je nu allebei kunt maken zonder iets nieuws te leren.",
+          "targets": ["g.mod.comparison"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum COMPARISON, gebouwd op les 4 en 12"
+}

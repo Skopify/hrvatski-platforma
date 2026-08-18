@@ -1,0 +1,504 @@
+{
+  "code": "PRES-CLASSES",
+  "rank": 1,
+  "band": "Beginnen",
+  "title_hr": "Radim, čitam, pišem",
+  "title_nl": "Wat je nu doet",
+  "cefr": "A1",
+  "blurb_nl": "De tegenwoordige tijd, en het enige wat je er echt over moet weten: aan de woordenboekvorm kun je niet zien hoe een werkwoord vervoegt. Čitati wordt čitam en pisati wordt pišem, terwijl ze er hetzelfde uitzien. Daarom leer je elk werkwoord als een paar — en daarna volgt de rest vanzelf.",
+  "prerequisites": [],
+  "can_do_nl": [
+    "Ik kan zeggen wat ik nu doe: radim, čitam, pišem.",
+    "Ik weet dat de ik-vorm de rest van het rijtje bepaalt.",
+    "Ik kan alle zes de vormen maken zodra ik de ik-vorm ken.",
+    "Ik ken de vier werkwoorden die je het vaakst nodig hebt: biti, imati, ići, htjeti.",
+    "Ik weet waarom je ja, ti en on meestal weglaat."
+  ],
+  "grammar": {
+    "id": "g.mod.presens",
+    "code": "PRES-CLASSES",
+    "title_nl": "De tegenwoordige tijd",
+    "cefr": "A1",
+    "explanation_nl": "Er zijn drie groepen, en welke groep een werkwoord heeft zie je aan de **ik-vorm**: **-am**, **-im** of **-em**. Ken je die ene vorm, dan ken je het hele rijtje.",
+    "contrast_nl": "Het Nederlands heeft één vervoeging en je kunt hem afleiden uit de infinitief. Het Kroatisch heeft er drie, en de infinitief verraadt niet welke: *čitati* wordt *čitam*, maar *pisati* wordt *pišem*. Dat is geen slordigheid in de taal maar iets wat je gewoon per werkwoord meeleert.",
+    "paradigm": {
+      "caption_nl": "De drie groepen",
+      "columns": ["-am (čitati)", "-im (raditi)", "-em (pisati)"],
+      "rows": [
+        { "label": "ja", "cells": ["čitam", "radim", "pišem"] },
+        { "label": "ti", "cells": ["čitaš", "radiš", "pišeš"] },
+        { "label": "on/ona", "cells": ["čita", "radi", "piše"] },
+        { "label": "mi", "cells": ["čitamo", "radimo", "pišemo"] },
+        { "label": "vi", "cells": ["čitate", "radite", "pišete"] },
+        { "label": "oni/one", "cells": ["čitaju", "rade", "pišu"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De infinitief bepaalt de groep niet: čitati → čitam, maar pisati → pišem. Leer elk werkwoord als paar.",
+      "De zij-vorm van het meervoud is de enige die je apart moet onthouden: -aju, -e of -u.",
+      "Het persoonlijk voornaamwoord laat je meestal weg; de uitgang zegt al wie het is.",
+      "Ja, ti en on gebruik je wél als je nadruk legt of twee mensen tegenover elkaar zet.",
+      "Biti, ići en htjeti hebben elk hun eigen rijtje; die leer je apart."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Drie werkwoorden die er in het woordenboek bijna hetzelfde uitzien. Kijk wat er in de ik-vorm gebeurt.",
+      "exercises": [
+        {
+          "id": "m.pres.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er tussen links en rechts?",
+          "given": "čitati — čitam\ngledati — gledam\n\nraditi — radim\ngovoriti — govorim\n\npisati — pišem\nići — idem",
+          "body_nl": "lezen — ik lees\nkijken — ik kijk\n\nwerken — ik werk\nspreken — ik spreek\n\nschrijven — ik schrijf\ngaan — ik ga",
+          "targets": []
+        },
+        {
+          "id": "m.pres.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Kijk naar de eerste en de vijfde regel. *Čitati* en *pisati* eindigen allebei op **-ati**. En toch:\n\n*čitati* wordt *čita**m***\n*pisati* wordt *piš**em***\n\nHet ene werkwoord verandert alleen zijn uitgang, het andere verandert ook zijn stam. Aan de woordenboekvorm kun je niet zien welke van de twee je voor je hebt.\n\nDat klinkt vervelender dan het is. Er zijn maar **drie** mogelijkheden — *-am*, *-im*, *-em* — en zodra je de ik-vorm weet, weet je het hele rijtje. Daarom staat in een goede woordenlijst altijd de ik-vorm erbij.\n\nLeer een werkwoord dus nooit alleen: *raditi — radim*, *pisati — pišem*. Twee woorden, één kaartje.",
+          "targets": ["g.mod.presens", "v.05.citati", "v.13.pisati", "v.06.raditi"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén vraag: waar eindigt de ik-vorm op? Daarmee heb je de andere vijf.",
+      "exercises": [
+        {
+          "id": "m.pres.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie groepen, herkenbaar aan de ik-vorm",
+          "body_nl": "**Groep -am** — *čitam, gledam, imam, znam, spavam*\n*čitam, čitaš, čita, čitamo, čitate, čitaju*\n\n**Groep -im** — *radim, govorim, učim, vidim, živim*\n*radim, radiš, radi, radimo, radite, rade*\n\n**Groep -em** — *pišem, idem, pijem, jedem*\n*pišem, pišeš, piše, pišemo, pišete, pišu*\n\nKijk waar ze op elkaar lijken: de *ti*-vorm is altijd de ik-vorm met **-š**, de *mi*-vorm met **-mo**, de *vi*-vorm met **-te**. Die drie hoef je nooit apart te leren.\n\nTwee vormen zijn wél de moeite waard:\nde **hij/zij**-vorm is de kortste van allemaal — *čita*, *radi*, *piše*;\nde **zij**-vorm van het meervoud verschilt per groep — *čitaju*, *rade*, *pišu*.",
+          "table": {
+            "caption_nl": "De drie groepen",
+            "columns": ["-am (čitati)", "-im (raditi)", "-em (pisati)"],
+            "rows": [
+              { "label": "ja", "cells": ["čitam", "radim", "pišem"] },
+              { "label": "ti", "cells": ["čitaš", "radiš", "pišeš"] },
+              { "label": "on/ona", "cells": ["čita", "radi", "piše"] },
+              { "label": "mi", "cells": ["čitamo", "radimo", "pišemo"] },
+              { "label": "vi", "cells": ["čitate", "radite", "pišete"] },
+              { "label": "oni/one", "cells": ["čitaju", "rade", "pišu"] }
+            ]
+          },
+          "targets": ["g.mod.presens", "v.05.citati", "v.06.raditi", "v.13.pisati"]
+        },
+        {
+          "id": "m.pres.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De vier die je het vaakst nodig hebt — en het woordje dat je weglaat",
+          "body_nl": "Vier werkwoorden komen in bijna elke zin voor en hebben elk hun eigen rijtje:\n\n**biti** — zijn: *sam, si, je, smo, ste, su*\n**imati** — hebben: *imam, imaš, ima, imamo, imate, imaju*\n**ići** — gaan: *idem, ideš, ide, idemo, idete, idu*\n**htjeti** — willen: *hoću, hoćeš, hoće, hoćemo, hoćete, hoće*\n\nDie van *biti* zijn korte woordjes die op de tweede plaats in de zin staan; daar is een eigen module voor.\n\n**En dan het weglaten.** In het Nederlands moet je erbij zeggen wie het doet: *ik* werk, *jij* werkt. In het Kroatisch zegt de uitgang dat al:\n\n*Radim.* — Ik werk.\n*Radiš.* — Jij werkt.\n\n*Ja radim* is niet fout, maar het legt nadruk. Je gebruikt het als je iemand tegenover iemand anders zet:\n\n*Ja radim, a ti spavaš.* — Ík werk, en jíj slaapt.",
+          "table": {
+            "caption_nl": "De vier grote",
+            "columns": ["ja", "ti", "on/ona", "mi", "vi", "oni"],
+            "rows": [
+              { "label": "biti", "cells": ["sam", "si", "je", "smo", "ste", "su"] },
+              { "label": "imati", "cells": ["imam", "imaš", "ima", "imamo", "imate", "imaju"] },
+              { "label": "ići", "cells": ["idem", "ideš", "ide", "idemo", "idete", "idu"] },
+              { "label": "htjeti", "cells": ["hoću", "hoćeš", "hoće", "hoćemo", "hoćete", "hoće"] }
+            ]
+          },
+          "targets": ["g.mod.presens", "v.05.imati", "v.07.ici", "v.06.htjeti"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wie doet het?",
+      "why_nl": "Nog niets maken. Hier oefen je wat je bij het lezen nodig hebt: aan de uitgang zien wie er aan het woord is.",
+      "exercises": [
+        {
+          "id": "m.pres.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie werkt er?",
+          "given": "Radimo u Zagrebu.",
+          "nudge": "Er staat geen voornaamwoord. De uitgang -mo vertelt het.",
+          "answer": "Wij.",
+          "distractors": ["Ik.", "Jullie.", "Zij."],
+          "explain_nl": "De uitgang -mo betekent altijd wij, in alle drie de groepen.",
+          "targets": ["g.mod.presens", "v.06.raditi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.pres.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent deze zin?",
+          "given": "Piše pismo.",
+          "nudge": "De kortste vorm van het rijtje hoort bij één bepaalde persoon.",
+          "answer": "Hij of zij schrijft een brief.",
+          "distractors": [
+            "Ik schrijf een brief.",
+            "Zij schrijven een brief.",
+            "Schrijf een brief!"
+          ],
+          "explain_nl": "De hij/zij-vorm is altijd de kortste. Of het hij of zij is, zegt alleen de context.",
+          "targets": ["g.mod.presens", "v.13.pisati", "v.01.pismo"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke twee horen bij dezelfde groep?",
+          "given": "A: čitam\nB: radim\nC: gledam",
+          "nudge": "Kijk alleen naar de laatste twee letters.",
+          "answer": "A en C — allebei op -am.",
+          "distractors": ["A en B.", "B en C.", "Alle drie."],
+          "explain_nl": "Radim eindigt op -im en hoort dus bij een andere groep, met rade in plaats van radaju.",
+          "targets": ["g.mod.presens"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er hier wél ja?",
+          "given": "Ja radim, a ti spavaš.",
+          "nudge": "Wat gebeurt er in deze zin met twee mensen tegelijk?",
+          "answer": "Omdat de twee tegenover elkaar worden gezet — dan leg je nadruk.",
+          "distractors": [
+            "Omdat het anders niet duidelijk is wie er werkt.",
+            "Omdat radim altijd ja nodig heeft.",
+            "Omdat het beleefder klinkt."
+          ],
+          "explain_nl": "Zonder tegenstelling zou je gewoon «Radim» zeggen. Het voornaamwoord is hier het accent, niet de informatie.",
+          "targets": ["g.mod.presens", "v.06.spavati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk werkwoord komt idem?",
+          "given": "Idem u grad.",
+          "nudge": "Aan de vorm zie je het niet. Dit is er één om uit je hoofd te leren.",
+          "answer": "Van ići — gaan.",
+          "distractors": ["Van idati.", "Van imati.", "Van jesti."],
+          "explain_nl": "Ići en idem lijken niet op elkaar, net als «gaan» en «ging» in het Nederlands. Het is een van de vier die je apart leert.",
+          "targets": ["g.mod.presens", "v.07.ici"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort bij oni — zij, meervoud?",
+          "given": "A: rade\nB: radiju\nC: radu",
+          "nudge": "Radim hoort bij de -im-groep. Welke meervoudsuitgang hoort daarbij?",
+          "answer": "A — rade.",
+          "distractors": ["B — radiju.", "C — radu.", "Alle drie komen voor."],
+          "explain_nl": "De -im-groep krijgt in het meervoud -e. Alleen de -am-groep krijgt -aju en de -em-groep -u.",
+          "targets": ["g.mod.presens", "v.06.raditi"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: wat is de ik-vorm, en welke uitgang hoort bij deze persoon?",
+      "exercises": [
+        {
+          "id": "m.pres.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik lees.",
+          "given": "___ (čitati) knjigu.",
+          "answer": "Čitam",
+          "accepts": ["Čitam", "čitam"],
+          "explain_nl": "Groep -am.",
+          "targets": ["g.mod.presens", "v.05.citati"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.pres.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: wij werken.",
+          "given": "___ (raditi) u Splitu.",
+          "answer": "Radimo",
+          "accepts": ["Radimo", "radimo"],
+          "explain_nl": "Ik-vorm radim, wij-vorm radimo.",
+          "targets": ["g.mod.presens", "v.06.raditi"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.pres.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: jij schrijft.",
+          "given": "___ (pisati) pismo.",
+          "answer": "Pišeš",
+          "accepts": ["Pišeš", "pišeš"],
+          "hint": "De ik-vorm is pišem.",
+          "explain_nl": "De ti-vorm is altijd de ik-vorm met -š erachter.",
+          "targets": ["g.mod.presens", "v.13.pisati"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zij spreken.",
+          "given": "___ (govoriti) hrvatski.",
+          "answer": "Govore",
+          "accepts": ["Govore", "govore"],
+          "hint": "De ik-vorm is govorim — welke groep is dat?",
+          "explain_nl": "De -im-groep krijgt in het meervoud -e: govore.",
+          "targets": ["g.mod.presens", "v.09.govoriti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zij kijken.",
+          "given": "___ (gledati) film.",
+          "answer": "Gledaju",
+          "accepts": ["Gledaju", "gledaju"],
+          "hint": "De ik-vorm is gledam.",
+          "explain_nl": "De -am-groep krijgt in het meervoud -aju.",
+          "targets": ["g.mod.presens", "v.05.gledati", "v.05.film"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: ik ga.",
+          "given": "___ (ići) u grad.",
+          "answer": "Idem",
+          "accepts": ["Idem", "idem"],
+          "explain_nl": "Ići is onregelmatig: idem, ideš, ide.",
+          "targets": ["g.mod.presens", "v.07.ici"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.pres.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: jullie hebben.",
+          "given": "___ (imati) vremena?",
+          "answer": "Imate",
+          "accepts": ["Imate", "imate"],
+          "explain_nl": "Imam, imaš, ima, imamo, imate, imaju.",
+          "targets": ["g.mod.presens", "v.05.imati"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.pres.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Laat het voornaamwoord weg.",
+          "given": "Ik woon in Zagreb.",
+          "answer": "Živim u Zagrebu.",
+          "accepts": ["Živim u Zagrebu.", "Živim u Zagrebu"],
+          "explain_nl": "De uitgang -im zegt al dat het over ik gaat; ja hoeft er niet bij.",
+          "targets": ["g.mod.presens", "v.09.zivjeti"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.pres.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Oni radiju u Splitu.",
+          "answer": "Oni rade u Splitu.",
+          "accepts": ["Oni rade u Splitu.", "Oni rade u Splitu", "Rade u Splitu.", "Rade u Splitu"],
+          "explain_nl": "Raditi hoort bij de -im-groep, en die krijgt in het meervoud -e.",
+          "targets": ["g.mod.presens", "v.06.raditi"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Pisam pismo.",
+          "answer": "Pišem pismo.",
+          "accepts": ["Pišem pismo.", "Pišem pismo"],
+          "explain_nl": "Pisati ziet eruit als čitati, maar hoort bij de -em-groep en verandert ook zijn stam.",
+          "targets": ["g.mod.presens", "v.13.pisati"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu met verschillende werkwoorden in één zin, want dat is hoe je ze tegenkomt.",
+      "exercises": [
+        {
+          "id": "m.pres.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in.",
+          "given": "Ja ___ (čitati), a on ___ (pisati).",
+          "answer": "čitam piše",
+          "accepts": ["čitam piše"],
+          "hint": "Twee verschillende groepen.",
+          "explain_nl": "Čitam uit de -am-groep, piše uit de -em-groep. En ja staat er omdat er een tegenstelling is.",
+          "targets": ["g.mod.presens", "v.05.citati", "v.13.pisati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Marko i Ana ___ u Zagrebu.",
+          "answer": "žive",
+          "distractors": ["živiju", "živu", "živim"],
+          "explain_nl": "Živim hoort bij de -im-groep, dus het meervoud is žive.",
+          "targets": ["g.mod.presens", "v.09.zivjeti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Wij gaan naar de stad en drinken koffie.",
+          "answer": "Idemo u grad i pijemo kavu.",
+          "accepts": ["Idemo u grad i pijemo kavu.", "Idemo u grad i pijemo kavu"],
+          "explain_nl": "Twee onregelmatige werkwoorden uit de -em-groep, en grad in de accusatief omdat er beweging is.",
+          "targets": ["g.mod.presens", "g.mod.loc_vs_acc", "v.07.ici", "v.08.piti"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pres.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin legt nadruk op wie het doet?",
+          "answer": "Ja učim, a ti gledaš televiziju.",
+          "distractors": [
+            "Učim hrvatski.",
+            "Učimo zajedno.",
+            "Uče u knjižnici."
+          ],
+          "explain_nl": "Alleen de eerste zet twee mensen tegenover elkaar; daar hoort het voornaamwoord bij. In de andere drie zou het overbodig zijn.",
+          "targets": ["g.mod.presens", "v.09.uciti"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Mi idemo u grad i oni čitaje knjigu.",
+          "answer": "Mi idemo u grad, a oni čitaju knjigu.",
+          "accepts": [
+            "Mi idemo u grad, a oni čitaju knjigu.",
+            "Mi idemo u grad a oni čitaju knjigu.",
+            "Mi idemo u grad i oni čitaju knjigu.",
+            "Idemo u grad, a oni čitaju knjigu."
+          ],
+          "hint": "Eén werkwoordsvorm klopt niet, en er staat een verbindingswoord dat geen tegenstelling maakt.",
+          "explain_nl": "De -am-groep krijgt -aju: čitaju. En bij een tegenstelling gebruik je a, niet i.",
+          "targets": ["g.mod.presens", "v.05.citati"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk werkwoord: wie doet het, en aan welke uitgang zie je dat?",
+      "text_hr": "Zovem se Petra i živim u Zagrebu. Ujutro pijem kavu i čitam novine. Radim u knjižnici, blizu centra. Moj brat studira u Splitu; on uči povijest i piše seminarski rad. Vikendom se čujemo. Ponekad idemo zajedno na more, ali on nema puno vremena. «Radiš previše», kažem mu. «Znam», odgovara, «ali volim to što radim.»",
+      "translation_nl": "Ik heet Petra en ik woon in Zagreb. 's Ochtends drink ik koffie en lees ik de krant. Ik werk in de bibliotheek, dicht bij het centrum. Mijn broer studeert in Split; hij studeert geschiedenis en schrijft een werkstuk. In het weekend spreken we elkaar. Soms gaan we samen naar zee, maar hij heeft niet veel tijd. «Je werkt te veel,» zeg ik tegen hem. «Weet ik,» antwoordt hij, «maar ik hou van wat ik doe.»",
+      "exercises": [
+        {
+          "id": "m.pres.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Waar werkt Petra?",
+          "answer": "In de bibliotheek.",
+          "distractors": ["Op de universiteit.", "In een café.", "In Split."],
+          "explain_nl": "«Radim u knjižnici.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.pres.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «uči» en «piše». Bij welke groepen horen die?",
+          "given": "On uči povijest i piše seminarski rad.",
+          "nudge": "Maak van allebei de ik-vorm. Waar eindigen die op?",
+          "answer": "Uči hoort bij de -im-groep en piše bij de -em-groep.",
+          "distractors": [
+            "Allebei bij de -im-groep.",
+            "Allebei bij de -em-groep.",
+            "Uči bij de -am-groep en piše bij de -im-groep."
+          ],
+          "explain_nl": "Učim en pišem — twee werkwoorden naast elkaar in één zin, uit twee groepen. Dat is de gewone gang van zaken.",
+          "targets": ["g.mod.presens", "v.09.uciti", "v.13.pisati"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pres.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat één keer «on» erbij: «on uči povijest». Waarom?",
+          "given": "Moj brat studira u Splitu; on uči povijest i piše seminarski rad.",
+          "nudge": "Over wie ging de zin daarvoor, en over wie gaat deze?",
+          "answer": "Omdat het onderwerp verandert: eerst ging het over Petra, nu over haar broer.",
+          "distractors": [
+            "Omdat uči anders niet duidelijk is.",
+            "Omdat het over een man gaat.",
+            "Omdat het beleefder klinkt."
+          ],
+          "explain_nl": "Bij een wisseling van onderwerp zet je het voornaamwoord er even bij. Daarna kan het weer weg.",
+          "targets": ["g.mod.presens"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.pres.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Ujutro ___ (piti) kavu i ___ (čitati) novine.",
+          "answer": "pijem čitam",
+          "accepts": ["pijem čitam"],
+          "explain_nl": "Twee groepen naast elkaar: pijem uit de -em-groep, čitam uit de -am-groep.",
+          "targets": ["g.mod.presens", "v.08.piti", "v.05.citati"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.pres.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen over je dag: één met ik, één met wij, één met zij (meervoud).",
+          "model_answer": "Radim u Zagrebu. Idemo u grad. Oni uče hrvatski.",
+          "rubric_nl": [
+            "De ik-vorm eindigt op -am, -im of -em.",
+            "De wij-vorm is de ik-vorm met -mo.",
+            "De zij-vorm van het meervoud past bij de groep: -aju, -e of -u.",
+            "Het voornaamwoord staat er alleen bij als je nadruk legt."
+          ],
+          "explain_nl": "Wie deze drie vormen kan maken, kan van elk werkwoord het hele rijtje maken zodra hij de ik-vorm kent.",
+          "targets": ["g.mod.presens"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum PRES-CLASSES/PRES-BIG4/PRON-PERS, gebouwd op les 5, 6 en 9"
+}
