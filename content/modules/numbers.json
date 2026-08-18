@@ -1,0 +1,501 @@
+{
+  "code": "GEN-NUM",
+  "rank": 15,
+  "band": "Verfijnen",
+  "title_hr": "Dva sata, pet sati",
+  "title_nl": "Tellen: wat er ná het getal gebeurt",
+  "cefr": "A2",
+  "blurb_nl": "In het Nederlands verandert er na een getal niets: één boek, twee boeken, vijf boeken. In het Kroatisch verandert het woord drie keer, en welke vorm je nodig hebt hangt af van het laatste cijfer. Dit heb je nodig bij elke prijs, elke tijd en elke bestelling.",
+  "prerequisites": ["GEN-POSS", "NUM-CARD"],
+  "can_do_nl": [
+    "Ik weet welke vorm er na 1, na 2/3/4 en na 5 en hoger hoort.",
+    "Ik kan de klok zeggen: jedan sat, dva sata, pet sati.",
+    "Ik kan een prijs zeggen en verstaan: dva eura, pet eura.",
+    "Ik weet dat 21 zich als 1 gedraagt en 25 als 5.",
+    "Ik weet dat 11 tot en met 14 de uitzondering zijn.",
+    "Ik kies tussen dva en dvije op geslacht."
+  ],
+  "grammar": {
+    "id": "g.mod.brojevi",
+    "code": "GEN-NUM",
+    "title_nl": "Welke naamval na welk getal",
+    "cefr": "A2",
+    "explanation_nl": "Een getal in het Kroatisch bepaalt de vorm van het woord erachter. Er zijn drie groepen: na **1** de gewone woordenboekvorm, na **2, 3 en 4** de genitief enkelvoud, en na **5 en hoger** de genitief meervoud.",
+    "contrast_nl": "Het Nederlands kent maar twee vormen — enkelvoud na 'één' en meervoud na al de rest. Het Kroatisch heeft er drie, en de grens ligt niet waar je hem verwacht: tussen 4 en 5.",
+    "paradigm": {
+      "caption_nl": "Drie groepen, één woord",
+      "columns": ["student (m)", "žena (v)", "pivo (o)"],
+      "rows": [
+        { "label": "1", "cells": ["jedan student", "jedna žena", "jedno pivo"] },
+        { "label": "2, 3, 4", "cells": ["dva studenta", "dvije žene", "dva piva"] },
+        { "label": "5 en hoger", "cells": ["pet studenata", "pet žena", "pet piva"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "11 tot en met 14 horen bij de groep van 5, niet bij die van 2/3/4: dvanaest studenata.",
+      "Bij samengestelde getallen telt alleen het laatste cijfer: 21 student, 22 studenta, 25 studenata.",
+      "dva is mannelijk en onzijdig, dvije is vrouwelijk. Vanaf tri verandert het getal niet meer mee.",
+      "Bij onzijdige woorden op -o zien de twee genitiefvormen er hetzelfde uit: dva piva én pet piva. Dat is geen fout.",
+      "Het woord voor uur heeft een eigen meervoudsvorm: dva sata maar pet sati."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes keer hetzelfde woord, met een ander getal ervoor. Kijk alleen naar het einde van het woord.",
+      "exercises": [
+        {
+          "id": "m.num.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er met het woord achter het getal?",
+          "given": "jedan student\ndva studenta\ntri studenta\nčetiri studenta\npet studenata\ndeset studenata",
+          "body_nl": "één student\ntwee studenten\ndrie studenten\nvier studenten\nvijf studenten\ntien studenten",
+          "targets": []
+        },
+        {
+          "id": "m.num.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In het Nederlands staat er zes keer bijna hetzelfde: *student* en verder alleen maar *studenten*. Eén grens, tussen 1 en 2.\n\nIn het Kroatisch staan er **drie** vormen, en de tweede grens ligt op een rare plek: tussen **4 en 5**.\n\n*student* — na 1\n*studenta* — na 2, 3 en 4\n*studenata* — na 5 en alles daarboven\n\nDat de grens bij vijf ligt en niet bij twee is de hele verrassing van deze module. De rest is een kwestie van de juiste uitgang kiezen, en die ken je al: het zijn allebei genitiefvormen.",
+          "targets": ["g.mod.brojevi", "g.17.brojevi_padez", "v.01.student"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén vraag: welk cijfer staat er als laatste? Daarmee heb je meteen de vorm.",
+      "exercises": [
+        {
+          "id": "m.num.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie groepen",
+          "body_nl": "**Na 1** staat de gewone woordenboekvorm, en *jedan* past zich aan het geslacht aan:\n*jedan student*, *jedna žena*, *jedno pivo*.\n\n**Na 2, 3 en 4** komt de genitief **enkelvoud** — die ken je van *od*, *do* en *iz*:\n*dva studenta*, *tri knjige*, *četiri piva*.\n\n**Na 5 en hoger** komt de genitief **meervoud**:\n*pet studenata*, *pet knjiga*, *pet piva*.\n\nDe genitief meervoud eindigt bij de meeste woorden op **-a**: *studenata*, *žena*, *knjiga*, *godina*, *eura*.\n\nEén handige bijvangst: bij onzijdige woorden op *-o* zijn beide vormen gelijk — *dva piva* en *pet piva*. Daar hoef je dus niets te kiezen.",
+          "table": {
+            "caption_nl": "Drie groepen, één woord",
+            "columns": ["student (m)", "žena (v)", "pivo (o)"],
+            "rows": [
+              { "label": "1", "cells": ["jedan student", "jedna žena", "jedno pivo"] },
+              { "label": "2, 3, 4", "cells": ["dva studenta", "dvije žene", "dva piva"] },
+              { "label": "5 en hoger", "cells": ["pet studenata", "pet žena", "pet piva"] }
+            ]
+          },
+          "targets": ["g.mod.brojevi", "g.17.brojevi_padez", "v.01.student", "v.04.zena", "v.06.pivo"]
+        },
+        {
+          "id": "m.num.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Het laatste cijfer beslist — en 11 tot 14 doen niet mee",
+          "body_nl": "Bij een getal van twee cijfers kijk je alleen naar het **laatste** cijfer:\n\n*dvadeset jedan student* — 21 gedraagt zich als 1\n*dvadeset dva studenta* — 22 als 2\n*dvadeset pet studenata* — 25 als 5\n\n**Uitzondering:** 11 tot en met 14 eindigen wel op 1, 2, 3 en 4, maar horen bij de groep van vijf:\n*jedanaest studenata*, *dvanaest studenata*, *trinaest studenata*, *četrnaest studenata*.\n\nEn het getal zelf: **dva** voor mannelijk en onzijdig, **dvije** voor vrouwelijk.\n*dva stola*, *dva piva* — *dvije knjige*, *dvije žene*.\nVanaf *tri* verandert er niets meer aan het getal: *tri stola*, *tri knjige*.\n\n*(Je zult ook zien dat het werkwoord meebuigt — «Pet ljudi je došlo» tegenover «Dva studenta su došla». Daar hoef je nu niets mee; herken het en ga door.)*",
+          "table": {
+            "caption_nl": "Alleen het laatste cijfer telt",
+            "columns": ["vorm", "groep"],
+            "rows": [
+              { "label": "21", "cells": ["dvadeset jedan student", "als 1"] },
+              { "label": "22", "cells": ["dvadeset dva studenta", "als 2"] },
+              { "label": "25", "cells": ["dvadeset pet studenata", "als 5"] },
+              { "label": "12", "cells": ["dvanaest studenata", "uitzondering: als 5"] },
+              { "label": "14", "cells": ["četrnaest studenata", "uitzondering: als 5"] }
+            ]
+          },
+          "targets": ["g.mod.brojevi", "g.17.dva_dvije", "v.00.jedan"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Hoeveel zijn het er?",
+      "why_nl": "Nog niets invullen. Hier lees je alleen de vorm en zeg je hoeveel het er zijn — dat is de vaardigheid die je bij een prijs of een tijd nodig hebt.",
+      "exercises": [
+        {
+          "id": "m.num.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk getal kan er op de plek van het streepje staan?",
+          "given": "Ovdje je ___ studenata.",
+          "nudge": "De vorm studenata hoort bij één van de drie groepen. Welke?",
+          "answer": "Vijf of meer — studenata is de vorm die na 5 en hoger komt.",
+          "distractors": [
+            "Precies één.",
+            "Twee, drie of vier.",
+            "Dat kun je niet aan de vorm zien."
+          ],
+          "explain_nl": "De vorm verraadt de groep, ook zonder dat het getal er staat. Dat is precies waar deze uitgangen voor zijn.",
+          "targets": ["g.mod.brojevi", "v.01.student"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe laat is het?",
+          "given": "Sad je pet sati.",
+          "nudge": "Sati is de meervoudsvorm van sat. Bij welke groep getallen hoort die?",
+          "answer": "Vijf uur.",
+          "distractors": ["Eén uur.", "Twee uur.", "Half vijf."],
+          "explain_nl": "Bij de klok geldt dezelfde regel: jedan sat, dva sata, pet sati. Sati is de speciale genitief meervoud van sat.",
+          "targets": ["g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.num.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: Imam dvanaest knjiga.\nB: Imam dvanaest knjige.",
+          "nudge": "Twaalf eindigt op een twee. Maar hoort 12 daarom bij de groep van 2, 3 en 4?",
+          "answer": "A — 11 tot en met 14 horen bij de groep van vijf.",
+          "distractors": [
+            "B — twaalf eindigt op twee, dus als 2.",
+            "Allebei goed.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Dit is de enige echte uitzondering op de laatste-cijfer-regel. Onthoud hem als blok: 11, 12, 13, 14 doen als 5.",
+          "targets": ["g.mod.brojevi", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er dvije en niet dva?",
+          "given": "Kupujem dvije knjige.",
+          "nudge": "Kijk naar het woord knjiga. Welk geslacht heeft dat?",
+          "answer": "Omdat knjiga vrouwelijk is; dvije hoort bij vrouwelijke woorden.",
+          "distractors": [
+            "Omdat het er meer dan één zijn.",
+            "Omdat het over kopen gaat.",
+            "Omdat knjige op een e eindigt."
+          ],
+          "explain_nl": "Alleen 1 en 2 buigen mee met het geslacht. Vanaf tri is het getal voor alles gelijk.",
+          "targets": ["g.mod.brojevi", "g.17.dva_dvije", "v.01.knjiga"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke prijs wordt hier genoemd?",
+          "given": "To košta dvadeset dva eura.",
+          "nudge": "Kijk naar het laatste cijfer van tweeëntwintig.",
+          "answer": "Tweeëntwintig euro.",
+          "distractors": ["Twee euro.", "Twintig euro.", "Vijfentwintig euro."],
+          "explain_nl": "22 eindigt op 2, dus de vorm eura — hier de genitief enkelvoud, die bij euro toevallig gelijk is aan de genitief meervoud.",
+          "targets": ["g.mod.brojevi", "v.17.euro"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is het verschil tussen deze twee?",
+          "given": "A: dva piva\nB: pet piva",
+          "nudge": "Kijk naar het woord achter het getal. Verschilt dat, of niet?",
+          "answer": "Alleen het getal verschilt; pivo heeft in beide gevallen dezelfde vorm.",
+          "distractors": [
+            "B is fout, daar had pivova moeten staan.",
+            "A gaat over bierglazen en B over flesjes.",
+            "A is vrouwelijk en B onzijdig."
+          ],
+          "explain_nl": "Bij onzijdige woorden op -o vallen de twee genitiefvormen samen. Prettig: daar valt niets te kiezen.",
+          "targets": ["g.mod.brojevi", "v.06.pivo"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: welk cijfer staat er als laatste, en welke van de drie vormen hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.num.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "U sobi su tri ___ (student).",
+          "answer": "studenta",
+          "accepts": ["studenta"],
+          "explain_nl": "Na 2, 3 en 4 komt de genitief enkelvoud: studenta.",
+          "targets": ["g.mod.brojevi", "v.01.student"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.num.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "U sobi je osam ___ (student).",
+          "answer": "studenata",
+          "accepts": ["studenata"],
+          "explain_nl": "Na 5 en hoger komt de genitief meervoud: studenata.",
+          "targets": ["g.mod.brojevi", "v.01.student"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.num.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul het getal én de vorm in: 2 boeken.",
+          "given": "Čitam ___ ___ (2, knjiga).",
+          "answer": "dvije knjige",
+          "accepts": ["dvije knjige"],
+          "hint": "Knjiga is vrouwelijk.",
+          "explain_nl": "Vrouwelijk, dus dvije; en na 2 de genitief enkelvoud knjige.",
+          "targets": ["g.mod.brojevi", "g.17.dva_dvije", "v.01.knjiga"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Kupujem pet ___ (knjiga).",
+          "answer": "knjiga",
+          "accepts": ["knjiga"],
+          "explain_nl": "De genitief meervoud van knjiga is knjiga — de vorm verandert niet, maar het is wel een andere naamval dan de woordenboekvorm.",
+          "targets": ["g.mod.brojevi", "v.01.knjiga"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Sad je dva ___ (sat).",
+          "answer": "sata",
+          "accepts": ["sata"],
+          "explain_nl": "Twee uur: dva sata, met de genitief enkelvoud.",
+          "targets": ["g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.num.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Vlak kreće u sedam ___ (sat).",
+          "answer": "sati",
+          "accepts": ["sati"],
+          "hint": "Het woord voor uur heeft een eigen meervoudsvorm.",
+          "explain_nl": "Na 5 en hoger: pet sati, sedam sati. Niet «satova» — bij de klok is het altijd sati.",
+          "targets": ["g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Let op het laatste cijfer.",
+          "given": "U razredu je dvadeset jedan ___ (student).",
+          "answer": "student",
+          "accepts": ["student"],
+          "hint": "Eenentwintig eindigt op één.",
+          "explain_nl": "21 gedraagt zich als 1, dus de gewone woordenboekvorm.",
+          "targets": ["g.mod.brojevi", "v.01.student"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.037",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in. Denk aan de uitzondering.",
+          "given": "Imam trinaest ___ (godina).",
+          "answer": "godina",
+          "accepts": ["godina"],
+          "hint": "Hoort dertien bij de groep van 3, of bij die van 5?",
+          "explain_nl": "11 tot en met 14 horen bij de groep van vijf, dus de genitief meervoud godina.",
+          "targets": ["g.mod.brojevi", "v.10.godina"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.038",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Twee bier, alstublieft.",
+          "answer": "Dva piva, molim.",
+          "accepts": ["Dva piva, molim.", "Dva piva molim.", "Dva piva, molim", "Dva piva"],
+          "explain_nl": "Pivo is onzijdig, dus dva; en de genitief enkelvoud piva is gelijk aan de woordenboekvorm van het meervoud.",
+          "targets": ["g.mod.brojevi", "v.06.pivo"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Kupujem pet knjige.",
+          "answer": "Kupujem pet knjiga.",
+          "accepts": ["Kupujem pet knjiga.", "Kupujem pet knjiga"],
+          "explain_nl": "Knjige hoort bij 2, 3 en 4. Na pet moet de genitief meervoud: knjiga.",
+          "targets": ["g.mod.brojevi", "v.01.knjiga"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu tussen de andere dingen die de genitief vragen. Getallen zijn maar één van de aanleidingen.",
+      "exercises": [
+        {
+          "id": "m.num.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Na trgu ima puno ___.",
+          "answer": "ljudi",
+          "distractors": ["ljudima", "čovjek", "čovjeka"],
+          "explain_nl": "Puno werkt als een getal boven de vijf: er volgt de genitief meervoud. Van čovjek is dat ljudi.",
+          "targets": ["g.mod.brojevi", "g.mod.genitive", "v.03.covjek"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in.",
+          "given": "Idem u ___ (grad) na dva ___ (sat).",
+          "answer": "grad sata",
+          "accepts": ["grad sata"],
+          "hint": "De eerste is een richting, de tweede een getal.",
+          "explain_nl": "u met beweging vraagt de accusatief grad; na dva komt de genitief enkelvoud sata.",
+          "targets": ["g.mod.brojevi", "g.mod.loc_vs_acc", "v.05.grad", "v.17.sat_uur"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.num.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik heb twee zussen en drie vriendinnen.",
+          "answer": "Imam dvije sestre i tri prijateljice.",
+          "accepts": ["Imam dvije sestre i tri prijateljice.", "Imam dvije sestre i tri prijateljice"],
+          "explain_nl": "Allebei vrouwelijk, allebei de groep van 2/3/4: de genitief enkelvoud op -e. En dvije, niet dva.",
+          "targets": ["g.mod.brojevi", "v.01.sestra", "v.01.prijateljica"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Dolazim iz ___.",
+          "answer": "Zagreba",
+          "distractors": ["Zagrebu", "Zagreb", "Zagrebom"],
+          "explain_nl": "Hier is er geen getal in de buurt — iz vraagt de genitief op eigen kracht. Dezelfde uitgang, andere aanleiding.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.num.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Imam dva sestre i dvanaest godine.",
+          "answer": "Imam dvije sestre i dvanaest godina.",
+          "accepts": ["Imam dvije sestre i dvanaest godina.", "Imam dvije sestre i dvanaest godina"],
+          "hint": "Eén keer het verkeerde getal, één keer de verkeerde groep.",
+          "explain_nl": "Sestra is vrouwelijk, dus dvije. En twaalf hoort bij de groep van vijf, dus godina en niet godine.",
+          "targets": ["g.mod.brojevi", "v.01.sestra", "v.10.godina"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk getal: welke van de drie groepen is het, en klopt de vorm erachter?",
+      "text_hr": "U petak imam samo dva sata predavanja. Poslije idem na tržnicu s Anom. Kupujemo pet jabuka, dva kruha i tri litre mlijeka. Sve zajedno košta dvanaest eura. Ana ima dvadeset jednu godinu i studira već tri godine. U kafiću naručujemo dvije kave i jedno pivo. Sjedimo ondje pet sati i razgovaramo. Autobus kreće u sedam sati, pa moramo požuriti.",
+      "translation_nl": "Op vrijdag heb ik maar twee uur college. Daarna ga ik met Ana naar de markt. We kopen vijf appels, twee broden en drie liter melk. Alles samen kost twaalf euro. Ana is eenentwintig en studeert al drie jaar. In het café bestellen we twee koffie en één bier. We zitten daar vijf uur te praten. De bus vertrekt om zeven uur, dus we moeten opschieten.",
+      "exercises": [
+        {
+          "id": "m.num.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel appels kopen ze?",
+          "answer": "Vijf.",
+          "distractors": ["Twee.", "Drie.", "Twaalf."],
+          "explain_nl": "«Kupujemo pet jabuka.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.num.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «dva sata» en «pet sati». Waarom niet twee keer dezelfde vorm?",
+          "given": "U petak imam samo dva sata predavanja. Sjedimo ondje pet sati.",
+          "nudge": "Kijk naar de getallen ervoor: 2 en 5. Bij welke groep hoort elk?",
+          "answer": "Twee hoort bij de groep 2/3/4 en vijf bij de groep vanaf 5 — twee verschillende naamvallen.",
+          "distractors": [
+            "Omdat het eerste over college gaat en het tweede over een café.",
+            "Omdat sati het echte meervoud is en sata een fout.",
+            "Omdat het tweede in de verleden tijd staat."
+          ],
+          "explain_nl": "Het is dezelfde regel, twee keer in één tekst zichtbaar. Dit is precies waarop je bij de klok moet letten.",
+          "targets": ["g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Ana ima dvadeset jednu godinu». Waarom niet godina?",
+          "given": "Ana ima dvadeset jednu godinu i studira već tri godine.",
+          "nudge": "Waar eindigt eenentwintig op? En wat hoort er bij die groep?",
+          "answer": "Omdat 21 op één eindigt, en na 1 komt het woord in het enkelvoud.",
+          "distractors": [
+            "Omdat Ana een vrouw is.",
+            "Omdat godina onregelmatig is.",
+            "Omdat er twee getallen achter elkaar staan."
+          ],
+          "explain_nl": "Alleen het laatste cijfer telt. En verderop in dezelfde zin: tri godine, want drie hoort bij de groep 2/3/4.",
+          "targets": ["g.mod.brojevi", "v.10.godina"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.num.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "U kafiću naručujemo dvije ___ (kava) i jedno ___ (pivo).",
+          "answer": "kave pivo",
+          "accepts": ["kave pivo"],
+          "explain_nl": "Kava is vrouwelijk en staat na 2: genitief enkelvoud kave. Na jedan/jedno komt de gewone vorm: pivo.",
+          "targets": ["g.mod.brojevi", "v.01.kava", "v.06.pivo"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.num.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie korte zinnen: één met 1, één met een getal tussen 2 en 4, en één met een getal boven de 5.",
+          "model_answer": "Imam jednu sestru. Kupujem tri knjige. U razredu je deset studenata.",
+          "rubric_nl": [
+            "Na het getal 1 staat het woord in de gewone vorm.",
+            "Na 2, 3 of 4 staat het woord in de genitief enkelvoud.",
+            "Na 5 of hoger staat het woord in de genitief meervoud, meestal op -a.",
+            "Bij 1 en 2 past het getal zich aan het geslacht aan."
+          ],
+          "explain_nl": "Wie deze drie zinnen goed heeft, kan elke prijs, elke tijd en elke bestelling zeggen zonder erover na te denken.",
+          "targets": ["g.mod.brojevi"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum GEN-NUM/NUM-CARD, gebouwd op les 17"
+}

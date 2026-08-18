@@ -84,28 +84,41 @@ function MiniParadigm({ table }: { table: Paradigm }) {
   );
 }
 
+/** Vet en cursief binnen één regel. */
+function inlineChunks(line: string) {
+  return line.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).map((chunk, j) => {
+    if (chunk.startsWith("**") && chunk.endsWith("**")) {
+      return (
+        <strong key={j} className="hr-text font-semibold text-ink">
+          {chunk.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (chunk.startsWith("*") && chunk.endsWith("*") && chunk.length > 2) {
+      return (
+        <em key={j} className="hr-text italic text-ink">
+          {chunk.slice(1, -1)}
+        </em>
+      );
+    }
+    return <span key={j}>{chunk}</span>;
+  });
+}
+
 function RichText({ text }: { text: string }) {
   return (
     <>
       {text.split("\n\n").map((para, i) => (
         <p key={i} className="mb-3 text-[14.5px] leading-[1.65] text-ink-secondary last:mb-0">
-          {para.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).map((chunk, j) => {
-            if (chunk.startsWith("**") && chunk.endsWith("**")) {
-              return (
-                <strong key={j} className="hr-text font-semibold text-ink">
-                  {chunk.slice(2, -2)}
-                </strong>
-              );
-            }
-            if (chunk.startsWith("*") && chunk.endsWith("*") && chunk.length > 2) {
-              return (
-                <em key={j} className="hr-text italic text-ink">
-                  {chunk.slice(1, -1)}
-                </em>
-              );
-            }
-            return <span key={j}>{chunk}</span>;
-          })}
+          {/* Eén enter is een regelafbreking, niet niets. In een uitleg staan
+              rijtjes onder elkaar — «dva sata» boven «pet sati» — en die mogen
+              niet tot één doorlopende zin worden geplakt. */}
+          {para.split("\n").map((line, k) => (
+            <span key={k}>
+              {k > 0 ? <br /> : null}
+              {inlineChunks(line)}
+            </span>
+          ))}
         </p>
       ))}
     </>
@@ -364,7 +377,7 @@ export function ExerciseView({
       return (
         <div className="space-y-4">
           {exercise.given ? (
-            <p className="hr-text rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
+            <p className="hr-text whitespace-pre-line rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -404,7 +417,7 @@ export function ExerciseView({
       return (
         <div className="space-y-3">
           {exercise.given ? (
-            <p className="hr-text rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
+            <p className="hr-text whitespace-pre-line rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -508,7 +521,7 @@ export function ExerciseView({
         <div className="space-y-4">
           {exercise.given ? (
             <div className="flex items-center gap-3">
-              <p className="hr-text flex-1 rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
+              <p className="hr-text whitespace-pre-line flex-1 rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
                 {exercise.given}
               </p>
               <PlayButton text={exercise.given} tts={tts} />
@@ -570,7 +583,7 @@ export function ExerciseView({
           {exercise.given ? (
             <div className="flex items-start gap-3">
               <p
-                className={`hr-text flex-1 rounded-xl px-4 py-3 text-[17px] leading-relaxed ${
+                className={`hr-text whitespace-pre-line flex-1 rounded-xl px-4 py-3 text-[17px] leading-relaxed ${
                   exercise.type === "error_correction"
                     ? "border border-bad-wash bg-bad-wash text-ink"
                     : "border border-line bg-sunken text-ink"
