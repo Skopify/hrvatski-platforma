@@ -1,0 +1,486 @@
+{
+  "code": "GEN-POSS",
+  "rank": 13,
+  "band": "Verfijnen",
+  "title_hr": "Čaša vode, knjiga moje sestre",
+  "title_nl": "Van wie, waarvan, hoeveel",
+  "cefr": "A2/B1",
+  "blurb_nl": "De genitief is de zwaarste naamval en tegelijk de meest gebruikte. Hij doet drie dingen die het Nederlands met van, met een hoeveelheid of met een voorzetsel oplost — en zodra je die drie herkent, is de vorm zelf makkelijk.",
+  "prerequisites": ["NOM-GENDER", "ACC-ANIM"],
+  "can_do_nl": [
+    "Ik kan zeggen van wie iets is: knjiga moje sestre.",
+    "Ik kan hoeveelheden uitdrukken: čaša vode, puno ljudi.",
+    "Ik ken de voorzetsels die altijd de genitief vragen.",
+    "Ik herken de genitief aan zijn uitgangen: -a, -e, -i."
+  ],
+  "grammar": {
+    "id": "g.mod.genitive",
+    "code": "GEN-POSS",
+    "title_nl": "De genitief — bezit, hoeveelheid, voorzetsels",
+    "cefr": "A2/B1",
+    "explanation_nl": "De genitief heeft drie hoofdtaken: hij zegt **van wie** iets is, hij hoort bij een **hoeveelheid**, en hij volgt op een groep **voorzetsels** die geen andere naamval toestaan.",
+    "contrast_nl": "Het Nederlands gebruikt hiervoor drie verschillende middelen: 'van' bij bezit, niets bij een hoeveelheid ('een glas water'), en een voorzetsel. Het Kroatisch gebruikt voor alle drie dezelfde uitgang, en dat maakt hem makkelijker te herkennen dan je zou denken.",
+    "paradigm": {
+      "caption_nl": "De uitgangen van de genitief enkelvoud",
+      "columns": ["woordenboekvorm", "genitief"],
+      "rows": [
+        { "label": "mannelijk", "cells": ["grad — stad", "grada"] },
+        { "label": "mannelijk levend", "cells": ["brat — broer", "brata"] },
+        { "label": "vrouwelijk op -a", "cells": ["sestra — zus", "sestre"] },
+        { "label": "vrouwelijk op medeklinker", "cells": ["noć — nacht", "noći"] },
+        { "label": "onzijdig", "cells": ["more — zee", "mora"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Bij mannelijke levende woorden zien de genitief en de accusatief er hetzelfde uit: brata. Dat is geen fout maar samenval.",
+      "Na een hoeveelheidswoord staat het ding in de genitief, ook al voelt het als het onderwerp: puno ljudi, niet «puno ljudi su».",
+      "Voorzetsels als od, do, iz en kod kennen maar één naamval. Anders dan u en na hoef je bij deze niet na te denken."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Drie groepjes zinnen die op het oog niets met elkaar te maken hebben. Kijk naar de uitgangen.",
+      "exercises": [
+        {
+          "id": "m.gen.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Drie soorten zinnen, één uitgang.",
+          "given": "Ovo je knjiga moje sestre.\nAuto mog brata je crven.\n\nČaša vode, molim.\nU gradu ima puno ljudi.\n\nDolazim iz Nizozemske.\nIdemo do trga.\nStanujem kod sestre.",
+          "body_nl": "Dit is het boek van mijn zus.\nDe auto van mijn broer is rood.\n\nEen glas water, alstublieft.\nIn de stad zijn veel mensen.\n\nIk kom uit Nederland.\nWe gaan naar het plein.\nIk woon bij mijn zus.",
+          "targets": []
+        },
+        {
+          "id": "m.gen.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "In het Nederlands staan er drie heel verschillende dingen: **van** mijn zus, een glas **water**, **uit** Nederland.\n\nIn het Kroatisch krijgen ze alle drie dezelfde uitgang: *sestre*, *vode*, *Nizozemske*. Dat is de genitief.\n\nDrie taken, één vorm. Dat klinkt als extra werk, maar het is juist meevaller: je hoeft de vorm maar één keer te leren en herkent hem daarna overal.\n\nLet ook op de uitgangen zelf: mannelijk en onzijdig krijgen **-a**, vrouwelijk op -a krijgt **-e**.",
+          "targets": ["g.mod.genitive", "g.14.genitiv"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de drie taken, dan de uitgangen. In die volgorde, want de taken zijn het lastige deel.",
+      "exercises": [
+        {
+          "id": "m.gen.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Drie taken",
+          "body_nl": "**1. Van wie is het.** Het bezit komt achteraan, in de genitief:\n*knjiga moje* **sestre** — het boek van mijn zus\n\n**2. Hoeveel ervan.** Na een maat of een hoeveelheidswoord:\n*čaša* **vode** — een glas water\n*puno* **ljudi** — veel mensen\n*malo* **vremena** — weinig tijd\n\n**3. Na bepaalde voorzetsels.** Deze kennen maar één naamval, dus je hoeft niet te kiezen:\n*od, do, iz, kod, bez, prije, poslije, blizu, oko*\n\n*iz* **Nizozemske** — uit Nederland\n*bez* **novca** — zonder geld\n\nEn een vierde die je al kent: na *nemam* staat ook de genitief.",
+          "targets": ["g.mod.genitive", "g.14.genitiv", "g.14.genitiv_kolicina", "g.16.genitiv_prijedlozi"]
+        },
+        {
+          "id": "m.gen.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De uitgangen",
+          "body_nl": "De vorm is eenvoudiger dan de taken.\n\n**Mannelijk en onzijdig** krijgen **-a**: *grad → grada*, *more → mora*.\n**Vrouwelijk op -a** krijgt **-e**: *sestra → sestre*, *voda → vode*.\n**Vrouwelijk op een medeklinker** krijgt **-i**: *noć → noći*, *obitelj → obitelji*.\n\nEén ding om te weten: bij mannelijke **levende** woorden zien de genitief en de accusatief er precies hetzelfde uit. *Vidim brata* en *auto mog brata* hebben allebei *brata*.\n\nDat is geen fout in je hoofd — die twee vormen zijn in het Kroatisch echt samengevallen. Aan de zin zie je welke bedoeld wordt.",
+          "table": {
+            "caption_nl": "De uitgangen van de genitief enkelvoud",
+            "columns": ["woordenboekvorm", "genitief"],
+            "rows": [
+              { "label": "mannelijk", "cells": ["grad — stad", "grada"] },
+              { "label": "mannelijk levend", "cells": ["brat — broer", "brata"] },
+              { "label": "vrouwelijk op -a", "cells": ["sestra — zus", "sestre"] },
+              { "label": "vrouwelijk op medeklinker", "cells": ["noć — nacht", "noći"] },
+              { "label": "onzijdig", "cells": ["more — zee", "mora"] }
+            ]
+          },
+          "targets": ["g.mod.genitive", "g.14.genitiv_jd_mn", "v.05.grad", "v.01.sestra"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Wat zegt de uitgang?",
+      "why_nl": "Nog niets invullen. Dezelfde woorden, andere uitgang — en dan gaat de zin ergens anders over.",
+      "exercises": [
+        {
+          "id": "m.gen.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt hier gezegd?",
+          "given": "Ovo je knjiga moje sestre.",
+          "nudge": "Kijk naar de uitgang van sestre. Is de zus degene die iets heeft, of degene die iets is?",
+          "answer": "Dit is het boek van mijn zus.",
+          "distractors": ["Dit is mijn zus met een boek.", "Mijn zus is een boek."],
+          "explain_nl": "sestre is genitief: het boek hoort bij de zus. In het Nederlands zeg je dat met 'van'.",
+          "targets": ["g.mod.genitive", "v.01.sestra", "v.01.knjiga"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat wordt er besteld?",
+          "given": "Čaša vode, molim.",
+          "nudge": "Twee woorden achter elkaar. Welk woord is de maat en welk het ding?",
+          "answer": "Een glas water.",
+          "distractors": ["Water met een glas.", "Het glas van het water.", "Twee glazen."],
+          "explain_nl": "čaša is de maat, vode staat in de genitief als het ding dat gemeten wordt. Letterlijk 'een glas van water'.",
+          "targets": ["g.mod.genitive", "v.06.casa", "v.08.voda"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waar komt deze persoon vandaan of naartoe?",
+          "given": "Dolazim iz Zagreba.",
+          "nudge": "Het voorzetsel iz kent maar één naamval. Betekent het vanaf of naartoe?",
+          "answer": "Vandaan — hij komt uit Zagreb.",
+          "distractors": ["Naartoe — hij gaat naar Zagreb.", "Hij is in Zagreb."],
+          "explain_nl": "iz betekent 'uit' en vraagt altijd de genitief. Anders dan bij u hoef je hier niet te kiezen.",
+          "targets": ["g.mod.genitive", "g.16.iz_od"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat betekent het verschil?",
+          "given": "A: Vidim brata.\nB: Ovo je auto mog brata.",
+          "nudge": "In beide zinnen staat brata. Doet de broer in allebei hetzelfde?",
+          "answer": "In A wordt de broer gezien, in B is de auto van hem — dezelfde vorm, twee naamvallen.",
+          "distractors": [
+            "In allebei is de broer het onderwerp.",
+            "B is fout; het moet brat zijn.",
+            "Er is geen verschil in betekenis."
+          ],
+          "explain_nl": "Bij mannelijke levende woorden zijn de genitief en de accusatief samengevallen. De zin bepaalt welke je leest.",
+          "targets": ["g.mod.genitive", "g.mod.acc_anim", "v.03.brat"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gen.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: U gradu ima puno ljudi.\nB: U gradu ima puno ljude.",
+          "nudge": "Na een hoeveelheidswoord komt altijd dezelfde naamval. Welke uitgang hoort daarbij?",
+          "answer": "A — na puno staat de genitief.",
+          "distractors": [
+            "B — mensen is een lijdend voorwerp.",
+            "Allebei goed.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Hoeveelheidswoorden als puno, malo en nekoliko vragen altijd de genitief.",
+          "targets": ["g.mod.genitive", "g.14.genitiv_kolicina"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Bij welk voorzetsel hoef je níet na te denken over de naamval?",
+          "given": "u · na · iz",
+          "nudge": "Twee van deze drie kunnen twee naamvallen aan. Welke kan er maar één?",
+          "answer": "Bij iz — dat vraagt altijd de genitief.",
+          "distractors": [
+            "Bij u — dat is altijd de lokatief.",
+            "Bij na — dat is altijd de accusatief.",
+            "Bij alle drie moet je nadenken."
+          ],
+          "explain_nl": "u en na kunnen allebei accusatief of lokatief, afhankelijk van de betekenis. iz kent er maar één, en dat scheelt werk.",
+          "targets": ["g.mod.genitive", "g.mod.loc_vs_acc"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf invullen",
+      "why_nl": "Tien keer dezelfde vraag: welke van de drie taken is dit, en welke uitgang hoort bij dit woord?",
+      "exercises": [
+        {
+          "id": "m.gen.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Ovo je knjiga moje ___ (sestra).",
+          "answer": "sestre",
+          "accepts": ["sestre"],
+          "explain_nl": "Vrouwelijk op -a → genitief -e.",
+          "targets": ["g.mod.genitive", "v.01.sestra"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.gen.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Auto mog ___ (brat) je crven.",
+          "answer": "brata",
+          "accepts": ["brata"],
+          "explain_nl": "Mannelijk → genitief -a.",
+          "targets": ["g.mod.genitive", "v.03.brat"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Čaša ___ (voda), molim.",
+          "answer": "vode",
+          "accepts": ["vode"],
+          "explain_nl": "Hoeveelheid → genitief. Vrouwelijk op -a → -e.",
+          "targets": ["g.mod.genitive", "v.08.voda", "v.06.casa"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Dolazim iz ___ (grad).",
+          "answer": "grada",
+          "accepts": ["grada"],
+          "explain_nl": "iz vraagt altijd de genitief.",
+          "targets": ["g.mod.genitive", "v.05.grad"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Idemo do ___ (more).",
+          "answer": "mora",
+          "accepts": ["mora"],
+          "explain_nl": "do vraagt de genitief. Onzijdig → -a.",
+          "targets": ["g.mod.genitive", "v.01.more"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Kava bez ___ (šećer), molim.",
+          "answer": "šećera",
+          "accepts": ["šećera"],
+          "hint": "šećer = suiker, mannelijk",
+          "explain_nl": "bez vraagt de genitief, mannelijk → -a.",
+          "targets": ["g.mod.genitive", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Stanujem kod ___ (sestra).",
+          "answer": "sestre",
+          "accepts": ["sestre"],
+          "explain_nl": "kod vraagt de genitief — 'bij' iemand thuis.",
+          "targets": ["g.mod.genitive", "v.01.sestra"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.gen.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik heb weinig tijd.",
+          "answer": "Imam malo vremena.",
+          "accepts": ["Imam malo vremena.", "Imam malo vremena"],
+          "explain_nl": "malo is een hoeveelheidswoord → genitief vremena.",
+          "targets": ["g.mod.genitive", "v.12.vrijeme"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je auto moja sestra.",
+          "answer": "Ovo je auto moje sestre.",
+          "accepts": ["Ovo je auto moje sestre.", "Ovo je auto moje sestre"],
+          "explain_nl": "Bezit → genitief, en dan buigt het bezittelijke woord mee: moje sestre.",
+          "targets": ["g.mod.genitive", "v.01.sestra", "v.00.auto"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gen.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Dolazim iz Zagreb.",
+          "answer": "Dolazim iz Zagreba.",
+          "accepts": ["Dolazim iz Zagreba.", "Dolazim iz Zagreba"],
+          "explain_nl": "iz vraagt de genitief, ook bij plaatsnamen.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de andere naamvallen. De vraag is telkens: welk voorzetsel of welke rol staat er, en wat volgt daaruit?",
+      "exercises": [
+        {
+          "id": "m.gen.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de juiste vorm in.",
+          "given": "Idem u ___ (grad), a dolazim iz ___ (Split).",
+          "answer": "grad, a dolazim iz Splita",
+          "accepts": ["grad, a dolazim iz Splita", "grad a dolazim iz Splita"],
+          "hint": "Twee voorzetsels, twee verschillende naamvallen.",
+          "explain_nl": "u met beweging → accusatief grad. iz → altijd genitief Splita.",
+          "targets": ["g.mod.genitive", "g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gen.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Sada sam u ___.",
+          "answer": "gradu",
+          "distractors": ["grada", "grad"],
+          "explain_nl": "sam = ik ben ergens → lokatief, niet genitief.",
+          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.052",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Nemam ___.",
+          "answer": "vremena",
+          "distractors": ["vrijeme", "vremenu"],
+          "explain_nl": "nemam vraagt de genitief — dat had je bij het ontkennen al geleerd.",
+          "targets": ["g.mod.genitive", "g.mod.neg_verb", "v.12.vrijeme"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.053",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik kom uit Nederland en woon bij mijn zus.",
+          "answer": "Dolazim iz Nizozemske i stanujem kod sestre.",
+          "accepts": [
+            "Dolazim iz Nizozemske i stanujem kod sestre.",
+            "Dolazim iz Nizozemske i stanujem kod sestre"
+          ],
+          "explain_nl": "Twee voorzetsels die allebei de genitief vragen — iz en kod.",
+          "targets": ["g.mod.genitive", "v.01.sestra"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gen.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Idem do trg i kupujem čašu voda.",
+          "answer": "Idem do trga i kupujem čašu vode.",
+          "accepts": ["Idem do trga i kupujem čašu vode.", "Idem do trga i kupujem čašu vode"],
+          "hint": "Twee keer genitief: één na een voorzetsel, één na een maat.",
+          "explain_nl": "do → trga, en čašu is een maat → vode.",
+          "targets": ["g.mod.genitive", "v.07.trg", "v.08.voda"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Tel bij het lezen hoe vaak de genitief voorbijkomt. Je zult schrikken.",
+      "text_hr": "Ovo je kuća mojih roditelja. Nalazi se blizu mora, oko dvadeset minuta od centra. Nema puno soba, ali ima veliku terasu. Ujutro pijem čašu vode i šalicu kave na terasi. Bez kave ne mogu početi dan. Poslije doručka idem do trgovine i kupujem kruh. Vlasnik trgovine je prijatelj mog oca. Uvijek me pita kako je moja sestra. Nemam puno vremena ljeti, ali dolazim kad mogu.",
+      "translation_nl": "Dit is het huis van mijn ouders. Het ligt vlak bij zee, ongeveer twintig minuten van het centrum. Er zijn niet veel kamers, maar er is een groot terras. 's Ochtends drink ik een glas water en een kopje koffie op het terras. Zonder koffie kan ik de dag niet beginnen. Na het ontbijt ga ik naar de winkel en koop brood. De eigenaar van de winkel is een vriend van mijn vader. Hij vraagt me altijd hoe het met mijn zus gaat. Ik heb 's zomers niet veel tijd, maar ik kom wanneer ik kan.",
+      "exercises": [
+        {
+          "id": "m.gen.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Van wie is het huis?",
+          "answer": "Van de ouders van de verteller.",
+          "distractors": ["Van zijn zus.", "Van de winkelier.", "Van hemzelf."],
+          "explain_nl": "«Ovo je kuća mojih roditelja.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.gen.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «prijatelj mog oca». Wie is de vriend van wie?",
+          "given": "Vlasnik trgovine je prijatelj mog oca.",
+          "nudge": "Welk woord staat in de genitief? Dat is degene bij wie de ander hoort.",
+          "answer": "De winkelier is een vriend van mijn vader.",
+          "distractors": [
+            "Mijn vader is een vriend van de winkelier — dat is niet hetzelfde.",
+            "De winkelier is mijn vader.",
+            "Mijn vader is winkelier."
+          ],
+          "explain_nl": "oca staat in de genitief, dus de vader is degene aan wie de vriendschap toebehoort. De volgorde is: eerst wie, dan van wie.",
+          "targets": ["g.mod.genitive", "v.03.otac"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.gen.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoeveel van de drie taken van de genitief zie je in de eerste twee zinnen?",
+          "given": "Ovo je kuća mojih roditelja. Nalazi se blizu mora, oko dvadeset minuta od centra.",
+          "nudge": "Loop de drie taken langs: van wie is het, hoeveel ervan, en welk voorzetsel staat er.",
+          "answer": "Alle drie: bezit (roditelja), hoeveelheid (minuta) en voorzetsels (blizu, od).",
+          "distractors": [
+            "Alleen bezit.",
+            "Alleen de voorzetsels.",
+            "Twee: bezit en hoeveelheid."
+          ],
+          "explain_nl": "In twee zinnen komen alle drie de taken voorbij. Dat is precies waarom deze naamval zo vaak opduikt.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.gen.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Bez ___ (kava) ne mogu početi dan.",
+          "answer": "kave",
+          "accepts": ["kave"],
+          "explain_nl": "bez vraagt de genitief, vrouwelijk op -a → -e.",
+          "targets": ["g.mod.genitive", "v.01.kava"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.gen.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen: van wie iets is, een hoeveelheid, en waar je vandaan komt.",
+          "model_answer": "Ovo je knjiga moje sestre. Imam malo vremena. Dolazim iz Nizozemske.",
+          "rubric_nl": [
+            "De eerste zin gebruikt de genitief voor bezit.",
+            "De tweede zin gebruikt een hoeveelheidswoord met de genitief.",
+            "De derde zin gebruikt iz of od met de genitief.",
+            "De uitgangen passen bij het geslacht: -a, -e of -i."
+          ],
+          "explain_nl": "Drie zinnen, drie taken. Wie die drie beheerst, herkent de genitief overal.",
+          "targets": ["g.mod.genitive"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum GEN-POSS/GEN-QUANT/GEN-PREP, gebouwd op les 14 en 16"
+}

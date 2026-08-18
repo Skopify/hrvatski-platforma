@@ -38,6 +38,15 @@ export interface ModulePhase {
 
 export interface GrammarModule {
   code: string;
+  /**
+   * Moeilijkheid, oplopend. Bewust een eigen getal en niet het CEFR-niveau:
+   * dat is te grof (de helft staat op A2) en zegt niets over de voorkennis.
+   * Deze volgorde respecteert de prerequisites — aspect vóór de verleden
+   * tijd, verleden tijd vóór de clitica en de conditionalis.
+   */
+  rank: number;
+  /** De groep waarin de module op het overzicht staat. */
+  band: string;
   title_hr: string;
   title_nl: string;
   cefr: string;
@@ -52,6 +61,22 @@ export interface GrammarModule {
 const DIR = path.join(process.cwd(), "content", "modules");
 
 let cache: GrammarModule[] | null = null;
+
+/** Alle modules, van makkelijk naar moeilijk. */
+export function modulesByRank(): GrammarModule[] {
+  return [...loadModules()].sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
+}
+
+/** De modules gegroepeerd per moeilijkheidsband, in volgorde. */
+export function modulesByBand(): { band: string; modules: GrammarModule[] }[] {
+  const out: { band: string; modules: GrammarModule[] }[] = [];
+  for (const m of modulesByRank()) {
+    const laatste = out[out.length - 1];
+    if (laatste && laatste.band === m.band) laatste.modules.push(m);
+    else out.push({ band: m.band, modules: [m] });
+  }
+  return out;
+}
 
 export function loadModules(): GrammarModule[] {
   // In ontwikkeling niet cachen: wie een module toevoegt, wil hem zien zonder

@@ -4,7 +4,10 @@
   "title_nl": "Levend of niet",
   "cefr": "A1/A2",
   "blurb_nl": "Bij mannelijke woorden hangt de vorm van het lijdend voorwerp af van iets wat het Nederlands niet kent: leeft het, of niet. En omdat de woordvolgorde in het Kroatisch vrij is, is die vorm vaak de enige aanwijzing wie wat doet.",
-  "prerequisites": ["NOM-GENDER", "ACC-OBJECT"],
+  "prerequisites": [
+    "NOM-GENDER",
+    "ACC-OBJECT"
+  ],
   "can_do_nl": [
     "Ik weet dat vidim psa een -a krijgt en vidim stol niet.",
     "Ik pas de regel alleen toe op mannelijke woorden.",
@@ -20,14 +23,53 @@
     "contrast_nl": "Het Nederlands markeert dit helemaal niet: 'ik zie de hond' en 'ik zie de tafel' zien er hetzelfde uit. In het Kroatisch is het verschil zichtbaar, en het is niet optioneel.",
     "paradigm": {
       "caption_nl": "Wat er met het lijdend voorwerp gebeurt",
-      "columns": ["woordenboekvorm", "als lijdend voorwerp"],
+      "columns": [
+        "woordenboekvorm",
+        "als lijdend voorwerp"
+      ],
       "rows": [
-        { "label": "mannelijk, levend", "cells": ["pas — hond", "Vidim psa."] },
-        { "label": "mannelijk, levend", "cells": ["brat — broer", "Vidim brata."] },
-        { "label": "mannelijk, levenloos", "cells": ["stol — tafel", "Vidim stol."] },
-        { "label": "mannelijk, levenloos", "cells": ["grad — stad", "Vidim grad."] },
-        { "label": "vrouwelijk", "cells": ["sestra — zus", "Vidim sestru."] },
-        { "label": "onzijdig", "cells": ["more — zee", "Vidim more."] }
+        {
+          "label": "mannelijk, levend",
+          "cells": [
+            "pas — hond",
+            "Vidim psa."
+          ]
+        },
+        {
+          "label": "mannelijk, levend",
+          "cells": [
+            "brat — broer",
+            "Vidim brata."
+          ]
+        },
+        {
+          "label": "mannelijk, levenloos",
+          "cells": [
+            "stol — tafel",
+            "Vidim stol."
+          ]
+        },
+        {
+          "label": "mannelijk, levenloos",
+          "cells": [
+            "grad — stad",
+            "Vidim grad."
+          ]
+        },
+        {
+          "label": "vrouwelijk",
+          "cells": [
+            "sestra — zus",
+            "Vidim sestru."
+          ]
+        },
+        {
+          "label": "onzijdig",
+          "cells": [
+            "more — zee",
+            "Vidim more."
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -58,7 +100,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Bovenaan komt er telkens een **-a** bij: *pas* wordt *psa*, *brat* wordt *brata*, *profesor* wordt *profesora*.\n\nOnderaan verandert er niets: *stol* blijft *stol*, *grad* blijft *grad*.\n\nHet verschil is niet de klank of de lengte van het woord. Het is of het **leeft**. Een hond, een broer en een docent leven; een tafel, een stad en een film niet.\n\nIn het Nederlands zie je hier helemaal niets van — 'ik zie de hond' en 'ik zie de tafel' zijn precies hetzelfde gebouwd.",
-          "targets": ["g.mod.acc_anim", "g.05.akuzativ.zivo", "g.05.akuzativ.nezivo"]
+          "targets": [
+            "g.mod.acc_anim",
+            "g.05.akuzativ.zivo",
+            "g.05.akuzativ.nezivo"
+          ]
         }
       ]
     },
@@ -76,17 +122,61 @@
           "body_nl": "Stel jezelf twee vragen over het lijdend voorwerp.\n\n**Is het mannelijk?** Zo nee, dan speelt deze regel niet. Vrouwelijke woorden krijgen altijd **-u** (*sestru*, *knjigu*), onzijdige veranderen nooit (*more*).\n\n**Leeft het?** Zo ja, dan komt er **-a** bij — precies de genitiefvorm. Zo nee, dan blijft het woord zoals het in het woordenboek staat.\n\n*Vidim* **psa**. — de hond leeft.\n*Vidim* **stol**. — de tafel niet.\n\nDieren tellen als levend. En let op de vluchtige a: *pas* wordt *psa*, niet *pasa*.",
           "table": {
             "caption_nl": "Wat er met het lijdend voorwerp gebeurt",
-            "columns": ["woordenboekvorm", "als lijdend voorwerp"],
+            "columns": [
+              "woordenboekvorm",
+              "als lijdend voorwerp"
+            ],
             "rows": [
-              { "label": "mannelijk, levend", "cells": ["pas — hond", "Vidim psa."] },
-              { "label": "mannelijk, levend", "cells": ["brat — broer", "Vidim brata."] },
-              { "label": "mannelijk, levenloos", "cells": ["stol — tafel", "Vidim stol."] },
-              { "label": "mannelijk, levenloos", "cells": ["grad — stad", "Vidim grad."] },
-              { "label": "vrouwelijk", "cells": ["sestra — zus", "Vidim sestru."] },
-              { "label": "onzijdig", "cells": ["more — zee", "Vidim more."] }
+              {
+                "label": "mannelijk, levend",
+                "cells": [
+                  "pas — hond",
+                  "Vidim psa."
+                ]
+              },
+              {
+                "label": "mannelijk, levend",
+                "cells": [
+                  "brat — broer",
+                  "Vidim brata."
+                ]
+              },
+              {
+                "label": "mannelijk, levenloos",
+                "cells": [
+                  "stol — tafel",
+                  "Vidim stol."
+                ]
+              },
+              {
+                "label": "mannelijk, levenloos",
+                "cells": [
+                  "grad — stad",
+                  "Vidim grad."
+                ]
+              },
+              {
+                "label": "vrouwelijk",
+                "cells": [
+                  "sestra — zus",
+                  "Vidim sestru."
+                ]
+              },
+              {
+                "label": "onzijdig",
+                "cells": [
+                  "more — zee",
+                  "Vidim more."
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.acc_anim", "g.05.akuzativ.zivo", "v.03.pas", "v.03.stol"]
+          "targets": [
+            "g.mod.acc_anim",
+            "g.05.akuzativ.zivo",
+            "v.03.pas",
+            "v.03.stol"
+          ]
         },
         {
           "id": "m.accan.011",
@@ -94,7 +184,11 @@
           "mode": "receptive",
           "prompt_nl": "Waarom dit belangrijker is dan het lijkt",
           "body_nl": "In het Nederlands weet je aan de **volgorde** wie wat doet: 'de hond ziet de kat' is iets anders dan 'de kat ziet de hond'.\n\nIn het Kroatisch is de volgorde vrij. Je mag zeggen:\n\n*Pas vidi mačku.*\n*Mačku vidi pas.*\n\nAllebei betekenen ze hetzelfde: de hond ziet de kat. Wat het bepaalt is niet de plek maar de **uitgang** — *pas* zonder uitgang is degene die kijkt, *mačku* met -u is degene die gezien wordt.\n\nDaarom is deze regel geen franje. Zonder die uitgang weet niemand wie wat doet.",
-          "targets": ["g.mod.acc_anim", "v.03.pas", "v.03.macka"]
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas",
+            "v.03.macka"
+          ]
         }
       ]
     },
@@ -112,9 +206,15 @@
           "given": "Pas vidi mačku.",
           "nudge": "Kijk naar de uitgangen, niet naar de volgorde. Welk woord heeft een -u gekregen, en wat betekent dat?",
           "answer": "De hond ziet de kat.",
-          "distractors": ["De kat ziet de hond."],
+          "distractors": [
+            "De kat ziet de hond."
+          ],
           "explain_nl": "mačku heeft de accusatief-u, dus die ondergaat. pas staat kaal en is de kijker.",
-          "targets": ["g.mod.acc_anim", "v.03.pas", "v.03.macka"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas",
+            "v.03.macka"
+          ],
           "difficulty": 3
         },
         {
@@ -125,9 +225,15 @@
           "given": "Psa vidi mačka.",
           "nudge": "Kijk naar de uitgangen, niet naar de volgorde. Welk woord heeft een -a gekregen, en wat betekent dat?",
           "answer": "De kat ziet de hond.",
-          "distractors": ["De hond ziet de kat."],
+          "distractors": [
+            "De hond ziet de kat."
+          ],
           "explain_nl": "psa heeft de accusatief-a, dus de hond ondergaat. mačka staat in de woordenboekvorm en is de kijker. Dezelfde woordvolgorde als de vorige zin, omgekeerde betekenis.",
-          "targets": ["g.mod.acc_anim", "v.03.pas", "v.03.macka"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas",
+            "v.03.macka"
+          ],
           "difficulty": 4
         },
         {
@@ -138,9 +244,15 @@
           "given": "Vidim brata.",
           "nudge": "Er staat een -a achter brat. Wat zegt dat over de rol van de broer in deze zin?",
           "answer": "Ik zie mijn broer.",
-          "distractors": ["Mijn broer ziet mij.", "Dit is mijn broer."],
+          "distractors": [
+            "Mijn broer ziet mij.",
+            "Dit is mijn broer."
+          ],
           "explain_nl": "brata is de accusatief van een mannelijk levend wezen, dus de broer wordt gezien.",
-          "targets": ["g.mod.acc_anim", "v.03.brat"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.brat"
+          ],
           "difficulty": 2
         },
         {
@@ -157,7 +269,10 @@
             "Geen van beide."
           ],
           "explain_nl": "De -a komt er alleen bij mannelijke wezens die leven. Een tafel niet.",
-          "targets": ["g.mod.acc_anim", "v.03.stol"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.stol"
+          ],
           "difficulty": 3
         },
         {
@@ -174,7 +289,10 @@
             "Bij alle drie speelt hij een rol."
           ],
           "explain_nl": "sestra wordt sestru, en knjiga wordt knjigu. Het leven doet er bij vrouwelijke woorden niet toe.",
-          "targets": ["g.mod.acc_anim", "v.01.sestra"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.01.sestra"
+          ],
           "difficulty": 4
         },
         {
@@ -191,7 +309,10 @@
             "Dat is een spelfout."
           ],
           "explain_nl": "pas heeft een vluchtige a — dezelfde a die ook in de genitief verdwijnt. Zonder uitgang blijft hij staan, met uitgang niet.",
-          "targets": ["g.mod.acc_anim", "v.03.pas"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas"
+          ],
           "difficulty": 4
         }
       ]
@@ -209,9 +330,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Vidim ___ (pas).",
           "answer": "psa",
-          "accepts": ["psa"],
+          "accepts": [
+            "psa"
+          ],
           "explain_nl": "Mannelijk en levend → -a, met de vluchtige a eruit.",
-          "targets": ["g.mod.acc_anim", "v.03.pas"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas"
+          ],
           "difficulty": 2
         },
         {
@@ -221,9 +347,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Vidim ___ (stol).",
           "answer": "stol",
-          "accepts": ["stol"],
+          "accepts": [
+            "stol"
+          ],
           "explain_nl": "Mannelijk maar levenloos → er verandert niets.",
-          "targets": ["g.mod.acc_anim", "v.03.stol"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.stol"
+          ],
           "difficulty": 2
         },
         {
@@ -233,9 +364,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Imam ___ (brat).",
           "answer": "brata",
-          "accepts": ["brata"],
+          "accepts": [
+            "brata"
+          ],
           "explain_nl": "Een broer leeft → brata.",
-          "targets": ["g.mod.acc_anim", "v.03.brat"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.brat"
+          ],
           "difficulty": 1
         },
         {
@@ -245,9 +381,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Imam ___ (sestra).",
           "answer": "sestru",
-          "accepts": ["sestru"],
+          "accepts": [
+            "sestru"
+          ],
           "explain_nl": "Vrouwelijk → altijd -u.",
-          "targets": ["g.mod.acc_anim", "v.01.sestra"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.01.sestra"
+          ],
           "difficulty": 1
         },
         {
@@ -257,9 +398,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Čekam ___ (prijatelj).",
           "answer": "prijatelja",
-          "accepts": ["prijatelja"],
+          "accepts": [
+            "prijatelja"
+          ],
           "explain_nl": "Een vriend leeft → prijatelja.",
-          "targets": ["g.mod.acc_anim", "v.01.prijatelj"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.01.prijatelj"
+          ],
           "difficulty": 2
         },
         {
@@ -269,9 +415,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Gledam ___ (film).",
           "answer": "film",
-          "accepts": ["film"],
+          "accepts": [
+            "film"
+          ],
           "explain_nl": "Een film leeft niet → onveranderd.",
-          "targets": ["g.mod.acc_anim", "v.05.film"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.05.film"
+          ],
           "difficulty": 1
         },
         {
@@ -281,9 +432,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Vidim ___ (profesor) u školi.",
           "answer": "profesora",
-          "accepts": ["profesora"],
+          "accepts": [
+            "profesora"
+          ],
           "explain_nl": "Een docent leeft → profesora.",
-          "targets": ["g.mod.acc_anim", "v.01.profesor"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.01.profesor"
+          ],
           "difficulty": 2
         },
         {
@@ -293,10 +449,17 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Imam ___ (auto) i ___ (mačka).",
           "answer": "auto i mačku",
-          "accepts": ["auto i mačku", "auto, mačku"],
+          "accepts": [
+            "auto i mačku",
+            "auto, mačku"
+          ],
           "hint": "Twee woorden, twee verschillende uitkomsten.",
           "explain_nl": "Een auto leeft niet en blijft auto; een kat is vrouwelijk en wordt mačku.",
-          "targets": ["g.mod.acc_anim", "v.00.auto", "v.03.macka"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.00.auto",
+            "v.03.macka"
+          ],
           "difficulty": 4
         },
         {
@@ -306,9 +469,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Vidim pas na ulici.",
           "answer": "Vidim psa na ulici.",
-          "accepts": ["Vidim psa na ulici.", "Vidim psa na ulici"],
+          "accepts": [
+            "Vidim psa na ulici.",
+            "Vidim psa na ulici"
+          ],
           "explain_nl": "Een hond leeft, dus de accusatief is psa.",
-          "targets": ["g.mod.acc_anim", "v.03.pas"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas"
+          ],
           "difficulty": 3
         },
         {
@@ -318,9 +487,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Vidim grada iz prozora.",
           "answer": "Vidim grad iz prozora.",
-          "accepts": ["Vidim grad iz prozora.", "Vidim grad iz prozora"],
+          "accepts": [
+            "Vidim grad iz prozora.",
+            "Vidim grad iz prozora"
+          ],
           "explain_nl": "Een stad leeft niet, dus er komt geen -a bij.",
-          "targets": ["g.mod.acc_anim", "v.05.grad"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.05.grad"
+          ],
           "difficulty": 3
         }
       ]
@@ -338,10 +513,18 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Idem u ___ (grad) i tražim ___ (brat).",
           "answer": "grad i tražim brata",
-          "accepts": ["grad i tražim brata", "grad, tražim brata"],
+          "accepts": [
+            "grad i tražim brata",
+            "grad, tražim brata"
+          ],
           "hint": "De eerste is een richting, de tweede een lijdend voorwerp.",
           "explain_nl": "u grad is beweging → accusatief zonder uitgang; brata is levend → met -a. Twee keer accusatief, twee verschillende vormen.",
-          "targets": ["g.mod.acc_anim", "g.mod.loc_vs_acc", "v.05.grad", "v.03.brat"],
+          "targets": [
+            "g.mod.acc_anim",
+            "g.mod.loc_vs_acc",
+            "v.05.grad",
+            "v.03.brat"
+          ],
           "difficulty": 5
         },
         {
@@ -351,9 +534,14 @@
           "prompt_nl": "Vul de juiste vorm in. Een vrouw is aan het woord.",
           "given": "Jučer sam ___ (vidjeti) profesora.",
           "answer": "vidjela",
-          "accepts": ["vidjela"],
+          "accepts": [
+            "vidjela"
+          ],
           "explain_nl": "Verleden tijd, vrouwelijk deelwoord. Profesora stond al goed.",
-          "targets": ["g.mod.perfekt", "v.09.vidjeti"],
+          "targets": [
+            "g.mod.perfekt",
+            "v.09.vidjeti"
+          ],
           "difficulty": 3
         },
         {
@@ -363,9 +551,17 @@
           "prompt_nl": "Welke zin is goed?",
           "given": "Ik heb geen broer.",
           "answer": "Nemam brata.",
-          "distractors": ["Nemam brat.", "Ne imam brata.", "Nemam brate."],
+          "distractors": [
+            "Nemam brat.",
+            "Ne imam brata.",
+            "Nemam brate."
+          ],
           "explain_nl": "nemam vraagt de genitief, en die is voor een levend mannelijk woord toevallig dezelfde vorm als de accusatief: brata.",
-          "targets": ["g.mod.acc_anim", "g.mod.neg_verb", "v.03.brat"],
+          "targets": [
+            "g.mod.acc_anim",
+            "g.mod.neg_verb",
+            "v.03.brat"
+          ],
           "difficulty": 4
         },
         {
@@ -375,9 +571,17 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik wacht op een vriend in het café.",
           "answer": "Čekam prijatelja u kafiću.",
-          "accepts": ["Čekam prijatelja u kafiću.", "Čekam prijatelja u kafiću"],
+          "accepts": [
+            "Čekam prijatelja u kafiću.",
+            "Čekam prijatelja u kafiću"
+          ],
           "explain_nl": "prijatelja want een vriend leeft, en kafiću in de lokatief want je bent er.",
-          "targets": ["g.mod.acc_anim", "g.mod.loc_vs_acc", "v.01.prijatelj", "v.07.kafic"],
+          "targets": [
+            "g.mod.acc_anim",
+            "g.mod.loc_vs_acc",
+            "v.01.prijatelj",
+            "v.07.kafic"
+          ],
           "difficulty": 5
         },
         {
@@ -387,10 +591,17 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Sutra ću vidjeti brat i sestra.",
           "answer": "Sutra ću vidjeti brata i sestru.",
-          "accepts": ["Sutra ću vidjeti brata i sestru.", "Sutra ću vidjeti brata i sestru"],
+          "accepts": [
+            "Sutra ću vidjeti brata i sestru.",
+            "Sutra ću vidjeti brata i sestru"
+          ],
           "hint": "Allebei de woorden zijn lijdend voorwerp, maar ze krijgen niet dezelfde uitgang.",
           "explain_nl": "brata want mannelijk en levend, sestru want vrouwelijk.",
-          "targets": ["g.mod.acc_anim", "v.03.brat", "v.01.sestra"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.brat",
+            "v.01.sestra"
+          ],
           "difficulty": 5
         }
       ]
@@ -409,7 +620,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat koopt de man?",
           "answer": "Brood en een krant.",
-          "distractors": ["Alleen brood.", "Koffie en een krant.", "Een tas."],
+          "distractors": [
+            "Alleen brood.",
+            "Koffie en een krant.",
+            "Een tas."
+          ],
           "explain_nl": "«Čovjek kupuje kruh i novine.»",
           "targets": [],
           "difficulty": 1
@@ -428,7 +643,10 @@
             "Het is een spelfout."
           ],
           "explain_nl": "Onderwerp → pas, lijdend voorwerp → psa. Precies het onderscheid uit deze module.",
-          "targets": ["g.mod.acc_anim", "v.03.pas"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.03.pas"
+          ],
           "difficulty": 4
         },
         {
@@ -445,7 +663,9 @@
             "Omdat kupovati geen accusatief vraagt."
           ],
           "explain_nl": "kruh is mannelijk maar levenloos, dus de accusatief is gelijk aan de woordenboekvorm.",
-          "targets": ["g.mod.acc_anim"],
+          "targets": [
+            "g.mod.acc_anim"
+          ],
           "difficulty": 3
         },
         {
@@ -455,9 +675,14 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "Svako jutro vidim istog ___ (čovjek) na trgu.",
           "answer": "čovjeka",
-          "accepts": ["čovjeka"],
+          "accepts": [
+            "čovjeka"
+          ],
           "explain_nl": "Een mens leeft → čovjeka. En let op istog: het bijvoeglijk naamwoord buigt mee.",
-          "targets": ["g.mod.acc_anim", "v.07.trg"],
+          "targets": [
+            "g.mod.acc_anim",
+            "v.07.trg"
+          ],
           "difficulty": 3
         },
         {
@@ -472,11 +697,15 @@
             "Beide woorden staan als lijdend voorwerp achter het werkwoord."
           ],
           "explain_nl": "Wie het verschil zelf kan maken, hoort het voortaan ook bij anderen.",
-          "targets": ["g.mod.acc_anim"],
+          "targets": [
+            "g.mod.acc_anim"
+          ],
           "difficulty": 4
         }
       ]
     }
   ],
-  "source": "curriculum ACC-ANIM, gebouwd op les 5 (g.05.akuzativ.zivo, g.05.akuzativ.nezivo)"
+  "source": "curriculum ACC-ANIM, gebouwd op les 5 (g.05.akuzativ.zivo, g.05.akuzativ.nezivo)",
+  "rank": 3,
+  "band": "Beginnen"
 }

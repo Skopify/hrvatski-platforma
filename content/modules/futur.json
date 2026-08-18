@@ -4,7 +4,10 @@
   "title_nl": "Wat je gaat doen",
   "cefr": "A2",
   "blurb_nl": "De toekomende tijd is één klein woordje plus het werkwoord. Dat woordje hoort bij de korte woordjes die je net geleerd hebt, dus het staat op de tweede plek — en het plakt aan het werkwoord vast als het erachter komt.",
-  "prerequisites": ["PRES-CLASSES", "CLITIC-ORDER"],
+  "prerequisites": [
+    "PRES-CLASSES",
+    "CLITIC-ORDER"
+  ],
   "can_do_nl": [
     "Ik kan zeggen wat ik morgen ga doen.",
     "Ik weet wanneer je radit ću schrijft en wanneer ja ću raditi.",
@@ -20,14 +23,53 @@
     "contrast_nl": "Het Nederlands gebruikt 'zullen' plus de infinitief, of gewoon de tegenwoordige tijd: 'morgen werk ik'. Het Kroatisch heeft een echte toekomende tijd, en het hulpwoordje gedraagt zich als een clitic — met alle regels die daarbij horen.",
     "paradigm": {
       "caption_nl": "raditi — werken, in de toekomende tijd",
-      "columns": ["bevestigend", "ontkennend"],
+      "columns": [
+        "bevestigend",
+        "ontkennend"
+      ],
       "rows": [
-        { "label": "ja", "cells": ["radit ću", "neću raditi"] },
-        { "label": "ti", "cells": ["radit ćeš", "nećeš raditi"] },
-        { "label": "on / ona", "cells": ["radit će", "neće raditi"] },
-        { "label": "mi", "cells": ["radit ćemo", "nećemo raditi"] },
-        { "label": "vi", "cells": ["radit ćete", "nećete raditi"] },
-        { "label": "oni", "cells": ["radit će", "neće raditi"] }
+        {
+          "label": "ja",
+          "cells": [
+            "radit ću",
+            "neću raditi"
+          ]
+        },
+        {
+          "label": "ti",
+          "cells": [
+            "radit ćeš",
+            "nećeš raditi"
+          ]
+        },
+        {
+          "label": "on / ona",
+          "cells": [
+            "radit će",
+            "neće raditi"
+          ]
+        },
+        {
+          "label": "mi",
+          "cells": [
+            "radit ćemo",
+            "nećemo raditi"
+          ]
+        },
+        {
+          "label": "vi",
+          "cells": [
+            "radit ćete",
+            "nećete raditi"
+          ]
+        },
+        {
+          "label": "oni",
+          "cells": [
+            "radit će",
+            "neće raditi"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -58,7 +100,10 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Het woordje **ću** staat nooit vooraan. In *Sutra ću raditi* staat het achter *sutra*, in *Radit ću sutra* achter het werkwoord. Precies de tweede plek — net als *sam*.\n\nEn kijk naar het werkwoord in die tweede zin: er staat *radit*, niet *raditi*. Komt *ću* erachter, dan valt de laatste **-i** weg.\n\nBij *Doći ću* gebeurt dat niet: werkwoorden op **-ći** blijven heel.",
-          "targets": ["g.mod.futur", "g.12.futur"]
+          "targets": [
+            "g.mod.futur",
+            "g.12.futur"
+          ]
         }
       ]
     },
@@ -76,17 +121,60 @@
           "body_nl": "De toekomende tijd is **ću, ćeš, će, ćemo, ćete, će** plus de infinitief.\n\nDeze woordjes horen bij de korte woordjes die je al kent, dus ze staan op de **tweede plek**:\n\n*Sutra* **ću** *raditi.* ✓\n**Ću** *sutra raditi.* ✗\n\nStaat er niets vóór het werkwoord, dan schuift het werkwoord zelf naar plek één — en dan trekken ze samen: *raditi ću* wordt **radit ću**. De laatste **-i** valt weg.\n\nWerkwoorden op **-ći** doen daar niet aan mee: *doći ću*, *ići ću*.",
           "table": {
             "caption_nl": "raditi — werken, in de toekomende tijd",
-            "columns": ["bevestigend", "ontkennend"],
+            "columns": [
+              "bevestigend",
+              "ontkennend"
+            ],
             "rows": [
-              { "label": "ja", "cells": ["radit ću", "neću raditi"] },
-              { "label": "ti", "cells": ["radit ćeš", "nećeš raditi"] },
-              { "label": "on / ona", "cells": ["radit će", "neće raditi"] },
-              { "label": "mi", "cells": ["radit ćemo", "nećemo raditi"] },
-              { "label": "vi", "cells": ["radit ćete", "nećete raditi"] },
-              { "label": "oni", "cells": ["radit će", "neće raditi"] }
+              {
+                "label": "ja",
+                "cells": [
+                  "radit ću",
+                  "neću raditi"
+                ]
+              },
+              {
+                "label": "ti",
+                "cells": [
+                  "radit ćeš",
+                  "nećeš raditi"
+                ]
+              },
+              {
+                "label": "on / ona",
+                "cells": [
+                  "radit će",
+                  "neće raditi"
+                ]
+              },
+              {
+                "label": "mi",
+                "cells": [
+                  "radit ćemo",
+                  "nećemo raditi"
+                ]
+              },
+              {
+                "label": "vi",
+                "cells": [
+                  "radit ćete",
+                  "nećete raditi"
+                ]
+              },
+              {
+                "label": "oni",
+                "cells": [
+                  "radit će",
+                  "neće raditi"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.futur", "g.12.futur", "v.06.raditi"]
+          "targets": [
+            "g.mod.futur",
+            "g.12.futur",
+            "v.06.raditi"
+          ]
         },
         {
           "id": "m.futur.011",
@@ -94,7 +182,10 @@
           "mode": "receptive",
           "prompt_nl": "Ontkennen en vragen",
           "body_nl": "**Ontkennen** gaat met één woord: *neću, nećeš, neće, nećemo, nećete, neće* plus de infinitief.\n\n*Neću raditi.* — Ik ga niet werken.\nNooit *ne ću*. Net als bij *nisam* zitten ontkenning en hulpwoordje aan elkaar vast.\n\n**Vragen** gaat met de lange vorm *hoću, hoćeš, hoće* plus *li*:\n\n*Hoćeš li doći?* — Kom je?\n*Hoće li Ana raditi?* — Gaat Ana werken?\n\nLet op: **Neću.** in zijn eentje betekent zowel 'dat ga ik niet doen' als 'dat wil ik niet'. Dat komt doordat deze woordjes van *htjeti* (willen) komen.",
-          "targets": ["g.mod.futur", "g.12.futur_negacija"]
+          "targets": [
+            "g.mod.futur",
+            "g.12.futur_negacija"
+          ]
         }
       ]
     },
@@ -112,9 +203,16 @@
           "given": "Pisat ću pismo.",
           "nudge": "Kijk naar het kleine woordje achter het werkwoord. Hoort dat bij gisteren, nu of morgen?",
           "answer": "Nog niet — ik ga de brief schrijven.",
-          "distractors": ["Nu — ik ben hem aan het schrijven.", "Gisteren — ik heb hem geschreven."],
+          "distractors": [
+            "Nu — ik ben hem aan het schrijven.",
+            "Gisteren — ik heb hem geschreven."
+          ],
           "explain_nl": "ću maakt er toekomst van, en pisat is de samengetrokken infinitief.",
-          "targets": ["g.mod.futur", "v.13.pisati", "v.01.pismo"],
+          "targets": [
+            "g.mod.futur",
+            "v.13.pisati",
+            "v.01.pismo"
+          ],
           "difficulty": 2
         },
         {
@@ -125,9 +223,15 @@
           "given": "Pisao sam pismo.",
           "nudge": "Kijk naar het kleine woordje. Hoort dat bij gisteren, nu of morgen? En kijk naar de vorm van het werkwoord.",
           "answer": "Gisteren — ik heb aan de brief geschreven.",
-          "distractors": ["Nu — ik ben hem aan het schrijven.", "Nog niet — ik ga hem schrijven."],
+          "distractors": [
+            "Nu — ik ben hem aan het schrijven.",
+            "Nog niet — ik ga hem schrijven."
+          ],
           "explain_nl": "sam plus deelwoord is verleden tijd. Dat had je bij de vorige module geleerd.",
-          "targets": ["g.mod.perfekt", "v.13.pisati"],
+          "targets": [
+            "g.mod.perfekt",
+            "v.13.pisati"
+          ],
           "difficulty": 2
         },
         {
@@ -138,9 +242,14 @@
           "given": "Pišem pismo.",
           "nudge": "Er staat helemaal geen klein woordje. Wat betekent dat voor de tijd?",
           "answer": "Nu — ik ben hem aan het schrijven.",
-          "distractors": ["Gisteren — ik heb hem geschreven.", "Nog niet — ik ga hem schrijven."],
+          "distractors": [
+            "Gisteren — ik heb hem geschreven.",
+            "Nog niet — ik ga hem schrijven."
+          ],
           "explain_nl": "Geen hulpwoordje, dus tegenwoordige tijd. Drie zinnen, drie tijden, één werkwoord.",
-          "targets": ["v.13.pisati"],
+          "targets": [
+            "v.13.pisati"
+          ],
           "difficulty": 2
         },
         {
@@ -157,7 +266,10 @@
             "Geen van beide; het moet Ja ću raditi sutra zijn."
           ],
           "explain_nl": "ću is een clitic en clitica staan op plek twee. Bij A staat er niets vóór, dus die zin kan niet.",
-          "targets": ["g.mod.futur", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.futur",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 3
         },
         {
@@ -174,7 +286,9 @@
             "Alleen: dat kan ik niet."
           ],
           "explain_nl": "De toekomstwoordjes komen van htjeti (willen). In hun eentje dragen ze allebei de betekenissen — de context beslist.",
-          "targets": ["g.mod.futur"],
+          "targets": [
+            "g.mod.futur"
+          ],
           "difficulty": 4
         },
         {
@@ -191,7 +305,10 @@
             "Dat is een spelfout; het moet doć ću zijn."
           ],
           "explain_nl": "Samentrekken gebeurt alleen bij werkwoorden op -ti: de -i valt weg. Bij -ći is er niets om weg te laten.",
-          "targets": ["g.mod.futur", "v.06.doci"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.doci"
+          ],
           "difficulty": 4
         }
       ]
@@ -209,9 +326,15 @@
           "prompt_nl": "Vul aan.",
           "given": "Sutra ___ (raditi, ja) u uredu.",
           "answer": "ću raditi",
-          "accepts": ["ću raditi"],
+          "accepts": [
+            "ću raditi"
+          ],
           "explain_nl": "Sutra staat op plek één, dus ću komt erachter en het werkwoord blijft heel.",
-          "targets": ["g.mod.futur", "v.06.raditi", "v.14.ured"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.raditi",
+            "v.14.ured"
+          ],
           "difficulty": 2
         },
         {
@@ -221,10 +344,16 @@
           "prompt_nl": "Vul aan. Begin met het werkwoord.",
           "given": "___ (raditi, ja) sutra u uredu.",
           "answer": "Radit ću",
-          "accepts": ["Radit ću", "radit ću"],
+          "accepts": [
+            "Radit ću",
+            "radit ću"
+          ],
           "hint": "Het werkwoord komt vooraan, dus er wordt samengetrokken.",
           "explain_nl": "raditi + ću wordt radit ću: de laatste -i valt weg.",
-          "targets": ["g.mod.futur", "v.06.raditi"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.raditi"
+          ],
           "difficulty": 3
         },
         {
@@ -234,9 +363,15 @@
           "prompt_nl": "Vul aan.",
           "given": "___ (doći, ja) u pet sati.",
           "answer": "Doći ću",
-          "accepts": ["Doći ću", "doći ću"],
+          "accepts": [
+            "Doći ću",
+            "doći ću"
+          ],
           "explain_nl": "doći eindigt op -ći, dus geen samentrekking.",
-          "targets": ["g.mod.futur", "v.06.doci"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.doci"
+          ],
           "difficulty": 3
         },
         {
@@ -246,9 +381,14 @@
           "prompt_nl": "Vul aan. Het gaat over ti.",
           "given": "Što ___ (raditi) sutra?",
           "answer": "ćeš raditi",
-          "accepts": ["ćeš raditi"],
+          "accepts": [
+            "ćeš raditi"
+          ],
           "explain_nl": "Što op plek één, dan ćeš voor ti.",
-          "targets": ["g.mod.futur", "v.06.raditi"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.raditi"
+          ],
           "difficulty": 2
         },
         {
@@ -258,9 +398,17 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik ga zondag niet werken.",
           "answer": "Neću raditi u nedjelju.",
-          "accepts": ["Neću raditi u nedjelju.", "Neću raditi u nedjelju", "U nedjelju neću raditi."],
+          "accepts": [
+            "Neću raditi u nedjelju.",
+            "Neću raditi u nedjelju",
+            "U nedjelju neću raditi."
+          ],
           "explain_nl": "Ontkenning met neću plus de hele infinitief. Geen samentrekking bij een ontkenning.",
-          "targets": ["g.mod.futur", "g.12.futur_negacija", "v.06.raditi"],
+          "targets": [
+            "g.mod.futur",
+            "g.12.futur_negacija",
+            "v.06.raditi"
+          ],
           "difficulty": 3
         },
         {
@@ -270,9 +418,16 @@
           "prompt_nl": "Vertaal.",
           "given": "Kom je morgen?",
           "answer": "Hoćeš li doći sutra?",
-          "accepts": ["Hoćeš li doći sutra?", "Hoćeš li doći sutra", "Hoćeš li sutra doći?"],
+          "accepts": [
+            "Hoćeš li doći sutra?",
+            "Hoćeš li doći sutra",
+            "Hoćeš li sutra doći?"
+          ],
           "explain_nl": "Vraag met de lange vorm hoćeš plus li.",
-          "targets": ["g.mod.futur", "v.06.doci"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.doci"
+          ],
           "difficulty": 4
         },
         {
@@ -280,11 +435,23 @@
           "type": "word_order",
           "mode": "productive",
           "prompt_nl": "Zet in de goede volgorde.",
-          "tokens": ["Ana", "će", "kupiti", "knjigu"],
+          "tokens": [
+            "Ana",
+            "će",
+            "kupiti",
+            "knjigu"
+          ],
           "answer": "Ana će kupiti knjigu",
-          "accepts": ["Ana će kupiti knjigu", "Ana će kupiti knjigu."],
+          "accepts": [
+            "Ana će kupiti knjigu",
+            "Ana će kupiti knjigu."
+          ],
           "explain_nl": "Ana op plek één, će op plek twee, dan de infinitief.",
-          "targets": ["g.mod.futur", "v.06.kupiti", "v.01.knjiga"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.kupiti",
+            "v.01.knjiga"
+          ],
           "difficulty": 2
         },
         {
@@ -294,9 +461,16 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ću raditi sutra.",
           "answer": "Radit ću sutra.",
-          "accepts": ["Radit ću sutra.", "Radit ću sutra", "Sutra ću raditi."],
+          "accepts": [
+            "Radit ću sutra.",
+            "Radit ću sutra",
+            "Sutra ću raditi."
+          ],
           "explain_nl": "ću kan niet vooraan. Zet het werkwoord of een tijdsbepaling op plek één.",
-          "targets": ["g.mod.futur", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.futur",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 3
         },
         {
@@ -306,9 +480,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Raditi ću sutra.",
           "answer": "Radit ću sutra.",
-          "accepts": ["Radit ću sutra.", "Radit ću sutra"],
+          "accepts": [
+            "Radit ću sutra.",
+            "Radit ću sutra"
+          ],
           "explain_nl": "Komt ću direct achter de infinitief, dan valt de -i weg.",
-          "targets": ["g.mod.futur", "v.06.raditi"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.raditi"
+          ],
           "difficulty": 3
         },
         {
@@ -318,9 +498,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ne ću doći sutra.",
           "answer": "Neću doći sutra.",
-          "accepts": ["Neću doći sutra.", "Neću doći sutra"],
+          "accepts": [
+            "Neću doći sutra.",
+            "Neću doći sutra"
+          ],
           "explain_nl": "Ontkenning en hulpwoordje zitten aan elkaar vast: neću. Net als nisam.",
-          "targets": ["g.mod.futur", "g.12.futur_negacija"],
+          "targets": [
+            "g.mod.futur",
+            "g.12.futur_negacija"
+          ],
           "difficulty": 2
         }
       ]
@@ -338,9 +524,15 @@
           "prompt_nl": "Welke vorm hoort hier?",
           "given": "Jučer ___ u uredu.",
           "answer": "sam radio",
-          "distractors": ["ću raditi", "radim"],
+          "distractors": [
+            "ću raditi",
+            "radim"
+          ],
           "explain_nl": "Jučer = gisteren, dus verleden tijd.",
-          "targets": ["g.mod.perfekt", "v.06.raditi"],
+          "targets": [
+            "g.mod.perfekt",
+            "v.06.raditi"
+          ],
           "difficulty": 2
         },
         {
@@ -350,9 +542,15 @@
           "prompt_nl": "Welke vorm hoort hier?",
           "given": "Sutra ___ u uredu.",
           "answer": "ću raditi",
-          "distractors": ["sam radio", "radim"],
+          "distractors": [
+            "sam radio",
+            "radim"
+          ],
           "explain_nl": "Sutra = morgen, dus toekomst.",
-          "targets": ["g.mod.futur", "v.06.raditi"],
+          "targets": [
+            "g.mod.futur",
+            "v.06.raditi"
+          ],
           "difficulty": 2
         },
         {
@@ -362,9 +560,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sutra ću ići u ___ (grad).",
           "answer": "grad",
-          "accepts": ["grad"],
+          "accepts": [
+            "grad"
+          ],
           "explain_nl": "ići = beweging → accusatief.",
-          "targets": ["g.mod.loc_vs_acc", "v.05.grad"],
+          "targets": [
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
           "difficulty": 2
         },
         {
@@ -374,10 +577,18 @@
           "prompt_nl": "Vertaal. Een man is aan het woord.",
           "given": "Morgen ga ik het boek uitlezen.",
           "answer": "Sutra ću pročitati knjigu.",
-          "accepts": ["Sutra ću pročitati knjigu.", "Sutra ću pročitati knjigu", "Pročitat ću knjigu sutra."],
+          "accepts": [
+            "Sutra ću pročitati knjigu.",
+            "Sutra ću pročitati knjigu",
+            "Pročitat ću knjigu sutra."
+          ],
           "hint": "Uitlezen betekent: af krijgen.",
           "explain_nl": "Drie dingen tegelijk: toekomst met ću, het voltooide pročitati omdat het af komt, en knjigu in de accusatief.",
-          "targets": ["g.mod.futur", "g.mod.aspect_pairs", "v.01.knjiga"],
+          "targets": [
+            "g.mod.futur",
+            "g.mod.aspect_pairs",
+            "v.01.knjiga"
+          ],
           "difficulty": 5
         },
         {
@@ -387,10 +598,18 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Ću doći u kući sutra.",
           "answer": "Doći ću u kuću sutra.",
-          "accepts": ["Doći ću u kuću sutra.", "Doći ću u kuću sutra", "Sutra ću doći u kuću."],
+          "accepts": [
+            "Doći ću u kuću sutra.",
+            "Doći ću u kuću sutra",
+            "Sutra ću doći u kuću."
+          ],
           "hint": "Eén fout in de plek van het woordje, één in de naamval.",
           "explain_nl": "ću kan niet vooraan, en doći is beweging dus u kuću.",
-          "targets": ["g.mod.futur", "g.mod.loc_vs_acc", "v.01.kuca"],
+          "targets": [
+            "g.mod.futur",
+            "g.mod.loc_vs_acc",
+            "v.01.kuca"
+          ],
           "difficulty": 5
         }
       ]
@@ -409,7 +628,11 @@
           "mode": "receptive",
           "prompt_nl": "Wanneer komt de verteller aan in Split?",
           "answer": "Dinsdagavond.",
-          "distractors": ["Woensdagochtend.", "Vrijdag.", "Zondag."],
+          "distractors": [
+            "Woensdagochtend.",
+            "Vrijdag.",
+            "Zondag."
+          ],
           "explain_nl": "«Doći ću u utorak navečer.»",
           "targets": [],
           "difficulty": 1
@@ -428,7 +651,9 @@
             "Omdat het een ontkenning is."
           ],
           "explain_nl": "Samentrekking: putovati + ću wordt putovat ću.",
-          "targets": ["g.mod.futur"],
+          "targets": [
+            "g.mod.futur"
+          ],
           "difficulty": 3
         },
         {
@@ -445,7 +670,9 @@
             "De laatste zin."
           ],
           "explain_nl": "Net als in het Nederlands ('volgende week ga ik') kun je met een tijdsbepaling de tegenwoordige tijd gebruiken voor de toekomst. De echte toekomende tijd is duidelijker.",
-          "targets": ["g.mod.futur"],
+          "targets": [
+            "g.mod.futur"
+          ],
           "difficulty": 4
         },
         {
@@ -455,10 +682,16 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "___ (vratiti se, ja) u nedjelju.",
           "answer": "Vratit ću se",
-          "accepts": ["Vratit ću se", "vratit ću se"],
+          "accepts": [
+            "Vratit ću se",
+            "vratit ću se"
+          ],
           "hint": "Let op: er hoort ook een se bij, en die komt achter ću.",
           "explain_nl": "vratiti se + ću wordt Vratit ću se. In het trosje: eerst ću, dan se.",
-          "targets": ["g.mod.futur", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.futur",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 5
         },
         {
@@ -474,11 +707,15 @@
             "Waar het werkwoord vooraan staat, is er samengetrokken."
           ],
           "explain_nl": "Wie over volgende week kan praten, kan de helft van alle alledaagse gesprekken voeren.",
-          "targets": ["g.mod.futur"],
+          "targets": [
+            "g.mod.futur"
+          ],
           "difficulty": 4
         }
       ]
     }
   ],
-  "source": "curriculum FUTUR-1, gebouwd op les 12 (g.12.futur, g.12.futur_negacija)"
+  "source": "curriculum FUTUR-1, gebouwd op les 12 (g.12.futur, g.12.futur_negacija)",
+  "rank": 7,
+  "band": "Opbouwen"
 }

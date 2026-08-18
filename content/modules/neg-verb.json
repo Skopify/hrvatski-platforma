@@ -4,7 +4,10 @@
   "title_nl": "Nee zeggen",
   "cefr": "A1/A2",
   "blurb_nl": "Ontkennen is één woordje ervoor — met vier uitzonderingen die aan elkaar plakken. En één regel die het Nederlands je verkeerd influistert: bij nooit, niemand en niets moet het werkwoord óók ontkend worden.",
-  "prerequisites": ["PRES-CLASSES", "BITI-NEG"],
+  "prerequisites": [
+    "PRES-CLASSES",
+    "BITI-NEG"
+  ],
   "can_do_nl": [
     "Ik kan elk werkwoord ontkennen met ne.",
     "Ik ken de vier woorden die aan elkaar plakken: nemam, nisam, neću, nemoj.",
@@ -20,13 +23,46 @@
     "contrast_nl": "Het Nederlands zet 'niet' achter het werkwoord en gebruikt bij 'niemand' of 'nooit' maar één ontkenning: 'niemand weet het'. Het Kroatisch zet ne vóór het werkwoord én verlangt dat het werkwoord óók ontkend wordt: nitko ne zna — letterlijk 'niemand weet het niet'.",
     "paradigm": {
       "caption_nl": "Dubbele ontkenning: allebei de delen moeten",
-      "columns": ["Kroatisch", "Nederlands"],
+      "columns": [
+        "Kroatisch",
+        "Nederlands"
+      ],
       "rows": [
-        { "label": "niemand", "cells": ["nitko ne zna", "niemand weet het"] },
-        { "label": "niets", "cells": ["ništa ne vidim", "ik zie niets"] },
-        { "label": "nooit", "cells": ["nikad ne radim", "ik werk nooit"] },
-        { "label": "nergens", "cells": ["nigdje ne idem", "ik ga nergens heen"] },
-        { "label": "ook niet", "cells": ["ni ja ne znam", "ik weet het ook niet"] }
+        {
+          "label": "niemand",
+          "cells": [
+            "nitko ne zna",
+            "niemand weet het"
+          ]
+        },
+        {
+          "label": "niets",
+          "cells": [
+            "ništa ne vidim",
+            "ik zie niets"
+          ]
+        },
+        {
+          "label": "nooit",
+          "cells": [
+            "nikad ne radim",
+            "ik werk nooit"
+          ]
+        },
+        {
+          "label": "nergens",
+          "cells": [
+            "nigdje ne idem",
+            "ik ga nergens heen"
+          ]
+        },
+        {
+          "label": "ook niet",
+          "cells": [
+            "ni ja ne znam",
+            "ik weet het ook niet"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -57,7 +93,9 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Meestal staat er gewoon **ne** los vóór het werkwoord: *ne radim*, *ne govorim*.\n\nMaar bij vier woorden plakt het vast: *imam* wordt **nemam**, *sam* wordt **nisam**, *ću* wordt **neću**. Die moet je gewoon kennen.\n\nEn kijk naar de laatste drie regels. Daar staat *nitko* **én** *ne*, *nikad* **én** *ne*, *ništa* **én** *ne*. In het Nederlands zou dat dubbelop zijn — 'niemand weet het niet' — maar in het Kroatisch is het verplicht.",
-          "targets": ["g.mod.neg_verb"]
+          "targets": [
+            "g.mod.neg_verb"
+          ]
         }
       ]
     },
@@ -73,7 +111,11 @@
           "mode": "receptive",
           "prompt_nl": "ne vóór het werkwoord, los geschreven",
           "body_nl": "Ontkennen doe je met **ne** direct vóór het werkwoord, als los woord:\n\n*Radim.* → *Ne radim.*\n*Govorim hrvatski.* → *Ne govorim hrvatski.*\n\nDat is eenvoudiger dan het Nederlands, waar 'niet' verspringt: 'ik werk niet', maar 'ik heb niet gewerkt'. In het Kroatisch staat *ne* altijd op dezelfde plek.\n\nVier woorden plakken wél vast, en die zijn juist heel frequent:\n\n**nemam** — ik heb niet (ne + imam)\n**nisam** — ik ben niet (ne + sam)\n**neću** — ik zal niet / ik wil niet (ne + ću)\n**nemoj** — doe niet (verbod)",
-          "targets": ["g.mod.neg_verb", "v.06.raditi", "v.09.govoriti"]
+          "targets": [
+            "g.mod.neg_verb",
+            "v.06.raditi",
+            "v.09.govoriti"
+          ]
         },
         {
           "id": "m.neg.011",
@@ -83,16 +125,52 @@
           "body_nl": "Staat er een woord als *nitko, ništa, nikad, nigdje* in de zin, dan moet het werkwoord **óók** ontkend worden.\n\n*Nitko* **ne** *zna.* — Niemand weet het.\n*Ništa* **ne** *vidim.* — Ik zie niets.\n*Nikad* **ne** *radim u nedjelju.* — Ik werk nooit op zondag.\n\nLetterlijk staat er 'niemand weet het niet'. In het Nederlands is dat fout, in het Kroatisch verplicht. Het is de fout die Nederlandstaligen het langst blijven maken, omdat je eigen taal je influistert dat één ontkenning genoeg is.\n\nDe vuistregel: **zie je een woord dat met ni- begint, zet dan ne bij het werkwoord.**",
           "table": {
             "caption_nl": "Dubbele ontkenning: allebei de delen moeten",
-            "columns": ["Kroatisch", "Nederlands"],
+            "columns": [
+              "Kroatisch",
+              "Nederlands"
+            ],
             "rows": [
-              { "label": "niemand", "cells": ["nitko ne zna", "niemand weet het"] },
-              { "label": "niets", "cells": ["ništa ne vidim", "ik zie niets"] },
-              { "label": "nooit", "cells": ["nikad ne radim", "ik werk nooit"] },
-              { "label": "nergens", "cells": ["nigdje ne idem", "ik ga nergens heen"] },
-              { "label": "ook niet", "cells": ["ni ja ne znam", "ik weet het ook niet"] }
+              {
+                "label": "niemand",
+                "cells": [
+                  "nitko ne zna",
+                  "niemand weet het"
+                ]
+              },
+              {
+                "label": "niets",
+                "cells": [
+                  "ništa ne vidim",
+                  "ik zie niets"
+                ]
+              },
+              {
+                "label": "nooit",
+                "cells": [
+                  "nikad ne radim",
+                  "ik werk nooit"
+                ]
+              },
+              {
+                "label": "nergens",
+                "cells": [
+                  "nigdje ne idem",
+                  "ik ga nergens heen"
+                ]
+              },
+              {
+                "label": "ook niet",
+                "cells": [
+                  "ni ja ne znam",
+                  "ik weet het ook niet"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.neg_verb", "v.05.znati"]
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ]
         },
         {
           "id": "m.neg.012",
@@ -100,7 +178,11 @@
           "mode": "receptive",
           "prompt_nl": "nemam vraagt een andere naamval",
           "body_nl": "*Imam* gaat met de accusatief, maar *nemam* met de **genitief**:\n\n*Imam vrijeme.* → *Nemam* **vremena**.\n*Imam novac.* → *Nemam* **novca**.\n*Imam auto.* → *Nemam* **auta**.\n\nHet Nederlands verandert hier niets: 'ik heb tijd' wordt 'ik heb geen tijd'. Het Kroatisch wisselt de naamval.\n\nDit heet de genitief van ontkenning, en je hoort hem constant: *Nemam pojma* (ik heb geen idee), *Nema problema* (geen probleem).",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme", "v.02.novac"]
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme",
+            "v.02.novac"
+          ]
         }
       ]
     },
@@ -118,9 +200,14 @@
           "given": "Nitko ne zna.",
           "nudge": "Er staan twee ontkenningen. Betekent dat twee keer nee, of hoort dat gewoon zo in het Kroatisch?",
           "answer": "Niemand weet het.",
-          "distractors": ["Iemand weet het niet — dus er is wel iemand die het weet."],
+          "distractors": [
+            "Iemand weet het niet — dus er is wel iemand die het weet."
+          ],
           "explain_nl": "Twee ontkenningen heffen elkaar in het Kroatisch niet op. Het is verplicht dubbelop.",
-          "targets": ["g.mod.neg_verb", "v.05.znati"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ],
           "difficulty": 3
         },
         {
@@ -137,7 +224,10 @@
             "Geen van beide; het moet Nitko ne znam zijn."
           ],
           "explain_nl": "Dit is de klassieke fout. Het Nederlands zegt 'niemand weet het'; het Kroatisch verlangt beide delen.",
-          "targets": ["g.mod.neg_verb", "v.05.znati"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ],
           "difficulty": 3
         },
         {
@@ -148,9 +238,15 @@
           "given": "Nemam vremena.",
           "nudge": "Kijk naar het eind van vremena. Welke naamval is dat, en wat zegt dat over het werkwoord ervoor?",
           "answer": "Ik heb geen tijd.",
-          "distractors": ["Ik heb tijd.", "Ik weet niet hoeveel tijd ik heb."],
+          "distractors": [
+            "Ik heb tijd.",
+            "Ik weet niet hoeveel tijd ik heb."
+          ],
           "explain_nl": "nemam is ne + imam, en de genitief vremena hoort daarbij.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 2
         },
         {
@@ -167,7 +263,10 @@
             "Geen van beide."
           ],
           "explain_nl": "Imam vrijeme, maar nemam vremena. Bij het ontkennen wisselt de naamval.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 4
         },
         {
@@ -184,7 +283,11 @@
             "Ik heb niet gewerkt — een vrouw aan het woord."
           ],
           "explain_nl": "nisam is ne + sam, dus een ontkende verleden tijd. En radio is de mannelijke vorm.",
-          "targets": ["g.mod.neg_verb", "g.mod.perfekt", "v.06.raditi"],
+          "targets": [
+            "g.mod.neg_verb",
+            "g.mod.perfekt",
+            "v.06.raditi"
+          ],
           "difficulty": 3
         },
         {
@@ -195,9 +298,16 @@
           "given": "Nikad nikome ništa ne govorim.",
           "nudge": "Tel de woorden die met ni- beginnen, en kijk daarna nog eens naar het werkwoord.",
           "answer": "Vier — en dat is correct Kroatisch.",
-          "distractors": ["Eén.", "Twee, en dat is een fout.", "Drie, en het werkwoord hoeft niet."],
+          "distractors": [
+            "Eén.",
+            "Twee, en dat is een fout.",
+            "Drie, en het werkwoord hoeft niet."
+          ],
           "explain_nl": "«Ik zeg nooit tegen niemand niets niet» — nikad, nikome, ništa én ne. Alle delen moeten mee, hoeveel het er ook zijn.",
-          "targets": ["g.mod.neg_verb", "v.09.govoriti"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.09.govoriti"
+          ],
           "difficulty": 5
         }
       ]
@@ -215,9 +325,15 @@
           "prompt_nl": "Maak de zin ontkennend.",
           "given": "Radim u uredu. → ___ u uredu.",
           "answer": "Ne radim",
-          "accepts": ["Ne radim", "ne radim"],
+          "accepts": [
+            "Ne radim",
+            "ne radim"
+          ],
           "explain_nl": "ne los vóór het werkwoord.",
-          "targets": ["g.mod.neg_verb", "v.06.raditi"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.06.raditi"
+          ],
           "difficulty": 1
         },
         {
@@ -227,9 +343,15 @@
           "prompt_nl": "Maak de zin ontkennend.",
           "given": "Imam vremena. → ___ vremena.",
           "answer": "Nemam",
-          "accepts": ["Nemam", "nemam"],
+          "accepts": [
+            "Nemam",
+            "nemam"
+          ],
           "explain_nl": "imam wordt nemam, aan elkaar.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 2
         },
         {
@@ -239,9 +361,14 @@
           "prompt_nl": "Maak de zin ontkennend. Een man is aan het woord.",
           "given": "Ja sam student. → ___ student.",
           "answer": "Nisam",
-          "accepts": ["Nisam", "nisam"],
+          "accepts": [
+            "Nisam",
+            "nisam"
+          ],
           "explain_nl": "sam wordt nisam, aan elkaar.",
-          "targets": ["g.mod.neg_verb"],
+          "targets": [
+            "g.mod.neg_verb"
+          ],
           "difficulty": 2
         },
         {
@@ -251,9 +378,16 @@
           "prompt_nl": "Maak de zin ontkennend.",
           "given": "Doći ću sutra. → ___ doći sutra.",
           "answer": "Neću",
-          "accepts": ["Neću", "neću"],
+          "accepts": [
+            "Neću",
+            "neću"
+          ],
           "explain_nl": "ću wordt neću, en het werkwoord blijft de hele infinitief.",
-          "targets": ["g.mod.neg_verb", "g.mod.futur", "v.06.doci"],
+          "targets": [
+            "g.mod.neg_verb",
+            "g.mod.futur",
+            "v.06.doci"
+          ],
           "difficulty": 3
         },
         {
@@ -263,10 +397,15 @@
           "prompt_nl": "Vul aan.",
           "given": "Nitko ___ (znati) odgovor.",
           "answer": "ne zna",
-          "accepts": ["ne zna"],
+          "accepts": [
+            "ne zna"
+          ],
           "hint": "Er staat al een ontkenning; het werkwoord moet mee.",
           "explain_nl": "Bij nitko hoort ne bij het werkwoord. Twee ontkenningen, en dat is goed.",
-          "targets": ["g.mod.neg_verb", "v.05.znati"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ],
           "difficulty": 3
         },
         {
@@ -276,9 +415,15 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik werk nooit op zondag.",
           "answer": "Nikad ne radim u nedjelju.",
-          "accepts": ["Nikad ne radim u nedjelju.", "Nikad ne radim u nedjelju"],
+          "accepts": [
+            "Nikad ne radim u nedjelju.",
+            "Nikad ne radim u nedjelju"
+          ],
           "explain_nl": "nikad plus ne bij het werkwoord.",
-          "targets": ["g.mod.neg_verb", "v.06.raditi"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.06.raditi"
+          ],
           "difficulty": 3
         },
         {
@@ -288,9 +433,15 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik heb geen geld.",
           "answer": "Nemam novca.",
-          "accepts": ["Nemam novca.", "Nemam novca"],
+          "accepts": [
+            "Nemam novca.",
+            "Nemam novca"
+          ],
           "explain_nl": "nemam plus de genitief novca.",
-          "targets": ["g.mod.neg_verb", "v.02.novac"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.02.novac"
+          ],
           "difficulty": 3
         },
         {
@@ -300,9 +451,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Nitko zna gdje je.",
           "answer": "Nitko ne zna gdje je.",
-          "accepts": ["Nitko ne zna gdje je.", "Nitko ne zna gdje je"],
+          "accepts": [
+            "Nitko ne zna gdje je.",
+            "Nitko ne zna gdje je"
+          ],
           "explain_nl": "Bij nitko moet het werkwoord ook ontkend worden.",
-          "targets": ["g.mod.neg_verb", "v.05.znati"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ],
           "difficulty": 3
         },
         {
@@ -312,9 +469,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ne imam vremena.",
           "answer": "Nemam vremena.",
-          "accepts": ["Nemam vremena.", "Nemam vremena"],
+          "accepts": [
+            "Nemam vremena.",
+            "Nemam vremena"
+          ],
           "explain_nl": "ne en imam plakken aan elkaar: nemam.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 2
         },
         {
@@ -324,9 +487,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Nemam vrijeme danas.",
           "answer": "Nemam vremena danas.",
-          "accepts": ["Nemam vremena danas.", "Nemam vremena danas"],
+          "accepts": [
+            "Nemam vremena danas.",
+            "Nemam vremena danas"
+          ],
           "explain_nl": "nemam vraagt de genitief: vremena.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 4
         }
       ]
@@ -344,9 +513,17 @@
           "prompt_nl": "Vertaal. Een vrouw is aan het woord.",
           "given": "Ik heb gisteren niet gewerkt.",
           "answer": "Jučer nisam radila.",
-          "accepts": ["Jučer nisam radila.", "Jučer nisam radila", "Nisam radila jučer."],
+          "accepts": [
+            "Jučer nisam radila.",
+            "Jučer nisam radila",
+            "Nisam radila jučer."
+          ],
           "explain_nl": "nisam plus het vrouwelijke deelwoord radila.",
-          "targets": ["g.mod.neg_verb", "g.mod.perfekt", "v.06.raditi"],
+          "targets": [
+            "g.mod.neg_verb",
+            "g.mod.perfekt",
+            "v.06.raditi"
+          ],
           "difficulty": 4
         },
         {
@@ -356,9 +533,18 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik ga morgen niet naar de stad.",
           "answer": "Sutra neću ići u grad.",
-          "accepts": ["Sutra neću ići u grad.", "Sutra neću ići u grad", "Neću ići u grad sutra."],
+          "accepts": [
+            "Sutra neću ići u grad.",
+            "Sutra neću ići u grad",
+            "Neću ići u grad sutra."
+          ],
           "explain_nl": "neću plus de infinitief, en grad in de accusatief want er is beweging.",
-          "targets": ["g.mod.neg_verb", "g.mod.futur", "g.mod.loc_vs_acc", "v.05.grad"],
+          "targets": [
+            "g.mod.neg_verb",
+            "g.mod.futur",
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
           "difficulty": 5
         },
         {
@@ -374,7 +560,10 @@
             "Vidim nikoga ovdje."
           ],
           "explain_nl": "nikoga plus ne bij het werkwoord. Precies twee ontkenningen, niet één en niet drie.",
-          "targets": ["g.mod.neg_verb", "v.09.vidjeti"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.09.vidjeti"
+          ],
           "difficulty": 4
         },
         {
@@ -384,9 +573,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Nikad nisam bio u ___ (Split).",
           "answer": "Splitu",
-          "accepts": ["Splitu"],
+          "accepts": [
+            "Splitu"
+          ],
           "explain_nl": "bio sam = ik was ergens, dus plaats → lokatief. En nikad vraagt de ontkenning bij het werkwoord, die er met nisam al staat.",
-          "targets": ["g.mod.neg_verb", "g.mod.loc_vs_acc"],
+          "targets": [
+            "g.mod.neg_verb",
+            "g.mod.loc_vs_acc"
+          ],
           "difficulty": 4
         },
         {
@@ -396,10 +590,16 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Nikad ne imam vrijeme.",
           "answer": "Nikad nemam vremena.",
-          "accepts": ["Nikad nemam vremena.", "Nikad nemam vremena"],
+          "accepts": [
+            "Nikad nemam vremena.",
+            "Nikad nemam vremena"
+          ],
           "hint": "Eén fout in het aan elkaar schrijven, één in de naamval.",
           "explain_nl": "ne imam wordt nemam, en nemam vraagt de genitief vremena.",
-          "targets": ["g.mod.neg_verb", "v.12.vrijeme"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.12.vrijeme"
+          ],
           "difficulty": 5
         }
       ]
@@ -418,7 +618,11 @@
           "mode": "receptive",
           "prompt_nl": "Waarom had de verteller geen tijd voor koffie?",
           "answer": "Omdat hij te laat was.",
-          "distractors": ["Omdat het café dicht was.", "Omdat hij geen geld had.", "Omdat hij niet wilde."],
+          "distractors": [
+            "Omdat het café dicht was.",
+            "Omdat hij geen geld had.",
+            "Omdat hij niet wilde."
+          ],
           "explain_nl": "«Nemam vremena za kavu jer sam kasnio.»",
           "targets": [],
           "difficulty": 1
@@ -437,7 +641,10 @@
             "Het is een fout in de tekst."
           ],
           "explain_nl": "Vuistregel: zie je een woord met ni-, zet dan ne bij het werkwoord.",
-          "targets": ["g.mod.neg_verb", "v.05.znati"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.05.znati"
+          ],
           "difficulty": 3
         },
         {
@@ -448,9 +655,15 @@
           "given": "Nemam pojma gdje sam ga ostavio.",
           "nudge": "pojam betekent begrip of idee. Kijk naar de uitgang: welke naamval is pojma?",
           "answer": "Ik heb geen idee.",
-          "distractors": ["Ik heb een idee.", "Ik heb het begrepen.", "Ik weet het zeker."],
+          "distractors": [
+            "Ik heb een idee.",
+            "Ik heb het begrepen.",
+            "Ik weet het zeker."
+          ],
           "explain_nl": "Een vaste uitdrukking met de genitief van ontkenning: nemam plus pojma. Je hoort hem constant.",
-          "targets": ["g.mod.neg_verb"],
+          "targets": [
+            "g.mod.neg_verb"
+          ],
           "difficulty": 3
         },
         {
@@ -460,9 +673,14 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "Danas ništa ___ (ići) dobro.",
           "answer": "ne ide",
-          "accepts": ["ne ide"],
+          "accepts": [
+            "ne ide"
+          ],
           "explain_nl": "Bij ništa hoort ne bij het werkwoord.",
-          "targets": ["g.mod.neg_verb", "v.07.ici"],
+          "targets": [
+            "g.mod.neg_verb",
+            "v.07.ici"
+          ],
           "difficulty": 3
         },
         {
@@ -477,11 +695,15 @@
             "De derde zin gebruikt nemam met de genitief."
           ],
           "explain_nl": "Wie deze drie kan maken, ontkent voortaan zoals een Kroaat en niet zoals een Nederlander.",
-          "targets": ["g.mod.neg_verb"],
+          "targets": [
+            "g.mod.neg_verb"
+          ],
           "difficulty": 4
         }
       ]
     }
   ],
-  "source": "curriculum NEG-VERB, vanaf nul geschreven; dekt ook GEN-NEG-IMATI (nemam vremena)"
+  "source": "curriculum NEG-VERB, vanaf nul geschreven; dekt ook GEN-NEG-IMATI (nemam vremena)",
+  "rank": 2,
+  "band": "Beginnen"
 }

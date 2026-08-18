@@ -4,7 +4,10 @@
   "title_nl": "Wat jou overkomt",
   "cefr": "A2/B1",
   "blurb_nl": "Bij een handvol veelgebruikte uitdrukkingen ben jij niet het onderwerp van de zin. Het ding is dat, en jij staat erbij. Wie die omkering doorheeft, begrijpt in één klap sviđa mi se, hladno mi je en boli me glava.",
-  "prerequisites": ["LOCDAT-FORM", "DAT-CLITIC"],
+  "prerequisites": [
+    "LOCDAT-FORM",
+    "DAT-CLITIC"
+  ],
   "can_do_nl": [
     "Ik kan zeggen dat ik iets leuk vind met sviđa mi se.",
     "Ik weet dat het werkwoord meebuigt met het ding, niet met mij.",
@@ -20,13 +23,52 @@
     "contrast_nl": "Het Nederlands zet jou vooraan: 'ik vind het leuk', 'ik heb het koud'. Het Kroatisch draait dat om: 'het bevalt aan mij', 'het is koud aan mij'. Zodra je die omkering ziet, vallen al deze uitdrukkingen op hun plek.",
     "paradigm": {
       "caption_nl": "Jij staat erbij, het ding is het onderwerp",
-      "columns": ["Kroatisch", "letterlijk", "gewoon Nederlands"],
+      "columns": [
+        "Kroatisch",
+        "letterlijk",
+        "gewoon Nederlands"
+      ],
       "rows": [
-        { "label": "leuk vinden", "cells": ["Sviđa mi se.", "het bevalt aan mij", "ik vind het leuk"] },
-        { "label": "koud hebben", "cells": ["Hladno mi je.", "het is koud aan mij", "ik heb het koud"] },
-        { "label": "nodig hebben", "cells": ["Treba mi.", "het is nodig aan mij", "ik heb het nodig"] },
-        { "label": "aangenaam", "cells": ["Drago mi je.", "het is fijn aan mij", "aangenaam"] },
-        { "label": "vervelen", "cells": ["Dosadno mi je.", "het is saai aan mij", "ik verveel me"] }
+        {
+          "label": "leuk vinden",
+          "cells": [
+            "Sviđa mi se.",
+            "het bevalt aan mij",
+            "ik vind het leuk"
+          ]
+        },
+        {
+          "label": "koud hebben",
+          "cells": [
+            "Hladno mi je.",
+            "het is koud aan mij",
+            "ik heb het koud"
+          ]
+        },
+        {
+          "label": "nodig hebben",
+          "cells": [
+            "Treba mi.",
+            "het is nodig aan mij",
+            "ik heb het nodig"
+          ]
+        },
+        {
+          "label": "aangenaam",
+          "cells": [
+            "Drago mi je.",
+            "het is fijn aan mij",
+            "aangenaam"
+          ]
+        },
+        {
+          "label": "vervelen",
+          "cells": [
+            "Dosadno mi je.",
+            "het is saai aan mij",
+            "ik verveel me"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -57,7 +99,10 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "In het Nederlands sta jij vooraan: **ik** vind het leuk, **ik** heb het koud.\n\nIn het Kroatisch niet. Daar is het **díng** het onderwerp, en jij staat erbij als *mi*. Letterlijk: 'de stad bevalt aan mij'.\n\nDat is dezelfde bouw als het Nederlandse 'het bevalt me' of 'het lijkt me' — die hebben wij ook, we gebruiken ze alleen minder vaak.\n\nEn kijk naar de laatste regel: daar staat **me**, niet *mi*. Dat is geen slordigheid; *boljeti* werkt met een andere naamval dan de rest.",
-          "targets": ["g.mod.dat_experiencer", "g.19.dativ_dozivljavaca"]
+          "targets": [
+            "g.mod.dat_experiencer",
+            "g.19.dativ_dozivljavaca"
+          ]
         }
       ]
     },
@@ -75,16 +120,59 @@
           "body_nl": "Bij deze uitdrukkingen ben jij niet degene die iets doet. Het ding doet iets **aan jou**, en jij staat in de datief: *mi, ti, mu, joj, nam, vam, im*.\n\n*Sviđa* **mi** *se grad.* — de stad bevalt aan mij.\n*Hladno* **mi** *je.* — het is koud aan mij.\n*Treba* **mi** *kava.* — koffie is nodig aan mij.\n\nDaaruit volgt iets belangrijks: het werkwoord buigt mee met **het ding**, niet met jou.\n\n*Sviđa mi se grad.* — één stad.\n*Sviđa***ju*** mi se knjige.* — meerdere boeken, dus meervoud.\n\nWie dat doorheeft, hoeft niets meer uit het hoofd te leren.",
           "table": {
             "caption_nl": "Jij staat erbij, het ding is het onderwerp",
-            "columns": ["Kroatisch", "letterlijk", "gewoon Nederlands"],
+            "columns": [
+              "Kroatisch",
+              "letterlijk",
+              "gewoon Nederlands"
+            ],
             "rows": [
-              { "label": "leuk vinden", "cells": ["Sviđa mi se.", "het bevalt aan mij", "ik vind het leuk"] },
-              { "label": "koud hebben", "cells": ["Hladno mi je.", "het is koud aan mij", "ik heb het koud"] },
-              { "label": "nodig hebben", "cells": ["Treba mi.", "het is nodig aan mij", "ik heb het nodig"] },
-              { "label": "aangenaam", "cells": ["Drago mi je.", "het is fijn aan mij", "aangenaam"] },
-              { "label": "vervelen", "cells": ["Dosadno mi je.", "het is saai aan mij", "ik verveel me"] }
+              {
+                "label": "leuk vinden",
+                "cells": [
+                  "Sviđa mi se.",
+                  "het bevalt aan mij",
+                  "ik vind het leuk"
+                ]
+              },
+              {
+                "label": "koud hebben",
+                "cells": [
+                  "Hladno mi je.",
+                  "het is koud aan mij",
+                  "ik heb het koud"
+                ]
+              },
+              {
+                "label": "nodig hebben",
+                "cells": [
+                  "Treba mi.",
+                  "het is nodig aan mij",
+                  "ik heb het nodig"
+                ]
+              },
+              {
+                "label": "aangenaam",
+                "cells": [
+                  "Drago mi je.",
+                  "het is fijn aan mij",
+                  "aangenaam"
+                ]
+              },
+              {
+                "label": "vervelen",
+                "cells": [
+                  "Dosadno mi je.",
+                  "het is saai aan mij",
+                  "ik verveel me"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.dat_experiencer", "g.19.svidati_se", "g.19.dativ_dozivljavaca"]
+          "targets": [
+            "g.mod.dat_experiencer",
+            "g.19.svidati_se",
+            "g.19.dativ_dozivljavaca"
+          ]
         },
         {
           "id": "m.datex.011",
@@ -92,7 +180,11 @@
           "mode": "receptive",
           "prompt_nl": "Eén werkwoord doet het anders: boljeti",
           "body_nl": "*Boljeti* (pijn doen) heeft dezelfde omkering — het lichaamsdeel is het onderwerp — maar gebruikt de **accusatief** in plaats van de datief.\n\n*Boli* **me** *glava.* — mijn hoofd doet pijn.\n*Bole* **me** *noge.* — mijn benen doen pijn.\n\nDus *me*, niet *mi*. En let op *bole*: meervoud, want het zijn twee benen.\n\nJe hoeft alleen te onthouden dat dit ene werkwoord uit de rij valt. De omkering zelf is precies dezelfde.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti", "v.18.glava"]
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti",
+            "v.18.glava"
+          ]
         },
         {
           "id": "m.datex.012",
@@ -100,7 +192,10 @@
           "mode": "receptive",
           "prompt_nl": "En waar staat dat kleine woordje?",
           "body_nl": "*mi*, *ti*, *mu*, *me* zijn korte woordjes — dezelfde familie als *sam* en *ću*. Dus: **tweede plek**.\n\n*Sviđa* **mi** *se grad.* ✓\n*Grad* **mi** *se sviđa.* ✓ — ook goed, met de nadruk op de stad.\n**Mi** *se sviđa grad.* ✗ — kan niet, want dan staat het vooraan.\n\nEn in het trosje komt *mi* vóór *se*, precies zoals de volgorde het voorschrijft: aan wie, dan wat, dan se.",
-          "targets": ["g.mod.dat_experiencer", "g.mod.clitic_order"]
+          "targets": [
+            "g.mod.dat_experiencer",
+            "g.mod.clitic_order"
+          ]
         }
       ]
     },
@@ -118,9 +213,15 @@
           "given": "Sviđa mi se grad.",
           "nudge": "Zoek het kleine woordje. Bij wie hoort mi, en wat is dan het onderwerp van de zin?",
           "answer": "Ik vind de stad leuk.",
-          "distractors": ["De stad vindt mij leuk.", "Wij vinden de stad leuk."],
+          "distractors": [
+            "De stad vindt mij leuk.",
+            "Wij vinden de stad leuk."
+          ],
           "explain_nl": "mi is de datief van ja. De stad is het onderwerp, ik ben degene aan wie hij bevalt.",
-          "targets": ["g.mod.dat_experiencer", "v.05.grad"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.grad"
+          ],
           "difficulty": 2
         },
         {
@@ -131,9 +232,14 @@
           "given": "Sviđaš mi se.",
           "nudge": "De uitgang van het werkwoord vertelt wie het onderwerp is. Wie hoort er bij -š?",
           "answer": "Ik vind jou leuk.",
-          "distractors": ["Jij vindt mij leuk.", "Ik vind het leuk."],
+          "distractors": [
+            "Jij vindt mij leuk.",
+            "Ik vind het leuk."
+          ],
           "explain_nl": "sviđaš hoort bij ti, dus jij bent het onderwerp: jij bevalt aan mij. De uitgang van het werkwoord wijst naar het ding — of hier naar de persoon die bevalt.",
-          "targets": ["g.mod.dat_experiencer"],
+          "targets": [
+            "g.mod.dat_experiencer"
+          ],
           "difficulty": 4
         },
         {
@@ -150,7 +256,10 @@
             "Over meerdere personen die iets leuk vinden."
           ],
           "explain_nl": "Het werkwoord buigt mee met het onderwerp, en dat zijn de boeken. Ik blijf mi, of het er nu één of tien zijn.",
-          "targets": ["g.mod.dat_experiencer", "v.01.knjiga"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.01.knjiga"
+          ],
           "difficulty": 4
         },
         {
@@ -167,7 +276,10 @@
             "Geen van beide."
           ],
           "explain_nl": "De omkering is niet optioneel. Ja sviđam zou betekenen dat jij aan iemand bevalt, en zelfs dan hoort er se bij.",
-          "targets": ["g.mod.dat_experiencer", "v.05.grad"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.grad"
+          ],
           "difficulty": 3
         },
         {
@@ -184,7 +296,11 @@
             "Iemand slaat mij op het hoofd."
           ],
           "explain_nl": "glava is het onderwerp, me is de accusatief. Boljeti is het ene werkwoord in deze groep dat niet de datief gebruikt.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti", "v.18.glava"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti",
+            "v.18.glava"
+          ],
           "difficulty": 3
         },
         {
@@ -201,7 +317,10 @@
             "Geen van beide."
           ],
           "explain_nl": "Dit is de enige uitzondering die je hoeft te onthouden: me bij boljeti, mi bij de rest.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti"
+          ],
           "difficulty": 4
         }
       ]
@@ -219,9 +338,16 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik vind de stad leuk.",
           "answer": "Sviđa mi se grad.",
-          "accepts": ["Sviđa mi se grad.", "Sviđa mi se grad", "Grad mi se sviđa."],
+          "accepts": [
+            "Sviđa mi se grad.",
+            "Sviđa mi se grad",
+            "Grad mi se sviđa."
+          ],
           "explain_nl": "Het ding als onderwerp, ik in de datief.",
-          "targets": ["g.mod.dat_experiencer", "v.05.grad"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.grad"
+          ],
           "difficulty": 2
         },
         {
@@ -231,10 +357,16 @@
           "prompt_nl": "Vul het werkwoord in.",
           "given": "___ mi se knjige.",
           "answer": "Sviđaju",
-          "accepts": ["Sviđaju", "sviđaju"],
+          "accepts": [
+            "Sviđaju",
+            "sviđaju"
+          ],
           "hint": "Kijk hoeveel boeken het zijn.",
           "explain_nl": "knjige is meervoud, dus het werkwoord ook: sviđaju.",
-          "targets": ["g.mod.dat_experiencer", "v.01.knjiga"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.01.knjiga"
+          ],
           "difficulty": 3
         },
         {
@@ -244,9 +376,14 @@
           "prompt_nl": "Vul het kleine woordje in. Het gaat over hem.",
           "given": "Sviđa ___ se film.",
           "answer": "mu",
-          "accepts": ["mu"],
+          "accepts": [
+            "mu"
+          ],
           "explain_nl": "mu is de datief van on.",
-          "targets": ["g.mod.dat_experiencer", "v.05.film"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.film"
+          ],
           "difficulty": 2
         },
         {
@@ -256,9 +393,15 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik heb het koud.",
           "answer": "Hladno mi je.",
-          "accepts": ["Hladno mi je.", "Hladno mi je"],
+          "accepts": [
+            "Hladno mi je.",
+            "Hladno mi je"
+          ],
           "explain_nl": "Letterlijk: het is koud aan mij.",
-          "targets": ["g.mod.dat_experiencer", "v.12.hladno"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.12.hladno"
+          ],
           "difficulty": 2
         },
         {
@@ -268,9 +411,16 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik heb hoofdpijn.",
           "answer": "Boli me glava.",
-          "accepts": ["Boli me glava.", "Boli me glava"],
+          "accepts": [
+            "Boli me glava.",
+            "Boli me glava"
+          ],
           "explain_nl": "me, niet mi — boljeti gaat met de accusatief.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti", "v.18.glava"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti",
+            "v.18.glava"
+          ],
           "difficulty": 3
         },
         {
@@ -280,9 +430,15 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik heb koffie nodig.",
           "answer": "Treba mi kava.",
-          "accepts": ["Treba mi kava.", "Treba mi kava"],
+          "accepts": [
+            "Treba mi kava.",
+            "Treba mi kava"
+          ],
           "explain_nl": "kava is het onderwerp en staat dus in de woordenboekvorm, niet in de accusatief.",
-          "targets": ["g.mod.dat_experiencer", "v.01.kava"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.01.kava"
+          ],
           "difficulty": 3
         },
         {
@@ -292,9 +448,13 @@
           "prompt_nl": "Vul het kleine woordje in. Het gaat over ons.",
           "given": "Dosadno ___ je.",
           "answer": "nam",
-          "accepts": ["nam"],
+          "accepts": [
+            "nam"
+          ],
           "explain_nl": "nam is de datief van mi (wij).",
-          "targets": ["g.mod.dat_experiencer"],
+          "targets": [
+            "g.mod.dat_experiencer"
+          ],
           "difficulty": 3
         },
         {
@@ -304,9 +464,16 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ja sviđam se grad.",
           "answer": "Sviđa mi se grad.",
-          "accepts": ["Sviđa mi se grad.", "Sviđa mi se grad", "Grad mi se sviđa."],
+          "accepts": [
+            "Sviđa mi se grad.",
+            "Sviđa mi se grad",
+            "Grad mi se sviđa."
+          ],
           "explain_nl": "Jij bent het onderwerp niet. Het ding is dat, en jij staat erbij als mi.",
-          "targets": ["g.mod.dat_experiencer", "v.05.grad"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.grad"
+          ],
           "difficulty": 4
         },
         {
@@ -316,9 +483,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Sviđa mi se knjige.",
           "answer": "Sviđaju mi se knjige.",
-          "accepts": ["Sviđaju mi se knjige.", "Sviđaju mi se knjige"],
+          "accepts": [
+            "Sviđaju mi se knjige.",
+            "Sviđaju mi se knjige"
+          ],
           "explain_nl": "Het werkwoord buigt mee met de boeken, en die zijn meervoud.",
-          "targets": ["g.mod.dat_experiencer", "v.01.knjiga"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.01.knjiga"
+          ],
           "difficulty": 4
         },
         {
@@ -328,9 +501,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Boli mi glava.",
           "answer": "Boli me glava.",
-          "accepts": ["Boli me glava.", "Boli me glava"],
+          "accepts": [
+            "Boli me glava.",
+            "Boli me glava"
+          ],
           "explain_nl": "boljeti is de uitzondering: accusatief me.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti"
+          ],
           "difficulty": 3
         }
       ]
@@ -348,10 +527,18 @@
           "prompt_nl": "Vertaal. Het gaat over het verleden.",
           "given": "De film beviel me.",
           "answer": "Svidio mi se film.",
-          "accepts": ["Svidio mi se film.", "Svidio mi se film", "Film mi se svidio."],
+          "accepts": [
+            "Svidio mi se film.",
+            "Svidio mi se film",
+            "Film mi se svidio."
+          ],
           "hint": "Het deelwoord buigt mee met het ding, niet met jou.",
           "explain_nl": "film is mannelijk, dus svidio. Zou het een boek zijn: svidjela mi se knjiga.",
-          "targets": ["g.mod.dat_experiencer", "g.mod.perfekt", "v.05.film"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "g.mod.perfekt",
+            "v.05.film"
+          ],
           "difficulty": 5
         },
         {
@@ -361,9 +548,14 @@
           "prompt_nl": "Vul de juiste vorm in.",
           "given": "Sviđa mi se ovaj ___ (grad).",
           "answer": "grad",
-          "accepts": ["grad"],
+          "accepts": [
+            "grad"
+          ],
           "explain_nl": "grad is het onderwerp, dus de woordenboekvorm. Geen accusatief — dat is de val bij deze constructie.",
-          "targets": ["g.mod.dat_experiencer", "v.05.grad"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.05.grad"
+          ],
           "difficulty": 4
         },
         {
@@ -379,7 +571,11 @@
             "Sviđaju mi se ova stara kuća."
           ],
           "explain_nl": "kuća is het onderwerp, dus alles blijft in de woordenboekvorm — inclusief het bijvoeglijk naamwoord. En één huis, dus sviđa.",
-          "targets": ["g.mod.dat_experiencer", "g.mod.adj_def", "v.01.kuca"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "g.mod.adj_def",
+            "v.01.kuca"
+          ],
           "difficulty": 5
         },
         {
@@ -389,10 +585,17 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik heb het koud en ik heb hoofdpijn.",
           "answer": "Hladno mi je i boli me glava.",
-          "accepts": ["Hladno mi je i boli me glava.", "Hladno mi je i boli me glava"],
+          "accepts": [
+            "Hladno mi je i boli me glava.",
+            "Hladno mi je i boli me glava"
+          ],
           "hint": "Twee uitdrukkingen, twee verschillende kleine woordjes.",
           "explain_nl": "mi bij hladno, me bij boli. Dat verschil in één zin naast elkaar.",
-          "targets": ["g.mod.dat_experiencer", "v.12.hladno", "v.18.glava"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.12.hladno",
+            "v.18.glava"
+          ],
           "difficulty": 5
         },
         {
@@ -402,10 +605,16 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Ja sviđam se ovu knjigu.",
           "answer": "Sviđa mi se ova knjiga.",
-          "accepts": ["Sviđa mi se ova knjiga.", "Sviđa mi se ova knjiga"],
+          "accepts": [
+            "Sviđa mi se ova knjiga.",
+            "Sviđa mi se ova knjiga"
+          ],
           "hint": "Eén fout in wie het onderwerp is, één in de naamval van het boek.",
           "explain_nl": "Het boek is het onderwerp, dus ova knjiga in de woordenboekvorm, en jij staat erbij als mi.",
-          "targets": ["g.mod.dat_experiencer", "v.01.knjiga"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.01.knjiga"
+          ],
           "difficulty": 5
         }
       ]
@@ -424,7 +633,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat vindt de eerste spreker van Zagreb?",
           "answer": "Het bevalt haar erg.",
-          "distractors": ["Ze vindt het te koud om er te wonen.", "Ze weet het nog niet.", "Ze vindt het niets."],
+          "distractors": [
+            "Ze vindt het te koud om er te wonen.",
+            "Ze weet het nog niet.",
+            "Ze vindt het niets."
+          ],
           "explain_nl": "«Jako mi se sviđa.»",
           "targets": [],
           "difficulty": 1
@@ -443,7 +656,9 @@
             "Omdat er twee soorten dingen genoemd worden."
           ],
           "explain_nl": "Het onderwerp zijn de pleinen en cafés, niet ik. Ik blijf mi, wat er ook staat.",
-          "targets": ["g.mod.dat_experiencer"],
+          "targets": [
+            "g.mod.dat_experiencer"
+          ],
           "difficulty": 4
         },
         {
@@ -460,7 +675,10 @@
             "Het is een fout; het moet boli mi oči zijn."
           ],
           "explain_nl": "Twee regels tegelijk: meebuigen met het ding, en de accusatief bij boljeti.",
-          "targets": ["g.mod.dat_experiencer", "v.18.boljeti"],
+          "targets": [
+            "g.mod.dat_experiencer",
+            "v.18.boljeti"
+          ],
           "difficulty": 5
         },
         {
@@ -470,9 +688,13 @@
           "prompt_nl": "Vul aan zoals in het gesprek.",
           "given": "Kako ___ se sviđa Zagreb?",
           "answer": "ti",
-          "accepts": ["ti"],
+          "accepts": [
+            "ti"
+          ],
           "explain_nl": "ti is de datief van jij: hoe bevalt Zagreb aan jou?",
-          "targets": ["g.mod.dat_experiencer"],
+          "targets": [
+            "g.mod.dat_experiencer"
+          ],
           "difficulty": 2
         },
         {
@@ -488,11 +710,15 @@
             "Het kleine woordje staat op de tweede plek."
           ],
           "explain_nl": "Met deze drie kun je zeggen wat je vindt, wat je wilt en wat er scheelt — en dat is de helft van een gesprek over jezelf.",
-          "targets": ["g.mod.dat_experiencer"],
+          "targets": [
+            "g.mod.dat_experiencer"
+          ],
           "difficulty": 4
         }
       ]
     }
   ],
-  "source": "curriculum DAT-EXPERIENCER, gebouwd op les 18 en 19 (g.19.svidati_se, g.19.dativ_dozivljavaca, g.18.boljeti)"
+  "source": "curriculum DAT-EXPERIENCER, gebouwd op les 18 en 19 (g.19.svidati_se, g.19.dativ_dozivljavaca, g.18.boljeti)",
+  "rank": 9,
+  "band": "Verfijnen"
 }
