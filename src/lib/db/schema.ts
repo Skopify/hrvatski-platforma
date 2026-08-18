@@ -55,6 +55,12 @@ export const card = sqliteTable("card", {
   suspended: integer("suspended").notNull().default(0),
   suspendedAt: integer("suspended_at"),
   suspendedReason: text("suspended_reason"),
+  /**
+   * Aangenomen in plaats van gemeten — zie migratie 007. De plaatsingstoets
+   * neemt een steekproef per band; de woorden die hij niet zelf heeft gezien
+   * krijgen deze vlag en worden overal apart geteld.
+   */
+  assumed: integer("assumed").notNull().default(0),
 });
 
 /** De soorten kaarten. Fase 0 gebruikt alleen de eerste drie. */
@@ -240,3 +246,47 @@ export const sentence = sqliteTable("sentence", {
  * src/lib/db/migrations/. Dit bestand beschrijft alleen nog hoe de tabellen er
  * nú uitzien; hoe ze zo geworden zijn staat in de reeks.
  */
+
+/* ------------------------------------------------------- plaatsingstoets --- */
+
+/** Eén afname: de hele toets, of een hertoets van één module. */
+export const placementRun = sqliteTable("placement_run", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  /** "volledig" of "module". */
+  kind: text("kind").notNull(),
+  /** Bij een hertoets: de modulecode. */
+  scope: text("scope"),
+  startedAt: integer("started_at").notNull(),
+  finishedAt: integer("finished_at"),
+});
+
+/**
+ * De ruwe antwoorden. Zonder deze tabel is een modulestatus een getal zonder
+ * herkomst; met deze tabel is van elke status terug te vinden waar hij vandaan
+ * komt.
+ */
+export const placementAnswer = sqliteTable("placement_answer", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  runId: integer("run_id").notNull(),
+  /** "grammatica" of "woord". */
+  kind: text("kind").notNull(),
+  moduleCode: text("module_code"),
+  band: integer("band"),
+  itemId: text("item_id"),
+  exerciseId: text("exercise_id"),
+  correct: integer("correct").notNull(),
+  durationMs: integer("duration_ms").notNull().default(0),
+  createdAt: integer("created_at").notNull(),
+});
+
+/** De afgeleide status per module — beheerst, onzeker of onbekend. */
+export const moduleStatus = sqliteTable("module_status", {
+  code: text("code").primaryKey(),
+  status: text("status").notNull(),
+  correct: integer("correct").notNull(),
+  total: integer("total").notNull(),
+  /** "plaatsingstoets", "hertoets" of "handmatig". */
+  source: text("source").notNull(),
+  runId: integer("run_id"),
+  measuredAt: integer("measured_at").notNull(),
+});

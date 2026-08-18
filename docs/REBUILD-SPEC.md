@@ -504,12 +504,18 @@ De harde regel "feedback escaleert: hint → keuze → antwoord + uitleg" werd o
 
 Stond oorspronkelijk nergens; komt hier omdat de dekkingsmeter zonder gevulde `known_set` betekenisloos is en Fase 3 dan niet te beoordelen valt.
 
-- [ ] **Diagnostisch per grammaticapunt**, geen enkel niveaucijfer. Het profiel is naar verwachting grillig: sommige naamvallen goed, aspect en clitische volgorde waarschijnlijk niet.
-- [ ] **Woordenschat als adaptieve veeg over frequentiebanden** — start rond band 1000–1500, omhoog of omlaag op basis van de scores, tot de grens gevonden is. Geen vaste lijst van 100.
-- [ ] Resultaat vult `known_set` én markeert elke module als `beheerst` / `onzeker` / `onbekend`.
-- [ ] **Per module een "test je hieruit"-optie, ook later nog.** Wie tijdens een les merkt het toch niet te beheersen, moet de module kunnen terugzetten.
-- [ ] **Status volgt altijd uit prestatie, nooit uit zelfinschatting.**
-- **Acceptatie:** na de toets is per module een status vastgelegd die uit antwoorden is afgeleid; de leesdekking van de vijf verhalen verandert meetbaar mee.
+- [x] **Diagnostisch per grammaticapunt**, geen enkel niveaucijfer. Het profiel is naar verwachting grillig: sommige naamvallen goed, aspect en clitische volgorde waarschijnlijk niet.
+- [x] **Woordenschat als adaptieve veeg** — vijf banden, steekproef van vijf per band, omhoog bij 4–5 goed en omlaag bij 0–1, tot de grens gevonden is.
+- [x] Resultaat vult `known_set` én markeert elke gemeten module als `beheerst` / `onzeker` / `onbekend`.
+- [x] **Per module een "test je hieruit"-optie, ook later nog** — `/plaatsingstoets?module=CODE`, drie vragen, overschrijft de status ook naar beneden.
+- [x] **Status volgt altijd uit prestatie, nooit uit zelfinschatting.** Eén schrijfpad naar `module_status`, en dat leest de tellingen van de afname.
+- **Acceptatie (`npm run check:fase15`, 13 controles):** elke module levert drie betekenisvragen; de vraagkeuze is deterministisch, zodat een hertoets over jou gaat en niet over de vragen; 3/3 → beheerst, 2/3 → onzeker, ≤1/3 → onbekend; er is precies één plek die een status wegschrijft; de ruwe antwoorden blijven bij de status bewaard; een hertoets kan een status omlaag zetten; de veeg zoekt de grens in plaats van alles af te lopen; gemeten en aangenomen woorden worden apart geteld en een gezakte band neemt niets aan; de leesdekking beweegt meetbaar mee.
+
+**Twee dingen die de spec niet vroeg en die er toch in zitten.**
+
+*Geen feedback tijdens de toets.* Bij een oefening hoort correctie meteen; bij een meting werkt dat tegen je. Wie na de eerste vraag hoort dat het fout was, past de tweede daarop aan — dan meet je hoe snel iemand een patroon oppikt in plaats van wat hij al wist.
+
+*Aangenomen is niet gemeten.* De veeg neemt een steekproef van vijf woorden per band. Bij een geslaagde band krijgen de overige woorden van die band wél een kaart, maar met `card.assumed = 1`. Ze worden overal apart geteld en apart getoond. Zonder dat onderscheid presenteert de dekkingsmeter een schatting als meting, en dat is precies wat hij niet mag doen. De frequentiebanden komen uit de leergang en niet uit een corpuslijst — die lijst is er niet, en de gecureerde top honderd noemt zichzelf expliciet geen meting. Boven de woordenschat van de leergang meet de toets dus niets, en zegt dat ook.
 
 ### Fase 2 — Grammaticasectie
 - [x] `curriculum.json` met alle modules uit §4.2 *(vooruitgelopen in Fase 0.4)*

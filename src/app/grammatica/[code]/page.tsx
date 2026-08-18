@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Page, PageHeader } from "@/components/ui";
 import { loadModule, moduleExercises, type ModulePhase } from "@/lib/modules";
+import { moduleStatuses, STATUS_TEXT } from "@/lib/placement";
 
 export const dynamic = "force-dynamic";
 
@@ -21,12 +22,40 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
   if (!module) notFound();
 
   const aantal = moduleExercises(module).length;
+  const status = moduleStatuses().get(module.code);
 
   return (
     <Page>
       <PageHeader title={module.title_nl} intro={module.blurb_nl} />
 
-      <p className="hr-text mb-8 text-[20px] font-semibold text-ink">{module.title_hr}</p>
+      <p className="hr-text mb-6 text-[20px] font-semibold text-ink">{module.title_hr}</p>
+
+      {/* De uitslag met zijn teller erbij, en altijd de weg terug. Wie tijdens de
+          module merkt dat "beheerst" niet klopt, moet dat kunnen rechtzetten
+          zonder de hele toets over te doen. */}
+      <div className="rounded-card mb-8 border border-line bg-sunken px-5 py-4">
+        {status ? (
+          <>
+            <p className="text-[14px] font-bold text-ink">
+              Gemeten: {status.status} — {status.correct} van {status.total} goed
+            </p>
+            <p className="mt-1 text-[13.5px] leading-relaxed text-ink-secondary">
+              {STATUS_TEXT[status.status]}
+            </p>
+          </>
+        ) : (
+          <p className="text-[13.5px] leading-relaxed text-ink-secondary">
+            Deze module is nog niet gemeten. Dat is iets anders dan onbekend — er is alleen niets
+            over te zeggen.
+          </p>
+        )}
+        <Link
+          href={`/plaatsingstoets?module=${module.code.toLowerCase()}`}
+          className="mt-2 inline-block text-[13.5px] font-semibold text-accent hover:underline"
+        >
+          Test je hieruit — drie vragen
+        </Link>
+      </div>
 
       <section className="mb-8">
         <h2 className="mb-3 text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">

@@ -18,7 +18,8 @@
     "codes": "tsx scripts/grammatica-codes.ts",
     "check:fase05": "tsx scripts/check-fase05.ts",
     "check:fase1": "tsx scripts/check-fase1.ts",
-    "check:freq": "tsx scripts/check-frequency.ts"
+    "check:freq": "tsx scripts/check-frequency.ts",
+    "check:fase15": "tsx scripts/check-fase15.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

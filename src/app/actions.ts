@@ -983,3 +983,86 @@ export async function submitVocab(
 export async function restoreLeech(cardId: number): Promise<void> {
   restore(cardId);
 }
+
+/* ------------------------------------------------------- plaatsingstoets --- */
+
+export interface PlacementModuleBlock {
+  code: string;
+  title: string;
+  rank: number;
+  probes: import("@/lib/placement").GrammarProbe[];
+}
+
+export interface PlacementPlan {
+  runId: number;
+  modules: PlacementModuleBlock[];
+  bands: { n: number; label: string; probes: import("@/lib/placement").VocabProbe[] }[];
+  startBand: number;
+}
+
+/**
+ * De toets klaarzetten.
+ *
+ * Alles wordt in één keer meegegeven, ook de banden die je misschien nooit te
+ * zien krijgt. Dat is geen verspilling maar een keuze: de adaptieve stappen
+ * gebeuren in de browser, zodat er tussen twee vragen geen wachttijd zit. Bij
+ * een toets is dat belangrijker dan bij een oefening — wachten nodigt uit tot
+ * nadenken, en dan meet je iets anders dan wat je wilde meten.
+ */
+export async function beginPlacement(scope?: string): Promise<PlacementPlan> {
+  const P = await import("@/lib/placement");
+  const { modulesByRank, loadModule } = await import("@/lib/modules");
+
+  const lijst = scope ? [loadModule(scope)].filter(Boolean) : modulesByRank();
+  const runId = P.startRun(scope ? "module" : "volledig", scope);
+
+  return {
+    runId,
+    modules: lijst.map((m) => ({
+      code: m!.code,
+      title: m!.title_nl,
+      rank: m!.rank,
+      probes: P.grammarProbes(m!),
+    })),
+    // Bij een hertoets van één module blijft de woordenschat buiten beschouwing.
+    bands: scope
+      ? []
+      : P.vocabBands().map((b) => ({ n: b.n, label: b.label, probes: P.vocabProbes(b) })),
+    startBand: P.START_BAND,
+  };
+}
+
+export async function answerPlacementGrammar(
+  runId: number,
+  moduleCode: string,
+  exerciseId: string,
+  correct: boolean,
+  durationMs: number,
+): Promise<void> {
+  const P = await import("@/lib/placement");
+  P.recordGrammar(runId, moduleCode, exerciseId, correct, durationMs);
+}
+
+export async function answerPlacementVocab(
+  runId: number,
+  band: number,
+  itemId: string,
+  correct: boolean,
+  durationMs: number,
+): Promise<void> {
+  const P = await import("@/lib/placement");
+  P.recordVocab(runId, band, itemId, correct, durationMs);
+}
+
+export async function endPlacement(
+  runId: number,
+): Promise<import("@/lib/placement").PlacementResult> {
+  const P = await import("@/lib/placement");
+  return P.finishRun(runId);
+}
+
+/** Een module terugzetten op ongemeten — de weg terug uit "beheerst". */
+export async function clearPlacement(code: string): Promise<void> {
+  const P = await import("@/lib/placement");
+  P.clearModuleStatus(code);
+}
