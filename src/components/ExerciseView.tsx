@@ -60,8 +60,11 @@ function MiniParadigm({ table }: { table: Paradigm }) {
           </tr>
         </thead>
         <tbody>
-          {table.rows.map((row) => (
-            <tr key={row.label} className="border-t border-line/60">
+          {/* Sleutel op de positie, niet op het label: twee rijen mogen dezelfde
+              naam dragen. In de accusatiefmodule staat "mannelijk, levend"
+              tweemaal, en met het label als sleutel liet React er een vallen. */}
+          {table.rows.map((row, i) => (
+            <tr key={i} className="border-t border-line/60">
               <th className="py-2 pr-3 text-[12.5px] font-medium text-ink-secondary">
                 {row.label}
               </th>
