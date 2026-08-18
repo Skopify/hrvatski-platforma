@@ -1,0 +1,507 @@
+{
+  "code": "POSS-ADJ",
+  "rank": 25,
+  "band": "Verfijnen",
+  "title_hr": "Majčina kuhinja, Markov auto",
+  "title_nl": "Moeders keuken",
+  "cefr": "A2/B1",
+  "blurb_nl": "Van een persoon maak je in het Kroatisch gewoon een bijvoeglijk naamwoord: majka wordt majčin, Marko wordt Markov. Het Nederlands kan dat ook — «moeders keuken» — maar bij ons klinkt het ouderwets. In het Kroatisch is het de normale manier, en er is één regel die bepaalt wanneer je het níét doet.",
+  "prerequisites": ["GEN-POSS", "ADJ-AGREE"],
+  "can_do_nl": [
+    "Ik kan van een naam een bezittelijk woord maken: Markov, Anin.",
+    "Ik weet wanneer het -ov, -ev of -in wordt.",
+    "Ik weet dat deze woorden meebuigen: majčina kuhinja, u majčinoj kuhinji.",
+    "Ik weet wanneer ik de genitief moet gebruiken in plaats van deze vorm.",
+    "Ik schrijf Markov met een hoofdletter."
+  ],
+  "grammar": {
+    "id": "g.mod.poss_adj",
+    "code": "POSS-ADJ",
+    "title_nl": "Bezittelijke bijvoeglijke naamwoorden",
+    "cefr": "A2/B1",
+    "explanation_nl": "Van een persoon maak je een bijvoeglijk naamwoord met **-ov** of **-ev** (mannelijke eigenaar) of met **-in** (vrouwelijke eigenaar). Het resultaat buigt mee als elk ander bijvoeglijk naamwoord.",
+    "contrast_nl": "Het Nederlands heeft dit ook — «moeders keuken», «Jans auto» — maar het klinkt bij ons stijf of ouderwets, en we zeggen liever «de auto van Jan». In het Kroatisch is het precies andersom: de korte vorm is de gewone, en de omschrijving met de genitief bewaar je voor de gevallen waarin het moet.",
+    "paradigm": {
+      "caption_nl": "Van persoon naar bijvoeglijk naamwoord",
+      "columns": ["wordt", "voorbeeld"],
+      "rows": [
+        { "label": "brat", "cells": ["bratov", "bratova knjiga — broers boek"] },
+        { "label": "Marko", "cells": ["Markov", "Markov auto — Marko's auto"] },
+        { "label": "otac", "cells": ["očev", "očeva kuća — vaders huis"] },
+        { "label": "prijatelj", "cells": ["prijateljev", "prijateljeva sestra"] },
+        { "label": "majka", "cells": ["majčin", "majčina kuhinja — moeders keuken"] },
+        { "label": "sestra", "cells": ["sestrin", "sestrina soba — zussies kamer"] },
+        { "label": "Ana", "cells": ["Anin", "Anin brat — Ana's broer"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Mannelijke eigenaar: -ov, of -ev na een zachte medeklinker — mužev, prijateljev, očev.",
+      "Vrouwelijke eigenaar op -a: -in — sestrin, bakin, Anin. Bij majka wordt de k een č: majčin.",
+      "Deze woorden zijn bijvoeglijke naamwoorden en buigen mee: majčina kuhinja, u majčinoj kuhinji.",
+      "Van een eigennaam schrijf je ze met een hoofdletter: Markov, Anin.",
+      "Zodra er meer dan één woord bij de eigenaar hoort, kan het niet meer: «knjiga moje starije sestre», niet «starija sestrina knjiga»."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes keer bezit. Kijk wat er met de naam van de eigenaar gebeurt.",
+      "exercises": [
+        {
+          "id": "m.padj.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er met de eigenaar?",
+          "given": "Marko — Markov auto\nbrat — bratova knjiga\notac — očeva kuća\n\nmajka — majčina kuhinja\nsestra — sestrina soba\nAna — Anin brat",
+          "body_nl": "Marko — Marko's auto\nbroer — broers boek\nvader — vaders huis\n\nmoeder — moeders keuken\nzus — zussies kamer\nAna — Ana's broer",
+          "targets": []
+        },
+        {
+          "id": "m.padj.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "De eigenaar wordt geen aparte woordgroep, maar een **bijvoeglijk naamwoord**:\n\n*Marko* → *Markov auto*\n*majka* → *majčina kuhinja*\n\nHet Nederlands kan dat ook: «moeders keuken», «Jans auto». Alleen klinkt het bij ons een beetje stijf, en zeggen we liever «de auto van Jan».\n\nIn het Kroatisch is het omgekeerd. Deze korte vorm is de **gewone** manier. De omschrijving met de genitief — *knjiga moje sestre* — bewaar je voor gevallen waarin de korte vorm niet kan.\n\nTwee uitgangen: **-ov** of **-ev** als de eigenaar een man is, **-in** als het een vrouw is. En omdat het bijvoeglijke naamwoorden zijn, passen ze zich aan aan het bezit: *Markov auto*, maar *majčin**a** kuhinja*.\n\nLet ook op *majka → majčin*: dezelfde k die je bij de vocatief een č zag worden.",
+          "targets": ["g.mod.poss_adj", "v.03.majka", "v.01.sestra", "v.03.brat"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de twee uitgangen, dan de grens waar je moet overstappen op de genitief.",
+      "exercises": [
+        {
+          "id": "m.padj.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "-ov, -ev of -in",
+          "body_nl": "**Mannelijke eigenaar → -ov:**\n*brat → bratov*, *Marko → Markov*, *Ivan → Ivanov*, *susjed → susjedov*\n\nNa een **zachte** medeklinker wordt het **-ev**:\n*muž → mužev*, *prijatelj → prijateljev*, *otac → očev*\n\nDie laatste doet twee dingen tegelijk: de onvaste a verdwijnt en de c wordt een č.\n\n**Vrouwelijke eigenaar op -a → -in:**\n*sestra → sestrin*, *baka → bakin*, *teta → tetin*, *Ana → Anin*, *žena → ženin*\n\nBij *majka* verandert de k in een č: *majčin*.\n\n**Ze buigen mee**, want het zijn bijvoeglijke naamwoorden:\n*Markov auto*, *Markova kuća*, *Markovo pismo*\n*majčin stol*, *majčina kuhinja*, *majčino pismo*\nEn in de naamvallen: *u majčinoj kuhinji*, *bez Markova auta*.\n\nEn nog iets praktisch: van een **eigennaam** schrijf je ze met een **hoofdletter** — *Markov*, *Anin*. Van een gewoon woord niet: *bratov*, *majčin*.",
+          "table": {
+            "caption_nl": "Van persoon naar bijvoeglijk naamwoord",
+            "columns": ["wordt", "waarom"],
+            "rows": [
+              { "label": "brat", "cells": ["bratov", "man, harde medeklinker"] },
+              { "label": "Marko", "cells": ["Markov", "man, hoofdletter want naam"] },
+              { "label": "muž", "cells": ["mužev", "man, zachte medeklinker"] },
+              { "label": "otac", "cells": ["očev", "man, c wordt č"] },
+              { "label": "sestra", "cells": ["sestrin", "vrouw op -a"] },
+              { "label": "majka", "cells": ["majčin", "vrouw op -a, k wordt č"] },
+              { "label": "Ana", "cells": ["Anin", "vrouw, hoofdletter want naam"] }
+            ]
+          },
+          "targets": ["g.mod.poss_adj", "v.03.brat", "v.03.majka", "v.01.sestra"]
+        },
+        {
+          "id": "m.padj.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wanneer het níét kan",
+          "body_nl": "Er is één harde grens, en die is makkelijk te onthouden.\n\nDeze vorm werkt alleen bij **één kaal woord** voor de eigenaar. Zodra er iets bij komt — een bezittelijk woordje, een bijvoeglijk naamwoord, een tweede persoon — kan het niet meer, en moet je de **genitief** gebruiken:\n\n*sestrina knjiga* — het boek van mijn zus\nmaar: *knjiga moje starije sestre* — het boek van mijn oudere zus\n\n*Markov auto* — Marko's auto\nmaar: *auto mojeg prijatelja Marka* — de auto van mijn vriend Marko\n\nDe reden is simpel: een bijvoeglijk naamwoord kan zelf geen bijvoeglijk naamwoord bij zich hebben. *Starija sestrina knjiga* zou betekenen «het oudere boek van mijn zus» — de *starija* hoort dan bij het boek, niet bij de zus.\n\nDus:\n**één woord voor de eigenaar** → de korte vorm, *sestrina knjiga*\n**meer dan één woord** → de genitief, *knjiga moje sestre*\n\nEn tot slot: deze vorm bestaat alleen voor **personen** en dieren, niet voor dingen. «De deur van de auto» is *vrata auta*, niet «autov».",
+          "table": {
+            "caption_nl": "Korte vorm of genitief",
+            "columns": ["situatie", "Kroatisch"],
+            "rows": [
+              { "label": "één woord", "cells": ["het boek van mijn zus", "sestrina knjiga"] },
+              { "label": "meer woorden", "cells": ["het boek van mijn oudere zus", "knjiga moje starije sestre"] },
+              { "label": "één woord", "cells": ["Marko's auto", "Markov auto"] },
+              { "label": "meer woorden", "cells": ["de auto van mijn vriend Marko", "auto mojeg prijatelja Marka"] },
+              { "label": "geen persoon", "cells": ["de deur van de auto", "vrata auta"] }
+            ]
+          },
+          "targets": ["g.mod.poss_adj", "g.mod.genitive"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Van wie is het?",
+      "why_nl": "Nog niets maken. Hier oefen je de vorm terugvoeren op de persoon die erin verstopt zit.",
+      "exercises": [
+        {
+          "id": "m.padj.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van wie is die keuken?",
+          "given": "Ovo je majčina kuhinja.",
+          "nudge": "Haal de uitgang -ina weg. Welk woord houd je over?",
+          "answer": "Van de moeder.",
+          "distractors": ["Van iemand die Majčina heet.", "Van de zus.", "Dat staat er niet."],
+          "explain_nl": "Majčin is gemaakt van majka, met de k die een č wordt.",
+          "targets": ["g.mod.poss_adj", "v.03.majka"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er Markova en niet Markov?",
+          "given": "Ovo je Markova kuća.",
+          "nudge": "Waar past een bijvoeglijk naamwoord zich aan aan — de eigenaar of het bezit?",
+          "answer": "Omdat kuća vrouwelijk is; het woord past zich aan aan het bezit, niet aan de eigenaar.",
+          "distractors": [
+            "Omdat Marko een man is.",
+            "Omdat het huis groot is.",
+            "Markov kan hier ook."
+          ],
+          "explain_nl": "De -ov zegt dat de eigenaar een man is; de -a zegt dat het bezit vrouwelijk is. Twee lagen, net als bij njegova sestra.",
+          "targets": ["g.mod.poss_adj", "v.01.kuca"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin kan niet met de korte vorm?",
+          "given": "A: het boek van mijn zus\nB: het boek van mijn oudere zus",
+          "nudge": "Hoeveel woorden horen er bij de eigenaar?",
+          "answer": "B — er staat een bijvoeglijk naamwoord bij de eigenaar, dus moet het de genitief worden.",
+          "distractors": ["A.", "Allebei kunnen.", "Geen van beide kan."],
+          "explain_nl": "«Starija sestrina knjiga» zou betekenen dat het bóék ouder is. Daarom: knjiga moje starije sestre.",
+          "targets": ["g.mod.poss_adj", "g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk woord komt očev?",
+          "given": "To je očeva kuća.",
+          "nudge": "Er zijn twee dingen veranderd: een letter is weggevallen en een letter is een č geworden.",
+          "answer": "Van otac — vader.",
+          "distractors": ["Van oče.", "Van očev.", "Van oko."],
+          "explain_nl": "De onvaste a verdwijnt en de c wordt een č vóór de e: otac → očev.",
+          "targets": ["g.mod.poss_adj"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat Anin met een hoofdletter?",
+          "given": "Anin brat živi u Splitu.",
+          "nudge": "Waar is dit woord van gemaakt?",
+          "answer": "Omdat het van een eigennaam is gemaakt.",
+          "distractors": [
+            "Omdat het vooraan in de zin staat.",
+            "Omdat Ana een vrouw is.",
+            "Dat hoeft niet."
+          ],
+          "explain_nl": "Van een naam: hoofdletter — Markov, Anin. Van een gewoon woord: kleine letter — bratov, majčin.",
+          "targets": ["g.mod.poss_adj"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom kan «autov prozor» niet?",
+          "given": "De ruit van de auto.",
+          "nudge": "Voor wat voor soort eigenaar bestaat deze vorm?",
+          "answer": "Omdat deze vorm alleen bestaat voor personen en dieren, niet voor dingen.",
+          "distractors": [
+            "Omdat auto op een klinker eindigt.",
+            "Omdat een auto onzijdig is.",
+            "Het kan wel."
+          ],
+          "explain_nl": "Bij dingen gebruik je gewoon de genitief: prozor auta.",
+          "targets": ["g.mod.poss_adj", "v.00.auto"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde twee vragen: man of vrouw, en welk geslacht heeft het bezit?",
+      "exercises": [
+        {
+          "id": "m.padj.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: Marko's auto.",
+          "given": "Ovo je ___ (Marko) auto.",
+          "answer": "Markov",
+          "accepts": ["Markov"],
+          "explain_nl": "Mannelijke eigenaar, harde medeklinker: -ov. Met een hoofdletter want het is een naam.",
+          "targets": ["g.mod.poss_adj", "v.00.auto"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.padj.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: broers boek.",
+          "given": "To je ___ (brat) knjiga.",
+          "answer": "bratova",
+          "accepts": ["bratova"],
+          "hint": "Knjiga is vrouwelijk.",
+          "explain_nl": "Bratov plus de vrouwelijke uitgang van het bezit: bratova.",
+          "targets": ["g.mod.poss_adj", "v.03.brat", "v.01.knjiga"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: moeders keuken.",
+          "given": "Ovo je ___ (majka) kuhinja.",
+          "answer": "majčina",
+          "accepts": ["majčina"],
+          "hint": "De k verandert vóór de i.",
+          "explain_nl": "Majka → majčin, en kuhinja is vrouwelijk: majčina.",
+          "targets": ["g.mod.poss_adj", "v.03.majka"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: zussies kamer.",
+          "given": "To je ___ (sestra) soba.",
+          "answer": "sestrina",
+          "accepts": ["sestrina"],
+          "explain_nl": "Vrouwelijke eigenaar: -in, plus de uitgang van soba.",
+          "targets": ["g.mod.poss_adj", "v.01.sestra", "v.03.soba"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: Ana's broer.",
+          "given": "___ (Ana) brat živi u Splitu.",
+          "answer": "Anin",
+          "accepts": ["Anin"],
+          "explain_nl": "Vrouwelijke eigenaar, mannelijk bezit: Anin, met hoofdletter.",
+          "targets": ["g.mod.poss_adj", "v.03.brat"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: vriends zus.",
+          "given": "To je ___ (prijatelj) sestra.",
+          "answer": "prijateljeva",
+          "accepts": ["prijateljeva"],
+          "hint": "Lj is een zachte medeklinker.",
+          "explain_nl": "Na een zachte medeklinker -ev: prijateljev, en vrouwelijk bezit: prijateljeva.",
+          "targets": ["g.mod.poss_adj", "v.01.prijatelj", "v.01.sestra"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: in moeders keuken.",
+          "given": "Kuhamo u ___ (majka) kuhinji.",
+          "answer": "majčinoj",
+          "accepts": ["majčinoj"],
+          "hint": "Kuhinji staat in de locatief.",
+          "explain_nl": "Het buigt mee als elk bijvoeglijk naamwoord: u majčinoj kuhinji.",
+          "targets": ["g.mod.poss_adj", "g.mod.loc_vs_acc", "v.03.majka"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Gebruik de korte vorm.",
+          "given": "Dit is Ana's huis.",
+          "answer": "Ovo je Anina kuća.",
+          "accepts": ["Ovo je Anina kuća.", "Ovo je Anina kuća"],
+          "explain_nl": "Anin plus de vrouwelijke uitgang van kuća.",
+          "targets": ["g.mod.poss_adj", "v.01.kuca"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je Markov kuća.",
+          "answer": "Ovo je Markova kuća.",
+          "accepts": ["Ovo je Markova kuća.", "Ovo je Markova kuća"],
+          "explain_nl": "Het woord past zich aan aan het bezit, en kuća is vrouwelijk.",
+          "targets": ["g.mod.poss_adj", "v.01.kuca"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.padj.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf het goed.",
+          "given": "majkina kuhinja",
+          "answer": "majčina kuhinja",
+          "accepts": ["majčina kuhinja"],
+          "explain_nl": "De k wordt een č vóór de i: majčin.",
+          "targets": ["g.mod.poss_adj", "v.03.majka"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de genitief, want de keuze tussen die twee is het punt van deze module.",
+      "exercises": [
+        {
+          "id": "m.padj.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoe zeg je «het boek van mijn oudere zus»?",
+          "answer": "knjiga moje starije sestre",
+          "distractors": [
+            "starija sestrina knjiga",
+            "moja starija sestrina knjiga",
+            "sestrina starija knjiga"
+          ],
+          "explain_nl": "Bij de eigenaar horen meer woorden, dus kan de korte vorm niet meer. De laatste twee zouden betekenen dat het bóék ouder is.",
+          "targets": ["g.mod.poss_adj", "g.mod.genitive", "v.01.sestra"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Hoe zeg je «zussies boek»?",
+          "answer": "sestrina knjiga",
+          "distractors": [
+            "knjiga sestrina",
+            "sestra knjiga",
+            "knjiga sestri"
+          ],
+          "explain_nl": "Eén kaal woord voor de eigenaar, dus de korte vorm — en die staat vóór het bezit, net als elk bijvoeglijk naamwoord.",
+          "targets": ["g.mod.poss_adj", "v.01.sestra", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik slaap in mijn zus haar kamer.",
+          "answer": "Spavam u sestrinoj sobi.",
+          "accepts": ["Spavam u sestrinoj sobi.", "Spavam u sestrinoj sobi"],
+          "explain_nl": "Sestrin buigt mee in de locatief: u sestrinoj sobi.",
+          "targets": ["g.mod.poss_adj", "g.mod.loc_vs_acc", "v.03.soba"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin gaat over de deur van een auto?",
+          "answer": "vrata auta",
+          "distractors": ["autova vrata", "auto vrata", "vrata autu"],
+          "explain_nl": "Deze vorm bestaat alleen voor personen en dieren. Bij een ding gebruik je de genitief.",
+          "targets": ["g.mod.poss_adj", "g.mod.genitive", "v.00.auto"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.padj.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Ovo je majkina kuhinja i Markov kuća.",
+          "answer": "Ovo je majčina kuhinja i Markova kuća.",
+          "accepts": ["Ovo je majčina kuhinja i Markova kuća.", "Ovo je majčina kuhinja i Markova kuća"],
+          "hint": "Eén klankverandering ontbreekt, en één woord buigt niet mee.",
+          "explain_nl": "Majka → majčin, en kuća is vrouwelijk dus Markova.",
+          "targets": ["g.mod.poss_adj", "v.03.majka", "v.01.kuca"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk bezit: staat er een korte vorm of een genitief, en waarom?",
+      "text_hr": "Nedjeljom svi jedemo u bakinoj kući. Bakina kuhinja je mala, ali u njoj ima mjesta za deset ljudi. Očev brat uvijek dolazi prvi i sjedi na majčinu mjestu, što nitko ne komentira. Anin sin donosi kolač koji je pekla njegova žena. Poslije ručka gledamo stare fotografije iz albuma moje pokojne bake. Na jednoj je bakina sestra, koju nitko nije poznavao.",
+      "translation_nl": "Op zondag eten we allemaal bij oma thuis. Oma's keuken is klein, maar er is plaats voor tien mensen. Vaders broer komt altijd als eerste en gaat op moeders plek zitten, waar niemand iets van zegt. Ana's zoon brengt een taart mee die zijn vrouw heeft gebakken. Na het eten kijken we oude foto's uit het album van mijn overleden oma. Op eentje staat oma's zus, die niemand gekend heeft.",
+      "exercises": [
+        {
+          "id": "m.padj.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wie komt altijd als eerste?",
+          "answer": "Vaders broer.",
+          "distractors": ["Ana's zoon.", "Oma's zus.", "De moeder."],
+          "explain_nl": "«Očev brat uvijek dolazi prvi.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.padj.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «bakina kuhinja» maar ook «albuma moje pokojne bake». Waarom twee keer anders?",
+          "given": "Bakina kuhinja je mala. Gledamo fotografije iz albuma moje pokojne bake.",
+          "nudge": "Tel hoeveel woorden er bij de eigenaar horen.",
+          "answer": "Bij de tweede horen meer woorden bij de eigenaar, dus moet het de genitief worden.",
+          "distractors": [
+            "Omdat de tweede in het verleden speelt.",
+            "Omdat een album geen persoon is.",
+            "De schrijver wisselt af."
+          ],
+          "explain_nl": "Precies de grens uit stap 2: één kaal woord → korte vorm, meer woorden → genitief.",
+          "targets": ["g.mod.poss_adj", "g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van wie is de taart in de tekst?",
+          "given": "Anin sin donosi kolač koji je pekla njegova žena.",
+          "nudge": "Anin zegt iets over de zoon. Wie bakte de taart?",
+          "answer": "Ana's zoon brengt hem, maar zijn vrouw heeft hem gebakken.",
+          "distractors": [
+            "Ana heeft hem gebakken.",
+            "De zoon heeft hem gebakken.",
+            "Oma heeft hem gebakken."
+          ],
+          "explain_nl": "Anin hoort bij sin, niet bij kolač. Bij deze vorm hoort het bezit altijd meteen erachter.",
+          "targets": ["g.mod.poss_adj", "v.06.kolac"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Nedjeljom svi jedemo u ___ (baka) kući.",
+          "answer": "bakinoj",
+          "accepts": ["bakinoj"],
+          "explain_nl": "Baka → bakin, en kući staat in de locatief: bakinoj.",
+          "targets": ["g.mod.poss_adj", "g.mod.loc_vs_acc", "v.01.kuca"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.padj.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf twee zinnen over je familie: één met de korte vorm en één met de genitief.",
+          "model_answer": "Ovo je sestrina soba. To je kuća mojih roditelja.",
+          "rubric_nl": [
+            "De korte vorm staat vóór het bezit en buigt mee met het bezit.",
+            "Bij een mannelijke eigenaar staat -ov of -ev, bij een vrouwelijke -in.",
+            "Zodra er meer woorden bij de eigenaar horen, staat er een genitief."
+          ],
+          "explain_nl": "Wie deze twee door elkaar gebruikt op de juiste momenten, praat over zijn familie zoals een Kroaat dat doet — en dat is meestal het eerste onderwerp dat langskomt.",
+          "targets": ["g.mod.poss_adj"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum POSS-ADJ, gebouwd op les 4 en 16"
+}
