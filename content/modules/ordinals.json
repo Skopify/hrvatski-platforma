@@ -1,0 +1,520 @@
+{
+  "code": "NUM-ORD",
+  "rank": 26,
+  "band": "Verfijnen",
+  "title_hr": "Prvi, drugi, treći — i koliko je sati",
+  "title_nl": "De hoeveelste, hoe laat, welke datum",
+  "cefr": "A2",
+  "blurb_nl": "Rangtelwoorden zijn gewone bijvoeglijke naamwoorden, dus daar hoef je niets nieuws voor te leren. Waar je ze voor nodig hebt wél: de klok, de datum en de verdieping. En de Kroatische maandnamen lijken op niets — het is niet januar maar siječanj.",
+  "prerequisites": ["ADJ-AGREE", "GEN-NUM"],
+  "can_do_nl": [
+    "Ik kan zeggen de hoeveelste iets is: prvi dan, treća godina.",
+    "Ik kan de klok vragen en zeggen: Koliko je sati? Pet sati.",
+    "Ik kan een tijd afspreken: u pola šest.",
+    "Ik ken de twaalf Kroatische maandnamen.",
+    "Ik kan een datum zeggen en mijn verjaardag noemen."
+  ],
+  "grammar": {
+    "id": "g.mod.ordinal",
+    "code": "NUM-ORD",
+    "title_nl": "Rangtelwoorden, klok en datum",
+    "cefr": "A2",
+    "explanation_nl": "Rangtelwoorden zijn **bijvoeglijke naamwoorden**: *prvi, druga, treće*. Ze buigen dus mee met het woord erachter. Je gebruikt ze bij de klok, bij de datum en overal waar het om een volgorde gaat.",
+    "contrast_nl": "De bouw is bijna gelijk aan het Nederlands: eerste, tweede, derde. Twee dingen zijn anders. De maandnamen zijn geen Latijnse leenwoorden maar eigen Kroatische woorden, en «half zes» werkt zoals in het Duits — *pola šest* is half zes, dus 5:30, niet 6:30.",
+    "paradigm": {
+      "caption_nl": "De eerste tien",
+      "columns": ["Kroatisch", "Nederlands"],
+      "rows": [
+        { "label": "1.", "cells": ["prvi", "eerste"] },
+        { "label": "2.", "cells": ["drugi", "tweede"] },
+        { "label": "3.", "cells": ["treći", "derde"] },
+        { "label": "4.", "cells": ["četvrti", "vierde"] },
+        { "label": "5.", "cells": ["peti", "vijfde"] },
+        { "label": "6.", "cells": ["šesti", "zesde"] },
+        { "label": "7.", "cells": ["sedmi", "zevende"] },
+        { "label": "8.", "cells": ["osmi", "achtste"] },
+        { "label": "9.", "cells": ["deveti", "negende"] },
+        { "label": "10.", "cells": ["deseti", "tiende"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Rangtelwoorden zijn bijvoeglijke naamwoorden en buigen mee: prvi dan, prva godina, prvo mjesto.",
+      "Bij een samengesteld getal buigt alleen het laatste deel: dvadeset prvi.",
+      "In cijfers staat er een punt achter: 1. dan = prvi dan.",
+      "Pola šest is 5:30, niet 6:30 — je telt naar het volgende uur toe.",
+      "De maandnamen zijn eigen Kroatische woorden: siječanj, veljača, ožujak — geen januar of mart.",
+      "In een datum staat de maand in de genitief: petog svibnja."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Drie soorten gebruik van hetzelfde soort woord. Kijk waar ze op bijvoeglijke naamwoorden lijken.",
+      "exercises": [
+        {
+          "id": "m.ord.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat hebben deze zinnen gemeen?",
+          "given": "prvi dan\nprva godina\nprvo mjesto\n\nSad je pet sati.\nVidimo se u pola šest.\n\nDanas je peti svibnja.\nRođen sam petnaestog ožujka.",
+          "body_nl": "de eerste dag\nhet eerste jaar\nde eerste plaats\n\nHet is nu vijf uur.\nWe zien elkaar om half zes.\n\nVandaag is het vijf mei.\nIk ben op vijftien maart geboren.",
+          "targets": []
+        },
+        {
+          "id": "m.ord.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Kijk naar de eerste drie regels: *prvi*, *prva*, *prvo*. Dat zijn precies de uitgangen van een bijvoeglijk naamwoord — dezelfde als bij *dobri*, *dobra*, *dobro*.\n\nDat is meteen het goede nieuws van deze module: **rangtelwoorden zijn bijvoeglijke naamwoorden**. Je hoeft er niets nieuws voor te leren, alleen de woorden zelf.\n\nDaarna komt de klok. *Pet sati* ken je al van de getallen. Nieuw is *pola šest* — en let op: dat is **half zes**, dus 5:30. Je telt naar het volgende uur toe, net als in het Duits.\n\nEn tot slot de datum. *Peti svibnja*: een rangtelwoord plus een maand. Alleen heet mei in het Kroatisch niet «maj» maar **svibanj**. De twaalf maanden zijn eigen woorden, en die moet je gewoon leren — ze lijken op niets wat je kent.",
+          "targets": ["g.mod.ordinal", "v.17.prvi", "v.10.svibanj", "v.17.sat_uur"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de rangtelwoorden en de klok, dan de maanden en de datum.",
+      "exercises": [
+        {
+          "id": "m.ord.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De rangtelwoorden en de klok",
+          "body_nl": "**De eerste tien:**\n*prvi, drugi, treći, četvrti, peti, šesti, sedmi, osmi, deveti, deseti*\n\nDaarna gewoon door: *jedanaesti, dvanaesti… dvadeseti*. Bij een samengesteld getal buigt alleen het laatste deel: *dvadeset prvi*.\n\nIn cijfers zet je er een **punt** achter: *1. dan* is *prvi dan*. Die punt is niet optioneel — zonder punt lees je er «één dag».\n\nEn omdat het bijvoeglijke naamwoorden zijn, buigen ze mee:\n*prvi dan*, *prva godina*, *prvo mjesto*, *u prvom redu*.\n\n**De klok.** Vragen doe je met *Koliko je sati?*\n\nHele uren volgen de getalregel die je kent:\n*jedan sat* — 1 uur\n*dva sata* — 2 uur\n*pet sati* — 5 uur\n\n«Om» is **u**: *u pet sati*, *u osam sati*.\n\nEn dan de halve en kwartieren:\n*pola šest* — **half zes**, dus 5:30\n*šest i petnaest* — kwart over zes\n*petnaest do sedam* — kwart voor zeven\n\nDie eerste is de enige die je echt kan verrassen. *Pola šest* betekent «half naar zes toe», niet «half na zes».",
+          "table": {
+            "caption_nl": "De klok",
+            "columns": ["Kroatisch", "Nederlands"],
+            "rows": [
+              { "label": "vraag", "cells": ["Koliko je sati?", "Hoe laat is het?"] },
+              { "label": "1:00", "cells": ["jedan sat", "één uur"] },
+              { "label": "2:00", "cells": ["dva sata", "twee uur"] },
+              { "label": "5:00", "cells": ["pet sati", "vijf uur"] },
+              { "label": "5:30", "cells": ["pola šest", "half zes"] },
+              { "label": "6:15", "cells": ["šest i petnaest", "kwart over zes"] },
+              { "label": "6:45", "cells": ["petnaest do sedam", "kwart voor zeven"] },
+              { "label": "om…", "cells": ["u pet sati", "om vijf uur"] }
+            ]
+          },
+          "targets": ["g.mod.ordinal", "v.17.prvi", "v.17.drugi", "v.17.treci", "v.17.sat_uur"]
+        },
+        {
+          "id": "m.ord.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De maanden en de datum",
+          "body_nl": "De Kroatische maandnamen komen niet uit het Latijn maar uit het Kroatisch zelf. Ze verwijzen naar wat er in dat deel van het jaar gebeurt — *listopad* is de maand van het vallende blad.\n\n*siječanj, veljača, ožujak, travanj, svibanj, lipanj,*\n*srpanj, kolovoz, rujan, listopad, studeni, prosinac*\n\nJe zult in Kroatië ook cijfers zien, en dat helpt: *5. 5. 2026*.\n\n**Een datum noemen.** Vraag: *Koji je danas datum?*\nAntwoord: *Danas je* **peti svibnja**. — Vandaag is het vijf mei.\n\nDus: een rangtelwoord plus de maand in de **genitief**. *Svibanj* wordt *svibnja*, *ožujak* wordt *ožujka*, *prosinac* wordt *prosinca*.\n\n**Wanneer iets gebeurt.** Dan gaat het rangtelwoord óók in de genitief:\n\n*Rođen sam* **petnaestog ožujka**. — Ik ben op 15 maart geboren.\n*Vidimo se* **prvog lipnja**. — We zien elkaar op 1 juni.\n\nHet verschil: *peti svibnja* zegt wélke dag het is, *petog svibnja* zegt **op** welke dag iets gebeurt.",
+          "table": {
+            "caption_nl": "De twaalf maanden",
+            "columns": ["maand", "genitief", "Nederlands"],
+            "rows": [
+              { "label": "1", "cells": ["siječanj", "siječnja", "januari"] },
+              { "label": "2", "cells": ["veljača", "veljače", "februari"] },
+              { "label": "3", "cells": ["ožujak", "ožujka", "maart"] },
+              { "label": "4", "cells": ["travanj", "travnja", "april"] },
+              { "label": "5", "cells": ["svibanj", "svibnja", "mei"] },
+              { "label": "6", "cells": ["lipanj", "lipnja", "juni"] },
+              { "label": "7", "cells": ["srpanj", "srpnja", "juli"] },
+              { "label": "8", "cells": ["kolovoz", "kolovoza", "augustus"] },
+              { "label": "9", "cells": ["rujan", "rujna", "september"] },
+              { "label": "10", "cells": ["listopad", "listopada", "oktober"] },
+              { "label": "11", "cells": ["studeni", "studenoga", "november"] },
+              { "label": "12", "cells": ["prosinac", "prosinca", "december"] }
+            ]
+          },
+          "targets": ["g.mod.ordinal", "v.10.sijecanj", "v.10.ozujak", "v.10.svibanj", "v.10.prosinac", "v.17.datum"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Hoe laat, welke dag?",
+      "why_nl": "Nog niets maken. Hier gaat het om verstaan — en bij de klok kan één woord je een uur schelen.",
+      "exercises": [
+        {
+          "id": "m.ord.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe laat spreken jullie af?",
+          "given": "Vidimo se u pola šest.",
+          "nudge": "Pola betekent half. Maar half naar welk uur toe?",
+          "answer": "Om 5:30.",
+          "distractors": ["Om 6:30.", "Om 6:00.", "Om 5:00."],
+          "explain_nl": "Pola šest is «half naar zes toe». Wie hier 6:30 van maakt, staat een uur te laat op de stoep.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ord.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke datum is dit?",
+          "given": "Danas je peti svibnja.",
+          "nudge": "Svibanj is een van de twaalf maanden. Welke?",
+          "answer": "Vijf mei.",
+          "distractors": ["Vijf maart.", "Vijf juni.", "Vijftien mei."],
+          "explain_nl": "Svibanj is mei. De maandnamen zijn eigen Kroatische woorden; hier helpt je Nederlands niet.",
+          "targets": ["g.mod.ordinal", "v.10.svibanj"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er petog en niet peti?",
+          "given": "Rođen sam petog svibnja.",
+          "nudge": "De zin zegt niet wélke dag het is, maar wannéér er iets gebeurde.",
+          "answer": "Omdat het zegt óp welke dag iets gebeurde; dan gaat het rangtelwoord in de genitief.",
+          "distractors": [
+            "Omdat het over het verleden gaat.",
+            "Omdat de spreker een man is.",
+            "Peti is fout."
+          ],
+          "explain_nl": "Peti svibnja is «het is vijf mei». Petog svibnja is «op vijf mei».",
+          "targets": ["g.mod.ordinal", "g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er prva en niet prvi?",
+          "given": "Ovo je prva godina.",
+          "nudge": "Rangtelwoorden zijn bijvoeglijke naamwoorden. Waar passen die zich aan aan?",
+          "answer": "Omdat godina vrouwelijk is; het rangtelwoord buigt mee.",
+          "distractors": [
+            "Omdat het het eerste jaar is.",
+            "Omdat prvi alleen bij mensen kan.",
+            "Prvi kan hier ook."
+          ],
+          "explain_nl": "Precies zoals dobar, dobra, dobro. Rangtelwoorden zijn niets bijzonders — behalve wat je ermee zegt.",
+          "targets": ["g.mod.ordinal", "g.mod.adj_agree", "v.10.godina"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke maand is listopad?",
+          "given": "U listopadu pada lišće.",
+          "nudge": "De naam zegt het zelf: lišće is blad, padati is vallen.",
+          "answer": "Oktober.",
+          "distractors": ["September.", "November.", "Maart."],
+          "explain_nl": "Listopad is letterlijk «bladval». Meerdere Kroatische maandnamen zeggen wat er in die tijd van het jaar gebeurt.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Hoe laat vertrekt de trein?",
+          "given": "Vlak kreće u petnaest do sedam.",
+          "nudge": "Do betekent «tot». Vijftien minuten tot zeven.",
+          "answer": "Om 6:45.",
+          "distractors": ["Om 7:15.", "Om 6:15.", "Om 7:45."],
+          "explain_nl": "Petnaest do sedam is kwart voor zeven; šest i petnaest zou kwart over zes zijn.",
+          "targets": ["g.mod.ordinal", "v.17.minuta"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: welk rangtelwoord, en in welke vorm?",
+      "exercises": [
+        {
+          "id": "m.ord.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: de eerste dag.",
+          "given": "Ovo je ___ (1.) dan.",
+          "answer": "prvi",
+          "accepts": ["prvi"],
+          "explain_nl": "Dan is mannelijk, dus prvi.",
+          "targets": ["g.mod.ordinal", "v.17.prvi"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.ord.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: het derde jaar.",
+          "given": "Ovo je ___ (3.) godina.",
+          "answer": "treća",
+          "accepts": ["treća"],
+          "hint": "Godina is vrouwelijk.",
+          "explain_nl": "Treći wordt treća bij een vrouwelijk woord.",
+          "targets": ["g.mod.ordinal", "v.17.treci", "v.10.godina"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: het is vijf uur.",
+          "given": "Sad je ___ (5) ___ (sat).",
+          "answer": "pet sati",
+          "accepts": ["pet sati"],
+          "explain_nl": "Bij de klok gelden de gewone getalregels: na vijf komt de genitief meervoud sati.",
+          "targets": ["g.mod.ordinal", "g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: om acht uur.",
+          "given": "Vidimo se ___ osam sati.",
+          "answer": "u",
+          "accepts": ["u"],
+          "explain_nl": "«Om» is u bij een tijdstip.",
+          "targets": ["g.mod.ordinal", "v.17.sat_uur"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ord.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: half zeven.",
+          "given": "Dolazim u ___ sedam.",
+          "answer": "pola",
+          "accepts": ["pola"],
+          "hint": "Let op: half zeven telt naar zeven toe.",
+          "explain_nl": "Pola sedam is 6:30.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul de maand in: mei.",
+          "given": "Danas je peti ___ .",
+          "answer": "svibnja",
+          "accepts": ["svibnja"],
+          "hint": "De maand staat in de genitief.",
+          "explain_nl": "Svibanj wordt svibnja in de genitief.",
+          "targets": ["g.mod.ordinal", "v.10.svibanj"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ord.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: op vijftien maart.",
+          "given": "Rođen sam ___ (15.) ___ (ožujak).",
+          "answer": "petnaestog ožujka",
+          "accepts": ["petnaestog ožujka"],
+          "hint": "Allebei in de genitief.",
+          "explain_nl": "«Op» een datum zet zowel het rangtelwoord als de maand in de genitief.",
+          "targets": ["g.mod.ordinal", "g.mod.genitive", "v.10.ozujak"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Hoe laat is het?",
+          "answer": "Koliko je sati?",
+          "accepts": ["Koliko je sati?", "Koliko je sati"],
+          "explain_nl": "Letterlijk «hoeveel is het aan uren».",
+          "targets": ["g.mod.ordinal", "v.17.sat_uur"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.ord.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je prvi godina.",
+          "answer": "Ovo je prva godina.",
+          "accepts": ["Ovo je prva godina.", "Ovo je prva godina"],
+          "explain_nl": "Godina is vrouwelijk, en een rangtelwoord buigt mee.",
+          "targets": ["g.mod.ordinal", "g.mod.adj_agree"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.ord.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "De spreker bedoelt 5:30. Er staat één fout in.",
+          "given": "Vidimo se u pola pet.",
+          "answer": "Vidimo se u pola šest.",
+          "accepts": ["Vidimo se u pola šest.", "Vidimo se u pola šest"],
+          "hint": "Naar welk uur telt pola toe?",
+          "explain_nl": "Pola pet is 4:30. Voor 5:30 moet je het volgende uur noemen: pola šest.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu naast de gewone getallen, want die staan bij de klok en de datum vlak naast elkaar.",
+      "exercises": [
+        {
+          "id": "m.ord.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Čekam već dva ___.",
+          "answer": "sata",
+          "distractors": ["sati", "sat", "satova"],
+          "explain_nl": "Hier is het een gewoon getal, geen rangtelwoord: na dva komt de genitief enkelvoud sata.",
+          "targets": ["g.mod.ordinal", "g.mod.brojevi", "v.17.sat_uur"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ord.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in: op de derde verdieping, om drie uur.",
+          "given": "Stanujem na ___ (3.) katu i dolazim u ___ (3) sata.",
+          "answer": "trećem tri",
+          "accepts": ["trećem tri"],
+          "hint": "Het eerste is een rangtelwoord in de locatief, het tweede een gewoon getal.",
+          "explain_nl": "Rangtelwoorden buigen als bijvoeglijke naamwoorden: na trećem katu. Bij de klok blijft het een gewoon getal: tri sata.",
+          "targets": ["g.mod.ordinal", "g.mod.brojevi", "g.mod.loc_vs_acc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Mijn verjaardag is op één juni.",
+          "answer": "Rođendan mi je prvog lipnja.",
+          "accepts": [
+            "Rođendan mi je prvog lipnja.",
+            "Rođendan mi je prvog lipnja",
+            "Moj rođendan je prvog lipnja.",
+            "Moj rođendan je prvog lipnja"
+          ],
+          "explain_nl": "«Op» een datum vraagt de genitief, zowel bij het rangtelwoord als bij de maand.",
+          "targets": ["g.mod.ordinal", "g.mod.genitive", "v.06.rodendan"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin betekent «om kwart over zeven»?",
+          "answer": "U sedam i petnaest.",
+          "distractors": [
+            "U petnaest do sedam.",
+            "U pola sedam.",
+            "U sedam sati."
+          ],
+          "explain_nl": "I petnaest telt op bij het uur; do telt ernaartoe.",
+          "targets": ["g.mod.ordinal", "v.17.minuta"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ord.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Rođen sam peti svibanj.",
+          "answer": "Rođen sam petog svibnja.",
+          "accepts": ["Rođen sam petog svibnja.", "Rođen sam petog svibnja"],
+          "hint": "«Op» een datum zet allebei de woorden in de genitief.",
+          "explain_nl": "Peti svibnja zegt wélke dag het is. Voor «op vijf mei» moet het petog svibnja zijn.",
+          "targets": ["g.mod.ordinal", "g.mod.genitive", "v.10.svibanj"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk getal: is het een gewoon getal of een rangtelwoord, en waarom staat het zo?",
+      "text_hr": "Prvog lipnja selim se u novi stan. Stanujem na trećem katu, bez lifta. Selidba počinje u osam sati ujutro, ali prijatelji dolaze tek u pola deset. Do dva sata popodne iznesemo sve kutije. Drugi dan je gori: tražim stvari koje sam sam spakirao. U petak, petog lipnja, konačno pijem kavu na svojem balkonu. Susjeda kaže da je u kolovozu ovdje prevruće, ali da je u listopadu najljepše.",
+      "translation_nl": "Op één juni verhuis ik naar een nieuw appartement. Ik woon op de derde verdieping, zonder lift. De verhuizing begint om acht uur 's ochtends, maar mijn vrienden komen pas om half tien. Tot twee uur 's middags dragen we alle dozen naar buiten. De tweede dag is erger: ik zoek spullen die ik zelf heb ingepakt. Op vrijdag vijf juni drink ik eindelijk koffie op mijn eigen balkon. De buurvrouw zegt dat het hier in augustus te heet is, maar dat het in oktober het mooist is.",
+      "exercises": [
+        {
+          "id": "m.ord.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Op welke verdieping woont hij?",
+          "answer": "De derde.",
+          "distractors": ["De eerste.", "De tweede.", "De begane grond."],
+          "explain_nl": "«Stanujem na trećem katu.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.ord.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «u osam sati» en «u pola deset». Hoeveel tijd zit daartussen?",
+          "given": "Selidba počinje u osam sati, ali prijatelji dolaze tek u pola deset.",
+          "nudge": "Pola deset telt naar tien toe, niet vanaf tien.",
+          "answer": "Anderhalf uur — van 8:00 tot 9:30.",
+          "distractors": [
+            "Twee en een half uur, van 8:00 tot 10:30.",
+            "Twee uur, van 8:00 tot 10:00.",
+            "Een half uur."
+          ],
+          "explain_nl": "Pola deset is 9:30. Wie er 10:30 van maakt, wacht anderhalf uur te lang.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «Prvog lipnja» en «Drugi dan». Waarom de ene keer een -og en de andere keer niet?",
+          "given": "Prvog lipnja selim se u novi stan. Drugi dan je gori.",
+          "nudge": "Zegt de zin wanneer iets gebeurt, of hoe iets is?",
+          "answer": "Prvog lipnja zegt wannéér, dus genitief; drugi dan is gewoon het onderwerp van de zin.",
+          "distractors": [
+            "Omdat lipanj een maand is en dan niet.",
+            "Omdat de tweede zin in de tegenwoordige tijd staat.",
+            "Er zit geen verschil in."
+          ],
+          "explain_nl": "Een rangtelwoord doet gewoon wat elk bijvoeglijk naamwoord doet: het volgt de naamval van de rol die het woord in de zin heeft.",
+          "targets": ["g.mod.ordinal", "g.mod.genitive"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.ord.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Stanujem na ___ (3.) katu, bez lifta.",
+          "answer": "trećem",
+          "accepts": ["trećem"],
+          "explain_nl": "Na met een plaats vraagt de locatief, en het rangtelwoord buigt mee: trećem.",
+          "targets": ["g.mod.ordinal", "g.mod.loc_vs_acc"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.ord.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen: hoe laat het nu is, hoe laat je ergens afspreekt, en wanneer je jarig bent.",
+          "model_answer": "Sad je pet sati. Vidimo se u pola sedam. Rođendan mi je petnaestog ožujka.",
+          "rubric_nl": [
+            "Bij hele uren volgt het woord voor uur de getalregel: sat, sata, sati.",
+            "Pola telt naar het volgende uur toe.",
+            "Bij een datum staan het rangtelwoord en de maand in de genitief."
+          ],
+          "explain_nl": "Met deze drie zinnen kun je een afspraak maken en je verjaardag noemen — twee dingen die in elk eerste gesprek langskomen.",
+          "targets": ["g.mod.ordinal"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum NUM-ORD, gebouwd op les 10 en 17"
+}

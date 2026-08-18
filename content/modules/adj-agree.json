@@ -1,0 +1,502 @@
+{
+  "code": "ADJ-AGREE",
+  "rank": 5,
+  "band": "Beginnen",
+  "title_hr": "Dobar stol, dobra knjiga",
+  "title_nl": "Het woord ervoor past zich aan",
+  "cefr": "A1/A2",
+  "blurb_nl": "Een bijvoeglijk naamwoord neemt de vorm aan van het woord waar het bij hoort. Het Nederlands doet dat ook een beetje — goed en goede — maar het Kroatisch doet het compleet. En er zit één addertje in dat je bij bijna elk bijvoeglijk naamwoord tegenkomt: er verdwijnt een letter zodra je de vrouwelijke vorm maakt.",
+  "prerequisites": ["NOM-GENDER"],
+  "can_do_nl": [
+    "Ik kan de drie vormen maken: dobar, dobra, dobro.",
+    "Ik weet dat de a uit dobar verdwijnt zodra er iets achter komt.",
+    "Ik kan het meervoud maken: dobri, dobre, dobra.",
+    "Ik kan het bijvoeglijk naamwoord mee laten buigen in de accusatief: dobru knjigu.",
+    "Ik kan aan het bijvoeglijk naamwoord zien welk geslacht een onbekend woord heeft."
+  ],
+  "grammar": {
+    "id": "g.mod.adj_agree",
+    "code": "ADJ-AGREE",
+    "title_nl": "Congruentie van het bijvoeglijk naamwoord",
+    "cefr": "A1/A2",
+    "explanation_nl": "Een bijvoeglijk naamwoord past zich aan aan het woord waar het bij hoort — in **geslacht**, in **getal** en in **naamval**. De basisvormen zijn *dobar*, *dobra*, *dobro*.",
+    "contrast_nl": "Het Nederlands heeft één extra letter — goed tegenover goede — en verder niets. Het Kroatisch heeft voor elk geslacht en elke naamval een eigen vorm. Dat is meer werk, maar het levert ook iets op: aan het bijvoeglijk naamwoord kun je zien wat voor woord erachter staat, ook als je dat woord niet kent.",
+    "paradigm": {
+      "caption_nl": "De basisvormen",
+      "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+      "rows": [
+        { "label": "enkelvoud", "cells": ["dobar stol", "dobra knjiga", "dobro pivo"] },
+        { "label": "meervoud", "cells": ["dobri stolovi", "dobre knjige", "dobra piva"] },
+        { "label": "lijdend voorwerp", "cells": ["dobar stol", "dobru knjigu", "dobro pivo"] },
+        { "label": "lijdend voorwerp, levend", "cells": ["dobrog studenta", "dobru studenticu", "—"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "De a in dobar hoort niet bij het woord: dobar, maar dobra, dobro, dobri.",
+      "Hetzelfde geldt voor gladan → gladna, hladan → hladna, pametan → pametna.",
+      "Topao is nog een stap verder: de l aan het eind werd een o. De vrouwelijke vorm is topla.",
+      "In het meervoud is de onzijdige vorm dobra — precies gelijk aan de vrouwelijke vorm van het enkelvoud.",
+      "Het bijvoeglijk naamwoord buigt mee in élke naamval, niet alleen in de nominatief."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Eén bijvoeglijk naamwoord, zes keer. Kijk goed naar wat er met de laatste letters gebeurt.",
+      "exercises": [
+        {
+          "id": "m.adj.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Wat gebeurt er met dobar?",
+          "given": "dobar stol\ndobra knjiga\ndobro pivo\n\ndobri stolovi\ndobre knjige\ndobra piva",
+          "body_nl": "een goede tafel\neen goed boek\neen goed bier\n\ngoede tafels\ngoede boeken\ngoede bieren",
+          "targets": []
+        },
+        {
+          "id": "m.adj.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Twee dingen tegelijk.\n\n**Eén:** het Nederlands heeft hier zes keer bijna hetzelfde — *goed* en *goede*. Het Kroatisch heeft zes verschillende vormen, één voor elke combinatie van geslacht en getal.\n\n**Twee, en dit is de val:** kijk naar de eerste regel. Er staat *dobar*, met een **a** vóór de r. In alle andere vormen is die a **verdwenen**:\n\n*dob**a**r* — maar *dobra*, *dobro*, *dobri*, *dobre*\n\nDie a hoort dus niet bij het woord. Hij verschijnt alleen in de kale mannelijke vorm, omdat *dobr* op zichzelf niet uit te spreken is. Zodra er een uitgang achter komt, is hij overbodig en valt hij weg.\n\nDat gebeurt bij heel veel bijvoeglijke naamwoorden: *gladan → gladna*, *hladan → hladna*, *pametan → pametna*.",
+          "targets": ["g.mod.adj_agree", "v.04.dobar", "v.04.gladan"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eerst de zes basisvormen, dan wat er gebeurt zodra er een naamval bij komt.",
+      "exercises": [
+        {
+          "id": "m.adj.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Zes vormen, en de a die verdwijnt",
+          "body_nl": "**Enkelvoud:**\nmannelijk: *dobar* — geen uitgang\nvrouwelijk: *dobr**a***\nonzijdig: *dobr**o***\n\n**Meervoud:**\nmannelijk: *dobr**i***\nvrouwelijk: *dobr**e***\nonzijdig: *dobr**a***\n\nLet op die laatste: de onzijdige meervoudsvorm *dobra* is precies gelijk aan de vrouwelijke enkelvoudsvorm. Dat is geen fout en het levert in de praktijk zelden verwarring op, want het woord erachter vertelt je genoeg.\n\n**De verdwijnende a.** De stam is *dobr-*. In de kale mannelijke vorm zou dat op twee medeklinkers eindigen, en daar schuift een **a** tussen: *dobar*. Komt er een uitgang achter, dan is die a niet meer nodig.\n\n*gladan* → *gladna, gladno, gladni*\n*hladan* → *hladna, hladno, hladni*\n*pametan* → *pametna, pametno, pametni*\n\nJe kent dit trucje al van de genitief meervoud, waar *sestr-* een *sestara* werd. Dezelfde oorzaak, ander woordsoort.\n\nEén woord gaat nog een stap verder: **topao**. Daar werd de *l* aan het eind een *o*. De vrouwelijke vorm is gewoon *topla*.",
+          "table": {
+            "caption_nl": "De zes basisvormen",
+            "columns": ["mannelijk", "vrouwelijk", "onzijdig"],
+            "rows": [
+              { "label": "enkelvoud", "cells": ["dobar stol", "dobra knjiga", "dobro pivo"] },
+              { "label": "meervoud", "cells": ["dobri stolovi", "dobre knjige", "dobra piva"] },
+              { "label": "hongerig", "cells": ["gladan", "gladna", "gladno"] },
+              { "label": "koud", "cells": ["hladan", "hladna", "hladno"] },
+              { "label": "warm", "cells": ["topao", "topla", "toplo"] }
+            ]
+          },
+          "targets": ["g.mod.adj_agree", "v.04.dobar", "v.04.gladan"]
+        },
+        {
+          "id": "m.adj.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "En dan de naamvallen",
+          "body_nl": "Het bijvoeglijk naamwoord buigt niet alleen mee met het geslacht, maar met **alles** wat het woord erachter overkomt.\n\nZodra er een lijdend voorwerp in de zin staat:\n*Čitam* **dobru** *knjigu.* — knjigu is accusatief, dus dobru.\n*Vidim* **dobrog** *studenta.* — een levend mannelijk woord, dus dobrog.\n*Pijem* **hladno** *pivo.* — onzijdig verandert niet.\n\nEn verder in de andere naamvallen:\n*u* **novoj** *kući* — locatief\n*bez* **dobrog** *razloga* — genitief\n*s* **dobrim** *prijateljem* — instrumentalis\n\nDie uitgangen leer je niet als lijst; je ziet ze vanzelf terugkomen bij elke naamval die je leert. Wat je hier moet meenemen is de gewoonte: **staat het zelfstandig naamwoord in een naamval, dan gaat het bijvoeglijk naamwoord mee.** Altijd.\n\nEn er zit een voordeel in. Zie je een woord dat je niet kent, dan verraadt het bijvoeglijk naamwoord ervoor het geslacht én de naamval. Dat is bij het lezen goud waard.",
+          "table": {
+            "caption_nl": "Meebuigen in de naamval",
+            "columns": ["zin", "waarom"],
+            "rows": [
+              { "label": "accusatief", "cells": ["Čitam dobru knjigu.", "knjigu is lijdend voorwerp"] },
+              { "label": "accusatief levend", "cells": ["Vidim dobrog studenta.", "levend mannelijk woord"] },
+              { "label": "locatief", "cells": ["Živim u novoj kući.", "u zonder beweging"] },
+              { "label": "genitief", "cells": ["Bez dobrog razloga.", "bez vraagt de genitief"] },
+              { "label": "instrumentalis", "cells": ["Idem s dobrim prijateljem.", "gezelschap"] }
+            ]
+          },
+          "targets": ["g.mod.adj_agree", "g.mod.acc_anim", "g.mod.loc_vs_acc"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Waar hoort het bij?",
+      "why_nl": "Nog niets maken. Hier leer je het bijvoeglijk naamwoord gebruiken als aanwijzing — dat is waar je bij het lezen wat aan hebt.",
+      "exercises": [
+        {
+          "id": "m.adj.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft het woord achter dobra?",
+          "given": "Ovo je dobra bilježnica.",
+          "nudge": "Ook als je bilježnica niet kent, verraadt dobra het.",
+          "answer": "Vrouwelijk.",
+          "distractors": ["Mannelijk.", "Onzijdig.", "Dat kun je hier niet zien."],
+          "explain_nl": "Dat is precies de winst van congruentie: het bijvoeglijk naamwoord vertelt je iets over een woord dat je nog niet kent.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adj.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er dobra en niet dobar?",
+          "given": "Ovo je dobra knjiga.",
+          "nudge": "Waar is de a uit dobar gebleven, en welke a staat er nu?",
+          "answer": "Omdat knjiga vrouwelijk is; de a van dobar valt weg en de uitgang -a komt ervoor in de plaats.",
+          "distractors": [
+            "Omdat dobar alleen bij mensen kan.",
+            "Omdat er twee keer a in staat.",
+            "Omdat de zin met ovo begint."
+          ],
+          "explain_nl": "Twee dingen tegelijk: de stam-a verdwijnt en de uitgang komt erbij. Daarom is het dobra en niet «dobara».",
+          "targets": ["g.mod.adj_agree", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welke zin is goed Kroatisch?",
+          "given": "A: Gladan sam.\nB: Gladna sam.",
+          "nudge": "Er is niet één goed antwoord — het hangt van de spreker af.",
+          "answer": "Allebei — A zegt een man, B zegt een vrouw.",
+          "distractors": [
+            "Alleen A.",
+            "Alleen B.",
+            "Geen van beide."
+          ],
+          "explain_nl": "Het bijvoeglijk naamwoord past zich aan aan het onderwerp, en dat ben jij. Wie «gladan sam» zegt, zegt daarmee ook dat hij een man is.",
+          "targets": ["g.mod.adj_agree", "v.04.gladan"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er dobru en niet dobra?",
+          "given": "Čitam dobru knjigu.",
+          "nudge": "Kijk naar de uitgang van knjigu. Wat is er met dat woord gebeurd?",
+          "answer": "Omdat knjigu het lijdend voorwerp is; het bijvoeglijk naamwoord buigt mee.",
+          "distractors": [
+            "Omdat lezen een werkwoord is.",
+            "Omdat dobru sterker klinkt.",
+            "Omdat knjiga soms mannelijk is."
+          ],
+          "explain_nl": "Zodra het zelfstandig naamwoord een naamval krijgt, krijgt het bijvoeglijk naamwoord die ook. Dat is de hele regel.",
+          "targets": ["g.mod.adj_agree", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wat is hier het meervoud?",
+          "given": "A: dobra knjiga\nB: dobra piva",
+          "nudge": "De vorm dobra komt twee keer voor, maar hoort bij verschillende dingen.",
+          "answer": "B — dobra piva is onzijdig meervoud; dobra knjiga is vrouwelijk enkelvoud.",
+          "distractors": [
+            "A — dobra knjiga.",
+            "Allebei.",
+            "Geen van beide."
+          ],
+          "explain_nl": "De vorm dobra doet dienst voor twee dingen. Het woord erachter maakt duidelijk welke van de twee je voor je hebt.",
+          "targets": ["g.mod.adj_agree", "v.06.pivo"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Van welk woord komt topla?",
+          "given": "Voda je topla.",
+          "nudge": "Er is meer veranderd dan alleen een uitgang. Wat gebeurde er met de laatste medeklinker?",
+          "answer": "Van topao — de l aan het eind was een o geworden.",
+          "distractors": ["Van topla.", "Van toplo.", "Van topliti."],
+          "explain_nl": "In de kale mannelijke vorm werd de l een o: topao. Zodra er een uitgang achter komt, is de l terug: topla, toplo, topli.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: welk geslacht, welk getal, welke naamval?",
+      "exercises": [
+        {
+          "id": "m.adj.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: koud.",
+          "given": "Ovo je ___ (hladan) pivo.",
+          "answer": "hladno",
+          "accepts": ["hladno"],
+          "explain_nl": "Pivo is onzijdig, en de stam-a verdwijnt: hladno.",
+          "targets": ["g.mod.adj_agree", "v.06.pivo"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.adj.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: nieuw.",
+          "given": "Imamo ___ (nov) auto.",
+          "answer": "novi",
+          "accepts": ["novi", "nov"],
+          "explain_nl": "Auto is mannelijk en niet levend, dus de accusatief is gelijk aan de nominatief.",
+          "targets": ["g.mod.adj_agree", "v.00.auto", "v.04.nov"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adj.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: goed. Let op de naamval.",
+          "given": "Čitam ___ (dobar) knjigu.",
+          "answer": "dobru",
+          "accepts": ["dobru"],
+          "hint": "Knjigu staat in de accusatief.",
+          "explain_nl": "Het bijvoeglijk naamwoord buigt mee: dobru knjigu.",
+          "targets": ["g.mod.adj_agree", "v.01.knjiga", "v.04.dobar"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: hongerig. Je bent een vrouw.",
+          "given": "___ (gladan) sam.",
+          "answer": "Gladna",
+          "accepts": ["Gladna", "gladna"],
+          "explain_nl": "Het bijvoeglijk naamwoord past zich aan aan de spreker.",
+          "targets": ["g.mod.adj_agree", "v.04.gladan"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adj.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: groot, meervoud.",
+          "given": "To su ___ (velik) kuće.",
+          "answer": "velike",
+          "accepts": ["velike"],
+          "hint": "Kuće is vrouwelijk meervoud.",
+          "explain_nl": "Vrouwelijk meervoud krijgt -e.",
+          "targets": ["g.mod.adj_agree", "v.01.kuca", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adj.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: oud, meervoud.",
+          "given": "U gradu su ___ (star) zgrade.",
+          "answer": "stare",
+          "accepts": ["stare"],
+          "explain_nl": "Zgrade is vrouwelijk meervoud, dus -e.",
+          "targets": ["g.mod.adj_agree", "v.04.zgrada", "v.04.star"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adj.036",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: goed. Het gaat om een levend woord.",
+          "given": "Vidim ___ (dobar) studenta.",
+          "answer": "dobrog",
+          "accepts": ["dobrog", "dobroga"],
+          "hint": "Bij een levend mannelijk woord ziet de accusatief er anders uit.",
+          "explain_nl": "Student is levend, dus de accusatief is studenta — en het bijvoeglijk naamwoord wordt dobrog.",
+          "targets": ["g.mod.adj_agree", "g.mod.acc_anim", "v.01.student"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Dit is een groot huis.",
+          "answer": "Ovo je velika kuća.",
+          "accepts": ["Ovo je velika kuća.", "Ovo je velika kuća"],
+          "explain_nl": "Kuća is vrouwelijk, dus velika — ook al zeggen wij «het huis».",
+          "targets": ["g.mod.adj_agree", "v.01.kuca", "v.04.velik"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.adj.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je dobara knjiga.",
+          "answer": "Ovo je dobra knjiga.",
+          "accepts": ["Ovo je dobra knjiga.", "Ovo je dobra knjiga"],
+          "explain_nl": "De a uit dobar valt weg zodra de uitgang erbij komt. Beide a's tegelijk kan niet.",
+          "targets": ["g.mod.adj_agree", "v.01.knjiga"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Čitam dobra knjigu.",
+          "answer": "Čitam dobru knjigu.",
+          "accepts": ["Čitam dobru knjigu.", "Čitam dobru knjigu"],
+          "explain_nl": "Knjigu staat in de accusatief, dus het bijvoeglijk naamwoord ook.",
+          "targets": ["g.mod.adj_agree", "v.01.knjiga"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu in zinnen waar het zelfstandig naamwoord al een naamval heeft, want dat is waar het echt gaat leven.",
+      "exercises": [
+        {
+          "id": "m.adj.050",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "Živim u ___ kući.",
+          "answer": "novoj",
+          "distractors": ["nova", "novu", "novom"],
+          "explain_nl": "Kući staat in de locatief; de vrouwelijke vorm daarvan is novoj.",
+          "targets": ["g.mod.adj_agree", "g.mod.loc_vs_acc", "v.01.kuca"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.051",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul beide vormen in.",
+          "given": "Pijem ___ (hladan) pivo i jedem ___ (topao) kruh.",
+          "answer": "hladno topli",
+          "accepts": ["hladno topli", "hladno topao"],
+          "hint": "Pivo is onzijdig, kruh is mannelijk en niet levend.",
+          "explain_nl": "Hladno bij een onzijdig woord; bij kruh kan zowel topli als topao, want de accusatief van een niet-levend mannelijk woord is gelijk aan de nominatief.",
+          "targets": ["g.mod.adj_agree", "v.06.pivo", "v.07.kruh"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Ik ga met een goede vriend naar de stad.",
+          "answer": "Idem u grad s dobrim prijateljem.",
+          "accepts": [
+            "Idem u grad s dobrim prijateljem.",
+            "Idem u grad s dobrim prijateljem",
+            "Idem s dobrim prijateljem u grad.",
+            "Idem s dobrim prijateljem u grad"
+          ],
+          "explain_nl": "Gezelschap vraagt de instrumentalis prijateljem, en het bijvoeglijk naamwoord buigt mee: dobrim.",
+          "targets": ["g.mod.adj_agree", "g.mod.instrumental", "v.01.prijatelj"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft het onbekende woord?",
+          "given": "Kupio sam novu bilježnicu.",
+          "answer": "Vrouwelijk.",
+          "distractors": ["Mannelijk.", "Onzijdig.", "Dat is niet te zien."],
+          "explain_nl": "Novu is de vrouwelijke accusatiefvorm. Het bijvoeglijk naamwoord doet hier het werk van een woordenboek.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Imam nova auto i čitam dobra knjigu.",
+          "answer": "Imam novi auto i čitam dobru knjigu.",
+          "accepts": ["Imam novi auto i čitam dobru knjigu.", "Imam novi auto i čitam dobru knjigu"],
+          "hint": "Eén woord is mannelijk, en één staat in de accusatief.",
+          "explain_nl": "Auto is mannelijk, dus novi. Knjigu is de accusatief, dus dobru.",
+          "targets": ["g.mod.adj_agree", "v.00.auto", "v.01.knjiga"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk bijvoeglijk naamwoord: bij welk woord hoort het, en waarom heeft het die uitgang?",
+      "text_hr": "Jučer sam kupio novi stol. Stara kuhinja je mala, pa sam tražio nešto usko. Prodavačica je bila strpljiva: pokazala mi je tri različita stola. Prvi je bio prelijep, ali preskup. Drugi je imao dobru cijenu, ali kratke noge. Treći je bio jednostavan i drven, s toplom bojom. «Ovaj je najbolji za malu kuhinju», rekla je. Sad stoji uz veliki prozor. Ujutro pijem hladnu vodu za tim stolom i gledam mokru ulicu.",
+      "translation_nl": "Gisteren heb ik een nieuwe tafel gekocht. De oude keuken is klein, dus ik zocht iets smals. De verkoopster was geduldig: ze liet me drie verschillende tafels zien. De eerste was prachtig, maar te duur. De tweede had een goede prijs, maar korte poten. De derde was eenvoudig en van hout, met een warme kleur. «Deze is het beste voor een kleine keuken,» zei ze. Nu staat hij bij het grote raam. 's Ochtends drink ik koud water aan die tafel en kijk ik naar de natte straat.",
+      "exercises": [
+        {
+          "id": "m.adj.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat was er mis met de tweede tafel?",
+          "answer": "Korte poten.",
+          "distractors": ["Te duur.", "Verkeerde kleur.", "Te groot."],
+          "explain_nl": "«Drugi je imao dobru cijenu, ali kratke noge.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.adj.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «dobru cijenu» en «kratke noge». Waarom verschillen die uitgangen?",
+          "given": "Drugi je imao dobru cijenu, ali kratke noge.",
+          "nudge": "Beide zijn lijdend voorwerp. Wat is er dan nog verschillend?",
+          "answer": "Cijenu is enkelvoud en noge is meervoud; allebei vrouwelijk, allebei accusatief.",
+          "distractors": [
+            "Cijenu is vrouwelijk en noge onzijdig.",
+            "Cijenu is accusatief en noge nominatief.",
+            "Er zit geen systeem in."
+          ],
+          "explain_nl": "Congruentie gaat over drie dingen tegelijk: geslacht, getal en naamval. Hier verschilt alleen het getal.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «s toplom bojom». Wat is de woordenboekvorm van toplom?",
+          "given": "Treći je bio jednostavan i drven, s toplom bojom.",
+          "nudge": "Deze had in de kale mannelijke vorm geen l aan het eind.",
+          "answer": "Topao — warm.",
+          "distractors": ["Toplom.", "Topla.", "Topliti."],
+          "explain_nl": "Topao verliest zijn o zodra er een uitgang bij komt en krijgt de l terug: topla, toplom.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.adj.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Ujutro pijem ___ (hladan) vodu za tim stolom.",
+          "answer": "hladnu",
+          "accepts": ["hladnu"],
+          "explain_nl": "Vodu is vrouwelijk en staat in de accusatief, dus hladnu.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.adj.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Beschrijf je kamer in drie zinnen, met minstens drie bijvoeglijke naamwoorden.",
+          "model_answer": "Moja soba je mala. Imam veliki prozor i staru stolicu. Volim toplu boju na zidu.",
+          "rubric_nl": [
+            "Elk bijvoeglijk naamwoord past bij het geslacht van het woord erachter.",
+            "Bij een lijdend voorwerp buigt het bijvoeglijk naamwoord mee.",
+            "De stam-a van dobar, gladan of hladan staat er niet als er een uitgang bij komt."
+          ],
+          "explain_nl": "Zodra dit automatisch gaat, klinkt je Kroatisch meteen een stuk minder als losse woorden achter elkaar.",
+          "targets": ["g.mod.adj_agree"],
+          "difficulty": 4
+        }
+      ]
+    }
+  ],
+  "source": "curriculum ADJ-AGREE, gebouwd op les 4"
+}

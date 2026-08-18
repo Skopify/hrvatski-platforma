@@ -1,0 +1,493 @@
+{
+  "code": "NOM-GENDER",
+  "rank": 1,
+  "band": "Beginnen",
+  "title_hr": "Stol, knjiga, pivo",
+  "title_nl": "Welk woord is wat",
+  "cefr": "A1",
+  "blurb_nl": "Elk Kroatisch woord heeft een geslacht, en meestal zie je het aan de laatste letter. Dat klinkt als een detail, maar het is de eerste vraag die je bij elk nieuw woord moet beantwoorden — want alles wat erbij hoort past zich eraan aan.",
+  "prerequisites": [],
+  "can_do_nl": [
+    "Ik kan aan de laatste letter zien of een woord mannelijk, vrouwelijk of onzijdig is.",
+    "Ik ken de handvol woorden op -a die tóch mannelijk zijn: tata, kolega.",
+    "Ik weet dat er vrouwelijke woorden op een medeklinker bestaan: noć, stvar, ljubav.",
+    "Ik weet waarom het geslacht ertoe doet: bijvoeglijk naamwoord, bezit en verleden tijd passen zich aan.",
+    "Ik weet dat het Kroatische geslacht niets met het Nederlandse de of het te maken heeft."
+  ],
+  "grammar": {
+    "id": "g.mod.rod",
+    "code": "NOM-GENDER",
+    "title_nl": "Geslacht en de woordenboekvorm",
+    "cefr": "A1",
+    "explanation_nl": "Eindigt een woord op **-a**, dan is het meestal vrouwelijk. Eindigt het op een **medeklinker**, dan is het meestal mannelijk. Eindigt het op **-o** of **-e**, dan is het onzijdig.",
+    "contrast_nl": "Het Nederlands heeft ook geslachten, maar je hoort ze bijna nergens meer — alleen in de keuze tussen de en het, en die moet je per woord onthouden. In het Kroatisch is het omgekeerd: je zíét het meestal aan het woord, maar je merkt het overal, want alles eromheen past zich aan.",
+    "paradigm": {
+      "caption_nl": "Het geslacht aan de laatste letter",
+      "columns": ["voorbeeld", "geslacht"],
+      "rows": [
+        { "label": "op -a", "cells": ["knjiga — boek", "vrouwelijk"] },
+        { "label": "op een medeklinker", "cells": ["stol — tafel", "mannelijk"] },
+        { "label": "op -o", "cells": ["pivo — bier", "onzijdig"] },
+        { "label": "op -e", "cells": ["more — zee", "onzijdig"] },
+        { "label": "uitzondering", "cells": ["tata — papa", "mannelijk"] },
+        { "label": "uitzondering", "cells": ["noć — nacht", "vrouwelijk"] }
+      ]
+    },
+    "pitfalls_nl": [
+      "Tata, kolega, sudac en een handvol andere eindigen op -a maar zijn mannelijk; het gaat om wie ze aanduiden.",
+      "Er is een groep vrouwelijke woorden op een medeklinker: noć, stvar, riječ, ljubav. Die moet je per woord leren.",
+      "Het Kroatische geslacht heeft niets te maken met de of het in het Nederlands. Knjiga is vrouwelijk, het boek niet.",
+      "Het geslacht bepaalt de vorm van het bijvoeglijk naamwoord, het bezittelijk woordje, het getal en het deelwoord in de verleden tijd.",
+      "Bij een nieuw woord leer je het geslacht meteen mee; later terugzoeken kost meer tijd dan het nu opschrijven."
+    ]
+  },
+  "phases": [
+    {
+      "step": 1,
+      "kind": "noticing",
+      "title_nl": "Kijk eerst",
+      "why_nl": "Zes woorden met een woordje ervoor. Kijk waarom dat woordje telkens anders is.",
+      "exercises": [
+        {
+          "id": "m.rod.001",
+          "type": "reading",
+          "mode": "receptive",
+          "prompt_nl": "Waarom verandert het woordje vooraan?",
+          "given": "dobar stol\nnovi grad\n\ndobra knjiga\nnova kuća\n\ndobro pivo\nnovo more",
+          "body_nl": "een goede tafel\nde nieuwe stad\n\neen goed boek\nhet nieuwe huis\n\neen goed bier\nde nieuwe zee",
+          "targets": []
+        },
+        {
+          "id": "m.rod.002",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Wat valt je op?",
+          "body_nl": "Het Nederlands heeft twee vormen: *goed* en *goede*. Het Kroatisch heeft er drie:\n\n*dobar stol*\n*dobra knjiga*\n*dobro pivo*\n\nEn de vorm hangt af van het woord erachter. *Stol* eindigt op een medeklinker, *knjiga* op een **-a**, *pivo* op een **-o**. Dat zijn de drie geslachten: mannelijk, vrouwelijk, onzijdig.\n\nHet mooie is dat je het meestal gewoon kunt **zien**. In het Nederlands moet je per woord onthouden of het *de* of *het* is; in het Kroatisch staat het antwoord aan het eind van het woord.\n\nEn let op: de twee talen hebben er niets mee te maken. *Knjiga* is vrouwelijk, terwijl wij «het boek» zeggen. Kijk dus nooit naar het Nederlands — kijk naar de laatste letter.",
+          "targets": ["g.mod.rod", "v.03.stol", "v.01.knjiga", "v.06.pivo"]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "kind": "rule",
+      "title_nl": "De regel",
+      "why_nl": "Eén blik op de laatste letter, en twee groepjes uitzonderingen die je moet kennen.",
+      "exercises": [
+        {
+          "id": "m.rod.010",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "De laatste letter beslist",
+          "body_nl": "**Op -a → vrouwelijk**\n*knjiga, kuća, sestra, žena, kava, ulica*\n\n**Op een medeklinker → mannelijk**\n*stol, grad, prozor, student, brat, ključ*\n\n**Op -o of -e → onzijdig**\n*pivo, selo, pismo, more, ime, vrijeme*\n\nMeer is het niet. Bij verreweg de meeste woorden die je tegenkomt, klopt dit gewoon.\n\nWaarom het ertoe doet: alles wat bij het woord hoort past zich aan.\n\n*dobar stol* — *dobra knjiga* — *dobro pivo*\n*moj stol* — *moja knjiga* — *moje pivo*\n*jedan stol* — *jedna knjiga* — *jedno pivo*\n\nEn zelfs de verleden tijd: *bio sam* zegt een man, *bila sam* zegt een vrouw.\n\nDaarom is het geslacht niet iets wat je later een keer opzoekt. Het is het eerste wat je bij een nieuw woord noteert.",
+          "table": {
+            "caption_nl": "Het geslacht aan de laatste letter",
+            "columns": ["voorbeeld", "geslacht", "erbij"],
+            "rows": [
+              { "label": "op -a", "cells": ["knjiga", "vrouwelijk", "dobra, moja, jedna"] },
+              { "label": "op een medeklinker", "cells": ["stol", "mannelijk", "dobar, moj, jedan"] },
+              { "label": "op -o", "cells": ["pivo", "onzijdig", "dobro, moje, jedno"] },
+              { "label": "op -e", "cells": ["more", "onzijdig", "dobro, moje, jedno"] }
+            ]
+          },
+          "targets": ["g.mod.rod", "v.01.knjiga", "v.03.stol", "v.06.pivo", "v.01.more"]
+        },
+        {
+          "id": "m.rod.011",
+          "type": "teaching_moment",
+          "mode": "receptive",
+          "prompt_nl": "Twee groepjes die je apart moet leren",
+          "body_nl": "**Eerste groepje: op -a, maar mannelijk.**\nEen paar woorden voor mensen eindigen op -a en zijn tóch mannelijk, omdat ze een man aanduiden:\n\n*tata* — papa\n*kolega* — collega\n*sudac* is gewoon mannelijk, maar *deda* en *vojvoda* horen bij dit groepje.\n\nJe ziet het aan wat eromheen staat: *moj tata*, *dobar kolega* — mannelijke vormen bij een woord op -a.\n\n**Tweede groepje: op een medeklinker, maar vrouwelijk.**\nDit is de groep die je echt uit je hoofd moet leren, want je kunt het er niet aan zien:\n\n*noć* — nacht\n*stvar* — ding, zaak\n*riječ* — woord\n*ljubav* — liefde\n\nDeze woorden hebben ook hun eigen uitgangen: *pet noći*, *pet stvari* — met een **-i** waar andere woorden een -a krijgen.\n\nHet zijn er niet veel, maar het zijn wel woorden die je dagelijks gebruikt. Noteer bij deze vier het geslacht erbij, dan heb je er verder geen last van.",
+          "table": {
+            "caption_nl": "De twee groepjes uitzonderingen",
+            "columns": ["woord", "geslacht", "hoe je het merkt"],
+            "rows": [
+              { "label": "op -a, mannelijk", "cells": ["tata", "mannelijk", "moj tata, dobar tata"] },
+              { "label": "op -a, mannelijk", "cells": ["kolega", "mannelijk", "moj kolega"] },
+              { "label": "medeklinker, vrouwelijk", "cells": ["noć", "vrouwelijk", "duga noć, pet noći"] },
+              { "label": "medeklinker, vrouwelijk", "cells": ["stvar", "vrouwelijk", "važna stvar"] },
+              { "label": "medeklinker, vrouwelijk", "cells": ["ljubav", "vrouwelijk", "velika ljubav"] }
+            ]
+          },
+          "targets": ["g.mod.rod", "v.01.tata", "v.03.kolega", "v.18.noc", "v.18.stvar", "v.18.ljubav"]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "kind": "interpretation",
+      "title_nl": "Welk geslacht is dit?",
+      "why_nl": "Nog niets maken. Hier oefen je de blik die je bij elk nieuw woord nodig hebt.",
+      "exercises": [
+        {
+          "id": "m.rod.020",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft dit woord?",
+          "given": "prozor",
+          "nudge": "Kijk alleen naar de laatste letter.",
+          "answer": "Mannelijk — het eindigt op een medeklinker.",
+          "distractors": ["Vrouwelijk.", "Onzijdig.", "Dat kun je hier niet zien."],
+          "explain_nl": "Een medeklinker aan het eind betekent bijna altijd mannelijk.",
+          "targets": ["g.mod.rod"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.rod.021",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft vrijeme?",
+          "given": "Vrijeme je lijepo.",
+          "nudge": "Waar eindigt het woord op, en welke vorm heeft lijep gekregen?",
+          "answer": "Onzijdig — het eindigt op -e, en lijepo bevestigt dat.",
+          "distractors": ["Mannelijk.", "Vrouwelijk.", "Dat wisselt per zin."],
+          "explain_nl": "Als je twijfelt over het geslacht, verraadt het bijvoeglijk naamwoord het: lijepo hoort bij onzijdig.",
+          "targets": ["g.mod.rod", "v.12.vrijeme"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.rod.022",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Waarom staat er moj en niet moja?",
+          "given": "Ovo je moj tata.",
+          "nudge": "Tata eindigt op -a. Toch staat er een mannelijke vorm voor. Wat zegt dat over het woord?",
+          "answer": "Omdat tata mannelijk is, ook al eindigt het op -a.",
+          "distractors": [
+            "Omdat moj altijd zo is.",
+            "Omdat het over de spreker gaat.",
+            "Dat is een fout; het moet moja zijn."
+          ],
+          "explain_nl": "Een handvol woorden voor mannen eindigt op -a. Het woordje ervoor verraadt het meteen.",
+          "targets": ["g.mod.rod", "v.01.tata"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.023",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Welk woord is vrouwelijk?",
+          "given": "A: grad\nB: noć\nC: more",
+          "nudge": "Twee van de drie kun je aan de laatste letter zien. De derde is er één om te leren.",
+          "answer": "B — noć is vrouwelijk, ook al eindigt het op een medeklinker.",
+          "distractors": ["A — grad.", "C — more.", "Geen van drie."],
+          "explain_nl": "Grad is mannelijk en more onzijdig, allebei volgens de regel. Noć hoort bij het groepje dat je uit je hoofd leert.",
+          "targets": ["g.mod.rod", "v.18.noc"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.024",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Wie zegt deze zin?",
+          "given": "Bila sam u Zagrebu.",
+          "nudge": "Het deelwoord past zich aan aan wie het zegt.",
+          "answer": "Een vrouw.",
+          "distractors": ["Een man.", "Meerdere mensen.", "Dat kun je niet zien."],
+          "explain_nl": "Bio sam zegt een man, bila sam een vrouw. Het geslacht is in het Kroatisch dus ook hoorbaar in de verleden tijd.",
+          "targets": ["g.mod.rod", "g.mod.perfekt"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.rod.025",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "Helpt het Nederlands je hier?",
+          "given": "knjiga — het boek",
+          "nudge": "Wat zegt het Nederlandse lidwoord over het Kroatische geslacht?",
+          "answer": "Nee — knjiga is vrouwelijk terwijl het Nederlands «het boek» zegt.",
+          "distractors": [
+            "Ja, het is allebei onzijdig.",
+            "Ja, «het» wijst altijd op onzijdig.",
+            "Alleen bij dingen, niet bij mensen."
+          ],
+          "explain_nl": "De twee systemen staan los van elkaar. Kijk naar de laatste letter van het Kroatische woord, nooit naar het Nederlandse lidwoord.",
+          "targets": ["g.mod.rod", "v.01.knjiga"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "kind": "blocked",
+      "title_nl": "Nu zelf maken",
+      "why_nl": "Tien keer dezelfde vraag: welk geslacht, en welke vorm hoort daarbij?",
+      "exercises": [
+        {
+          "id": "m.rod.030",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: goed.",
+          "given": "Ovo je ___ (dobar) knjiga.",
+          "answer": "dobra",
+          "accepts": ["dobra"],
+          "explain_nl": "Knjiga eindigt op -a, dus vrouwelijk: dobra.",
+          "targets": ["g.mod.rod", "v.01.knjiga", "v.04.dobar"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.rod.031",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: goed.",
+          "given": "Ovo je ___ (dobar) pivo.",
+          "answer": "dobro",
+          "accepts": ["dobro"],
+          "explain_nl": "Pivo eindigt op -o, dus onzijdig: dobro.",
+          "targets": ["g.mod.rod", "v.06.pivo", "v.04.dobar"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.rod.032",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: mijn.",
+          "given": "Ovo je ___ (moj) prijatelj.",
+          "answer": "moj",
+          "accepts": ["moj"],
+          "explain_nl": "Prijatelj eindigt op een medeklinker, dus mannelijk.",
+          "targets": ["g.mod.rod", "v.01.prijatelj"],
+          "difficulty": 1
+        },
+        {
+          "id": "m.rod.033",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: mijn.",
+          "given": "Ovo je ___ (moj) tata.",
+          "answer": "moj",
+          "accepts": ["moj"],
+          "hint": "Waar eindigt tata op, en wie duidt het aan?",
+          "explain_nl": "Tata eindigt op -a maar is mannelijk, dus moj.",
+          "targets": ["g.mod.rod", "v.01.tata"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.034",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: nieuw.",
+          "given": "To je ___ (nov) ime.",
+          "answer": "novo",
+          "accepts": ["novo"],
+          "explain_nl": "Ime eindigt op -e, dus onzijdig.",
+          "targets": ["g.mod.rod", "v.02.ime", "v.04.nov"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.rod.035",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul in: lang. Let op het geslacht.",
+          "given": "Bila je ___ (dug) noć.",
+          "answer": "duga",
+          "accepts": ["duga"],
+          "hint": "Noć eindigt op een medeklinker, maar hoort bij een bijzonder groepje.",
+          "explain_nl": "Noć is vrouwelijk, dus duga — en daarom staat er ook bila en niet bio.",
+          "targets": ["g.mod.rod", "v.18.noc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.rod.036",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk geslacht heeft ljubav?",
+          "answer": "Vrouwelijk.",
+          "distractors": ["Mannelijk.", "Onzijdig.", "Dat hangt van de zin af."],
+          "explain_nl": "Ljubav hoort bij het groepje vrouwelijke woorden op een medeklinker, samen met noć, stvar en riječ.",
+          "targets": ["g.mod.rod", "v.18.ljubav"],
+          "difficulty": 3
+        },
+        {
+          "id": "m.rod.037",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal.",
+          "given": "Dit is een nieuw huis.",
+          "answer": "Ovo je nova kuća.",
+          "accepts": ["Ovo je nova kuća.", "Ovo je nova kuća"],
+          "hint": "Laat je niet leiden door het Nederlandse «het huis».",
+          "explain_nl": "Kuća eindigt op -a en is dus vrouwelijk, ook al zeggen wij «het huis».",
+          "targets": ["g.mod.rod", "v.01.kuca", "v.04.nov"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.038",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Ovo je dobar knjiga.",
+          "answer": "Ovo je dobra knjiga.",
+          "accepts": ["Ovo je dobra knjiga.", "Ovo je dobra knjiga"],
+          "explain_nl": "Knjiga is vrouwelijk.",
+          "targets": ["g.mod.rod", "v.01.knjiga"],
+          "difficulty": 2
+        },
+        {
+          "id": "m.rod.039",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+          "given": "Moja tata radi u Splitu.",
+          "answer": "Moj tata radi u Splitu.",
+          "accepts": ["Moj tata radi u Splitu.", "Moj tata radi u Splitu"],
+          "explain_nl": "Tata eindigt op -a maar is mannelijk.",
+          "targets": ["g.mod.rod", "v.01.tata"],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "kind": "interleaved",
+      "title_nl": "Door elkaar",
+      "why_nl": "Nu met verschillende geslachten in één zin, want zo kom je ze tegen.",
+      "exercises": [
+        {
+          "id": "m.rod.050",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul alle drie de vormen in.",
+          "given": "Imam ___ (nov) stol, ___ (nov) knjigu i ___ (nov) pivo.",
+          "answer": "nov novu novo",
+          "accepts": ["nov novu novo"],
+          "hint": "Knjigu staat al in de accusatief.",
+          "explain_nl": "Drie geslachten achter elkaar, en het tweede staat bovendien in de accusatief: novu knjigu.",
+          "targets": ["g.mod.rod", "g.mod.acc_anim", "v.04.nov"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.rod.051",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welke vorm hoort hier?",
+          "given": "___ kolega radi sa mnom.",
+          "answer": "Moj",
+          "distractors": ["Moja", "Moje", "Moju"],
+          "explain_nl": "Kolega eindigt op -a maar duidt een man aan en is dus mannelijk.",
+          "targets": ["g.mod.rod", "v.03.kolega"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.052",
+          "type": "translate_nl_hr",
+          "mode": "productive",
+          "prompt_nl": "Vertaal. Je bent een vrouw.",
+          "given": "Ik was gisteren in de stad.",
+          "answer": "Jučer sam bila u gradu.",
+          "accepts": ["Jučer sam bila u gradu.", "Jučer sam bila u gradu", "Bila sam jučer u gradu.", "Bila sam jučer u gradu"],
+          "explain_nl": "Het deelwoord past zich aan aan de spreker: bila voor een vrouw, bio voor een man.",
+          "targets": ["g.mod.rod", "g.mod.perfekt", "v.05.grad"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.053",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Welk woord hoort niet in het rijtje?",
+          "given": "noć — stvar — ljubav — prozor",
+          "answer": "prozor",
+          "distractors": ["noć", "stvar", "ljubav"],
+          "explain_nl": "De eerste drie zijn vrouwelijke woorden op een medeklinker. Prozor is gewoon mannelijk.",
+          "targets": ["g.mod.rod", "v.18.noc", "v.18.stvar", "v.18.ljubav"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.054",
+          "type": "error_correction",
+          "mode": "productive",
+          "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
+          "given": "Moja tata ima novi auto i dobra pivo.",
+          "answer": "Moj tata ima novi auto i dobro pivo.",
+          "accepts": ["Moj tata ima novi auto i dobro pivo.", "Moj tata ima novi auto i dobro pivo"],
+          "hint": "Eén woord op -a is mannelijk, en één woord op -o is onzijdig.",
+          "explain_nl": "Tata is mannelijk, dus moj. Pivo is onzijdig, dus dobro.",
+          "targets": ["g.mod.rod", "v.01.tata", "v.06.pivo"],
+          "difficulty": 5
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "kind": "context",
+      "title_nl": "In een verhaaltje",
+      "why_nl": "Let bij het lezen op elk bijvoeglijk naamwoord: welk geslacht verraadt het van het woord erachter?",
+      "text_hr": "Moja soba je mala, ali svijetla. Kroz veliki prozor vidim stari grad. Na stolu je nova knjiga i hladno pivo. Moj tata kaže da je to loša kombinacija, ali on ne čita. Navečer je soba najljepša: duga zagrebačka noć, tiha ulica, topla svjetlost. Moja sestra ima veću sobu, ali njezin prozor gleda na dvorište. Kaže da je to ista stvar. Nije.",
+      "translation_nl": "Mijn kamer is klein, maar licht. Door het grote raam zie ik de oude stad. Op tafel liggen een nieuw boek en een koud bier. Mijn vader zegt dat dat een slechte combinatie is, maar hij leest niet. 's Avonds is de kamer op zijn mooist: een lange Zagrebse nacht, een stille straat, warm licht. Mijn zus heeft een grotere kamer, maar haar raam kijkt uit op de binnenplaats. Ze zegt dat dat hetzelfde is. Dat is het niet.",
+      "exercises": [
+        {
+          "id": "m.rod.060",
+          "type": "choice",
+          "mode": "receptive",
+          "prompt_nl": "Wat zie je door het raam?",
+          "answer": "De oude stad.",
+          "distractors": ["De binnenplaats.", "De zee.", "Een stille straat."],
+          "explain_nl": "«Kroz veliki prozor vidim stari grad.»",
+          "targets": [],
+          "difficulty": 1
+        },
+        {
+          "id": "m.rod.061",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «nova knjiga» en «hladno pivo». Wat vertelt dat je over die twee woorden?",
+          "given": "Na stolu je nova knjiga i hladno pivo.",
+          "nudge": "De uitgang van het bijvoeglijk naamwoord verraadt het geslacht van het woord erachter.",
+          "answer": "Knjiga is vrouwelijk en pivo is onzijdig.",
+          "distractors": [
+            "Allebei vrouwelijk.",
+            "Allebei onzijdig.",
+            "Knjiga is onzijdig en pivo vrouwelijk."
+          ],
+          "explain_nl": "Als je het geslacht van een nieuw woord niet weet, kijk dan naar het bijvoeglijk naamwoord ernaast. Dat werkt altijd.",
+          "targets": ["g.mod.rod", "v.01.knjiga", "v.06.pivo"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.062",
+          "type": "interpret",
+          "mode": "receptive",
+          "prompt_nl": "In de tekst staat «duga zagrebačka noć». Wat leer je daaruit over noć?",
+          "given": "Navečer je soba najljepša: duga zagrebačka noć, tiha ulica, topla svjetlost.",
+          "nudge": "Noć eindigt op een medeklinker. Welke vorm hebben de woorden ervoor?",
+          "answer": "Dat noć vrouwelijk is, hoewel het op een medeklinker eindigt.",
+          "distractors": [
+            "Dat noć mannelijk is.",
+            "Dat noć onzijdig is.",
+            "Dat het over Zagreb gaat en dus vrouwelijk is."
+          ],
+          "explain_nl": "Duga en zagrebačka zijn vrouwelijke vormen. Dit is precies het groepje uitzonderingen uit stap 2.",
+          "targets": ["g.mod.rod", "v.18.noc"],
+          "difficulty": 5
+        },
+        {
+          "id": "m.rod.063",
+          "type": "cloze",
+          "mode": "productive",
+          "prompt_nl": "Vul aan zoals in de tekst.",
+          "given": "Kroz ___ (velik) prozor vidim ___ (star) grad.",
+          "answer": "veliki stari",
+          "accepts": ["veliki stari"],
+          "explain_nl": "Beide woorden zijn mannelijk, dus beide bijvoeglijke naamwoorden staan in de mannelijke vorm.",
+          "targets": ["g.mod.rod", "v.04.velik", "v.04.star"],
+          "difficulty": 4
+        },
+        {
+          "id": "m.rod.064",
+          "type": "free_production",
+          "mode": "productive",
+          "prompt_nl": "Schrijf drie zinnen met «dit is een…»: één met een mannelijk, één met een vrouwelijk en één met een onzijdig woord.",
+          "model_answer": "Ovo je dobar stol. Ovo je dobra knjiga. Ovo je dobro pivo.",
+          "rubric_nl": [
+            "Bij een woord op een medeklinker staat de mannelijke vorm.",
+            "Bij een woord op -a staat de vrouwelijke vorm op -a.",
+            "Bij een woord op -o of -e staat de onzijdige vorm op -o."
+          ],
+          "explain_nl": "Wie bij elk nieuw woord meteen het geslacht noteert, hoeft de rest van de cursus nooit meer terug te bladeren.",
+          "targets": ["g.mod.rod"],
+          "difficulty": 3
+        }
+      ]
+    }
+  ],
+  "source": "curriculum NOM-GENDER, gebouwd op les 1 en 4"
+}
