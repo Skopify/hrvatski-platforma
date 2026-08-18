@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Page, PageHeader } from "@/components/ui";
 import { loadModule, moduleExercises, moduleStepCount, type ModulePhase } from "@/lib/modules";
 import { moduleStatuses, STATUS_TEXT } from "@/lib/placement";
-import { stepsDoneInModule } from "@/lib/stats";
+import { moduleProgressMap, stepsDoneInModule } from "@/lib/stats";
 import { RestartModule } from "@/components/RestartModule";
 
 export const dynamic = "force-dynamic";
@@ -29,13 +29,21 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
   // die telt als stap mee in de sessie.
   const stappen = moduleStepCount(module);
   const gedaan = stepsDoneInModule(module.code).size;
+  const afgerondOp = moduleProgressMap().get(module.code)?.afgerondOp ?? null;
   const resterend = Math.max(0, stappen - gedaan);
 
   return (
     <Page>
       <PageHeader title={module.title_nl} intro={module.blurb_nl} />
 
-      <p className="hr-text mb-6 text-[20px] font-semibold text-ink">{module.title_hr}</p>
+      <div className="mb-6 flex flex-wrap items-baseline gap-3">
+        <p className="hr-text text-[20px] font-semibold text-ink">{module.title_hr}</p>
+        {afgerondOp ? (
+          <span className="pill bg-good-wash text-good">
+            afgerond op {new Date(afgerondOp).toLocaleDateString("nl-NL")}
+          </span>
+        ) : null}
+      </div>
 
       {/* De uitslag met zijn teller erbij, en altijd de weg terug. Wie tijdens de
           module merkt dat "beheerst" niet klopt, moet dat kunnen rechtzetten
@@ -103,7 +111,11 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
           href={`/grammatica/${module.code.toLowerCase()}/sessie`}
           className="btn btn-primary inline-flex px-7 py-3 text-[14.5px]"
         >
-          {gedaan ? `Hervatten — nog ${resterend} van ${stappen}` : "Module starten"}
+          {gedaan
+            ? `Hervatten — nog ${resterend} van ${stappen}`
+            : afgerondOp
+              ? "Nog een keer doorlopen"
+              : "Module starten"}
         </Link>
         {gedaan ? <RestartModule code={module.code} /> : null}
       </div>

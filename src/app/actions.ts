@@ -11,6 +11,7 @@ import {
 } from "@/lib/content";
 import { recordStoryEncounters } from "@/lib/coverage";
 import { choicesFor, classifyError, hintFor, recordError } from "@/lib/errors";
+import { checkFree } from "@/lib/freecheck";
 import { highestActiveLesson } from "@/lib/stats";
 import { db } from "@/lib/db";
 import type { DrillFeedback, DrillKind, DrillQuestion } from "@/lib/drills";
@@ -79,6 +80,12 @@ export interface Feedback {
   options?: string[];
   /** Alleen bij vrije productie: de leerder beoordeelt zichzelf. */
   selfAssess?: { model_answer?: string; rubric_nl?: string[] };
+  /**
+   * Wat het programma zelf heeft kunnen vaststellen aan een geschreven antwoord.
+   * Staat er ook `selfAssess` bij, dan is dit een hulpmiddel; staat het er niet
+   * bij, dan is de opdracht hiermee nagekeken. Zie src/lib/freecheck.ts.
+   */
+  report?: import("@/lib/freecheck").FreeReport;
 }
 
 export type AnswerPayload =
@@ -194,6 +201,16 @@ export async function submitAnswer(
   const { exercise, lesson } = found;
 
   if (exercise.type === "free_production") {
+    const geschreven = payload.kind === "text" ? payload.value : "";
+    const report = checkFree(exercise, geschreven);
+
+    // Is élk criterium mechanisch, dan hoeft er niets meer beoordeeld te worden:
+    // het programma weet het antwoord al. Anders blijft het oordeel bij de
+    // leerder, en zijn de controles hooguit een hulpmiddel.
+    if (report.volledig) {
+      return await selfAssess(exerciseId, report.geslaagd, geschreven, durationMs, report);
+    }
+
     return {
       correct: true,
       nearMiss: false,
@@ -204,6 +221,7 @@ export async function submitAnswer(
       totalXp: db.select({ xp: profile.xp }).from(profile).where(eq(profile.id, 1)).get()?.xp ?? 0,
       stage: "selfAssess",
       selfAssess: { model_answer: exercise.model_answer, rubric_nl: exercise.rubric_nl },
+      report,
     };
   }
 
@@ -347,6 +365,8 @@ export async function selfAssess(
   ok: boolean,
   answer: string,
   durationMs: number,
+  /** Meegegeven wanneer het programma zelf heeft nagekeken. */
+  report?: import("@/lib/freecheck").FreeReport,
 ): Promise<Feedback> {
   const found = findExercise(exerciseId);
   if (!found) throw new Error(`Onbekende oefening: ${exerciseId}`);
@@ -358,7 +378,13 @@ export async function selfAssess(
     verdict: ok ? "exact" : "wrong",
     expected: exercise.model_answer ?? "",
     diffPositions: [],
-    message: ok ? "Genoteerd." : "Genoteerd — dit item komt eerder terug.",
+    message: report
+      ? ok
+        ? "Nagekeken — alles waar het om ging staat erin."
+        : "Nagekeken — er ontbreekt nog iets."
+      : ok
+        ? "Genoteerd."
+        : "Genoteerd — dit item komt eerder terug.",
   };
 
   const xp = xpFor(exercise, result);
@@ -384,8 +410,16 @@ export async function selfAssess(
   const totalXp = addXp(xp);
 
   // Zelfbeoordeling is altijd het eindpunt: er is niets meer om naartoe te
-  // escaleren als de leerder zelf het oordeel geeft.
-  return { ...result, explain_nl: exercise.explain_nl, xp, totalXp, stage: "correct" };
+  // escaleren als de leerder zelf het oordeel geeft. Heeft het programma zelf
+  // nagekeken, dan gaat de uitslag mee terug zodat je ziet waaróp.
+  return {
+    ...result,
+    explain_nl: exercise.explain_nl,
+    xp,
+    totalXp,
+    stage: "correct",
+    report,
+  };
 }
 
 /**

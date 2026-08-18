@@ -6,7 +6,10 @@
   "title_nl": "Iemand aanspreken",
   "cefr": "A1/A2",
   "blurb_nl": "Het Kroatisch heeft een aparte vorm voor als je iemand roept of aanspreekt. Het Nederlands niet — wij zeggen gewoon de naam. Je hebt hem nodig zodra je een mail begint of iemand aanspreekt, en je moet hem herkennen om te snappen waarom een naam ineens anders gespeld staat.",
-  "prerequisites": ["NOM-GENDER", "PLURAL-LONG"],
+  "prerequisites": [
+    "NOM-GENDER",
+    "PLURAL-LONG"
+  ],
   "can_do_nl": [
     "Ik kan iemand aanspreken: Ivane! Gospodine! Mamo!",
     "Ik weet wanneer het -e wordt en wanneer -u.",
@@ -23,15 +26,60 @@
     "contrast_nl": "Het Nederlands kent dit niet: wij zeggen «Jan!» en «mevrouw!» en dat is het. Het Kroatisch verandert het woord, en daarom herken je in een tekst soms een naam of aanspreektitel niet — je zoekt naar iets wat er net anders uitziet.",
     "paradigm": {
       "caption_nl": "De vocatief",
-      "columns": ["aanspreken", "regel"],
+      "columns": [
+        "aanspreken",
+        "regel"
+      ],
       "rows": [
-        { "label": "Ivan", "cells": ["Ivane", "harde medeklinker → -e"] },
-        { "label": "doktor", "cells": ["doktore", "harde medeklinker → -e"] },
-        { "label": "prijatelj", "cells": ["prijatelju", "zachte medeklinker → -u"] },
-        { "label": "čovjek", "cells": ["čovječe", "k wordt č vóór -e"] },
-        { "label": "mama", "cells": ["mamo", "vrouwelijk op -a → -o"] },
-        { "label": "prijateljica", "cells": ["prijateljice", "op -ica → -e"] },
-        { "label": "dijete", "cells": ["dijete", "onzijdig blijft gelijk"] }
+        {
+          "label": "Ivan",
+          "cells": [
+            "Ivane",
+            "harde medeklinker → -e"
+          ]
+        },
+        {
+          "label": "doktor",
+          "cells": [
+            "doktore",
+            "harde medeklinker → -e"
+          ]
+        },
+        {
+          "label": "prijatelj",
+          "cells": [
+            "prijatelju",
+            "zachte medeklinker → -u"
+          ]
+        },
+        {
+          "label": "čovjek",
+          "cells": [
+            "čovječe",
+            "k wordt č vóór -e"
+          ]
+        },
+        {
+          "label": "mama",
+          "cells": [
+            "mamo",
+            "vrouwelijk op -a → -o"
+          ]
+        },
+        {
+          "label": "prijateljica",
+          "cells": [
+            "prijateljice",
+            "op -ica → -e"
+          ]
+        },
+        {
+          "label": "dijete",
+          "cells": [
+            "dijete",
+            "onzijdig blijft gelijk"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -64,7 +112,13 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "In het Nederlands staat links en rechts hetzelfde woord: *Ivan* blijft *Ivan*, *mama* blijft *mama*.\n\nIn het Kroatisch verandert het elke keer:\n*Ivan* wordt *Ivane*\n*doktor* wordt *doktore*\n*prijatelj* wordt *prijatelju* — met een **u**, niet een e\n*mama* wordt *mamo*\n*prijateljica* wordt *prijateljice* — met een **e**, niet een o\n\nDit is de **vocatief**: de vorm die je gebruikt als je iemand roept of aanspreekt. Het Nederlands heeft daar niets voor, en dat is precies waarom hij je bij het lezen in de war brengt — je ziet een woord dat je kent, maar net anders.",
-          "targets": ["g.mod.vokativ", "g.20.vokativ", "v.20.doktor", "v.01.prijatelj", "v.01.mama"]
+          "targets": [
+            "g.mod.vokativ",
+            "g.20.vokativ",
+            "v.20.doktor",
+            "v.01.prijatelj",
+            "v.01.mama"
+          ]
         }
       ]
     },
@@ -82,18 +136,69 @@
           "body_nl": "**Mannelijk** krijgt **-e** na een harde medeklinker:\n*Ivan → Ivane*, *doktor → doktore*, *profesor → profesore*, *gospodin → gospodine*.\n\nEindigt het woord op een **zachte** medeklinker — *c, č, ć, dž, đ, j, lj, nj, š, ž* — dan wordt het **-u**:\n*prijatelj → prijatelju*, *muž → mužu*, *mladić → mladiću*.\n\n**Vrouwelijk op -a** krijgt **-o**:\n*mama → mamo*, *sestra → sestro*, *gospođa → gospođo*, *žena → ženo*.\n\nMaar woorden op **-ica** krijgen **-e**:\n*prijateljica → prijateljice*, *kolegica → kolegice*, *profesorica → profesorice*, *gospođica → gospođice*.\n\n**Onzijdig** verandert niet: *dijete* blijft *dijete*.\n\nEn mannelijke woorden die al op *-o* of *-e* eindigen ook niet: *Marko* blijft *Marko*.",
           "table": {
             "caption_nl": "Welke uitgang bij welk woord",
-            "columns": ["aanspreken", "regel"],
+            "columns": [
+              "aanspreken",
+              "regel"
+            ],
             "rows": [
-              { "label": "Ivan", "cells": ["Ivane", "harde medeklinker → -e"] },
-              { "label": "gospodin", "cells": ["gospodine", "harde medeklinker → -e"] },
-              { "label": "prijatelj", "cells": ["prijatelju", "zachte medeklinker → -u"] },
-              { "label": "mama", "cells": ["mamo", "vrouwelijk op -a → -o"] },
-              { "label": "gospođa", "cells": ["gospođo", "vrouwelijk op -a → -o"] },
-              { "label": "kolegica", "cells": ["kolegice", "op -ica → -e"] },
-              { "label": "Marko", "cells": ["Marko", "eindigt al op -o"] }
+              {
+                "label": "Ivan",
+                "cells": [
+                  "Ivane",
+                  "harde medeklinker → -e"
+                ]
+              },
+              {
+                "label": "gospodin",
+                "cells": [
+                  "gospodine",
+                  "harde medeklinker → -e"
+                ]
+              },
+              {
+                "label": "prijatelj",
+                "cells": [
+                  "prijatelju",
+                  "zachte medeklinker → -u"
+                ]
+              },
+              {
+                "label": "mama",
+                "cells": [
+                  "mamo",
+                  "vrouwelijk op -a → -o"
+                ]
+              },
+              {
+                "label": "gospođa",
+                "cells": [
+                  "gospođo",
+                  "vrouwelijk op -a → -o"
+                ]
+              },
+              {
+                "label": "kolegica",
+                "cells": [
+                  "kolegice",
+                  "op -ica → -e"
+                ]
+              },
+              {
+                "label": "Marko",
+                "cells": [
+                  "Marko",
+                  "eindigt al op -o"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.vokativ", "g.20.vokativ", "v.20.gospodin", "v.20.gospoda", "v.03.kolega"]
+          "targets": [
+            "g.mod.vokativ",
+            "g.20.vokativ",
+            "v.20.gospodin",
+            "v.20.gospoda",
+            "v.03.kolega"
+          ]
         },
         {
           "id": "m.voc.011",
@@ -103,16 +208,54 @@
           "body_nl": "Staat er een **k**, **g** of **h** vlak vóór de -e, dan verandert die mee:\n\n*k* wordt **č**: *čovjek → čovječe*, *junak → junače*, *vojnik → vojniče*\n*g* wordt **ž**: *Bog → Bože*\n*h* wordt **š**: *duh → duše*\n\nJe kent dit patroon al van het meervoud, waar diezelfde k een **c** werd: *đak → đaci*. Dezelfde oorzaak, een andere klank erna — dus een andere uitkomst.\n\n**Waar je dit dagelijks tegenkomt:**\n\nAan het begin van een brief of mail:\n*Dragi prijatelju,* — Beste vriend,\n*Draga mama,* — Lieve mama,\n*Poštovani gospodine,* — Geachte heer,\n*Poštovana gospođo,* — Geachte mevrouw,\n\nEn als iemand je roept of je iets vraagt:\n*Oprostite, gospodine!* — Pardon, meneer!\n*Hvala, doktore!* — Dank u, dokter!\n\nDe vocatief staat altijd los van de rest van de zin, meestal met een komma erachter. Hij hoort nergens bij en krijgt dus ook nooit een voorzetsel.",
           "table": {
             "caption_nl": "Klankverandering vóór de -e",
-            "columns": ["aanspreken", "wat er gebeurt"],
+            "columns": [
+              "aanspreken",
+              "wat er gebeurt"
+            ],
             "rows": [
-              { "label": "čovjek", "cells": ["čovječe", "k wordt č"] },
-              { "label": "junak", "cells": ["junače", "k wordt č"] },
-              { "label": "Bog", "cells": ["Bože", "g wordt ž"] },
-              { "label": "duh", "cells": ["duše", "h wordt š"] },
-              { "label": "đak (meervoud)", "cells": ["đaci", "vóór een i wordt k juist c"] }
+              {
+                "label": "čovjek",
+                "cells": [
+                  "čovječe",
+                  "k wordt č"
+                ]
+              },
+              {
+                "label": "junak",
+                "cells": [
+                  "junače",
+                  "k wordt č"
+                ]
+              },
+              {
+                "label": "Bog",
+                "cells": [
+                  "Bože",
+                  "g wordt ž"
+                ]
+              },
+              {
+                "label": "duh",
+                "cells": [
+                  "duše",
+                  "h wordt š"
+                ]
+              },
+              {
+                "label": "đak (meervoud)",
+                "cells": [
+                  "đaci",
+                  "vóór een i wordt k juist c"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.vokativ", "g.20.vokativ", "v.03.covjek", "v.00.dak"]
+          "targets": [
+            "g.mod.vokativ",
+            "g.20.vokativ",
+            "v.03.covjek",
+            "v.00.dak"
+          ]
         }
       ]
     },
@@ -136,7 +279,10 @@
             "Niemand; het is een uitroep."
           ],
           "explain_nl": "De -e is geen deel van het woord maar de aanspreekvorm. In het woordenboek staat doktor.",
-          "targets": ["g.mod.vokativ", "v.20.doktor"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.doktor"
+          ],
           "difficulty": 2
         },
         {
@@ -153,7 +299,10 @@
             "Omdat dragi ervoor staat."
           ],
           "explain_nl": "Dezelfde groep zachte medeklinkers die je bij de instrumentalis en het meervoud tegenkwam.",
-          "targets": ["g.mod.vokativ", "v.01.prijatelj"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.prijatelj"
+          ],
           "difficulty": 3
         },
         {
@@ -170,7 +319,10 @@
             "Van čovječanstvo."
           ],
           "explain_nl": "Wie deze verandering niet kent, herkent zijn eigen woordje čovjek niet terug.",
-          "targets": ["g.mod.vokativ", "v.03.covjek"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.03.covjek"
+          ],
           "difficulty": 4
         },
         {
@@ -187,7 +339,10 @@
             "Geen van beide."
           ],
           "explain_nl": "Mama wordt mamo, maar prijateljica wordt prijateljice. De -ica is de uitzondering, en die groep is groot: alle vrouwelijke beroepen en veel vrouwelijke vormen van mannelijke woorden.",
-          "targets": ["g.mod.vokativ", "v.01.prijateljica"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.prijateljica"
+          ],
           "difficulty": 4
         },
         {
@@ -204,7 +359,10 @@
             "Geachte heer,"
           ],
           "explain_nl": "Dit is de standaardaanhef van een formele mail. Poštovani gospodine is de mannelijke tegenhanger.",
-          "targets": ["g.mod.vokativ", "v.20.gospoda"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.gospoda"
+          ],
           "difficulty": 3
         },
         {
@@ -221,7 +379,9 @@
             "Dat is een fout; het moet Marke zijn."
           ],
           "explain_nl": "De uitgang komt op de plaats van een medeklinker. Staat daar al een klinker, dan is er niets te vervangen.",
-          "targets": ["g.mod.vokativ"],
+          "targets": [
+            "g.mod.vokativ"
+          ],
           "difficulty": 3
         }
       ]
@@ -239,9 +399,14 @@
           "prompt_nl": "Spreek de dokter aan.",
           "given": "Hvala, ___ (doktor)!",
           "answer": "doktore",
-          "accepts": ["doktore"],
+          "accepts": [
+            "doktore"
+          ],
           "explain_nl": "Harde medeklinker, dus -e.",
-          "targets": ["g.mod.vokativ", "v.20.doktor"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.doktor"
+          ],
           "difficulty": 2
         },
         {
@@ -251,9 +416,14 @@
           "prompt_nl": "Spreek meneer aan.",
           "given": "Oprostite, ___ (gospodin)!",
           "answer": "gospodine",
-          "accepts": ["gospodine"],
+          "accepts": [
+            "gospodine"
+          ],
           "explain_nl": "Harde medeklinker, dus -e.",
-          "targets": ["g.mod.vokativ", "v.20.gospodin"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.gospodin"
+          ],
           "difficulty": 2
         },
         {
@@ -263,10 +433,15 @@
           "prompt_nl": "Begin de brief.",
           "given": "Dragi ___ (prijatelj),",
           "answer": "prijatelju",
-          "accepts": ["prijatelju"],
+          "accepts": [
+            "prijatelju"
+          ],
           "hint": "Lj is een zachte medeklinker.",
           "explain_nl": "Zachte medeklinker, dus -u.",
-          "targets": ["g.mod.vokativ", "v.01.prijatelj"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.prijatelj"
+          ],
           "difficulty": 3
         },
         {
@@ -276,9 +451,14 @@
           "prompt_nl": "Spreek mevrouw aan.",
           "given": "Poštovana ___ (gospođa),",
           "answer": "gospođo",
-          "accepts": ["gospođo"],
+          "accepts": [
+            "gospođo"
+          ],
           "explain_nl": "Vrouwelijk op -a, dus -o.",
-          "targets": ["g.mod.vokativ", "v.20.gospoda"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.gospoda"
+          ],
           "difficulty": 2
         },
         {
@@ -288,10 +468,15 @@
           "prompt_nl": "Spreek je vriendin aan.",
           "given": "Draga ___ (prijateljica),",
           "answer": "prijateljice",
-          "accepts": ["prijateljice"],
+          "accepts": [
+            "prijateljice"
+          ],
           "hint": "Woorden op -ica gaan hun eigen weg.",
           "explain_nl": "Op -ica, dus -e en niet -o.",
-          "targets": ["g.mod.vokativ", "v.01.prijateljica"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.prijateljica"
+          ],
           "difficulty": 4
         },
         {
@@ -301,9 +486,14 @@
           "prompt_nl": "Spreek je docente aan.",
           "given": "Dobar dan, ___ (profesorica)!",
           "answer": "profesorice",
-          "accepts": ["profesorice"],
+          "accepts": [
+            "profesorice"
+          ],
           "explain_nl": "Ook op -ica, dus -e.",
-          "targets": ["g.mod.vokativ", "v.01.profesorica"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.profesorica"
+          ],
           "difficulty": 3
         },
         {
@@ -313,9 +503,15 @@
           "prompt_nl": "Roep je moeder.",
           "given": "___ (mama), gdje si?",
           "answer": "Mamo",
-          "accepts": ["Mamo", "mamo"],
+          "accepts": [
+            "Mamo",
+            "mamo"
+          ],
           "explain_nl": "Vrouwelijk op -a, dus -o.",
-          "targets": ["g.mod.vokativ", "v.01.mama"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.mama"
+          ],
           "difficulty": 2
         },
         {
@@ -325,10 +521,16 @@
           "prompt_nl": "Spreek de mens aan. Let op de klankverandering.",
           "given": "___ (čovjek), što radiš?",
           "answer": "Čovječe",
-          "accepts": ["Čovječe", "čovječe"],
+          "accepts": [
+            "Čovječe",
+            "čovječe"
+          ],
           "hint": "De k verandert vóór de -e.",
           "explain_nl": "K wordt č: čovjek → čovječe.",
-          "targets": ["g.mod.vokativ", "v.03.covjek"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.03.covjek"
+          ],
           "difficulty": 5
         },
         {
@@ -338,9 +540,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf het goed.",
           "given": "Dragi prijatelje,",
           "answer": "Dragi prijatelju,",
-          "accepts": ["Dragi prijatelju,", "Dragi prijatelju"],
+          "accepts": [
+            "Dragi prijatelju,",
+            "Dragi prijatelju"
+          ],
           "explain_nl": "Na een zachte medeklinker komt -u, niet -e.",
-          "targets": ["g.mod.vokativ", "v.01.prijatelj"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.prijatelj"
+          ],
           "difficulty": 3
         },
         {
@@ -350,9 +558,15 @@
           "prompt_nl": "Er staat één fout in. Schrijf het goed.",
           "given": "Draga kolegico,",
           "answer": "Draga kolegice,",
-          "accepts": ["Draga kolegice,", "Draga kolegice"],
+          "accepts": [
+            "Draga kolegice,",
+            "Draga kolegice"
+          ],
           "explain_nl": "Op -ica, dus -e en niet -o.",
-          "targets": ["g.mod.vokativ", "v.03.kolega"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.03.kolega"
+          ],
           "difficulty": 4
         }
       ]
@@ -370,9 +584,16 @@
           "prompt_nl": "Welke vorm hoort hier?",
           "given": "___ radi u bolnici.",
           "answer": "Doktor",
-          "distractors": ["Doktore", "Doktora", "Doktoru"],
+          "distractors": [
+            "Doktore",
+            "Doktora",
+            "Doktoru"
+          ],
           "explain_nl": "Hier spreek je de dokter niet aan maar praat je over hem: dat is de gewone vorm, het onderwerp.",
-          "targets": ["g.mod.vokativ", "v.20.doktor"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.doktor"
+          ],
           "difficulty": 3
         },
         {
@@ -382,9 +603,16 @@
           "prompt_nl": "Welke vorm hoort hier?",
           "given": "Hvala, ___! Pomogli ste mi.",
           "answer": "doktore",
-          "distractors": ["doktor", "doktora", "doktoru"],
+          "distractors": [
+            "doktor",
+            "doktora",
+            "doktoru"
+          ],
           "explain_nl": "Nu spreek je hem wél aan, dus de vocatief. Zelfde woord, andere rol in de zin.",
-          "targets": ["g.mod.vokativ", "v.20.doktor"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.doktor"
+          ],
           "difficulty": 3
         },
         {
@@ -394,10 +622,15 @@
           "prompt_nl": "Vul beide vormen in.",
           "given": "___ (Ivan), gdje je tvoj brat? Vidjela sam ___ (Ivan) jučer.",
           "answer": "Ivane Ivana",
-          "accepts": ["Ivane Ivana"],
+          "accepts": [
+            "Ivane Ivana"
+          ],
           "hint": "De eerste keer roep je hem, de tweede keer praat je over hem.",
           "explain_nl": "Aanspreken is Ivane; als lijdend voorwerp van een levend woord is het Ivana.",
-          "targets": ["g.mod.vokativ", "g.mod.acc_anim"],
+          "targets": [
+            "g.mod.vokativ",
+            "g.mod.acc_anim"
+          ],
           "difficulty": 5
         },
         {
@@ -407,9 +640,15 @@
           "prompt_nl": "Vertaal de aanhef van een formele mail.",
           "given": "Geachte heer,",
           "answer": "Poštovani gospodine,",
-          "accepts": ["Poštovani gospodine,", "Poštovani gospodine"],
+          "accepts": [
+            "Poštovani gospodine,",
+            "Poštovani gospodine"
+          ],
           "explain_nl": "Poštovani blijft in de lange vorm staan; gospodin krijgt -e.",
-          "targets": ["g.mod.vokativ", "v.20.gospodin"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.20.gospodin"
+          ],
           "difficulty": 4
         },
         {
@@ -419,10 +658,17 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf het goed.",
           "given": "Draga mamo i dragi prijatelje,",
           "answer": "Draga mamo i dragi prijatelju,",
-          "accepts": ["Draga mamo i dragi prijatelju,", "Draga mamo i dragi prijatelju"],
+          "accepts": [
+            "Draga mamo i dragi prijatelju,",
+            "Draga mamo i dragi prijatelju"
+          ],
           "hint": "Eén van de twee klopt al. Kijk naar de laatste medeklinker van het andere woord.",
           "explain_nl": "Mamo is goed. Prijatelj eindigt op een zachte medeklinker en krijgt dus -u.",
-          "targets": ["g.mod.vokativ", "v.01.mama", "v.01.prijatelj"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.mama",
+            "v.01.prijatelj"
+          ],
           "difficulty": 4
         }
       ]
@@ -441,7 +687,11 @@
           "mode": "receptive",
           "prompt_nl": "Waarom ging hij naar de dokter?",
           "answer": "Zijn keel deed pijn.",
-          "distractors": ["Hij had te veel gezwommen.", "Hij had koorts.", "Hij had zijn been bezeerd."],
+          "distractors": [
+            "Hij had te veel gezwommen.",
+            "Hij had koorts.",
+            "Hij had zijn been bezeerd."
+          ],
           "explain_nl": "«Jer me boljelo grlo.»",
           "targets": [],
           "difficulty": 1
@@ -460,7 +710,9 @@
             "Omdat er een komma achter staat."
           ],
           "explain_nl": "Gospodine heeft een harde n en krijgt -e; mladiću heeft een zachte ć en krijgt -u. Twee woorden in één zin, twee uitgangen.",
-          "targets": ["g.mod.vokativ"],
+          "targets": [
+            "g.mod.vokativ"
+          ],
           "difficulty": 5
         },
         {
@@ -477,7 +729,10 @@
             "Het is dezelfde vorm, anders gespeld."
           ],
           "explain_nl": "Dezelfde persoon, twee rollen in de tekst. Alleen bij het roepen gebruik je de vocatief.",
-          "targets": ["g.mod.vokativ", "g.mod.acc_anim"],
+          "targets": [
+            "g.mod.vokativ",
+            "g.mod.acc_anim"
+          ],
           "difficulty": 5
         },
         {
@@ -487,9 +742,14 @@
           "prompt_nl": "Vul de aanhef aan zoals in de brief.",
           "given": "Draga ___ (mama),",
           "answer": "mamo",
-          "accepts": ["mamo"],
+          "accepts": [
+            "mamo"
+          ],
           "explain_nl": "Vrouwelijk op -a, dus -o.",
-          "targets": ["g.mod.vokativ", "v.01.mama"],
+          "targets": [
+            "g.mod.vokativ",
+            "v.01.mama"
+          ],
           "difficulty": 2
         },
         {
@@ -504,8 +764,43 @@
             "Dragi en poštovana staan in de lange vorm."
           ],
           "explain_nl": "Met deze twee aanheffen kun je zowel een appje aan een vriend als een mail aan een instantie beginnen — en dat is precies waar de vocatief in de praktijk voor dient.",
-          "targets": ["g.mod.vokativ"],
-          "difficulty": 4
+          "targets": [
+            "g.mod.vokativ"
+          ],
+          "difficulty": 4,
+          "auto_check": true,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "prijatelju"
+              ],
+              "label": "De aanhef aan je vriend gebruikt prijatelju, met -u na de zachte lj"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "gospođo"
+              ],
+              "label": "De formele aanhef gebruikt gospođo, met -o bij een vrouwelijk woord op -a"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "dragi",
+                "draga"
+              ],
+              "label": "Dragi of draga staat in de lange vorm"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "poštovana",
+                "poštovani"
+              ],
+              "label": "Poštovana of poštovani staat in de lange vorm"
+            }
+          ]
         }
       ]
     }

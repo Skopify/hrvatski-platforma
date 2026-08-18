@@ -278,6 +278,64 @@ await test("4", "Vrije productie blijft zelfbeoordeling, zonder tredes", async (
 
 /* ═══════════════════════════════════════════════════ verslag ══ */
 
+/* ------------------------------------------------------------------ 5 --- */
+
+{
+  const { checkFree } = await import("../src/lib/freecheck");
+  const { findExercise } = await import("../src/lib/content");
+  const opgave = (id: string) => findExercise(id)!.exercise;
+
+  await test("5", "Wat mechanisch vast te stellen is, wordt vastgesteld", () => {
+    const e = opgave("m.phon.064");
+    const goed = checkFree(e, "ulica, čaj, prst");
+    assert(goed.volledig, "deze opgave hoort volledig nagekeken te worden");
+    assert(goed.geslaagd, `alle criteria hadden moeten kloppen: ${JSON.stringify(goed.checks)}`);
+
+    const fout = checkFree(e, "kuca je lijepa");
+    assert(!fout.geslaagd, "een antwoord zonder de gevraagde letters kwam er goed doorheen");
+    const gemist = fout.checks.filter((c) => !c.ok).length;
+    assert(gemist >= 2, `${gemist} criteria gemist, verwacht er minstens twee`);
+    return `vier criteria; goed antwoord 4/4, fout antwoord ${4 - gemist}/4`;
+  });
+
+  await test("5", "Zonder expliciete vlag blijft het oordeel bij de leerder", () => {
+    const e = opgave("m.refl.064");
+    const r = checkFree(e, "Budim se u sedam. Tuširam se i oblačim se. Poslije se vraćam kući.");
+    assert(r.checks.length === 3, `${r.checks.length} controles`);
+    assert(r.checks.every((c) => c.ok), "de controles hadden moeten slagen");
+    assert(!r.volledig, "deze opgave werd automatisch afgehandeld terwijl niet alles na te kijken is");
+    return "drie controles geslaagd, en toch beslist de leerder — want niet elk criterium is mechanisch";
+  });
+
+  await test("5", "Elke bevinding komt met wat er gevonden is", () => {
+    const r = checkFree(opgave("m.refl.064"), "Se budim u sedam.");
+    const vooraan = r.checks.find((c) => c.label.includes("begint met se"));
+    assert(vooraan && !vooraan.ok, "se vooraan werd niet opgemerkt");
+    assert(/Se budim/.test(vooraan!.detail), `de bevinding noemt de zin niet: ${vooraan!.detail}`);
+    return `«${vooraan!.detail}»`;
+  });
+
+  await test("5", "Alleen vergeten dakjes worden gemeld, geen correcte woorden", () => {
+    const met = checkFree(opgave("m.phon.064"), "kuca je lijepa");
+    assert(met.suggesties.some((s) => s.bedoeld === "kuća"), "kuca → kuća werd niet aangewezen");
+    assert(
+      !met.suggesties.some((s) => s.geschreven === "lijepa"),
+      `lijepa werd ten onrechte gecorrigeerd naar ${met.suggesties.find((s) => s.geschreven === "lijepa")?.bedoeld}`,
+    );
+
+    const schoon = checkFree(
+      opgave("m.refl.064"),
+      "Budim se u sedam. Tuširam se i oblačim se. Poslije se vraćam kući.",
+    );
+    assert(
+      schoon.suggesties.length === 0,
+      `correcte zinnen leverden suggesties op: ${JSON.stringify(schoon.suggesties)}`,
+    );
+    return "kuca → kuća gemeld; lijepa, tuširam en oblačim met rust gelaten";
+  });
+}
+
+
 fs.rmSync(TMP, { recursive: true, force: true });
 
 const TITELS: Record<string, string> = {
@@ -285,6 +343,7 @@ const TITELS: Record<string, string> = {
   "2": "Na drie tredes is het antwoord er wel",
   "3": "Elke trede wordt vastgelegd",
   "4": "Geen regressie op wat al werkte",
+  "5": "Vrije productie: nakijken wat na te kijken is",
 };
 
 const perPunt = new Map<string, Result[]>();

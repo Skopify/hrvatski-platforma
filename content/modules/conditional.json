@@ -712,7 +712,31 @@
           "targets": [
             "g.mod.conditional"
           ],
-          "difficulty": 5
+          "difficulty": 5,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "bih"
+              ],
+              "label": "Er staat bih in"
+            },
+            {
+              "kind": "niet_vooraan",
+              "woorden": [
+                "bih"
+              ],
+              "label": "Bih staat nergens vooraan in de zin"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "htio",
+                "htjela"
+              ],
+              "label": "De bestelling gebruikt htio bih of htjela bih"
+            }
+          ]
         }
       ]
     }

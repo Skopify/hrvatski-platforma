@@ -698,7 +698,31 @@
           "targets": [
             "g.mod.neg_verb"
           ],
-          "difficulty": 4
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "ne"
+              ],
+              "label": "Er staat ne los vóór een werkwoord"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "nikad",
+                "nikada"
+              ],
+              "label": "Er staat nikad in"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "nemam"
+              ],
+              "label": "Er staat nemam in — aan elkaar, niet «ne imam»"
+            }
+          ]
         }
       ]
     }

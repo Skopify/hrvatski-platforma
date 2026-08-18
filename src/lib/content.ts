@@ -42,6 +42,24 @@ export interface Exercise {
   distractors?: string[];
   model_answer?: string;
   rubric_nl?: string[];
+  /**
+   * Criteria die het programma zelf kan vaststellen — zie src/lib/freecheck.ts.
+   *
+   * Staat er voor elk punt uit `rubric_nl` een check, dan wordt de opdracht
+   * automatisch nagekeken en vervalt de zelfbeoordeling. Zijn het er minder, dan
+   * zijn ze een hulpmiddel en blijft het oordeel bij de leerder.
+   */
+  checks?: unknown[];
+  /**
+   * Dekken de checks élk punt uit `rubric_nl`? Dan wordt de opdracht automatisch
+   * nagekeken en vervalt de zelfbeoordeling.
+   *
+   * Bewust een expliciete vlag en geen telling. Drie checks bij drie criteria
+   * betekent niet dat ze dezelfde drie dingen controleren — «gebruikt gdje en
+   * gaat over een plaats» is voor de helft na te kijken, en die helft mag niet
+   * voor het geheel doorgaan.
+   */
+  auto_check?: boolean;
   explain_nl?: string;
   /** Overschrijft de placeholder — begrijpend lezen beantwoord je in het Nederlands. */
   placeholder?: string;

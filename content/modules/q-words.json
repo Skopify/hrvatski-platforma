@@ -774,7 +774,37 @@
           "targets": [
             "g.mod.q_words"
           ],
-          "difficulty": 4
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "li"
+              ],
+              "label": "De ja-nee-vraag gebruikt li"
+            },
+            {
+              "kind": "niet_vooraan",
+              "woorden": [
+                "li"
+              ],
+              "label": "Li staat nergens vooraan"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "gdje"
+              ],
+              "label": "Er staat een vraag met gdje in"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "kamo"
+              ],
+              "label": "Er staat een vraag met kamo in"
+            }
+          ]
         }
       ]
     }

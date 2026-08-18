@@ -14,6 +14,22 @@ const BAND_UITLEG: Record<string, string> = {
   Verfijnen: "Het verschil tussen begrijpelijk en goed. Doe deze als de rest zit.",
 };
 
+/** Het vinkje bij een afgeronde module. */
+function Vinkje() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden className="h-3.5 w-3.5" fill="none">
+      <circle cx="8" cy="8" r="7" className="fill-good-wash" />
+      <path
+        d="M4.8 8.2l2.1 2.1 4.3-4.4"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 /** Hoe een gemeten status eruitziet. Ongemeten krijgt bewust geen pil. */
 const STATUS_STIJL: Record<ModuleStatusValue, string> = {
   beheerst: "bg-good-wash text-good",
@@ -78,7 +94,11 @@ export default function GrammaticaPage() {
               <Link
                 key={m.code}
                 href={`/grammatica/${m.code.toLowerCase()}`}
-                className="rounded-card group border border-line bg-surface px-5 py-5 transition-all duration-200 hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash"
+                className={`rounded-card group border px-5 py-5 transition-all duration-200 hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash ${
+                  voortgang.get(m.code)?.afgerondOp
+                    ? "border-good/40 bg-good-wash/40"
+                    : "border-line bg-surface"
+                }`}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <p className="hr-text text-[19px] font-semibold text-ink">{m.title_hr}</p>
@@ -101,11 +121,18 @@ export default function GrammaticaPage() {
                 <p className="mt-2 text-[13.5px] leading-relaxed text-ink-secondary">
                   {m.blurb_nl}
                 </p>
-                <p className="mt-3 text-[12px] text-ink-muted">
-                  {m.phases.length} stappen · {moduleExercises(m).length} opgaven
-                  {voortgang.get(m.code) ? (
-                    <span className="ml-2 font-semibold text-accent">
-                      · begonnen, nog {Math.max(0, moduleStepCount(m) - voortgang.get(m.code)!)}
+                <p className="mt-3 flex flex-wrap items-center gap-x-2 text-[12px] text-ink-muted">
+                  <span>
+                    {m.phases.length} stappen · {moduleExercises(m).length} opgaven
+                  </span>
+                  {voortgang.get(m.code)?.afgerondOp ? (
+                    <span className="inline-flex items-center gap-1 font-semibold text-good">
+                      <Vinkje /> afgerond
+                    </span>
+                  ) : voortgang.get(m.code)?.gedaan ? (
+                    <span className="font-semibold text-accent">
+                      · begonnen, nog{" "}
+                      {Math.max(0, moduleStepCount(m) - voortgang.get(m.code)!.gedaan)}
                     </span>
                   ) : null}
                 </p>

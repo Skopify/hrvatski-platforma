@@ -436,14 +436,31 @@ export function stepsDoneInModule(code: string): Set<string> {
   return new Set((row.done as string[] | null) ?? []);
 }
 
-/** Hoeveel stappen er per module gedaan zijn, voor het overzicht. */
-export function moduleProgressMap(): Map<string, number> {
+export interface ModuleVoortgang {
+  /** Stappen gedaan in de lopende doorloop. Nul zodra de module af is. */
+  gedaan: number;
+  /** Wanneer de module voor het laatst is uitgespeeld, of null. */
+  afgerondOp: number | null;
+}
+
+/** Voortgang per module, voor het overzicht. */
+export function moduleProgressMap(): Map<string, ModuleVoortgang> {
   return new Map(
     db
-      .select({ code: moduleProgress.code, done: moduleProgress.stepsDone, completedAt: moduleProgress.completedAt })
+      .select({
+        code: moduleProgress.code,
+        done: moduleProgress.stepsDone,
+        completedAt: moduleProgress.completedAt,
+      })
       .from(moduleProgress)
       .all()
-      .map((r) => [r.code, r.completedAt ? 0 : ((r.done as string[] | null) ?? []).length]),
+      .map((r) => [
+        r.code,
+        {
+          gedaan: r.completedAt ? 0 : ((r.done as string[] | null) ?? []).length,
+          afgerondOp: r.completedAt,
+        },
+      ]),
   );
 }
 

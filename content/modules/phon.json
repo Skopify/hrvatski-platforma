@@ -23,16 +23,67 @@
     "contrast_nl": "Het Nederlands schrijft «ei» en «ij» voor dezelfde klank, en «e» klinkt in «pet» anders dan in «de». Het Kroatisch doet niets van dat alles. Dat betekent dat je na deze module elk Kroatisch woord hardop kunt lezen, ook een woord dat je nooit hebt gezien — en dat je kunt opschrijven wat je hoort.",
     "paradigm": {
       "caption_nl": "De letters die het Nederlands niet heeft",
-      "columns": ["klinkt ongeveer als", "voorbeeld"],
+      "columns": [
+        "klinkt ongeveer als",
+        "voorbeeld"
+      ],
       "rows": [
-        { "label": "c", "cells": ["ts", "cijena — prijs"] },
-        { "label": "č", "cells": ["tsj, hard", "čaj — thee"] },
-        { "label": "ć", "cells": ["tsj, zacht", "noć — nacht"] },
-        { "label": "š", "cells": ["sj", "šest — zes"] },
-        { "label": "ž", "cells": ["zj, als in journaal", "žena — vrouw"] },
-        { "label": "đ", "cells": ["dzj, zacht", "đak — leerling"] },
-        { "label": "lj", "cells": ["lj, als in familjaar", "ljubav — liefde"] },
-        { "label": "nj", "cells": ["nj, als in oranje", "njegov — zijn"] }
+        {
+          "label": "c",
+          "cells": [
+            "ts",
+            "cijena — prijs"
+          ]
+        },
+        {
+          "label": "č",
+          "cells": [
+            "tsj, hard",
+            "čaj — thee"
+          ]
+        },
+        {
+          "label": "ć",
+          "cells": [
+            "tsj, zacht",
+            "noć — nacht"
+          ]
+        },
+        {
+          "label": "š",
+          "cells": [
+            "sj",
+            "šest — zes"
+          ]
+        },
+        {
+          "label": "ž",
+          "cells": [
+            "zj, als in journaal",
+            "žena — vrouw"
+          ]
+        },
+        {
+          "label": "đ",
+          "cells": [
+            "dzj, zacht",
+            "đak — leerling"
+          ]
+        },
+        {
+          "label": "lj",
+          "cells": [
+            "lj, als in familjaar",
+            "ljubav — liefde"
+          ]
+        },
+        {
+          "label": "nj",
+          "cells": [
+            "nj, als in oranje",
+            "njegov — zijn"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -66,7 +117,9 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Drie dingen zitten je in de weg, en verder niets.\n\n**Eén: de c.** Die klinkt in het Kroatisch altijd als **ts**. *Cijena* is «tsijena», *ulica* is «ulitsa». Nooit als een k, nooit als een s. Voor Nederlandstaligen is dit de fout die het langst blijft hangen.\n\n**Twee: de letters met een streepje of een dakje.** *Č, ć, š, ž, đ* — die kennen wij niet, maar ze doen elk precies één ding en dat verandert nooit.\n\n**Drie: woorden zonder klinker.** *Prst* is geen typefout. In het Kroatisch kan de **r** de rol van klinker overnemen. Je zegt hem gewoon als een rollende «rrr» en het woord heeft ineens een lettergreep. *Hrvatska* begint dus met «hrrr».\n\nEn wat je ervoor terugkrijgt is groot: **één letter is één klank, altijd.** Geen ei tegenover ij, geen e die soms anders klinkt. Ken je de letters, dan kun je élk Kroatisch woord hardop lezen.\n\n*(Deze module gaat over lezen en schrijven. Of jouw č ook echt als een č klinkt, kan dit platform niet horen — daar heb je een mens voor nodig.)*",
-          "targets": ["g.mod.phon"]
+          "targets": [
+            "g.mod.phon"
+          ]
         }
       ]
     },
@@ -84,20 +137,82 @@
           "body_nl": "Het alfabet: *a b c č ć d dž đ e f g h i j k l lj m n nj o p r s š t u v z ž*\n\nDat zijn er **dertig**, want *dž*, *lj* en *nj* tellen elk als **één letter**. In een Kroatisch woordenboek staat *ljubav* dus niet bij de L maar bij de LJ.\n\nDe letters die het Nederlands niet heeft:\n\n**c** — ts: *cijena*, *ulica*, *Cres*\n**č** — een harde tsj: *čaj*, *čovjek*\n**ć** — een zachte tsj: *noć*, *kuća*\n**dž** — een harde dzj: *džep*\n**đ** — een zachte dzj: *đak*, *rođendan*\n**š** — sj: *šest*, *škola*\n**ž** — de zj van journaal: *žena*, *nož*\n**lj** — de lj van familjaar: *ljubav*, *prijatelj*\n**nj** — de nj van oranje: *njegov*, *knjiga*\n\nEn drie letters die je wél kent maar anders gebruikt:\n**j** is de Nederlandse j: *ja*, *jesti*\n**h** wordt **altijd** uitgesproken, ook vooraan: *hvala*, *Hrvatska*\n**e** is altijd dezelfde korte e; er bestaat geen *ee* of *aa*. Klinkers worden nooit verdubbeld.\n\nHet verschil tussen *č* en *ć* — en tussen *dž* en *đ* — hoor je in de praktijk niet altijd; veel sprekers maken het nauwelijks. Bij het **schrijven** moet je het wel weten. Een handig houvast: achternamen op *-ić* hebben altijd een ć.",
           "table": {
             "caption_nl": "De letters die het Nederlands niet heeft",
-            "columns": ["klinkt ongeveer als", "voorbeeld"],
+            "columns": [
+              "klinkt ongeveer als",
+              "voorbeeld"
+            ],
             "rows": [
-              { "label": "c", "cells": ["ts", "cijena — prijs"] },
-              { "label": "č", "cells": ["tsj, hard", "čaj — thee"] },
-              { "label": "ć", "cells": ["tsj, zacht", "noć — nacht"] },
-              { "label": "dž", "cells": ["dzj, hard", "džep — zak"] },
-              { "label": "đ", "cells": ["dzj, zacht", "đak — leerling"] },
-              { "label": "š", "cells": ["sj", "šest — zes"] },
-              { "label": "ž", "cells": ["zj, als in journaal", "žena — vrouw"] },
-              { "label": "lj", "cells": ["lj, als in familjaar", "ljubav — liefde"] },
-              { "label": "nj", "cells": ["nj, als in oranje", "njegov — zijn"] }
+              {
+                "label": "c",
+                "cells": [
+                  "ts",
+                  "cijena — prijs"
+                ]
+              },
+              {
+                "label": "č",
+                "cells": [
+                  "tsj, hard",
+                  "čaj — thee"
+                ]
+              },
+              {
+                "label": "ć",
+                "cells": [
+                  "tsj, zacht",
+                  "noć — nacht"
+                ]
+              },
+              {
+                "label": "dž",
+                "cells": [
+                  "dzj, hard",
+                  "džep — zak"
+                ]
+              },
+              {
+                "label": "đ",
+                "cells": [
+                  "dzj, zacht",
+                  "đak — leerling"
+                ]
+              },
+              {
+                "label": "š",
+                "cells": [
+                  "sj",
+                  "šest — zes"
+                ]
+              },
+              {
+                "label": "ž",
+                "cells": [
+                  "zj, als in journaal",
+                  "žena — vrouw"
+                ]
+              },
+              {
+                "label": "lj",
+                "cells": [
+                  "lj, als in familjaar",
+                  "ljubav — liefde"
+                ]
+              },
+              {
+                "label": "nj",
+                "cells": [
+                  "nj, als in oranje",
+                  "njegov — zijn"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.phon", "v.18.noc", "v.04.zena", "v.18.ljubav"]
+          "targets": [
+            "g.mod.phon",
+            "v.18.noc",
+            "v.04.zena",
+            "v.18.ljubav"
+          ]
         },
         {
           "id": "m.phon.011",
@@ -107,17 +222,66 @@
           "body_nl": "**De r kan een klinker zijn.** In deze woorden staat geen a, e, i, o of u, en toch kun je ze zeggen:\n\n*prst* — vinger\n*vrt* — tuin\n*crn* — zwart\n*krv* — bloed\n*trg* — plein\n*prvi* — eerste\n*Hrvatska* — Kroatië\n\nJe rolt de r even door, en dat is de lettergreep. *Prst* is één lettergreep: «prrrst». *Hrvatska* is er drie: «hrrr-vat-ska».\n\nDit is geen curiositeit. Het zit in woorden die je meteen nodig hebt — het land zelf, het woord voor eerste, het plein waar je afspreekt.\n\n**De klemtoon.** Eén regel, en die geldt altijd: **de klemtoon valt nooit op de laatste lettergreep** van een woord met meer dan één lettergreep.\n\n*ZA-greb*, niet Za-GREB\n*HVA-la*, niet hva-LA\n*DO-bar*, *STU-dent*, *KNJI-ga*\n\nWaar hij dan wél ligt, verschilt per woord, maar de laatste lettergreep valt sowieso af. Dat is genoeg om niet meer als een buitenlander te klinken bij de woorden die je het vaakst zegt.\n\nHet Kroatisch heeft daarbovenop nog een systeem van toonhoogte en lengte. Dat hoor je pas na veel luisteren, en je kunt er prima zonder beginnen.",
           "table": {
             "caption_nl": "Woorden waarin de r de klinker is",
-            "columns": ["woord", "betekenis", "lettergrepen"],
+            "columns": [
+              "woord",
+              "betekenis",
+              "lettergrepen"
+            ],
             "rows": [
-              { "label": "1", "cells": ["prst", "vinger", "één"] },
-              { "label": "2", "cells": ["vrt", "tuin", "één"] },
-              { "label": "3", "cells": ["crn", "zwart", "één"] },
-              { "label": "4", "cells": ["trg", "plein", "één"] },
-              { "label": "5", "cells": ["prvi", "eerste", "twee: pr-vi"] },
-              { "label": "6", "cells": ["Hrvatska", "Kroatië", "drie: hr-vat-ska"] }
+              {
+                "label": "1",
+                "cells": [
+                  "prst",
+                  "vinger",
+                  "één"
+                ]
+              },
+              {
+                "label": "2",
+                "cells": [
+                  "vrt",
+                  "tuin",
+                  "één"
+                ]
+              },
+              {
+                "label": "3",
+                "cells": [
+                  "crn",
+                  "zwart",
+                  "één"
+                ]
+              },
+              {
+                "label": "4",
+                "cells": [
+                  "trg",
+                  "plein",
+                  "één"
+                ]
+              },
+              {
+                "label": "5",
+                "cells": [
+                  "prvi",
+                  "eerste",
+                  "twee: pr-vi"
+                ]
+              },
+              {
+                "label": "6",
+                "cells": [
+                  "Hrvatska",
+                  "Kroatië",
+                  "drie: hr-vat-ska"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.phon", "v.17.prvi"]
+          "targets": [
+            "g.mod.phon",
+            "v.17.prvi"
+          ]
         }
       ]
     },
@@ -135,9 +299,15 @@
           "given": "cijena",
           "nudge": "De c doet in het Kroatisch maar één ding.",
           "answer": "Met een ts-klank.",
-          "distractors": ["Met een k.", "Met een s.", "Met een sj."],
+          "distractors": [
+            "Met een k.",
+            "Met een s.",
+            "Met een sj."
+          ],
           "explain_nl": "De c is altijd ts. Dit is de fout die Nederlandstaligen het langst blijven maken.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 2
         },
         {
@@ -148,9 +318,16 @@
           "given": "ljubav",
           "nudge": "Lj telt als één letter.",
           "answer": "Vijf: lj-u-b-a-v.",
-          "distractors": ["Zes.", "Vier.", "Zeven."],
+          "distractors": [
+            "Zes.",
+            "Vier.",
+            "Zeven."
+          ],
           "explain_nl": "Lj is één letter. Daarom staat ljubav in het woordenboek niet bij de L maar bij de LJ.",
-          "targets": ["g.mod.phon", "v.18.ljubav"],
+          "targets": [
+            "g.mod.phon",
+            "v.18.ljubav"
+          ],
           "difficulty": 3
         },
         {
@@ -167,7 +344,9 @@
             "Dat is een typefout."
           ],
           "explain_nl": "Je rolt de r even door, en dat is de lettergreep. Prst is één lettergreep.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -184,7 +363,9 @@
             "Dat verschilt per spreker."
           ],
           "explain_nl": "De klemtoon valt nooit op de laatste lettergreep. Bij een woord van twee lettergrepen betekent dat: altijd op de eerste.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -195,9 +376,17 @@
           "given": "A: kuća\nB: knjiga\nC: student",
           "nudge": "Let ook op letterparen die samen één letter vormen.",
           "answer": "C — student bestaat uit letters die wij ook hebben.",
-          "distractors": ["A — kuća.", "B — knjiga.", "Alle drie."],
+          "distractors": [
+            "A — kuća.",
+            "B — knjiga.",
+            "Alle drie."
+          ],
           "explain_nl": "Kuća heeft een ć en knjiga een nj. Bij knjiga is dat makkelijk over het hoofd te zien, want die twee letters staan er los uit te zien.",
-          "targets": ["g.mod.phon", "v.01.kuca", "v.01.knjiga"],
+          "targets": [
+            "g.mod.phon",
+            "v.01.kuca",
+            "v.01.knjiga"
+          ],
           "difficulty": 4
         },
         {
@@ -208,9 +397,15 @@
           "given": "Hrvatska",
           "nudge": "De r vooraan telt mee als lettergreep.",
           "answer": "Drie: hr-vat-ska.",
-          "distractors": ["Twee.", "Vier.", "Eén."],
+          "distractors": [
+            "Twee.",
+            "Vier.",
+            "Eén."
+          ],
           "explain_nl": "De eerste lettergreep bestaat uit h plus de rollende r. Dat is meteen het lastigste woord van het land.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 4
         }
       ]
@@ -219,55 +414,69 @@
       "step": 4,
       "kind": "blocked",
       "title_nl": "Nu zelf schrijven",
-      "why_nl": "Tien keer dezelfde vraag: welke letter hoort hier, en waarom die en niet een andere?",
+      "why_nl": "Tien keer hetzelfde: welke letters horen bij deze klanken, en hoe schrijf je het woord voluit?",
       "exercises": [
         {
           "id": "m.phon.030",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de letter in die als ts klinkt: prijs.",
-          "given": "___ijena",
-          "answer": "c",
-          "accepts": ["c"],
-          "explain_nl": "De c is altijd ts.",
-          "targets": ["g.mod.phon"],
+          "prompt_nl": "Schrijf het woord voor «prijs». Het begint met de ts-klank.",
+          "answer": "cijena",
+          "accepts": [
+            "cijena"
+          ],
+          "explain_nl": "De ts-klank schrijf je met één letter: c. Cijena, niet tsijena.",
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 2
         },
         {
           "id": "m.phon.031",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de letter in die als sj klinkt: zes.",
-          "given": "___est",
-          "answer": "š",
-          "accepts": ["š"],
-          "explain_nl": "Š is de sj-klank.",
-          "targets": ["g.mod.phon"],
+          "prompt_nl": "Schrijf het woord voor «zes». Het begint met de sj-klank.",
+          "answer": "šest",
+          "accepts": [
+            "šest"
+          ],
+          "explain_nl": "Š is de sj-klank: šest.",
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 2
         },
         {
           "id": "m.phon.032",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de letter in die als de j van journaal klinkt: vrouw.",
-          "given": "___ena",
-          "answer": "ž",
-          "accepts": ["ž"],
-          "explain_nl": "Ž is de zj-klank.",
-          "targets": ["g.mod.phon", "v.04.zena"],
+          "prompt_nl": "Schrijf het woord voor «vrouw». Het begint met de j van journaal.",
+          "answer": "žena",
+          "accepts": [
+            "žena"
+          ],
+          "explain_nl": "Ž is de zj-klank: žena.",
+          "targets": [
+            "g.mod.phon",
+            "v.04.zena"
+          ],
           "difficulty": 2
         },
         {
           "id": "m.phon.033",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de twee letters in die samen één letter vormen: boek.",
-          "given": "k___iga",
-          "answer": "nj",
-          "accepts": ["nj"],
-          "hint": "De nj van oranje.",
-          "explain_nl": "Nj is één letter, ook al zie je er twee.",
-          "targets": ["g.mod.phon", "v.01.knjiga"],
+          "prompt_nl": "Schrijf het woord voor «boek».",
+          "answer": "knjiga",
+          "accepts": [
+            "knjiga"
+          ],
+          "hint": "Er zitten twee letters in die samen één letter vormen.",
+          "explain_nl": "Knjiga — de nj telt als één letter, ook al zie je er twee.",
+          "targets": [
+            "g.mod.phon",
+            "v.01.knjiga"
+          ],
           "difficulty": 3
         },
         {
@@ -277,10 +486,15 @@
           "prompt_nl": "Schrijf het woord voor Kroatië.",
           "given": "___",
           "answer": "Hrvatska",
-          "accepts": ["Hrvatska", "hrvatska"],
+          "accepts": [
+            "Hrvatska",
+            "hrvatska"
+          ],
           "hint": "Er staat geen klinker vóór de v.",
           "explain_nl": "Hrvatska — met de r als klinker in de eerste lettergreep.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -290,10 +504,14 @@
           "prompt_nl": "Schrijf het woord voor vinger.",
           "given": "___",
           "answer": "prst",
-          "accepts": ["prst"],
+          "accepts": [
+            "prst"
+          ],
           "hint": "Vier letters, geen klinker.",
           "explain_nl": "Prst — de r doet het werk van de klinker.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -302,9 +520,15 @@
           "mode": "receptive",
           "prompt_nl": "Welke van deze telt als één letter?",
           "answer": "lj",
-          "distractors": ["st", "kr", "vr"],
+          "distractors": [
+            "st",
+            "kr",
+            "vr"
+          ],
           "explain_nl": "Alleen dž, lj en nj zijn letterparen die één letter vormen.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -314,9 +538,13 @@
           "prompt_nl": "Iemand schrijft het uit zoals het klinkt. Schrijf het goed.",
           "given": "tsijena",
           "answer": "cijena",
-          "accepts": ["cijena"],
+          "accepts": [
+            "cijena"
+          ],
           "explain_nl": "De ts-klank schrijf je met één letter: c.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -326,9 +554,13 @@
           "prompt_nl": "Er is een klinker toegevoegd die er niet hoort. Schrijf het goed.",
           "given": "Hervatska",
           "answer": "Hrvatska",
-          "accepts": ["Hrvatska"],
+          "accepts": [
+            "Hrvatska"
+          ],
           "explain_nl": "De r vormt zelf de lettergreep; er hoort geen e bij.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 4
         },
         {
@@ -338,9 +570,13 @@
           "prompt_nl": "Er staat een dubbele klinker. Schrijf het goed: dank je.",
           "given": "hvaala",
           "answer": "hvala",
-          "accepts": ["hvala"],
+          "accepts": [
+            "hvala"
+          ],
           "explain_nl": "Het Kroatisch verdubbelt nooit een klinker. Lengte hoor je wel, maar je schrijft hem niet.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         }
       ]
@@ -357,9 +593,15 @@
           "mode": "receptive",
           "prompt_nl": "In welk woord klinkt de c niet als ts?",
           "answer": "In geen enkel woord.",
-          "distractors": ["cijena", "ulica", "Cres"],
+          "distractors": [
+            "cijena",
+            "ulica",
+            "Cres"
+          ],
           "explain_nl": "Er is geen uitzondering. Dat is precies de winst van het Kroatische schriftsysteem.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -368,22 +610,35 @@
           "mode": "receptive",
           "prompt_nl": "Welk woord heeft de r als klinker?",
           "answer": "trg",
-          "distractors": ["grad", "brat", "kruh"],
+          "distractors": [
+            "grad",
+            "brat",
+            "kruh"
+          ],
           "explain_nl": "In grad, brat en kruh staat een gewone klinker. In trg niet — daar doet de r het werk.",
-          "targets": ["g.mod.phon", "v.05.grad"],
+          "targets": [
+            "g.mod.phon",
+            "v.05.grad"
+          ],
           "difficulty": 4
         },
         {
           "id": "m.phon.052",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de ontbrekende letters in: nacht, en huis.",
-          "given": "no___ , ku___a",
-          "answer": "ć ć",
-          "accepts": ["ć ć"],
-          "hint": "Allebei dezelfde zachte letter.",
+          "prompt_nl": "Schrijf beide woorden: nacht en huis.",
+          "answer": "noć kuća",
+          "accepts": [
+            "noć kuća",
+            "noć, kuća"
+          ],
+          "hint": "Allebei met dezelfde zachte letter.",
           "explain_nl": "Noć en kuća hebben allebei een ć.",
-          "targets": ["g.mod.phon", "v.18.noc", "v.01.kuca"],
+          "targets": [
+            "g.mod.phon",
+            "v.18.noc",
+            "v.01.kuca"
+          ],
           "difficulty": 4
         },
         {
@@ -399,7 +654,10 @@
             "Dat wisselt per naamval."
           ],
           "explain_nl": "Nooit op de laatste. Bij twee lettergrepen blijft er dus maar één plek over.",
-          "targets": ["g.mod.phon", "v.01.student"],
+          "targets": [
+            "g.mod.phon",
+            "v.01.student"
+          ],
           "difficulty": 3
         },
         {
@@ -409,10 +667,17 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf het goed: liefde, boek.",
           "given": "lubav, kniga",
           "answer": "ljubav, knjiga",
-          "accepts": ["ljubav, knjiga", "ljubav knjiga"],
+          "accepts": [
+            "ljubav, knjiga",
+            "ljubav knjiga"
+          ],
           "hint": "In beide woorden ontbreekt een j die bij de letter ervoor hoort.",
           "explain_nl": "Lj en nj zijn elk één letter. Wie de j weglaat, schrijft een ander woord.",
-          "targets": ["g.mod.phon", "v.18.ljubav", "v.01.knjiga"],
+          "targets": [
+            "g.mod.phon",
+            "v.18.ljubav",
+            "v.01.knjiga"
+          ],
           "difficulty": 4
         }
       ]
@@ -431,7 +696,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat verkoopt de man op het plein?",
           "answer": "Bloemen.",
-          "distractors": ["Kranten.", "IJs.", "Kaartjes."],
+          "distractors": [
+            "Kranten.",
+            "IJs.",
+            "Kaartjes."
+          ],
           "explain_nl": "«Stoji čovjek i prodaje cvijeće.»",
           "targets": [],
           "difficulty": 1
@@ -450,7 +719,9 @@
             "Dat hangt van de spreker af."
           ],
           "explain_nl": "Eén letter, één klank — daar is de hele module om te doen.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 3
         },
         {
@@ -467,19 +738,26 @@
             "Ze komen allemaal uit het Duits."
           ],
           "explain_nl": "Trg, crn en prst hebben geen a, e, i, o of u in de stam. De rollende r maakt de lettergreep.",
-          "targets": ["g.mod.phon"],
+          "targets": [
+            "g.mod.phon"
+          ],
           "difficulty": 4
         },
         {
           "id": "m.phon.063",
           "type": "cloze",
           "mode": "productive",
-          "prompt_nl": "Vul de ontbrekende letters aan zoals in de tekst.",
-          "given": "Na tr___u u Zagrebu stoji ___ovjek.",
-          "answer": "g č",
-          "accepts": ["g č"],
-          "explain_nl": "Trg met de r als klinker, en čovjek met een č.",
-          "targets": ["g.mod.phon", "v.03.covjek"],
+          "prompt_nl": "Vul de woorden aan zoals in de tekst.",
+          "given": "Na ___ (trg) u Zagrebu stoji ___ (čovjek).",
+          "answer": "trgu čovjek",
+          "accepts": [
+            "trgu čovjek"
+          ],
+          "explain_nl": "Trg met de r als klinker, in de locatief trgu — en čovjek met een č.",
+          "targets": [
+            "g.mod.phon",
+            "v.03.covjek"
+          ],
           "difficulty": 4
         },
         {
@@ -495,8 +773,31 @@
             "Nergens staat een dubbele klinker."
           ],
           "explain_nl": "Wie deze drie soorten woorden kan schrijven, kan de rest van de cursus elk nieuw woord meteen goed opslaan — en dat scheelt later een hoop terugbladeren.",
-          "targets": ["g.mod.phon"],
-          "difficulty": 3
+          "targets": [
+            "g.mod.phon"
+          ],
+          "difficulty": 3,
+          "auto_check": true,
+          "checks": [
+            {
+              "kind": "bevat_letter",
+              "letters": "cC",
+              "label": "Er staat een woord met een c in"
+            },
+            {
+              "kind": "bevat_letter",
+              "letters": "čćšžđČĆŠŽĐ",
+              "label": "Er staat een woord met č, ć, š, ž of đ in"
+            },
+            {
+              "kind": "zonder_klinker",
+              "label": "Er staat een woord zonder klinker in, met de r als lettergreep"
+            },
+            {
+              "kind": "geen_dubbele_klinker",
+              "label": "Nergens een dubbele klinker"
+            }
+          ]
         }
       ]
     }

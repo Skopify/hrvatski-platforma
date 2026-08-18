@@ -733,7 +733,22 @@
           "targets": [
             "g.mod.imperative"
           ],
-          "difficulty": 4
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "nemoj",
+                "nemojte"
+              ],
+              "label": "Het vriendelijke verbod gebruikt nemoj"
+            },
+            {
+              "kind": "min_zinnen",
+              "n": 3,
+              "label": "Er staan drie zinnen"
+            }
+          ]
         }
       ]
     }

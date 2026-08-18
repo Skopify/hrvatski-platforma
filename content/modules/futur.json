@@ -710,7 +710,28 @@
           "targets": [
             "g.mod.futur"
           ],
-          "difficulty": 4
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "neću"
+              ],
+              "label": "De ontkenning gebruikt neću, niet «ne ću»"
+            },
+            {
+              "kind": "bevat_woord",
+              "woorden": [
+                "hoćeš"
+              ],
+              "label": "De vraag gebruikt hoćeš li"
+            },
+            {
+              "kind": "min_zinnen",
+              "n": 3,
+              "label": "Er staan drie zinnen"
+            }
+          ]
         }
       ]
     }

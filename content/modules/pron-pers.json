@@ -6,7 +6,10 @@
   "title_nl": "Mij, jou, hem — kort en lang",
   "cefr": "A2/B1",
   "blurb_nl": "Voor «mij», «jou» en «hem» heeft het Kroatisch telkens twee woorden: een kort en een lang. De korte gebruik je bijna altijd. De lange komen erbij als je nadruk legt, en ná een voorzetsel is de lange verplicht. Wie het verschil kent, klinkt meteen minder als een boek.",
-  "prerequisites": ["ACC-ANIM", "DAT-EXPERIENCER"],
+  "prerequisites": [
+    "ACC-ANIM",
+    "DAT-EXPERIENCER"
+  ],
   "can_do_nl": [
     "Ik kan zeggen «ik zie hem» en «hij geeft het mij».",
     "Ik weet wanneer ik de korte vorm gebruik en wanneer de lange.",
@@ -23,15 +26,76 @@
     "contrast_nl": "Het Nederlands doet dit ook, alleen minder zichtbaar: «ik zie 'm» tegenover «ik zie hém». Wij lossen nadruk op met de stem; het Kroatisch heeft er een apart woord voor. En na een voorzetsel is er in het Kroatisch geen keuze meer.",
     "paradigm": {
       "caption_nl": "Lijdend voorwerp en meewerkend voorwerp",
-      "columns": ["kort (lijdend)", "lang (lijdend)", "kort (aan wie)", "lang (aan wie)"],
+      "columns": [
+        "kort (lijdend)",
+        "lang (lijdend)",
+        "kort (aan wie)",
+        "lang (aan wie)"
+      ],
       "rows": [
-        { "label": "ja — ik", "cells": ["me", "mene", "mi", "meni"] },
-        { "label": "ti — jij", "cells": ["te", "tebe", "ti", "tebi"] },
-        { "label": "on — hij", "cells": ["ga", "njega", "mu", "njemu"] },
-        { "label": "ona — zij", "cells": ["je", "nju", "joj", "njoj"] },
-        { "label": "mi — wij", "cells": ["nas", "nas", "nam", "nama"] },
-        { "label": "vi — jullie", "cells": ["vas", "vas", "vam", "vama"] },
-        { "label": "oni — zij", "cells": ["ih", "njih", "im", "njima"] }
+        {
+          "label": "ja — ik",
+          "cells": [
+            "me",
+            "mene",
+            "mi",
+            "meni"
+          ]
+        },
+        {
+          "label": "ti — jij",
+          "cells": [
+            "te",
+            "tebe",
+            "ti",
+            "tebi"
+          ]
+        },
+        {
+          "label": "on — hij",
+          "cells": [
+            "ga",
+            "njega",
+            "mu",
+            "njemu"
+          ]
+        },
+        {
+          "label": "ona — zij",
+          "cells": [
+            "je",
+            "nju",
+            "joj",
+            "njoj"
+          ]
+        },
+        {
+          "label": "mi — wij",
+          "cells": [
+            "nas",
+            "nas",
+            "nam",
+            "nama"
+          ]
+        },
+        {
+          "label": "vi — jullie",
+          "cells": [
+            "vas",
+            "vas",
+            "vam",
+            "vama"
+          ]
+        },
+        {
+          "label": "oni — zij",
+          "cells": [
+            "ih",
+            "njih",
+            "im",
+            "njima"
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -64,7 +128,9 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Elke regel links en rechts gaat over dezelfde persoon, maar het woord is anders:\n\n*ga* tegenover *njega*\n*mi* tegenover *meni*\n*me* tegenover *mene*\n\nDe **korte** vorm is de gewone. Die zeg je als er niets bijzonders aan de hand is: *Vidim ga.*\n\nDe **lange** vorm komt in twee gevallen:\n\n**Eén: als je nadruk legt.** *Njega vidim, ne nju* — hém zie ik, niet haar. In het Nederlands doen we dat met onze stem; het Kroatisch heeft er een apart woord voor.\n\n**Twee: na een voorzetsel.** *Čeka na mene* — daar is geen keuze. Een kort woordje kan niet achter een voorzetsel staan.\n\nDat tweede is het praktische deel: als je *za*, *s*, *o*, *kod* of *na* zegt, weet je meteen dat de lange vorm volgt.",
-          "targets": ["g.mod.pron_pers"]
+          "targets": [
+            "g.mod.pron_pers"
+          ]
         }
       ]
     },
@@ -82,18 +148,82 @@
           "body_nl": "Voor het **lijdend voorwerp** — wie of wat je ziet, hoort, belt:\n\n*me / mene* — mij\n*te / tebe* — jou\n*ga / njega* — hem\n*je / nju* — haar\n*nas* — ons\n*vas* — jullie\n*ih / njih* — hen\n\nVoor het **meewerkend voorwerp** — aan wie je iets geeft of zegt:\n\n*mi / meni* — mij\n*ti / tebi* — jou\n*mu / njemu* — hem\n*joj / njoj* — haar\n*nam / nama* — ons\n*vam / vama* — jullie\n*im / njima* — hen\n\nBij *nas* en *vas* zijn kort en lang toevallig hetzelfde; daar hoef je dus niets te kiezen.\n\nLet op de valkuil bij *mi* en *ti*: die zien er precies zo uit als «wij» en «jij». *Mi* als onderwerp is «wij», *mi* als kort woordje is «aan mij». De plaats in de zin maakt duidelijk welke je voor je hebt.",
           "table": {
             "caption_nl": "Lijdend voorwerp en meewerkend voorwerp",
-            "columns": ["kort (lijdend)", "lang (lijdend)", "kort (aan wie)", "lang (aan wie)"],
+            "columns": [
+              "kort (lijdend)",
+              "lang (lijdend)",
+              "kort (aan wie)",
+              "lang (aan wie)"
+            ],
             "rows": [
-              { "label": "ja — ik", "cells": ["me", "mene", "mi", "meni"] },
-              { "label": "ti — jij", "cells": ["te", "tebe", "ti", "tebi"] },
-              { "label": "on — hij", "cells": ["ga", "njega", "mu", "njemu"] },
-              { "label": "ona — zij", "cells": ["je", "nju", "joj", "njoj"] },
-              { "label": "mi — wij", "cells": ["nas", "nas", "nam", "nama"] },
-              { "label": "vi — jullie", "cells": ["vas", "vas", "vam", "vama"] },
-              { "label": "oni — zij", "cells": ["ih", "njih", "im", "njima"] }
+              {
+                "label": "ja — ik",
+                "cells": [
+                  "me",
+                  "mene",
+                  "mi",
+                  "meni"
+                ]
+              },
+              {
+                "label": "ti — jij",
+                "cells": [
+                  "te",
+                  "tebe",
+                  "ti",
+                  "tebi"
+                ]
+              },
+              {
+                "label": "on — hij",
+                "cells": [
+                  "ga",
+                  "njega",
+                  "mu",
+                  "njemu"
+                ]
+              },
+              {
+                "label": "ona — zij",
+                "cells": [
+                  "je",
+                  "nju",
+                  "joj",
+                  "njoj"
+                ]
+              },
+              {
+                "label": "mi — wij",
+                "cells": [
+                  "nas",
+                  "nas",
+                  "nam",
+                  "nama"
+                ]
+              },
+              {
+                "label": "vi — jullie",
+                "cells": [
+                  "vas",
+                  "vas",
+                  "vam",
+                  "vama"
+                ]
+              },
+              {
+                "label": "oni — zij",
+                "cells": [
+                  "ih",
+                  "njih",
+                  "im",
+                  "njima"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"]
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ]
         },
         {
           "id": "m.pron.011",
@@ -103,16 +233,53 @@
           "body_nl": "**Kort is de gewone keuze.** Zolang je gewoon iets vertelt, gebruik je de korte vorm:\n\n*Vidim ga.* — Ik zie hem.\n*Dao mi je knjigu.* — Hij gaf me een boek.\n*Zovem te sutra.* — Ik bel je morgen.\n\nDie korte vormen zijn dezelfde clitica die je uit de module over de woordvolgorde kent: ze staan op de tweede plek in de zin en nooit vooraan.\n\n**Lang gebruik je in twee gevallen.**\n\n**1. Na een voorzetsel — altijd, zonder uitzondering:**\n*za mene* — voor mij\n*s tobom* — met jou\n*o njemu* — over hem\n*kod nje* — bij haar\n*bez njih* — zonder hen\n\nEén vorm is bijzonder: bij *mnom* wordt het **sa**: *sa mnom* — met mij.\n\n**2. Als je nadruk legt of iets tegenover elkaar zet.** Dan zet je de lange vorm meestal ook vooraan:\n\n*Njega* *vidim, ne nju.* — Hém zie ik, niet haar.\n*Meni* *daj, ne njemu.* — Geef het aan míj, niet aan hem.\n\nEn omdat een kort woordje nooit vooraan kan staan, is dat meteen een handige controle: begint de zin met het voornaamwoord, dan moet het de lange vorm zijn.",
           "table": {
             "caption_nl": "Na een voorzetsel altijd lang",
-            "columns": ["Kroatisch", "Nederlands"],
+            "columns": [
+              "Kroatisch",
+              "Nederlands"
+            ],
             "rows": [
-              { "label": "za", "cells": ["za mene", "voor mij"] },
-              { "label": "s / sa", "cells": ["s tobom, sa mnom", "met jou, met mij"] },
-              { "label": "o", "cells": ["o njemu", "over hem"] },
-              { "label": "kod", "cells": ["kod nje", "bij haar"] },
-              { "label": "bez", "cells": ["bez njih", "zonder hen"] }
+              {
+                "label": "za",
+                "cells": [
+                  "za mene",
+                  "voor mij"
+                ]
+              },
+              {
+                "label": "s / sa",
+                "cells": [
+                  "s tobom, sa mnom",
+                  "met jou, met mij"
+                ]
+              },
+              {
+                "label": "o",
+                "cells": [
+                  "o njemu",
+                  "over hem"
+                ]
+              },
+              {
+                "label": "kod",
+                "cells": [
+                  "kod nje",
+                  "bij haar"
+                ]
+              },
+              {
+                "label": "bez",
+                "cells": [
+                  "bez njih",
+                  "zonder hen"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.pron_pers", "g.mod.instrumental", "g.mod.genitive"]
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.instrumental",
+            "g.mod.genitive"
+          ]
         }
       ]
     },
@@ -136,7 +303,9 @@
             "Er is geen verschil."
           ],
           "explain_nl": "De lange vorm is het accent. In het Nederlands doe je dat met je stem, in het Kroatisch met een ander woord.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -153,7 +322,9 @@
             "Me kan hier ook."
           ],
           "explain_nl": "Een kort woordje kan niet achter een voorzetsel staan. Zodra je za, na, s, o of kod zegt, weet je dat de lange vorm volgt.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -170,7 +341,9 @@
             "Geen van beide."
           ],
           "explain_nl": "B is niet fout, maar zegt iets extra's. Wie overal de lange vorm gebruikt, klinkt alsof hij elk woord onderstreept.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -187,7 +360,10 @@
             "Met mij."
           ],
           "explain_nl": "Mi als eerste woord is «wij»; mi in het trosje korte woordjes is «aan mij». De plaats beslist.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 4
         },
         {
@@ -204,7 +380,10 @@
             "S mnom is ook goed."
           ],
           "explain_nl": "Dezelfde reden als bij sa sestrom. Sa mnom leer je als vaste vorm.",
-          "targets": ["g.mod.pron_pers", "g.mod.instrumental"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.instrumental"
+          ],
           "difficulty": 4
         },
         {
@@ -215,9 +394,16 @@
           "given": "A: Ga vidim.\nB: Njega vidim.\nC: Vidim ga.",
           "nudge": "Eén van de drie begint met een kort woordje.",
           "answer": "A — een korte vorm kan nooit als eerste woord staan.",
-          "distractors": ["B.", "C.", "Alle drie kunnen."],
+          "distractors": [
+            "B.",
+            "C.",
+            "Alle drie kunnen."
+          ],
           "explain_nl": "De korte vormen zijn clitica: ze leunen op het woord ervóór en hebben er dus altijd één nodig.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 4
         }
       ]
@@ -235,9 +421,13 @@
           "prompt_nl": "Vul in: ik zie hem.",
           "given": "Vidim ___.",
           "answer": "ga",
-          "accepts": ["ga"],
+          "accepts": [
+            "ga"
+          ],
           "explain_nl": "Gewone zin, dus de korte vorm.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 1
         },
         {
@@ -247,10 +437,15 @@
           "prompt_nl": "Vul in: hij belt me morgen.",
           "given": "Sutra ___ zove.",
           "answer": "me",
-          "accepts": ["me"],
+          "accepts": [
+            "me"
+          ],
           "hint": "Sutra staat vooraan, dus het korte woordje komt op plek twee.",
           "explain_nl": "Lijdend voorwerp, korte vorm, op de tweede plek.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 3
         },
         {
@@ -260,10 +455,14 @@
           "prompt_nl": "Vul in: voor mij.",
           "given": "Ovo je za ___.",
           "answer": "mene",
-          "accepts": ["mene"],
+          "accepts": [
+            "mene"
+          ],
           "hint": "Er staat een voorzetsel voor.",
           "explain_nl": "Na een voorzetsel altijd de lange vorm.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -273,10 +472,15 @@
           "prompt_nl": "Vul in: met mij.",
           "given": "Ideš li ___ ___?",
           "answer": "sa mnom",
-          "accepts": ["sa mnom"],
+          "accepts": [
+            "sa mnom"
+          ],
           "hint": "Let ook op de vorm van het voorzetsel.",
           "explain_nl": "Sa mnom — met sa, want mnom begint met twee medeklinkers.",
-          "targets": ["g.mod.pron_pers", "g.mod.instrumental"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.instrumental"
+          ],
           "difficulty": 4
         },
         {
@@ -286,9 +490,14 @@
           "prompt_nl": "Vul in: hij gaf haar een boek.",
           "given": "Dao ___ je knjigu.",
           "answer": "joj",
-          "accepts": ["joj"],
+          "accepts": [
+            "joj"
+          ],
           "explain_nl": "Aan wie → het datiefrijtje, korte vorm joj.",
-          "targets": ["g.mod.pron_pers", "v.01.knjiga"],
+          "targets": [
+            "g.mod.pron_pers",
+            "v.01.knjiga"
+          ],
           "difficulty": 3
         },
         {
@@ -298,10 +507,14 @@
           "prompt_nl": "Vul in: over hem.",
           "given": "Govorimo o ___.",
           "answer": "njemu",
-          "accepts": ["njemu"],
+          "accepts": [
+            "njemu"
+          ],
           "hint": "O is een voorzetsel.",
           "explain_nl": "Na o de lange vorm njemu.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -311,10 +524,15 @@
           "prompt_nl": "Vul in met nadruk: aan míj moet je het geven, niet aan hem.",
           "given": "___ daj, ne njemu.",
           "answer": "Meni",
-          "accepts": ["Meni", "meni"],
+          "accepts": [
+            "Meni",
+            "meni"
+          ],
           "hint": "Het staat vooraan én er is een tegenstelling.",
           "explain_nl": "Twee redenen voor de lange vorm tegelijk: nadruk, en een korte vorm kan niet vooraan.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 4
         },
         {
@@ -324,9 +542,16 @@
           "prompt_nl": "Vertaal.",
           "given": "Ik wacht op jou.",
           "answer": "Čekam te.",
-          "accepts": ["Čekam te.", "Čekam te", "Čekam tebe.", "Čekam tebe"],
+          "accepts": [
+            "Čekam te.",
+            "Čekam te",
+            "Čekam tebe.",
+            "Čekam tebe"
+          ],
           "explain_nl": "Čekati heeft in het Kroatisch geen voorzetsel nodig; de korte vorm te is de gewone keuze, tebe legt nadruk.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 4
         },
         {
@@ -336,9 +561,14 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ovo je za me.",
           "answer": "Ovo je za mene.",
-          "accepts": ["Ovo je za mene.", "Ovo je za mene"],
+          "accepts": [
+            "Ovo je za mene.",
+            "Ovo je za mene"
+          ],
           "explain_nl": "Na een voorzetsel kan geen korte vorm staan.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 3
         },
         {
@@ -348,9 +578,17 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Ga vidim svaki dan.",
           "answer": "Vidim ga svaki dan.",
-          "accepts": ["Vidim ga svaki dan.", "Vidim ga svaki dan", "Njega vidim svaki dan.", "Njega vidim svaki dan"],
+          "accepts": [
+            "Vidim ga svaki dan.",
+            "Vidim ga svaki dan",
+            "Njega vidim svaki dan.",
+            "Njega vidim svaki dan"
+          ],
           "explain_nl": "Een kort woordje kan niet vooraan; zet het werkwoord ervoor, of gebruik de lange vorm.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 4
         }
       ]
@@ -368,9 +606,16 @@
           "prompt_nl": "Welke volgorde is goed?",
           "given": "Hij gaf het mij.",
           "answer": "Dao mi ga je.",
-          "distractors": ["Dao ga mi je.", "Dao je mi ga.", "Mi ga dao je."],
+          "distractors": [
+            "Dao ga mi je.",
+            "Dao je mi ga.",
+            "Mi ga dao je."
+          ],
           "explain_nl": "In het trosje staat «aan wie» vóór «wat»: mi ga. En je komt altijd achteraan.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 5
         },
         {
@@ -380,10 +625,14 @@
           "prompt_nl": "Vul beide vormen in: ik zie hem, maar ik praat over haar.",
           "given": "Vidim ___, ali govorim o ___.",
           "answer": "ga njoj",
-          "accepts": ["ga njoj"],
+          "accepts": [
+            "ga njoj"
+          ],
           "hint": "Eén staat los, één staat na een voorzetsel.",
           "explain_nl": "Zonder voorzetsel de korte vorm ga; na o de lange vorm njoj.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 5
         },
         {
@@ -393,9 +642,17 @@
           "prompt_nl": "Vertaal.",
           "given": "Kom je met mij naar de stad?",
           "answer": "Ideš li sa mnom u grad?",
-          "accepts": ["Ideš li sa mnom u grad?", "Ideš li sa mnom u grad"],
+          "accepts": [
+            "Ideš li sa mnom u grad?",
+            "Ideš li sa mnom u grad"
+          ],
           "explain_nl": "Li op de tweede plek, sa mnom als vaste vorm, en grad in de accusatief want er is beweging.",
-          "targets": ["g.mod.pron_pers", "g.mod.q_words", "g.mod.loc_vs_acc", "v.05.grad"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.q_words",
+            "g.mod.loc_vs_acc",
+            "v.05.grad"
+          ],
           "difficulty": 5
         },
         {
@@ -410,7 +667,10 @@
             "Dao sam knjigu."
           ],
           "explain_nl": "Alleen de eerste gebruikt de lange vorm en zet hem vooraan — dat is het accent.",
-          "targets": ["g.mod.pron_pers", "v.01.knjiga"],
+          "targets": [
+            "g.mod.pron_pers",
+            "v.01.knjiga"
+          ],
           "difficulty": 5
         },
         {
@@ -420,10 +680,16 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Čekam na te i idem s te u grad.",
           "answer": "Čekam te i idem s tobom u grad.",
-          "accepts": ["Čekam te i idem s tobom u grad.", "Čekam te i idem s tobom u grad"],
+          "accepts": [
+            "Čekam te i idem s tobom u grad.",
+            "Čekam te i idem s tobom u grad"
+          ],
           "hint": "Čekati heeft geen voorzetsel nodig, en na s hoort een lange vorm.",
           "explain_nl": "Čekam te zonder na, en s tobom met de lange instrumentalisvorm.",
-          "targets": ["g.mod.pron_pers", "g.mod.instrumental"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.instrumental"
+          ],
           "difficulty": 5
         }
       ]
@@ -442,7 +708,11 @@
           "mode": "receptive",
           "prompt_nl": "Wanneer belde de verteller Marko terug?",
           "answer": "Woensdag.",
-          "distractors": ["Dinsdag.", "Donderdag.", "Hij belde niet terug."],
+          "distractors": [
+            "Dinsdag.",
+            "Donderdag.",
+            "Hij belde niet terug."
+          ],
           "explain_nl": "«U srijedu sam ga nazvao.»",
           "targets": [],
           "difficulty": 1
@@ -461,7 +731,9 @@
             "De schrijver wisselt af voor de afwisseling."
           ],
           "explain_nl": "Na een voorzetsel is er geen keuze. Zonder voorzetsel is kort de gewone vorm.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 5
         },
         {
@@ -478,7 +750,10 @@
             "Omdat tebe beleefder klinkt."
           ],
           "explain_nl": "Een korte vorm kan sowieso niet vooraan staan. En Marko zegt hier verwijtend «jíj bent er nooit» — dat is precies waar de lange vorm voor is.",
-          "targets": ["g.mod.pron_pers", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.pron_pers",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 5
         },
         {
@@ -488,10 +763,14 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "Kupio je karte za ___ i čekao ___ pred stadionom.",
           "answer": "nas me",
-          "accepts": ["nas me"],
+          "accepts": [
+            "nas me"
+          ],
           "hint": "De eerste staat na een voorzetsel, de tweede niet.",
           "explain_nl": "Bij nas zijn kort en lang hetzelfde, dus daar valt niets te kiezen; bij het tweede is de korte vorm me de gewone.",
-          "targets": ["g.mod.pron_pers"],
+          "targets": [
+            "g.mod.pron_pers"
+          ],
           "difficulty": 4
         },
         {
@@ -507,8 +786,46 @@
             "Geen enkele zin begint met een kort woordje."
           ],
           "explain_nl": "Wie deze drie uit elkaar houdt, klinkt niet meer alsof hij elk woord onderstreept — en dat is het verschil tussen boekentaal en gewoon praten.",
-          "targets": ["g.mod.pron_pers"],
-          "difficulty": 4
+          "targets": [
+            "g.mod.pron_pers"
+          ],
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "niet_vooraan",
+              "woorden": [
+                "me",
+                "te",
+                "ga",
+                "je",
+                "ju",
+                "ih",
+                "mi",
+                "ti",
+                "mu",
+                "joj",
+                "nam",
+                "vam",
+                "im",
+                "se",
+                "sam",
+                "si",
+                "smo",
+                "ste",
+                "su",
+                "bih",
+                "ću",
+                "ćeš",
+                "će"
+              ],
+              "label": "Geen enkele zin begint met een kort woordje"
+            },
+            {
+              "kind": "min_zinnen",
+              "n": 3,
+              "label": "Er staan drie zinnen"
+            }
+          ]
         }
       ]
     }

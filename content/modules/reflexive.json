@@ -6,7 +6,9 @@
   "title_nl": "Het woordje se",
   "cefr": "A1/A2",
   "blurb_nl": "Eén woordje van twee letters dat je overal tegenkomt en dat nooit verandert. Het draait de handeling terug naar de persoon zelf: zovem Anu is «ik bel Ana», zovem se Ana is «ik heet Ana». Vergeet je het, dan zeg je iets anders — en niet iets vaags.",
-  "prerequisites": ["PRES-CLASSES"],
+  "prerequisites": [
+    "PRES-CLASSES"
+  ],
   "can_do_nl": [
     "Ik kan me voorstellen: Zovem se…",
     "Ik weet dat se voor alle personen hetzelfde blijft.",
@@ -23,13 +25,46 @@
     "contrast_nl": "Het Nederlands heeft hier ook iets voor, maar dat verandert per persoon: ik voel **me**, jij voelt **je**, hij voelt **zich**. In het Kroatisch is het altijd *se*. Dat is één ding minder om te onthouden — maar de plaats in de zin is wél iets om op te letten.",
     "paradigm": {
       "caption_nl": "Se verandert niet mee",
-      "columns": ["zin", "Nederlands"],
+      "columns": [
+        "zin",
+        "Nederlands"
+      ],
       "rows": [
-        { "label": "ja", "cells": ["Zovem se Ana.", "Ik heet Ana."] },
-        { "label": "ti", "cells": ["Kako se zoveš?", "Hoe heet jij?"] },
-        { "label": "on/ona", "cells": ["Zove se Marko.", "Hij heet Marko."] },
-        { "label": "mi", "cells": ["Vraćamo se sutra.", "Wij komen morgen terug."] },
-        { "label": "verleden tijd", "cells": ["Odmorio sam se.", "Ik heb uitgerust."] }
+        {
+          "label": "ja",
+          "cells": [
+            "Zovem se Ana.",
+            "Ik heet Ana."
+          ]
+        },
+        {
+          "label": "ti",
+          "cells": [
+            "Kako se zoveš?",
+            "Hoe heet jij?"
+          ]
+        },
+        {
+          "label": "on/ona",
+          "cells": [
+            "Zove se Marko.",
+            "Hij heet Marko."
+          ]
+        },
+        {
+          "label": "mi",
+          "cells": [
+            "Vraćamo se sutra.",
+            "Wij komen morgen terug."
+          ]
+        },
+        {
+          "label": "verleden tijd",
+          "cells": [
+            "Odmorio sam se.",
+            "Ik heb uitgerust."
+          ]
+        }
       ]
     },
     "pitfalls_nl": [
@@ -62,7 +97,11 @@
           "mode": "receptive",
           "prompt_nl": "Wat valt je op?",
           "body_nl": "Drie keer hetzelfde werkwoord, en drie keer een compleet andere betekenis — door twee letters.\n\n*Zovem Anu* — ik roep of bel iemand.\n*Zovem* **se** *Ana* — ik heet zo.\n\n*Vraćam knjigu* — ik geef iets terug.\n*Vraćam* **se** — ik kom zélf terug.\n\n*Budim dijete* — ik maak iemand wakker.\n*Budim* **se** — ik word zelf wakker.\n\nZie je het patroon? Zonder *se* doe je iets **met iets anders**. Met *se* komt de handeling **bij jezelf** terecht.\n\nDat is geen nuance. Wie *se* vergeet bij «ik heet», zegt letterlijk dat hij iemand aan het bellen is.\n\nEn er is goed nieuws: waar het Nederlands drie vormen heeft — me, je, zich — heeft het Kroatisch er één. Altijd *se*.",
-          "targets": ["g.mod.reflexive", "v.11.vratiti_se", "v.14.buditi_se"]
+          "targets": [
+            "g.mod.reflexive",
+            "v.11.vratiti_se",
+            "v.14.buditi_se"
+          ]
         }
       ]
     },
@@ -80,16 +119,53 @@
           "body_nl": "**Se blijft se.** Voor alle personen, enkelvoud en meervoud:\n\n*Zovem se Ana.* — Ik heet Ana.\n*Kako se zoveš?* — Hoe heet jij?\n*Zove se Marko.* — Hij heet Marko.\n*Zovemo se Ana i Marko.* — Wij heten Ana en Marko.\n\nVergelijk dat met het Nederlands: ik voel **me**, jij voelt **je**, hij voelt **zich**. Eén vorm is een stuk eenvoudiger.\n\n**Waar staat het?** *Se* is een van die korte woordjes die altijd op de **tweede plek** in de zin staan. Wat er op de eerste plek staat, mag van alles zijn:\n\n*Zovem* **se** *Ana.* — het werkwoord staat vooraan\n*Ja* **se** *zovem Ana.* — het voornaamwoord staat vooraan\n*Kako* **se** *zoveš?* — het vraagwoord staat vooraan\n*Danas* **se** *vraćam.* — een tijdsbepaling staat vooraan\n\nIn de **verleden tijd** komt *se* ná het hulpwerkwoord:\n\n*Odmorio* **sam se**. — Ik heb uitgerust.\n*Kako* **si se** *osjećao?* — Hoe voelde je je?\n\nDe volgorde binnen dat trosje korte woordjes ligt vast, en *se* staat daarin bijna achteraan.",
           "table": {
             "caption_nl": "Se op de tweede plek",
-            "columns": ["zin", "wat er vooraan staat"],
+            "columns": [
+              "zin",
+              "wat er vooraan staat"
+            ],
             "rows": [
-              { "label": "1", "cells": ["Zovem se Ana.", "het werkwoord"] },
-              { "label": "2", "cells": ["Ja se zovem Ana.", "het voornaamwoord"] },
-              { "label": "3", "cells": ["Kako se zoveš?", "het vraagwoord"] },
-              { "label": "4", "cells": ["Danas se vraćam.", "een tijdsbepaling"] },
-              { "label": "5", "cells": ["Odmorio sam se.", "se komt ná sam"] }
+              {
+                "label": "1",
+                "cells": [
+                  "Zovem se Ana.",
+                  "het werkwoord"
+                ]
+              },
+              {
+                "label": "2",
+                "cells": [
+                  "Ja se zovem Ana.",
+                  "het voornaamwoord"
+                ]
+              },
+              {
+                "label": "3",
+                "cells": [
+                  "Kako se zoveš?",
+                  "het vraagwoord"
+                ]
+              },
+              {
+                "label": "4",
+                "cells": [
+                  "Danas se vraćam.",
+                  "een tijdsbepaling"
+                ]
+              },
+              {
+                "label": "5",
+                "cells": [
+                  "Odmorio sam se.",
+                  "se komt ná sam"
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order", "v.07.odmarati_se"]
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order",
+            "v.07.odmarati_se"
+          ]
         },
         {
           "id": "m.refl.011",
@@ -99,15 +175,48 @@
           "body_nl": "Sommige werkwoorden hebben *se* altijd bij zich; zonder dat woordje bestaan ze niet of betekenen ze iets anders. Die leer je met *se* erbij, als één woord:\n\n*zvati se* — heten\n*osjećati se* — zich voelen\n*buditi se* — wakker worden\n*tuširati se* — douchen\n*oblačiti se* — zich aankleden\n*odmarati se* — uitrusten\n*vraćati se* — terugkomen\n*baviti se* — zich bezighouden met\n*bojati se* — bang zijn\n*sviđati se* — bevallen\n*dogoditi se* — gebeuren\n\n**En dan een tweede gebruik**, dat je dagelijks nodig hebt. Met *se* kun je iets zeggen zonder te vertellen wie het doet:\n\n*Kako* **se** *kaže «fiets» na hrvatskom?* — Hoe zeg je «fiets» in het Kroatisch?\n*Kako* **se** *to piše?* — Hoe schrijf je dat?\n*Ovdje* **se** *ne puši.* — Hier wordt niet gerookt.\n*Ovdje* **se** *govori hrvatski.* — Hier wordt Kroatisch gesproken.\n\nHet Nederlands doet dit met «men», met «je» of met de lijdende vorm. Het Kroatisch doet het met datzelfde woordje *se*. De eerste twee zinnen zul je in een gesprek voortdurend gebruiken — leer ze als vaste zin.",
           "table": {
             "caption_nl": "Se zonder dat iemand het doet",
-            "columns": ["Kroatisch", "Nederlands"],
+            "columns": [
+              "Kroatisch",
+              "Nederlands"
+            ],
             "rows": [
-              { "label": "vragen", "cells": ["Kako se kaže…?", "Hoe zeg je…?"] },
-              { "label": "vragen", "cells": ["Kako se to piše?", "Hoe schrijf je dat?"] },
-              { "label": "verbod", "cells": ["Ovdje se ne puši.", "Hier wordt niet gerookt."] },
-              { "label": "algemeen", "cells": ["Ovdje se govori hrvatski.", "Hier wordt Kroatisch gesproken."] }
+              {
+                "label": "vragen",
+                "cells": [
+                  "Kako se kaže…?",
+                  "Hoe zeg je…?"
+                ]
+              },
+              {
+                "label": "vragen",
+                "cells": [
+                  "Kako se to piše?",
+                  "Hoe schrijf je dat?"
+                ]
+              },
+              {
+                "label": "verbod",
+                "cells": [
+                  "Ovdje se ne puši.",
+                  "Hier wordt niet gerookt."
+                ]
+              },
+              {
+                "label": "algemeen",
+                "cells": [
+                  "Ovdje se govori hrvatski.",
+                  "Hier wordt Kroatisch gesproken."
+                ]
+              }
             ]
           },
-          "targets": ["g.mod.reflexive", "v.14.tusirati_se", "v.14.oblaciti_se", "v.19.bojati_se", "v.19.svidati_se"]
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.tusirati_se",
+            "v.14.oblaciti_se",
+            "v.19.bojati_se",
+            "v.19.svidati_se"
+          ]
         }
       ]
     },
@@ -131,7 +240,9 @@
             "Ik roep Marko."
           ],
           "explain_nl": "Met se gaat het over jezelf. Zonder se zou je Marko aan het bellen zijn.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 2
         },
         {
@@ -148,7 +259,10 @@
             "Dat staat er niet."
           ],
           "explain_nl": "Zonder se geef je iets terug; met se kom je zelf terug.",
-          "targets": ["g.mod.reflexive", "v.14.vracati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.vracati_se"
+          ],
           "difficulty": 3
         },
         {
@@ -165,7 +279,10 @@
             "B is fout."
           ],
           "explain_nl": "Se schuift niet; het staat altijd op plek twee. Wat er vóór komt te staan, bepaalt waar dat is.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 4
         },
         {
@@ -182,7 +299,9 @@
             "Spreek je Kroatisch?"
           ],
           "explain_nl": "Met se zeg je iets algemeens, zonder te vertellen wie het doet. Dit is de handigste zin uit deze module.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 3
         },
         {
@@ -193,9 +312,15 @@
           "given": "On ___ zove Marko.",
           "nudge": "Denk aan het Nederlands: ik voel me, hij voelt zich. Doet het Kroatisch dat ook?",
           "answer": "Se — het verandert nooit.",
-          "distractors": ["Si.", "Sebe.", "Mu."],
+          "distractors": [
+            "Si.",
+            "Sebe.",
+            "Mu."
+          ],
           "explain_nl": "Waar het Nederlands drie vormen heeft, heeft het Kroatisch er één. Dat scheelt.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 3
         },
         {
@@ -212,7 +337,11 @@
             "Geen van beide; het moet Se sam odmorio zijn."
           ],
           "explain_nl": "De korte woordjes staan in een vaste volgorde, en sam komt vóór se.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order", "v.07.odmarati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order",
+            "v.07.odmarati_se"
+          ],
           "difficulty": 5
         }
       ]
@@ -230,9 +359,13 @@
           "prompt_nl": "Stel jezelf voor: ik heet Ana.",
           "given": "Zovem ___ Ana.",
           "answer": "se",
-          "accepts": ["se"],
+          "accepts": [
+            "se"
+          ],
           "explain_nl": "Zvati se — heten.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 1
         },
         {
@@ -242,9 +375,13 @@
           "prompt_nl": "Vraag hoe iemand heet.",
           "given": "Kako ___ zoveš?",
           "answer": "se",
-          "accepts": ["se"],
+          "accepts": [
+            "se"
+          ],
           "explain_nl": "Se staat op de tweede plek, dus meteen achter het vraagwoord.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 2
         },
         {
@@ -254,9 +391,15 @@
           "prompt_nl": "Vul in: ik word om zeven uur wakker.",
           "given": "___ (buditi se) u sedam sati.",
           "answer": "Budim se",
-          "accepts": ["Budim se", "budim se"],
+          "accepts": [
+            "Budim se",
+            "budim se"
+          ],
           "explain_nl": "Ik-vorm budim, en se erachter op de tweede plek.",
-          "targets": ["g.mod.reflexive", "v.14.buditi_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.buditi_se"
+          ],
           "difficulty": 3
         },
         {
@@ -266,10 +409,15 @@
           "prompt_nl": "Vul in: wij komen morgen terug.",
           "given": "Sutra ___ (vraćati se).",
           "answer": "se vraćamo",
-          "accepts": ["se vraćamo"],
+          "accepts": [
+            "se vraćamo"
+          ],
           "hint": "Sutra staat vooraan, dus wat komt er op plek twee?",
           "explain_nl": "Se staat op de tweede plek, meteen achter sutra.",
-          "targets": ["g.mod.reflexive", "v.14.vracati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.vracati_se"
+          ],
           "difficulty": 4
         },
         {
@@ -279,9 +427,13 @@
           "prompt_nl": "Vul in: hoe voel je je?",
           "given": "Kako ___ (osjećati se)?",
           "answer": "se osjećaš",
-          "accepts": ["se osjećaš"],
+          "accepts": [
+            "se osjećaš"
+          ],
           "explain_nl": "Se meteen achter het vraagwoord, dan het werkwoord.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 4
         },
         {
@@ -291,10 +443,16 @@
           "prompt_nl": "Vul in: ik heb uitgerust. Je bent een man.",
           "given": "Odmorio ___ ___.",
           "answer": "sam se",
-          "accepts": ["sam se"],
+          "accepts": [
+            "sam se"
+          ],
           "hint": "Welke van de twee korte woordjes komt eerst?",
           "explain_nl": "Het hulpwerkwoord sam staat vóór se.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order", "v.07.odmarati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order",
+            "v.07.odmarati_se"
+          ],
           "difficulty": 5
         },
         {
@@ -304,9 +462,13 @@
           "prompt_nl": "Vraag hoe je iets zegt.",
           "given": "Kako ___ kaže «trein» na hrvatskom?",
           "answer": "se",
-          "accepts": ["se"],
+          "accepts": [
+            "se"
+          ],
           "explain_nl": "Met se zeg je iets algemeens: hoe zeg je…?",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 2
         },
         {
@@ -316,9 +478,16 @@
           "prompt_nl": "Vertaal.",
           "given": "Hij heet Marko.",
           "answer": "Zove se Marko.",
-          "accepts": ["Zove se Marko.", "Zove se Marko", "On se zove Marko.", "On se zove Marko"],
+          "accepts": [
+            "Zove se Marko.",
+            "Zove se Marko",
+            "On se zove Marko.",
+            "On se zove Marko"
+          ],
           "explain_nl": "Beide goed: zonder on staat het werkwoord vooraan, met on schuift se erachter.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 3
         },
         {
@@ -328,9 +497,14 @@
           "prompt_nl": "De spreker wil zeggen dat hij Ana heet. Er staat één fout in.",
           "given": "Zovem Ana.",
           "answer": "Zovem se Ana.",
-          "accepts": ["Zovem se Ana.", "Zovem se Ana"],
+          "accepts": [
+            "Zovem se Ana.",
+            "Zovem se Ana"
+          ],
           "explain_nl": "Zonder se zou het betekenen dat hij Ana belt — en dan had er bovendien Anu moeten staan.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 3
         },
         {
@@ -340,9 +514,17 @@
           "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
           "given": "Se zovem Ana.",
           "answer": "Zovem se Ana.",
-          "accepts": ["Zovem se Ana.", "Zovem se Ana", "Ja se zovem Ana.", "Ja se zovem Ana"],
+          "accepts": [
+            "Zovem se Ana.",
+            "Zovem se Ana",
+            "Ja se zovem Ana.",
+            "Ja se zovem Ana"
+          ],
           "explain_nl": "Se kan nooit als eerste woord in de zin staan; het hoort op plek twee.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 4
         }
       ]
@@ -359,9 +541,17 @@
           "mode": "receptive",
           "prompt_nl": "Welke zin betekent «ik breng het boek terug»?",
           "answer": "Vraćam knjigu.",
-          "distractors": ["Vraćam se knjigu.", "Vraćam se.", "Knjiga se vraća."],
+          "distractors": [
+            "Vraćam se knjigu.",
+            "Vraćam se.",
+            "Knjiga se vraća."
+          ],
           "explain_nl": "Hier doe je iets met een ander ding, dus geen se. De laatste zin betekent «het boek wordt teruggebracht».",
-          "targets": ["g.mod.reflexive", "v.14.vracati_se", "v.01.knjiga"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.vracati_se",
+            "v.01.knjiga"
+          ],
           "difficulty": 4
         },
         {
@@ -371,10 +561,16 @@
           "prompt_nl": "Vul in: ik maak het kind wakker en daarna word ik zelf wakker.",
           "given": "Prvo ___ (buditi) dijete, a onda ___ (buditi se) ja.",
           "answer": "budim se budim",
-          "accepts": ["budim se budim"],
+          "accepts": [
+            "budim se budim"
+          ],
           "hint": "In het tweede deel staat er een woordje vooraan dat de plek van se bepaalt.",
           "explain_nl": "Zonder se maak je iemand anders wakker; met se word je zelf wakker. Na «a onda» komt se op de tweede plek.",
-          "targets": ["g.mod.reflexive", "v.14.buditi_se", "v.03.dijete"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.buditi_se",
+            "v.03.dijete"
+          ],
           "difficulty": 5
         },
         {
@@ -384,9 +580,14 @@
           "prompt_nl": "Vertaal.",
           "given": "Hier wordt niet gerookt.",
           "answer": "Ovdje se ne puši.",
-          "accepts": ["Ovdje se ne puši.", "Ovdje se ne puši"],
+          "accepts": [
+            "Ovdje se ne puši.",
+            "Ovdje se ne puši"
+          ],
           "explain_nl": "Met se zeg je het zonder te vertellen wie het doet — precies wat op een bordje staat.",
-          "targets": ["g.mod.reflexive"],
+          "targets": [
+            "g.mod.reflexive"
+          ],
           "difficulty": 4
         },
         {
@@ -402,7 +603,11 @@
             "Se sam jutros tuširao."
           ],
           "explain_nl": "Jutros staat vooraan, dan komt het trosje korte woordjes in vaste volgorde: sam vóór se.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order", "v.14.tusirati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order",
+            "v.14.tusirati_se"
+          ],
           "difficulty": 5
         },
         {
@@ -412,10 +617,16 @@
           "prompt_nl": "Er staan twee fouten in. Schrijf de zin goed.",
           "given": "Kako zoveš se? Ja zovem Ana.",
           "answer": "Kako se zoveš? Ja se zovem Ana.",
-          "accepts": ["Kako se zoveš? Ja se zovem Ana.", "Kako se zoveš? Ja se zovem Ana"],
+          "accepts": [
+            "Kako se zoveš? Ja se zovem Ana.",
+            "Kako se zoveš? Ja se zovem Ana"
+          ],
           "hint": "Twee keer staat se op de verkeerde plek, of ontbreekt het.",
           "explain_nl": "Se hoort in beide zinnen op de tweede plek: achter kako en achter ja.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order"
+          ],
           "difficulty": 5
         }
       ]
@@ -434,7 +645,11 @@
           "mode": "receptive",
           "prompt_nl": "Hoe laat wordt Iva wakker?",
           "answer": "Om zes uur.",
-          "distractors": ["Om zeven uur.", "Om vijf uur.", "Dat staat er niet."],
+          "distractors": [
+            "Om zeven uur.",
+            "Om vijf uur.",
+            "Dat staat er niet."
+          ],
           "explain_nl": "«Budim se u šest.»",
           "targets": [],
           "difficulty": 1
@@ -453,7 +668,11 @@
             "Dat is vrije woordvolgorde."
           ],
           "explain_nl": "Se schuift niet naar het werkwoord toe, maar naar plek twee in de zin. Wat er vooraan staat, bepaalt waar dat is.",
-          "targets": ["g.mod.reflexive", "g.mod.clitic_order", "v.19.ljutiti_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "g.mod.clitic_order",
+            "v.19.ljutiti_se"
+          ],
           "difficulty": 5
         },
         {
@@ -470,7 +689,10 @@
             "De trainer."
           ],
           "explain_nl": "Sommige werkwoorden bestaan alleen mét se. Die leer je als één woord: dogoditi se, bojati se, sviđati se.",
-          "targets": ["g.mod.reflexive", "v.11.dogoditi_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.11.dogoditi_se"
+          ],
           "difficulty": 5
         },
         {
@@ -480,9 +702,14 @@
           "prompt_nl": "Vul aan zoals in de tekst.",
           "given": "Poslije treninga ___ (vraćati se) kući.",
           "answer": "se vraćam",
-          "accepts": ["se vraćam"],
+          "accepts": [
+            "se vraćam"
+          ],
           "explain_nl": "Er staat een bepaling vooraan, dus se komt op plek twee.",
-          "targets": ["g.mod.reflexive", "v.14.vracati_se"],
+          "targets": [
+            "g.mod.reflexive",
+            "v.14.vracati_se"
+          ],
           "difficulty": 4
         },
         {
@@ -497,8 +724,32 @@
             "Se is overal hetzelfde, ongeacht de persoon."
           ],
           "explain_nl": "Met deze drie zinnen kun je jezelf voorstellen en je dag beschrijven — en dat zijn precies de eerste twee dingen die je in een gesprek nodig hebt.",
-          "targets": ["g.mod.reflexive"],
-          "difficulty": 4
+          "targets": [
+            "g.mod.reflexive"
+          ],
+          "difficulty": 4,
+          "checks": [
+            {
+              "kind": "min_voorkomens",
+              "woorden": [
+                "se"
+              ],
+              "n": 3,
+              "label": "Er staan minstens drie werkwoorden met se"
+            },
+            {
+              "kind": "niet_vooraan",
+              "woorden": [
+                "se"
+              ],
+              "label": "Geen enkele zin begint met se"
+            },
+            {
+              "kind": "min_zinnen",
+              "n": 3,
+              "label": "Er staan drie zinnen"
+            }
+          ]
         }
       ]
     }

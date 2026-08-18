@@ -440,6 +440,57 @@ export function SessionRunner({
   );
 }
 
+/**
+ * Wat het programma zelf heeft vastgesteld.
+ *
+ * Elk punt staat er met zijn bevinding bij — «gevonden: prst» in plaats van
+ * alleen een vinkje. Zonder die bevinding is een vinkje een bewering, en dan kun
+ * je niet zien of het over jouw zin gaat of over iets anders.
+ */
+function CheckLijst({ report }: { report?: import("@/app/actions").Feedback["report"] }) {
+  if (!report || (!report.checks.length && !report.suggesties.length)) return null;
+  return (
+    <div className="mb-4">
+      {report.checks.length ? (
+        <>
+          <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            Nagekeken
+          </p>
+          <ul className="mt-2 space-y-1.5">
+            {report.checks.map((c) => (
+              <li key={c.label} className="flex gap-2 text-[13px] leading-snug">
+                <span
+                  aria-hidden
+                  className={`mt-[3px] shrink-0 font-bold ${c.ok ? "text-good" : "text-bad-ink"}`}
+                >
+                  {c.ok ? "✓" : "✗"}
+                </span>
+                <span className="text-ink-secondary">
+                  {c.label}
+                  <span className="text-ink-muted"> — {c.detail}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+      {report.suggesties.length ? (
+        <p className="mt-3 text-[12.5px] leading-relaxed text-ink-muted">
+          Bedoelde je{" "}
+          {report.suggesties.map((s, i) => (
+            <span key={s.geschreven}>
+              {i > 0 ? ", " : ""}
+              <span className="hr-text font-semibold text-ink-secondary">{s.bedoeld}</span> in plaats
+              van <span className="hr-text">{s.geschreven}</span>
+            </span>
+          ))}
+          ? Dat scheelt één teken.
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function FeedbackPanel({
   feedback,
   onAssess,
@@ -455,6 +506,7 @@ function FeedbackPanel({
   if (feedback.selfAssess) {
     return (
       <div className="animate-rise mt-6 rounded-card border border-line bg-sunken px-5 py-5">
+        <CheckLijst report={feedback.report} />
         <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-ink-muted">
           Modelantwoord
         </p>
@@ -469,8 +521,9 @@ function FeedbackPanel({
           </ul>
         ) : null}
         <p className="mt-4 text-[13px] leading-relaxed text-ink-secondary">
-          Voldeed jouw antwoord hieraan? Wees streng — dit oordeel bepaalt wanneer dit
-          terugkomt.
+          {feedback.report?.checks.length
+            ? "De rest gaat over of het een goede zin is, en dat beoordeel jij. Wees streng — dit oordeel bepaalt wanneer dit terugkomt."
+            : "Voldeed jouw antwoord hieraan? Wees streng — dit oordeel bepaalt wanneer dit terugkomt."}
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <button
@@ -602,6 +655,9 @@ function FeedbackPanel({
             </p>
           ) : null}
 
+          <div className="mt-3">
+            <CheckLijst report={feedback.report} />
+          </div>
           {feedback.explain_nl ? (
             <p className="mt-2.5 text-[13px] leading-relaxed text-ink-secondary">
               {feedback.explain_nl}
