@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { SessionRunner, type Step } from "@/components/SessionRunner";
 import { loadModule, type ModulePhase } from "@/lib/modules";
 import { present } from "@/lib/present";
+import { stepsDoneInModule } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
 
@@ -64,11 +65,21 @@ export default async function ModuleSessiePage({
     }
   }
 
+  // Verdergaan waar je gebleven was, precies zoals bij een les: de stappen die
+  // je gehad hebt vallen eruit, de volgorde van de rest blijft staan.
+  const done = stepsDoneInModule(module.code);
+  const remaining = done.size ? steps.filter((s) => !done.has(s.exercise.id)) : steps;
+
+  // Alles gehad zonder dat de module is afgerond — je sloot het tabblad op de
+  // laatste vraag — dan is een lege sessie het slechtste antwoord.
+  const teDoen = remaining.length ? remaining : steps;
+
   return (
     <SessionRunner
-      steps={steps}
+      steps={teDoen}
       kind="review"
       lessonNumber={null}
+      moduleCode={module.code}
       title={`${module.title_nl} · ${module.title_hr}`}
       backHref={`/grammatica/${module.code.toLowerCase()}`}
       doneLabel="Module afgerond"

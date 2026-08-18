@@ -10,6 +10,7 @@ import {
   defaultCardJoin,
   items,
   lessonProgress,
+  moduleProgress,
   profile,
   srs,
   storyProgress,
@@ -417,6 +418,33 @@ export function stepsDoneIn(lesson: number): Set<string> {
     .get();
   if (!row || row.status === "done") return new Set();
   return new Set((row.done as string[] | null) ?? []);
+}
+
+/**
+ * De stappen die je in deze module al gehad hebt — de basis voor hervatten.
+ *
+ * Een afgeronde module geeft een lege verzameling terug: wie hem opnieuw start,
+ * begint vooraan en niet op het eindscherm.
+ */
+export function stepsDoneInModule(code: string): Set<string> {
+  const row = db
+    .select({ done: moduleProgress.stepsDone, completedAt: moduleProgress.completedAt })
+    .from(moduleProgress)
+    .where(eq(moduleProgress.code, code))
+    .get();
+  if (!row || row.completedAt) return new Set();
+  return new Set((row.done as string[] | null) ?? []);
+}
+
+/** Hoeveel stappen er per module gedaan zijn, voor het overzicht. */
+export function moduleProgressMap(): Map<string, number> {
+  return new Map(
+    db
+      .select({ code: moduleProgress.code, done: moduleProgress.stepsDone, completedAt: moduleProgress.completedAt })
+      .from(moduleProgress)
+      .all()
+      .map((r) => [r.code, r.completedAt ? 0 : ((r.done as string[] | null) ?? []).length]),
+  );
 }
 
 /** Leesvoortgang per verhaal, als map op slug. */

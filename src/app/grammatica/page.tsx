@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { Page, PageHeader } from "@/components/ui";
-import { modulesByBand, moduleExercises } from "@/lib/modules";
+import { modulesByBand, moduleExercises, moduleStepCount } from "@/lib/modules";
 import { hasPlacement, moduleStatuses, STATUS_TEXT, type ModuleStatusValue } from "@/lib/placement";
+import { moduleProgressMap } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
 
@@ -23,6 +24,7 @@ const STATUS_STIJL: Record<ModuleStatusValue, string> = {
 export default function GrammaticaPage() {
   const banden = modulesByBand();
   const statussen = moduleStatuses();
+  const voortgang = moduleProgressMap();
   // De banner volgt de uitslagen, niet het bestaan van een afname: wie de toets
   // opent en wegklikt, heeft niets gemeten.
   const gemeten = statussen.size > 0 || hasPlacement();
@@ -101,6 +103,11 @@ export default function GrammaticaPage() {
                 </p>
                 <p className="mt-3 text-[12px] text-ink-muted">
                   {m.phases.length} stappen · {moduleExercises(m).length} opgaven
+                  {voortgang.get(m.code) ? (
+                    <span className="ml-2 font-semibold text-accent">
+                      · begonnen, nog {Math.max(0, moduleStepCount(m) - voortgang.get(m.code)!)}
+                    </span>
+                  ) : null}
                 </p>
               </Link>
             ))}

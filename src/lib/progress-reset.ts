@@ -24,7 +24,19 @@ import { sqlite } from "./db";
 const DB_PATH = path.join(process.cwd(), "data", "hrvatski.db");
 const BACKUP_DIR = path.join(process.cwd(), "data", "backups");
 
-/** Tabellen die voortgang bevatten. `items` staat hier bewust niet bij. */
+/**
+ * Tabellen die voortgang bevatten. `items` staat hier bewust niet bij.
+ *
+ * `card` stond er aanvankelijk óók niet bij, en dat was fout. Een kaart is geen
+ * leerstof maar leerstof-in-omloop: hij zegt dat dit woord in jouw rotatie zit.
+ * Bleef hij staan terwijl zijn SRS-rij verdween, dan hield je een kaart over die
+ * nergens meer opduikt — niet als herhaling, want daarvoor is een SRS-rij nodig,
+ * en niet als nieuw woord, want de kaart bestaat al. Na een reset waren
+ * honderdveertig woorden zo stilletjes uit de omloop verdwenen.
+ *
+ * De volgorde is niet vrij: srs en review_log wijzen naar card, dus die moeten
+ * eerst leeg zijn. Daarom staat card achteraan.
+ */
 const PROGRESS_TABLES = [
   "srs",
   "review_log",
@@ -33,6 +45,8 @@ const PROGRESS_TABLES = [
   "study_sessions",
   "encounters",
   "story_progress",
+  "module_progress",
+  "card",
 ];
 
 export interface ResetResult {

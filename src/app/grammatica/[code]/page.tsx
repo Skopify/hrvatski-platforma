@@ -2,8 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Page, PageHeader } from "@/components/ui";
-import { loadModule, moduleExercises, type ModulePhase } from "@/lib/modules";
+import { loadModule, moduleExercises, moduleStepCount, type ModulePhase } from "@/lib/modules";
 import { moduleStatuses, STATUS_TEXT } from "@/lib/placement";
+import { stepsDoneInModule } from "@/lib/stats";
+import { RestartModule } from "@/components/RestartModule";
 
 export const dynamic = "force-dynamic";
 
@@ -23,6 +25,11 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
 
   const aantal = moduleExercises(module).length;
   const status = moduleStatuses().get(module.code);
+  // Stappen, niet opgaven: een fase met een leestekst begint met die tekst, en
+  // die telt als stap mee in de sessie.
+  const stappen = moduleStepCount(module);
+  const gedaan = stepsDoneInModule(module.code).size;
+  const resterend = Math.max(0, stappen - gedaan);
 
   return (
     <Page>
@@ -91,12 +98,15 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
         </ol>
       </section>
 
-      <Link
-        href={`/grammatica/${module.code.toLowerCase()}/sessie`}
-        className="btn btn-primary inline-flex px-7 py-3 text-[14.5px]"
-      >
-        Module starten
-      </Link>
+      <div className="flex flex-wrap items-center gap-4">
+        <Link
+          href={`/grammatica/${module.code.toLowerCase()}/sessie`}
+          className="btn btn-primary inline-flex px-7 py-3 text-[14.5px]"
+        >
+          {gedaan ? `Hervatten — nog ${resterend} van ${stappen}` : "Module starten"}
+        </Link>
+        {gedaan ? <RestartModule code={module.code} /> : null}
+      </div>
     </Page>
   );
 }

@@ -290,3 +290,14 @@ export const moduleStatus = sqliteTable("module_status", {
   runId: integer("run_id"),
   measuredAt: integer("measured_at").notNull(),
 });
+
+/**
+ * Voortgang per grammaticamodule — zie migratie 008. Dezelfde vorm als
+ * `lesson_progress`, zodat hervatten in beide secties op één manier werkt.
+ */
+export const moduleProgress = sqliteTable("module_progress", {
+  code: text("code").primaryKey(),
+  stepsDone: text("steps_done", { mode: "json" }).notNull().default(sql`'[]'`),
+  startedAt: integer("started_at"),
+  completedAt: integer("completed_at"),
+});

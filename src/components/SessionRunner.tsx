@@ -7,7 +7,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   acknowledgeTeaching,
   completeLesson,
+  completeModule,
   endSession,
+  markModuleStepDone,
   markStepDone,
   markStoryQuizDone,
   selfAssess,
@@ -45,6 +47,7 @@ export function SessionRunner({
   lessonNumber,
   title,
   storySlug,
+  moduleCode,
   backHref,
   doneLabel,
 }: {
@@ -52,6 +55,12 @@ export function SessionRunner({
   kind: "lesson" | "review";
   lessonNumber: number | null;
   title: string;
+  /**
+   * Bij een grammaticamodule: waar de voortgang naartoe gaat. Zonder deze
+   * onthoudt de sessie niets en begin je na het sluiten van het tabblad weer
+   * vooraan — de bug die modules ononderbroken uitzitten verplicht maakte.
+   */
+  moduleCode?: string;
   /** Bij een verhaalquiz: markeert de quiz als afgerond bij het einde. */
   storySlug?: string;
   backHref?: string;
@@ -111,11 +120,14 @@ export function SessionRunner({
     if (kind === "lesson" && lessonNumber !== null) {
       await completeLesson(lessonNumber);
     }
+    if (moduleCode) {
+      await completeModule(moduleCode);
+    }
     if (storySlug) {
       await markStoryQuizDone(storySlug);
     }
     router.refresh();
-  }, [kind, lessonNumber, router, storySlug]);
+  }, [kind, lessonNumber, moduleCode, router, storySlug]);
 
   const advance = useCallback(() => {
     setFeedback(null);
@@ -125,6 +137,9 @@ export function SessionRunner({
     if (kind === "lesson" && lessonNumber !== null && step) {
       void markStepDone(lessonNumber, step.exercise.id);
     }
+    if (moduleCode && step) {
+      void markModuleStepDone(moduleCode, step.exercise.id);
+    }
     if (isLast) {
       void finish();
       return;
@@ -132,7 +147,7 @@ export function SessionRunner({
     const next = index + 1;
     setIndex(next);
     setAnswer(emptyAnswer(steps[next].exercise));
-  }, [finish, index, isLast, kind, lessonNumber, step, steps]);
+  }, [finish, index, isLast, kind, lessonNumber, moduleCode, step, steps]);
 
   /** Terug naar het invoerveld voor de volgende trede; het antwoord blijft staan. */
   const retry = useCallback(() => {
