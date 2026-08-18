@@ -32,10 +32,16 @@ export function StoryReader({
   story,
   comprehensionCount,
   exerciseCount,
+  alGelezen = false,
+  afgerondOp = null,
 }: {
   story: Story;
   comprehensionCount: number;
   exerciseCount: number;
+  /** Al eerder gelezen — dan hoeft de knop naar de vragen niet op «Klaar met lezen» te wachten. */
+  alGelezen?: boolean;
+  /** Wanneer alle vragen gehaald zijn, of null. */
+  afgerondOp?: number | null;
 }) {
   const router = useRouter();
   const tts = useCroatianTts();
@@ -211,7 +217,24 @@ export function StoryReader({
 
       {/* Afronden */}
       <div className="mt-10 border-t border-line pt-7">
-        {justRead ? (
+        {afgerondOp && !justRead ? (
+          <div className="rounded-card border border-good/40 bg-good-wash/50 px-6 py-5">
+            <p className="flex items-center gap-2 text-[14.5px] font-bold text-good">
+              <span aria-hidden>✓</span> Verhaal afgerond op{" "}
+              {new Date(afgerondOp).toLocaleDateString("nl-NL")}
+            </p>
+            <p className="mt-1.5 text-[13px] leading-relaxed text-ink-secondary">
+              Je hebt de leesvragen én de taaloefeningen gehad. Nog een keer doorlopen mag —
+              wat je fout doet, komt gewoon weer in je herhaling terug.
+            </p>
+            <Link
+              href={`/verhalen/${story.slug}/vragen`}
+              className="btn btn-ghost mt-4 inline-flex px-5 py-2.5 text-[14px]"
+            >
+              Vragen nog eens doen ({comprehensionCount + exerciseCount})
+            </Link>
+          </div>
+        ) : justRead ? (
           <div className="hero animate-pop px-6 py-5">
             <p className="flex items-center gap-2 text-[14.5px] font-bold text-ink">
               Gelezen!
@@ -229,26 +252,17 @@ export function StoryReader({
               </p>
             ) : null}
             <p className="mt-1.5 text-[13px] leading-relaxed text-ink-secondary">
-              Twee soorten vragen: begrijpend lezen gaat over wat er staat en wat je
-              eruit kunt afleiden, de taaloefeningen over de vormen.
+              Eerst {comprehensionCount} leesvragen — wat staat er, en wat kun je eruit
+              afleiden — en daarna {exerciseCount} taaloefeningen over de vormen. Het
+              verhaal staat pas op afgerond als je ze allebei gehad hebt.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              {comprehensionCount > 0 ? (
-                <Link
-                  href={`/verhalen/${story.slug}/begrijpen`}
-                  className="btn btn-primary px-5 py-2.5 text-[14px]"
-                >
-                  Begrijpend lezen ({comprehensionCount})
-                </Link>
-              ) : null}
-              {exerciseCount > 0 ? (
+              {comprehensionCount + exerciseCount > 0 ? (
                 <Link
                   href={`/verhalen/${story.slug}/vragen`}
-                  className={`btn px-5 py-2.5 text-[14px] ${
-                    comprehensionCount > 0 ? "btn-ghost" : "btn-primary"
-                  }`}
+                  className="btn btn-primary px-5 py-2.5 text-[14px]"
                 >
-                  Taaloefeningen ({exerciseCount})
+                  Vragen maken ({comprehensionCount + exerciseCount})
                 </Link>
               ) : null}
             </div>
@@ -263,6 +277,14 @@ export function StoryReader({
             >
               Klaar met lezen
             </button>
+            {alGelezen && comprehensionCount + exerciseCount > 0 ? (
+              <Link
+                href={`/verhalen/${story.slug}/vragen`}
+                className="btn btn-ghost px-5 py-2.5 text-[14px]"
+              >
+                Meteen naar de vragen ({comprehensionCount + exerciseCount})
+              </Link>
+            ) : null}
             <p className="text-[12.5px] text-ink-muted">
               Eerste keer lezen levert 20 XP op; daarna kun je door naar de vragen.
             </p>

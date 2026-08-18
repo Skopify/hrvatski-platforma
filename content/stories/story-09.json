@@ -1,0 +1,286 @@
+{
+  "id": "story-09",
+  "slug": "trajekt-za-brac",
+  "series": "Ljeto u Splitu",
+  "part": 4,
+  "title_hr": "Trajekt za Brač",
+  "title_nl": "De veerboot naar Brač",
+  "cefr": "A2.2",
+  "requires_lesson": 14,
+  "blurb_nl": "Een dagtocht naar het eiland, met alles wat een zin ingewikkeld maakt: korte woordjes op hun plek, waarmee je reist en aan wie je iets geeft. Vier naamvallen in vijftien zinnen.",
+  "motif": "izlet",
+  "focus_nl": ["datief", "instrumentalis", "modale werkwoorden", "korte woordjes"],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        { "id": "trajekt-za-brac.p1.s1", "hr": "U srpnju smo išli na Brač.", "nl": "In juli gingen we naar Brač." },
+        { "id": "trajekt-za-brac.p1.s2", "hr": "Trajekt kreće u sedam sati.", "nl": "De veerboot vertrekt om zeven uur." },
+        { "id": "trajekt-za-brac.p1.s3", "hr": "Moramo ustati u pet.", "nl": "We moeten om vijf uur opstaan." },
+        { "id": "trajekt-za-brac.p1.s4", "hr": "Mia ne želi ustati.", "nl": "Mia wil niet opstaan." }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        { "id": "trajekt-za-brac.p2.s1", "hr": "Na trajektu je bilo hladno.", "nl": "Op de veerboot was het koud." },
+        { "id": "trajekt-za-brac.p2.s2", "hr": "Ivo mi je dao svoju jaknu.", "nl": "Ivo gaf mij zijn jas." },
+        { "id": "trajekt-za-brac.p2.s3", "hr": "Rekao je da mu nije hladno.", "nl": "Hij zei dat hij het niet koud had." },
+        { "id": "trajekt-za-brac.p2.s4", "hr": "Lagao je.", "nl": "Hij loog." }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        { "id": "trajekt-za-brac.p3.s1", "hr": "Na Braču smo išli biciklom.", "nl": "Op Brač gingen we met de fiets." },
+        { "id": "trajekt-za-brac.p3.s2", "hr": "Vozili smo se dva sata.", "nl": "We reden twee uur." },
+        { "id": "trajekt-za-brac.p3.s3", "hr": "Otac nas je čekao s ručkom.", "nl": "Vader wachtte ons op met de lunch." },
+        { "id": "trajekt-za-brac.p3.s4", "hr": "Jeli smo ribu s krumpirom.", "nl": "We aten vis met aardappelen." }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        { "id": "trajekt-za-brac.p4.s1", "hr": "Poslijepodne smo plivali.", "nl": "'s Middags zwommen we." },
+        { "id": "trajekt-za-brac.p4.s2", "hr": "Mia se bojala dubine.", "nl": "Mia was bang voor de diepte." },
+        { "id": "trajekt-za-brac.p4.s3", "hr": "Rekao sam joj da je more plitko.", "nl": "Ik zei tegen haar dat de zee ondiep was." },
+        { "id": "trajekt-za-brac.p4.s4", "hr": "Nije mi vjerovala, ali je ušla u vodu.", "nl": "Ze geloofde me niet, maar ze ging het water in." }
+      ]
+    }
+  ],
+  "glossary": {
+    "u": { "hr": "u", "nl": "in, om", "info": "met de locatief bij een plaats of maand; met de accusatief bij beweging" },
+    "srpnju": { "hr": "srpnju", "nl": "juli", "lemma": "srpanj", "info": "locatief van srpanj; de a valt weg", "item": "v.pr9.srpanj" },
+    "smo": { "hr": "smo", "nl": "we hebben, we zijn", "lemma": "biti", "info": "hulpwerkwoord op de tweede plek" },
+    "išli": { "hr": "išli", "nl": "gingen", "lemma": "ići", "info": "onregelmatig deelwoord meervoud; enkelvoud išao, išla" },
+    "na": { "hr": "na", "nl": "naar, op", "info": "met beweging de accusatief, zonder beweging de locatief" },
+    "brač": { "hr": "Brač", "nl": "Brač", "info": "eiland tegenover Split; locatief na Braču" },
+    "trajekt": { "hr": "trajekt", "nl": "veerboot", "info": "mannelijk; locatief na trajektu", "item": "v.pr9.trajekt" },
+    "kreće": { "hr": "kreće", "nl": "vertrekt", "lemma": "kretati", "info": "3e persoon enkelvoud; de t wordt een ć", "item": "v.pr9.kretati" },
+    "sedam": { "hr": "sedam", "nl": "zeven", "info": "vanaf vijf volgt de genitief meervoud: sedam sati" },
+    "sati": { "hr": "sati", "nl": "uur", "lemma": "sat", "info": "genitief meervoud na een getal vanaf vijf; satovi zijn horloges" },
+    "moramo": { "hr": "moramo", "nl": "we moeten", "lemma": "morati", "info": "modaal werkwoord; daarachter komt de infinitief" },
+    "ustati": { "hr": "ustati", "nl": "opstaan", "info": "infinitief; de ik-vorm is ustanem", "item": "v.pr9.ustati" },
+    "pet": { "hr": "pet", "nl": "vijf", "info": "getal; «u pet» is «om vijf uur»" },
+    "mia": { "hr": "Mia", "nl": "Mia", "info": "Luka's zusje" },
+    "ne": { "hr": "ne", "nl": "niet", "info": "los vóór het werkwoord" },
+    "želi": { "hr": "želi", "nl": "wil", "lemma": "željeti", "info": "3e persoon enkelvoud; daarachter de infinitief" },
+    "trajektu": { "hr": "trajektu", "nl": "veerboot", "lemma": "trajekt", "info": "locatief — er is geen beweging, ze zíjn erop" },
+    "je": { "hr": "je", "nl": "is, heeft", "lemma": "biti", "info": "hulpwerkwoord; in het trosje korte woordjes staat het achteraan" },
+    "bilo": { "hr": "bilo", "nl": "was", "lemma": "biti", "info": "onzijdig deelwoord; «bilo je hladno» is «het was koud»" },
+    "hladno": { "hr": "hladno", "nl": "koud", "lemma": "hladan", "info": "onzijdige vorm" },
+    "ivo": { "hr": "Ivo", "nl": "Ivo", "info": "Luka's vriend uit Zagreb" },
+    "mi": { "hr": "mi", "nl": "aan mij", "info": "korte datiefvorm; als eerste woord zou mi «wij» betekenen — de plaats beslist" },
+    "dao": { "hr": "dao", "nl": "gaf", "lemma": "dati", "info": "deelwoord mannelijk; dati vraagt een datief voor wie het krijgt" },
+    "svoju": { "hr": "svoju", "nl": "zijn eigen", "lemma": "svoj", "info": "accusatief vrouwelijk; svoj omdat de eigenaar het onderwerp is" },
+    "jaknu": { "hr": "jaknu", "nl": "jas", "lemma": "jakna", "info": "accusatief van jakna", "item": "v.pr9.jakna" },
+    "rekao": { "hr": "rekao", "nl": "zei", "lemma": "reći", "info": "deelwoord mannelijk van reći; vrouwelijk rekla" },
+    "da": { "hr": "da", "nl": "dat", "info": "voegwoord dat een bijzin inleidt" },
+    "mu": { "hr": "mu", "nl": "aan hem", "info": "korte datiefvorm; «nije mu hladno» is «hij heeft het niet koud»" },
+    "nije": { "hr": "nije", "nl": "is niet", "lemma": "biti", "info": "ontkende vorm" },
+    "lagao": { "hr": "lagao", "nl": "loog", "lemma": "lagati", "info": "deelwoord mannelijk; de ik-vorm is lažem", "item": "v.pr9.lagati" },
+    "braču": { "hr": "Braču", "nl": "Brač", "lemma": "Brač", "info": "locatief — ze zijn er, dus geen beweging meer" },
+    "biciklom": { "hr": "biciklom", "nl": "met de fiets", "lemma": "bicikl", "info": "instrumentalis zonder voorzetsel — bij een vervoermiddel staat er geen s", "item": "v.pr9.bicikl" },
+    "vozili": { "hr": "vozili", "nl": "reden", "lemma": "voziti", "info": "deelwoord meervoud; met se: zelf vervoerd worden" },
+    "se": { "hr": "se", "nl": "zich", "info": "wederkerend woordje; voziti se is «rijden, meerijden»" },
+    "dva": { "hr": "dva", "nl": "twee", "info": "mannelijk en onzijdig; vrouwelijk is dvije" },
+    "sata": { "hr": "sata", "nl": "uur", "lemma": "sat", "info": "genitief enkelvoud na dva, tri en četiri" },
+    "otac": { "hr": "otac", "nl": "vader", "info": "mannelijk; de a valt weg: oca" },
+    "nas": { "hr": "nas", "nl": "ons", "info": "korte vorm van het lijdend voorwerp; kort en lang zijn hier gelijk" },
+    "čekao": { "hr": "čekao", "nl": "wachtte", "lemma": "čekati", "info": "deelwoord mannelijk; čekati vraagt een lijdend voorwerp zonder voorzetsel" },
+    "s": { "hr": "s", "nl": "met", "info": "met de instrumentalis, bij gezelschap of iets wat erbij hoort; vóór s, š, z, ž wordt het sa" },
+    "ručkom": { "hr": "ručkom", "nl": "lunch", "lemma": "ručak", "info": "instrumentalis van ručak; de a valt weg", "item": "v.pr9.rucak" },
+    "jeli": { "hr": "jeli", "nl": "aten", "lemma": "jesti", "info": "deelwoord meervoud" },
+    "ribu": { "hr": "ribu", "nl": "vis", "lemma": "riba", "info": "accusatief van riba", "item": "v.pr9.riba" },
+    "krumpirom": { "hr": "krumpirom", "nl": "aardappel", "lemma": "krumpir", "info": "instrumentalis; met s erbij omdat het geen gereedschap is maar iets wat erbij hoort", "item": "v.pr9.krumpir" },
+    "poslijepodne": { "hr": "poslijepodne", "nl": "'s middags", "info": "bijwoord van tijd" },
+    "plivali": { "hr": "plivali", "nl": "zwommen", "lemma": "plivati", "info": "deelwoord meervoud" },
+    "bojala": { "hr": "bojala", "nl": "was bang", "lemma": "bojati se", "info": "deelwoord vrouwelijk; bojati se vraagt de genitief van waar je bang voor bent" },
+    "dubine": { "hr": "dubine", "nl": "diepte", "lemma": "dubina", "info": "genitief van dubina, gevraagd door bojati se", "item": "v.pr9.dubina" },
+    "sam": { "hr": "sam", "nl": "ik heb, ik ben", "lemma": "biti", "info": "hulpwerkwoord; in het trosje komt het vóór joj" },
+    "joj": { "hr": "joj", "nl": "aan haar", "info": "korte datiefvorm; de lange vorm is njoj" },
+    "more": { "hr": "more", "nl": "zee", "info": "onzijdig" },
+    "plitko": { "hr": "plitko", "nl": "ondiep", "lemma": "plitak", "info": "onzijdige vorm; de a valt weg", "item": "v.pr9.plitak" },
+    "vjerovala": { "hr": "vjerovala", "nl": "geloofde", "lemma": "vjerovati", "info": "deelwoord vrouwelijk; vjerovati vraagt een datief: vjerujem ti", "item": "v.pr9.vjerovati" },
+    "ali": { "hr": "ali", "nl": "maar", "info": "voegwoord" },
+    "ušla": { "hr": "ušla", "nl": "ging naar binnen", "lemma": "ući", "info": "deelwoord vrouwelijk van ući; voltooid — ze ging er echt in" },
+    "vodu": { "hr": "vodu", "nl": "water", "lemma": "voda", "info": "accusatief — u met beweging" }
+  },
+  "culture_nl": {
+    "title_nl": "De trajekt",
+    "body_nl": "De veerboot is in Dalmatië geen toeristenattractie maar openbaar vervoer: eilandbewoners gaan ermee naar de dokter, naar school en naar de markt. In de zomer staan de rijen auto's uren van tevoren klaar, en wie zonder auto reist loopt gewoon aan boord. Het woord «trajekt» is een leenwoord uit het Italiaans, net als veel van wat aan deze kust met water te maken heeft."
+  },
+  "vocab": [
+    { "id": "v.pr9.srpanj", "hr": "srpanj", "nl": "juli", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "srpnja", "nom_pl": "srpnji", "tags": ["tijd", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.trajekt", "hr": "trajekt", "nl": "veerboot", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "trajekta", "nom_pl": "trajekti", "tags": ["reizen", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.jakna", "hr": "jakna", "nl": "jas", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "jakne", "nom_pl": "jakne", "tags": ["kleding", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.bicikl", "hr": "bicikl", "nl": "fiets", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "bicikla", "nom_pl": "bicikli", "tags": ["reizen", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.rucak", "hr": "ručak", "nl": "lunch, warme maaltijd", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ručka", "nom_pl": "ručkovi", "tags": ["eten", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.riba", "hr": "riba", "nl": "vis", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ribe", "nom_pl": "ribe", "tags": ["eten", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.krumpir", "hr": "krumpir", "nl": "aardappel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "krumpira", "nom_pl": "krumpiri", "tags": ["eten", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.dubina", "hr": "dubina", "nl": "diepte", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "dubine", "nom_pl": "dubine", "tags": ["natuur", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.plitak", "hr": "plitak", "nl": "ondiep", "pos": "adj", "tags": ["eigenschap", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.kretati", "hr": "kretati", "nl": "vertrekken, in beweging komen", "pos": "verb", "aspect": "imperfective", "present_1sg": "krećem", "verb_class": "onregelmatig", "tags": ["werkwoord", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.ustati", "hr": "ustati", "nl": "opstaan", "pos": "verb", "aspect": "perfective", "present_1sg": "ustanem", "verb_class": "onregelmatig", "tags": ["werkwoord", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.lagati", "hr": "lagati", "nl": "liegen", "pos": "verb", "aspect": "imperfective", "present_1sg": "lažem", "verb_class": "onregelmatig", "tags": ["werkwoord", "verhaal-09"], "source": "aangevuld" },
+    { "id": "v.pr9.vjerovati", "hr": "vjerovati", "nl": "geloven (+ datief)", "pos": "verb", "aspect": "imperfective", "present_1sg": "vjerujem", "verb_class": "-ovati", "tags": ["werkwoord", "verhaal-09"], "source": "aangevuld" }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr9.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een dagtocht naar het eiland Brač, van vertrek tot het water in.",
+      "distractors": ["Waarom Ivo vaak liegt.", "Hoe de veerboten in Dalmatië werken.", "Mia's angst voor diep water."],
+      "explain_nl": "De tekst loopt van vijf uur 's ochtends tot 's middags in zee. Ivo's leugentje en Mia's angst zijn ieder één moment binnen die dag.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr9.002",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom staat er «Lagao je» na wat Ivo zei?",
+      "given": "Ivo mi je dao svoju jaknu. Rekao je da mu nije hladno. Lagao je.",
+      "answer": "Omdat Ivo zijn jas weggaf terwijl hij het zelf ook koud had.",
+      "distractors": ["Omdat Ivo nooit de waarheid vertelt.", "Omdat het op de veerboot juist warm was.", "Omdat hij de jas van iemand anders had."],
+      "explain_nl": "De drie zinnen staan er niet toevallig in die volgorde. Wie zijn jas weggeeft en zegt dat hij het niet koud heeft, zegt dat om de ander en niet omdat het waar is. Dat maakt van «lagao je» een compliment.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr9.003",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Hoe verplaatsten ze zich op het eiland?",
+      "answer": "Met de fiets.",
+      "distractors": ["Met de veerboot.", "Met de auto van hun vader.", "Te voet."],
+      "explain_nl": "«Na Braču smo išli biciklom.» De veerboot bracht ze naar het eiland, niet erover.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr9.004",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "Naar wie verwijst «joj» in «Rekao sam joj»?",
+      "given": "Mia se bojala dubine. Rekao sam joj da je more plitko.",
+      "answer": "Naar Mia.",
+      "distractors": ["Naar de moeder.", "Naar Ivo.", "Naar de zee."],
+      "explain_nl": "Joj is de korte vorm voor «aan haar». De enige vrouwelijke persoon in de buurt is Mia. Het is geen «zij» als onderwerp — dan had er ona gestaan.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr9.005",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Wat zegt de laatste zin over Mia?",
+      "answer": "Ze ging het water in ondanks dat ze haar broer niet geloofde.",
+      "distractors": ["Ze geloofde hem en durfde daarom.", "Ze bleef aan de kant staan.", "Ze werd boos op hem."],
+      "explain_nl": "«Nije mi vjerovala, ali je ušla u vodu.» Dat «ali» is het hele punt: ze deed het niet omdát ze hem geloofde, maar ondanks dat ze dat niet deed.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr9.006",
+      "skill": "volgorde",
+      "type": "choice",
+      "prompt_nl": "Wat gebeurde er vlak vóór de fietstocht?",
+      "answer": "De overtocht met de veerboot.",
+      "distractors": ["De lunch met hun vader.", "Het zwemmen.", "Het opstaan om vijf uur."],
+      "explain_nl": "De alinea's volgen de dag: opstaan, veerboot, eiland en fiets, middag en water. Opstaan gebeurde eerder, niet vlak ervoor — «vlak vóór» is de val in deze vraag.",
+      "difficulty": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr9.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «biciklom» zonder woordje ervoor, maar «s krumpirom» wel met s?",
+      "answer": "Omdat een vervoermiddel kaal staat en iets wat erbij hoort een s krijgt.",
+      "distractors": ["Omdat bicikl mannelijk is en krumpir vrouwelijk.", "Omdat s alleen bij eten hoort.", "Het is willekeurig; allebei mag."],
+      "explain_nl": "De instrumentalis doet twee dingen. Waarmee je iets doet staat zonder voorzetsel — precies andersom dan het Nederlandse «met». Gezelschap en bijgerechten krijgen s.",
+      "targets": ["g.15.sredstvo"],
+      "difficulty": 5,
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Ivo gaf mij zijn jas.»",
+      "given": "Ivo ___ je dao svoju jaknu.",
+      "answer": "mi",
+      "accepts": ["mi"],
+      "hint": "Wie krijgt de jas?",
+      "explain_nl": "Mi is de korte datiefvorm, «aan mij». In het trosje korte woordjes komt hij vóór je.",
+      "targets": ["g.13.red_klitika"],
+      "difficulty": 4,
+      "audio": "Ivo mi je dao svoju jaknu.",
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «svoju jaknu» en niet «njegovu jaknu»?",
+      "answer": "Omdat de jas van Ivo zelf is, en Ivo het onderwerp van de zin is.",
+      "distractors": ["Omdat jakna vrouwelijk is.", "Omdat svoj beleefder is.", "Omdat hij hem weggeeft."],
+      "explain_nl": "«Njegovu jaknu» zou de jas van een ánder betekenen. Het Nederlands maakt dat verschil niet: «zijn jas» is bij ons allebei.",
+      "targets": ["g.03.posvojne_zamjenice"],
+      "difficulty": 5,
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.004",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Op de veerboot was het koud.»",
+      "given": "Na ___ (trajekt) je bilo hladno.",
+      "answer": "trajektu",
+      "accepts": ["trajektu"],
+      "explain_nl": "Er is geen beweging — ze zijn erop. Dus de locatief: trajektu.",
+      "targets": ["g.10.lokativ"],
+      "difficulty": 3,
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.005",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «dubine» na «bojala se»?",
+      "answer": "Omdat bojati se de genitief vraagt van waar je bang voor bent.",
+      "distractors": ["Omdat dubina vrouwelijk is.", "Omdat het meervoud is.", "Omdat er se bij staat."],
+      "explain_nl": "Een handvol werkwoorden vraagt een vaste naamval die je uit het Nederlands niet kunt raden. Bojati se hoort daarbij: bojim se mraka, bojim se dubine.",
+      "targets": ["g.14.genitiv"],
+      "difficulty": 5,
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.006",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Rekao joj sam da je more plitko.",
+      "answer": "Rekao sam joj da je more plitko.",
+      "accepts": ["Rekao sam joj da je more plitko.", "Rekao sam joj da je more plitko"],
+      "hint": "Welke van de twee korte woordjes komt eerst?",
+      "explain_nl": "In het trosje staat het hulpwerkwoord vóór de datief: sam joj, niet joj sam.",
+      "targets": ["g.13.red_klitika"],
+      "difficulty": 5,
+      "source": "verhaal-09"
+    },
+    {
+      "id": "e.pr9.007",
+      "type": "translate_hr_nl",
+      "mode": "receptive",
+      "prompt_nl": "Vertaal naar het Nederlands.",
+      "given": "Moramo ustati u pet.",
+      "answer": "We moeten om vijf uur opstaan.",
+      "accepts": ["We moeten om vijf uur opstaan.", "We moeten om vijf uur opstaan", "We moeten om 5 uur opstaan."],
+      "explain_nl": "Achter een modaal werkwoord komt de infinitief, zonder «te» ertussen. In Kroatië zeg je dat zo; «moramo da ustanemo» hoor je in Servië en Bosnië.",
+      "targets": ["g.06.morati_smjeti"],
+      "difficulty": 3,
+      "source": "verhaal-09"
+    }
+  ]
+}

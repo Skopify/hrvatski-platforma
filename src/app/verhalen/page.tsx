@@ -111,9 +111,9 @@ export default function StoriesPage() {
                         ) : null}
                         <Pill>{story.cefr}</Pill>
                         {st?.quizDoneAt ? (
-                          <Pill tone="good">Vragen af ✓</Pill>
+                          <Pill tone="good">✓ Afgerond</Pill>
                         ) : st?.readAt ? (
-                          <Pill tone="gold">Gelezen</Pill>
+                          <Pill tone="gold">Gelezen — vragen nog niet</Pill>
                         ) : null}
                       </div>
 
@@ -167,9 +167,9 @@ export default function StoriesPage() {
                         <span className="tabular text-[12px] text-ink-muted">
                           ± {minutes} min · {words} woorden
                         </span>
-                        {story.comprehension?.length ? (
+                        {(story.comprehension?.length ?? 0) + story.exercises.length > 0 ? (
                           <span className="tabular text-[12px] font-semibold text-accent">
-                            {story.comprehension.length} leesvragen
+                            {(story.comprehension?.length ?? 0) + story.exercises.length} vragen
                           </span>
                         ) : null}
                         <span className="text-[12px] text-ink-muted" aria-hidden>

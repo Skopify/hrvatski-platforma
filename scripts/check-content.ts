@@ -17,6 +17,7 @@ import {
   type Exercise,
 } from "../src/lib/content";
 import { conjugateVerb, declineNoun } from "../src/lib/morphology";
+import { loadModules, moduleExercises } from "../src/lib/modules";
 
 const problems: string[] = [];
 const note = (msg: string) => problems.push(msg);
@@ -39,6 +40,23 @@ for (const lesson of lessons) {
     itemIds.add(v.id);
   }
   for (const e of lessonExercises(lesson)) {
+    if (exerciseIds.has(e.id)) note(`Dubbele oefening-id: ${e.id}`);
+    exerciseIds.add(e.id);
+  }
+}
+
+/*
+  De grammaticamodules horen hier ook bij.
+
+  Ze stonden er niet in, en dat was een gat met scherpe randen: hun
+  grammaticapunten worden wél als item geseed, dus een verhaal dat naar
+  g.mod.conditional wijst wérkt in de app — maar deze controle noemde hem
+  onbekend. Een validator die correcte content afkeurt, leert je hem negeren.
+*/
+for (const m of loadModules()) {
+  if (itemIds.has(m.grammar.id)) note(`Dubbele grammatica-id: ${m.grammar.id}`);
+  itemIds.add(m.grammar.id);
+  for (const e of moduleExercises(m)) {
     if (exerciseIds.has(e.id)) note(`Dubbele oefening-id: ${e.id}`);
     exerciseIds.add(e.id);
   }

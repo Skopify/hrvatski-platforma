@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { StoryHeader, StoryReader } from "@/components/StoryReader";
 import { loadStory, storyMinutes, storyWordCount } from "@/lib/content";
 import { Page } from "@/components/ui";
+import { storyStatuses } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +15,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
   // De vragen gaan niet mee naar de browser: antwoorden blijven op de server.
   // De lezer krijgt alleen de aantallen, voor de knoppen na afloop.
   const clientStory = { ...story, exercises: [], comprehension: [] };
+  const status = storyStatuses().get(story.slug);
 
   return (
     <Page width="focus">
@@ -22,6 +24,8 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
         story={clientStory}
         comprehensionCount={story.comprehension?.length ?? 0}
         exerciseCount={story.exercises.length}
+        alGelezen={Boolean(status?.readAt)}
+        afgerondOp={status?.quizDoneAt ?? null}
       />
     </Page>
   );

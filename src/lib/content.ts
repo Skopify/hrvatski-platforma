@@ -191,7 +191,7 @@ export function loadSyllabus(): Syllabus {
 }
 
 export function loadLessons(): Lesson[] {
-  if (lessonsCache) return lessonsCache;
+  if (lessonsCache && process.env.NODE_ENV === "production") return lessonsCache;
   const dir = path.join(CONTENT_DIR, "lessons");
   if (!fs.existsSync(dir)) return (lessonsCache = []);
   const files = fs
@@ -245,7 +245,10 @@ export function loadCaseUsage(): CaseUsage {
 let storiesCache: Story[] | null = null;
 
 export function loadStories(): Story[] {
-  if (storiesCache) return storiesCache;
+  // In ontwikkeling niet cachen: wie een verhaal toevoegt wil het zien zonder de
+  // server te herstarten. Dezelfde afweging als bij loadModules — een cache die
+  // nieuwe content verbergt kost meer tijd dan hij bespaart.
+  if (storiesCache && process.env.NODE_ENV === "production") return storiesCache;
   const dir = path.join(CONTENT_DIR, "stories");
   if (!fs.existsSync(dir)) return (storiesCache = []);
   const files = fs

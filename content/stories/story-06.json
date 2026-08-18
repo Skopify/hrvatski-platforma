@@ -1,0 +1,242 @@
+{
+  "id": "story-06",
+  "slug": "luka-i-more",
+  "series": "Ljeto u Splitu",
+  "part": 1,
+  "title_hr": "Luka i more",
+  "title_nl": "Luka en de zee",
+  "cefr": "A1.1",
+  "requires_lesson": 2,
+  "blurb_nl": "Luka stelt zichzelf, zijn familie en zijn stad voor. Alles staat in de nominatief en er komt geen enkele naamval aan te pas — dit is het eerste verhaal dat je kunt lezen.",
+  "motif": "more",
+  "focus_nl": ["biti", "nominatief", "bijvoeglijke naamwoorden", "bezittelijke voornaamwoorden"],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        { "id": "luka-i-more.p1.s1", "hr": "Bok! Ja sam Luka.", "nl": "Hoi! Ik ben Luka." },
+        { "id": "luka-i-more.p1.s2", "hr": "Ja sam Hrvat.", "nl": "Ik ben Kroaat." },
+        { "id": "luka-i-more.p1.s3", "hr": "Moj grad je Split.", "nl": "Mijn stad is Split." },
+        { "id": "luka-i-more.p1.s4", "hr": "Split je velik i star.", "nl": "Split is groot en oud." }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        { "id": "luka-i-more.p2.s1", "hr": "Ovo je moja obitelj.", "nl": "Dit is mijn familie." },
+        { "id": "luka-i-more.p2.s2", "hr": "Moj otac je ribar. On je jak i tih.", "nl": "Mijn vader is visser. Hij is sterk en stil." },
+        { "id": "luka-i-more.p2.s3", "hr": "Moja majka je učiteljica. Ona je vesela.", "nl": "Mijn moeder is onderwijzeres. Zij is vrolijk." },
+        { "id": "luka-i-more.p2.s4", "hr": "Moja sestra je mala. Ona se zove Mia.", "nl": "Mijn zus is klein. Zij heet Mia." }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        { "id": "luka-i-more.p3.s1", "hr": "More je blizu.", "nl": "De zee is dichtbij." },
+        { "id": "luka-i-more.p3.s2", "hr": "Ljeti je vruće.", "nl": "'s Zomers is het heet." },
+        { "id": "luka-i-more.p3.s3", "hr": "Moj dan je jednostavan: more, kruh, more.", "nl": "Mijn dag is eenvoudig: zee, brood, zee." },
+        { "id": "luka-i-more.p3.s4", "hr": "Ja sam sretan.", "nl": "Ik ben gelukkig." }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        { "id": "luka-i-more.p4.s1", "hr": "A tko je ovo?", "nl": "En wie is dit?" },
+        { "id": "luka-i-more.p4.s2", "hr": "To je Ivo, moj prijatelj.", "nl": "Dat is Ivo, mijn vriend." },
+        { "id": "luka-i-more.p4.s3", "hr": "Ivo nije Splićanin. On je Zagrepčanin.", "nl": "Ivo is geen Splitenaar. Hij is Zagrebber." },
+        { "id": "luka-i-more.p4.s4", "hr": "Ali ljeti je i on naš.", "nl": "Maar 's zomers is hij ook van ons." }
+      ]
+    }
+  ],
+  "glossary": {
+    "bok": { "hr": "bok", "nl": "hoi, dag", "info": "informele groet, bij komen én bij gaan" },
+    "ja": { "hr": "ja", "nl": "ik", "info": "persoonlijk voornaamwoord; meestal weggelaten omdat de uitgang het al zegt" },
+    "sam": { "hr": "sam", "nl": "ben", "lemma": "biti", "info": "1e persoon enkelvoud, korte vorm van biti" },
+    "luka": { "hr": "Luka", "nl": "Luka", "info": "jongensnaam; eindigt op -a maar is mannelijk" },
+    "hrvat": { "hr": "Hrvat", "nl": "Kroaat", "info": "mannelijk; vrouw: Hrvatica" },
+    "moj": { "hr": "moj", "nl": "mijn", "info": "mannelijke vorm — het richt zich naar het bezit, niet naar de bezitter" },
+    "grad": { "hr": "grad", "nl": "stad", "info": "mannelijk; meervoud gradovi" },
+    "je": { "hr": "je", "nl": "is", "lemma": "biti", "info": "3e persoon enkelvoud, korte vorm" },
+    "split": { "hr": "Split", "nl": "Split", "info": "stad aan de Dalmatische kust" },
+    "velik": { "hr": "velik", "nl": "groot", "info": "bijvoeglijk naamwoord, mannelijke vorm" },
+    "i": { "hr": "i", "nl": "en, ook", "info": "vóór één woord betekent het vaak «ook»" },
+    "star": { "hr": "star", "nl": "oud", "info": "bijvoeglijk naamwoord, mannelijke vorm" },
+    "ovo": { "hr": "ovo", "nl": "dit", "info": "aanwijzend voornaamwoord, dichtbij" },
+    "moja": { "hr": "moja", "nl": "mijn", "lemma": "moj", "info": "vrouwelijke vorm, want obitelj is vrouwelijk" },
+    "obitelj": { "hr": "obitelj", "nl": "familie", "info": "vrouwelijk op een medeklinker; genitief obitelji" },
+    "otac": { "hr": "otac", "nl": "vader", "info": "mannelijk; de a valt weg in de andere vormen: oca" },
+    "ribar": { "hr": "ribar", "nl": "visser", "info": "mannelijk; van riba — vis", "item": "v.pr6.ribar" },
+    "on": { "hr": "on", "nl": "hij", "info": "persoonlijk voornaamwoord" },
+    "jak": { "hr": "jak", "nl": "sterk", "info": "vergrotende trap: jači" },
+    "tih": { "hr": "tih", "nl": "stil", "info": "bijvoeglijk naamwoord, mannelijke vorm" },
+    "majka": { "hr": "majka", "nl": "moeder", "info": "vrouwelijk; bezittelijk majčin, met k → č" },
+    "učiteljica": { "hr": "učiteljica", "nl": "onderwijzeres", "info": "vrouwelijk; man: učitelj", "item": "v.pr6.uciteljica" },
+    "ona": { "hr": "ona", "nl": "zij", "info": "persoonlijk voornaamwoord" },
+    "vesela": { "hr": "vesela", "nl": "vrolijk", "lemma": "veseo", "info": "vrouwelijke vorm; de mannelijke vorm is veseo, met een o waar de l stond" },
+    "sestra": { "hr": "sestra", "nl": "zus", "info": "vrouwelijk; genitief meervoud sestara" },
+    "mala": { "hr": "mala", "nl": "klein", "lemma": "mali", "info": "vrouwelijke vorm; vergrotende trap manja" },
+    "se": { "hr": "se", "nl": "zich", "info": "wederkerend woordje; zvati se = heten" },
+    "zove": { "hr": "zove", "nl": "heet", "lemma": "zvati", "info": "3e persoon enkelvoud van zvati; met se: heten" },
+    "mia": { "hr": "Mia", "nl": "Mia", "info": "meisjesnaam" },
+    "more": { "hr": "more", "nl": "zee", "info": "onzijdig; genitief mora" },
+    "blizu": { "hr": "blizu", "nl": "dichtbij", "info": "bijwoord; met een genitief erachter: blizu mora" },
+    "ljeti": { "hr": "ljeti", "nl": "'s zomers", "info": "bijwoord van ljeto — zomer", "item": "v.pr6.ljeti" },
+    "vruće": { "hr": "vruće", "nl": "heet", "info": "onzijdige vorm; «Vruće je» is «het is heet»" },
+    "dan": { "hr": "dan", "nl": "dag", "info": "mannelijk; genitief dana" },
+    "jednostavan": { "hr": "jednostavan", "nl": "eenvoudig", "info": "de a valt weg zodra er een uitgang bij komt: jednostavna" },
+    "kruh": { "hr": "kruh", "nl": "brood", "info": "mannelijk; in Servië hljeb, in Kroatië kruh" },
+    "sretan": { "hr": "sretan", "nl": "gelukkig, blij", "info": "de a valt weg: sretna, sretno" },
+    "a": { "hr": "a", "nl": "en, maar", "info": "verbindt twee dingen die je tegenover elkaar zet — anders dan i" },
+    "tko": { "hr": "tko", "nl": "wie", "info": "vraagwoord voor personen" },
+    "to": { "hr": "to", "nl": "dat", "info": "aanwijzend voornaamwoord; «to je» is «dat is»" },
+    "ivo": { "hr": "Ivo", "nl": "Ivo", "info": "jongensnaam; eindigt op -o maar is mannelijk" },
+    "prijatelj": { "hr": "prijatelj", "nl": "vriend", "info": "mannelijk; aanspreken: prijatelju" },
+    "nije": { "hr": "nije", "nl": "is niet", "lemma": "biti", "info": "ontkenning van je — één woord, niet «ne je»" },
+    "splićanin": { "hr": "Splićanin", "nl": "Splitenaar", "info": "inwoner van Split; vrouw: Splićanka", "item": "v.pr6.splicanin" },
+    "zagrepčanin": { "hr": "Zagrepčanin", "nl": "Zagrebber", "info": "inwoner van Zagreb; vrouw: Zagrepčanka" },
+    "ali": { "hr": "ali", "nl": "maar", "info": "voegwoord" },
+    "naš": { "hr": "naš", "nl": "onze, van ons", "info": "bezittelijk voornaamwoord, mannelijke vorm" }
+  },
+  "culture_nl": {
+    "title_nl": "Splićanin",
+    "body_nl": "Kroaten noemen zich vaak eerst naar hun stad en pas daarna naar hun land. Een Splićanin is niet zomaar iemand uit Split maar iemand met een reputatie: droog, traag, gek op zijn stad en op voetbalclub Hajduk. Zagrepčanin is de tegenhanger uit het noorden. Die rivaliteit is grotendeels vriendelijk, maar de grap gaat altijd over wie het echte Kroatië is."
+  },
+  "vocab": [
+    { "id": "v.pr6.ribar", "hr": "ribar", "nl": "visser", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "ribara", "nom_pl": "ribari", "tags": ["beroep", "verhaal-06"], "source": "aangevuld" },
+    { "id": "v.pr6.uciteljica", "hr": "učiteljica", "nl": "onderwijzeres", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "učiteljice", "nom_pl": "učiteljice", "tags": ["beroep", "verhaal-06"], "source": "aangevuld" },
+    { "id": "v.pr6.splicanin", "hr": "Splićanin", "nl": "Splitenaar", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "Splićanina", "nom_pl": "Splićani", "tags": ["mensen", "verhaal-06"], "source": "aangevuld" },
+    { "id": "v.pr6.ljeti", "hr": "ljeti", "nl": "'s zomers", "pos": "adv", "tags": ["tijd", "verhaal-06"], "source": "aangevuld" }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr6.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Luka laat zien wie hij is en wie er om hem heen zijn.",
+      "distractors": ["Het verschil tussen Split en Zagreb.", "Hoe je in Kroatië vis vangt.", "Waarom de zomer in Dalmatië te heet is."],
+      "explain_nl": "Elke alinea introduceert iets van Luka: hijzelf, zijn familie, zijn dag, zijn vriend. Het verschil tussen Split en Zagreb komt voor, maar in één zin — bij een hoofdgedachtevraag kijk je wat álle alinea's delen, niet wat het meest opvalt.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr6.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat doet Luka's vader?",
+      "answer": "Hij is visser.",
+      "distractors": ["Hij is onderwijzer.", "Hij werkt in Zagreb.", "Dat staat er niet."],
+      "explain_nl": "«Moj otac je ribar.» De onderwijzeres in de tekst is zijn moeder — een afleider die er wél staat maar bij iemand anders hoort.",
+      "difficulty": 1
+    },
+    {
+      "id": "b.pr6.003",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "Naar wie verwijst «ona» in «Ona je vesela»?",
+      "given": "Moja majka je učiteljica. Ona je vesela.",
+      "answer": "Naar de moeder.",
+      "distractors": ["Naar de zus Mia.", "Naar Luka.", "Naar de onderwijzeres op school."],
+      "explain_nl": "Een verwijswoord grijpt terug op het dichtstbijzijnde passende woord dat ervóór staat. Dat is hier majka. Mia komt pas in de volgende zin.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr6.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom zegt Luka «Ali ljeti je i on naš»?",
+      "answer": "Omdat Ivo uit Zagreb komt maar de zomers in Split doorbrengt.",
+      "distractors": ["Omdat Ivo familie van hem is.", "Omdat Ivo ook visser wil worden.", "Omdat Ivo in Split geboren is."],
+      "explain_nl": "Er staat niet letterlijk dat Ivo op bezoek komt. Je leidt het af uit twee dingen samen: Ivo is Zagrepčanin, en tóch is hij «'s zomers van ons». Dat kan alleen als hij er in de zomer is.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr6.005",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Hoe beschrijft Luka zijn dag?",
+      "answer": "Eenvoudig: zee, brood, zee.",
+      "distractors": ["Druk en lang.", "Heet en vervelend.", "Vol met werk op de boot."],
+      "explain_nl": "«Moj dan je jednostavan: more, kruh, more.» De herhaling van more is geen slordigheid maar het grapje van de zin.",
+      "difficulty": 2
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr6.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «moja obitelj» en niet «moj obitelj»?",
+      "answer": "Omdat obitelj vrouwelijk is.",
+      "distractors": ["Omdat een familie uit meer mensen bestaat.", "Omdat Luka een man is.", "Omdat obitelj op een medeklinker eindigt."],
+      "explain_nl": "Obitelj eindigt op een medeklinker en is tóch vrouwelijk — het hoort bij het groepje van noć, stvar en ljubav. Het bezittelijke woordje richt zich naar het bezit, dus moja.",
+      "targets": ["g.noun.gender.nom.sg"],
+      "difficulty": 3,
+      "source": "verhaal-06"
+    },
+    {
+      "id": "e.pr6.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Mijn zus heet Mia.»",
+      "given": "Moja sestra ___ zove Mia.",
+      "answer": "se",
+      "accepts": ["se"],
+      "explain_nl": "Zvati is «roepen»; pas met se wordt het «heten». Zonder se zou er staan dat je zus iemand anders Mia noemt.",
+      "targets": ["g.03.zvati_se"],
+      "difficulty": 2,
+      "audio": "Moja sestra se zove Mia.",
+      "source": "verhaal-06"
+    },
+    {
+      "id": "e.pr6.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Welke vorm hoort bij «Moja majka je ___»?",
+      "answer": "vesela",
+      "distractors": ["veseo", "veselo", "veseli"],
+      "explain_nl": "Majka is vrouwelijk, dus vesela. De mannelijke vorm is veseo — daar werd de l aan het eind een o, net als bij topao.",
+      "targets": ["g.04.pridjevi"],
+      "difficulty": 3,
+      "source": "verhaal-06"
+    },
+    {
+      "id": "e.pr6.004",
+      "type": "translate_hr_nl",
+      "mode": "receptive",
+      "prompt_nl": "Vertaal naar het Nederlands.",
+      "given": "Ivo nije Splićanin.",
+      "answer": "Ivo is geen Splitenaar.",
+      "accepts": ["Ivo is geen Splitenaar.", "Ivo is geen Splitenaar", "Ivo is geen inwoner van Split."],
+      "explain_nl": "Nije is de ontkenning van je, aan elkaar geschreven. «Ne je» bestaat niet.",
+      "targets": ["g.biti.present.negative"],
+      "difficulty": 2,
+      "source": "verhaal-06"
+    },
+    {
+      "id": "e.pr6.005",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "In «Ali ljeti je i on naš» — wat betekent dat woordje «i» hier?",
+      "answer": "ook",
+      "distractors": ["en", "maar", "of"],
+      "explain_nl": "I betekent meestal «en», maar vóór één woord betekent het «ook»: «is hij óók van ons». Dat verschil zie je alleen aan de plaats in de zin.",
+      "targets": [],
+      "difficulty": 4,
+      "source": "verhaal-06"
+    },
+    {
+      "id": "e.pr6.006",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Mijn stad is Split.»",
+      "given": "___ grad je Split.",
+      "answer": "Moj",
+      "accepts": ["Moj", "moj"],
+      "explain_nl": "Grad is mannelijk, dus moj zonder uitgang.",
+      "targets": ["g.03.posvojne_zamjenice"],
+      "difficulty": 2,
+      "source": "verhaal-06"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "story-07",
+  "slug": "sladoled-na-rivi",
+  "series": "Ljeto u Splitu",
+  "part": 2,
+  "title_hr": "Sladoled na rivi",
+  "title_nl": "IJs op de boulevard",
+  "cefr": "A1.2",
+  "requires_lesson": 6,
+  "blurb_nl": "Luka en Ivo bestellen iets op de boulevard. Bijna elk ding in deze tekst is een lijdend voorwerp — je ziet de accusatief hier tien keer langskomen zonder dat het een oefening wordt.",
+  "motif": "trznica",
+  "focus_nl": ["accusatief", "tegenwoordige tijd", "htjeti", "lijdend voorwerp"],
+  "source": "aangevuld",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        { "id": "sladoled-na-rivi.p1.s1", "hr": "Danas je subota.", "nl": "Vandaag is het zaterdag." },
+        { "id": "sladoled-na-rivi.p1.s2", "hr": "Ivo i ja idemo na rivu.", "nl": "Ivo en ik gaan naar de boulevard." },
+        { "id": "sladoled-na-rivi.p1.s3", "hr": "Sunce je jako.", "nl": "De zon is fel." },
+        { "id": "sladoled-na-rivi.p1.s4", "hr": "Imamo novac.", "nl": "We hebben geld." }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        { "id": "sladoled-na-rivi.p2.s1", "hr": "Ivo hoće sladoled.", "nl": "Ivo wil een ijsje." },
+        { "id": "sladoled-na-rivi.p2.s2", "hr": "Ja hoću veliku kavu.", "nl": "Ik wil een grote koffie." },
+        { "id": "sladoled-na-rivi.p2.s3", "hr": "Konobar pita: «Što želite?»", "nl": "De ober vraagt: «Wat wilt u?»" },
+        { "id": "sladoled-na-rivi.p2.s4", "hr": "Ivo kaže: «Jedan sladoled i jednu kavu, molim.»", "nl": "Ivo zegt: «Eén ijsje en één koffie, alstublieft.»" }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        { "id": "sladoled-na-rivi.p3.s1", "hr": "Sladoled je hladan i dobar.", "nl": "Het ijsje is koud en lekker." },
+        { "id": "sladoled-na-rivi.p3.s2", "hr": "Kava je vruća.", "nl": "De koffie is heet." },
+        { "id": "sladoled-na-rivi.p3.s3", "hr": "Gledamo more i brodove.", "nl": "We kijken naar de zee en de boten." },
+        { "id": "sladoled-na-rivi.p3.s4", "hr": "Ivo fotografira turiste.", "nl": "Ivo fotografeert de toeristen." }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        { "id": "sladoled-na-rivi.p4.s1", "hr": "Poslije kupujemo kruh i vodu.", "nl": "Daarna kopen we brood en water." },
+        { "id": "sladoled-na-rivi.p4.s2", "hr": "Mia čeka doma.", "nl": "Mia wacht thuis." },
+        { "id": "sladoled-na-rivi.p4.s3", "hr": "Ona voli kruh, ali ne voli more.", "nl": "Zij houdt van brood, maar niet van de zee." },
+        { "id": "sladoled-na-rivi.p4.s4", "hr": "To je čudno, ali ona je mala.", "nl": "Dat is raar, maar ze is klein." }
+      ]
+    }
+  ],
+  "glossary": {
+    "danas": { "hr": "danas", "nl": "vandaag", "info": "bijwoord van tijd" },
+    "je": { "hr": "je", "nl": "is", "lemma": "biti", "info": "3e persoon enkelvoud, korte vorm" },
+    "subota": { "hr": "subota", "nl": "zaterdag", "info": "vrouwelijk; «op zaterdag» is subotom" },
+    "ivo": { "hr": "Ivo", "nl": "Ivo", "info": "jongensnaam" },
+    "i": { "hr": "i", "nl": "en", "info": "voegwoord" },
+    "ja": { "hr": "ja", "nl": "ik", "info": "persoonlijk voornaamwoord" },
+    "idemo": { "hr": "idemo", "nl": "we gaan", "lemma": "ići", "info": "1e persoon meervoud van ići; het rijtje is idem, ideš, ide, idemo" },
+    "na": { "hr": "na", "nl": "naar, op", "info": "met beweging vraagt na de accusatief: na rivu" },
+    "rivu": { "hr": "rivu", "nl": "boulevard", "lemma": "riva", "info": "accusatief van riva — de a wordt een u", "item": "v.pr7.riva" },
+    "sunce": { "hr": "sunce", "nl": "zon", "info": "onzijdig; genitief sunca", "item": "v.pr7.sunce" },
+    "jako": { "hr": "jako", "nl": "fel, sterk", "lemma": "jak", "info": "onzijdige vorm, want sunce is onzijdig" },
+    "imamo": { "hr": "imamo", "nl": "we hebben", "lemma": "imati", "info": "1e persoon meervoud; ontkennend nemamo, aan elkaar" },
+    "novac": { "hr": "novac", "nl": "geld", "info": "mannelijk; de a valt weg: novca", "item": "v.pr7.novac" },
+    "hoće": { "hr": "hoće", "nl": "wil", "lemma": "htjeti", "info": "3e persoon enkelvoud; ontkennend neće" },
+    "sladoled": { "hr": "sladoled", "nl": "ijs, ijsje", "info": "mannelijk en niet levend — de accusatief is gelijk aan de nominatief", "item": "v.pr7.sladoled" },
+    "hoću": { "hr": "hoću", "nl": "ik wil", "lemma": "htjeti", "info": "1e persoon enkelvoud; ontkennend neću" },
+    "veliku": { "hr": "veliku", "nl": "grote", "lemma": "velik", "info": "accusatief vrouwelijk — het bijvoeglijk naamwoord buigt mee met kavu" },
+    "kavu": { "hr": "kavu", "nl": "koffie", "lemma": "kava", "info": "accusatief van kava" },
+    "konobar": { "hr": "konobar", "nl": "ober", "info": "mannelijk; vrouw: konobarica", "item": "v.pr7.konobar" },
+    "pita": { "hr": "pita", "nl": "vraagt", "lemma": "pitati", "info": "3e persoon enkelvoud van pitati" },
+    "što": { "hr": "što", "nl": "wat", "info": "vraagwoord voor dingen; voor personen is het tko" },
+    "želite": { "hr": "želite", "nl": "wenst u, willen jullie", "lemma": "željeti", "info": "2e persoon meervoud — ook de beleefde vorm tegen één persoon", "item": "v.pr7.zeljeti" },
+    "kaže": { "hr": "kaže", "nl": "zegt", "lemma": "kazati", "info": "3e persoon enkelvoud; de z wordt een ž" },
+    "jedan": { "hr": "jedan", "nl": "één", "info": "mannelijke vorm, hier bij sladoled" },
+    "jednu": { "hr": "jednu", "nl": "één", "lemma": "jedan", "info": "accusatief vrouwelijk — jedan buigt mee als een bijvoeglijk naamwoord" },
+    "molim": { "hr": "molim", "nl": "alstublieft, graag", "lemma": "moliti", "info": "letterlijk «ik vraag»; ook het antwoord op hvala" },
+    "hladan": { "hr": "hladan", "nl": "koud", "info": "de a valt weg zodra er een uitgang bij komt: hladna" },
+    "dobar": { "hr": "dobar", "nl": "goed, lekker", "info": "de a valt weg: dobra, dobro" },
+    "kava": { "hr": "kava", "nl": "koffie", "info": "vrouwelijk; in Servië kafa, in Bosnië kahva" },
+    "vruća": { "hr": "vruća", "nl": "heet", "lemma": "vruć", "info": "vrouwelijke vorm, want kava is vrouwelijk" },
+    "gledamo": { "hr": "gledamo", "nl": "we kijken", "lemma": "gledati", "info": "gledati vraagt een lijdend voorwerp, zonder voorzetsel" },
+    "more": { "hr": "more", "nl": "zee", "info": "onzijdig — de accusatief is gelijk aan de nominatief" },
+    "brodove": { "hr": "brodove", "nl": "boten", "lemma": "brod", "info": "accusatief meervoud; het meervoud brodovi is lang, want brod heeft één lettergreep" },
+    "fotografira": { "hr": "fotografira", "nl": "fotografeert", "lemma": "fotografirati", "info": "3e persoon enkelvoud" },
+    "turiste": { "hr": "turiste", "nl": "toeristen", "lemma": "turist", "info": "accusatief meervoud van turist", "item": "v.pr7.turist" },
+    "poslije": { "hr": "poslije", "nl": "daarna, na", "info": "bijwoord; als voorzetsel vraagt het de genitief" },
+    "kupujemo": { "hr": "kupujemo", "nl": "we kopen", "lemma": "kupovati", "info": "1e persoon meervoud; de ik-vorm is kupujem" },
+    "kruh": { "hr": "kruh", "nl": "brood", "info": "mannelijk en niet levend — accusatief gelijk aan nominatief" },
+    "vodu": { "hr": "vodu", "nl": "water", "lemma": "voda", "info": "accusatief van voda" },
+    "mia": { "hr": "Mia", "nl": "Mia", "info": "meisjesnaam; Luka's zusje" },
+    "čeka": { "hr": "čeka", "nl": "wacht", "lemma": "čekati", "info": "čekati vraagt een lijdend voorwerp zonder voorzetsel: čekam te" },
+    "doma": { "hr": "doma", "nl": "thuis", "info": "bijwoord; «naar huis» is kući" },
+    "ona": { "hr": "ona", "nl": "zij", "info": "persoonlijk voornaamwoord" },
+    "voli": { "hr": "voli", "nl": "houdt van", "lemma": "voljeti", "info": "3e persoon enkelvoud; de ik-vorm is volim" },
+    "ali": { "hr": "ali", "nl": "maar", "info": "voegwoord" },
+    "ne": { "hr": "ne", "nl": "niet", "info": "los vóór het werkwoord — behalve bij biti, imati en htjeti" },
+    "to": { "hr": "to", "nl": "dat", "info": "aanwijzend voornaamwoord" },
+    "čudno": { "hr": "čudno", "nl": "raar, vreemd", "lemma": "čudan", "info": "onzijdige vorm; de a valt weg" },
+    "mala": { "hr": "mala", "nl": "klein", "lemma": "mali", "info": "vrouwelijke vorm" }
+  },
+  "culture_nl": {
+    "title_nl": "De riva",
+    "body_nl": "Elke Dalmatische stad heeft een riva: de brede promenade tussen de huizen en het water. Hij is geen bezienswaardigheid maar de huiskamer van de stad — je gaat er heen om gezien te worden, niet om ergens te komen. Het werkwoord daarvoor is «šetati», wandelen zonder doel, en in Split doet men dat 's avonds massaal en langzaam."
+  },
+  "vocab": [
+    { "id": "v.pr7.riva", "hr": "riva", "nl": "boulevard, promenade", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "rive", "nom_pl": "rive", "tags": ["stad", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.sunce", "hr": "sunce", "nl": "zon", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "sunca", "nom_pl": "sunca", "tags": ["natuur", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.novac", "hr": "novac", "nl": "geld", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "novca", "nom_pl": "novci", "tags": ["dagelijks", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.sladoled", "hr": "sladoled", "nl": "ijs, ijsje", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "sladoleda", "nom_pl": "sladoledi", "tags": ["eten", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.konobar", "hr": "konobar", "nl": "ober", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "konobara", "nom_pl": "konobari", "tags": ["beroep", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.turist", "hr": "turist", "nl": "toerist", "pos": "noun", "gender": "m", "animacy": "animate", "declension": "a", "gen_sg": "turista", "nom_pl": "turisti", "tags": ["mensen", "verhaal-07"], "source": "aangevuld" },
+    { "id": "v.pr7.zeljeti", "hr": "željeti", "nl": "wensen, willen", "pos": "verb", "aspect": "imperfective", "present_1sg": "želim", "verb_class": "-jeti", "tags": ["werkwoord", "verhaal-07"], "source": "aangevuld" }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr7.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een gewone zaterdagmiddag van twee vrienden op de boulevard.",
+      "distractors": ["Hoe je in Kroatië koffie bestelt.", "Waarom Mia niet van de zee houdt.", "Het werk van een ober in Split."],
+      "explain_nl": "De bestelling is één alinea van de vier, en Mia is één zin. Bij een hoofdgedachtevraag zoek je wat het geheel bij elkaar houdt — hier: wat ze die middag doen.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr7.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat bestelt Luka?",
+      "answer": "Een grote koffie.",
+      "distractors": ["Een ijsje.", "Brood en water.", "Niets — hij heeft geen geld."],
+      "explain_nl": "«Ja hoću veliku kavu.» Het ijsje is van Ivo. Het brood en het water kopen ze pas daarna, en samen.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr7.003",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "Naar wie verwijst «ona» in de laatste alinea?",
+      "given": "Mia čeka doma. Ona voli kruh, ali ne voli more.",
+      "answer": "Naar Mia.",
+      "distractors": ["Naar de moeder.", "Naar de ober.", "Naar Luka's zus én zijn moeder samen."],
+      "explain_nl": "Ona is vrouwelijk enkelvoud en grijpt terug op het dichtstbijzijnde vrouwelijke woord ervoor: Mia. Verderop in de alinea blijft dezelfde ona doorlopen.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr7.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom vindt Luka het raar dat Mia niet van de zee houdt?",
+      "answer": "Omdat ze in Split woont, waar de zee overal is.",
+      "distractors": ["Omdat hun vader visser is en zij dus wel moet.", "Omdat ze wel van brood houdt.", "Omdat het in de zomer heet is."],
+      "explain_nl": "Dat staat er niet met zoveel woorden. Je leidt het af uit het eerste verhaal en uit deze tekst samen: dit gezin leeft aan zee, dus een kind dat de zee niet moet is een uitzondering.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr7.005",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat doet Ivo terwijl ze naar het water kijken?",
+      "answer": "Hij fotografeert de toeristen.",
+      "distractors": ["Hij fotografeert de boten.", "Hij bestelt nog een ijsje.", "Hij belt naar huis."],
+      "explain_nl": "«Gledamo more i brodove. Ivo fotografira turiste.» De boten kijken ze samen aan; de foto's gaan over de mensen. Een afleider die vlak naast het goede antwoord staat.",
+      "difficulty": 3
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr7.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «na rivu» en niet «na rivi»?",
+      "answer": "Omdat ze ernaartoe gaan — beweging vraagt de accusatief.",
+      "distractors": ["Omdat riva vrouwelijk is.", "Omdat na altijd de accusatief vraagt.", "Omdat het over de zomer gaat."],
+      "explain_nl": "Na kan twee naamvallen krijgen. Met beweging de accusatief (na rivu — naar de boulevard), zonder beweging de locatief (na rivi — op de boulevard).",
+      "targets": ["g.07.za_akuzativ"],
+      "difficulty": 4,
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Ik wil een grote koffie.»",
+      "given": "Ja hoću ___ (velik) kavu.",
+      "answer": "veliku",
+      "accepts": ["veliku"],
+      "explain_nl": "Kavu staat in de accusatief, dus het bijvoeglijk naamwoord buigt mee: veliku.",
+      "targets": ["g.04.pridjevi"],
+      "difficulty": 3,
+      "audio": "Ja hoću veliku kavu.",
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom verandert «kruh» niet in de zin «Kupujemo kruh»?",
+      "answer": "Omdat kruh mannelijk en niet levend is; dan is de accusatief gelijk aan de nominatief.",
+      "distractors": ["Omdat kruh geen meervoud heeft.", "Omdat het achter kupovati staat.", "Omdat het een kort woord is."],
+      "explain_nl": "Vergelijk met turiste in dezelfde tekst: dat zijn mensen, dus daar verandert de vorm wél. Levend of niet is het enige wat telt bij mannelijke woorden.",
+      "targets": ["g.05.akuzativ.nezivo"],
+      "difficulty": 4,
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.004",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Daarna kopen we brood en water.»",
+      "given": "Poslije kupujemo kruh i ___ (voda).",
+      "answer": "vodu",
+      "accepts": ["vodu"],
+      "explain_nl": "Voda is vrouwelijk op -a; in de accusatief wordt die a een u.",
+      "targets": ["g.08.akuzativ.objekt"],
+      "difficulty": 2,
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.005",
+      "type": "translate_hr_nl",
+      "mode": "receptive",
+      "prompt_nl": "Vertaal naar het Nederlands.",
+      "given": "Ivo fotografira turiste.",
+      "answer": "Ivo fotografeert de toeristen.",
+      "accepts": ["Ivo fotografeert de toeristen.", "Ivo fotografeert de toeristen", "Ivo fotografeert toeristen."],
+      "explain_nl": "Turiste is het meervoud als lijdend voorwerp. In de nominatief zou er turisti staan.",
+      "targets": ["v.pr7.turist"],
+      "difficulty": 3,
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.006",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Hoe zeg je «ik wil niet» als tegenhanger van hoću?",
+      "answer": "neću",
+      "distractors": ["ne hoću", "nisam hoću", "ne ću"],
+      "explain_nl": "Htjeti hoort bij het kleine groepje dat zijn ontkenning vastplakt: biti → nisam, imati → nemam, htjeti → neću.",
+      "targets": ["g.06.modalni"],
+      "difficulty": 3,
+      "source": "verhaal-07"
+    },
+    {
+      "id": "e.pr7.007",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul het werkwoord in: «We gaan naar de boulevard.»",
+      "given": "Ivo i ja ___ (ići) na rivu.",
+      "answer": "idemo",
+      "accepts": ["idemo"],
+      "hint": "De ik-vorm van ići is idem.",
+      "explain_nl": "Ići is onregelmatig: idem, ideš, ide, idemo, idete, idu.",
+      "targets": ["g.07.za_akuzativ"],
+      "difficulty": 3,
+      "source": "verhaal-07"
+    }
+  ]
+}
