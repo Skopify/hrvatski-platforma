@@ -301,3 +301,17 @@ export const moduleProgress = sqliteTable("module_progress", {
   startedAt: integer("started_at"),
   completedAt: integer("completed_at"),
 });
+
+/**
+ * Het nakijkregister — zie migratie 009. Sleutel is de zin zelf: verandert de
+ * zin, dan vervalt het oordeel erover.
+ */
+export const zinReview = sqliteTable("zin_review", {
+  hash: text("hash").primaryKey(),
+  hr: text("hr").notNull(),
+  /** "goedgekeurd" | "fout" | "twijfel". */
+  status: text("status").notNull(),
+  correctie: text("correctie"),
+  opmerking: text("opmerking"),
+  nagekekenOp: integer("nagekeken_op").notNull(),
+});

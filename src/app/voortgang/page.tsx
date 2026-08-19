@@ -1,9 +1,10 @@
 import { AreaChart, BarList, LineChart, StatTile } from "@/components/charts";
-import { Bolt, Page, PageHeader } from "@/components/ui";
+import { Bolt, Page, PageHeader, SectionHead } from "@/components/ui";
 import { VoiceCheck } from "@/components/VoiceCheck";
 import { VoiceLab } from "@/components/VoiceLab";
 import { ResetProgress } from "@/components/ResetProgress";
 import { milestones, type Milestone } from "@/lib/milestones";
+import { stand } from "@/lib/nakijken";
 import { progressSummary } from "@/lib/progress-reset";
 import {
   dailyStats,
@@ -27,6 +28,7 @@ export const dynamic = "force-dynamic";
 const GROUPS: Milestone["group"][] = ["Volhouden", "Woordenschat", "Vakmanschap", "Verhalen"];
 
 export default function ProgressPage() {
+  const nakijkstand = stand();
   const profile = getProfile();
   const { rank, next } = rankFor(profile.xp);
   const accuracy = overallAccuracy();
@@ -323,6 +325,48 @@ export default function ProgressPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/*
+        Hoeveel van het Kroatisch dat ik zelf schreef, is door een
+        moedertaalspreker gelezen?
+
+        Deze balk staat hier omdat hij anders nergens staat. Alle andere
+        getallen op deze pagina gaan over wat de leerder heeft gedaan; dit gaat
+        over hoe betrouwbaar het materiaal is dat hij daarvoor gebruikt. Nul is
+        een eerlijk antwoord, en het is beter zichtbaar dan weggelaten.
+      */}
+      <section className="card mb-8 px-6 py-6">
+        <SectionHead
+          title="Nagekeken Kroatisch"
+          hint="De grammaticamodules en de verhalen heb ik geschreven, niet het leerboek. Wat een moedertaalspreker heeft gelezen, staat hier."
+          action={{ href: "/nakijken", label: "Nakijkscherm" }}
+        />
+        <p className="text-[13.5px] leading-relaxed text-ink-secondary">
+          {nakijkstand.totaal - nakijkstand.open === 0 ? (
+            <>
+              Van de <strong className="text-ink">{nakijkstand.totaal}</strong> zinnen die ik zelf
+              schreef is er nog <strong className="text-ink">geen enkele</strong> door een Kroaat
+              gelezen. De machinecontrole vond er geen fouten in — maar die kan alleen zien of
+              woorden bestaan en of voorzetsels de goede naamval krijgen, niet of een zin klinkt
+              zoals iemand het echt zou zeggen.
+            </>
+          ) : (
+            <>
+              <strong className="text-ink">{nakijkstand.totaal - nakijkstand.open}</strong> van de{" "}
+              {nakijkstand.totaal} zinnen nagekeken: {nakijkstand.goedgekeurd} goedgekeurd,{" "}
+              {nakijkstand.fout} met een fout, {nakijkstand.twijfel} onder voorbehoud.
+            </>
+          )}
+        </p>
+        <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-sunken">
+          <div
+            className="h-full rounded-full bg-accent transition-[width] duration-700"
+            style={{
+              width: `${((nakijkstand.totaal - nakijkstand.open) / Math.max(1, nakijkstand.totaal)) * 100}%`,
+            }}
+          />
         </div>
       </section>
 

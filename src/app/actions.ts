@@ -16,6 +16,15 @@ import { highestActiveLesson } from "@/lib/stats";
 import { db } from "@/lib/db";
 import type { DrillFeedback, DrillKind, DrillQuestion } from "@/lib/drills";
 import { brojAccepts, brojHr } from "@/lib/numbers";
+import {
+  bewaarOordeel,
+  stand,
+  verwijderOordeel,
+  volgendeBatch,
+  type ReviewStatus,
+  type Stand,
+  type Zin,
+} from "@/lib/nakijken";
 import { resetProgress } from "@/lib/progress-reset";
 import {
   attempts,
@@ -1160,4 +1169,35 @@ export async function restartModule(code: string): Promise<void> {
       set: { stepsDone: [], startedAt: Date.now(), completedAt: null },
     })
     .run();
+}
+
+/* ---------------------------------------------------------------- nakijken --- */
+
+/**
+ * Eén oordeel van de nakijker vastleggen.
+ *
+ * Schrijft naar `zin_review` en verder nergens heen. De content blijft staan
+ * zoals ze staat, ook als de nakijker zegt dat er iets fout is — een correctie
+ * is soms «dit woord moet anders» en soms «zo zegt niemand dat», en dat
+ * verschil kan geen automaat wegen. `npm run nakijk-oogst` legt de oordelen
+ * naast de contentbestanden zodat ik ze met de hand verwerk.
+ */
+export async function bewaarNakijkOordeel(
+  hash: string,
+  hr: string,
+  status: ReviewStatus,
+  correctie?: string,
+  opmerking?: string,
+): Promise<void> {
+  bewaarOordeel(hash, hr, status, correctie, opmerking);
+}
+
+/** Een oordeel terugdraaien — de nakijker die zich vergist heeft. */
+export async function wisNakijkOordeel(hash: string): Promise<void> {
+  verwijderOordeel(hash);
+}
+
+/** De volgende stapel, nadat de vorige af is. */
+export async function volgendeNakijkBatch(grootte = 20): Promise<{ zinnen: Zin[]; stand: Stand }> {
+  return { zinnen: volgendeBatch(grootte), stand: stand() };
 }
