@@ -28,3 +28,6 @@ data/
 *.env
 azure.env
 secrets/
+
+# voorstellen van npm run gloss — werkbestanden, geen content
+.gloss/

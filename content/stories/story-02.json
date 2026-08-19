@@ -37,6 +37,11 @@
         },
         {
           "id": "nina-ide-na-trznicu.p1.s4",
+          "hr": "Dolac je velika tržnica u centru grada.",
+          "nl": "Dolac is een grote markt in het centrum van de stad."
+        },
+        {
+          "id": "nina-ide-na-trznicu.p1.s5",
           "hr": "Ona treba mlijeko i kruh.",
           "nl": "Ze heeft melk en brood nodig."
         }
@@ -57,18 +62,28 @@
         },
         {
           "id": "nina-ide-na-trznicu.p2.s3",
-          "hr": "Prodavačica pita: „Što želite, gospođo?“",
-          "nl": "De marktvrouw vraagt: \"Wat wenst u, mevrouw?\""
+          "hr": "Rajčice su lijepe i crvene.",
+          "nl": "De tomaten zijn mooi en rood."
         },
         {
           "id": "nina-ide-na-trznicu.p2.s4",
-          "hr": "„Želim jednu rajčicu i jednu jabuku, molim.“",
-          "nl": "\"Ik wil één tomaat en één appel, graag.\""
+          "hr": "Prodavačica pita: „Što želite, gospođo?“",
+          "nl": "De marktvrouw vraagt: „Wat wenst u, mevrouw?”"
         },
         {
           "id": "nina-ide-na-trznicu.p2.s5",
+          "hr": "„Želim jednu rajčicu i jednu jabuku, molim.“",
+          "nl": "„Ik wil één tomaat en één appel, graag.”"
+        },
+        {
+          "id": "nina-ide-na-trznicu.p2.s6",
           "hr": "„Izvolite!“",
-          "nl": "\"Alstublieft!\""
+          "nl": "„Alstublieft!”"
+        },
+        {
+          "id": "nina-ide-na-trznicu.p2.s7",
+          "hr": "Prodavačica daje Nini jabuku i rajčicu.",
+          "nl": "De marktvrouw geeft Nina een appel en een tomaat."
         }
       ]
     },
@@ -87,13 +102,18 @@
         },
         {
           "id": "nina-ide-na-trznicu.p3.s3",
-          "hr": "„Bok, Nina! Idemo na kavu?“",
-          "nl": "\"Hoi Nina! Zullen we koffie gaan drinken?\""
+          "hr": "Ona kupuje jabuke i banane.",
+          "nl": "Zij koopt appels en bananen."
         },
         {
           "id": "nina-ide-na-trznicu.p3.s4",
+          "hr": "„Bok, Nina! Idemo na kavu?“",
+          "nl": "„Hoi Nina! Zullen we koffie gaan drinken?”"
+        },
+        {
+          "id": "nina-ide-na-trznicu.p3.s5",
           "hr": "„Može! Ja častim.“",
-          "nl": "\"Prima! Ik trakteer.\""
+          "nl": "„Prima! Ik trakteer.”"
         }
       ]
     },
@@ -107,16 +127,31 @@
         },
         {
           "id": "nina-ide-na-trznicu.p4.s2",
+          "hr": "Kafić je pokraj tržnice.",
+          "nl": "Het café is naast de markt."
+        },
+        {
+          "id": "nina-ide-na-trznicu.p4.s3",
           "hr": "Nina pije kavu, a Petra pije čaj.",
           "nl": "Nina drinkt koffie en Petra drinkt thee."
         },
         {
-          "id": "nina-ide-na-trznicu.p4.s3",
+          "id": "nina-ide-na-trznicu.p4.s4",
+          "hr": "Petra ne voli kavu.",
+          "nl": "Petra houdt niet van koffie."
+        },
+        {
+          "id": "nina-ide-na-trznicu.p4.s5",
           "hr": "Jedu i kolač.",
           "nl": "Ze eten ook gebak."
         },
         {
-          "id": "nina-ide-na-trznicu.p4.s4",
+          "id": "nina-ide-na-trznicu.p4.s6",
+          "hr": "Kolač je jako dobar.",
+          "nl": "Het gebak is heel lekker."
+        },
+        {
+          "id": "nina-ide-na-trznicu.p4.s7",
           "hr": "Nina voli subotu.",
           "nl": "Nina houdt van zaterdag."
         }
@@ -426,6 +461,97 @@
       "nl": "zaterdag",
       "lemma": "subota",
       "info": "accusatief enkelvoud — subota is hier lijdend voorwerp van voljeti"
+    },
+    "velika": {
+      "hr": "velika",
+      "nl": "groot",
+      "lemma": "velik",
+      "info": "vrouwelijk van velik"
+    },
+    "centru": {
+      "hr": "centru",
+      "nl": "centrum",
+      "lemma": "centar",
+      "info": "locatief enkelvoud van centar",
+      "item": "v.10.centar"
+    },
+    "grada": {
+      "hr": "grada",
+      "nl": "stad",
+      "lemma": "grad",
+      "info": "genitief enkelvoud van grad",
+      "item": "v.05.grad"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon meervoud"
+    },
+    "lijepe": {
+      "hr": "lijepe",
+      "nl": "mooi",
+      "lemma": "lijep",
+      "info": "vrouwelijk meervoud van lijep"
+    },
+    "crvene": {
+      "hr": "crvene",
+      "nl": "rood",
+      "lemma": "crven",
+      "info": "vrouwelijk meervoud van crven"
+    },
+    "daje": {
+      "hr": "daje",
+      "nl": "geeft",
+      "lemma": "davati",
+      "info": "presens on/ona van davati"
+    },
+    "nini": {
+      "hr": "nini",
+      "nl": "aan Nina",
+      "lemma": "Nina",
+      "info": "datief van Nina — de ontvanger"
+    },
+    "jabuke": {
+      "hr": "jabuke",
+      "nl": "appel",
+      "lemma": "jabuka",
+      "info": "vorm van jabuka",
+      "item": "v.pr2.jabuka"
+    },
+    "banane": {
+      "hr": "banane",
+      "nl": "banaan",
+      "lemma": "banana",
+      "info": "vorm van banana",
+      "item": "v.14.banana"
+    },
+    "pokraj": {
+      "hr": "pokraj",
+      "nl": "naast",
+      "item": "v.16.pokraj"
+    },
+    "tržnice": {
+      "hr": "tržnice",
+      "nl": "markt",
+      "lemma": "tržnica",
+      "info": "genitief enkelvoud van tržnica",
+      "item": "v.pr2.trznica"
+    },
+    "ne": {
+      "hr": "ne",
+      "nl": "nee, niet",
+      "item": "v.01.ne"
+    },
+    "jako": {
+      "hr": "jako",
+      "nl": "heel, erg",
+      "info": "versterkend bijwoord"
+    },
+    "dobar": {
+      "hr": "dobar",
+      "nl": "goed",
+      "item": "v.04.dobar"
     }
   },
   "culture_nl": {

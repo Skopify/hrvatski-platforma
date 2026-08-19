@@ -32,11 +32,21 @@
         },
         {
           "id": "vikend-u-samoboru.p1.s3",
+          "hr": "U Samoboru nema puno ljudi.",
+          "nl": "In Samobor wonen niet veel mensen."
+        },
+        {
+          "id": "vikend-u-samoboru.p1.s4",
           "hr": "Petra i ja smo putovale autobusom.",
           "nl": "Petra en ik reisden met de bus."
         },
         {
-          "id": "vikend-u-samoboru.p1.s4",
+          "id": "vikend-u-samoboru.p1.s5",
+          "hr": "Putovale smo pola sata.",
+          "nl": "We reisden een half uur."
+        },
+        {
+          "id": "vikend-u-samoboru.p1.s6",
           "hr": "Vožnja je bila kratka.",
           "nl": "De rit was kort."
         }
@@ -52,13 +62,28 @@
         },
         {
           "id": "vikend-u-samoboru.p2.s2",
+          "hr": "Šetale smo i pokraj rijeke.",
+          "nl": "We wandelden ook langs de rivier."
+        },
+        {
+          "id": "vikend-u-samoboru.p2.s3",
           "hr": "Na trgu smo vidjele malu crkvu i stare kuće.",
           "nl": "Op het plein zagen we een kerkje en oude huizen."
         },
         {
-          "id": "vikend-u-samoboru.p2.s3",
+          "id": "vikend-u-samoboru.p2.s4",
+          "hr": "U crkvi je bilo mirno.",
+          "nl": "In de kerk was het stil."
+        },
+        {
+          "id": "vikend-u-samoboru.p2.s5",
           "hr": "Sunce je sjalo cijeli dan.",
           "nl": "De zon scheen de hele dag."
+        },
+        {
+          "id": "vikend-u-samoboru.p2.s6",
+          "hr": "Kupile smo i razglednicu za Ninine roditelje.",
+          "nl": "We kochten ook een ansichtkaart voor Nina's ouders."
         }
       ]
     },
@@ -77,13 +102,23 @@
         },
         {
           "id": "vikend-u-samoboru.p3.s3",
+          "hr": "Ja sam naručila samo jednu.",
+          "nl": "Ik bestelde er maar één."
+        },
+        {
+          "id": "vikend-u-samoboru.p3.s4",
           "hr": "Petra je pojela dvije!",
           "nl": "Petra at er twee op!"
         },
         {
-          "id": "vikend-u-samoboru.p3.s4",
+          "id": "vikend-u-samoboru.p3.s5",
           "hr": "„Nisam mogla stati“, rekla je.",
-          "nl": "\"Ik kon niet stoppen\", zei ze."
+          "nl": "„Ik kon niet stoppen”, zei ze."
+        },
+        {
+          "id": "vikend-u-samoboru.p3.s6",
+          "hr": "Poslije smo kupile kremšnite i za mamu.",
+          "nl": "Daarna kochten we ook kremšnita's voor mama."
         }
       ]
     },
@@ -97,13 +132,23 @@
         },
         {
           "id": "vikend-u-samoboru.p4.s2",
+          "hr": "U autobusu smo spavale.",
+          "nl": "In de bus sliepen we."
+        },
+        {
+          "id": "vikend-u-samoboru.p4.s3",
           "hr": "Bila sam umorna, ali sretna.",
           "nl": "Ik was moe, maar gelukkig."
         },
         {
-          "id": "vikend-u-samoboru.p4.s3",
+          "id": "vikend-u-samoboru.p4.s4",
           "hr": "Sada razumijem zašto ljudi vole male gradove.",
           "nl": "Nu begrijp ik waarom mensen van stadjes houden."
+        },
+        {
+          "id": "vikend-u-samoboru.p4.s5",
+          "hr": "Sljedeći tjedan idemo opet.",
+          "nl": "Volgende week gaan we weer."
         }
       ]
     }
@@ -479,6 +524,153 @@
       "nl": "steden",
       "lemma": "grad",
       "info": "accusatief meervoud, lange vorm: grad → gradovi → gradove"
+    },
+    "nema": {
+      "hr": "nema",
+      "nl": "niet hebben",
+      "lemma": "nemati",
+      "info": "presens on/ona",
+      "item": "v.05.nemati"
+    },
+    "puno": {
+      "hr": "puno",
+      "nl": "veel",
+      "item": "v.14.puno"
+    },
+    "pola": {
+      "hr": "pola",
+      "nl": "half"
+    },
+    "sata": {
+      "hr": "sata",
+      "nl": "uur; klok",
+      "lemma": "sat",
+      "info": "genitief enkelvoud van sat"
+    },
+    "pokraj": {
+      "hr": "pokraj",
+      "nl": "naast",
+      "item": "v.16.pokraj"
+    },
+    "rijeke": {
+      "hr": "rijeke",
+      "nl": "rivier",
+      "lemma": "rijeka",
+      "info": "genitief enkelvoud van rijeka",
+      "item": "v.05.rijeka"
+    },
+    "crkvi": {
+      "hr": "crkvi",
+      "nl": "kerk",
+      "lemma": "crkva",
+      "info": "locatief enkelvoud van crkva",
+      "item": "v.pr3.crkva"
+    },
+    "bilo": {
+      "hr": "bilo",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord onzijdig — onpersoonlijk «het was»"
+    },
+    "mirno": {
+      "hr": "mirno",
+      "nl": "stil, rustig",
+      "lemma": "miran",
+      "info": "onzijdig van miran"
+    },
+    "naručila": {
+      "hr": "naručila",
+      "nl": "bestelde",
+      "lemma": "naručiti",
+      "info": "deelwoord vrouwelijk van naručiti"
+    },
+    "samo": {
+      "hr": "samo",
+      "nl": "alleen, slechts",
+      "info": "bijwoord"
+    },
+    "jednu": {
+      "hr": "jednu",
+      "nl": "één",
+      "lemma": "jedan",
+      "info": "accusatief vrouwelijk van jedan"
+    },
+    "poslije": {
+      "hr": "poslije",
+      "nl": "na",
+      "item": "v.16.poslije"
+    },
+    "kupile": {
+      "hr": "kupile",
+      "nl": "kochten",
+      "lemma": "kupiti",
+      "info": "deelwoord vrouwelijk meervoud van kupiti"
+    },
+    "za": {
+      "hr": "za",
+      "nl": "voor (bestemd voor)",
+      "item": "v.07.za"
+    },
+    "mamu": {
+      "hr": "mamu",
+      "nl": "mama",
+      "lemma": "mama",
+      "info": "accusatief enkelvoud van mama",
+      "item": "v.01.mama"
+    },
+    "autobusu": {
+      "hr": "autobusu",
+      "nl": "bus",
+      "lemma": "autobus",
+      "info": "locatief enkelvoud van autobus",
+      "item": "v.01.autobus"
+    },
+    "spavale": {
+      "hr": "spavale",
+      "nl": "sliepen",
+      "lemma": "spavati",
+      "info": "deelwoord vrouwelijk meervoud van spavati"
+    },
+    "sljedeći": {
+      "hr": "sljedeći",
+      "nl": "volgende",
+      "info": "bijvoeglijk naamwoord van volgorde"
+    },
+    "tjedan": {
+      "hr": "tjedan",
+      "nl": "week",
+      "item": "v.07.tjedan"
+    },
+    "idemo": {
+      "hr": "idemo",
+      "nl": "we gaan",
+      "lemma": "ići",
+      "info": "presens mi van ići"
+    },
+    "opet": {
+      "hr": "opet",
+      "nl": "weer, opnieuw",
+      "info": "bijwoord"
+    },
+    "razglednicu": {
+      "hr": "razglednicu",
+      "nl": "ansichtkaart",
+      "lemma": "razglednica",
+      "info": "accusatief enkelvoud van razglednica",
+      "item": "v.13.razglednica"
+    },
+    "ninine": {
+      "hr": "ninine",
+      "nl": "van Nina",
+      "lemma": "Nina",
+      "info": "bezittelijk bijvoeglijk naamwoord van Nina, meervoud"
+    },
+    "roditelje": {
+      "hr": "roditelje",
+      "nl": "ouder",
+      "lemma": "roditelj",
+      "info": "accusatief meervoud van roditelj",
+      "item": "v.03.roditelj"
     }
   },
   "culture_nl": {

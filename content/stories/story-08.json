@@ -9,110 +9,782 @@
   "requires_lesson": 10,
   "blurb_nl": "Een middag aan zee, van begin tot eind in de verleden tijd. Let op de deelwoorden: bilo, bila, bili — ze veranderen mee met wie of wat er iets deed.",
   "motif": "more",
-  "focus_nl": ["verleden tijd", "deelwoord", "locatief", "u en na zonder beweging"],
+  "focus_nl": [
+    "verleden tijd",
+    "deelwoord",
+    "locatief",
+    "u en na zonder beweging"
+  ],
   "source": "aangevuld",
   "paragraphs": [
     {
       "id": "p1",
       "sentences": [
-        { "id": "jucer-na-plazi.p1.s1", "hr": "Jučer smo bili na plaži.", "nl": "Gisteren waren we op het strand." },
-        { "id": "jucer-na-plazi.p1.s2", "hr": "Vrijeme je bilo lijepo.", "nl": "Het weer was mooi." },
-        { "id": "jucer-na-plazi.p1.s3", "hr": "More je bilo hladno, ali smo plivali.", "nl": "De zee was koud, maar we zwommen toch." },
-        { "id": "jucer-na-plazi.p1.s4", "hr": "Ivo je zaboravio ručnik.", "nl": "Ivo was zijn handdoek vergeten." }
+        {
+          "id": "jucer-na-plazi.p1.s1",
+          "hr": "Jučer smo bili na plaži.",
+          "nl": "Gisteren waren we op het strand."
+        },
+        {
+          "id": "jucer-na-plazi.p1.s2",
+          "hr": "Došli smo rano, kad na plaži još nije bilo ljudi.",
+          "nl": "We kwamen vroeg, toen er nog geen mensen op het strand waren."
+        },
+        {
+          "id": "jucer-na-plazi.p1.s3",
+          "hr": "Vrijeme je bilo lijepo.",
+          "nl": "Het weer was mooi."
+        },
+        {
+          "id": "jucer-na-plazi.p1.s4",
+          "hr": "Na nebu nije bilo oblaka.",
+          "nl": "Er waren geen wolken aan de hemel."
+        },
+        {
+          "id": "jucer-na-plazi.p1.s5",
+          "hr": "More je bilo hladno, ali smo plivali.",
+          "nl": "De zee was koud, maar we zwommen toch."
+        }
       ]
     },
     {
       "id": "p2",
       "sentences": [
-        { "id": "jucer-na-plazi.p2.s1", "hr": "Poslije smo sjedili u hladu.", "nl": "Daarna zaten we in de schaduw." },
-        { "id": "jucer-na-plazi.p2.s2", "hr": "Mia je crtala u pijesku.", "nl": "Mia tekende in het zand." },
-        { "id": "jucer-na-plazi.p2.s3", "hr": "Ona je bila sretna.", "nl": "Zij was gelukkig." }
+        {
+          "id": "jucer-na-plazi.p2.s1",
+          "hr": "Ivo je zaboravio ručnik.",
+          "nl": "Ivo was zijn handdoek vergeten."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s2",
+          "hr": "Sjedio je na mojem ručniku i nije rekao ništa.",
+          "nl": "Hij zat op mijn handdoek en zei niets."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s3",
+          "hr": "Poslije smo sjedili u hladu.",
+          "nl": "Daarna zaten we in de schaduw."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s4",
+          "hr": "U hladu je bilo ugodno.",
+          "nl": "In de schaduw was het aangenaam."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s5",
+          "hr": "Mia je crtala u pijesku.",
+          "nl": "Mia tekende in het zand."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s6",
+          "hr": "Crtala je kuću, more i tri ribe.",
+          "nl": "Ze tekende een huis, de zee en drie vissen."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s7",
+          "hr": "Kuća u pijesku bila je velika.",
+          "nl": "Het huis in het zand was groot."
+        },
+        {
+          "id": "jucer-na-plazi.p2.s8",
+          "hr": "Ona je bila sretna.",
+          "nl": "Zij was gelukkig."
+        }
       ]
     },
     {
       "id": "p3",
       "sentences": [
-        { "id": "jucer-na-plazi.p3.s1", "hr": "U tri sata smo bili gladni.", "nl": "Om drie uur hadden we honger." },
-        { "id": "jucer-na-plazi.p3.s2", "hr": "U torbi nije bilo ništa.", "nl": "In de tas zat niets." },
-        { "id": "jucer-na-plazi.p3.s3", "hr": "Ivo je kupio burek u pekarnici.", "nl": "Ivo kocht burek in de bakkerij." },
-        { "id": "jucer-na-plazi.p3.s4", "hr": "Jeli smo na klupi.", "nl": "We aten op een bankje." }
+        {
+          "id": "jucer-na-plazi.p3.s1",
+          "hr": "U tri sata smo bili gladni.",
+          "nl": "Om drie uur hadden we honger."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s2",
+          "hr": "U torbi nije bilo ništa.",
+          "nl": "In de tas zat niets."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s3",
+          "hr": "Majka je mislila da imamo hranu u torbi.",
+          "nl": "Moeder dacht dat we eten in de tas hadden."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s4",
+          "hr": "Ivo je kupio burek u pekarnici.",
+          "nl": "Ivo kocht burek in de bakkerij."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s5",
+          "hr": "U pekarnici je bilo puno ljudi.",
+          "nl": "In de bakkerij waren veel mensen."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s6",
+          "hr": "Jeli smo na klupi.",
+          "nl": "We aten op een bankje."
+        },
+        {
+          "id": "jucer-na-plazi.p3.s7",
+          "hr": "Klupa je bila u hladu, pokraj crkve.",
+          "nl": "Het bankje stond in de schaduw, naast de kerk."
+        }
       ]
     },
     {
       "id": "p4",
       "sentences": [
-        { "id": "jucer-na-plazi.p4.s1", "hr": "Navečer je bilo mirno.", "nl": "'s Avonds was het stil." },
-        { "id": "jucer-na-plazi.p4.s2", "hr": "Turisti su bili u restoranima.", "nl": "De toeristen zaten in de restaurants." },
-        { "id": "jucer-na-plazi.p4.s3", "hr": "Mi smo bili na stijeni.", "nl": "Wij zaten op een rots." },
-        { "id": "jucer-na-plazi.p4.s4", "hr": "Nismo govorili. More je govorilo.", "nl": "Wij zeiden niets. De zee sprak." }
+        {
+          "id": "jucer-na-plazi.p4.s1",
+          "hr": "Navečer je bilo mirno.",
+          "nl": "'s Avonds was het stil."
+        },
+        {
+          "id": "jucer-na-plazi.p4.s2",
+          "hr": "Turisti su bili u restoranima.",
+          "nl": "De toeristen zaten in de restaurants."
+        },
+        {
+          "id": "jucer-na-plazi.p4.s3",
+          "hr": "Mi smo bili na stijeni.",
+          "nl": "Wij zaten op een rots."
+        },
+        {
+          "id": "jucer-na-plazi.p4.s4",
+          "hr": "Na stijeni je još bilo toplo od sunca.",
+          "nl": "Op de rots was het nog warm van de zon."
+        },
+        {
+          "id": "jucer-na-plazi.p4.s5",
+          "hr": "Nismo govorili. More je govorilo.",
+          "nl": "Wij zeiden niets. De zee sprak."
+        }
       ]
     }
   ],
   "glossary": {
-    "jučer": { "hr": "jučer", "nl": "gisteren", "info": "bijwoord van tijd; vraagt bijna altijd de verleden tijd" },
-    "smo": { "hr": "smo", "nl": "we zijn, we hebben", "lemma": "biti", "info": "hulpwerkwoord voor de verleden tijd; kort woordje op de tweede plek" },
-    "bili": { "hr": "bili", "nl": "waren", "lemma": "biti", "info": "deelwoord, mannelijk meervoud; vrouwelijk meervoud is bile" },
-    "na": { "hr": "na", "nl": "op", "info": "zonder beweging vraagt na de locatief: na plaži" },
-    "plaži": { "hr": "plaži", "nl": "strand", "lemma": "plaža", "info": "locatief van plaža; de ž blijft, de a wordt i", "item": "v.pr8.plaza" },
-    "vrijeme": { "hr": "vrijeme", "nl": "weer, tijd", "info": "onzijdig; genitief vremena — de stam wordt langer" },
-    "je": { "hr": "je", "nl": "is, heeft", "lemma": "biti", "info": "hulpwerkwoord, 3e persoon enkelvoud" },
-    "bilo": { "hr": "bilo", "nl": "was", "lemma": "biti", "info": "deelwoord, onzijdig — want vrijeme is onzijdig" },
-    "lijepo": { "hr": "lijepo", "nl": "mooi", "lemma": "lijep", "info": "onzijdige vorm; vergrotende trap ljepše" },
-    "more": { "hr": "more", "nl": "zee", "info": "onzijdig" },
-    "hladno": { "hr": "hladno", "nl": "koud", "lemma": "hladan", "info": "onzijdige vorm; de a van hladan valt weg" },
-    "ali": { "hr": "ali", "nl": "maar", "info": "voegwoord" },
-    "plivali": { "hr": "plivali", "nl": "zwommen", "lemma": "plivati", "info": "deelwoord meervoud; onvoltooid — het gaat om het zwemmen zelf, niet om af zijn", "item": "v.pr8.plivati" },
-    "ivo": { "hr": "Ivo", "nl": "Ivo", "info": "jongensnaam" },
-    "zaboravio": { "hr": "zaboravio", "nl": "vergeten", "lemma": "zaboraviti", "info": "deelwoord mannelijk; vrouwelijk zaboravila", "item": "v.pr8.zaboraviti" },
-    "ručnik": { "hr": "ručnik", "nl": "handdoek", "info": "mannelijk; meervoud ručnici, met k → c", "item": "v.pr8.rucnik" },
-    "poslije": { "hr": "poslije", "nl": "daarna", "info": "bijwoord van tijd" },
-    "sjedili": { "hr": "sjedili", "nl": "zaten", "lemma": "sjediti", "info": "deelwoord meervoud; de ik-vorm is sjedim" },
-    "u": { "hr": "u", "nl": "in, om", "info": "zonder beweging de locatief; bij een tijdstip: u tri sata" },
-    "hladu": { "hr": "hladu", "nl": "schaduw", "lemma": "hlad", "info": "locatief van hlad — schaduw, koelte" },
-    "mia": { "hr": "Mia", "nl": "Mia", "info": "Luka's zusje" },
-    "crtala": { "hr": "crtala", "nl": "tekende", "lemma": "crtati", "info": "deelwoord vrouwelijk, want Mia is een meisje", "item": "v.pr8.crtati" },
-    "pijesku": { "hr": "pijesku", "nl": "zand", "lemma": "pijesak", "info": "locatief van pijesak; de a valt weg", "item": "v.pr8.pijesak" },
-    "ona": { "hr": "ona", "nl": "zij", "info": "persoonlijk voornaamwoord" },
-    "bila": { "hr": "bila", "nl": "was", "lemma": "biti", "info": "deelwoord vrouwelijk enkelvoud" },
-    "sretna": { "hr": "sretna", "nl": "gelukkig", "lemma": "sretan", "info": "vrouwelijke vorm; de a van sretan valt weg" },
-    "tri": { "hr": "tri", "nl": "drie", "info": "na 2, 3 en 4 volgt de genitief enkelvoud: tri sata" },
-    "sata": { "hr": "sata", "nl": "uur", "lemma": "sat", "info": "genitief enkelvoud na tri; na vijf is het sati" },
-    "gladni": { "hr": "gladni", "nl": "hongerig", "lemma": "gladan", "info": "meervoudsvorm; de a valt weg" },
-    "torbi": { "hr": "torbi", "nl": "tas", "lemma": "torba", "info": "locatief van torba", "item": "v.pr8.torba" },
-    "nije": { "hr": "nije", "nl": "is niet", "lemma": "biti", "info": "ontkende vorm; «nije bilo» is «er was niet»" },
-    "ništa": { "hr": "ništa", "nl": "niets", "info": "vraagt een ontkend werkwoord: nije bilo ništa" },
-    "kupio": { "hr": "kupio", "nl": "kocht", "lemma": "kupiti", "info": "deelwoord mannelijk; voltooid — het kopen is af" },
-    "burek": { "hr": "burek", "nl": "burek", "info": "hartige bladerdeegrol met vlees of kaas", "item": "v.pr8.burek" },
-    "pekarnici": { "hr": "pekarnici", "nl": "bakkerij", "lemma": "pekarnica", "info": "locatief van pekarnica; de c blijft", "item": "v.pr8.pekarnica" },
-    "jeli": { "hr": "jeli", "nl": "aten", "lemma": "jesti", "info": "deelwoord meervoud van jesti; de ik-vorm is jedem" },
-    "klupi": { "hr": "klupi", "nl": "bank, bankje", "lemma": "klupa", "info": "locatief van klupa", "item": "v.pr8.klupa" },
-    "navečer": { "hr": "navečer", "nl": "'s avonds", "info": "bijwoord van tijd" },
-    "mirno": { "hr": "mirno", "nl": "rustig, stil", "lemma": "miran", "info": "onzijdige vorm; «bilo je mirno» is «het was stil»" },
-    "turisti": { "hr": "turisti", "nl": "toeristen", "lemma": "turist", "info": "nominatief meervoud" },
-    "su": { "hr": "su", "nl": "zijn", "lemma": "biti", "info": "hulpwerkwoord, 3e persoon meervoud" },
-    "restoranima": { "hr": "restoranima", "nl": "restaurants", "lemma": "restoran", "info": "locatief meervoud; die uitgang -ima krijgen alle geslachten in het meervoud" },
-    "mi": { "hr": "mi", "nl": "wij", "info": "persoonlijk voornaamwoord; hier staat het er voor de tegenstelling met de toeristen" },
-    "stijeni": { "hr": "stijeni", "nl": "rots", "lemma": "stijena", "info": "locatief van stijena", "item": "v.pr8.stijena" },
-    "nismo": { "hr": "nismo", "nl": "we zijn niet, we hebben niet", "lemma": "biti", "info": "ontkende vorm van smo — één woord" },
-    "govorili": { "hr": "govorili", "nl": "spraken", "lemma": "govoriti", "info": "deelwoord meervoud" },
-    "govorilo": { "hr": "govorilo", "nl": "sprak", "lemma": "govoriti", "info": "deelwoord onzijdig — want more is onzijdig" }
+    "jučer": {
+      "hr": "jučer",
+      "nl": "gisteren",
+      "info": "bijwoord van tijd; vraagt bijna altijd de verleden tijd"
+    },
+    "smo": {
+      "hr": "smo",
+      "nl": "we zijn, we hebben",
+      "lemma": "biti",
+      "info": "hulpwerkwoord voor de verleden tijd; kort woordje op de tweede plek"
+    },
+    "bili": {
+      "hr": "bili",
+      "nl": "waren",
+      "lemma": "biti",
+      "info": "deelwoord, mannelijk meervoud; vrouwelijk meervoud is bile"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "op",
+      "info": "zonder beweging vraagt na de locatief: na plaži"
+    },
+    "plaži": {
+      "hr": "plaži",
+      "nl": "strand",
+      "lemma": "plaža",
+      "info": "locatief van plaža; de ž blijft, de a wordt i",
+      "item": "v.pr8.plaza"
+    },
+    "vrijeme": {
+      "hr": "vrijeme",
+      "nl": "weer, tijd",
+      "info": "onzijdig; genitief vremena — de stam wordt langer"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is, heeft",
+      "lemma": "biti",
+      "info": "hulpwerkwoord, 3e persoon enkelvoud"
+    },
+    "bilo": {
+      "hr": "bilo",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord, onzijdig — want vrijeme is onzijdig"
+    },
+    "lijepo": {
+      "hr": "lijepo",
+      "nl": "mooi",
+      "lemma": "lijep",
+      "info": "onzijdige vorm; vergrotende trap ljepše"
+    },
+    "more": {
+      "hr": "more",
+      "nl": "zee",
+      "info": "onzijdig"
+    },
+    "hladno": {
+      "hr": "hladno",
+      "nl": "koud",
+      "lemma": "hladan",
+      "info": "onzijdige vorm; de a van hladan valt weg"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "info": "voegwoord"
+    },
+    "plivali": {
+      "hr": "plivali",
+      "nl": "zwommen",
+      "lemma": "plivati",
+      "info": "deelwoord meervoud; onvoltooid — het gaat om het zwemmen zelf, niet om af zijn",
+      "item": "v.pr8.plivati"
+    },
+    "ivo": {
+      "hr": "Ivo",
+      "nl": "Ivo",
+      "info": "jongensnaam"
+    },
+    "zaboravio": {
+      "hr": "zaboravio",
+      "nl": "vergeten",
+      "lemma": "zaboraviti",
+      "info": "deelwoord mannelijk; vrouwelijk zaboravila",
+      "item": "v.pr8.zaboraviti"
+    },
+    "ručnik": {
+      "hr": "ručnik",
+      "nl": "handdoek",
+      "info": "mannelijk; meervoud ručnici, met k → c",
+      "item": "v.pr8.rucnik"
+    },
+    "poslije": {
+      "hr": "poslije",
+      "nl": "daarna",
+      "info": "bijwoord van tijd"
+    },
+    "sjedili": {
+      "hr": "sjedili",
+      "nl": "zaten",
+      "lemma": "sjediti",
+      "info": "deelwoord meervoud; de ik-vorm is sjedim"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "in, om",
+      "info": "zonder beweging de locatief; bij een tijdstip: u tri sata"
+    },
+    "hladu": {
+      "hr": "hladu",
+      "nl": "schaduw",
+      "lemma": "hlad",
+      "info": "locatief van hlad — schaduw, koelte"
+    },
+    "mia": {
+      "hr": "Mia",
+      "nl": "Mia",
+      "info": "Luka's zusje"
+    },
+    "crtala": {
+      "hr": "crtala",
+      "nl": "tekende",
+      "lemma": "crtati",
+      "info": "deelwoord vrouwelijk, want Mia is een meisje",
+      "item": "v.pr8.crtati"
+    },
+    "pijesku": {
+      "hr": "pijesku",
+      "nl": "zand",
+      "lemma": "pijesak",
+      "info": "locatief van pijesak; de a valt weg",
+      "item": "v.pr8.pijesak"
+    },
+    "ona": {
+      "hr": "ona",
+      "nl": "zij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "bila": {
+      "hr": "bila",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord vrouwelijk enkelvoud"
+    },
+    "sretna": {
+      "hr": "sretna",
+      "nl": "gelukkig",
+      "lemma": "sretan",
+      "info": "vrouwelijke vorm; de a van sretan valt weg"
+    },
+    "tri": {
+      "hr": "tri",
+      "nl": "drie",
+      "info": "na 2, 3 en 4 volgt de genitief enkelvoud: tri sata"
+    },
+    "sata": {
+      "hr": "sata",
+      "nl": "uur",
+      "lemma": "sat",
+      "info": "genitief enkelvoud na tri; na vijf is het sati"
+    },
+    "gladni": {
+      "hr": "gladni",
+      "nl": "hongerig",
+      "lemma": "gladan",
+      "info": "meervoudsvorm; de a valt weg"
+    },
+    "torbi": {
+      "hr": "torbi",
+      "nl": "tas",
+      "lemma": "torba",
+      "info": "locatief van torba",
+      "item": "v.pr8.torba"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "is niet",
+      "lemma": "biti",
+      "info": "ontkende vorm; «nije bilo» is «er was niet»"
+    },
+    "ništa": {
+      "hr": "ništa",
+      "nl": "niets",
+      "info": "vraagt een ontkend werkwoord: nije bilo ništa"
+    },
+    "kupio": {
+      "hr": "kupio",
+      "nl": "kocht",
+      "lemma": "kupiti",
+      "info": "deelwoord mannelijk; voltooid — het kopen is af"
+    },
+    "burek": {
+      "hr": "burek",
+      "nl": "burek",
+      "info": "hartige bladerdeegrol met vlees of kaas",
+      "item": "v.pr8.burek"
+    },
+    "pekarnici": {
+      "hr": "pekarnici",
+      "nl": "bakkerij",
+      "lemma": "pekarnica",
+      "info": "locatief van pekarnica; de c blijft",
+      "item": "v.pr8.pekarnica"
+    },
+    "jeli": {
+      "hr": "jeli",
+      "nl": "aten",
+      "lemma": "jesti",
+      "info": "deelwoord meervoud van jesti; de ik-vorm is jedem"
+    },
+    "klupi": {
+      "hr": "klupi",
+      "nl": "bank, bankje",
+      "lemma": "klupa",
+      "info": "locatief van klupa",
+      "item": "v.pr8.klupa"
+    },
+    "navečer": {
+      "hr": "navečer",
+      "nl": "'s avonds",
+      "info": "bijwoord van tijd"
+    },
+    "mirno": {
+      "hr": "mirno",
+      "nl": "rustig, stil",
+      "lemma": "miran",
+      "info": "onzijdige vorm; «bilo je mirno» is «het was stil»"
+    },
+    "turisti": {
+      "hr": "turisti",
+      "nl": "toeristen",
+      "lemma": "turist",
+      "info": "nominatief meervoud"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn",
+      "lemma": "biti",
+      "info": "hulpwerkwoord, 3e persoon meervoud"
+    },
+    "restoranima": {
+      "hr": "restoranima",
+      "nl": "restaurants",
+      "lemma": "restoran",
+      "info": "locatief meervoud; die uitgang -ima krijgen alle geslachten in het meervoud"
+    },
+    "mi": {
+      "hr": "mi",
+      "nl": "wij",
+      "info": "persoonlijk voornaamwoord; hier staat het er voor de tegenstelling met de toeristen"
+    },
+    "stijeni": {
+      "hr": "stijeni",
+      "nl": "rots",
+      "lemma": "stijena",
+      "info": "locatief van stijena",
+      "item": "v.pr8.stijena"
+    },
+    "nismo": {
+      "hr": "nismo",
+      "nl": "we zijn niet, we hebben niet",
+      "lemma": "biti",
+      "info": "ontkende vorm van smo — één woord"
+    },
+    "govorili": {
+      "hr": "govorili",
+      "nl": "spraken",
+      "lemma": "govoriti",
+      "info": "deelwoord meervoud"
+    },
+    "govorilo": {
+      "hr": "govorilo",
+      "nl": "sprak",
+      "lemma": "govoriti",
+      "info": "deelwoord onzijdig — want more is onzijdig"
+    },
+    "došli": {
+      "hr": "došli",
+      "nl": "kwamen",
+      "lemma": "doći",
+      "info": "deelwoord meervoud van doći"
+    },
+    "rano": {
+      "hr": "rano",
+      "nl": "vroeg",
+      "info": "bijwoord van tijd"
+    },
+    "kad": {
+      "hr": "kad",
+      "nl": "toen, wanneer",
+      "info": "voegwoord van tijd"
+    },
+    "još": {
+      "hr": "još",
+      "nl": "nog",
+      "info": "bijwoord"
+    },
+    "ljudi": {
+      "hr": "ljudi",
+      "nl": "mens",
+      "lemma": "čovjek",
+      "info": "nominatief meervoud van čovjek",
+      "item": "v.03.covjek"
+    },
+    "nebu": {
+      "hr": "nebu",
+      "nl": "aan de hemel",
+      "lemma": "nebo",
+      "info": "locatief van nebo"
+    },
+    "oblaka": {
+      "hr": "oblaka",
+      "nl": "wolk",
+      "lemma": "oblak",
+      "info": "genitief enkelvoud van oblak",
+      "item": "v.00.oblak"
+    },
+    "sjedio": {
+      "hr": "sjedio",
+      "nl": "zat",
+      "lemma": "sjediti",
+      "info": "deelwoord mannelijk van sjediti"
+    },
+    "mojem": {
+      "hr": "mojem",
+      "nl": "mijn",
+      "lemma": "moj",
+      "info": "locatief mannelijk van moj"
+    },
+    "ručniku": {
+      "hr": "ručniku",
+      "nl": "handdoek",
+      "lemma": "ručnik",
+      "info": "locatief van ručnik — «na ručniku», plaats zonder beweging"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "rekao": {
+      "hr": "rekao",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord mannelijk van reći"
+    },
+    "ugodno": {
+      "hr": "ugodno",
+      "nl": "aangenaam",
+      "lemma": "ugodan",
+      "info": "onzijdig van ugodan, hier als bijwoord"
+    },
+    "kuću": {
+      "hr": "kuću",
+      "nl": "huis",
+      "lemma": "kuća",
+      "info": "accusatief enkelvoud van kuća",
+      "item": "v.01.kuca"
+    },
+    "ribe": {
+      "hr": "ribe",
+      "nl": "vis",
+      "lemma": "riba",
+      "info": "vorm van riba"
+    },
+    "kuća": {
+      "hr": "kuća",
+      "nl": "huis",
+      "item": "v.01.kuca"
+    },
+    "velika": {
+      "hr": "velika",
+      "nl": "groot",
+      "lemma": "velik",
+      "info": "vrouwelijk van velik"
+    },
+    "majka": {
+      "hr": "majka",
+      "nl": "moeder",
+      "item": "v.03.majka"
+    },
+    "mislila": {
+      "hr": "mislila",
+      "nl": "denken",
+      "lemma": "misliti",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.09.misliti"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "imamo": {
+      "hr": "imamo",
+      "nl": "hebben",
+      "lemma": "imati",
+      "info": "presens mi",
+      "item": "v.05.imati"
+    },
+    "hranu": {
+      "hr": "hranu",
+      "nl": "eten, voedsel",
+      "lemma": "hrana",
+      "info": "accusatief enkelvoud van hrana",
+      "item": "v.07.hrana"
+    },
+    "puno": {
+      "hr": "puno",
+      "nl": "veel",
+      "item": "v.14.puno"
+    },
+    "klupa": {
+      "hr": "klupa",
+      "nl": "bank, bankje",
+      "item": "v.pr8.klupa"
+    },
+    "pokraj": {
+      "hr": "pokraj",
+      "nl": "naast",
+      "item": "v.16.pokraj"
+    },
+    "crkve": {
+      "hr": "crkve",
+      "nl": "kerk",
+      "lemma": "crkva",
+      "info": "genitief enkelvoud van crkva"
+    },
+    "toplo": {
+      "hr": "toplo",
+      "nl": "warm",
+      "item": "v.19.toplo"
+    },
+    "od": {
+      "hr": "od",
+      "nl": "van, vanaf",
+      "item": "v.16.od"
+    },
+    "sunca": {
+      "hr": "sunca",
+      "nl": "zon",
+      "lemma": "sunce",
+      "info": "genitief enkelvoud van sunce"
+    }
   },
   "culture_nl": {
     "title_nl": "Burek",
     "body_nl": "Burek is het ontbijt, de lunch en de redding na een lange avond. De Kroatische variant is meestal een spiraal van bladerdeeg met gehakt; met kaas heet hij streng genomen sirnica, maar iedereen zegt gewoon «burek sa sirom». Je koopt hem per gewicht in een pekarnica, en je eet hem staand — nooit op een bord."
   },
   "vocab": [
-    { "id": "v.pr8.plaza", "hr": "plaža", "nl": "strand", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "plaže", "nom_pl": "plaže", "tags": ["natuur", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.rucnik", "hr": "ručnik", "nl": "handdoek", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ručnika", "nom_pl": "ručnici", "tags": ["ding", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.pijesak", "hr": "pijesak", "nl": "zand", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "pijeska", "nom_pl": "pijesci", "tags": ["natuur", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.torba", "hr": "torba", "nl": "tas", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "torbe", "nom_pl": "torbe", "tags": ["ding", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.burek", "hr": "burek", "nl": "burek", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "bureka", "nom_pl": "bureci", "tags": ["eten", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.pekarnica", "hr": "pekarnica", "nl": "bakkerij", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "pekarnice", "nom_pl": "pekarnice", "tags": ["stad", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.klupa", "hr": "klupa", "nl": "bank, bankje", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "klupe", "nom_pl": "klupe", "tags": ["stad", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.stijena", "hr": "stijena", "nl": "rots", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "stijene", "nom_pl": "stijene", "tags": ["natuur", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.plivati", "hr": "plivati", "nl": "zwemmen", "pos": "verb", "aspect": "imperfective", "present_1sg": "plivam", "verb_class": "-ati", "tags": ["werkwoord", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.zaboraviti", "hr": "zaboraviti", "nl": "vergeten", "pos": "verb", "aspect": "perfective", "present_1sg": "zaboravim", "verb_class": "-iti", "tags": ["werkwoord", "verhaal-08"], "source": "aangevuld" },
-    { "id": "v.pr8.crtati", "hr": "crtati", "nl": "tekenen", "pos": "verb", "aspect": "imperfective", "present_1sg": "crtam", "verb_class": "-ati", "tags": ["werkwoord", "verhaal-08"], "source": "aangevuld" }
+    {
+      "id": "v.pr8.plaza",
+      "hr": "plaža",
+      "nl": "strand",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "plaže",
+      "nom_pl": "plaže",
+      "tags": [
+        "natuur",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.rucnik",
+      "hr": "ručnik",
+      "nl": "handdoek",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "ručnika",
+      "nom_pl": "ručnici",
+      "tags": [
+        "ding",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.pijesak",
+      "hr": "pijesak",
+      "nl": "zand",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "pijeska",
+      "nom_pl": "pijesci",
+      "tags": [
+        "natuur",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.torba",
+      "hr": "torba",
+      "nl": "tas",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "torbe",
+      "nom_pl": "torbe",
+      "tags": [
+        "ding",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.burek",
+      "hr": "burek",
+      "nl": "burek",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "bureka",
+      "nom_pl": "bureci",
+      "tags": [
+        "eten",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.pekarnica",
+      "hr": "pekarnica",
+      "nl": "bakkerij",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "pekarnice",
+      "nom_pl": "pekarnice",
+      "tags": [
+        "stad",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.klupa",
+      "hr": "klupa",
+      "nl": "bank, bankje",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "klupe",
+      "nom_pl": "klupe",
+      "tags": [
+        "stad",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.stijena",
+      "hr": "stijena",
+      "nl": "rots",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "stijene",
+      "nom_pl": "stijene",
+      "tags": [
+        "natuur",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.plivati",
+      "hr": "plivati",
+      "nl": "zwemmen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "plivam",
+      "verb_class": "-ati",
+      "tags": [
+        "werkwoord",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.zaboraviti",
+      "hr": "zaboraviti",
+      "nl": "vergeten",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "zaboravim",
+      "verb_class": "-iti",
+      "tags": [
+        "werkwoord",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr8.crtati",
+      "hr": "crtati",
+      "nl": "tekenen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "crtam",
+      "verb_class": "-ati",
+      "tags": [
+        "werkwoord",
+        "verhaal-08"
+      ],
+      "source": "aangevuld"
+    }
   ],
   "comprehension": [
     {
@@ -121,7 +793,11 @@
       "type": "choice",
       "prompt_nl": "Waar gaat deze tekst vooral over?",
       "answer": "Hoe een dag aan zee van 's ochtends tot 's avonds verliep.",
-      "distractors": ["Waarom Ivo altijd iets vergeet.", "Hoe je in Split burek koopt.", "Het verschil tussen toeristen en inwoners."],
+      "distractors": [
+        "Waarom Ivo altijd iets vergeet.",
+        "Hoe je in Split burek koopt.",
+        "Het verschil tussen toeristen en inwoners."
+      ],
       "explain_nl": "De vier alinea's volgen de klok: zwemmen, schaduw, drie uur, avond. Dat is de rode draad. De vergeten handdoek en de burek zijn losse details onderweg.",
       "difficulty": 3
     },
@@ -131,7 +807,11 @@
       "type": "choice",
       "prompt_nl": "Wat gebeurde er als eerste?",
       "answer": "Ze zwommen in de zee.",
-      "distractors": ["Ze aten burek op een bankje.", "Ze zaten op de rots.", "Mia tekende in het zand."],
+      "distractors": [
+        "Ze aten burek op een bankje.",
+        "Ze zaten op de rots.",
+        "Mia tekende in het zand."
+      ],
       "explain_nl": "De tekst zet de gebeurtenissen op volgorde: eerst het water, dan de schaduw, om drie uur de honger, 's avonds de rots. De tijdsbepalingen aan het begin van elke alinea zijn je houvast.",
       "difficulty": 3
     },
@@ -141,7 +821,11 @@
       "type": "choice",
       "prompt_nl": "Waarom moesten ze eten kopen?",
       "answer": "Er zat niets in de tas.",
-      "distractors": ["De bakkerij ging bijna dicht.", "Mia had honger.", "Ivo had zijn eten vergeten."],
+      "distractors": [
+        "De bakkerij ging bijna dicht.",
+        "Mia had honger.",
+        "Ivo had zijn eten vergeten."
+      ],
       "explain_nl": "«U torbi nije bilo ništa.» Ivo vergat een handdoek, niet zijn eten — een afleider die aan de goede persoon hangt maar aan het verkeerde ding.",
       "difficulty": 3
     },
@@ -152,7 +836,11 @@
       "prompt_nl": "Waarom noemt de tekst de toeristen in de restaurants?",
       "given": "Turisti su bili u restoranima. Mi smo bili na stijeni.",
       "answer": "Om te laten zien dat zij het anders doen dan de bezoekers.",
-      "distractors": ["Omdat de restaurants vol waren.", "Omdat ze zelf ook wilden eten.", "Omdat het 's avonds koud werd."],
+      "distractors": [
+        "Omdat de restaurants vol waren.",
+        "Omdat ze zelf ook wilden eten.",
+        "Omdat het 's avonds koud werd."
+      ],
       "explain_nl": "Twee zinnen naast elkaar, met «mi» erbij waar dat niet nodig was. Dat voornaamwoord staat er juist om het contrast te maken: zij binnen, wij op de rots.",
       "difficulty": 5
     },
@@ -162,7 +850,11 @@
       "type": "choice",
       "prompt_nl": "Wat doet de laatste zin, «More je govorilo»?",
       "answer": "Hij maakt van de stilte iets moois in plaats van iets leegs.",
-      "distractors": ["Hij vertelt dat er lawaai was.", "Hij legt uit waarom ze naar huis gingen.", "Hij zegt dat ze ruzie hadden."],
+      "distractors": [
+        "Hij vertelt dat er lawaai was.",
+        "Hij legt uit waarom ze naar huis gingen.",
+        "Hij zegt dat ze ruzie hadden."
+      ],
       "explain_nl": "Er staat eerst dat zíj niet spraken, en dan dat de zee dat wel deed. Die omkering is een beeld, geen mededeling — en dat is precies wat de zin met de sfeer doet.",
       "difficulty": 5
     },
@@ -172,7 +864,11 @@
       "type": "choice",
       "prompt_nl": "Hoe was het weer?",
       "answer": "Mooi, maar de zee was koud.",
-      "distractors": ["Bewolkt en koud.", "Heet, met warm water.", "Dat staat er niet."],
+      "distractors": [
+        "Bewolkt en koud.",
+        "Heet, met warm water.",
+        "Dat staat er niet."
+      ],
       "explain_nl": "«Vrijeme je bilo lijepo. More je bilo hladno.» Twee aparte mededelingen die je niet mag samentrekken tot één oordeel.",
       "difficulty": 2
     }
@@ -184,9 +880,15 @@
       "mode": "receptive",
       "prompt_nl": "Waarom staat er «bilo» in «Vrijeme je bilo lijepo» en «bila» in «Ona je bila sretna»?",
       "answer": "Omdat het deelwoord meebuigt met het onderwerp: vrijeme is onzijdig, ona vrouwelijk.",
-      "distractors": ["Omdat de eerste zin over het weer gaat.", "Omdat bila beleefder is.", "Omdat bilo bij een ding hoort en bila bij een mens."],
+      "distractors": [
+        "Omdat de eerste zin over het weer gaat.",
+        "Omdat bila beleefder is.",
+        "Omdat bilo bij een ding hoort en bila bij een mens."
+      ],
       "explain_nl": "Het deelwoord van de verleden tijd is in het Kroatisch een bijvoeglijk naamwoord: bio, bila, bilo, bili. Wie het zegt of waarover het gaat, bepaalt de uitgang.",
-      "targets": ["g.11.particip"],
+      "targets": [
+        "g.11.particip"
+      ],
       "difficulty": 4,
       "source": "verhaal-08"
     },
@@ -197,9 +899,13 @@
       "prompt_nl": "Vul aan: «Gisteren waren we op het strand.»",
       "given": "Jučer smo bili na ___ (plaža).",
       "answer": "plaži",
-      "accepts": ["plaži"],
+      "accepts": [
+        "plaži"
+      ],
       "explain_nl": "Na zonder beweging vraagt de locatief; plaža wordt plaži.",
-      "targets": ["g.10.lokativ"],
+      "targets": [
+        "g.10.lokativ"
+      ],
       "difficulty": 3,
       "audio": "Jučer smo bili na plaži.",
       "source": "verhaal-08"
@@ -210,9 +916,15 @@
       "mode": "receptive",
       "prompt_nl": "Welke zin betekent «we gingen naar het strand»?",
       "answer": "Išli smo na plažu.",
-      "distractors": ["Bili smo na plaži.", "Išli smo na plaži.", "Bili smo na plažu."],
+      "distractors": [
+        "Bili smo na plaži.",
+        "Išli smo na plaži.",
+        "Bili smo na plažu."
+      ],
       "explain_nl": "Beweging vraagt de accusatief plažu; zijn zonder beweging vraagt de locatief plaži. De twee middelste zinnen mengen die twee door elkaar.",
-      "targets": ["g.10.prijedlozi_lokativ"],
+      "targets": [
+        "g.10.prijedlozi_lokativ"
+      ],
       "difficulty": 5,
       "source": "verhaal-08"
     },
@@ -223,9 +935,13 @@
       "prompt_nl": "Vul aan: «Ivo kocht burek in de bakkerij.»",
       "given": "Ivo je kupio burek u ___ (pekarnica).",
       "answer": "pekarnici",
-      "accepts": ["pekarnici"],
+      "accepts": [
+        "pekarnici"
+      ],
       "explain_nl": "U zonder beweging vraagt de locatief: pekarnica wordt pekarnici.",
-      "targets": ["g.10.lokativ"],
+      "targets": [
+        "g.10.lokativ"
+      ],
       "difficulty": 3,
       "source": "verhaal-08"
     },
@@ -236,9 +952,16 @@
       "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
       "given": "Mi ne smo govorili.",
       "answer": "Mi nismo govorili.",
-      "accepts": ["Mi nismo govorili.", "Mi nismo govorili", "Nismo govorili.", "Nismo govorili"],
+      "accepts": [
+        "Mi nismo govorili.",
+        "Mi nismo govorili",
+        "Nismo govorili.",
+        "Nismo govorili"
+      ],
       "explain_nl": "Biti plakt zijn ontkenning vast: nisam, nisi, nije, nismo, niste, nisu. «Ne smo» bestaat niet.",
-      "targets": ["g.11.perfekt_negacija"],
+      "targets": [
+        "g.11.perfekt_negacija"
+      ],
       "difficulty": 3,
       "source": "verhaal-08"
     },
@@ -249,9 +972,16 @@
       "prompt_nl": "Vertaal naar het Nederlands.",
       "given": "U torbi nije bilo ništa.",
       "answer": "In de tas zat niets.",
-      "accepts": ["In de tas zat niets.", "In de tas zat niets", "Er zat niets in de tas.", "In de tas was niets."],
+      "accepts": [
+        "In de tas zat niets.",
+        "In de tas zat niets",
+        "Er zat niets in de tas.",
+        "In de tas was niets."
+      ],
       "explain_nl": "Bij ništa moet het werkwoord óók ontkend worden — een dubbele ontkenning die in het Kroatisch verplicht is en in het Nederlands fout zou zijn.",
-      "targets": ["g.11.perfekt_negacija"],
+      "targets": [
+        "g.11.perfekt_negacija"
+      ],
       "difficulty": 4,
       "source": "verhaal-08"
     },
@@ -261,9 +991,15 @@
       "mode": "receptive",
       "prompt_nl": "Waarom staat er «tri sata» en niet «tri sati»?",
       "answer": "Omdat na 2, 3 en 4 de genitief enkelvoud komt.",
-      "distractors": ["Omdat het over de klok gaat.", "Omdat sata korter is.", "Omdat u de genitief vraagt."],
+      "distractors": [
+        "Omdat het over de klok gaat.",
+        "Omdat sata korter is.",
+        "Omdat u de genitief vraagt."
+      ],
       "explain_nl": "Pas vanaf vijf wordt het sati: pet sati. Bij drie is het sata — dezelfde regel die je bij elk getal tegenkomt.",
-      "targets": ["g.14.genitiv_jd_mn"],
+      "targets": [
+        "g.14.genitiv_jd_mn"
+      ],
       "difficulty": 4,
       "source": "verhaal-08"
     }

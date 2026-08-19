@@ -43,6 +43,9 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run check` | nakijklogica |
 | `npm run check:content` | contentvalidatie |
 | `npm run check:taal` | het Kroatisch zelf: spelling, voorzetsel+naamval, servismen |
+| `npm run check:verhalen` | validatiepoorten per verhaal: lengte, dekking, nieuwe woorden |
+| `npm run lexicon -- 18` | welke woorden er na les 18 beschikbaar zijn om mee te schrijven |
+| `npm run gloss -- <slug>` | glossen voorstellen voor een verhaal |
 | `npm run check:fase0` | acceptatietests Fase 0 |
 | `npm run check:fase05` | acceptatietests Fase 0.5 (escalerende feedback) |
 | `npm run check:fase1` | acceptatietests Fase 1 (woordenschat) |

@@ -9,224 +9,1756 @@
   "requires_lesson": 20,
   "blurb_nl": "Er komt een pakket uit Nederland. Het langste en moeilijkste verhaal van de reeks — met lange zinnen, betrekkelijke bijzinnen, en een slotzin die niet uitlegt wat hij bedoelt.",
   "motif": "knjiga",
-  "focus_nl": ["betrekkelijke bijzinnen", "bezittelijke bijvoeglijke naamwoorden", "imperatief", "futur I"],
+  "focus_nl": [
+    "betrekkelijke bijzinnen",
+    "bezittelijke bijvoeglijke naamwoorden",
+    "imperatief",
+    "futur I"
+  ],
   "source": "aangevuld",
   "paragraphs": [
     {
       "id": "p1",
       "sentences": [
-        { "id": "bakina-kuharica.p1.s1", "hr": "U srijedu je stigao paket iz Nizozemske.", "nl": "Op woensdag kwam er een pakket uit Nederland." },
-        { "id": "bakina-kuharica.p1.s2", "hr": "Nina je odmah prepoznala majčin rukopis na adresi.", "nl": "Nina herkende meteen het handschrift van haar moeder op het adres." },
-        { "id": "bakina-kuharica.p1.s3", "hr": "Unutra je bila stara bilježnica u smeđem uvezu.", "nl": "Binnenin zat een oud schrift in een bruine band." },
-        { "id": "bakina-kuharica.p1.s4", "hr": "Na prvoj stranici pisalo je: Kuharica. Marija Kovač, 1961.", "nl": "Op de eerste bladzijde stond: Kookboek. Marija Kovač, 1961." }
+        {
+          "id": "bakina-kuharica.p1.s1",
+          "hr": "U srijedu je stigao paket iz Nizozemske.",
+          "nl": "Op woensdag kwam er een pakket uit Nederland."
+        },
+        {
+          "id": "bakina-kuharica.p1.s2",
+          "hr": "Nina je odmah prepoznala majčin rukopis na adresi.",
+          "nl": "Nina herkende meteen het handschrift van haar moeder op het adres."
+        },
+        {
+          "id": "bakina-kuharica.p1.s3",
+          "hr": "Paket nije bio velik.",
+          "nl": "Het pakket was niet groot."
+        },
+        {
+          "id": "bakina-kuharica.p1.s4",
+          "hr": "Unutra je bila stara bilježnica u smeđem uvezu.",
+          "nl": "Binnenin zat een oud schrift in een bruine band."
+        },
+        {
+          "id": "bakina-kuharica.p1.s5",
+          "hr": "Uz nju je bilo pismo od tri rečenice.",
+          "nl": "Ernaast lag een brief van drie zinnen."
+        }
       ]
     },
     {
       "id": "p2",
       "sentences": [
-        { "id": "bakina-kuharica.p2.s1", "hr": "Bila je to bakina kuharica.", "nl": "Het was oma's kookboek." },
-        { "id": "bakina-kuharica.p2.s2", "hr": "Nikada je nije upoznala.", "nl": "Ze had haar nooit gekend." },
-        { "id": "bakina-kuharica.p2.s3", "hr": "Baka je umrla prije nego što se Nina rodila.", "nl": "Oma stierf voordat Nina geboren werd." },
-        { "id": "bakina-kuharica.p2.s4", "hr": "Recepti su bili napisani rukom, sitnim slovima.", "nl": "De recepten waren met de hand geschreven, in kleine lettertjes." },
-        { "id": "bakina-kuharica.p2.s5", "hr": "Nina je čitala polako, ali je razumjela gotovo sve.", "nl": "Nina las langzaam, maar begreep bijna alles." }
+        {
+          "id": "bakina-kuharica.p2.s1",
+          "hr": "Na prvoj stranici pisalo je: Kuharica. Marija Kovač, 1961.",
+          "nl": "Op de eerste bladzijde stond: Kookboek. Marija Kovač, 1961."
+        },
+        {
+          "id": "bakina-kuharica.p2.s2",
+          "hr": "Bila je to bakina kuharica.",
+          "nl": "Het was oma's kookboek."
+        },
+        {
+          "id": "bakina-kuharica.p2.s3",
+          "hr": "Nikada je nije upoznala.",
+          "nl": "Ze had haar nooit gekend."
+        },
+        {
+          "id": "bakina-kuharica.p2.s4",
+          "hr": "Baka je umrla prije nego što se Nina rodila.",
+          "nl": "Oma stierf voordat Nina geboren werd."
+        },
+        {
+          "id": "bakina-kuharica.p2.s5",
+          "hr": "O njoj je znala samo ono što joj je majka rekla.",
+          "nl": "Over haar wist ze alleen wat haar moeder haar had verteld."
+        }
       ]
     },
     {
       "id": "p3",
       "sentences": [
-        { "id": "bakina-kuharica.p3.s1", "hr": "Prije dvije godine nije razumjela ni naslove.", "nl": "Twee jaar geleden begreep ze niet eens de titels." },
-        { "id": "bakina-kuharica.p3.s2", "hr": "Sada je znala što znači „pola litre mlijeka“ i „dvije žlice brašna“.", "nl": "Nu wist ze wat \"een halve liter melk\" en \"twee lepels bloem\" betekenen." },
-        { "id": "bakina-kuharica.p3.s3", "hr": "Okrenula je zadnju stranicu.", "nl": "Ze sloeg de laatste bladzijde om." },
-        { "id": "bakina-kuharica.p3.s4", "hr": "Tamo, na rubu, stajala je rečenica koju baka nije napisala za sebe:", "nl": "Daar, in de kantlijn, stond een zin die oma niet voor zichzelf had geschreven:" },
-        { "id": "bakina-kuharica.p3.s5", "hr": "„Za Anu, za njezinu prvu kuću.“", "nl": "\"Voor Ana, voor haar eerste huis.\"" }
+        {
+          "id": "bakina-kuharica.p3.s1",
+          "hr": "Recepti su bili napisani rukom, sitnim slovima.",
+          "nl": "De recepten waren met de hand geschreven, in kleine lettertjes."
+        },
+        {
+          "id": "bakina-kuharica.p3.s2",
+          "hr": "Neki su imali naslov, neki samo datum.",
+          "nl": "Sommige hadden een titel, sommige alleen een datum."
+        },
+        {
+          "id": "bakina-kuharica.p3.s3",
+          "hr": "Nina je čitala polako, ali je razumjela gotovo sve.",
+          "nl": "Nina las langzaam, maar begreep bijna alles."
+        },
+        {
+          "id": "bakina-kuharica.p3.s4",
+          "hr": "Prije dvije godine nije razumjela ni naslove.",
+          "nl": "Twee jaar geleden begreep ze niet eens de titels."
+        },
+        {
+          "id": "bakina-kuharica.p3.s5",
+          "hr": "Sada je znala što znači „pola litre mlijeka“ i „dvije žlice brašna“.",
+          "nl": "Nu wist ze wat „een halve liter melk” en „twee lepels bloem” betekenen."
+        },
+        {
+          "id": "bakina-kuharica.p3.s6",
+          "hr": "Na jednoj stranici baka je napisala samo: „Kuhaj polako.“",
+          "nl": "Op één bladzijde had oma alleen geschreven: „Kook langzaam.”"
+        },
+        {
+          "id": "bakina-kuharica.p3.s7",
+          "hr": "Neke riječi nije poznavala i morala ih je potražiti.",
+          "nl": "Sommige woorden kende ze niet en die moest ze opzoeken."
+        },
+        {
+          "id": "bakina-kuharica.p3.s8",
+          "hr": "Ali rukopis je bio jasan, kao da je baka pisala za nekoga.",
+          "nl": "Maar het handschrift was duidelijk, alsof oma voor iemand schreef."
+        }
       ]
     },
     {
       "id": "p4",
       "sentences": [
-        { "id": "bakina-kuharica.p4.s1", "hr": "Ana nikada nije naučila dobro čitati hrvatski.", "nl": "Ana heeft nooit goed Kroatisch leren lezen." },
-        { "id": "bakina-kuharica.p4.s2", "hr": "Kad je bila mala, kod kuće se govorilo nizozemski.", "nl": "Toen ze klein was, werd er thuis Nederlands gesproken." },
-        { "id": "bakina-kuharica.p4.s3", "hr": "Nina je uzela telefon i nazvala majku.", "nl": "Nina pakte de telefoon en belde haar moeder." },
-        { "id": "bakina-kuharica.p4.s4", "hr": "„Mama“, rekla je, „sjedni. Pročitat ću ti nešto.“", "nl": "\"Mama\", zei ze, \"ga zitten. Ik ga je iets voorlezen.\"" }
+        {
+          "id": "bakina-kuharica.p4.s1",
+          "hr": "Okrenula je zadnju stranicu.",
+          "nl": "Ze sloeg de laatste bladzijde om."
+        },
+        {
+          "id": "bakina-kuharica.p4.s2",
+          "hr": "Tamo, na rubu, stajala je rečenica koju baka nije napisala za sebe:",
+          "nl": "Daar, in de kantlijn, stond een zin die oma niet voor zichzelf had geschreven:"
+        },
+        {
+          "id": "bakina-kuharica.p4.s3",
+          "hr": "„Za Anu, za njezinu prvu kuću.“",
+          "nl": "„Voor Ana, voor haar eerste huis.”"
+        },
+        {
+          "id": "bakina-kuharica.p4.s4",
+          "hr": "Ana nikada nije naučila dobro čitati hrvatski.",
+          "nl": "Ana heeft nooit goed Kroatisch leren lezen."
+        },
+        {
+          "id": "bakina-kuharica.p4.s5",
+          "hr": "Kad je bila mala, kod kuće se govorilo nizozemski.",
+          "nl": "Toen ze klein was, werd er thuis Nederlands gesproken."
+        },
+        {
+          "id": "bakina-kuharica.p4.s6",
+          "hr": "Njezina je majka mislila da je tako lakše.",
+          "nl": "Haar moeder dacht dat het zo makkelijker was."
+        }
       ]
     },
     {
       "id": "p5",
       "sentences": [
-        { "id": "bakina-kuharica.p5.s1", "hr": "Čitala je polako, riječ po riječ.", "nl": "Ze las langzaam, woord voor woord." },
-        { "id": "bakina-kuharica.p5.s2", "hr": "S druge strane linije bilo je tiho.", "nl": "Aan de andere kant van de lijn was het stil." },
-        { "id": "bakina-kuharica.p5.s3", "hr": "Onda je Ana rekla samo: „Hvala.“", "nl": "Toen zei Ana alleen: \"Dank je.\"" },
-        { "id": "bakina-kuharica.p5.s4", "hr": "Nina je tek tada shvatila zašto je zapravo došla u Zagreb.", "nl": "Pas toen begreep Nina waarom ze eigenlijk naar Zagreb was gekomen." }
+        {
+          "id": "bakina-kuharica.p5.s1",
+          "hr": "Nina je uzela telefon i nazvala majku.",
+          "nl": "Nina pakte de telefoon en belde haar moeder."
+        },
+        {
+          "id": "bakina-kuharica.p5.s2",
+          "hr": "„Mama“, rekla je, „sjedni. Pročitat ću ti nešto.“",
+          "nl": "„Mama”, zei ze, „ga zitten. Ik ga je iets voorlezen.”"
+        },
+        {
+          "id": "bakina-kuharica.p5.s3",
+          "hr": "Čitala je polako, riječ po riječ.",
+          "nl": "Ze las langzaam, woord voor woord."
+        },
+        {
+          "id": "bakina-kuharica.p5.s4",
+          "hr": "Prvo recept za kruh, poslije onaj za kolač s jabukama.",
+          "nl": "Eerst het recept voor brood, daarna dat voor appelkoek."
+        },
+        {
+          "id": "bakina-kuharica.p5.s5",
+          "hr": "S druge strane linije bilo je tiho.",
+          "nl": "Aan de andere kant van de lijn was het stil."
+        },
+        {
+          "id": "bakina-kuharica.p5.s6",
+          "hr": "Nina je čekala.",
+          "nl": "Nina wachtte."
+        },
+        {
+          "id": "bakina-kuharica.p5.s7",
+          "hr": "Onda je Ana rekla samo: „Hvala.“",
+          "nl": "Toen zei Ana alleen: „Dank je.”"
+        },
+        {
+          "id": "bakina-kuharica.p5.s8",
+          "hr": "Rekla je to na hrvatskom.",
+          "nl": "Ze zei het in het Kroatisch."
+        },
+        {
+          "id": "bakina-kuharica.p5.s9",
+          "hr": "Nina je tek tada shvatila zašto je zapravo došla u Zagreb.",
+          "nl": "Pas toen begreep Nina waarom ze eigenlijk naar Zagreb was gekomen."
+        },
+        {
+          "id": "bakina-kuharica.p5.s10",
+          "hr": "Poslije razgovora dugo je sjedila za stolom s bilježnicom u ruci.",
+          "nl": "Na het gesprek zat ze lang aan tafel met het schrift in haar hand."
+        }
       ]
     }
   ],
   "glossary": {
-    "u": { "hr": "u", "nl": "in; op", "info": "met accusatief bij een tijdstip: u srijedu = op woensdag" },
-    "srijedu": { "hr": "srijedu", "nl": "woensdag", "lemma": "srijeda", "info": "accusatief van tijd", "item": "v.pr5.srijeda" },
-    "je": { "hr": "je", "nl": "is", "lemma": "biti", "info": "hulpwerkwoord van de perfekt; ook: haar (accusatief van ona)" },
-    "stigao": { "hr": "stigao", "nl": "aangekomen", "lemma": "stići", "info": "deelwoord, mannelijk", "item": "v.pr5.stici" },
-    "paket": { "hr": "paket", "nl": "pakket", "info": "mannelijk, levenloos", "item": "v.pr5.paket" },
-    "iz": { "hr": "iz", "nl": "uit", "info": "voorzetsel met genitief: herkomst" },
-    "nizozemske": { "hr": "Nizozemske", "nl": "Nederland", "lemma": "Nizozemska", "info": "genitief na iz; landnamen op -ska verbuigen als bijvoeglijk naamwoord" },
-    "nina": { "hr": "Nina", "nl": "Nina", "info": "eigennaam" },
-    "odmah": { "hr": "odmah", "nl": "meteen", "info": "bijwoord", "item": "v.pr5.odmah" },
-    "prepoznala": { "hr": "prepoznala", "nl": "herkend", "lemma": "prepoznati", "info": "deelwoord, vrouwelijk", "item": "v.pr5.prepoznati" },
-    "majčin": { "hr": "majčin", "nl": "van moeder", "info": "bezittelijk bijvoeglijk naamwoord van majka: k → č" },
-    "rukopis": { "hr": "rukopis", "nl": "handschrift", "info": "letterlijk: hand-schrift (ruka + pisati)", "item": "v.pr5.rukopis" },
-    "na": { "hr": "na", "nl": "op", "info": "met locatief: plaats" },
-    "adresi": { "hr": "adresi", "nl": "adres", "lemma": "adresa", "info": "locatief enkelvoud" },
-    "unutra": { "hr": "unutra", "nl": "binnenin", "info": "bijwoord van plaats", "item": "v.pr5.unutra" },
-    "bila": { "hr": "bila", "nl": "was", "lemma": "biti", "info": "deelwoord, vrouwelijk" },
-    "stara": { "hr": "stara", "nl": "oude", "lemma": "star", "info": "vrouwelijk enkelvoud" },
-    "bilježnica": { "hr": "bilježnica", "nl": "schrift", "info": "vrouwelijk; van bilježiti = aantekenen", "item": "v.pr5.biljeznica" },
-    "smeđem": { "hr": "smeđem", "nl": "bruine", "lemma": "smeđ", "info": "locatief mannelijk na u", "item": "v.pr5.smed" },
-    "uvezu": { "hr": "uvezu", "nl": "band, kaft", "lemma": "uvez", "info": "locatief enkelvoud", "item": "v.pr5.uvez" },
-    "prvoj": { "hr": "prvoj", "nl": "eerste", "lemma": "prvi", "info": "locatief vrouwelijk: na prvoj stranici" },
-    "stranici": { "hr": "stranici", "nl": "bladzijde", "lemma": "stranica", "info": "locatief; c blijft c voor -i", "item": "v.pr5.stranica" },
-    "pisalo": { "hr": "pisalo", "nl": "stond geschreven", "lemma": "pisati", "info": "onpersoonlijk: pisalo je = er stond" },
-    "kuharica": { "hr": "kuharica", "nl": "kookboek; kokkin", "info": "hier: kookboek", "item": "v.pr5.kuharica" },
-    "marija": { "hr": "Marija", "nl": "Marija", "info": "eigennaam — Nina's grootmoeder" },
-    "kovač": { "hr": "Kovač", "nl": "Kovač", "info": "achternaam; kovač = smid" },
-    "1961": { "hr": "1961.", "nl": "1961", "info": "een jaartal krijgt in het Kroatisch een punt: 1961. = het jaar 1961" },
-    "to": { "hr": "to", "nl": "dat", "info": "aanwijzend voornaamwoord; «Bila je to…» = het was…" },
-    "bakina": { "hr": "bakina", "nl": "van oma", "info": "bezittelijk bijvoeglijk naamwoord van baka" },
-    "nikada": { "hr": "nikada", "nl": "nooit", "info": "vereist dubbele ontkenning: nikada nije" },
-    "nije": { "hr": "nije", "nl": "is niet", "lemma": "biti", "info": "ontkende 3e persoon" },
-    "upoznala": { "hr": "upoznala", "nl": "leren kennen", "lemma": "upoznati", "info": "deelwoord, vrouwelijk", "item": "v.pr5.upoznati" },
-    "baka": { "hr": "baka", "nl": "oma", "info": "vrouwelijk", "item": "v.pr5.baka" },
-    "umrla": { "hr": "umrla", "nl": "gestorven", "lemma": "umrijeti", "info": "deelwoord, vrouwelijk" },
-    "prije": { "hr": "prije", "nl": "vóór; geleden", "info": "prije nego što = voordat" },
-    "nego": { "hr": "nego", "nl": "dan", "info": "onderdeel van «prije nego što» = voordat" },
-    "što": { "hr": "što", "nl": "wat; dat", "info": "hier onderdeel van het voegwoord prije nego što" },
-    "se": { "hr": "se", "nl": "zich", "info": "wederkerend; roditi se = geboren worden" },
-    "rodila": { "hr": "rodila", "nl": "geboren", "lemma": "roditi se", "info": "deelwoord, vrouwelijk", "item": "v.pr5.roditi" },
-    "recepti": { "hr": "recepti", "nl": "recepten", "lemma": "recept", "info": "nominatief meervoud", "item": "v.pr5.recept" },
-    "su": { "hr": "su", "nl": "zijn", "lemma": "biti", "info": "3e persoon meervoud" },
-    "bili": { "hr": "bili", "nl": "waren", "lemma": "biti", "info": "deelwoord, mannelijk meervoud" },
-    "napisani": { "hr": "napisani", "nl": "geschreven", "lemma": "napisati", "info": "lijdend deelwoord: bili su napisani = ze waren geschreven", "item": "v.pr5.napisati" },
-    "rukom": { "hr": "rukom", "nl": "met de hand", "lemma": "ruka", "info": "instrumentalis als middel — zonder voorzetsel", "item": "v.pr5.ruka" },
-    "sitnim": { "hr": "sitnim", "nl": "kleine, fijne", "lemma": "sitan", "info": "instrumentalis meervoud", "item": "v.pr5.sitan" },
-    "slovima": { "hr": "slovima", "nl": "letters", "lemma": "slovo", "info": "instrumentalis meervoud: in kleine lettertjes", "item": "v.pr5.slovo" },
-    "čitala": { "hr": "čitala", "nl": "las", "lemma": "čitati", "info": "deelwoord, vrouwelijk; imperfectief — een handeling die duurde" },
-    "polako": { "hr": "polako", "nl": "langzaam", "info": "bijwoord", "item": "v.pr5.polako" },
-    "ali": { "hr": "ali", "nl": "maar", "info": "tegenstellend voegwoord" },
-    "razumjela": { "hr": "razumjela", "nl": "begreep", "lemma": "razumjeti", "info": "deelwoord, vrouwelijk" },
-    "gotovo": { "hr": "gotovo", "nl": "bijna", "info": "bijwoord; gotovo sve = bijna alles", "item": "v.pr5.gotovo" },
-    "sve": { "hr": "sve", "nl": "alles", "info": "onbepaald voornaamwoord" },
-    "dvije": { "hr": "dvije", "nl": "twee", "lemma": "dva", "info": "vrouwelijke vorm; 2-4 vragen de genitief enkelvoud" },
-    "godine": { "hr": "godine", "nl": "jaar", "lemma": "godina", "info": "genitief enkelvoud na dvije" },
-    "ni": { "hr": "ni", "nl": "niet eens, zelfs niet", "info": "versterkt de ontkenning: nije razumjela ni naslove" },
-    "naslove": { "hr": "naslove", "nl": "titels", "lemma": "naslov", "info": "accusatief meervoud", "item": "v.pr5.naslov" },
-    "sada": { "hr": "sada", "nl": "nu", "info": "bijwoord — zet dit moment tegenover twee jaar geleden" },
-    "znala": { "hr": "znala", "nl": "wist", "lemma": "znati", "info": "deelwoord, vrouwelijk" },
-    "znači": { "hr": "znači", "nl": "betekent", "lemma": "značiti", "info": "3e persoon enkelvoud", "item": "v.pr5.znaciti" },
-    "pola": { "hr": "pola", "nl": "half", "info": "onveranderlijk; pola + genitief", "item": "v.pr5.pola" },
-    "litre": { "hr": "litre", "nl": "liter", "lemma": "litra", "info": "genitief enkelvoud na pola" },
-    "mlijeka": { "hr": "mlijeka", "nl": "melk", "lemma": "mlijeko", "info": "genitief: een halve liter mélk" },
-    "i": { "hr": "i", "nl": "en", "info": "voegwoord" },
-    "žlice": { "hr": "žlice", "nl": "lepels", "lemma": "žlica", "info": "genitief enkelvoud na dvije", "item": "v.pr5.zlica" },
-    "brašna": { "hr": "brašna", "nl": "bloem, meel", "lemma": "brašno", "info": "genitief: twee lepels bloem", "item": "v.pr5.brasno" },
-    "okrenula": { "hr": "okrenula", "nl": "omgeslagen, omgedraaid", "lemma": "okrenuti", "info": "deelwoord, vrouwelijk", "item": "v.pr5.okrenuti" },
-    "zadnju": { "hr": "zadnju", "nl": "laatste", "lemma": "zadnji", "info": "accusatief vrouwelijk", "item": "v.pr5.zadnji" },
-    "stranicu": { "hr": "stranicu", "nl": "bladzijde", "lemma": "stranica", "info": "accusatief enkelvoud", "item": "v.pr5.stranica" },
-    "tamo": { "hr": "tamo", "nl": "daar", "info": "bijwoord van plaats" },
-    "rubu": { "hr": "rubu", "nl": "rand, kantlijn", "lemma": "rub", "info": "locatief: na rubu = in de kantlijn", "item": "v.pr5.rub" },
-    "stajala": { "hr": "stajala", "nl": "stond", "lemma": "stajati", "info": "deelwoord, vrouwelijk — hoort bij rečenica" },
-    "rečenica": { "hr": "rečenica", "nl": "zin", "info": "vrouwelijk; van reći = zeggen", "item": "v.pr5.recenica" },
-    "koju": { "hr": "koju", "nl": "die", "lemma": "koji", "info": "betrekkelijk voornaamwoord, accusatief vrouwelijk — het richt zich naar rečenica" },
-    "napisala": { "hr": "napisala", "nl": "geschreven", "lemma": "napisati", "info": "deelwoord, vrouwelijk", "item": "v.pr5.napisati" },
-    "za": { "hr": "za", "nl": "voor", "info": "met accusatief: bestemming" },
-    "sebe": { "hr": "sebe", "nl": "zichzelf", "info": "wederkerend voornaamwoord, accusatief" },
-    "anu": { "hr": "Anu", "nl": "Ana", "lemma": "Ana", "info": "accusatief na za" },
-    "njezinu": { "hr": "njezinu", "nl": "haar", "lemma": "njezin", "info": "accusatief vrouwelijk" },
-    "prvu": { "hr": "prvu", "nl": "eerste", "lemma": "prvi", "info": "accusatief vrouwelijk" },
-    "kuću": { "hr": "kuću", "nl": "huis", "lemma": "kuća", "info": "accusatief enkelvoud" },
-    "ana": { "hr": "Ana", "nl": "Ana", "info": "Nina's moeder — zie verhaal 1" },
-    "naučila": { "hr": "naučila", "nl": "geleerd", "lemma": "naučiti", "info": "deelwoord, vrouwelijk", "item": "v.pr5.nauciti" },
-    "dobro": { "hr": "dobro", "nl": "goed", "info": "bijwoord" },
-    "čitati": { "hr": "čitati", "nl": "lezen", "info": "infinitief na naučiti" },
-    "hrvatski": { "hr": "hrvatski", "nl": "Kroatisch", "info": "de taal, als lijdend voorwerp" },
-    "kad": { "hr": "kad", "nl": "toen, wanneer", "info": "voegwoord van tijd" },
-    "mala": { "hr": "mala", "nl": "klein", "lemma": "malen", "info": "vrouwelijk; bila mala = ze was klein" },
-    "kod": { "hr": "kod", "nl": "bij", "info": "met genitief; kod kuće = thuis" },
-    "kuće": { "hr": "kuće", "nl": "huis", "lemma": "kuća", "info": "genitief in de vaste uitdrukking kod kuće" },
-    "govorilo": { "hr": "govorilo", "nl": "gesproken", "lemma": "govoriti", "info": "onpersoonlijk met se: se govorilo = er werd gesproken" },
-    "nizozemski": { "hr": "nizozemski", "nl": "Nederlands", "info": "de taal" },
-    "uzela": { "hr": "uzela", "nl": "pakte", "lemma": "uzeti", "info": "deelwoord, vrouwelijk", "item": "v.pr5.uzeti" },
-    "telefon": { "hr": "telefon", "nl": "telefoon", "info": "mannelijk, levenloos", "item": "v.pr5.telefon" },
-    "nazvala": { "hr": "nazvala", "nl": "belde", "lemma": "nazvati", "info": "deelwoord, vrouwelijk", "item": "v.pr5.nazvati" },
-    "majku": { "hr": "majku", "nl": "moeder", "lemma": "majka", "info": "accusatief enkelvoud" },
-    "mama": { "hr": "mama", "nl": "mama", "info": "vocatief — bij mama gelijk aan de nominatief" },
-    "rekla": { "hr": "rekla", "nl": "zei", "lemma": "reći", "info": "deelwoord, vrouwelijk" },
-    "sjedni": { "hr": "sjedni", "nl": "ga zitten", "lemma": "sjesti", "info": "imperatief, 2e persoon enkelvoud", "item": "v.pr5.sjesti" },
-    "pročitat": { "hr": "pročitat", "nl": "zal voorlezen", "lemma": "pročitati", "info": "futur I: pročitat ću — de infinitief verliest zijn -i", "item": "v.pr5.procitati" },
-    "ću": { "hr": "ću", "nl": "zal", "lemma": "htjeti", "info": "hulpwerkwoord van de toekomende tijd" },
-    "ti": { "hr": "ti", "nl": "aan jou", "info": "datief — de ontvanger" },
-    "nešto": { "hr": "nešto", "nl": "iets", "info": "onbepaald voornaamwoord" },
-    "riječ": { "hr": "riječ", "nl": "woord", "info": "riječ po riječ = woord voor woord" },
-    "po": { "hr": "po", "nl": "per, voor", "info": "in de uitdrukking riječ po riječ" },
-    "s": { "hr": "s", "nl": "van, vanaf", "info": "met genitief: s druge strane = aan de andere kant" },
-    "druge": { "hr": "druge", "nl": "andere", "lemma": "drugi", "info": "genitief vrouwelijk" },
-    "strane": { "hr": "strane", "nl": "kant, zijde", "lemma": "strana", "info": "genitief enkelvoud", "item": "v.pr5.strana" },
-    "linije": { "hr": "linije", "nl": "lijn", "lemma": "linija", "info": "genitief; hier: de telefoonlijn" },
-    "bilo": { "hr": "bilo", "nl": "was", "lemma": "biti", "info": "onzijdig deelwoord; bilo je tiho = het was stil" },
-    "tiho": { "hr": "tiho", "nl": "stil", "info": "bijwoord" },
-    "onda": { "hr": "onda", "nl": "toen", "info": "bijwoord van volgorde" },
-    "samo": { "hr": "samo", "nl": "alleen, slechts", "info": "bijwoord — het benadrukt hoe weinig ze zei" },
-    "hvala": { "hr": "hvala", "nl": "dank je", "info": "vaste uitdrukking" },
-    "tek": { "hr": "tek", "nl": "pas", "info": "tek tada = pas toen — het benadrukt dat het lang duurde" },
-    "tada": { "hr": "tada", "nl": "toen", "info": "bijwoord van tijd" },
-    "shvatila": { "hr": "shvatila", "nl": "begreep, doorzag", "lemma": "shvatiti", "info": "deelwoord, vrouwelijk; sterker dan razumjeti — het gaat om inzicht", "item": "v.pr5.shvatiti" },
-    "zašto": { "hr": "zašto", "nl": "waarom", "info": "vraagwoord, hier in een bijzin" },
-    "zapravo": { "hr": "zapravo", "nl": "eigenlijk", "info": "bijwoord — het suggereert dat de echte reden een andere was dan ze dacht", "item": "v.pr5.zapravo" },
-    "došla": { "hr": "došla", "nl": "gekomen", "lemma": "doći", "info": "deelwoord, vrouwelijk" },
-    "zagreb": { "hr": "Zagreb", "nl": "Zagreb", "info": "accusatief na u: richting" }
+    "u": {
+      "hr": "u",
+      "nl": "in; op",
+      "info": "met accusatief bij een tijdstip: u srijedu = op woensdag"
+    },
+    "srijedu": {
+      "hr": "srijedu",
+      "nl": "woensdag",
+      "lemma": "srijeda",
+      "info": "accusatief van tijd",
+      "item": "v.pr5.srijeda"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "hulpwerkwoord van de perfekt; ook: haar (accusatief van ona)"
+    },
+    "stigao": {
+      "hr": "stigao",
+      "nl": "aangekomen",
+      "lemma": "stići",
+      "info": "deelwoord, mannelijk",
+      "item": "v.pr5.stici"
+    },
+    "paket": {
+      "hr": "paket",
+      "nl": "pakket",
+      "info": "mannelijk, levenloos",
+      "item": "v.pr5.paket"
+    },
+    "iz": {
+      "hr": "iz",
+      "nl": "uit",
+      "info": "voorzetsel met genitief: herkomst"
+    },
+    "nizozemske": {
+      "hr": "Nizozemske",
+      "nl": "Nederland",
+      "lemma": "Nizozemska",
+      "info": "genitief na iz; landnamen op -ska verbuigen als bijvoeglijk naamwoord"
+    },
+    "nina": {
+      "hr": "Nina",
+      "nl": "Nina",
+      "info": "eigennaam"
+    },
+    "odmah": {
+      "hr": "odmah",
+      "nl": "meteen",
+      "info": "bijwoord",
+      "item": "v.pr5.odmah"
+    },
+    "prepoznala": {
+      "hr": "prepoznala",
+      "nl": "herkend",
+      "lemma": "prepoznati",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.prepoznati"
+    },
+    "majčin": {
+      "hr": "majčin",
+      "nl": "van moeder",
+      "info": "bezittelijk bijvoeglijk naamwoord van majka: k → č"
+    },
+    "rukopis": {
+      "hr": "rukopis",
+      "nl": "handschrift",
+      "info": "letterlijk: hand-schrift (ruka + pisati)",
+      "item": "v.pr5.rukopis"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "op",
+      "info": "met locatief: plaats"
+    },
+    "adresi": {
+      "hr": "adresi",
+      "nl": "adres",
+      "lemma": "adresa",
+      "info": "locatief enkelvoud"
+    },
+    "unutra": {
+      "hr": "unutra",
+      "nl": "binnenin",
+      "info": "bijwoord van plaats",
+      "item": "v.pr5.unutra"
+    },
+    "bila": {
+      "hr": "bila",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "stara": {
+      "hr": "stara",
+      "nl": "oude",
+      "lemma": "star",
+      "info": "vrouwelijk enkelvoud"
+    },
+    "bilježnica": {
+      "hr": "bilježnica",
+      "nl": "schrift",
+      "info": "vrouwelijk; van bilježiti = aantekenen",
+      "item": "v.pr5.biljeznica"
+    },
+    "smeđem": {
+      "hr": "smeđem",
+      "nl": "bruine",
+      "lemma": "smeđ",
+      "info": "locatief mannelijk na u",
+      "item": "v.pr5.smed"
+    },
+    "uvezu": {
+      "hr": "uvezu",
+      "nl": "band, kaft",
+      "lemma": "uvez",
+      "info": "locatief enkelvoud",
+      "item": "v.pr5.uvez"
+    },
+    "prvoj": {
+      "hr": "prvoj",
+      "nl": "eerste",
+      "lemma": "prvi",
+      "info": "locatief vrouwelijk: na prvoj stranici"
+    },
+    "stranici": {
+      "hr": "stranici",
+      "nl": "bladzijde",
+      "lemma": "stranica",
+      "info": "locatief; c blijft c voor -i",
+      "item": "v.pr5.stranica"
+    },
+    "pisalo": {
+      "hr": "pisalo",
+      "nl": "stond geschreven",
+      "lemma": "pisati",
+      "info": "onpersoonlijk: pisalo je = er stond"
+    },
+    "kuharica": {
+      "hr": "kuharica",
+      "nl": "kookboek; kokkin",
+      "info": "hier: kookboek",
+      "item": "v.pr5.kuharica"
+    },
+    "marija": {
+      "hr": "Marija",
+      "nl": "Marija",
+      "info": "eigennaam — Nina's grootmoeder"
+    },
+    "kovač": {
+      "hr": "Kovač",
+      "nl": "Kovač",
+      "info": "achternaam; kovač = smid"
+    },
+    "1961": {
+      "hr": "1961.",
+      "nl": "1961",
+      "info": "een jaartal krijgt in het Kroatisch een punt: 1961. = het jaar 1961"
+    },
+    "to": {
+      "hr": "to",
+      "nl": "dat",
+      "info": "aanwijzend voornaamwoord; «Bila je to…» = het was…"
+    },
+    "bakina": {
+      "hr": "bakina",
+      "nl": "van oma",
+      "info": "bezittelijk bijvoeglijk naamwoord van baka"
+    },
+    "nikada": {
+      "hr": "nikada",
+      "nl": "nooit",
+      "info": "vereist dubbele ontkenning: nikada nije"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "is niet",
+      "lemma": "biti",
+      "info": "ontkende 3e persoon"
+    },
+    "upoznala": {
+      "hr": "upoznala",
+      "nl": "leren kennen",
+      "lemma": "upoznati",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.upoznati"
+    },
+    "baka": {
+      "hr": "baka",
+      "nl": "oma",
+      "info": "vrouwelijk",
+      "item": "v.pr5.baka"
+    },
+    "umrla": {
+      "hr": "umrla",
+      "nl": "gestorven",
+      "lemma": "umrijeti",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "prije": {
+      "hr": "prije",
+      "nl": "vóór; geleden",
+      "info": "prije nego što = voordat"
+    },
+    "nego": {
+      "hr": "nego",
+      "nl": "dan",
+      "info": "onderdeel van «prije nego što» = voordat"
+    },
+    "što": {
+      "hr": "što",
+      "nl": "wat; dat",
+      "info": "hier onderdeel van het voegwoord prije nego što"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend; roditi se = geboren worden"
+    },
+    "rodila": {
+      "hr": "rodila",
+      "nl": "geboren",
+      "lemma": "roditi se",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.roditi"
+    },
+    "recepti": {
+      "hr": "recepti",
+      "nl": "recepten",
+      "lemma": "recept",
+      "info": "nominatief meervoud",
+      "item": "v.pr5.recept"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn",
+      "lemma": "biti",
+      "info": "3e persoon meervoud"
+    },
+    "bili": {
+      "hr": "bili",
+      "nl": "waren",
+      "lemma": "biti",
+      "info": "deelwoord, mannelijk meervoud"
+    },
+    "napisani": {
+      "hr": "napisani",
+      "nl": "geschreven",
+      "lemma": "napisati",
+      "info": "lijdend deelwoord: bili su napisani = ze waren geschreven",
+      "item": "v.pr5.napisati"
+    },
+    "rukom": {
+      "hr": "rukom",
+      "nl": "met de hand",
+      "lemma": "ruka",
+      "info": "instrumentalis als middel — zonder voorzetsel",
+      "item": "v.pr5.ruka"
+    },
+    "sitnim": {
+      "hr": "sitnim",
+      "nl": "kleine, fijne",
+      "lemma": "sitan",
+      "info": "instrumentalis meervoud",
+      "item": "v.pr5.sitan"
+    },
+    "slovima": {
+      "hr": "slovima",
+      "nl": "letters",
+      "lemma": "slovo",
+      "info": "instrumentalis meervoud: in kleine lettertjes",
+      "item": "v.pr5.slovo"
+    },
+    "čitala": {
+      "hr": "čitala",
+      "nl": "las",
+      "lemma": "čitati",
+      "info": "deelwoord, vrouwelijk; imperfectief — een handeling die duurde"
+    },
+    "polako": {
+      "hr": "polako",
+      "nl": "langzaam",
+      "info": "bijwoord",
+      "item": "v.pr5.polako"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "info": "tegenstellend voegwoord"
+    },
+    "razumjela": {
+      "hr": "razumjela",
+      "nl": "begreep",
+      "lemma": "razumjeti",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "gotovo": {
+      "hr": "gotovo",
+      "nl": "bijna",
+      "info": "bijwoord; gotovo sve = bijna alles",
+      "item": "v.pr5.gotovo"
+    },
+    "sve": {
+      "hr": "sve",
+      "nl": "alles",
+      "info": "onbepaald voornaamwoord"
+    },
+    "dvije": {
+      "hr": "dvije",
+      "nl": "twee",
+      "lemma": "dva",
+      "info": "vrouwelijke vorm; 2-4 vragen de genitief enkelvoud"
+    },
+    "godine": {
+      "hr": "godine",
+      "nl": "jaar",
+      "lemma": "godina",
+      "info": "genitief enkelvoud na dvije"
+    },
+    "ni": {
+      "hr": "ni",
+      "nl": "niet eens, zelfs niet",
+      "info": "versterkt de ontkenning: nije razumjela ni naslove"
+    },
+    "naslove": {
+      "hr": "naslove",
+      "nl": "titels",
+      "lemma": "naslov",
+      "info": "accusatief meervoud",
+      "item": "v.pr5.naslov"
+    },
+    "sada": {
+      "hr": "sada",
+      "nl": "nu",
+      "info": "bijwoord — zet dit moment tegenover twee jaar geleden"
+    },
+    "znala": {
+      "hr": "znala",
+      "nl": "wist",
+      "lemma": "znati",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "znači": {
+      "hr": "znači",
+      "nl": "betekent",
+      "lemma": "značiti",
+      "info": "3e persoon enkelvoud",
+      "item": "v.pr5.znaciti"
+    },
+    "pola": {
+      "hr": "pola",
+      "nl": "half",
+      "info": "onveranderlijk; pola + genitief",
+      "item": "v.pr5.pola"
+    },
+    "litre": {
+      "hr": "litre",
+      "nl": "liter",
+      "lemma": "litra",
+      "info": "genitief enkelvoud na pola"
+    },
+    "mlijeka": {
+      "hr": "mlijeka",
+      "nl": "melk",
+      "lemma": "mlijeko",
+      "info": "genitief: een halve liter mélk"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en",
+      "info": "voegwoord"
+    },
+    "žlice": {
+      "hr": "žlice",
+      "nl": "lepels",
+      "lemma": "žlica",
+      "info": "genitief enkelvoud na dvije",
+      "item": "v.pr5.zlica"
+    },
+    "brašna": {
+      "hr": "brašna",
+      "nl": "bloem, meel",
+      "lemma": "brašno",
+      "info": "genitief: twee lepels bloem",
+      "item": "v.pr5.brasno"
+    },
+    "okrenula": {
+      "hr": "okrenula",
+      "nl": "omgeslagen, omgedraaid",
+      "lemma": "okrenuti",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.okrenuti"
+    },
+    "zadnju": {
+      "hr": "zadnju",
+      "nl": "laatste",
+      "lemma": "zadnji",
+      "info": "accusatief vrouwelijk",
+      "item": "v.pr5.zadnji"
+    },
+    "stranicu": {
+      "hr": "stranicu",
+      "nl": "bladzijde",
+      "lemma": "stranica",
+      "info": "accusatief enkelvoud",
+      "item": "v.pr5.stranica"
+    },
+    "tamo": {
+      "hr": "tamo",
+      "nl": "daar",
+      "info": "bijwoord van plaats"
+    },
+    "rubu": {
+      "hr": "rubu",
+      "nl": "rand, kantlijn",
+      "lemma": "rub",
+      "info": "locatief: na rubu = in de kantlijn",
+      "item": "v.pr5.rub"
+    },
+    "stajala": {
+      "hr": "stajala",
+      "nl": "stond",
+      "lemma": "stajati",
+      "info": "deelwoord, vrouwelijk — hoort bij rečenica"
+    },
+    "rečenica": {
+      "hr": "rečenica",
+      "nl": "zin",
+      "info": "vrouwelijk; van reći = zeggen",
+      "item": "v.pr5.recenica"
+    },
+    "koju": {
+      "hr": "koju",
+      "nl": "die",
+      "lemma": "koji",
+      "info": "betrekkelijk voornaamwoord, accusatief vrouwelijk — het richt zich naar rečenica"
+    },
+    "napisala": {
+      "hr": "napisala",
+      "nl": "geschreven",
+      "lemma": "napisati",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.napisati"
+    },
+    "za": {
+      "hr": "za",
+      "nl": "voor",
+      "info": "met accusatief: bestemming"
+    },
+    "sebe": {
+      "hr": "sebe",
+      "nl": "zichzelf",
+      "info": "wederkerend voornaamwoord, accusatief"
+    },
+    "anu": {
+      "hr": "Anu",
+      "nl": "Ana",
+      "lemma": "Ana",
+      "info": "accusatief na za"
+    },
+    "njezinu": {
+      "hr": "njezinu",
+      "nl": "haar",
+      "lemma": "njezin",
+      "info": "accusatief vrouwelijk"
+    },
+    "prvu": {
+      "hr": "prvu",
+      "nl": "eerste",
+      "lemma": "prvi",
+      "info": "accusatief vrouwelijk"
+    },
+    "kuću": {
+      "hr": "kuću",
+      "nl": "huis",
+      "lemma": "kuća",
+      "info": "accusatief enkelvoud"
+    },
+    "ana": {
+      "hr": "Ana",
+      "nl": "Ana",
+      "info": "Nina's moeder — zie verhaal 1"
+    },
+    "naučila": {
+      "hr": "naučila",
+      "nl": "geleerd",
+      "lemma": "naučiti",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.nauciti"
+    },
+    "dobro": {
+      "hr": "dobro",
+      "nl": "goed",
+      "info": "bijwoord"
+    },
+    "čitati": {
+      "hr": "čitati",
+      "nl": "lezen",
+      "info": "infinitief na naučiti"
+    },
+    "hrvatski": {
+      "hr": "hrvatski",
+      "nl": "Kroatisch",
+      "info": "de taal, als lijdend voorwerp"
+    },
+    "kad": {
+      "hr": "kad",
+      "nl": "toen, wanneer",
+      "info": "voegwoord van tijd"
+    },
+    "mala": {
+      "hr": "mala",
+      "nl": "klein",
+      "lemma": "malen",
+      "info": "vrouwelijk; bila mala = ze was klein"
+    },
+    "kod": {
+      "hr": "kod",
+      "nl": "bij",
+      "info": "met genitief; kod kuće = thuis"
+    },
+    "kuće": {
+      "hr": "kuće",
+      "nl": "huis",
+      "lemma": "kuća",
+      "info": "genitief in de vaste uitdrukking kod kuće"
+    },
+    "govorilo": {
+      "hr": "govorilo",
+      "nl": "gesproken",
+      "lemma": "govoriti",
+      "info": "onpersoonlijk met se: se govorilo = er werd gesproken"
+    },
+    "nizozemski": {
+      "hr": "nizozemski",
+      "nl": "Nederlands",
+      "info": "de taal"
+    },
+    "uzela": {
+      "hr": "uzela",
+      "nl": "pakte",
+      "lemma": "uzeti",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.uzeti"
+    },
+    "telefon": {
+      "hr": "telefon",
+      "nl": "telefoon",
+      "info": "mannelijk, levenloos",
+      "item": "v.pr5.telefon"
+    },
+    "nazvala": {
+      "hr": "nazvala",
+      "nl": "belde",
+      "lemma": "nazvati",
+      "info": "deelwoord, vrouwelijk",
+      "item": "v.pr5.nazvati"
+    },
+    "majku": {
+      "hr": "majku",
+      "nl": "moeder",
+      "lemma": "majka",
+      "info": "accusatief enkelvoud"
+    },
+    "mama": {
+      "hr": "mama",
+      "nl": "mama",
+      "info": "vocatief — bij mama gelijk aan de nominatief"
+    },
+    "rekla": {
+      "hr": "rekla",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "sjedni": {
+      "hr": "sjedni",
+      "nl": "ga zitten",
+      "lemma": "sjesti",
+      "info": "imperatief, 2e persoon enkelvoud",
+      "item": "v.pr5.sjesti"
+    },
+    "pročitat": {
+      "hr": "pročitat",
+      "nl": "zal voorlezen",
+      "lemma": "pročitati",
+      "info": "futur I: pročitat ću — de infinitief verliest zijn -i",
+      "item": "v.pr5.procitati"
+    },
+    "ću": {
+      "hr": "ću",
+      "nl": "zal",
+      "lemma": "htjeti",
+      "info": "hulpwerkwoord van de toekomende tijd"
+    },
+    "ti": {
+      "hr": "ti",
+      "nl": "aan jou",
+      "info": "datief — de ontvanger"
+    },
+    "nešto": {
+      "hr": "nešto",
+      "nl": "iets",
+      "info": "onbepaald voornaamwoord"
+    },
+    "riječ": {
+      "hr": "riječ",
+      "nl": "woord",
+      "info": "riječ po riječ = woord voor woord"
+    },
+    "po": {
+      "hr": "po",
+      "nl": "per, voor",
+      "info": "in de uitdrukking riječ po riječ"
+    },
+    "s": {
+      "hr": "s",
+      "nl": "van, vanaf",
+      "info": "met genitief: s druge strane = aan de andere kant"
+    },
+    "druge": {
+      "hr": "druge",
+      "nl": "andere",
+      "lemma": "drugi",
+      "info": "genitief vrouwelijk"
+    },
+    "strane": {
+      "hr": "strane",
+      "nl": "kant, zijde",
+      "lemma": "strana",
+      "info": "genitief enkelvoud",
+      "item": "v.pr5.strana"
+    },
+    "linije": {
+      "hr": "linije",
+      "nl": "lijn",
+      "lemma": "linija",
+      "info": "genitief; hier: de telefoonlijn"
+    },
+    "bilo": {
+      "hr": "bilo",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "onzijdig deelwoord; bilo je tiho = het was stil"
+    },
+    "tiho": {
+      "hr": "tiho",
+      "nl": "stil",
+      "info": "bijwoord"
+    },
+    "onda": {
+      "hr": "onda",
+      "nl": "toen",
+      "info": "bijwoord van volgorde"
+    },
+    "samo": {
+      "hr": "samo",
+      "nl": "alleen, slechts",
+      "info": "bijwoord — het benadrukt hoe weinig ze zei"
+    },
+    "hvala": {
+      "hr": "hvala",
+      "nl": "dank je",
+      "info": "vaste uitdrukking"
+    },
+    "tek": {
+      "hr": "tek",
+      "nl": "pas",
+      "info": "tek tada = pas toen — het benadrukt dat het lang duurde"
+    },
+    "tada": {
+      "hr": "tada",
+      "nl": "toen",
+      "info": "bijwoord van tijd"
+    },
+    "shvatila": {
+      "hr": "shvatila",
+      "nl": "begreep, doorzag",
+      "lemma": "shvatiti",
+      "info": "deelwoord, vrouwelijk; sterker dan razumjeti — het gaat om inzicht",
+      "item": "v.pr5.shvatiti"
+    },
+    "zašto": {
+      "hr": "zašto",
+      "nl": "waarom",
+      "info": "vraagwoord, hier in een bijzin"
+    },
+    "zapravo": {
+      "hr": "zapravo",
+      "nl": "eigenlijk",
+      "info": "bijwoord — het suggereert dat de echte reden een andere was dan ze dacht",
+      "item": "v.pr5.zapravo"
+    },
+    "došla": {
+      "hr": "došla",
+      "nl": "gekomen",
+      "lemma": "doći",
+      "info": "deelwoord, vrouwelijk"
+    },
+    "zagreb": {
+      "hr": "Zagreb",
+      "nl": "Zagreb",
+      "info": "accusatief na u: richting"
+    },
+    "bio": {
+      "hr": "bio",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord mannelijk van biti"
+    },
+    "velik": {
+      "hr": "velik",
+      "nl": "groot",
+      "item": "v.04.velik"
+    },
+    "uz": {
+      "hr": "uz",
+      "nl": "naast, bij",
+      "info": "voorzetsel met accusatief"
+    },
+    "nju": {
+      "hr": "nju",
+      "nl": "haar",
+      "lemma": "ona",
+      "info": "accusatief van ona — hier: naast het schrift"
+    },
+    "pismo": {
+      "hr": "pismo",
+      "nl": "brief",
+      "item": "v.01.pismo"
+    },
+    "od": {
+      "hr": "od",
+      "nl": "van, vanaf",
+      "item": "v.16.od"
+    },
+    "tri": {
+      "hr": "tri",
+      "nl": "drie",
+      "item": "v.00.tri"
+    },
+    "rečenice": {
+      "hr": "rečenice",
+      "nl": "zinnen",
+      "lemma": "rečenica",
+      "info": "genitief enkelvoud na een telwoord: «tri rečenice»"
+    },
+    "o": {
+      "hr": "o",
+      "nl": "over (onderwerp)",
+      "item": "v.10.o"
+    },
+    "njoj": {
+      "hr": "njoj",
+      "nl": "over haar",
+      "lemma": "ona",
+      "info": "locatief van ona, na «o»"
+    },
+    "ono": {
+      "hr": "ono",
+      "nl": "dat, datgene",
+      "info": "aanwijzend voornaamwoord, onzijdig"
+    },
+    "joj": {
+      "hr": "joj",
+      "nl": "haar, aan haar",
+      "lemma": "ona",
+      "info": "korte datiefvorm van ona"
+    },
+    "majka": {
+      "hr": "majka",
+      "nl": "moeder",
+      "item": "v.03.majka"
+    },
+    "neki": {
+      "hr": "neki",
+      "nl": "sommige",
+      "info": "onbepaald voornaamwoord, mannelijk meervoud"
+    },
+    "imali": {
+      "hr": "imali",
+      "nl": "hebben",
+      "lemma": "imati",
+      "info": "deelwoord meervoud",
+      "item": "v.05.imati"
+    },
+    "naslov": {
+      "hr": "naslov",
+      "nl": "titel",
+      "item": "v.pr5.naslov"
+    },
+    "datum": {
+      "hr": "datum",
+      "nl": "datum",
+      "item": "v.17.datum"
+    },
+    "jednoj": {
+      "hr": "jednoj",
+      "nl": "één",
+      "lemma": "jedan",
+      "info": "locatief vrouwelijk van jedan, na «na»"
+    },
+    "kuhaj": {
+      "hr": "kuhaj",
+      "nl": "kook",
+      "lemma": "kuhati",
+      "info": "gebiedende wijs, jij-vorm van kuhati"
+    },
+    "njezina": {
+      "hr": "njezina",
+      "nl": "haar",
+      "lemma": "njezin",
+      "info": "vrouwelijk van njezin"
+    },
+    "mislila": {
+      "hr": "mislila",
+      "nl": "denken",
+      "lemma": "misliti",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.09.misliti"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "tako": {
+      "hr": "tako",
+      "nl": "zo",
+      "info": "bijwoord van wijze"
+    },
+    "lakše": {
+      "hr": "lakše",
+      "nl": "makkelijker",
+      "lemma": "lagan",
+      "info": "vergrotende trap van lagan"
+    },
+    "prvo": {
+      "hr": "prvo",
+      "nl": "eerst",
+      "lemma": "prvi",
+      "info": "onzijdig van prvi, hier als bijwoord"
+    },
+    "recept": {
+      "hr": "recept",
+      "nl": "recept",
+      "item": "v.pr5.recept"
+    },
+    "kruh": {
+      "hr": "kruh",
+      "nl": "brood"
+    },
+    "poslije": {
+      "hr": "poslije",
+      "nl": "na",
+      "item": "v.16.poslije"
+    },
+    "onaj": {
+      "hr": "onaj",
+      "nl": "die",
+      "info": "aanwijzend voornaamwoord — hier: dat recept"
+    },
+    "kolač": {
+      "hr": "kolač",
+      "nl": "gebak, taartje"
+    },
+    "jabukama": {
+      "hr": "jabukama",
+      "nl": "appel",
+      "lemma": "jabuka",
+      "info": "instrumentalis meervoud van jabuka"
+    },
+    "čekala": {
+      "hr": "čekala",
+      "nl": "wachten",
+      "lemma": "čekati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.06.cekati_mod"
+    },
+    "hrvatskom": {
+      "hr": "hrvatskom",
+      "nl": "Kroatië",
+      "lemma": "Hrvatska",
+      "info": "instrumentalis enkelvoud van Hrvatska",
+      "item": "v.02.hrvatska"
+    },
+    "neke": {
+      "hr": "neke",
+      "nl": "sommige",
+      "lemma": "neki",
+      "info": "vrouwelijk meervoud van neki"
+    },
+    "riječi": {
+      "hr": "riječi",
+      "nl": "woord",
+      "lemma": "riječ",
+      "info": "vorm van riječ"
+    },
+    "poznavala": {
+      "hr": "poznavala",
+      "nl": "kende",
+      "lemma": "poznavati",
+      "info": "deelwoord vrouwelijk van poznavati"
+    },
+    "morala": {
+      "hr": "morala",
+      "nl": "moeten",
+      "lemma": "morati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.06.morati"
+    },
+    "ih": {
+      "hr": "ih",
+      "nl": "ze",
+      "lemma": "oni",
+      "info": "korte accusatiefvorm, meervoud"
+    },
+    "potražiti": {
+      "hr": "potražiti",
+      "nl": "opzoeken",
+      "info": "perfectief van tražiti"
+    },
+    "jasan": {
+      "hr": "jasan",
+      "nl": "duidelijk",
+      "info": "bijvoeglijk naamwoord"
+    },
+    "kao": {
+      "hr": "kao",
+      "nl": "als, zoals",
+      "info": "vergelijkend voegwoord; «kao da» = alsof"
+    },
+    "pisala": {
+      "hr": "pisala",
+      "nl": "schreef",
+      "lemma": "pisati",
+      "info": "deelwoord vrouwelijk van pisati"
+    },
+    "nekoga": {
+      "hr": "nekoga",
+      "nl": "iemand",
+      "lemma": "netko",
+      "info": "accusatief van netko"
+    },
+    "razgovora": {
+      "hr": "razgovora",
+      "nl": "gesprek",
+      "lemma": "razgovor",
+      "info": "genitief van razgovor, na «poslije»"
+    },
+    "dugo": {
+      "hr": "dugo",
+      "nl": "lang",
+      "info": "bijwoord van duur"
+    },
+    "sjedila": {
+      "hr": "sjedila",
+      "nl": "zat",
+      "lemma": "sjediti",
+      "info": "deelwoord vrouwelijk van sjediti"
+    },
+    "stolom": {
+      "hr": "stolom",
+      "nl": "tafel",
+      "lemma": "stol",
+      "info": "instrumentalis van stol — «za stolom» is aan tafel",
+      "item": "v.03.stol"
+    },
+    "bilježnicom": {
+      "hr": "bilježnicom",
+      "nl": "schrift",
+      "lemma": "bilježnica",
+      "info": "instrumentalis enkelvoud van bilježnica",
+      "item": "v.pr5.biljeznica"
+    },
+    "ruci": {
+      "hr": "ruci",
+      "nl": "hand",
+      "lemma": "ruka",
+      "info": "locatief van ruka — let op de sibilarisatie k → c",
+      "item": "v.pr5.ruka"
+    }
   },
   "culture_nl": {
     "title_nl": "De handgeschreven kuharica",
     "body_nl": "In veel Kroatische families gaat er een schrift van generatie op generatie: geen gedrukt kookboek, maar een bilježnica vol handgeschreven recepten, vaak begonnen rond een huwelijk. De maten staan er in žlice en pola litre, want een weegschaal had niet iedereen. Zulke schriften zijn vaak het enige geschreven Kroatisch dat een emigrantenfamilie meeneemt — en daarmee, twee generaties later, precies de reden dat iemand de taal weer gaat leren."
   },
   "vocab": [
-    { "id": "v.pr5.paket", "hr": "paket", "nl": "pakket", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "paketa", "nom_pl": "paketi", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.rukopis", "hr": "rukopis", "nl": "handschrift", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "rukopisa", "nom_pl": "rukopisi", "tags": ["taal", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.biljeznica", "hr": "bilježnica", "nl": "schrift", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "bilježnice", "nom_pl": "bilježnice", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.uvez", "hr": "uvez", "nl": "band, kaft", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "uveza", "nom_pl": "uvezi", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.stranica", "hr": "stranica", "nl": "bladzijde", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "stranice", "nom_pl": "stranice", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.kuharica", "hr": "kuharica", "nl": "kookboek; kokkin", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "kuharice", "nom_pl": "kuharice", "tags": ["eten", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.baka", "hr": "baka", "nl": "oma", "pos": "noun", "gender": "f", "animacy": "animate", "declension": "e", "gen_sg": "bake", "nom_pl": "bake", "tags": ["familie", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.recept", "hr": "recept", "nl": "recept", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "recepta", "nom_pl": "recepti", "tags": ["eten", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.ruka", "hr": "ruka", "nl": "hand, arm", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "ruke", "nom_pl": "ruke", "tags": ["lichaam", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.slovo", "hr": "slovo", "nl": "letter", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "slova", "nom_pl": "slova", "tags": ["taal", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.naslov", "hr": "naslov", "nl": "titel", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "naslova", "nom_pl": "naslovi", "tags": ["taal", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.zlica", "hr": "žlica", "nl": "lepel", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "žlice", "nom_pl": "žlice", "tags": ["eten", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.brasno", "hr": "brašno", "nl": "bloem, meel", "pos": "noun", "gender": "n", "animacy": "inanimate", "declension": "a", "gen_sg": "brašna", "nom_pl": "brašna", "tags": ["eten", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.rub", "hr": "rub", "nl": "rand, kantlijn", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "ruba", "nom_pl": "rubovi", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.recenica", "hr": "rečenica", "nl": "zin", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "rečenice", "nom_pl": "rečenice", "tags": ["taal", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.telefon", "hr": "telefon", "nl": "telefoon", "pos": "noun", "gender": "m", "animacy": "inanimate", "declension": "a", "gen_sg": "telefona", "nom_pl": "telefoni", "tags": ["dingen", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.strana", "hr": "strana", "nl": "kant, zijde", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "strane", "nom_pl": "strane", "tags": ["plaats", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.srijeda", "hr": "srijeda", "nl": "woensdag", "pos": "noun", "gender": "f", "animacy": "inanimate", "declension": "e", "gen_sg": "srijede", "nom_pl": "srijede", "tags": ["tijd", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.stici", "hr": "stići", "nl": "aankomen", "pos": "verb", "aspect": "perfective", "present_1sg": "stignem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.prepoznati", "hr": "prepoznati", "nl": "herkennen", "pos": "verb", "aspect": "perfective", "present_1sg": "prepoznam", "verb_class": "-ati", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.upoznati", "hr": "upoznati", "nl": "leren kennen", "pos": "verb", "aspect": "perfective", "present_1sg": "upoznam", "verb_class": "-ati", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.roditi", "hr": "roditi se", "nl": "geboren worden", "pos": "verb", "aspect": "perfective", "present_1sg": "rodim se", "verb_class": "-iti", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.napisati", "hr": "napisati", "nl": "opschrijven", "pos": "verb", "aspect": "perfective", "present_1sg": "napišem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.znaciti", "hr": "značiti", "nl": "betekenen", "pos": "verb", "aspect": "imperfective", "present_1sg": "značim", "verb_class": "-iti", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.okrenuti", "hr": "okrenuti", "nl": "omdraaien, omslaan", "pos": "verb", "aspect": "perfective", "present_1sg": "okrenem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.nauciti", "hr": "naučiti", "nl": "leren", "pos": "verb", "aspect": "perfective", "present_1sg": "naučim", "verb_class": "-iti", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.uzeti", "hr": "uzeti", "nl": "pakken, nemen", "pos": "verb", "aspect": "perfective", "present_1sg": "uzmem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.nazvati", "hr": "nazvati", "nl": "opbellen", "pos": "verb", "aspect": "perfective", "present_1sg": "nazovem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.sjesti", "hr": "sjesti", "nl": "gaan zitten", "pos": "verb", "aspect": "perfective", "present_1sg": "sjednem", "verb_class": "onregelmatig", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.procitati", "hr": "pročitati", "nl": "lezen, voorlezen", "pos": "verb", "aspect": "perfective", "present_1sg": "pročitam", "verb_class": "-ati", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.shvatiti", "hr": "shvatiti", "nl": "beseffen, doorzien", "pos": "verb", "aspect": "perfective", "present_1sg": "shvatim", "verb_class": "-iti", "tags": ["verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.smed", "hr": "smeđ", "nl": "bruin", "pos": "adj", "tags": ["kleur", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.sitan", "hr": "sitan", "nl": "klein, fijn", "pos": "adj", "tags": ["eigenschap", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.zadnji", "hr": "zadnji", "nl": "laatste", "pos": "adj", "tags": ["volgorde", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.pola", "hr": "pola", "nl": "half", "pos": "num", "tags": ["hoeveelheid", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.odmah", "hr": "odmah", "nl": "meteen", "pos": "adv", "tags": ["tijd", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.unutra", "hr": "unutra", "nl": "binnenin", "pos": "adv", "tags": ["plaats", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.polako", "hr": "polako", "nl": "langzaam", "pos": "adv", "tags": ["manier", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.gotovo", "hr": "gotovo", "nl": "bijna", "pos": "adv", "tags": ["graad", "verhaal-05"], "source": "aangevuld" },
-    { "id": "v.pr5.zapravo", "hr": "zapravo", "nl": "eigenlijk", "pos": "adv", "tags": ["nuance", "verhaal-05"], "source": "aangevuld" }
+    {
+      "id": "v.pr5.paket",
+      "hr": "paket",
+      "nl": "pakket",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "paketa",
+      "nom_pl": "paketi",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.rukopis",
+      "hr": "rukopis",
+      "nl": "handschrift",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "rukopisa",
+      "nom_pl": "rukopisi",
+      "tags": [
+        "taal",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.biljeznica",
+      "hr": "bilježnica",
+      "nl": "schrift",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "bilježnice",
+      "nom_pl": "bilježnice",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.uvez",
+      "hr": "uvez",
+      "nl": "band, kaft",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "uveza",
+      "nom_pl": "uvezi",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.stranica",
+      "hr": "stranica",
+      "nl": "bladzijde",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "stranice",
+      "nom_pl": "stranice",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.kuharica",
+      "hr": "kuharica",
+      "nl": "kookboek; kokkin",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "kuharice",
+      "nom_pl": "kuharice",
+      "tags": [
+        "eten",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.baka",
+      "hr": "baka",
+      "nl": "oma",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "animate",
+      "declension": "e",
+      "gen_sg": "bake",
+      "nom_pl": "bake",
+      "tags": [
+        "familie",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.recept",
+      "hr": "recept",
+      "nl": "recept",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "recepta",
+      "nom_pl": "recepti",
+      "tags": [
+        "eten",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.ruka",
+      "hr": "ruka",
+      "nl": "hand, arm",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "ruke",
+      "nom_pl": "ruke",
+      "tags": [
+        "lichaam",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.slovo",
+      "hr": "slovo",
+      "nl": "letter",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "slova",
+      "nom_pl": "slova",
+      "tags": [
+        "taal",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.naslov",
+      "hr": "naslov",
+      "nl": "titel",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "naslova",
+      "nom_pl": "naslovi",
+      "tags": [
+        "taal",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.zlica",
+      "hr": "žlica",
+      "nl": "lepel",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "žlice",
+      "nom_pl": "žlice",
+      "tags": [
+        "eten",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.brasno",
+      "hr": "brašno",
+      "nl": "bloem, meel",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "brašna",
+      "nom_pl": "brašna",
+      "tags": [
+        "eten",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.rub",
+      "hr": "rub",
+      "nl": "rand, kantlijn",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "ruba",
+      "nom_pl": "rubovi",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.recenica",
+      "hr": "rečenica",
+      "nl": "zin",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "rečenice",
+      "nom_pl": "rečenice",
+      "tags": [
+        "taal",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.telefon",
+      "hr": "telefon",
+      "nl": "telefoon",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "telefona",
+      "nom_pl": "telefoni",
+      "tags": [
+        "dingen",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.strana",
+      "hr": "strana",
+      "nl": "kant, zijde",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "strane",
+      "nom_pl": "strane",
+      "tags": [
+        "plaats",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.srijeda",
+      "hr": "srijeda",
+      "nl": "woensdag",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "srijede",
+      "nom_pl": "srijede",
+      "tags": [
+        "tijd",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.stici",
+      "hr": "stići",
+      "nl": "aankomen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "stignem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.prepoznati",
+      "hr": "prepoznati",
+      "nl": "herkennen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "prepoznam",
+      "verb_class": "-ati",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.upoznati",
+      "hr": "upoznati",
+      "nl": "leren kennen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "upoznam",
+      "verb_class": "-ati",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.roditi",
+      "hr": "roditi se",
+      "nl": "geboren worden",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "rodim se",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.napisati",
+      "hr": "napisati",
+      "nl": "opschrijven",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "napišem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.znaciti",
+      "hr": "značiti",
+      "nl": "betekenen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "značim",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.okrenuti",
+      "hr": "okrenuti",
+      "nl": "omdraaien, omslaan",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "okrenem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.nauciti",
+      "hr": "naučiti",
+      "nl": "leren",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "naučim",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.uzeti",
+      "hr": "uzeti",
+      "nl": "pakken, nemen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "uzmem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.nazvati",
+      "hr": "nazvati",
+      "nl": "opbellen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "nazovem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.sjesti",
+      "hr": "sjesti",
+      "nl": "gaan zitten",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "sjednem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.procitati",
+      "hr": "pročitati",
+      "nl": "lezen, voorlezen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "pročitam",
+      "verb_class": "-ati",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.shvatiti",
+      "hr": "shvatiti",
+      "nl": "beseffen, doorzien",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "shvatim",
+      "verb_class": "-iti",
+      "tags": [
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.smed",
+      "hr": "smeđ",
+      "nl": "bruin",
+      "pos": "adj",
+      "tags": [
+        "kleur",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.sitan",
+      "hr": "sitan",
+      "nl": "klein, fijn",
+      "pos": "adj",
+      "tags": [
+        "eigenschap",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.zadnji",
+      "hr": "zadnji",
+      "nl": "laatste",
+      "pos": "adj",
+      "tags": [
+        "volgorde",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.pola",
+      "hr": "pola",
+      "nl": "half",
+      "pos": "num",
+      "tags": [
+        "hoeveelheid",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.odmah",
+      "hr": "odmah",
+      "nl": "meteen",
+      "pos": "adv",
+      "tags": [
+        "tijd",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.unutra",
+      "hr": "unutra",
+      "nl": "binnenin",
+      "pos": "adv",
+      "tags": [
+        "plaats",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.polako",
+      "hr": "polako",
+      "nl": "langzaam",
+      "pos": "adv",
+      "tags": [
+        "manier",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.gotovo",
+      "hr": "gotovo",
+      "nl": "bijna",
+      "pos": "adv",
+      "tags": [
+        "graad",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr5.zapravo",
+      "hr": "zapravo",
+      "nl": "eigenlijk",
+      "pos": "adv",
+      "tags": [
+        "nuance",
+        "verhaal-05"
+      ],
+      "source": "aangevuld"
+    }
   ],
   "comprehension": [
     {
@@ -250,7 +1782,11 @@
       "prompt_nl": "«Nikada je nije upoznala.» Naar wie verwijst «je» hier?",
       "given": "Bila je to bakina kuharica. Nikada je nije upoznala.",
       "answer": "Naar baka, Nina's grootmoeder.",
-      "distractors": ["Naar Ana, Nina's moeder.", "Naar de kuharica, het kookboek.", "Naar Marija Kovač' dochter."],
+      "distractors": [
+        "Naar Ana, Nina's moeder.",
+        "Naar de kuharica, het kookboek.",
+        "Naar Marija Kovač' dochter."
+      ],
       "explain_nl": "Dit is een lastige: «je» is hier niet het hulpwerkwoord «is», maar de accusatief van «ona» — haar. De zin ervóór noemt de baka. Dat Nina haar eigen moeder wél kent spreekt vanzelf, dus die kan het niet zijn; en een kookboek «leer je niet kennen».",
       "difficulty": 5
     },
@@ -274,7 +1810,11 @@
       "type": "choice",
       "prompt_nl": "Voor wie had de oma de zin in de kantlijn geschreven?",
       "answer": "Voor Ana, voor haar eerste huis.",
-      "distractors": ["Voor Nina.", "Voor zichzelf.", "Voor Marija Kovač."],
+      "distractors": [
+        "Voor Nina.",
+        "Voor zichzelf.",
+        "Voor Marija Kovač."
+      ],
       "explain_nl": "Het staat er letterlijk: «Za Anu, za njezinu prvu kuću». De zin ervóór zegt zelfs expliciet dat ze het níet voor zichzelf schreef — de tekst sluit dat antwoord dus zelf al uit.",
       "difficulty": 3
     },
@@ -345,9 +1885,13 @@
       "prompt_nl": "Vul het betrekkelijk voornaamwoord in: 'een zin die oma niet voor zichzelf had geschreven'.",
       "given": "Rečenica ___ baka nije napisala za sebe.",
       "answer": "koju",
-      "accepts": ["koju"],
+      "accepts": [
+        "koju"
+      ],
       "explain_nl": "Koji richt zich in geslacht en getal naar het woord waar het naar verwijst (rečenica, vrouwelijk), maar krijgt zijn naamval van zijn eigen bijzin — daar is het lijdend voorwerp, dus accusatief: koju.",
-      "targets": ["v.pr5.recenica"],
+      "targets": [
+        "v.pr5.recenica"
+      ],
       "difficulty": 5,
       "audio": "Rečenica koju baka nije napisala za sebe.",
       "source": "verhaal-05"
@@ -364,7 +1908,9 @@
         "Omdat majka in de accusatief staat."
       ],
       "explain_nl": "Bij één bepaalde persoon maakt het Kroatisch liever een bijvoeglijk naamwoord: majka → majčin, baka → bakin, Ana → Anin. Let op de k → č bij majčin.",
-      "targets": ["v.pr5.rukopis"],
+      "targets": [
+        "v.pr5.rukopis"
+      ],
       "difficulty": 5,
       "source": "verhaal-05"
     },
@@ -375,9 +1921,14 @@
       "prompt_nl": "Vul de genitief in: 'twee lepels bloem'.",
       "given": "dvije žlice ___",
       "answer": "brašna",
-      "accepts": ["brašna"],
+      "accepts": [
+        "brašna"
+      ],
       "explain_nl": "Na een maat (žlica, litra, kilogram) staat de stof in de genitief: žlice brašna, litre mlijeka.",
-      "targets": ["v.pr5.brasno", "v.pr5.zlica"],
+      "targets": [
+        "v.pr5.brasno",
+        "v.pr5.zlica"
+      ],
       "difficulty": 4,
       "audio": "dvije žlice brašna",
       "source": "verhaal-05"
@@ -389,9 +1940,13 @@
       "prompt_nl": "Vul de imperatief in: 'Mama, ga zitten.'",
       "given": "Mama, ___.",
       "answer": "sjedni",
-      "accepts": ["sjedni"],
+      "accepts": [
+        "sjedni"
+      ],
       "explain_nl": "De imperatief van sjesti komt van de presensstam sjedn- plus -i: sjedni (jij), sjednimo (wij), sjednite (u/jullie).",
-      "targets": ["v.pr5.sjesti"],
+      "targets": [
+        "v.pr5.sjesti"
+      ],
       "difficulty": 4,
       "audio": "Mama, sjedni.",
       "source": "verhaal-05"
@@ -403,9 +1958,15 @@
       "prompt_nl": "Vertaal naar het Kroatisch (toekomende tijd, met 'je' als ontvanger).",
       "given": "Ik ga je iets voorlezen.",
       "answer": "Pročitat ću ti nešto.",
-      "accepts": ["Pročitat ću ti nešto.", "Pročitat ću ti nešto", "Pročitat ću ti nešto!"],
+      "accepts": [
+        "Pročitat ću ti nešto.",
+        "Pročitat ću ti nešto",
+        "Pročitat ću ti nešto!"
+      ],
       "explain_nl": "Futur I: pročitati verliest de -i en het hulpwerkwoord ću volgt. «Ti» is de datief: aan wie je voorleest.",
-      "targets": ["v.pr5.procitati"],
+      "targets": [
+        "v.pr5.procitati"
+      ],
       "difficulty": 5,
       "audio": "Pročitat ću ti nešto.",
       "source": "verhaal-05"
@@ -417,9 +1978,14 @@
       "prompt_nl": "Er zit één fout in deze zin. Schrijf hem correct op.",
       "given": "Recepti su bili napisani ruku, sitnim slovima.",
       "answer": "Recepti su bili napisani rukom, sitnim slovima.",
-      "accepts": ["Recepti su bili napisani rukom, sitnim slovima.", "Recepti su bili napisani rukom, sitnim slovima"],
+      "accepts": [
+        "Recepti su bili napisani rukom, sitnim slovima.",
+        "Recepti su bili napisani rukom, sitnim slovima"
+      ],
       "explain_nl": "Het middel waarmee iets gebeurt staat in de instrumentalis, zonder voorzetsel: rukom (met de hand). «Ruku» is de accusatief en zou hier betekenen dat de hand het lijdend voorwerp is.",
-      "targets": ["v.pr5.ruka"],
+      "targets": [
+        "v.pr5.ruka"
+      ],
       "difficulty": 5,
       "audio": "Recepti su bili napisani rukom, sitnim slovima.",
       "source": "verhaal-05"
@@ -430,10 +1996,15 @@
       "mode": "productive",
       "prompt_nl": "Typ de zin die je hoort.",
       "answer": "Nikada je nije upoznala.",
-      "accepts": ["Nikada je nije upoznala.", "Nikada je nije upoznala"],
+      "accepts": [
+        "Nikada je nije upoznala.",
+        "Nikada je nije upoznala"
+      ],
       "audio": "Nikada je nije upoznala.",
       "explain_nl": "Drie ontkennende of clitische woordjes achter elkaar: nikada (nooit), je (haar), nije (niet). Het Kroatisch stapelt ontkenningen — dat is geen dubbele ontkenning die elkaar opheft.",
-      "targets": ["v.pr5.upoznati"],
+      "targets": [
+        "v.pr5.upoznati"
+      ],
       "difficulty": 5,
       "source": "verhaal-05"
     },
@@ -449,7 +2020,9 @@
         "Eén bezittelijk bijvoeglijk naamwoord of een genitief die bezit uitdrukt.",
         "Het deelwoord past bij het geslacht van wie er handelt."
       ],
-      "targets": ["v.pr5.baka"],
+      "targets": [
+        "v.pr5.baka"
+      ],
       "difficulty": 5,
       "source": "verhaal-05"
     }
