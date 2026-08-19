@@ -551,7 +551,7 @@ Het doel is lezen en schrijven, niet spreken. Wat daarmee vervalt:
 
 Wat blijft:
 
-- [ ] Schrijfopdrachten met feedback op vorm. Zonder generatiepipeline betekent dat: de foutclassificatie uit Fase 0.3 toepassen op vrije tekst, plus zelfbeoordeling tegen een modelantwoord — niet een dienst die per aanroep beoordeelt.
+- [x] Schrijfopdrachten met feedback op vorm — afgerond 19-08-2026. Tien opdrachten in `content/schrijven/opdrachten.json`, oplopend van drie zinnen over jezelf tot een eigen hoofdstuk van honderdvijftig woorden. Het nakijken bleek ruimer te kunnen dan hier stond: naast de mechanische criteria (aantal zinnen, verleden tijd, aantal woorden in een naamval) draait `src/lib/tekstcontrole.ts` dezelfde controles op de tekst van de leerder die `npm run check:taal` op de content draait — vergeten diakrieten, voorzetsel met de verkeerde naamval, en servismen. Wat een oordeel vraagt blijft bij de leerder, met het modelantwoord ernaast. Geen dienst die per aanroep beoordeelt.
 - [ ] *Geparkeerd, optioneel:* luisteren-terwijl-je-leest met tekstmarkering. Niet geschrapt, wel achteraan — het koppelt klank aan schrift en dat blijft nuttig, ook als spreken geen doel is.
 
 ---

@@ -7,7 +7,7 @@ Lees die spec vóór elke taak — en §12 het eerst, want daar staat wat er al 
 
 - Content is DATA (`content/*.json`), nooit hardcoded in componenten.
 - Het SRS-algoritme is FSRS via `ts-fsrs`. Nooit zelf schrijven of aanpassen.
-- Alle drie de secties lezen en schrijven dezelfde knowledge state. Geen aparte voortgang per sectie.
+- Alle secties lezen en schrijven dezelfde knowledge state. Geen aparte voortgang per sectie. De schrijfsectie is de uitzondering die de regel bevestigt: `schrijfwerk` bewaart tekst, geen kennis, en gaat daarom niet mee met «voortgang wissen».
 - Kroatische content wordt NOOIT aan de gebruiker getoond zonder de validatiepoorten uit §7.
 - Nooit een oefening genereren met woorden die niet in `known_set` zitten, tenzij het doel woordenschat is.
 - Uitleg is in het Nederlands, doeltaalvoorbeelden in het Kroatisch (standaardkroatisch, geen Servische varianten). `npm run check:taal` bewaakt dat; nieuwe content draait daar doorheen vóór ze op het scherm komt.

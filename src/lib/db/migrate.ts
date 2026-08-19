@@ -9,6 +9,7 @@ import { sql as schorsen } from "./migrations/006-schorsen";
 import { sql as plaatsing } from "./migrations/007-plaatsing";
 import { sql as moduleVoortgang } from "./migrations/008-module-voortgang";
 import { sql as nakijken } from "./migrations/009-nakijken";
+import { sql as schrijven } from "./migrations/010-schrijven";
 
 /**
  * Migraties.
@@ -47,6 +48,7 @@ export const MIGRATIES: Migratie[] = [
   { id: 7, naam: "plaatsingstoets", up: uitTekst(plaatsing) },
   { id: 8, naam: "voortgang per module", up: uitTekst(moduleVoortgang) },
   { id: 9, naam: "nakijkregister", up: uitTekst(nakijken) },
+  { id: 10, naam: "schrijfwerk", up: uitTekst(schrijven) },
 ];
 
 export const LATEST_VERSION = MIGRATIES.reduce((n, m) => Math.max(n, m.id), 0);

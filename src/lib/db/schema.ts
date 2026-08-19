@@ -315,3 +315,13 @@ export const zinReview = sqliteTable("zin_review", {
   opmerking: text("opmerking"),
   nagekekenOp: integer("nagekeken_op").notNull(),
 });
+
+/** Wat de leerder zelf geschreven heeft — zie migratie 010. */
+export const schrijfwerk = sqliteTable("schrijfwerk", {
+  opdracht: text("opdracht").primaryKey(),
+  tekst: text("tekst").notNull(),
+  klaar: integer("klaar").notNull().default(0),
+  woorden: integer("woorden").notNull().default(0),
+  bijgewerkt: integer("bijgewerkt").notNull(),
+  afgerond: integer("afgerond"),
+});

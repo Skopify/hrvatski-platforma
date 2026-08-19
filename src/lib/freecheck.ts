@@ -1,4 +1,4 @@
-import { formIndex, formKey } from "./forms";
+import { formIndex, formKey, readingsFor } from "./forms";
 import { stripDiacritics } from "./grading";
 import type { Exercise } from "./content";
 
@@ -42,7 +42,20 @@ export type FreeCheck =
   /** Minstens n losse woorden. */
   | { kind: "min_woorden"; n: number; label: string }
   /** Geen enkele zin begint met een van deze woorden. */
-  | { kind: "niet_vooraan"; woorden: string[]; label: string };
+  | { kind: "niet_vooraan"; woorden: string[]; label: string }
+  /**
+   * Er staat verleden tijd in: minstens n l-deelwoorden.
+   *
+   * Vast te stellen omdat de vormcatalogus deelwoorden apart bijhoudt —
+   * «radio», «radila», «radili». Voor een schrijfopdracht is dat precies het
+   * verschil tussen «schrijf over gisteren» en «schrijf over gisteren in de
+   * verleden tijd».
+   */
+  | { kind: "min_verleden"; n: number; label: string }
+  /** Er staat toekomst in: ću/ćeš/će met een infinitief erbij. */
+  | { kind: "bevat_toekomst"; label: string }
+  /** Minstens n woorden in een bepaalde naamval. */
+  | { kind: "min_naamval"; naamval: string; n: number; label: string };
 
 export interface CheckUitkomst {
   label: string;
@@ -140,6 +153,44 @@ function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
         detail: `${ws.length} woord(en), ${check.n} nodig`,
       };
     }
+    case "min_verleden": {
+      const deelwoorden = woorden(antwoord).filter((w) =>
+        readingsFor(w).some((l) => l.feats.participle),
+      );
+      return {
+        label: check.label,
+        ok: deelwoorden.length >= check.n,
+        detail: deelwoorden.length
+          ? `${deelwoorden.length} gevonden: ${[...new Set(deelwoorden)].slice(0, 6).join(", ")}`
+          : "geen verleden tijd gevonden",
+      };
+    }
+
+    case "bevat_toekomst": {
+      // Twee vormen: «ću raditi» en het samengetrokken «radit ću».
+      const heeft = /\b(ću|ćeš|će|ćemo|ćete)\b/i.test(antwoord) &&
+        /\p{L}+(ti|ći)\b/iu.test(antwoord.replace(/\b(ću|ćeš|će|ćemo|ćete)\b/gi, " "));
+      const samengetrokken = /\p{L}+t\s+(ću|ćeš|će|ćemo|ćete)\b/iu.test(antwoord);
+      return {
+        label: check.label,
+        ok: heeft || samengetrokken,
+        detail: heeft || samengetrokken ? "toekomende tijd gevonden" : "geen toekomende tijd gevonden",
+      };
+    }
+
+    case "min_naamval": {
+      const treffers = woorden(antwoord).filter((w) =>
+        readingsFor(w).some((l) => l.feats.case === check.naamval),
+      );
+      return {
+        label: check.label,
+        ok: treffers.length >= check.n,
+        detail: treffers.length
+          ? `${treffers.length} gevonden: ${[...new Set(treffers)].slice(0, 6).join(", ")}`
+          : "geen enkele gevonden",
+      };
+    }
+
     case "niet_vooraan": {
       const doel = check.woorden.map(norm);
       const fout = zinnen(antwoord).filter((z) => {

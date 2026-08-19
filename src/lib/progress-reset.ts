@@ -37,6 +37,17 @@ const BACKUP_DIR = path.join(process.cwd(), "data", "backups");
  * De volgorde is niet vrij: srs en review_log wijzen naar card, dus die moeten
  * eerst leeg zijn. Daarom staat card achteraan.
  */
+/*
+  `schrijfwerk` staat hier met opzet niet bij.
+
+  Voortgang wissen betekent: opnieuw beginnen met leren. Het betekent niet dat
+  de teksten die je zelf geschreven hebt weg moeten. Die zijn geen meting maar
+  werk — je kunt een SRS-toestand terugverdienen door te studeren, en een
+  verhaal dat je zelf bedacht hebt niet.
+
+  Wie ze echt kwijt wil, kan een opdracht overschrijven. Dat is een handeling
+  per stuk, en dat hoort het ook te zijn.
+*/
 const PROGRESS_TABLES = [
   "srs",
   "review_log",
