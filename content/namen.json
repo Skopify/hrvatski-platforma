@@ -1,0 +1,37 @@
+{
+  "toelichting": "Eigennamen en klankvoorbeelden die op het scherm mogen staan zonder in de woordenlijst te zitten. npm run check:taal slaat ze over. Plaatsnamen staan er in alle naamvallen in die in de content voorkomen — de verbuigingsmotor verbuigt geen namen.",
+  "namen": [
+    "Hrvatska", "Hrvatske", "Hrvatskoj", "Hrvatsku", "Hrvatskom",
+    "Zagreb", "Zagreba", "Zagrebu", "Zagrebom", "Zagrebe",
+    "Split", "Splita", "Splitu", "Splitom",
+    "Dubrovnik", "Dubrovnika", "Dubrovniku", "Dubrovnikom",
+    "Rijeka", "Rijeke", "Rijeci", "Rijeku",
+    "Osijek", "Osijeka", "Osijeku",
+    "Varaždin", "Varaždina", "Varaždinu",
+    "Šibenik", "Šibenika", "Šibeniku",
+    "Vukovar", "Vukovara", "Vukovaru",
+    "Zadar", "Zadra", "Zadru",
+    "Pula", "Pule", "Puli", "Rovinj", "Rovinja", "Opatija", "Opatije", "Cavtat", "Umag",
+    "Makarska", "Makarske", "Makarskoj", "Biokovo", "Medvednica", "Medvednicu",
+    "Jadran", "Jadransko", "Jadranskom", "Brač", "Brača", "Braču", "Hvar", "Hvara",
+    "Nizozemska", "Nizozemske", "Nizozemskoj", "Nizozemsku",
+    "Amsterdam", "Amsterdama", "Amsterdamu",
+    "Rotterdam", "Rotterdama", "Rotterdamu",
+    "Utrecht", "Utrechta", "Utrechtu",
+    "Berlin", "Berlina", "Berlinu", "Beč", "Beča", "Beču",
+    "Češka", "Češke", "Češkoj", "Švedska", "Švedske", "Švedskoj",
+    "Austrija", "Austrije", "Austriji", "Danska", "Danske", "Danskoj",
+    "Amerika", "Amerike", "Americi", "Amerikanac", "Amerikanca", "Amerikanci",
+    "Indija", "Indije", "Moskva", "Moskve", "Varšava", "Varšave",
+    "Ankara", "Ankare", "Kalkuta", "Kalkute", "Boston", "Bostona", "Milano", "Milana",
+    "Nina", "Nine", "Nini", "Ninu", "Marko", "Marka", "Marku", "Markom",
+    "Ivan", "Ivana", "Ivanu", "Ivica", "Ana", "Ane", "Ani", "Anu", "Anna", "Anneke",
+    "Katarina", "Katarine", "Marija", "Mariju", "Marije", "Dijana", "Dijani",
+    "Branko", "Branka", "Zoran", "Zorana", "Gregor", "Thomas", "William", "Williamu",
+    "Antonio", "Antom", "Jans", "Wijnen", "Perković", "Luka", "Luke", "Luki", "Luku"
+  ],
+  "klankvoorbeelden": [
+    "hr-vat-ska", "hrrr", "hrrr-vat-ska", "prrrst", "rrr", "pr-vi", "vr", "zi", "ci",
+    "ku", "tch", "ulitsa", "okolada", "i-stam", "mi-vorm", "emper", "jam", "rock-glazbu"
+  ]
+}

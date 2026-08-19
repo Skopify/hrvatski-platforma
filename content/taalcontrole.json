@@ -1,0 +1,12 @@
+{
+  "toelichting": "Bevindingen van npm run check:taal die zijn nagekeken en goed bevonden. Elke regel draagt de reden. Wat hier niet in staat en wel wordt gemeld, laat de controle mislukken — zo blijft nieuwe content gecontroleerd zonder dat de bekende uitzonderingen elke keer opnieuw langskomen.",
+  "spelling_nagekeken": {
+    "sto": "Honderd. Bestaat naast «što» (wat); de motor maakt telwoorden niet, vandaar dat hij hem niet kent.",
+    "večeras": "Vanavond, bijwoord. Bestaat naast «večeraš» (jij dineert) — twee verschillende woorden.",
+    "plače": "Huilt, 3e persoon van plakati. Onregelmatig werkwoord, dus de motor vervoegt hem niet; niet te verwarren met «plaće» (salarissen)."
+  },
+  "naamval_nagekeken": {
+    "od Marka": "Genitief van de naam Marko. De catalogus leest «marka» als het zelfstandig naamwoord (merk) in de nominatief — namen worden niet verbogen.",
+    "na hrvatskom": "Locatief van het bijvoeglijk naamwoord hrvatski: «in het Kroatisch». De catalogus leest hem als instrumentalis van het land Hrvatska; bijvoeglijke naamwoorden worden nog niet verbogen."
+  }
+}

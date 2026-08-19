@@ -10,6 +10,7 @@
     "seed": "tsx scripts/seed.ts",
     "check": "tsx scripts/check-grading.ts",
     "check:content": "tsx scripts/check-content.ts",
+    "check:taal": "tsx scripts/check-taal.ts",
     "check:fase0": "tsx scripts/check-fase0.ts",
     "migrate": "tsx scripts/migrate.ts",
     "db:reset": "rm -f data/hrvatski.db data/hrvatski.db-wal data/hrvatski.db-shm && npm run seed",

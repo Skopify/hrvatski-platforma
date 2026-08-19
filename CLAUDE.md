@@ -10,7 +10,7 @@ Lees die spec vóór elke taak — en §12 het eerst, want daar staat wat er al 
 - Alle drie de secties lezen en schrijven dezelfde knowledge state. Geen aparte voortgang per sectie.
 - Kroatische content wordt NOOIT aan de gebruiker getoond zonder de validatiepoorten uit §7.
 - Nooit een oefening genereren met woorden die niet in `known_set` zitten, tenzij het doel woordenschat is.
-- Uitleg is in het Nederlands, doeltaalvoorbeelden in het Kroatisch (standaardkroatisch, geen Servische varianten).
+- Uitleg is in het Nederlands, doeltaalvoorbeelden in het Kroatisch (standaardkroatisch, geen Servische varianten). `npm run check:taal` bewaakt dat; nieuwe content draait daar doorheen vóór ze op het scherm komt.
 - Feedback bij fouten escaleert: hint → keuze → antwoord + uitleg. Nooit meteen het antwoord.
 - Elke wijziging aan het datamodel gaat via een migratie; bestaande review-historie mag nooit verloren gaan.
 - **Modulestatus volgt uit prestatie, nooit uit zelfinschatting.** Het curriculum is compleet van nul tot eind; het pad erdoorheen mag kort zijn waar de leerder sterk is. Dat is niet hetzelfde.
@@ -42,6 +42,7 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run seed` | content-JSON → database (idempotent) |
 | `npm run check` | nakijklogica |
 | `npm run check:content` | contentvalidatie |
+| `npm run check:taal` | het Kroatisch zelf: spelling, voorzetsel+naamval, servismen |
 | `npm run check:fase0` | acceptatietests Fase 0 |
 | `npm run check:fase05` | acceptatietests Fase 0.5 (escalerende feedback) |
 | `npm run check:fase1` | acceptatietests Fase 1 (woordenschat) |
