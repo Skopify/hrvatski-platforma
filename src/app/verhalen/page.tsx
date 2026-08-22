@@ -35,6 +35,13 @@ const MOTIFS: Record<string, React.ReactNode> = {
       <path d="M2.5 19.5 8 11l4.2 6.3L15 14l6 5.5" />
     </>
   ),
+  kavana: (
+    <>
+      <path d="M3.5 6.5h13v6a5 5 0 0 1-5 5h-3a5 5 0 0 1-5-5v-6Z" />
+      <path d="M16.5 8.5h1.8a2.6 2.6 0 0 1 0 5.2h-1.8" />
+      <path d="M6 3v1.5M10 3v1.5M14 3v1.5" />
+    </>
+  ),
   knjiga: (
     <>
       <path d="M4.5 4.5h11a2 2 0 0 1 2 2v13H6.5a2 2 0 0 1-2-2v-13Z" />

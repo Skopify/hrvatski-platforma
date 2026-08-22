@@ -1,0 +1,841 @@
+{
+  "id": "story-12",
+  "slug": "sto-zelite",
+  "series": "Kavana Zvono",
+  "part": 2,
+  "title_hr": "Što želite?",
+  "title_nl": "Wat wilt u?",
+  "cefr": "A1.2",
+  "requires_lesson": 9,
+  "motif": "kavana",
+  "blurb_nl": "Een volle zaterdag achter de bar. Alles wat besteld wordt staat in de accusatief — en een kind stelt de vraag waar Vinko geen antwoord op geeft.",
+  "focus_nl": [
+    "accusatief",
+    "tegenwoordige tijd",
+    "želim en naručujem",
+    "vraagwoorden"
+  ],
+  "source": "verhaal-12",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "sto-zelite.p1.s1",
+          "hr": "Subota je i kavana je puna.",
+          "nl": "Het is zaterdag en het café zit vol."
+        },
+        {
+          "id": "sto-zelite.p1.s2",
+          "hr": "Sanja radi za šankom, a ja nosim kave.",
+          "nl": "Sanja staat achter de bar, en ik breng de koffie rond."
+        },
+        {
+          "id": "sto-zelite.p1.s3",
+          "hr": "Vinko sjedi kod prozora i čita novine.",
+          "nl": "Vinko zit bij het raam en leest de krant."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "sto-zelite.p2.s1",
+          "hr": "Prvi gost želi bijelu kavu.",
+          "nl": "De eerste gast wil koffie met melk."
+        },
+        {
+          "id": "sto-zelite.p2.s2",
+          "hr": "Drugi želi čaj i kolač.",
+          "nl": "De tweede wil thee en gebak."
+        },
+        {
+          "id": "sto-zelite.p2.s3",
+          "hr": "Treći ne želi ništa, samo vodu.",
+          "nl": "De derde wil niets, alleen water."
+        },
+        {
+          "id": "sto-zelite.p2.s4",
+          "hr": "«Što želite?» pitam cijeli dan.",
+          "nl": "«Wat wilt u?» vraag ik de hele dag."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "sto-zelite.p3.s1",
+          "hr": "Jedna žena naručuje sok za kćerku.",
+          "nl": "Een vrouw bestelt sap voor haar dochter."
+        },
+        {
+          "id": "sto-zelite.p3.s2",
+          "hr": "Dijete gleda zvono na zidu.",
+          "nl": "Het kind kijkt naar de bel aan de muur."
+        },
+        {
+          "id": "sto-zelite.p3.s3",
+          "hr": "«Zašto je tu zvono?» pita me.",
+          "nl": "«Waarom hangt daar een bel?» vraagt ze me."
+        },
+        {
+          "id": "sto-zelite.p3.s4",
+          "hr": "Ne znam odgovor.",
+          "nl": "Ik weet het antwoord niet."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "sto-zelite.p4.s1",
+          "hr": "Pitam Vinka.",
+          "nl": "Ik vraag het aan Vinko."
+        },
+        {
+          "id": "sto-zelite.p4.s2",
+          "hr": "On gleda zvono i ne kaže ništa.",
+          "nl": "Hij kijkt naar de bel en zegt niets."
+        },
+        {
+          "id": "sto-zelite.p4.s3",
+          "hr": "Onda pije kavu i čita dalje.",
+          "nl": "Dan drinkt hij zijn koffie en leest verder."
+        },
+        {
+          "id": "sto-zelite.p4.s4",
+          "hr": "Sanja se smije. «Nikad ne odgovara», kaže.",
+          "nl": "Sanja lacht. «Hij antwoordt nooit», zegt ze."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "subota": {
+      "hr": "subota",
+      "nl": "zaterdag",
+      "item": "v.07.subota"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon enkelvoud"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "kavana": {
+      "hr": "kavana",
+      "nl": "café",
+      "item": "v.04.kavana"
+    },
+    "puna": {
+      "hr": "puna",
+      "nl": "vol",
+      "lemma": "pun",
+      "info": "vrouwelijk van pun"
+    },
+    "sanja": {
+      "hr": "sanja",
+      "nl": "Sanja",
+      "info": "vrouwennaam"
+    },
+    "radi": {
+      "hr": "radi",
+      "nl": "werken, doen",
+      "lemma": "raditi",
+      "info": "presens on/ona",
+      "item": "v.09.raditi"
+    },
+    "za": {
+      "hr": "za",
+      "nl": "voor (bestemd voor)",
+      "item": "v.07.za"
+    },
+    "šankom": {
+      "hr": "šankom",
+      "nl": "achter de bar",
+      "lemma": "šank",
+      "info": "instrumentalis van šank — «za šankom» is achter de toonbank"
+    },
+    "a": {
+      "hr": "a",
+      "nl": "en, maar (tegenstelling)",
+      "item": "v.01.a"
+    },
+    "ja": {
+      "hr": "ja",
+      "nl": "ik",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "nosim": {
+      "hr": "nosim",
+      "nl": "dragen, brengen",
+      "lemma": "nositi",
+      "info": "presens ja",
+      "item": "v.pr12.nositi"
+    },
+    "kave": {
+      "hr": "kave",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "vorm van kava"
+    },
+    "vinko": {
+      "hr": "vinko",
+      "nl": "Vinko",
+      "info": "mannennaam"
+    },
+    "sjedi": {
+      "hr": "sjedi",
+      "nl": "zit",
+      "lemma": "sjediti",
+      "info": "presens on/ona van sjediti"
+    },
+    "kod": {
+      "hr": "kod",
+      "nl": "thuis",
+      "lemma": "kod kuće",
+      "info": "uit «kod kuće»",
+      "item": "v.11.kod_kuce"
+    },
+    "prozora": {
+      "hr": "prozora",
+      "nl": "bij het raam",
+      "lemma": "prozor",
+      "info": "genitief van prozor, na «kod»"
+    },
+    "čita": {
+      "hr": "čita",
+      "nl": "lezen",
+      "lemma": "čitati",
+      "info": "presens on/ona",
+      "item": "v.05.citati"
+    },
+    "novine": {
+      "hr": "novine",
+      "nl": "krant",
+      "item": "v.05.novine"
+    },
+    "prvi": {
+      "hr": "prvi",
+      "nl": "eerste",
+      "item": "v.17.prvi"
+    },
+    "gost": {
+      "hr": "gost",
+      "nl": "gast",
+      "item": "v.06.gost"
+    },
+    "želi": {
+      "hr": "želi",
+      "nl": "wensen, willen",
+      "lemma": "željeti",
+      "info": "presens on/ona"
+    },
+    "bijelu": {
+      "hr": "bijelu",
+      "nl": "witte",
+      "lemma": "bijel",
+      "info": "accusatief vrouwelijk van bijel — «bijela kava» is koffie met melk"
+    },
+    "kavu": {
+      "hr": "kavu",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "accusatief enkelvoud van kava"
+    },
+    "drugi": {
+      "hr": "drugi",
+      "nl": "tweede, ander",
+      "item": "v.17.drugi"
+    },
+    "čaj": {
+      "hr": "čaj",
+      "nl": "thee"
+    },
+    "kolač": {
+      "hr": "kolač",
+      "nl": "gebak, taartje"
+    },
+    "treći": {
+      "hr": "treći",
+      "nl": "derde",
+      "item": "v.17.treci"
+    },
+    "ne": {
+      "hr": "ne",
+      "nl": "nee, niet",
+      "item": "v.01.ne"
+    },
+    "ništa": {
+      "hr": "ništa",
+      "nl": "Niets nieuws.",
+      "lemma": "Ništa novo.",
+      "info": "uit «Ništa novo.»",
+      "item": "v.01.nista_novo"
+    },
+    "samo": {
+      "hr": "samo",
+      "nl": "alleen, maar",
+      "info": "bijwoord"
+    },
+    "vodu": {
+      "hr": "vodu",
+      "nl": "water",
+      "lemma": "voda",
+      "info": "accusatief enkelvoud van voda",
+      "item": "v.08.voda"
+    },
+    "što": {
+      "hr": "što",
+      "nl": "wat",
+      "item": "v.01.sto"
+    },
+    "želite": {
+      "hr": "želite",
+      "nl": "wensen, willen",
+      "lemma": "željeti",
+      "info": "presens vi"
+    },
+    "pitam": {
+      "hr": "pitam",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "presens ja",
+      "item": "v.06.pitati"
+    },
+    "cijeli": {
+      "hr": "cijeli",
+      "nl": "de hele dag",
+      "lemma": "cijeli dan",
+      "info": "uit «cijeli dan»",
+      "item": "v.11.cijeli_dan"
+    },
+    "dan": {
+      "hr": "dan",
+      "nl": "dag",
+      "info": "mannelijk; «cijeli dan» is de hele dag"
+    },
+    "jedna": {
+      "hr": "jedna",
+      "nl": "een",
+      "lemma": "jedan",
+      "info": "vrouwelijk van jedan"
+    },
+    "žena": {
+      "hr": "žena",
+      "nl": "vrouw",
+      "item": "v.04.zena"
+    },
+    "naručuje": {
+      "hr": "naručuje",
+      "nl": "bestellen",
+      "lemma": "naručivati",
+      "info": "presens on/ona",
+      "item": "v.08.narucivati"
+    },
+    "sok": {
+      "hr": "sok",
+      "nl": "sap",
+      "item": "v.06.sok"
+    },
+    "kćerku": {
+      "hr": "kćerku",
+      "nl": "dochter",
+      "lemma": "kćerka",
+      "info": "accusatief enkelvoud van kćerka",
+      "item": "v.03.kcerka"
+    },
+    "dijete": {
+      "hr": "dijete",
+      "nl": "kind",
+      "item": "v.03.dijete"
+    },
+    "gleda": {
+      "hr": "gleda",
+      "nl": "kijken, bekijken",
+      "lemma": "gledati",
+      "info": "presens on/ona",
+      "item": "v.05.gledati"
+    },
+    "zvono": {
+      "hr": "zvono",
+      "nl": "bel, klok",
+      "info": "onzijdig; genitief zvona"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "aan, op",
+      "info": "voorzetsel; met locatief als er geen beweging is"
+    },
+    "zidu": {
+      "hr": "zidu",
+      "nl": "aan de muur",
+      "lemma": "zid",
+      "info": "locatief van zid"
+    },
+    "zašto": {
+      "hr": "zašto",
+      "nl": "waarom",
+      "info": "vraagwoord"
+    },
+    "tu": {
+      "hr": "tu",
+      "nl": "daar, hier",
+      "info": "bijwoord van plaats"
+    },
+    "pita": {
+      "hr": "pita",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "presens on/ona",
+      "item": "v.06.pitati"
+    },
+    "me": {
+      "hr": "me",
+      "nl": "mij",
+      "lemma": "ja",
+      "info": "korte accusatiefvorm van ja"
+    },
+    "znam": {
+      "hr": "znam",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "presens ja",
+      "item": "v.05.znati"
+    },
+    "odgovor": {
+      "hr": "odgovor",
+      "nl": "antwoord",
+      "item": "v.pr12.odgovor"
+    },
+    "vinka": {
+      "hr": "vinka",
+      "nl": "Vinko",
+      "lemma": "Vinko",
+      "info": "accusatief van Vinko — bij levende wezens gelijk aan de genitief"
+    },
+    "on": {
+      "hr": "on",
+      "nl": "hij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "kaže": {
+      "hr": "kaže",
+      "nl": "zegt",
+      "lemma": "kazati",
+      "info": "presens on/ona van kazati"
+    },
+    "onda": {
+      "hr": "onda",
+      "nl": "dan, daarna",
+      "item": "v.pr12.onda"
+    },
+    "pije": {
+      "hr": "pije",
+      "nl": "drinkt",
+      "lemma": "piti",
+      "info": "presens on/ona van piti"
+    },
+    "dalje": {
+      "hr": "dalje",
+      "nl": "verder",
+      "item": "v.pr12.dalje"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend woordje; hoort hier bij smijati"
+    },
+    "smije": {
+      "hr": "smije",
+      "nl": "lacht",
+      "lemma": "smijati se",
+      "info": "presens on/ona van smijati se"
+    },
+    "nikad": {
+      "hr": "nikad",
+      "nl": "nooit",
+      "item": "v.06.nikad"
+    },
+    "odgovara": {
+      "hr": "odgovara",
+      "nl": "antwoordt",
+      "lemma": "odgovarati",
+      "info": "presens on/ona van odgovarati"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Bijela kava",
+    "body_nl": "«Bijela kava» is letterlijk witte koffie, en het is wat je krijgt als je koffie met melk wilt. Bestel je gewoon «kavu», dan komt er espresso. In Kroatië heeft bijna elke koffie een eigen naam — «s mlijekom», «produžena», «macchiato» — en de ober verwacht dat je weet welke je wilt. Vragen mag altijd; wat niet werkt is «gewoon koffie»."
+  },
+  "vocab": [
+    {
+      "id": "v.pr12.pun",
+      "hr": "pun",
+      "nl": "vol",
+      "pos": "adj",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.sank",
+      "hr": "šank",
+      "nl": "bar, toonbank",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "šanka",
+      "nom_pl": "šankovi",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.sjediti",
+      "hr": "sjediti",
+      "nl": "zitten",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "sjedim",
+      "verb_class": "-jeti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.prozor",
+      "hr": "prozor",
+      "nl": "raam",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "prozora",
+      "nom_pl": "prozori",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.odgovor",
+      "hr": "odgovor",
+      "nl": "antwoord",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "odgovora",
+      "nom_pl": "odgovori",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.odgovarati",
+      "hr": "odgovarati",
+      "nl": "antwoorden",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "odgovaram",
+      "verb_class": "-ati",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.onda",
+      "hr": "onda",
+      "nl": "dan, daarna",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.dalje",
+      "hr": "dalje",
+      "nl": "verder",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.smijati_se",
+      "hr": "smijati se",
+      "nl": "lachen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "smijem se",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr12.nositi",
+      "hr": "nositi",
+      "nl": "dragen, brengen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "nosim",
+      "verb_class": "-iti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr12.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een drukke dienst, en een vraag over de bel die onbeantwoord blijft.",
+      "distractors": [
+        "Hoe je in een Kroatisch café koffie bestelt.",
+        "Waarom Lea het werk te zwaar vindt.",
+        "Een ruzie tussen Vinko en een gast."
+      ],
+      "explain_nl": "De bestellingen vullen de eerste helft, maar de tekst draait naar de vraag van het kind — en eindigt op het uitblijven van een antwoord.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr12.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat wil de derde gast?",
+      "answer": "Alleen water.",
+      "distractors": [
+        "Thee en gebak.",
+        "Koffie met melk.",
+        "Sap voor zijn dochter."
+      ],
+      "explain_nl": "«Treći ne želi ništa, samo vodu.» De ontkenning en «samo» horen bij elkaar.",
+      "difficulty": 1
+    },
+    {
+      "id": "b.pr12.003",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "«Pita me.» — wie is «me»?",
+      "answer": "Lea, de verteller.",
+      "distractors": [
+        "Vinko.",
+        "De moeder van het kind.",
+        "Sanja."
+      ],
+      "explain_nl": "De tekst is in de ik-vorm. «Me» is de korte accusatiefvorm van ja.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr12.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom weet Lea het antwoord over de bel niet?",
+      "answer": "Ze werkt er pas kort en niemand heeft het haar verteld.",
+      "distractors": [
+        "Ze heeft de vraag niet goed verstaan.",
+        "Vinko heeft het haar verboden te zeggen.",
+        "De bel hangt er pas net."
+      ],
+      "explain_nl": "Uit deel 1 weet je dat dit haar eerste baan is en dat ze alleen in het weekend werkt. Het verhaal zegt het niet met zoveel woorden.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr12.005",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Sanja zegt: «Nikad ne odgovara.» Wat volgt daaruit?",
+      "answer": "Anderen hebben het ook al gevraagd, en kregen ook geen antwoord.",
+      "distractors": [
+        "Vinko is doof aan één oor.",
+        "Sanja weet het antwoord wel.",
+        "De bel is niet belangrijk."
+      ],
+      "explain_nl": "«Nikad» maakt er een patroon van. Dat de vraag vaker gesteld is, maakt het zwijgen opzettelijk.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr12.006",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Onda pije kavu i čita dalje.» Wat betekent «dalje»?",
+      "answer": "verder",
+      "distractors": [
+        "hardop",
+        "langzaam",
+        "opnieuw"
+      ],
+      "explain_nl": "Hij was al aan het lezen en gaat daarmee door. «Dalje» hoort bij het werkwoord, niet bij de koffie.",
+      "difficulty": 3
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr12.001",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «De eerste gast wil koffie met melk.»",
+      "given": "Prvi gost želi bijelu ___.",
+      "answer": "kavu",
+      "accepts": [
+        "kavu"
+      ],
+      "explain_nl": "Kava is het lijdend voorwerp van željeti, dus accusatief: kava → kavu. Het bijvoeglijk naamwoord gaat mee: bijela → bijelu.",
+      "targets": [
+        "g.08.akuzativ.objekt"
+      ],
+      "difficulty": 2,
+      "audio": "Prvi gost želi bijelu kavu.",
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.002",
+      "type": "interpret",
+      "mode": "receptive",
+      "prompt_nl": "Welke zin zegt dat de gast er nu een bestelt?",
+      "given": "A: Treći ne želi ništa.\nB: Treći želi vodu.",
+      "answer": "B — želi zonder ne is een wens die wordt uitgesproken.",
+      "distractors": [
+        "A — ništa betekent dat hij nog kiest.",
+        "Allebei.",
+        "Geen van beide."
+      ],
+      "explain_nl": "«Ne želi ništa» is een dubbele ontkenning: in het Kroatisch hoort die er, en samen betekenen ze één keer nee.",
+      "targets": [
+        "g.mod.neg_verb"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom «Pitam Vinka» en niet «Pitam Vinko»?",
+      "answer": "Omdat Vinko een levend wezen is; de accusatief is dan gelijk aan de genitief.",
+      "distractors": [
+        "Omdat namen altijd op -a eindigen.",
+        "Omdat pitati de genitief vraagt.",
+        "Omdat Vinko de eigenaar is."
+      ],
+      "explain_nl": "Bij mannelijke levende wezens is de accusatief gelijk aan de genitief: Vinko → Vinka. Bij een ding blijft de vorm gelijk.",
+      "targets": [
+        "g.05.akuzativ.zivo"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.004",
+      "type": "word_order",
+      "mode": "productive",
+      "prompt_nl": "Zet in de goede volgorde: «Een vrouw bestelt sap voor haar dochter.»",
+      "tokens": [
+        "Jedna",
+        "žena",
+        "naručuje",
+        "sok",
+        "za",
+        "kćerku."
+      ],
+      "answer": "Jedna žena naručuje sok za kćerku.",
+      "accepts": [
+        "Jedna žena naručuje sok za kćerku."
+      ],
+      "explain_nl": "Za vraagt de accusatief: kćerka → kćerku. Sok is onzijdig levenloos en verandert niet.",
+      "targets": [
+        "g.07.za_akuzativ"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.005",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: «Ik weet het antwoord niet.»",
+      "given": "Ik weet het antwoord niet.",
+      "answer": "Ne znam odgovor.",
+      "accepts": [
+        "Ne znam odgovor.",
+        "Ja ne znam odgovor."
+      ],
+      "explain_nl": "De ontkenning staat vóór het werkwoord, niet erachter. Odgovor is levenloos en blijft in de accusatief gelijk.",
+      "targets": [
+        "g.mod.neg_verb"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.006",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Drugi želi čaj i kolača.",
+      "answer": "Drugi želi čaj i kolač.",
+      "accepts": [
+        "Drugi želi čaj i kolač."
+      ],
+      "explain_nl": "Kolač is mannelijk en levenloos: in de accusatief verandert er niets. «Kolača» zou de genitief zijn.",
+      "targets": [
+        "g.05.akuzativ.nezivo"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    },
+    {
+      "id": "e.pr12.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Schrijf vier zinnen: wat vier verschillende mensen in een café bestellen. Gebruik elke keer de accusatief.",
+      "model_answer": "Prvi gost želi bijelu kavu. Druga gospođa naručuje čaj. Treći želi vodu i kolač. Moja sestra pije sok.",
+      "rubric_nl": [
+        "Vier zinnen",
+        "Vier woorden in de accusatief",
+        "Vier verschillende mensen"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 4,
+          "label": "Vier zinnen"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "acc",
+          "n": 4,
+          "label": "Vier woorden in de accusatief"
+        }
+      ],
+      "auto_check": false,
+      "targets": [
+        "g.08.akuzativ.objekt"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-12"
+    }
+  ]
+}

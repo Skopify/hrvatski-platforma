@@ -1,0 +1,769 @@
+{
+  "id": "story-11",
+  "slug": "kavana-zvono",
+  "series": "Kavana Zvono",
+  "part": 1,
+  "title_hr": "Kavana Zvono",
+  "title_nl": "Café de Bel",
+  "cefr": "A1.1",
+  "requires_lesson": 5,
+  "motif": "kavana",
+  "blurb_nl": "Lea begint te werken in een klein café in Zagreb. Alles staat in de nominatief: wie iemand is, hoe iets heet, wat waar staat.",
+  "focus_nl": [
+    "nominatief",
+    "biti",
+    "zvati se",
+    "bijvoeglijke naamwoorden"
+  ],
+  "source": "verhaal-11",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "kavana-zvono.p1.s1",
+          "hr": "Ovo je kavana Zvono.",
+          "nl": "Dit is café Zvono."
+        },
+        {
+          "id": "kavana-zvono.p1.s2",
+          "hr": "Kavana je u Zagrebu.",
+          "nl": "Het café is in Zagreb."
+        },
+        {
+          "id": "kavana-zvono.p1.s3",
+          "hr": "Nije velika, ali je lijepa.",
+          "nl": "Het is niet groot, maar het is mooi."
+        },
+        {
+          "id": "kavana-zvono.p1.s4",
+          "hr": "Na zidu je staro zvono.",
+          "nl": "Aan de muur hangt een oude bel."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "kavana-zvono.p2.s1",
+          "hr": "Ja sam Lea.",
+          "nl": "Ik ben Lea."
+        },
+        {
+          "id": "kavana-zvono.p2.s2",
+          "hr": "Ja sam studentica.",
+          "nl": "Ik ben studente."
+        },
+        {
+          "id": "kavana-zvono.p2.s3",
+          "hr": "Ovo je moj prvi posao.",
+          "nl": "Dit is mijn eerste baan."
+        },
+        {
+          "id": "kavana-zvono.p2.s4",
+          "hr": "Radim ovdje subotom i nedjeljom.",
+          "nl": "Ik werk hier op zaterdag en zondag."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "kavana-zvono.p3.s1",
+          "hr": "Vlasnik se zove Vinko.",
+          "nl": "De eigenaar heet Vinko."
+        },
+        {
+          "id": "kavana-zvono.p3.s2",
+          "hr": "On je star čovjek.",
+          "nl": "Hij is een oude man."
+        },
+        {
+          "id": "kavana-zvono.p3.s3",
+          "hr": "Vinko je ovdje već dugo.",
+          "nl": "Vinko is hier al lang."
+        },
+        {
+          "id": "kavana-zvono.p3.s4",
+          "hr": "Njegova kava je dobra.",
+          "nl": "Zijn koffie is goed."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "kavana-zvono.p4.s1",
+          "hr": "Moja kolegica se zove Sanja.",
+          "nl": "Mijn collega heet Sanja."
+        },
+        {
+          "id": "kavana-zvono.p4.s2",
+          "hr": "Ona je brza i uvijek vesela.",
+          "nl": "Zij is snel en altijd vrolijk."
+        },
+        {
+          "id": "kavana-zvono.p4.s3",
+          "hr": "Gosti su uvijek isti ljudi.",
+          "nl": "De gasten zijn altijd dezelfde mensen."
+        },
+        {
+          "id": "kavana-zvono.p4.s4",
+          "hr": "Vinko kaže da je to dobro.",
+          "nl": "Vinko zegt dat dat goed is."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "ovo": {
+      "hr": "ovo",
+      "nl": "dit",
+      "info": "aanwijzend voornaamwoord, onzijdig — «ovo je …» is de gewone manier om iets aan te wijzen"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon enkelvoud"
+    },
+    "kavana": {
+      "hr": "kavana",
+      "nl": "café",
+      "item": "v.04.kavana"
+    },
+    "zvono": {
+      "hr": "zvono",
+      "nl": "bel, klok",
+      "item": "v.pr11.zvono"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "in",
+      "info": "voorzetsel; met locatief als er geen beweging is"
+    },
+    "zagrebu": {
+      "hr": "zagrebu",
+      "nl": "in Zagreb",
+      "lemma": "Zagreb",
+      "info": "locatief van Zagreb"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "is niet",
+      "lemma": "biti",
+      "info": "ontkende vorm van je"
+    },
+    "velika": {
+      "hr": "velika",
+      "nl": "groot",
+      "lemma": "velik",
+      "info": "vrouwelijk van velik"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "item": "v.02.ali"
+    },
+    "lijepa": {
+      "hr": "lijepa",
+      "nl": "Hartelijk dank!",
+      "lemma": "Hvala lijepa!",
+      "info": "uit «Hvala lijepa!»",
+      "item": "v.02.hvala_lijepa"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "aan, op",
+      "info": "voorzetsel; met locatief als er geen beweging is"
+    },
+    "zidu": {
+      "hr": "zidu",
+      "nl": "aan de muur",
+      "lemma": "zid",
+      "info": "locatief van zid"
+    },
+    "staro": {
+      "hr": "staro",
+      "nl": "oud",
+      "lemma": "star",
+      "info": "onzijdig van star"
+    },
+    "ja": {
+      "hr": "ja",
+      "nl": "ik",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "alleen",
+      "item": "v.15.sam"
+    },
+    "lea": {
+      "hr": "lea",
+      "nl": "Lea",
+      "info": "vrouwennaam"
+    },
+    "studentica": {
+      "hr": "studentica",
+      "nl": "studente",
+      "item": "v.01.studentica"
+    },
+    "moj": {
+      "hr": "moj",
+      "nl": "mijn",
+      "lemma": "moj, moja, moje",
+      "info": "uit «moj, moja, moje»",
+      "item": "v.03.moj"
+    },
+    "prvi": {
+      "hr": "prvi",
+      "nl": "eerste",
+      "item": "v.17.prvi"
+    },
+    "posao": {
+      "hr": "posao",
+      "nl": "werk, baan",
+      "item": "v.pr11.posao"
+    },
+    "radim": {
+      "hr": "radim",
+      "nl": "werken, doen",
+      "lemma": "raditi",
+      "info": "presens ja",
+      "item": "v.09.raditi"
+    },
+    "ovdje": {
+      "hr": "ovdje",
+      "nl": "hier",
+      "item": "v.pr11.ovdje"
+    },
+    "subotom": {
+      "hr": "subotom",
+      "nl": "zaterdag",
+      "lemma": "subota",
+      "info": "instrumentalis enkelvoud van subota",
+      "item": "v.07.subota"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "nedjeljom": {
+      "hr": "nedjeljom",
+      "nl": "zondag",
+      "lemma": "nedjelja",
+      "info": "instrumentalis enkelvoud van nedjelja",
+      "item": "v.07.nedjelja"
+    },
+    "vlasnik": {
+      "hr": "vlasnik",
+      "nl": "eigenaar",
+      "item": "v.pr11.vlasnik"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend woordje; hoort bij zvati"
+    },
+    "zove": {
+      "hr": "zove",
+      "nl": "heet",
+      "lemma": "zvati se",
+      "info": "presens on/ona van zvati se"
+    },
+    "vinko": {
+      "hr": "vinko",
+      "nl": "Vinko",
+      "info": "mannennaam"
+    },
+    "on": {
+      "hr": "on",
+      "nl": "hij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "star": {
+      "hr": "star",
+      "nl": "oud",
+      "item": "v.04.star"
+    },
+    "čovjek": {
+      "hr": "čovjek",
+      "nl": "mens",
+      "item": "v.03.covjek"
+    },
+    "već": {
+      "hr": "već",
+      "nl": "al",
+      "info": "bijwoord van tijd"
+    },
+    "dugo": {
+      "hr": "dugo",
+      "nl": "lang (in tijd)",
+      "item": "v.pr11.dugo"
+    },
+    "njegova": {
+      "hr": "njegova",
+      "nl": "zijn",
+      "lemma": "njegov, njegova, njegovo",
+      "info": "uit «njegov, njegova, njegovo»",
+      "item": "v.03.njegov"
+    },
+    "kava": {
+      "hr": "kava",
+      "nl": "koffie"
+    },
+    "dobra": {
+      "hr": "dobra",
+      "nl": "Goedenavond!",
+      "lemma": "Dobra večer!",
+      "info": "uit «Dobra večer!»",
+      "item": "v.01.dobra_vecer"
+    },
+    "moja": {
+      "hr": "moja",
+      "nl": "mijn",
+      "lemma": "moj, moja, moje",
+      "info": "uit «moj, moja, moje»",
+      "item": "v.03.moj"
+    },
+    "kolegica": {
+      "hr": "kolegica",
+      "nl": "collega (v)",
+      "item": "v.03.kolegica"
+    },
+    "sanja": {
+      "hr": "sanja",
+      "nl": "Sanja",
+      "info": "vrouwennaam"
+    },
+    "ona": {
+      "hr": "ona",
+      "nl": "zij",
+      "info": "persoonlijk voornaamwoord"
+    },
+    "brza": {
+      "hr": "brza",
+      "nl": "snel",
+      "lemma": "brz",
+      "info": "vrouwelijk van brz"
+    },
+    "uvijek": {
+      "hr": "uvijek",
+      "nl": "altijd",
+      "item": "v.06.uvijek"
+    },
+    "vesela": {
+      "hr": "vesela",
+      "nl": "vrolijk",
+      "lemma": "veseo",
+      "info": "vrouwelijk van veseo — let op: de o wordt een l"
+    },
+    "gosti": {
+      "hr": "gosti",
+      "nl": "gast",
+      "lemma": "gost",
+      "info": "vorm van gost",
+      "item": "v.pr11.gost"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon meervoud"
+    },
+    "isti": {
+      "hr": "isti",
+      "nl": "dezelfde",
+      "item": "v.pr11.isti"
+    },
+    "ljudi": {
+      "hr": "ljudi",
+      "nl": "mens",
+      "lemma": "čovjek",
+      "info": "nominatief meervoud van čovjek",
+      "item": "v.03.covjek"
+    },
+    "kaže": {
+      "hr": "kaže",
+      "nl": "zegt",
+      "lemma": "kazati",
+      "info": "presens on/ona van kazati"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "to": {
+      "hr": "to",
+      "nl": "dat",
+      "info": "aanwijzend voornaamwoord, onzijdig"
+    },
+    "dobro": {
+      "hr": "dobro",
+      "nl": "Goed.",
+      "item": "v.01.dobro"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "De kavana",
+    "body_nl": "Een Kroatische «kavana» is geen koffiezaak om iets mee te nemen. Je gaat er zitten, je bestelt één koffie, en daar kun je een uur over doen — dat is niet onbeleefd maar de bedoeling. In elke straat zit er een, en vaste gasten hebben er hun eigen tafel en hun eigen tijd. Wie in Kroatië «idemo na kavu» zegt, bedoelt zelden de koffie."
+  },
+  "vocab": [
+    {
+      "id": "v.pr11.zvono",
+      "hr": "zvono",
+      "nl": "bel, klok",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "zvona",
+      "nom_pl": "zvona",
+      "tags": [
+        "kavana",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.vlasnik",
+      "hr": "vlasnik",
+      "nl": "eigenaar",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "animate",
+      "declension": "a",
+      "gen_sg": "vlasnika",
+      "nom_pl": "vlasnici",
+      "tags": [
+        "kavana",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.posao",
+      "hr": "posao",
+      "nl": "werk, baan",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "posla",
+      "nom_pl": "poslovi",
+      "tags": [
+        "werk",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.gost",
+      "hr": "gost",
+      "nl": "gast",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "animate",
+      "declension": "a",
+      "gen_sg": "gosta",
+      "nom_pl": "gosti",
+      "tags": [
+        "kavana",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.zid",
+      "hr": "zid",
+      "nl": "muur",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "zida",
+      "nom_pl": "zidovi",
+      "tags": [
+        "huis",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.ovdje",
+      "hr": "ovdje",
+      "nl": "hier",
+      "pos": "adv",
+      "tags": [
+        "plaats",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.dugo",
+      "hr": "dugo",
+      "nl": "lang (in tijd)",
+      "pos": "adv",
+      "tags": [
+        "tijd",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr11.isti",
+      "hr": "isti",
+      "nl": "dezelfde",
+      "pos": "adj",
+      "tags": [
+        "eigenschap",
+        "verhaal-11"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr11.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Lea stelt het café voor waar ze werkt, en de mensen die er zijn.",
+      "distractors": [
+        "Hoe je in Zagreb een baan vindt.",
+        "Waarom Vinko de kavana wil verkopen.",
+        "Het verschil tussen een kavana en een restaurant."
+      ],
+      "explain_nl": "Elke alinea introduceert iets: eerst de zaak, dan Lea, dan Vinko, dan Sanja en de gasten. Er gebeurt nog niets — dit is de opstelling.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr11.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Wat hangt er aan de muur?",
+      "answer": "Een oude bel.",
+      "distractors": [
+        "Een schilderij van Zagreb.",
+        "Een klok.",
+        "Een foto van Vinko."
+      ],
+      "explain_nl": "«Na zidu je staro zvono.» Zvono is de bel waar de zaak naar heet — daarom staat het er.",
+      "difficulty": 1
+    },
+    {
+      "id": "b.pr11.003",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "«On je star čovjek.» — naar wie verwijst «on»?",
+      "answer": "Vinko.",
+      "distractors": [
+        "De gast.",
+        "Lea's vader.",
+        "Het café."
+      ],
+      "explain_nl": "De zin ervóór noemt Vinko. «On» is mannelijk enkelvoud en pakt de laatstgenoemde man op.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr11.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Werkt Lea elke dag in het café?",
+      "answer": "Nee, alleen in het weekend.",
+      "distractors": [
+        "Ja, elke dag.",
+        "Dat staat er niet.",
+        "Alleen als Sanja er niet is."
+      ],
+      "explain_nl": "«Radim ovdje subotom i nedjeljom» — zaterdags en zondags. Dat past ook bij dat ze studente is.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr11.005",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Gosti su uvijek isti ljudi.» Wat betekent «isti» hier?",
+      "answer": "dezelfde",
+      "distractors": [
+        "andere",
+        "aardige",
+        "veel"
+      ],
+      "explain_nl": "Het gaat om vaste gasten: elke keer dezelfde mensen. Dat is precies wat een kavana in de buurt is.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr11.006",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Vinko zegt dat het goed is dat de gasten altijd dezelfde zijn. Wat zegt dat over hem?",
+      "answer": "Hij hecht aan vaste gasten, niet aan veel gasten.",
+      "distractors": [
+        "Hij wil niet te hard werken.",
+        "Hij vindt nieuwe klanten lastig.",
+        "Hij kent alleen die mensen nog."
+      ],
+      "explain_nl": "«To je dobro» is een oordeel, geen constatering. Voor Vinko is de kavana een plek voor bekenden — dat wordt in latere delen belangrijk.",
+      "difficulty": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr11.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom staat er «Nije velika» en niet «Nije velik»?",
+      "answer": "Omdat kavana vrouwelijk is.",
+      "distractors": [
+        "Omdat het café klein is.",
+        "Omdat er «nije» voor staat.",
+        "Omdat velik altijd op -a eindigt."
+      ],
+      "explain_nl": "Een bijvoeglijk naamwoord richt zich naar het zelfstandig naamwoord. Kavana is vrouwelijk, dus velika.",
+      "targets": [
+        "g.04.pridjevi"
+      ],
+      "difficulty": 2,
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «De eigenaar heet Vinko.»",
+      "given": "Vlasnik ___ zove Vinko.",
+      "answer": "se",
+      "accepts": [
+        "se"
+      ],
+      "explain_nl": "Zvati is «roepen»; pas met se wordt het «heten».",
+      "targets": [
+        "g.03.zvati_se"
+      ],
+      "difficulty": 2,
+      "audio": "Vlasnik se zove Vinko.",
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.003",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "«Na zidu je staro zvono.» Waarom «staro» en niet «stari» of «stara»?",
+      "answer": "Omdat zvono onzijdig is.",
+      "distractors": [
+        "Omdat de bel niet meer werkt.",
+        "Omdat er «na» voor staat.",
+        "Omdat het achter het werkwoord staat."
+      ],
+      "explain_nl": "Zvono eindigt op -o en is onzijdig. Het bijvoeglijk naamwoord krijgt dan ook -o.",
+      "targets": [
+        "g.mod.rod"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.004",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: «Ik ben studente.»",
+      "given": "Ik ben studente.",
+      "answer": "Ja sam studentica.",
+      "accepts": [
+        "Ja sam studentica.",
+        "Sam studentica.",
+        "Studentica sam."
+      ],
+      "explain_nl": "Het beroep staat in de nominatief, net als het onderwerp. Er komt geen woordje «een» bij.",
+      "targets": [
+        "g.02.nominativ"
+      ],
+      "difficulty": 2,
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.005",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Moja kolegica se zove Sanja i on je brza.",
+      "answer": "Moja kolegica se zove Sanja i ona je brza.",
+      "accepts": [
+        "Moja kolegica se zove Sanja i ona je brza."
+      ],
+      "explain_nl": "Sanja is een vrouw, dus ona. Dat «brza» al vrouwelijk is, verraadt de fout.",
+      "targets": [
+        "g.mod.pron_pers"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.006",
+      "type": "match",
+      "mode": "receptive",
+      "prompt_nl": "Koppel het woord aan de betekenis.",
+      "pairs": [
+        {
+          "hr": "vlasnik",
+          "nl": "eigenaar"
+        },
+        {
+          "hr": "gost",
+          "nl": "gast"
+        },
+        {
+          "hr": "zid",
+          "nl": "muur"
+        },
+        {
+          "hr": "zvono",
+          "nl": "bel"
+        }
+      ],
+      "answer": "vlasnik",
+      "explain_nl": "Vier woorden die in de hele serie terugkomen.",
+      "targets": [
+        "v.pr11.vlasnik",
+        "v.pr11.gost",
+        "v.pr11.zid",
+        "v.pr11.zvono"
+      ],
+      "difficulty": 1,
+      "source": "verhaal-11"
+    },
+    {
+      "id": "e.pr11.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Beschrijf in drie zinnen een café of winkel die jij kent: hoe het heet, waar het is, en wie er werkt.",
+      "model_answer": "Ovo je kavana Mali most. Kavana je u mojoj ulici. Vlasnik se zove Ivan i on je uvijek tu.",
+      "rubric_nl": [
+        "Drie zinnen",
+        "Een naam, een plaats en een persoon",
+        "Elke zin heeft biti of een werkwoord"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 3,
+          "label": "Drie zinnen"
+        }
+      ],
+      "auto_check": false,
+      "targets": [
+        "g.02.nominativ"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-11"
+    }
+  ]
+}
