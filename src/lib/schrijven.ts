@@ -4,7 +4,8 @@ import path from "node:path";
 import { eq } from "drizzle-orm";
 
 import { db } from "./db";
-import { schrijfwerk } from "./db/schema";
+import { items, schrijfwerk } from "./db/schema";
+import { FUNCTION_WORDS, formKey, readingsFor } from "./forms";
 import { checkFree, type CheckUitkomst, type FreeCheck } from "./freecheck";
 import { controleer, type Tekstbevindingen } from "./tekstcontrole";
 import { highestActiveLesson } from "./stats";
@@ -38,6 +39,11 @@ export interface Opdracht {
   soort: Soort;
   titel_nl: string;
   opdracht_nl: string;
+  blurb_nl: string;
+  /** Wat deze opdracht traint — de tags op het overzicht. */
+  vraagt_nl: string[];
+  /** Streeflengte in woorden, voor de meter op het overzicht. */
+  streef_woorden: number;
   motief?: string;
   hulp_nl: string[];
   model_nl: string;
@@ -145,6 +151,73 @@ export function beoordeel(opdracht: Opdracht, tekst: string): Schrijfoordeel {
     zinnen: tekst.split(/[.!?]+/).filter((z) => z.trim().length > 1).length,
     alineas: tekst.split(/\n\s*\n/).filter((p) => p.trim()).length,
   };
+}
+
+/* ----------------------------------------------------------- woordenbank --- */
+
+export interface Bankwoord {
+  hr: string;
+  nl: string;
+}
+
+/**
+ * De woorden uit het voorbeeldantwoord, met hun betekenis.
+ *
+ * Dit is de «controlled practice» tussen het bekijken van een voorbeeld en zelf
+ * schrijven: je krijgt de bouwstenen, niet de zin. Zonder die tussenstap is er
+ * alleen «hier is een voorbeeld» en «schrijf nu zelf», en dat gat is precies
+ * waar een leerder terugvalt op Nederlands denken en woord voor woord vertaalt.
+ *
+ * Ze komen uit het modelantwoord en niet uit een themalijst, want dan staat er
+ * per definitie genoeg om de opdracht mee te maken — en geen woord meer.
+ */
+export function woordenbank(opdracht: Opdracht): Bankwoord[] {
+  const uit: Bankwoord[] = [];
+  const gezien = new Set<string>();
+
+  for (const ruw of opdracht.model_nl.split(/[^\p{L}\p{N}-]+/u)) {
+    const sleutel = formKey(ruw);
+    if (!sleutel || sleutel.length < 3 || gezien.has(sleutel)) continue;
+    if (FUNCTION_WORDS.has(sleutel)) continue;
+    gezien.add(sleutel);
+
+    /*
+      Een woord met een eigen woordenboekvorm, of niets.
+
+      Sinds de catalogus ook de losse woorden uit uitdrukkingen kent, is «dan»
+      opzoekbaar — maar zijn enige woordenboekvorm is «Dobar dan!». Dat als
+      bouwsteen aanbieden bij «schrijf over gisteren» is onbruikbaar: je krijgt
+      een groet waar je een zelfstandig naamwoord zocht. Zulke woorden staan al
+      in het voorbeeld erboven; in de bank horen ze niet.
+    */
+    // «zvati se» en «odmarati se» zijn wél woordenboekvormen: het wederkerend
+    // «se» hoort bij het werkwoord en maakt er geen uitdrukking van.
+    const eigenVorm = (lemma: string) => !lemma.includes(" ") || /\s+se$/.test(lemma);
+    const lezing =
+      readingsFor(sleutel).find((l) => eigenVorm(l.lemma)) ??
+      (sleutel.length > 4 ? readingsFor(sleutel).find((l) => formKey(l.lemma) === sleutel) : undefined);
+    if (!lezing) continue;
+    const nl = betekenisVan(lezing.lemmaId);
+    if (!nl) continue;
+    // De woordenboekvorm, niet de verbogen vorm: die moet je zelf maken.
+    if (gezien.has(formKey(lezing.lemma)) && formKey(lezing.lemma) !== sleutel) continue;
+    gezien.add(formKey(lezing.lemma));
+    uit.push({ hr: lezing.lemma, nl });
+  }
+  return uit;
+}
+
+let betekenissen: Map<string, string> | null = null;
+
+function betekenisVan(itemId: string): string | undefined {
+  if (!betekenissen) {
+    betekenissen = new Map();
+    for (const rij of db.select().from(items).where(eq(items.kind, "vocab")).all()) {
+      const p = rij.payload as { nl?: string };
+      if (p?.nl) betekenissen.set(rij.id, p.nl);
+    }
+  }
+  return betekenissen.get(itemId);
 }
 
 /* -------------------------------------------------------------- overzicht --- */

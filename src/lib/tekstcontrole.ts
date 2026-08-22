@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+
 import { FUNCTION_WORDS, formIndex, formKey, NAAMVAL_NAAM, readingsFor, type Naamval } from "./forms";
 import { vindServismen, type Melding } from "./servisms";
 
@@ -47,6 +50,30 @@ export interface Naamvalfout {
   wil: Naamval[];
   gevonden: Naamval[];
   uitleg: string;
+  /** De vorm die het had moeten zijn, als de catalogus die kent. */
+  bedoeld?: string;
+}
+
+/**
+ * De vorm van een woord in een bepaalde naamval opzoeken.
+ *
+ * De catalogus loopt van vorm naar lemma; hier is de andere kant nodig. Dat
+ * maakt het verschil tussen «iz wil de genitief» — waar een leerder niets mee
+ * kan als hij de genitief nog niet uit zijn hoofd kent — en «dat is grada».
+ *
+ * Alleen als het antwoord eenduidig is. Levert het zoeken twee verschillende
+ * vormen op, dan wordt er niets voorgesteld: een suggestie die ernaast zit,
+ * wordt geloofd.
+ */
+export function vormVan(lemmaId: string, naamval: Naamval, getal: "sg" | "pl" = "sg"): string | undefined {
+  const treffers = new Set<string>();
+  for (const lezingen of formIndex().values()) {
+    for (const l of lezingen) {
+      if (l.lemmaId !== lemmaId) continue;
+      if (l.feats.case === naamval && l.feats.number === getal) treffers.add(l.surface);
+    }
+  }
+  return treffers.size === 1 ? [...treffers][0] : undefined;
 }
 
 export function tokens(tekst: string): string[] {
@@ -77,12 +104,18 @@ export function naamvalfouten(zin: string): Naamvalfout[] {
     const gevonden = [...new Set(lezingen.map((l) => l.feats.case!))];
     if (gevonden.some((c) => wil.includes(c))) continue;
 
+    // Wat had er moeten staan? Alleen bij één ondubbelzinnige naamval te zeggen.
+    const getal = lezingen[0]!.feats.number === "pl" ? "pl" : "sg";
+    const bedoeld =
+      wil.length === 1 ? vormVan(lezingen[0]!.lemmaId, wil[0]!, getal) : undefined;
+
     uit.push({
       fragment: woorden.slice(i, j + 1).join(" "),
       voorzetsel: vz,
       woord,
       wil,
       gevonden,
+      bedoeld,
       uitleg:
         `«${vz}» wil ${wil.map((c) => NAAMVAL_NAAM[c]).join(" of ")}, ` +
         `maar «${woord}» is ${gevonden.map((c) => NAAMVAL_NAAM[c]).join(" of ")}`,
@@ -115,11 +148,73 @@ function bouwKaalIndex(): Map<string, string[]> {
   return map;
 }
 
+/* --------------------------------------------------------------- namen --- */
+
+let namenCache: Set<string> | null = null;
+
+/**
+ * Eigennamen en klankvoorbeelden uit content/namen.json.
+ *
+ * Zonder deze lijst meldde het nakijken «Rotterdamu» en «Antonio» als onbekende
+ * woorden. Dat is voor een leerder die over zichzelf schrijft de eerste zin al,
+ * en een programma dat je eigen naam afkeurt geloof je bij de volgende melding
+ * ook niet meer.
+ */
+function namen(): Set<string> {
+  if (namenCache) return namenCache;
+  const bestand = path.join(process.cwd(), "content", "namen.json");
+  if (!fs.existsSync(bestand)) {
+    namenCache = new Set();
+    return namenCache;
+  }
+  const raw = JSON.parse(fs.readFileSync(bestand, "utf8")) as {
+    namen?: string[];
+    klankvoorbeelden?: string[];
+  };
+  namenCache = new Set([...(raw.namen ?? []), ...(raw.klankvoorbeelden ?? [])].map(formKey));
+  return namenCache;
+}
+
+/* ------------------------------------------------------------- stammen --- */
+
+let stamCache: Set<string> | null = null;
+
+/** Elk beginstuk van elk lemma dat het platform kent, vanaf drie letters. */
+function stammen(): Set<string> {
+  if (stamCache) return stamCache;
+  const set = new Set<string>();
+  for (const lezingen of formIndex().values()) {
+    for (const l of lezingen) {
+      const lemma = formKey(l.lemma);
+      for (let n = 3; n <= lemma.length; n++) set.add(lemma.slice(0, n));
+    }
+  }
+  stamCache = set;
+  return set;
+}
+
+/** Het langste bekende lemma waar dit woord op lijkt te zijn gebouwd. */
+function verwantLemma(woord: string): string | null {
+  const set = stammen();
+  for (let n = Math.min(woord.length, 9); n >= 4; n--) {
+    const stam = woord.slice(0, n);
+    if (!set.has(stam)) continue;
+    for (const lezingen of formIndex().values()) {
+      for (const l of lezingen) {
+        if (formKey(l.lemma).startsWith(stam)) return l.lemma;
+      }
+    }
+  }
+  return null;
+}
+
 export interface Spelfout {
   woord: string;
   /** De vorm die het waarschijnlijk moest zijn — alleen bij ontbrekende tekens. */
   bedoeld?: string;
-  soort: "diakriet" | "onbekend";
+  /** Het woord waar deze vorm bij lijkt te horen — alleen bij soort "vorm". */
+  verwant?: string;
+  soort: "diakriet" | "vorm" | "naam" | "onbekend";
 }
 
 /**
@@ -132,21 +227,49 @@ export interface Spelfout {
  */
 export function spelfouten(tekst: string): Spelfout[] {
   const index = bouwKaalIndex();
+  const lijst = namen();
   const uit: Spelfout[] = [];
   const gezien = new Set<string>();
+
+  // Waar begint een zin? Een hoofdletter middenin een zin is meestal een naam.
+  const zinsbegin = new Set<string>();
+  for (const zin of tekst.split(/(?<=[.!?])\s+|\n+/)) {
+    const eerste = tokens(zin)[0];
+    if (eerste) zinsbegin.add(eerste);
+  }
 
   for (const ruw of tokens(tekst)) {
     const sleutel = formKey(ruw);
     if (!sleutel || /^\d/.test(sleutel) || gezien.has(sleutel)) continue;
     gezien.add(sleutel);
     if (FUNCTION_WORDS.has(sleutel) || readingsFor(sleutel).length) continue;
+    if (lijst.has(sleutel)) continue;
 
+    /*
+      Vier uitkomsten, van zeker naar onzeker — en die volgorde is het punt.
+
+      Een vergeten dakje is vrijwel altijd fout. Een naam is helemaal geen
+      fout. Een vorm van een woord dat ik ken, is waarschijnlijk goed maar
+      buiten wat de verbuigingsmotor maakt. En pas als niets daarvan opgaat,
+      is het echt een woord waar ik niets van weet.
+
+      Eén bak van alles maken — zoals eerst — zet je eigen naam naast een
+      tikfout, en dan lees je de lijst niet meer.
+    */
     const metTekens = (index.get(kaal(sleutel)) ?? []).filter((v) => v !== sleutel);
-    uit.push(
-      metTekens.length
-        ? { woord: ruw, bedoeld: metTekens[0], soort: "diakriet" }
-        : { woord: ruw, soort: "onbekend" },
-    );
+    if (metTekens.length) {
+      uit.push({ woord: ruw, bedoeld: metTekens[0], soort: "diakriet" });
+      continue;
+    }
+
+    // Hoofdletter die niet aan het begin van een zin staat: vrijwel zeker een naam.
+    if (/^\p{Lu}/u.test(ruw) && !zinsbegin.has(ruw)) {
+      uit.push({ woord: ruw, soort: "naam" });
+      continue;
+    }
+
+    const verwant = verwantLemma(sleutel);
+    uit.push(verwant ? { woord: ruw, verwant, soort: "vorm" } : { woord: ruw, soort: "onbekend" });
   }
   return uit;
 }

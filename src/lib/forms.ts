@@ -209,6 +209,28 @@ export function formIndex(): Map<string, Reading[]> {
     }
   };
 
+  /*
+    Uitdrukkingen leveren ook losse woorden op.
+
+    Vijfentachtig woordenlijstitems bestaan uit meer dan één woord: «Dobar
+    dan!», «bijela kava», «Vidimo se!». Die stonden alleen als geheel in de
+    catalogus, en daardoor kende het platform «dan» niet — een van de
+    frequentste woorden van de taal — terwijl het er in vier uitdrukkingen in
+    zit. Bij het nakijken van eigen tekst kwam dat eruit als «woord dat ik niet
+    ken», en dat was gewoon onwaar.
+
+    De losse woorden krijgen het etiket van de uitdrukking waar ze uit komen,
+    zodat zichtbaar blijft waar ze vandaan komen.
+  */
+  const uitUitdrukking = (zin: string, lezing: Omit<Reading, "surface">) => {
+    if (!zin.includes(" ")) return;
+    for (const deel of zin.split(/\s+/)) {
+      const schoon = deel.replace(/^[^\p{L}]+|[^\p{L}]+$/gu, "");
+      if (schoon.length < 2) continue;
+      voegToe(schoon, { ...lezing, label: `uit «${zin}»` });
+    }
+  };
+
   for (const rij of woorden) {
     const v = rij.payload as { hr?: string; pos?: string; present_1sg?: string | null };
     if (!v?.hr) continue;
@@ -227,10 +249,32 @@ export function formIndex(): Map<string, Reading[]> {
         feats: { person: 1, number: "sg" },
         label: "presens ja",
       });
+      // «zovem se» hoort ook onder «zovem» te vinden zijn.
+      uitUitdrukking(v.present_1sg ?? "", {
+        itemId: rij.id,
+        lemma: v.hr,
+        lemmaId: rij.id,
+        feats: { person: 1, number: "sg" },
+        label: "presens ja",
+      });
+      uitUitdrukking(v.hr, {
+        itemId: rij.id,
+        lemma: v.hr,
+        lemmaId: rij.id,
+        feats: {},
+        label: "infinitief",
+      });
     } else if (v.pos !== "noun") {
       // Bijvoeglijke naamwoorden, bijwoorden en de rest: alleen de vorm zoals hij
       // in de woordenlijst staat. Er wordt niets verbogen wat we niet weten.
       voegToe(v.hr, {
+        itemId: rij.id,
+        lemma: v.hr,
+        lemmaId: rij.id,
+        feats: {},
+        label: "woordenboekvorm",
+      });
+      uitUitdrukking(v.hr, {
         itemId: rij.id,
         lemma: v.hr,
         lemmaId: rij.id,

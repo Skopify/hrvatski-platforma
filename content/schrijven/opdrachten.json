@@ -9,15 +9,48 @@
       "soort": "zinnen",
       "titel_nl": "Stel jezelf voor",
       "opdracht_nl": "Schrijf drie zinnen over jezelf: hoe je heet, waar je woont en wat je doet.",
-      "hulp_nl": ["Zovem se …", "Živim u …", "Studiram / Radim …"],
-      "model_nl": "Zovem se Antonio. Živim u Nizozemskoj. Učim hrvatski.",
-      "rubriek_nl": ["Drie hele zinnen", "Elke zin heeft een werkwoord", "Je naam, je woonplaats en wat je doet"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 3, "label": "Drie hele zinnen" },
-        { "kind": "bevat_woord", "woorden": ["zovem", "ime"], "label": "Je zegt hoe je heet" },
-        { "kind": "bevat_woord", "woorden": ["živim", "stanujem"], "label": "Je zegt waar je woont" }
+      "hulp_nl": [
+        "Zovem se …",
+        "Živim u …",
+        "Studiram / Radim …"
       ],
-      "auto_check": true
+      "model_nl": "Zovem se Antonio. Živim u Nizozemskoj. Učim hrvatski.",
+      "rubriek_nl": [
+        "Drie hele zinnen",
+        "Elke zin heeft een werkwoord",
+        "Je naam, je woonplaats en wat je doet"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 3,
+          "label": "Drie hele zinnen"
+        },
+        {
+          "kind": "bevat_woord",
+          "woorden": [
+            "zovem",
+            "ime"
+          ],
+          "label": "Je zegt hoe je heet"
+        },
+        {
+          "kind": "bevat_woord",
+          "woorden": [
+            "živim",
+            "stanujem"
+          ],
+          "label": "Je zegt waar je woont"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "tegenwoordige tijd",
+        "zovem se",
+        "nominatief"
+      ],
+      "blurb_nl": "De eerste zinnen die je van jezelf kunt zeggen. Drie stuks, meer niet — en juist daarom moet elke zin kloppen.",
+      "streef_woorden": 15
     },
     {
       "id": "w.02.obitelj",
@@ -27,15 +60,47 @@
       "soort": "zinnen",
       "titel_nl": "Wie horen er bij jou?",
       "opdracht_nl": "Schrijf vier zinnen over je familie. Noem minstens drie mensen en zeg iets over elk van hen.",
-      "hulp_nl": ["Moja majka …", "Moj brat …", "Ona je …", "On radi …"],
-      "model_nl": "Moja majka je učiteljica. Moj brat živi u Zagrebu. On je student. Moja sestra ima psa.",
-      "rubriek_nl": ["Vier zinnen", "Drie verschillende mensen", "Bij elke persoon staat iets"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 4, "label": "Vier zinnen" },
-        { "kind": "min_woorden", "n": 14, "label": "Minstens veertien woorden" },
-        { "kind": "bevat_woord", "woorden": ["moj", "moja", "moje"], "label": "Je gebruikt een bezittelijk woord" }
+      "hulp_nl": [
+        "Moja majka …",
+        "Moj brat …",
+        "Ona je …",
+        "On radi …"
       ],
-      "auto_check": true
+      "model_nl": "Moja majka je učiteljica. Moj brat živi u Zagrebu. On je student. Moja sestra ima psa.",
+      "rubriek_nl": [
+        "Vier zinnen",
+        "Drie verschillende mensen",
+        "Bij elke persoon staat iets"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 4,
+          "label": "Vier zinnen"
+        },
+        {
+          "kind": "min_woorden",
+          "n": 14,
+          "label": "Minstens veertien woorden"
+        },
+        {
+          "kind": "bevat_woord",
+          "woorden": [
+            "moj",
+            "moja",
+            "moje"
+          ],
+          "label": "Je gebruikt een bezittelijk woord"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "bezittelijke woorden",
+        "familie",
+        "biti"
+      ],
+      "blurb_nl": "Vier zinnen over de mensen om je heen. Hier komt het bezittelijk woord voor het eerst uit je eigen hand.",
+      "streef_woorden": 14
     },
     {
       "id": "w.03.subota",
@@ -45,14 +110,38 @@
       "soort": "tekst",
       "titel_nl": "Wat doe je op zaterdag?",
       "opdracht_nl": "Schrijf vijf zinnen over een gewone zaterdag. Alles in de tegenwoordige tijd.",
-      "hulp_nl": ["Ustajem u …", "Idem na …", "Poslije …", "Navečer …"],
-      "model_nl": "Subotom ustajem kasno. Idem na tržnicu i kupujem kruh. Poslije pijem kavu s prijateljem. Popodne čitam. Navečer gledam film.",
-      "rubriek_nl": ["Vijf zinnen", "Vijf verschillende werkwoorden", "Een volgorde in de dag"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 5, "label": "Vijf zinnen" },
-        { "kind": "min_woorden", "n": 20, "label": "Minstens twintig woorden" }
+      "hulp_nl": [
+        "Ustajem u …",
+        "Idem na …",
+        "Poslije …",
+        "Navečer …"
       ],
-      "auto_check": false
+      "model_nl": "Subotom ustajem kasno. Idem na tržnicu i kupujem kruh. Poslije pijem kavu s prijateljem. Popodne čitam. Navečer gledam film.",
+      "rubriek_nl": [
+        "Vijf zinnen",
+        "Vijf verschillende werkwoorden",
+        "Een volgorde in de dag"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 5,
+          "label": "Vijf zinnen"
+        },
+        {
+          "kind": "min_woorden",
+          "n": 20,
+          "label": "Minstens twintig woorden"
+        }
+      ],
+      "auto_check": false,
+      "vraagt_nl": [
+        "tegenwoordige tijd",
+        "dagindeling",
+        "werkwoorden"
+      ],
+      "blurb_nl": "Een hele dag in vijf zinnen. Je oefent de tegenwoordige tijd en, zonder dat je het merkt, de volgorde van een verhaal.",
+      "streef_woorden": 20
     },
     {
       "id": "w.04.trznica",
@@ -62,14 +151,38 @@
       "soort": "tekst",
       "titel_nl": "Boodschappen op de markt",
       "opdracht_nl": "Je gaat naar de markt. Schrijf wat je koopt en voor wie. Gebruik minstens vijf woorden in de accusatief — dat is de vorm van het lijdend voorwerp.",
-      "hulp_nl": ["Kupujem …", "Trebam …", "Za majku kupujem …"],
-      "model_nl": "Idem na tržnicu. Kupujem kruh, sir i mlijeko. Trebam i jednu rajčicu. Za majku kupujem jabuke. Za sebe kupujem kolač.",
-      "rubriek_nl": ["Minstens vier zinnen", "Vijf woorden in de accusatief", "Voor wie je iets koopt"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 4, "label": "Vier zinnen" },
-        { "kind": "min_naamval", "naamval": "acc", "n": 5, "label": "Vijf woorden in de accusatief" }
+      "hulp_nl": [
+        "Kupujem …",
+        "Trebam …",
+        "Za majku kupujem …"
       ],
-      "auto_check": true
+      "model_nl": "Idem na tržnicu. Kupujem kruh, sir i mlijeko. Trebam i jednu rajčicu. Za majku kupujem jabuke. Za sebe kupujem kolač.",
+      "rubriek_nl": [
+        "Minstens vier zinnen",
+        "Vijf woorden in de accusatief",
+        "Voor wie je iets koopt"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 4,
+          "label": "Vier zinnen"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "acc",
+          "n": 5,
+          "label": "Vijf woorden in de accusatief"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "accusatief",
+        "kupovati",
+        "voedsel"
+      ],
+      "blurb_nl": "Boodschappen doen is de makkelijkste manier om de accusatief te oefenen: alles wat je koopt staat erin.",
+      "streef_woorden": 35
     },
     {
       "id": "w.05.jucer",
@@ -79,14 +192,37 @@
       "soort": "tekst",
       "titel_nl": "Wat heb je gisteren gedaan?",
       "opdracht_nl": "Schrijf zes zinnen over gisteren. Alles in de verleden tijd.",
-      "hulp_nl": ["Jučer sam …", "Poslije sam …", "Navečer smo …"],
-      "model_nl": "Jučer sam ustao rano. Radio sam cijeli dan. Poslije posla sam kupio kruh. Navečer smo gledali film. Bilo je dobro. Legao sam kasno.",
-      "rubriek_nl": ["Zes zinnen", "Alles in de verleden tijd", "Een volgorde in de dag"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 6, "label": "Zes zinnen" },
-        { "kind": "min_verleden", "n": 5, "label": "Minstens vijf keer verleden tijd" }
+      "hulp_nl": [
+        "Jučer sam …",
+        "Poslije sam …",
+        "Navečer smo …"
       ],
-      "auto_check": true
+      "model_nl": "Jučer sam ustao rano. Radio sam cijeli dan. Poslije posla sam kupio kruh. Navečer smo gledali film. Bilo je dobro. Legao sam kasno.",
+      "rubriek_nl": [
+        "Zes zinnen",
+        "Alles in de verleden tijd",
+        "Een volgorde in de dag"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 6,
+          "label": "Zes zinnen"
+        },
+        {
+          "kind": "min_verleden",
+          "n": 5,
+          "label": "Minstens vijf keer verleden tijd"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "verleden tijd",
+        "deelwoorden",
+        "volgorde"
+      ],
+      "blurb_nl": "De eerste keer dat je over gisteren schrijft. Zes zinnen, allemaal in de verleden tijd — dat is moeilijker dan het klinkt.",
+      "streef_woorden": 35
     },
     {
       "id": "w.06.soba",
@@ -96,14 +232,39 @@
       "soort": "tekst",
       "titel_nl": "Beschrijf een kamer",
       "opdracht_nl": "Beschrijf de kamer waar je nu zit. Waar staat wat? Gebruik minstens vier woorden in de locatief — de vorm na «u» en «na» als er geen beweging is.",
-      "hulp_nl": ["U sobi je …", "Na stolu stoji …", "Pokraj prozora …", "Ispod kreveta …"],
-      "model_nl": "Moja soba je mala. Na stolu stoji računalo. Pokraj prozora je stari ormar. U ormaru su knjige. Na zidu visi slika.",
-      "rubriek_nl": ["Minstens vijf zinnen", "Vier woorden in de locatief", "Minstens drie meubelstukken"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 5, "label": "Vijf zinnen" },
-        { "kind": "min_naamval", "naamval": "loc", "n": 4, "label": "Vier woorden in de locatief" }
+      "hulp_nl": [
+        "U sobi je …",
+        "Na stolu stoji …",
+        "Pokraj prozora …",
+        "Ispod kreveta …"
       ],
-      "auto_check": true
+      "model_nl": "Moja soba je mala. Na stolu stoji računalo. Pokraj prozora je stari ormar. U ormaru su knjige. Na zidu visi slika.",
+      "rubriek_nl": [
+        "Minstens vijf zinnen",
+        "Vier woorden in de locatief",
+        "Minstens drie meubelstukken"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 5,
+          "label": "Vijf zinnen"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "loc",
+          "n": 4,
+          "label": "Vier woorden in de locatief"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "locatief",
+        "voorzetsels",
+        "beschrijven"
+      ],
+      "blurb_nl": "Beschrijf waar je zit. De locatief is de vorm die je nodig hebt zodra iets ergens is in plaats van ergens heen gaat.",
+      "streef_woorden": 35
     },
     {
       "id": "w.07.pozivnica",
@@ -113,14 +274,38 @@
       "soort": "bericht",
       "titel_nl": "Nodig iemand uit",
       "opdracht_nl": "Schrijf een bericht waarin je iemand uitnodigt. Zeg wat er is, wanneer en waar, en vraag of hij komt. Gebruik de toekomende tijd en minstens één gebiedende wijs.",
-      "hulp_nl": ["Dođi …!", "U subotu ću …", "Bit će …", "Javi mi …"],
-      "model_nl": "Bok Marko! U subotu slavim rođendan. Bit će kod mene, u osam sati. Dođi ako možeš. Javi mi do petka.",
-      "rubriek_nl": ["Wat, wanneer en waar", "Een keer toekomende tijd", "Een keer gebiedende wijs", "Een vraag of afsluiting"],
-      "checks": [
-        { "kind": "bevat_toekomst", "label": "Toekomende tijd" },
-        { "kind": "min_zinnen", "n": 4, "label": "Vier zinnen" }
+      "hulp_nl": [
+        "Dođi …!",
+        "U subotu ću …",
+        "Bit će …",
+        "Javi mi …"
       ],
-      "auto_check": false
+      "model_nl": "Bok Marko! U subotu slavim rođendan. Bit će kod mene, u osam sati. Dođi ako možeš. Javi mi do petka.",
+      "rubriek_nl": [
+        "Wat, wanneer en waar",
+        "Een keer toekomende tijd",
+        "Een keer gebiedende wijs",
+        "Een vraag of afsluiting"
+      ],
+      "checks": [
+        {
+          "kind": "bevat_toekomst",
+          "label": "Toekomende tijd"
+        },
+        {
+          "kind": "min_zinnen",
+          "n": 4,
+          "label": "Vier zinnen"
+        }
+      ],
+      "auto_check": false,
+      "vraagt_nl": [
+        "toekomende tijd",
+        "gebiedende wijs",
+        "briefvorm"
+      ],
+      "blurb_nl": "Een echt bericht aan een echt iemand. Wat, wanneer, waar — en de toekomende tijd om het af te spreken.",
+      "streef_woorden": 30
     },
     {
       "id": "w.08.restoran",
@@ -130,14 +315,49 @@
       "soort": "bericht",
       "titel_nl": "Iets is niet in orde",
       "opdracht_nl": "Je zit in een restaurant en er klopt iets niet. Schrijf wat je tegen de ober zegt: beleefd, maar duidelijk. Gebruik minstens twee modale werkwoorden.",
-      "hulp_nl": ["Oprostite, …", "Mogu li …", "Ovo nije …", "Možete li …"],
-      "model_nl": "Oprostite, ovo nije ono što sam naručio. Naručio sam ribu, a ovo je meso. Možete li to promijeniti? I molim vas, možemo li dobiti vodu?",
-      "rubriek_nl": ["Beleefd begin", "Wat er mis is", "Twee modale werkwoorden", "Een vraag aan de ober"],
-      "checks": [
-        { "kind": "min_zinnen", "n": 3, "label": "Drie zinnen" },
-        { "kind": "min_voorkomens", "woorden": ["mogu", "možete", "možemo", "moram", "morate", "trebam", "želim", "smijem"], "n": 2, "label": "Twee modale werkwoorden" }
+      "hulp_nl": [
+        "Oprostite, …",
+        "Mogu li …",
+        "Ovo nije …",
+        "Možete li …"
       ],
-      "auto_check": true
+      "model_nl": "Oprostite, ovo nije ono što sam naručio. Naručio sam ribu, a ovo je meso. Možete li to promijeniti? I molim vas, možemo li dobiti vodu?",
+      "rubriek_nl": [
+        "Beleefd begin",
+        "Wat er mis is",
+        "Twee modale werkwoorden",
+        "Een vraag aan de ober"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 3,
+          "label": "Drie zinnen"
+        },
+        {
+          "kind": "min_voorkomens",
+          "woorden": [
+            "mogu",
+            "možete",
+            "možemo",
+            "moram",
+            "morate",
+            "trebam",
+            "želim",
+            "smijem"
+          ],
+          "n": 2,
+          "label": "Twee modale werkwoorden"
+        }
+      ],
+      "auto_check": true,
+      "vraagt_nl": [
+        "modale werkwoorden",
+        "beleefdheid",
+        "vragen"
+      ],
+      "blurb_nl": "Iets klopt niet en je moet het zeggen zonder onbeleefd te worden. Daar heb je de modale werkwoorden voor.",
+      "streef_woorden": 30
     },
     {
       "id": "w.09.eigen-hoofdstuk",
@@ -162,12 +382,38 @@
         "Het verhaal eindigt niet met een uitleg maar met een beeld"
       ],
       "checks": [
-        { "kind": "min_woorden", "n": 150, "label": "Honderdvijftig woorden" },
-        { "kind": "min_verleden", "n": 8, "label": "Minstens acht keer verleden tijd" },
-        { "kind": "min_naamval", "naamval": "loc", "n": 2, "label": "Locatief gebruikt" },
-        { "kind": "min_naamval", "naamval": "gen", "n": 2, "label": "Genitief gebruikt" }
+        {
+          "kind": "min_woorden",
+          "n": 150,
+          "label": "Honderdvijftig woorden"
+        },
+        {
+          "kind": "min_verleden",
+          "n": 8,
+          "label": "Minstens acht keer verleden tijd"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "loc",
+          "n": 2,
+          "label": "Locatief gebruikt"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "gen",
+          "n": 2,
+          "label": "Genitief gebruikt"
+        }
       ],
-      "auto_check": false
+      "auto_check": false,
+      "vraagt_nl": [
+        "verleden tijd",
+        "drie naamvallen",
+        "alinea's",
+        "vrij schrijven"
+      ],
+      "blurb_nl": "Honderdvijftig woorden die van jou zijn. Geen invuloefening meer: een verhaal over een aankomst, met alles wat je geleerd hebt tegelijk.",
+      "streef_woorden": 150
     },
     {
       "id": "w.10.ander-perspectief",
@@ -191,10 +437,25 @@
         "De verteller weet iets wat de oorspronkelijke verteller niet wist"
       ],
       "checks": [
-        { "kind": "min_woorden", "n": 150, "label": "Honderdvijftig woorden" },
-        { "kind": "min_verleden", "n": 8, "label": "Minstens acht keer verleden tijd" }
+        {
+          "kind": "min_woorden",
+          "n": 150,
+          "label": "Honderdvijftig woorden"
+        },
+        {
+          "kind": "min_verleden",
+          "n": 8,
+          "label": "Minstens acht keer verleden tijd"
+        }
       ],
-      "auto_check": false
+      "auto_check": false,
+      "vraagt_nl": [
+        "perspectiefwissel",
+        "voornaamwoorden",
+        "verleden tijd"
+      ],
+      "blurb_nl": "Neem een verhaal dat je gelezen hebt en vertel het opnieuw vanuit iemand anders. Wat er gebeurt blijft gelijk; van wie je het hoort niet.",
+      "streef_woorden": 150
     }
   ]
 }
