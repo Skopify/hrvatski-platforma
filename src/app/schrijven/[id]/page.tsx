@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Schrijfblok } from "@/components/Schrijfblok";
 import { Page, PageHeader, Pill } from "@/components/ui";
-import { loadOpdracht, SOORT_LABEL, werkVoor } from "@/lib/schrijven";
+import { loadOpdracht, SOORT_LABEL, werkVoor, woordenbank } from "@/lib/schrijven";
 
 export const dynamic = "force-dynamic";
 
@@ -44,6 +44,7 @@ export default async function SchrijfOpdrachtPage({
 
       <Schrijfblok
         opdracht={opdracht}
+        bank={woordenbank(opdracht)}
         begin={werk?.tekst ?? ""}
         klaarBegin={werk?.klaar ?? false}
       />

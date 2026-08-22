@@ -92,6 +92,16 @@ function zinnen(tekst: string): string[] {
 
 const norm = (w: string) => w.toLocaleLowerCase("hr");
 
+/**
+ * Vergelijken zonder diakrieten.
+ *
+ * «Zivim u Rotterdamu» telde niet mee voor «je zegt waar je woont», omdat de
+ * vergelijking exact was en het dakje ontbrak. Daarmee kreeg één vergeten teken
+ * twee strafpunten: de spellingcontrole meldt het al, en daar hoort het thuis.
+ * Het criterium gaat over of je het gezégd hebt, niet over hoe je het spelt.
+ */
+const kaalNorm = (w: string) => stripDiacritics(norm(w));
+
 function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
   const ws = woorden(antwoord);
   const laag = ws.map(norm);
@@ -123,8 +133,8 @@ function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
       };
     }
     case "bevat_woord": {
-      const doel = check.woorden.map(norm);
-      const treffers = laag.filter((w) => doel.includes(w));
+      const doel = check.woorden.map(kaalNorm);
+      const treffers = ws.filter((w) => doel.includes(kaalNorm(w)));
       return {
         label: check.label,
         ok: treffers.length > 0,
@@ -134,8 +144,8 @@ function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
       };
     }
     case "min_voorkomens": {
-      const doel = check.woorden.map(norm);
-      const n = laag.filter((w) => doel.includes(w)).length;
+      const doel = check.woorden.map(kaalNorm);
+      const n = ws.filter((w) => doel.includes(kaalNorm(w))).length;
       return {
         label: check.label,
         ok: n >= check.n,
