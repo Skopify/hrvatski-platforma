@@ -1,4 +1,4 @@
-import { formIndex, formKey, readingsFor } from "./forms";
+import { FUNCTION_WORDS, formIndex, formKey, readingsFor } from "./forms";
 import { stripDiacritics } from "./grading";
 import type { Exercise } from "./content";
 
@@ -102,6 +102,70 @@ const norm = (w: string) => w.toLocaleLowerCase("hr");
  */
 const kaalNorm = (w: string) => stripDiacritics(norm(w));
 
+/** De hulpwerkwoorden waarmee de verleden tijd gebouwd wordt. */
+const HULPWERKWOORD =
+  /^(sam|si|je|smo|ste|su|nisam|nisi|nije|nismo|niste|nisu|bih|bi|bismo|biste)$/;
+
+/** Uitgangen van het l-deelwoord: radio, radila, radili, bilo. */
+const DEELWOORD_UITGANG = /(ao|io|la|lo|li|le)$/;
+
+/**
+ * De deelwoorden in een tekst.
+ *
+ * De catalogus alleen was niet genoeg. Die kent alleen deelwoorden van
+ * werkwoorden die de verbuigingsmotor vervoegt, en daardoor telde
+ * «Jučer sam ustao rano. Radio sam cijeli dan. … Bilo je dobro. Legao sam
+ * kasno.» op drie in plaats van zes — het modelantwoord haalde zijn eigen eis
+ * niet.
+ *
+ * Daarom een tweede weg: een woord met een deelwoorduitgang, in een zin waar
+ * ook een hulpwerkwoord staat. Dat hulpwerkwoord is de sleutel — het maakt het
+ * verschil tussen «Bilo je dobro» (verleden tijd) en «Imam malo vremena»,
+ * waar «malo» toevallig ook op -lo eindigt.
+ *
+ * En twee uitsluitingen, want die uitgang komt ook op gewone woorden voor:
+ * een woord dat zélf een woordenboekvorm is (malo, selo, more) is geen
+ * deelwoord, en een woord met een naamval evenmin.
+ */
+function deelwoordenIn(tekst: string): string[] {
+  const uit: string[] = [];
+  const BITI = /^(bio|bila|bilo|bili|bile)$/;
+
+  for (const zin of tekst.split(/[.!?\n]+/)) {
+    const ws = woorden(zin);
+    const heeftHulp = ws.some((w) => HULPWERKWOORD.test(norm(w)));
+
+    for (const w of ws) {
+      const laag = norm(w);
+      const lezingen = readingsFor(w);
+      if (lezingen.some((l) => l.feats.participle)) {
+        uit.push(w);
+        continue;
+      }
+      if (!heeftHulp || !DEELWOORD_UITGANG.test(laag) || laag.length < 4) continue;
+      // «bilo» is een functiewoord én een deelwoord; de rest van de
+      // functiewoorden is dat niet.
+      if (BITI.test(laag)) {
+        uit.push(w);
+        continue;
+      }
+      if (FUNCTION_WORDS.has(laag)) continue;
+      /*
+        Kent het platform dit woord al als iets anders? Dan is het dat.
+
+        «cijeli dan» eindigt op -li en stond in een zin met een hulpwerkwoord,
+        en werd zo als deelwoord geteld. Een woord dat de catalogus kent, is
+        wat de catalogus zegt; alleen woorden waar hij niets over weet, mogen
+        via hun uitgang alsnog als deelwoord tellen. Liever een deelwoord
+        missen dan er een verzinnen.
+      */
+      if (lezingen.length) continue;
+      uit.push(w);
+    }
+  }
+  return uit;
+}
+
 function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
   const ws = woorden(antwoord);
   const laag = ws.map(norm);
@@ -164,9 +228,7 @@ function pasToe(check: FreeCheck, antwoord: string): CheckUitkomst {
       };
     }
     case "min_verleden": {
-      const deelwoorden = woorden(antwoord).filter((w) =>
-        readingsFor(w).some((l) => l.feats.participle),
-      );
+      const deelwoorden = deelwoordenIn(antwoord);
       return {
         label: check.label,
         ok: deelwoorden.length >= check.n,

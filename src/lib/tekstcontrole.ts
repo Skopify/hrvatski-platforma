@@ -104,13 +104,16 @@ export function naamvalfouten(zin: string): Naamvalfout[] {
     const gevonden = [...new Set(lezingen.map((l) => l.feats.case!))];
     if (gevonden.some((c) => wil.includes(c))) continue;
 
+    const fragment = woorden.slice(i, j + 1).join(" ");
+    if (nagekeken().naamval.has(fragment.toLowerCase())) continue;
+
     // Wat had er moeten staan? Alleen bij één ondubbelzinnige naamval te zeggen.
     const getal = lezingen[0]!.feats.number === "pl" ? "pl" : "sg";
     const bedoeld =
       wil.length === 1 ? vormVan(lezingen[0]!.lemmaId, wil[0]!, getal) : undefined;
 
     uit.push({
-      fragment: woorden.slice(i, j + 1).join(" "),
+      fragment,
       voorzetsel: vz,
       woord,
       wil,
@@ -175,6 +178,47 @@ function namen(): Set<string> {
   return namenCache;
 }
 
+/* -------------------------------------------------------- al nagekeken --- */
+
+let nagekekenCache: { spelling: Set<string>; naamval: Set<string> } | null = null;
+
+/**
+ * De uitzonderingen uit content/taalcontrole.json.
+ *
+ * Datzelfde bestand houdt `npm run check:taal` rustig over gevallen die bij
+ * inspectie goed bleken. Dat de motor het niet las, was een gat met scherpe
+ * randen: «na hrvatskom» — locatief van het bijvoeglijk naamwoord, dat de
+ * catalogus als instrumentalis van het land Hrvatska leest — werd in de content
+ * terecht doorgelaten en bij de leerder alsnog afgekeurd. Eén lijst, twee
+ * gebruikers.
+ */
+function nagekeken() {
+  if (nagekekenCache) return nagekekenCache;
+  const bestand = path.join(process.cwd(), "content", "taalcontrole.json");
+  const leeg = { spelling: new Set<string>(), naamval: new Set<string>() };
+  if (!fs.existsSync(bestand)) {
+    nagekekenCache = leeg;
+    return leeg;
+  }
+  const raw = JSON.parse(fs.readFileSync(bestand, "utf8")) as {
+    spelling_nagekeken?: Record<string, string>;
+    naamval_nagekeken?: Record<string, string>;
+  };
+  /*
+    Alleen de naamvaluitzonderingen gelden ook hier.
+
+    Die zijn algemeen waar: «od Marka» is de genitief van een naam, wie dat ook
+    schrijft. De spellinguitzonderingen niet. Daar staat «sto bestaat, het is
+    honderd» — waar in de content, maar een leerder die «sto» typt bedoelt
+    negen van de tien keer «što», en die had de melding juist nodig.
+  */
+  nagekekenCache = {
+    spelling: new Set<string>(),
+    naamval: new Set(Object.keys(raw.naamval_nagekeken ?? {}).map((k) => k.toLowerCase())),
+  };
+  return nagekekenCache;
+}
+
 /* ------------------------------------------------------------- stammen --- */
 
 let stamCache: Set<string> | null = null;
@@ -206,6 +250,31 @@ function verwantLemma(woord: string): string | null {
     }
   }
   return null;
+}
+
+/**
+ * Een vergeten teken in de stám opsporen.
+ *
+ * De gewone diakrietcontrole zoekt de hele vorm op in de catalogus, en die
+ * kent lang niet alles: «naručio» staat er niet in, dus «narucio» kwam er
+ * ongemoeid doorheen. Maar het lemma «naručivati» staat er wél, en dat draagt
+ * de č op precies de plek waar de leerder hem vergat.
+ *
+ * Dus: vergelijk de kale vormen, neem het gemeenschappelijke begin, en plak
+ * daar de geschreven staart aan vast. «naruč» + «io» wordt «naručio».
+ *
+ * Alleen als het gemeenschappelijke begin minstens vier letters lang is en
+ * daar echt een teken in zit. Korter is te vaak toeval.
+ */
+function stamDiakriet(woord: string, lemma: string): string | undefined {
+  const kw = kaal(woord);
+  const kl = kaal(lemma);
+  let n = 0;
+  while (n < kw.length && n < kl.length && kw[n] === kl[n]) n++;
+  if (n < 4) return undefined;
+  const echteStam = lemma.slice(0, n);
+  if (kaal(echteStam) === echteStam) return undefined; // geen teken in de stam
+  return echteStam + woord.slice(n);
 }
 
 export interface Spelfout {
@@ -243,7 +312,7 @@ export function spelfouten(tekst: string): Spelfout[] {
     if (!sleutel || /^\d/.test(sleutel) || gezien.has(sleutel)) continue;
     gezien.add(sleutel);
     if (FUNCTION_WORDS.has(sleutel) || readingsFor(sleutel).length) continue;
-    if (lijst.has(sleutel)) continue;
+    if (lijst.has(sleutel) || nagekeken().spelling.has(sleutel)) continue;
 
     /*
       Vier uitkomsten, van zeker naar onzeker — en die volgorde is het punt.
@@ -269,7 +338,17 @@ export function spelfouten(tekst: string): Spelfout[] {
     }
 
     const verwant = verwantLemma(sleutel);
-    uit.push(verwant ? { woord: ruw, verwant, soort: "vorm" } : { woord: ruw, soort: "onbekend" });
+    if (verwant) {
+      // Zit het verschil met het bekende woord in een vergeten teken?
+      const hersteld = stamDiakriet(ruw, verwant);
+      if (hersteld && hersteld !== ruw) {
+        uit.push({ woord: ruw, bedoeld: hersteld, soort: "diakriet" });
+        continue;
+      }
+      uit.push({ woord: ruw, verwant, soort: "vorm" });
+      continue;
+    }
+    uit.push({ woord: ruw, soort: "onbekend" });
   }
   return uit;
 }

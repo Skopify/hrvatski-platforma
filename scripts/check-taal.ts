@@ -38,6 +38,7 @@ import {
 } from "../src/lib/forms";
 import { loadModules, moduleExercises } from "../src/lib/modules";
 import { SERVISMEN, vindServismen } from "../src/lib/servisms";
+import { VOORZETSEL_NAAMVAL } from "../src/lib/tekstcontrole";
 
 /* -------------------------------------------------------------- zelftest --- */
 
@@ -500,29 +501,15 @@ console.log(
   óók als de goede naamval te lezen is, telt als goed. Een controle die bij
   twijfel alarm slaat, wordt na de tiende valse melding niet meer gelezen.
 */
-const VOORZETSEL: Record<string, Naamval[]> = {
-  // Altijd genitief.
-  iz: ["gen"], od: ["gen"], do: ["gen"], kod: ["gen"], bez: ["gen"], zbog: ["gen"],
-  blizu: ["gen"], pokraj: ["gen"], iznad: ["gen"], ispod: ["gen"], ispred: ["gen"],
-  iza: ["gen"], između: ["gen"], oko: ["gen"], poslije: ["gen"], prije: ["gen"],
-  nakon: ["gen"], tijekom: ["gen"], umjesto: ["gen"], preko: ["gen"], protiv: ["gen"],
-  // Altijd datief.
-  prema: ["dat"], k: ["dat"], ka: ["dat"], usprkos: ["dat"], unatoč: ["dat"],
-  // Altijd locatief.
-  o: ["loc"], pri: ["loc"],
-  // Altijd accusatief.
-  kroz: ["acc"], niz: ["acc"], uz: ["acc"],
-  // Twee kanten op: plaats of richting.
-  u: ["acc", "loc"], na: ["acc", "loc"],
-  pred: ["acc", "ins"], nad: ["acc", "ins"], pod: ["acc", "ins"], među: ["acc", "ins"],
-  // s/sa is instrumentalis («met»), maar ook genitief («van ... af»).
-  s: ["ins", "gen"], sa: ["ins", "gen"],
-  // po is meestal locatief, in vaste wendingen accusatief.
-  po: ["loc", "acc"],
-  // za is accusatief, en genitief in «za vrijeme».
-  // za + instrumentalis is «aan/achter»: sjediti za stolom.
-  za: ["acc", "gen", "ins"],
-};
+/*
+  Eén tabel, twee gebruikers.
+
+  Deze stond hier ook, letterlijk overgeschreven, naast die in
+  src/lib/tekstcontrole.ts. Twee kopieën van dezelfde taalkundige regels lopen
+  uit elkaar zodra iemand er één aanpast — en dan keurt de contentcontrole iets
+  goed wat de leerder afgekeurd krijgt, of andersom.
+*/
+const VOORZETSEL = VOORZETSEL_NAAMVAL;
 
 /** Woorden die tussen voorzetsel en zelfstandig naamwoord mogen staan. */
 const TUSSENWOORD = /^(taj|ta|to|toga|tom|tim|ovaj|ova|ovo|ovom|ovim|onaj|ona|moj|moja|moje|mom|mojoj|mojim|tvoj|tvoja|tvom|njegov|njezin|naš|naša|našem|vaš|njihov|svoj|svoja|svom|svojoj|svojim|jedan|jedna|jedno|jednom|jednu|cijeli|cijelu|cijelom|prvi|prvu|prvom|drugi|drugu|drugom|neki|neku|nekom|svaki|svaku|svakom)$/;

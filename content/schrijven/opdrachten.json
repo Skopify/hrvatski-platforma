@@ -50,7 +50,7 @@
         "nominatief"
       ],
       "blurb_nl": "De eerste zinnen die je van jezelf kunt zeggen. Drie stuks, meer niet — en juist daarom moet elke zin kloppen.",
-      "streef_woorden": 15
+      "streef_woorden": 8
     },
     {
       "id": "w.02.obitelj",
@@ -116,7 +116,7 @@
         "Poslije …",
         "Navečer …"
       ],
-      "model_nl": "Subotom ustajem kasno. Idem na tržnicu i kupujem kruh. Poslije pijem kavu s prijateljem. Popodne čitam. Navečer gledam film.",
+      "model_nl": "Subotom ustajem kasno. Poslije doručka idem na tržnicu i kupujem kruh i voće. Popodne pijem kavu s prijateljem u kafiću. Kad se vratim kući, čitam ili slušam glazbu. Navečer gledam film.",
       "rubriek_nl": [
         "Vijf zinnen",
         "Vijf verschillende werkwoorden",
@@ -182,7 +182,7 @@
         "voedsel"
       ],
       "blurb_nl": "Boodschappen doen is de makkelijkste manier om de accusatief te oefenen: alles wat je koopt staat erin.",
-      "streef_woorden": 35
+      "streef_woorden": 20
     },
     {
       "id": "w.05.jucer",
@@ -222,7 +222,7 @@
         "volgorde"
       ],
       "blurb_nl": "De eerste keer dat je over gisteren schrijft. Zes zinnen, allemaal in de verleden tijd — dat is moeilijker dan het klinkt.",
-      "streef_woorden": 35
+      "streef_woorden": 23
     },
     {
       "id": "w.06.soba",
@@ -238,10 +238,10 @@
         "Pokraj prozora …",
         "Ispod kreveta …"
       ],
-      "model_nl": "Moja soba je mala. Na stolu stoji računalo. Pokraj prozora je stari ormar. U ormaru su knjige. Na zidu visi slika.",
+      "model_nl": "Moja soba je mala, ali svijetla. Na stolu stoji računalo i dvije knjige. Pokraj prozora je stari ormar. U ormaru su moje košulje. Na zidu visi slika mora. Ispod kreveta držim kofer. U sobi je uvijek toplo.",
       "rubriek_nl": [
         "Minstens vijf zinnen",
-        "Vier woorden in de locatief",
+        "Drie woorden in de locatief",
         "Minstens drie meubelstukken"
       ],
       "checks": [
@@ -253,8 +253,8 @@
         {
           "kind": "min_naamval",
           "naamval": "loc",
-          "n": 4,
-          "label": "Vier woorden in de locatief"
+          "n": 3,
+          "label": "Drie woorden in de locatief"
         }
       ],
       "auto_check": true,
@@ -264,7 +264,7 @@
         "beschrijven"
       ],
       "blurb_nl": "Beschrijf waar je zit. De locatief is de vorm die je nodig hebt zodra iets ergens is in plaats van ergens heen gaat.",
-      "streef_woorden": 35
+      "streef_woorden": 37
     },
     {
       "id": "w.07.pozivnica",
@@ -305,7 +305,7 @@
         "briefvorm"
       ],
       "blurb_nl": "Een echt bericht aan een echt iemand. Wat, wanneer, waar — en de toekomende tijd om het af te spreken.",
-      "streef_woorden": 30
+      "streef_woorden": 20
     },
     {
       "id": "w.08.restoran",
@@ -357,7 +357,7 @@
         "vragen"
       ],
       "blurb_nl": "Iets klopt niet en je moet het zeggen zonder onbeleefd te worden. Daar heb je de modale werkwoorden voor.",
-      "streef_woorden": 30
+      "streef_woorden": 25
     },
     {
       "id": "w.09.eigen-hoofdstuk",
@@ -374,7 +374,7 @@
         "Wie was er nog meer?",
         "Eindig met iets kleins, niet met een conclusie."
       ],
-      "model_nl": "U kolovozu sam prvi put stigao u Split. Vlak je kasnio dva sata. Kad sam izašao iz kolodvora, bilo je vruće i more se nije vidjelo. Tražio sam ulicu koju mi je majka napisala na papiru. Nitko nije znao gdje je ta ulica. Onda me jedan stari čovjek uzeo za ruku i pokazao mi put. Nije rekao ništa. Hodali smo deset minuta i onda je stao. Pokazao je na plava vrata. «Tu», rekao je. Kad sam se okrenuo da mu zahvalim, već je otišao.",
+      "model_nl": "U kolovozu sam prvi put stigao u Split. Putovao sam cijeli dan i u vlaku je bilo toplo, pa nisam mogao spavati. Gledao sam kroz prozor: prvo polja, poslije brda, i onda dugo ništa.\n\nVlak je kasnio dva sata. Kad sam izašao iz kolodvora, bilo je vruće i more se nije vidjelo. Na kolodvoru su ljudi čekali s koferima i nitko se nije žurio.\n\nTražio sam ulicu koju mi je majka napisala na papiru. Nitko nije znao gdje je ta ulica. Onda me jedan stari čovjek uzeo za ruku i pokazao mi put. Nije rekao ništa. Hodali smo deset minuta i onda je stao. Pokazao je na plava vrata. «Tu», rekao je.\n\nKad sam se okrenuo da mu zahvalim, već je otišao. Ulica je bila uska i tiha. Iza vrata je svirao radio. Nisam odmah ušao. Nisam znao što ću reći kad se vrata otvore. Stajao sam pred vratima i brojio do deset.",
       "rubriek_nl": [
         "Minstens honderdvijftig woorden",
         "Minstens vier alinea's",
@@ -429,7 +429,7 @@
         "Verander niet wat er gebeurt, alleen van wie je het hoort.",
         "Let op je voornaamwoorden: hij wordt ik, ik wordt hij."
       ],
-      "model_nl": "Nina misli da je ona ta koja je došla u Zagreb. Ja sam je čekala na kolodvoru. Nije me odmah prepoznala. Bila je manja nego na fotografijama koje mi je slala njezina majka. Prve tjedne nije govorila hrvatski. Rekla je da razumije, ali da ne može odgovoriti. Ja sam govorila polako i čekala. Sada govori bolje od mene kad sam ja imala njezine godine.",
+      "model_nl": "Nina misli da je ona ta koja je došla u Zagreb. Ja sam je čekala na kolodvoru, dva sata prije vlaka, jer nisam mogla sjediti kod kuće.\n\nNije me odmah prepoznala. Bila je manja nego na fotografijama koje mi je slala njezina majka. Nosila je jedan kofer i jednu torbu, i ništa više. Pitala sam je je li gladna. Rekla je da nije, ali je poslije pojela sve.\n\nPrve tjedne nije govorila hrvatski. Rekla je da razumije, ali da ne može odgovoriti. Ja sam govorila polako i čekala. Njezina majka je isto tako počela, prije trideset godina, samo obrnuto: ona je zaboravljala, a Nina uči.\n\nU rujnu je počela govoriti. Prvo kratke rečenice, poslije cijele priče. Jednom mi je ispričala nešto smiješno i ja sam se smijala, a ona nije znala zašto. Zato što je to rekla na hrvatskom, bez razmišljanja.\n\nSada govori bolje od mene kad sam ja imala njezine godine. To joj nisam rekla.",
       "rubriek_nl": [
         "Minstens honderdvijftig woorden",
         "Consequent vanuit één persoon verteld",

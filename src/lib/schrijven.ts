@@ -42,7 +42,13 @@ export interface Opdracht {
   blurb_nl: string;
   /** Wat deze opdracht traint — de tags op het overzicht. */
   vraagt_nl: string[];
-  /** Streeflengte in woorden, voor de meter op het overzicht. */
+  /**
+   * Streeflengte in woorden, voor de meter op het overzicht.
+   *
+   * Gelijk aan het minimum dat de opdracht eist, of anders aan de lengte van
+   * het modelantwoord. Dat tweede is geen luiheid maar een eis: een streefcijfer
+   * dat het voorbeeld zelf niet haalt, is een doel dat nergens op slaat.
+   */
   streef_woorden: number;
   motief?: string;
   hulp_nl: string[];
