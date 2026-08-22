@@ -1,0 +1,1127 @@
+{
+  "id": "story-14",
+  "slug": "racun",
+  "series": "Kavana Zvono",
+  "part": 4,
+  "title_hr": "Račun",
+  "title_nl": "De rekening",
+  "cefr": "A2.2",
+  "requires_lesson": 17,
+  "motif": "kavana",
+  "blurb_nl": "Lea rekent een groep te weinig aan en wil het uit eigen zak betalen. Getallen, geld en de datief — en een baas die anders reageert dan ze verwacht.",
+  "focus_nl": [
+    "getallen",
+    "genitief na telwoorden",
+    "datief",
+    "modale werkwoorden"
+  ],
+  "source": "verhaal-14",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "racun.p1.s1",
+          "hr": "U subotu sam pogriješila.",
+          "nl": "Zaterdag heb ik een fout gemaakt."
+        },
+        {
+          "id": "racun.p1.s2",
+          "hr": "Jedna grupa je naručila šest kava, tri soka i četiri kolača.",
+          "nl": "Een groep bestelde zes koffie, drie sap en vier gebakjes."
+        },
+        {
+          "id": "racun.p1.s3",
+          "hr": "Napisala sam račun i dala im ga.",
+          "nl": "Ik schreef de rekening en gaf hem aan ze."
+        },
+        {
+          "id": "racun.p1.s4",
+          "hr": "Platili su i otišli.",
+          "nl": "Ze betaalden en gingen weg."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "racun.p2.s1",
+          "hr": "Poslije sam vidjela da nešto nije u redu.",
+          "nl": "Later zag ik dat er iets niet klopte."
+        },
+        {
+          "id": "racun.p2.s2",
+          "hr": "Na računu su bile samo tri kave.",
+          "nl": "Op de rekening stonden maar drie koffies."
+        },
+        {
+          "id": "racun.p2.s3",
+          "hr": "Gledala sam račun još jednom, i onda još jednom.",
+          "nl": "Ik keek nog een keer naar de rekening, en toen nog een keer."
+        },
+        {
+          "id": "racun.p2.s4",
+          "hr": "Nedostajalo je devet eura.",
+          "nl": "Er ontbrak negen euro."
+        },
+        {
+          "id": "racun.p2.s5",
+          "hr": "Devet eura nije puno, ali nije ni malo.",
+          "nl": "Negen euro is niet veel, maar ook niet weinig."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "racun.p3.s1",
+          "hr": "Htjela sam to platiti iz svoje plaće.",
+          "nl": "Ik wilde het uit mijn eigen loon betalen."
+        },
+        {
+          "id": "racun.p3.s2",
+          "hr": "Stajala sam pokraj šanka s novcem u ruci.",
+          "nl": "Ik stond bij de bar met het geld in mijn hand."
+        },
+        {
+          "id": "racun.p3.s3",
+          "hr": "Nisam znala kako mu to reći.",
+          "nl": "Ik wist niet hoe ik het hem moest zeggen."
+        },
+        {
+          "id": "racun.p3.s4",
+          "hr": "Vinko me dugo gledao.",
+          "nl": "Vinko keek me lang aan."
+        },
+        {
+          "id": "racun.p3.s5",
+          "hr": "«Koliko imaš godina?» pitao je.",
+          "nl": "«Hoe oud ben je?» vroeg hij."
+        },
+        {
+          "id": "racun.p3.s6",
+          "hr": "«Dvadeset dvije.»",
+          "nl": "«Tweeëntwintig.»"
+        },
+        {
+          "id": "racun.p3.s7",
+          "hr": "«Onda ćeš još puno griješiti.»",
+          "nl": "«Dan ga je nog veel fouten maken.»"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "racun.p4.s1",
+          "hr": "Nije uzeo novac.",
+          "nl": "Hij nam het geld niet aan."
+        },
+        {
+          "id": "racun.p4.s2",
+          "hr": "Rekao mi je da moram brojati naglas.",
+          "nl": "Hij zei me dat ik hardop moet tellen."
+        },
+        {
+          "id": "racun.p4.s3",
+          "hr": "«Šest kava», rekao je. «Reci to glasno i onda napiši.»",
+          "nl": "«Zes koffie», zei hij. «Zeg het hardop en schrijf het dan pas op.»"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "sentences": [
+        {
+          "id": "racun.p5.s1",
+          "hr": "Sada svaki račun čitam dva puta.",
+          "nl": "Nu lees ik elke rekening twee keer."
+        },
+        {
+          "id": "racun.p5.s2",
+          "hr": "Sanja kaže da to radi već pet godina.",
+          "nl": "Sanja zegt dat ze dat al vijf jaar doet."
+        },
+        {
+          "id": "racun.p5.s3",
+          "hr": "Vinko nikad više nije govorio o tome.",
+          "nl": "Vinko heeft er nooit meer over gesproken."
+        },
+        {
+          "id": "racun.p5.s4",
+          "hr": "Gospodin Horvat je i dalje u bolnici.",
+          "nl": "Meneer Horvat ligt nog steeds in het ziekenhuis."
+        },
+        {
+          "id": "racun.p5.s5",
+          "hr": "Njegov stol je i dalje prazan.",
+          "nl": "Zijn tafel is nog steeds leeg."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "u": {
+      "hr": "u",
+      "nl": "in, op",
+      "info": "voorzetsel; «u subotu» met accusatief geeft een tijdstip"
+    },
+    "subotu": {
+      "hr": "subotu",
+      "nl": "zaterdag",
+      "lemma": "subota",
+      "info": "accusatief enkelvoud van subota",
+      "item": "v.07.subota"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "alleen",
+      "item": "v.15.sam"
+    },
+    "pogriješila": {
+      "hr": "pogriješila",
+      "nl": "maakte een fout",
+      "lemma": "pogriješiti",
+      "info": "deelwoord vrouwelijk van pogriješiti"
+    },
+    "jedna": {
+      "hr": "jedna",
+      "nl": "een",
+      "lemma": "jedan",
+      "info": "vrouwelijk van jedan"
+    },
+    "grupa": {
+      "hr": "grupa",
+      "nl": "groep",
+      "item": "v.pr14.grupa"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is; heeft",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon enkelvoud"
+    },
+    "naručila": {
+      "hr": "naručila",
+      "nl": "bestelde",
+      "lemma": "naručiti",
+      "info": "deelwoord vrouwelijk van naručiti"
+    },
+    "šest": {
+      "hr": "šest",
+      "nl": "zes",
+      "item": "v.00.sest"
+    },
+    "kava": {
+      "hr": "kava",
+      "nl": "koffie"
+    },
+    "tri": {
+      "hr": "tri",
+      "nl": "drie",
+      "item": "v.00.tri"
+    },
+    "soka": {
+      "hr": "soka",
+      "nl": "sap",
+      "lemma": "sok",
+      "info": "genitief enkelvoud van sok",
+      "item": "v.06.sok"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "četiri": {
+      "hr": "četiri",
+      "nl": "vier",
+      "item": "v.00.cetiri"
+    },
+    "kolača": {
+      "hr": "kolača",
+      "nl": "gebak, taartje",
+      "lemma": "kolač",
+      "info": "genitief enkelvoud van kolač"
+    },
+    "napisala": {
+      "hr": "napisala",
+      "nl": "schreef",
+      "lemma": "napisati",
+      "info": "deelwoord vrouwelijk van napisati"
+    },
+    "račun": {
+      "hr": "račun",
+      "nl": "rekening",
+      "item": "v.pr14.racun"
+    },
+    "dala": {
+      "hr": "dala",
+      "nl": "geven",
+      "lemma": "dati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.13.dati"
+    },
+    "im": {
+      "hr": "im",
+      "nl": "hun, aan hen",
+      "lemma": "oni",
+      "info": "korte datiefvorm meervoud — de ontvangers"
+    },
+    "ga": {
+      "hr": "ga",
+      "nl": "hem",
+      "lemma": "on",
+      "info": "korte accusatiefvorm — verwijst naar de rekening"
+    },
+    "platili": {
+      "hr": "platili",
+      "nl": "betalen",
+      "lemma": "platiti",
+      "info": "deelwoord meervoud",
+      "item": "v.17.platiti_geld"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn, hebben",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon meervoud"
+    },
+    "otišli": {
+      "hr": "otišli",
+      "nl": "gingen weg",
+      "lemma": "otići",
+      "info": "deelwoord meervoud van otići"
+    },
+    "poslije": {
+      "hr": "poslije",
+      "nl": "na",
+      "item": "v.16.poslije"
+    },
+    "vidjela": {
+      "hr": "vidjela",
+      "nl": "zag",
+      "lemma": "vidjeti",
+      "info": "deelwoord vrouwelijk van vidjeti"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "nešto": {
+      "hr": "nešto",
+      "nl": "iets",
+      "item": "v.06.nesto"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "is niet",
+      "lemma": "biti",
+      "info": "ontkende vorm van je"
+    },
+    "redu": {
+      "hr": "redu",
+      "nl": "in orde",
+      "lemma": "red",
+      "info": "locatief van red — «u redu» is de vaste uitdrukking"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "op",
+      "info": "voorzetsel met locatief als er geen beweging is"
+    },
+    "računu": {
+      "hr": "računu",
+      "nl": "rekening",
+      "lemma": "račun",
+      "info": "locatief enkelvoud van račun",
+      "item": "v.pr14.racun"
+    },
+    "bile": {
+      "hr": "bile",
+      "nl": "waren",
+      "lemma": "biti",
+      "info": "deelwoord vrouwelijk meervoud van biti"
+    },
+    "samo": {
+      "hr": "samo",
+      "nl": "alleen, maar",
+      "info": "bijwoord"
+    },
+    "kave": {
+      "hr": "kave",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "vorm van kava"
+    },
+    "nedostajalo": {
+      "hr": "nedostajalo",
+      "nl": "ontbrak",
+      "lemma": "nedostajati",
+      "info": "deelwoord onzijdig — onpersoonlijk «er ontbrak»"
+    },
+    "devet": {
+      "hr": "devet",
+      "nl": "negen",
+      "item": "v.00.devet"
+    },
+    "eura": {
+      "hr": "eura",
+      "nl": "euro",
+      "lemma": "euro",
+      "info": "genitief enkelvoud van euro",
+      "item": "v.17.euro"
+    },
+    "puno": {
+      "hr": "puno",
+      "nl": "veel",
+      "item": "v.14.puno"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "item": "v.02.ali"
+    },
+    "ni": {
+      "hr": "ni",
+      "nl": "ook niet",
+      "info": "«nije ni malo» — het is ook niet weinig"
+    },
+    "malo": {
+      "hr": "malo",
+      "nl": "weinig, een beetje",
+      "item": "v.14.malo"
+    },
+    "htjela": {
+      "hr": "htjela",
+      "nl": "wilde",
+      "lemma": "htjeti",
+      "info": "deelwoord vrouwelijk van htjeti"
+    },
+    "to": {
+      "hr": "to",
+      "nl": "dat",
+      "info": "aanwijzend voornaamwoord, onzijdig"
+    },
+    "platiti": {
+      "hr": "platiti",
+      "nl": "betalen",
+      "item": "v.17.platiti_geld"
+    },
+    "iz": {
+      "hr": "iz",
+      "nl": "uit",
+      "item": "v.16.iz"
+    },
+    "svoje": {
+      "hr": "svoje",
+      "nl": "mijn eigen",
+      "lemma": "svoj",
+      "info": "genitief vrouwelijk van svoj — verwijst naar het onderwerp"
+    },
+    "plaće": {
+      "hr": "plaće",
+      "nl": "salaris",
+      "lemma": "plaća",
+      "info": "vorm van plaća",
+      "item": "v.14.placa"
+    },
+    "vinko": {
+      "hr": "vinko",
+      "nl": "Vinko",
+      "info": "mannennaam"
+    },
+    "me": {
+      "hr": "me",
+      "nl": "mij",
+      "lemma": "ja",
+      "info": "korte accusatiefvorm van ja"
+    },
+    "dugo": {
+      "hr": "dugo",
+      "nl": "lang",
+      "info": "bijwoord van duur"
+    },
+    "gledao": {
+      "hr": "gledao",
+      "nl": "kijken, bekijken",
+      "lemma": "gledati",
+      "info": "deelwoord mannelijk",
+      "item": "v.05.gledati"
+    },
+    "koliko": {
+      "hr": "koliko",
+      "nl": "hoeveel",
+      "item": "v.17.koliko"
+    },
+    "imaš": {
+      "hr": "imaš",
+      "nl": "hebben",
+      "lemma": "imati",
+      "info": "presens ti",
+      "item": "v.05.imati"
+    },
+    "godina": {
+      "hr": "godina",
+      "nl": "jaar",
+      "item": "v.10.godina"
+    },
+    "pitao": {
+      "hr": "pitao",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "deelwoord mannelijk",
+      "item": "v.06.pitati"
+    },
+    "dvadeset": {
+      "hr": "dvadeset",
+      "nl": "twintig",
+      "info": "telwoord"
+    },
+    "dvije": {
+      "hr": "dvije",
+      "nl": "twee",
+      "lemma": "dva",
+      "info": "vrouwelijke vorm van dva — «dvadeset dvije godine»"
+    },
+    "onda": {
+      "hr": "onda",
+      "nl": "dan, toen",
+      "info": "bijwoord van tijd"
+    },
+    "ćeš": {
+      "hr": "ćeš",
+      "nl": "je zult",
+      "lemma": "htjeti",
+      "info": "korte vorm van htjeti — hulpwerkwoord van de toekomende tijd"
+    },
+    "još": {
+      "hr": "još",
+      "nl": "Nog iets?",
+      "lemma": "Još nešto?",
+      "info": "uit «Još nešto?»",
+      "item": "v.08.jos_nesto"
+    },
+    "griješiti": {
+      "hr": "griješiti",
+      "nl": "fouten maken",
+      "item": "v.pr14.grijesiti"
+    },
+    "uzeo": {
+      "hr": "uzeo",
+      "nl": "nam",
+      "lemma": "uzeti",
+      "info": "deelwoord mannelijk van uzeti"
+    },
+    "novac": {
+      "hr": "novac",
+      "nl": "geld"
+    },
+    "rekao": {
+      "hr": "rekao",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord mannelijk van reći"
+    },
+    "mi": {
+      "hr": "mi",
+      "nl": "mij, aan mij",
+      "lemma": "ja",
+      "info": "korte datiefvorm van ja — de ontvanger"
+    },
+    "moram": {
+      "hr": "moram",
+      "nl": "moeten",
+      "lemma": "morati",
+      "info": "presens ja",
+      "item": "v.06.morati"
+    },
+    "brojati": {
+      "hr": "brojati",
+      "nl": "tellen",
+      "item": "v.pr14.brojati"
+    },
+    "naglas": {
+      "hr": "naglas",
+      "nl": "hardop",
+      "item": "v.pr14.naglas"
+    },
+    "reci": {
+      "hr": "reci",
+      "nl": "zeg",
+      "lemma": "reći",
+      "info": "gebiedende wijs, jij-vorm van reći"
+    },
+    "glasno": {
+      "hr": "glasno",
+      "nl": "luid, hardop",
+      "item": "v.pr14.glasno"
+    },
+    "napiši": {
+      "hr": "napiši",
+      "nl": "schrijf op",
+      "lemma": "napisati",
+      "info": "gebiedende wijs, jij-vorm van napisati"
+    },
+    "sada": {
+      "hr": "sada",
+      "nl": "nu"
+    },
+    "svaki": {
+      "hr": "svaki",
+      "nl": "elke dag",
+      "lemma": "svaki dan",
+      "info": "uit «svaki dan»",
+      "item": "v.06.svaki_dan"
+    },
+    "čitam": {
+      "hr": "čitam",
+      "nl": "lezen",
+      "lemma": "čitati",
+      "info": "presens ja",
+      "item": "v.05.citati"
+    },
+    "dva": {
+      "hr": "dva",
+      "nl": "twee",
+      "item": "v.00.dva"
+    },
+    "puta": {
+      "hr": "puta",
+      "nl": "keer",
+      "lemma": "put",
+      "info": "genitief van put — «dva puta» is twee keer"
+    },
+    "sanja": {
+      "hr": "sanja",
+      "nl": "Sanja",
+      "info": "vrouwennaam"
+    },
+    "kaže": {
+      "hr": "kaže",
+      "nl": "zegt",
+      "lemma": "kazati",
+      "info": "presens on/ona van kazati"
+    },
+    "radi": {
+      "hr": "radi",
+      "nl": "werken, doen",
+      "lemma": "raditi",
+      "info": "presens on/ona",
+      "item": "v.09.raditi"
+    },
+    "već": {
+      "hr": "već",
+      "nl": "al",
+      "info": "bijwoord van tijd"
+    },
+    "pet": {
+      "hr": "pet",
+      "nl": "vijf",
+      "item": "v.00.pet"
+    },
+    "gospodin": {
+      "hr": "gospodin",
+      "nl": "meneer",
+      "item": "v.20.gospodin"
+    },
+    "horvat": {
+      "hr": "horvat",
+      "nl": "Horvat",
+      "info": "achternaam"
+    },
+    "dalje": {
+      "hr": "dalje",
+      "nl": "verder",
+      "info": "«i dalje» betekent nog steeds"
+    },
+    "bolnici": {
+      "hr": "bolnici",
+      "nl": "in het ziekenhuis",
+      "lemma": "bolnica",
+      "info": "locatief van bolnica"
+    },
+    "njegov": {
+      "hr": "njegov",
+      "nl": "zijn",
+      "lemma": "njegov, njegova, njegovo",
+      "info": "uit «njegov, njegova, njegovo»",
+      "item": "v.03.njegov"
+    },
+    "stol": {
+      "hr": "stol",
+      "nl": "tafel",
+      "item": "v.03.stol"
+    },
+    "prazan": {
+      "hr": "prazan",
+      "nl": "leeg",
+      "item": "v.pr14.prazan"
+    },
+    "gledala": {
+      "hr": "gledala",
+      "nl": "kijken, bekijken",
+      "lemma": "gledati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.05.gledati"
+    },
+    "jednom": {
+      "hr": "jednom",
+      "nl": "een keer",
+      "lemma": "jedan",
+      "info": "«još jednom» is nog een keer"
+    },
+    "stajala": {
+      "hr": "stajala",
+      "nl": "stond",
+      "lemma": "stajati",
+      "info": "deelwoord vrouwelijk van stajati"
+    },
+    "pokraj": {
+      "hr": "pokraj",
+      "nl": "naast",
+      "item": "v.16.pokraj"
+    },
+    "šanka": {
+      "hr": "šanka",
+      "nl": "bar, toonbank",
+      "lemma": "šank",
+      "info": "genitief van šank, na «pokraj»"
+    },
+    "s": {
+      "hr": "s",
+      "nl": "met",
+      "info": "voorzetsel met instrumentalis"
+    },
+    "novcem": {
+      "hr": "novcem",
+      "nl": "geld",
+      "lemma": "novac",
+      "info": "instrumentalis enkelvoud van novac"
+    },
+    "ruci": {
+      "hr": "ruci",
+      "nl": "hand, arm",
+      "lemma": "ruka",
+      "info": "locatief enkelvoud van ruka"
+    },
+    "nisam": {
+      "hr": "nisam",
+      "nl": "Niet zo goed.",
+      "lemma": "Nisam baš dobro.",
+      "info": "uit «Nisam baš dobro.»",
+      "item": "v.01.nisam_bas_dobro"
+    },
+    "znala": {
+      "hr": "znala",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.05.znati"
+    },
+    "kako": {
+      "hr": "kako",
+      "nl": "hoe",
+      "item": "v.03.kako"
+    },
+    "mu": {
+      "hr": "mu",
+      "nl": "hem, aan hem",
+      "lemma": "on",
+      "info": "korte datiefvorm van on"
+    },
+    "reći": {
+      "hr": "reći",
+      "nl": "zeggen"
+    },
+    "nikad": {
+      "hr": "nikad",
+      "nl": "nooit",
+      "item": "v.06.nikad"
+    },
+    "više": {
+      "hr": "više",
+      "nl": "meer",
+      "info": "«nikad više» is nooit meer"
+    },
+    "govorio": {
+      "hr": "govorio",
+      "nl": "spreken",
+      "lemma": "govoriti",
+      "info": "deelwoord mannelijk",
+      "item": "v.09.govoriti"
+    },
+    "o": {
+      "hr": "o",
+      "nl": "over (onderwerp)",
+      "item": "v.10.o"
+    },
+    "tome": {
+      "hr": "tome",
+      "nl": "daarover",
+      "lemma": "to",
+      "info": "locatief van to, na «o»"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Račun, molim",
+    "body_nl": "In Kroatië komt de rekening niet vanzelf. Je vraagt erom — «Račun, molim» — en tot dat moment mag je blijven zitten zolang je wilt. Fooi is niet verplicht en geen percentage: de meeste mensen ronden af naar boven, en bij een koffie van €2,20 laat je €2,50 liggen. Aan de kust rekenen sommige zaken op toeristen die 15% geven; dat hoeft niet."
+  },
+  "vocab": [
+    {
+      "id": "v.pr14.racun",
+      "hr": "račun",
+      "nl": "rekening",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "računa",
+      "nom_pl": "računi",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.pogrijesiti",
+      "hr": "pogriješiti",
+      "nl": "een fout maken",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "pogriješim",
+      "verb_class": "-iti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.grijesiti",
+      "hr": "griješiti",
+      "nl": "fouten maken",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "griješim",
+      "verb_class": "-iti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.grupa",
+      "hr": "grupa",
+      "nl": "groep",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "grupe",
+      "nom_pl": "grupe",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.nedostajati",
+      "hr": "nedostajati",
+      "nl": "ontbreken",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "nedostajem",
+      "verb_class": "-ati",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.naglas",
+      "hr": "naglas",
+      "nl": "hardop",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.glasno",
+      "hr": "glasno",
+      "nl": "luid, hardop",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.prazan",
+      "hr": "prazan",
+      "nl": "leeg",
+      "pos": "adj",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr14.brojati",
+      "hr": "brojati",
+      "nl": "tellen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "brojim",
+      "verb_class": "-ati",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr14.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een fout van Lea, en hoe Vinko ermee omgaat.",
+      "distractors": [
+        "Hoe je in Kroatië een rekening schrijft.",
+        "Dat Lea te weinig verdient.",
+        "Waarom groepen lastige gasten zijn."
+      ],
+      "explain_nl": "De fout is de aanleiding; de kern is Vinko's reactie — hij neemt het geld niet aan en geeft in plaats daarvan een methode.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr14.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Hoeveel ontbrak er op de rekening?",
+      "answer": "Negen euro.",
+      "distractors": [
+        "Drie euro.",
+        "Zes euro.",
+        "Dat staat er niet."
+      ],
+      "explain_nl": "Drie koffies te weinig geschreven. Het bedrag staat er letterlijk: «Nedostajalo je devet eura.»",
+      "difficulty": 1
+    },
+    {
+      "id": "b.pr14.003",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Wat kostte één koffie, volgens de tekst?",
+      "answer": "Drie euro.",
+      "distractors": [
+        "Negen euro.",
+        "Twee euro.",
+        "Dat is niet uit te rekenen."
+      ],
+      "explain_nl": "Drie koffies te weinig, negen euro tekort. Het staat er niet, maar het is af te leiden — en dat is precies wat een leesvraag hoort te vragen.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr14.004",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "«Napisala sam račun i dala im ga.» — waar staat «ga» voor?",
+      "answer": "De rekening.",
+      "distractors": [
+        "Het geld.",
+        "De groep.",
+        "Vinko."
+      ],
+      "explain_nl": "Ga is mannelijk enkelvoud accusatief. Račun is mannelijk; grupa zou «ju» geven en novac zou hier niet passen.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr14.005",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Waarom neemt Vinko het geld niet aan?",
+      "answer": "Omdat hij fouten bij het leren vindt horen.",
+      "distractors": [
+        "Omdat negen euro te weinig is om over te doen.",
+        "Omdat het zijn eigen schuld was.",
+        "Omdat Lea het niet kan missen."
+      ],
+      "explain_nl": "«Onda ćeš još puno griješiti» is geen verwijt maar een voorspelling. Hij vraagt eerst haar leeftijd — dat maakt van de fout een fase in plaats van een misstap.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr14.006",
+      "skill": "verband",
+      "type": "choice",
+      "prompt_nl": "Waarom staat de laatste alinea over meneer Horvat in dit verhaal?",
+      "answer": "Om te laten zien dat er ondertussen niets veranderd is.",
+      "distractors": [
+        "Omdat hij de rekening moest betalen.",
+        "Omdat hij ook fouten maakt.",
+        "Het hoort niet bij dit verhaal."
+      ],
+      "explain_nl": "«I dalje» staat er twee keer. Het verhaal over de rekening is af, maar het draadje uit deel 3 loopt door — en dat is wat een serie een serie maakt.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr14.007",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Reci to glasno.» Wat vraagt Vinko?",
+      "answer": "Zeg het hardop.",
+      "distractors": [
+        "Schrijf het groter.",
+        "Zeg het nog eens.",
+        "Zeg het beleefd."
+      ],
+      "explain_nl": "Glasno hoort bij glas — stem. De methode is: eerst uitspreken, dan opschrijven, zodat je het getal twee keer langskomt.",
+      "difficulty": 3
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr14.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom «šest kava» en niet «šest kave»?",
+      "answer": "Omdat vanaf vijf de genitief meervoud volgt.",
+      "distractors": [
+        "Omdat kava vrouwelijk is.",
+        "Omdat het een bestelling is.",
+        "Omdat kave het meervoud is."
+      ],
+      "explain_nl": "Twee, drie en vier vragen de genitief enkelvoud; vanaf vijf de genitief meervoud. Kava → kava, met een lange a.",
+      "targets": [
+        "g.14.genitiv_kolicina"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «drie sap»",
+      "given": "tri ___",
+      "answer": "soka",
+      "accepts": [
+        "soka"
+      ],
+      "explain_nl": "Na twee, drie en vier komt de genitief enkelvoud: sok → soka.",
+      "targets": [
+        "g.14.genitiv_kolicina"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.003",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul het korte woordje in: «Hij zei tegen mij…»",
+      "given": "Rekao ___ je da moram brojati naglas.",
+      "answer": "mi",
+      "accepts": [
+        "mi"
+      ],
+      "explain_nl": "De ontvanger staat in de datief. De korte vorm van ja is mi, en die staat op de tweede plaats in de zin.",
+      "targets": [
+        "g.13.dativ_objekt"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.004",
+      "type": "interpret",
+      "mode": "receptive",
+      "prompt_nl": "Welke zin zegt dat het móét?",
+      "given": "A: Moram brojati naglas.\nB: Mogu brojati naglas.",
+      "answer": "A — morati is verplichting.",
+      "distractors": [
+        "B — mogu is sterker.",
+        "Allebei even sterk.",
+        "Geen van beide."
+      ],
+      "explain_nl": "Morati is moeten, moći is kunnen. Het Nederlandse «ik moet wel» maakt dat verschil onduidelijk; het Kroatisch niet.",
+      "targets": [
+        "g.mod.modal"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.005",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Nedostajalo je devet euro.",
+      "answer": "Nedostajalo je devet eura.",
+      "accepts": [
+        "Nedostajalo je devet eura."
+      ],
+      "explain_nl": "Vanaf vijf komt de genitief meervoud. Euro → eura.",
+      "targets": [
+        "g.14.genitiv_kolicina"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.006",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: «Ik lees elke rekening twee keer.»",
+      "given": "Ik lees elke rekening twee keer.",
+      "answer": "Svaki račun čitam dva puta.",
+      "accepts": [
+        "Svaki račun čitam dva puta.",
+        "Čitam svaki račun dva puta."
+      ],
+      "explain_nl": "Račun is mannelijk en levenloos, dus de accusatief is gelijk aan de nominatief. «Dva puta» is de vaste vorm voor twee keer.",
+      "targets": [
+        "g.05.akuzativ.nezivo"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-14"
+    },
+    {
+      "id": "e.pr14.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Schrijf een bestelling van vier dingen op, met aantallen, en tel het bedrag hardop. Vier zinnen.",
+      "model_answer": "Naručili smo pet kava i tri čaja. Uzeli smo i četiri kolača. Račun je bio dvadeset i dva eura. Platili smo i ostavili dvadeset pet.",
+      "rubric_nl": [
+        "Vier zinnen",
+        "Minstens drie telwoorden met de goede naamval erna",
+        "Een bedrag"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 4,
+          "label": "Vier zinnen"
+        },
+        {
+          "kind": "min_naamval",
+          "naamval": "gen",
+          "n": 3,
+          "label": "Minstens drie woorden in de genitief"
+        }
+      ],
+      "auto_check": false,
+      "targets": [
+        "g.14.genitiv_kolicina"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-14"
+    }
+  ]
+}

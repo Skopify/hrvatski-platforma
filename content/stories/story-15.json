@@ -1,0 +1,1569 @@
+{
+  "id": "story-15",
+  "slug": "zvono",
+  "series": "Kavana Zvono",
+  "part": 5,
+  "title_hr": "Zvono",
+  "title_nl": "De bel",
+  "cefr": "B1",
+  "requires_lesson": 19,
+  "motif": "kavana",
+  "blurb_nl": "Waarom hangt er een bel aan de muur? Vinko geeft eindelijk antwoord, en het antwoord gaat over zijn vader. Betrekkelijke bijzinnen en de voorwaardelijke wijs — en de vraag die te laat kwam.",
+  "focus_nl": [
+    "betrekkelijke bijzinnen",
+    "conditionalis",
+    "perfekt",
+    "aspect"
+  ],
+  "source": "verhaal-15",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "zvono.p1.s1",
+          "hr": "Zvono na zidu ne zvoni.",
+          "nl": "De bel aan de muur luidt niet."
+        },
+        {
+          "id": "zvono.p1.s2",
+          "hr": "Nitko ga nikad nije čuo, ni Sanja, koja tu radi pet godina.",
+          "nl": "Niemand heeft hem ooit gehoord, ook Sanja niet, die er vijf jaar werkt."
+        },
+        {
+          "id": "zvono.p1.s3",
+          "hr": "Pitala sam Vinka tri puta.",
+          "nl": "Ik heb het Vinko drie keer gevraagd."
+        },
+        {
+          "id": "zvono.p1.s4",
+          "hr": "Tri puta nije odgovorio.",
+          "nl": "Drie keer gaf hij geen antwoord."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "zvono.p2.s1",
+          "hr": "U prosincu, kad je kavana bila prazna, pitala sam ga četvrti put.",
+          "nl": "In december, toen het café leeg was, vroeg ik het hem voor de vierde keer."
+        },
+        {
+          "id": "zvono.p2.s2",
+          "hr": "Ovaj put je rekao: «Sjedni.»",
+          "nl": "Deze keer zei hij: «Ga zitten.»"
+        },
+        {
+          "id": "zvono.p2.s3",
+          "hr": "Sjeo je nasuprot meni i dugo šutio.",
+          "nl": "Hij ging tegenover me zitten en zweeg lang."
+        },
+        {
+          "id": "zvono.p2.s4",
+          "hr": "Vani je padao snijeg.",
+          "nl": "Buiten viel er sneeuw."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "zvono.p3.s1",
+          "hr": "Kavanu je otvorio njegov otac, davne 1954. godine.",
+          "nl": "Zijn vader opende het café, lang geleden in 1954."
+        },
+        {
+          "id": "zvono.p3.s2",
+          "hr": "Zvono je došlo iz škole koja je bila u ovoj ulici prije rata.",
+          "nl": "De bel kwam uit de school die vóór de oorlog in deze straat stond."
+        },
+        {
+          "id": "zvono.p3.s3",
+          "hr": "Te škole više nema.",
+          "nl": "Die school bestaat niet meer."
+        },
+        {
+          "id": "zvono.p3.s4",
+          "hr": "«Otac je uzeo zvono jer ga nitko drugi nije htio», rekao je Vinko.",
+          "nl": "«Mijn vader nam de bel mee omdat niemand anders hem wilde», zei Vinko."
+        },
+        {
+          "id": "zvono.p3.s5",
+          "hr": "Nosila su ga dva čovjeka, cijelim putem do kavane.",
+          "nl": "Twee mannen droegen hem, de hele weg tot aan het café."
+        },
+        {
+          "id": "zvono.p3.s6",
+          "hr": "Zvono je na tom zidu od prvog dana.",
+          "nl": "De bel hangt sinds de eerste dag aan die muur."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "zvono.p4.s1",
+          "hr": "«Kad sam bio dijete, mislio sam da je to samo staro željezo.»",
+          "nl": "«Toen ik een kind was, dacht ik dat het gewoon oud ijzer was.»"
+        },
+        {
+          "id": "zvono.p4.s2",
+          "hr": "«Nikad ga nisam pitao odakle je točno.»",
+          "nl": "«Ik heb hem nooit gevraagd waar hij precies vandaan kwam.»"
+        },
+        {
+          "id": "zvono.p4.s3",
+          "hr": "«Pitao sam ga o svemu drugome», rekao je. «O ratu nikad.»",
+          "nl": "«Ik heb hem naar alles gevraagd», zei hij. «Naar de oorlog nooit.»"
+        },
+        {
+          "id": "zvono.p4.s4",
+          "hr": "«Da sam znao što mu znači, pitao bih ga više.»",
+          "nl": "«Als ik had geweten wat het voor hem betekende, had ik hem meer gevraagd.»"
+        },
+        {
+          "id": "zvono.p4.s5",
+          "hr": "«Sada nemam koga pitati.»",
+          "nl": "«Nu heb ik niemand meer om het aan te vragen.»"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "sentences": [
+        {
+          "id": "zvono.p5.s1",
+          "hr": "Poslije toga smo šutjeli još deset minuta.",
+          "nl": "Daarna zwegen we nog tien minuten."
+        },
+        {
+          "id": "zvono.p5.s2",
+          "hr": "Onda je ustao i oprao dvije šalice koje su već bile čiste.",
+          "nl": "Toen stond hij op en waste twee kopjes die al schoon waren."
+        },
+        {
+          "id": "zvono.p5.s3",
+          "hr": "Nisam ga pitala je li dobro.",
+          "nl": "Ik heb hem niet gevraagd of het ging."
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "sentences": [
+        {
+          "id": "zvono.p6.s1",
+          "hr": "Gospodin Horvat se vratio u siječnju.",
+          "nl": "Meneer Horvat kwam in januari terug."
+        },
+        {
+          "id": "zvono.p6.s2",
+          "hr": "Sjeo je za svoj stol, kao da nije bio nigdje.",
+          "nl": "Hij ging aan zijn eigen tafel zitten, alsof hij nergens geweest was."
+        },
+        {
+          "id": "zvono.p6.s3",
+          "hr": "Vinko mu je donio kavu bez riječi.",
+          "nl": "Vinko bracht hem koffie zonder een woord."
+        },
+        {
+          "id": "zvono.p6.s4",
+          "hr": "Sjedio je s novinama koje je već pročitao.",
+          "nl": "Hij zat met een krant die hij al gelezen had."
+        },
+        {
+          "id": "zvono.p6.s5",
+          "hr": "Gospodin Horvat je rekao: «Hvala, Vinko.»",
+          "nl": "Meneer Horvat zei: «Dank je, Vinko.»"
+        },
+        {
+          "id": "zvono.p6.s6",
+          "hr": "To je bila najduža rečenica koju sam ih čula reći jedan drugome.",
+          "nl": "Dat was de langste zin die ik ze ooit tegen elkaar heb horen zeggen."
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "sentences": [
+        {
+          "id": "zvono.p7.s1",
+          "hr": "Sada znam zašto se kavana zove Zvono.",
+          "nl": "Nu weet ik waarom het café Zvono heet."
+        },
+        {
+          "id": "zvono.p7.s2",
+          "hr": "Ne zbog zvona koje ne zvoni.",
+          "nl": "Niet vanwege de bel die niet luidt."
+        },
+        {
+          "id": "zvono.p7.s3",
+          "hr": "Nego zbog toga što netko ovdje uvijek čeka da se vrata otvore.",
+          "nl": "Maar omdat hier altijd iemand wacht tot de deur opengaat."
+        },
+        {
+          "id": "zvono.p7.s4",
+          "hr": "To Vinku nisam rekla.",
+          "nl": "Dat heb ik Vinko niet gezegd."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "1954": {
+      "hr": "1954",
+      "nl": "1954",
+      "info": "jaartal; «davne 1954. godine» is «in het verre 1954»"
+    },
+    "zvono": {
+      "hr": "zvono",
+      "nl": "bel, klok",
+      "info": "onzijdig; genitief zvona"
+    },
+    "na": {
+      "hr": "na",
+      "nl": "aan, op",
+      "info": "voorzetsel met locatief als er geen beweging is"
+    },
+    "zidu": {
+      "hr": "zidu",
+      "nl": "aan de muur",
+      "lemma": "zid",
+      "info": "locatief van zid"
+    },
+    "ne": {
+      "hr": "ne",
+      "nl": "nee, niet",
+      "item": "v.01.ne"
+    },
+    "zvoni": {
+      "hr": "zvoni",
+      "nl": "luidt",
+      "lemma": "zvoniti",
+      "info": "presens on/ona van zvoniti"
+    },
+    "nitko": {
+      "hr": "nitko",
+      "nl": "niemand",
+      "info": "onbepaald voornaamwoord; eist een ontkend werkwoord"
+    },
+    "ga": {
+      "hr": "ga",
+      "nl": "hem",
+      "lemma": "on",
+      "info": "korte accusatiefvorm — verwijst naar het zvono"
+    },
+    "nikad": {
+      "hr": "nikad",
+      "nl": "nooit",
+      "item": "v.06.nikad"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "heeft niet",
+      "lemma": "biti",
+      "info": "ontkende vorm van je"
+    },
+    "čuo": {
+      "hr": "čuo",
+      "nl": "hoorde",
+      "lemma": "čuti",
+      "info": "deelwoord mannelijk van čuti"
+    },
+    "ni": {
+      "hr": "ni",
+      "nl": "ook niet",
+      "info": "«ni Sanja» — Sanja ook niet"
+    },
+    "sanja": {
+      "hr": "sanja",
+      "nl": "Sanja",
+      "info": "vrouwennaam"
+    },
+    "koja": {
+      "hr": "koja",
+      "nl": "die",
+      "lemma": "koji",
+      "info": "betrekkelijk voornaamwoord, vrouwelijk enkelvoud"
+    },
+    "tu": {
+      "hr": "tu",
+      "nl": "hier, daar",
+      "info": "bijwoord van plaats"
+    },
+    "radi": {
+      "hr": "radi",
+      "nl": "werken, doen",
+      "lemma": "raditi",
+      "info": "presens on/ona",
+      "item": "v.09.raditi"
+    },
+    "pet": {
+      "hr": "pet",
+      "nl": "vijf",
+      "item": "v.00.pet"
+    },
+    "godina": {
+      "hr": "godina",
+      "nl": "jaar",
+      "item": "v.10.godina"
+    },
+    "pitala": {
+      "hr": "pitala",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.06.pitati"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "alleen",
+      "item": "v.15.sam"
+    },
+    "vinka": {
+      "hr": "vinka",
+      "nl": "Vinko",
+      "lemma": "Vinko",
+      "info": "accusatief van Vinko"
+    },
+    "tri": {
+      "hr": "tri",
+      "nl": "drie",
+      "item": "v.00.tri"
+    },
+    "puta": {
+      "hr": "puta",
+      "nl": "keer",
+      "lemma": "put",
+      "info": "genitief van put — «tri puta» is drie keer"
+    },
+    "odgovorio": {
+      "hr": "odgovorio",
+      "nl": "antwoordde",
+      "lemma": "odgovoriti",
+      "info": "deelwoord mannelijk van odgovoriti"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "in",
+      "info": "voorzetsel; met locatief bij een maand"
+    },
+    "prosincu": {
+      "hr": "prosincu",
+      "nl": "december",
+      "lemma": "prosinac",
+      "info": "locatief enkelvoud van prosinac",
+      "item": "v.10.prosinac"
+    },
+    "kad": {
+      "hr": "kad",
+      "nl": "toen, wanneer",
+      "info": "voegwoord van tijd"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is, was",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon enkelvoud"
+    },
+    "kavana": {
+      "hr": "kavana",
+      "nl": "café",
+      "item": "v.04.kavana"
+    },
+    "bila": {
+      "hr": "bila",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord vrouwelijk van biti"
+    },
+    "prazna": {
+      "hr": "prazna",
+      "nl": "leeg",
+      "lemma": "prazan",
+      "info": "vrouwelijk van prazan — let op de vluchtige a"
+    },
+    "četvrti": {
+      "hr": "četvrti",
+      "nl": "vierde",
+      "lemma": "četiri",
+      "info": "rangtelwoord bij četiri"
+    },
+    "put": {
+      "hr": "put",
+      "nl": "Goede reis!",
+      "lemma": "Sretan put!",
+      "info": "uit «Sretan put!»",
+      "item": "v.20.sretan_put_20"
+    },
+    "ovaj": {
+      "hr": "ovaj",
+      "nl": "deze",
+      "info": "aanwijzend voornaamwoord, mannelijk"
+    },
+    "rekao": {
+      "hr": "rekao",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord mannelijk van reći"
+    },
+    "sjedni": {
+      "hr": "sjedni",
+      "nl": "ga zitten",
+      "lemma": "sjesti",
+      "info": "gebiedende wijs, jij-vorm van sjesti"
+    },
+    "sjeo": {
+      "hr": "sjeo",
+      "nl": "ging zitten",
+      "lemma": "sjesti",
+      "info": "deelwoord mannelijk van sjesti"
+    },
+    "nasuprot": {
+      "hr": "nasuprot",
+      "nl": "tegenover",
+      "item": "v.pr15.nasuprot"
+    },
+    "meni": {
+      "hr": "meni",
+      "nl": "mij",
+      "lemma": "ja",
+      "info": "datief van ja — nasuprot vraagt de datief"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "dugo": {
+      "hr": "dugo",
+      "nl": "lang",
+      "info": "bijwoord van duur"
+    },
+    "šutio": {
+      "hr": "šutio",
+      "nl": "zweeg",
+      "lemma": "šutjeti",
+      "info": "deelwoord mannelijk van šutjeti"
+    },
+    "vani": {
+      "hr": "vani",
+      "nl": "buiten",
+      "info": "bijwoord van plaats"
+    },
+    "padao": {
+      "hr": "padao",
+      "nl": "viel",
+      "lemma": "padati",
+      "info": "deelwoord mannelijk van padati"
+    },
+    "snijeg": {
+      "hr": "snijeg",
+      "nl": "sneeuw",
+      "item": "v.12.snijeg"
+    },
+    "kavanu": {
+      "hr": "kavanu",
+      "nl": "café",
+      "lemma": "kavana",
+      "info": "accusatief enkelvoud van kavana",
+      "item": "v.04.kavana"
+    },
+    "otvorio": {
+      "hr": "otvorio",
+      "nl": "opende",
+      "lemma": "otvoriti",
+      "info": "deelwoord mannelijk van otvoriti"
+    },
+    "njegov": {
+      "hr": "njegov",
+      "nl": "zijn",
+      "lemma": "njegov, njegova, njegovo",
+      "info": "uit «njegov, njegova, njegovo»",
+      "item": "v.03.njegov"
+    },
+    "otac": {
+      "hr": "otac",
+      "nl": "vader",
+      "item": "v.03.otac"
+    },
+    "davne": {
+      "hr": "davne",
+      "nl": "in het verre",
+      "lemma": "davan",
+      "info": "genitief bij een jaartal — «davne 1954. godine»"
+    },
+    "godine": {
+      "hr": "godine",
+      "nl": "jaar",
+      "lemma": "godina",
+      "info": "vorm van godina",
+      "item": "v.10.godina"
+    },
+    "došlo": {
+      "hr": "došlo",
+      "nl": "kwam",
+      "lemma": "doći",
+      "info": "deelwoord onzijdig van doći"
+    },
+    "iz": {
+      "hr": "iz",
+      "nl": "uit",
+      "item": "v.16.iz"
+    },
+    "škole": {
+      "hr": "škole",
+      "nl": "school",
+      "lemma": "škola",
+      "info": "genitief enkelvoud van škola",
+      "item": "v.07.skola"
+    },
+    "ovoj": {
+      "hr": "ovoj",
+      "nl": "deze",
+      "lemma": "ovaj",
+      "info": "locatief vrouwelijk van ovaj"
+    },
+    "ulici": {
+      "hr": "ulici",
+      "nl": "straat",
+      "lemma": "ulica",
+      "info": "vorm van ulica",
+      "item": "v.03.ulica"
+    },
+    "prije": {
+      "hr": "prije",
+      "nl": "vóór",
+      "info": "voorzetsel met genitief"
+    },
+    "rata": {
+      "hr": "rata",
+      "nl": "oorlog",
+      "lemma": "rat",
+      "info": "genitief enkelvoud van rat",
+      "item": "v.pr15.rat"
+    },
+    "te": {
+      "hr": "te",
+      "nl": "die",
+      "lemma": "taj",
+      "info": "genitief vrouwelijk van taj"
+    },
+    "više": {
+      "hr": "više",
+      "nl": "meer",
+      "info": "«više nema» is bestaat niet meer"
+    },
+    "nema": {
+      "hr": "nema",
+      "nl": "er is niet",
+      "lemma": "nemati",
+      "info": "onpersoonlijk, met genitief"
+    },
+    "uzeo": {
+      "hr": "uzeo",
+      "nl": "nam",
+      "lemma": "uzeti",
+      "info": "deelwoord mannelijk van uzeti"
+    },
+    "jer": {
+      "hr": "jer",
+      "nl": "omdat",
+      "info": "voegwoord van reden"
+    },
+    "drugi": {
+      "hr": "drugi",
+      "nl": "tweede, ander",
+      "item": "v.17.drugi"
+    },
+    "htio": {
+      "hr": "htio",
+      "nl": "wilde",
+      "lemma": "htjeti",
+      "info": "deelwoord mannelijk van htjeti"
+    },
+    "vinko": {
+      "hr": "vinko",
+      "nl": "Vinko",
+      "info": "mannennaam"
+    },
+    "bio": {
+      "hr": "bio",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord mannelijk van biti"
+    },
+    "dijete": {
+      "hr": "dijete",
+      "nl": "kind",
+      "item": "v.03.dijete"
+    },
+    "mislio": {
+      "hr": "mislio",
+      "nl": "denken",
+      "lemma": "misliti",
+      "info": "deelwoord mannelijk",
+      "item": "v.09.misliti"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "to": {
+      "hr": "to",
+      "nl": "dat",
+      "info": "aanwijzend voornaamwoord, onzijdig"
+    },
+    "samo": {
+      "hr": "samo",
+      "nl": "alleen, maar",
+      "info": "bijwoord"
+    },
+    "staro": {
+      "hr": "staro",
+      "nl": "oud",
+      "lemma": "star",
+      "info": "onzijdig van star"
+    },
+    "željezo": {
+      "hr": "željezo",
+      "nl": "ijzer",
+      "item": "v.pr15.zeljezo"
+    },
+    "nisam": {
+      "hr": "nisam",
+      "nl": "Niet zo goed.",
+      "lemma": "Nisam baš dobro.",
+      "info": "uit «Nisam baš dobro.»",
+      "item": "v.01.nisam_bas_dobro"
+    },
+    "pitao": {
+      "hr": "pitao",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "deelwoord mannelijk",
+      "item": "v.06.pitati"
+    },
+    "odakle": {
+      "hr": "odakle",
+      "nl": "waarvandaan",
+      "item": "v.pr15.odakle"
+    },
+    "točno": {
+      "hr": "točno",
+      "nl": "precies",
+      "info": "bijwoord"
+    },
+    "znao": {
+      "hr": "znao",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "deelwoord mannelijk",
+      "item": "v.05.znati"
+    },
+    "što": {
+      "hr": "što",
+      "nl": "wat",
+      "item": "v.01.sto"
+    },
+    "mu": {
+      "hr": "mu",
+      "nl": "hem, voor hem",
+      "lemma": "on",
+      "info": "korte datiefvorm van on"
+    },
+    "znači": {
+      "hr": "znači",
+      "nl": "betekent",
+      "lemma": "značiti",
+      "info": "presens on/ona van značiti"
+    },
+    "bih": {
+      "hr": "bih",
+      "nl": "zou ik",
+      "lemma": "biti",
+      "info": "voorwaardelijke vorm — «pitao bih» is ik zou gevraagd hebben"
+    },
+    "sada": {
+      "hr": "sada",
+      "nl": "nu"
+    },
+    "nemam": {
+      "hr": "nemam",
+      "nl": "niet hebben",
+      "lemma": "nemati",
+      "info": "presens ja",
+      "item": "v.05.nemati"
+    },
+    "koga": {
+      "hr": "koga",
+      "nl": "wie",
+      "lemma": "tko",
+      "info": "accusatief van tko — «nemam koga pitati»"
+    },
+    "pitati": {
+      "hr": "pitati",
+      "nl": "vragen",
+      "item": "v.06.pitati"
+    },
+    "poslije": {
+      "hr": "poslije",
+      "nl": "na",
+      "item": "v.16.poslije"
+    },
+    "toga": {
+      "hr": "toga",
+      "nl": "daarna",
+      "lemma": "to",
+      "info": "genitief van to — «poslije toga» is daarna"
+    },
+    "smo": {
+      "hr": "smo",
+      "nl": "we zijn, we hebben",
+      "lemma": "biti",
+      "info": "korte vorm, 1e persoon meervoud"
+    },
+    "šutjeli": {
+      "hr": "šutjeli",
+      "nl": "zwegen",
+      "lemma": "šutjeti",
+      "info": "deelwoord meervoud van šutjeti"
+    },
+    "još": {
+      "hr": "još",
+      "nl": "Nog iets?",
+      "lemma": "Još nešto?",
+      "info": "uit «Još nešto?»",
+      "item": "v.08.jos_nesto"
+    },
+    "deset": {
+      "hr": "deset",
+      "nl": "tien",
+      "item": "v.00.deset"
+    },
+    "minuta": {
+      "hr": "minuta",
+      "nl": "minuut",
+      "item": "v.17.minuta"
+    },
+    "onda": {
+      "hr": "onda",
+      "nl": "toen, daarna",
+      "info": "bijwoord van tijd"
+    },
+    "ustao": {
+      "hr": "ustao",
+      "nl": "stond op",
+      "lemma": "ustati",
+      "info": "deelwoord mannelijk van ustati"
+    },
+    "oprao": {
+      "hr": "oprao",
+      "nl": "waste af",
+      "lemma": "oprati",
+      "info": "deelwoord mannelijk van oprati"
+    },
+    "dvije": {
+      "hr": "dvije",
+      "nl": "twee",
+      "lemma": "dva",
+      "info": "vrouwelijke vorm van dva"
+    },
+    "šalice": {
+      "hr": "šalice",
+      "nl": "kopjes",
+      "lemma": "šalica",
+      "info": "accusatief meervoud van šalica"
+    },
+    "koje": {
+      "hr": "koje",
+      "nl": "die",
+      "lemma": "koji",
+      "info": "betrekkelijk voornaamwoord, vrouwelijk meervoud"
+    },
+    "su": {
+      "hr": "su",
+      "nl": "zijn, waren",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon meervoud"
+    },
+    "već": {
+      "hr": "već",
+      "nl": "al",
+      "info": "bijwoord van tijd"
+    },
+    "bile": {
+      "hr": "bile",
+      "nl": "waren",
+      "lemma": "biti",
+      "info": "deelwoord vrouwelijk meervoud van biti"
+    },
+    "čiste": {
+      "hr": "čiste",
+      "nl": "schoon",
+      "lemma": "čist",
+      "info": "vrouwelijk meervoud van čist"
+    },
+    "gospodin": {
+      "hr": "gospodin",
+      "nl": "meneer",
+      "item": "v.20.gospodin"
+    },
+    "horvat": {
+      "hr": "horvat",
+      "nl": "Horvat",
+      "info": "achternaam"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "zich",
+      "info": "wederkerend woordje; hoort bij vratiti"
+    },
+    "vratio": {
+      "hr": "vratio",
+      "nl": "kwam terug",
+      "lemma": "vratiti se",
+      "info": "deelwoord mannelijk van vratiti se"
+    },
+    "siječnju": {
+      "hr": "siječnju",
+      "nl": "januari",
+      "lemma": "siječanj",
+      "info": "locatief enkelvoud van siječanj",
+      "item": "v.10.sijecanj"
+    },
+    "za": {
+      "hr": "za",
+      "nl": "voor (bestemd voor)",
+      "item": "v.07.za"
+    },
+    "svoj": {
+      "hr": "svoj",
+      "nl": "zijn eigen",
+      "info": "wederkerend bezittelijk — verwijst naar het onderwerp"
+    },
+    "stol": {
+      "hr": "stol",
+      "nl": "tafel",
+      "item": "v.03.stol"
+    },
+    "kao": {
+      "hr": "kao",
+      "nl": "als, zoals",
+      "info": "«kao da» betekent alsof"
+    },
+    "nigdje": {
+      "hr": "nigdje",
+      "nl": "nergens",
+      "item": "v.pr15.nigdje"
+    },
+    "donio": {
+      "hr": "donio",
+      "nl": "bracht",
+      "lemma": "donijeti",
+      "info": "deelwoord mannelijk van donijeti"
+    },
+    "kavu": {
+      "hr": "kavu",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "accusatief enkelvoud van kava"
+    },
+    "bez": {
+      "hr": "bez",
+      "nl": "zonder",
+      "item": "v.16.bez"
+    },
+    "riječi": {
+      "hr": "riječi",
+      "nl": "woord",
+      "lemma": "riječ",
+      "info": "genitief enkelvoud van riječ"
+    },
+    "hvala": {
+      "hr": "hvala",
+      "nl": "Dank je / dank u.",
+      "item": "v.01.hvala"
+    },
+    "najduža": {
+      "hr": "najduža",
+      "nl": "langste",
+      "lemma": "dug",
+      "info": "overtreffende trap, vrouwelijk — dug → duži → najduži"
+    },
+    "rečenica": {
+      "hr": "rečenica",
+      "nl": "zin"
+    },
+    "koju": {
+      "hr": "koju",
+      "nl": "die",
+      "lemma": "koji",
+      "info": "betrekkelijk voornaamwoord, accusatief vrouwelijk"
+    },
+    "ih": {
+      "hr": "ih",
+      "nl": "hen",
+      "lemma": "oni",
+      "info": "korte accusatiefvorm meervoud"
+    },
+    "čula": {
+      "hr": "čula",
+      "nl": "hoorde",
+      "lemma": "čuti",
+      "info": "deelwoord vrouwelijk van čuti"
+    },
+    "reći": {
+      "hr": "reći",
+      "nl": "zeggen"
+    },
+    "jedan": {
+      "hr": "jedan",
+      "nl": "één",
+      "item": "v.00.jedan"
+    },
+    "drugome": {
+      "hr": "drugome",
+      "nl": "de ander",
+      "lemma": "drugi",
+      "info": "datief — «jedan drugome» is elkaar"
+    },
+    "znam": {
+      "hr": "znam",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "presens ja",
+      "item": "v.05.znati"
+    },
+    "zašto": {
+      "hr": "zašto",
+      "nl": "waarom",
+      "info": "vraagwoord"
+    },
+    "zove": {
+      "hr": "zove",
+      "nl": "heet",
+      "lemma": "zvati se",
+      "info": "presens on/ona van zvati se"
+    },
+    "zbog": {
+      "hr": "zbog",
+      "nl": "vanwege",
+      "item": "v.16.zbog"
+    },
+    "zvona": {
+      "hr": "zvona",
+      "nl": "van de bel",
+      "lemma": "zvono",
+      "info": "genitief van zvono, na «zbog»"
+    },
+    "nego": {
+      "hr": "nego",
+      "nl": "maar (na ontkenning)",
+      "item": "v.02.nego"
+    },
+    "netko": {
+      "hr": "netko",
+      "nl": "iemand",
+      "info": "onbepaald voornaamwoord"
+    },
+    "ovdje": {
+      "hr": "ovdje",
+      "nl": "hier",
+      "info": "bijwoord van plaats"
+    },
+    "uvijek": {
+      "hr": "uvijek",
+      "nl": "altijd",
+      "item": "v.06.uvijek"
+    },
+    "čeka": {
+      "hr": "čeka",
+      "nl": "wachten",
+      "lemma": "čekati",
+      "info": "presens on/ona",
+      "item": "v.06.cekati_mod"
+    },
+    "vrata": {
+      "hr": "vrata",
+      "nl": "deur"
+    },
+    "otvore": {
+      "hr": "otvore",
+      "nl": "opengaan",
+      "lemma": "otvoriti",
+      "info": "presens oni van otvoriti — na «da» als bijzin"
+    },
+    "nosila": {
+      "hr": "nosila",
+      "nl": "dragen",
+      "lemma": "nositi",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.09.nositi"
+    },
+    "dva": {
+      "hr": "dva",
+      "nl": "twee",
+      "item": "v.00.dva"
+    },
+    "čovjeka": {
+      "hr": "čovjeka",
+      "nl": "mens",
+      "lemma": "čovjek",
+      "info": "vorm van čovjek",
+      "item": "v.03.covjek"
+    },
+    "cijelim": {
+      "hr": "cijelim",
+      "nl": "de hele",
+      "lemma": "cijel",
+      "info": "instrumentalis mannelijk van cijel — «cijelim putem» is de hele weg"
+    },
+    "putem": {
+      "hr": "putem",
+      "nl": "weg",
+      "lemma": "put",
+      "info": "instrumentalis van put — de weg waarlangs"
+    },
+    "do": {
+      "hr": "do",
+      "nl": "tot",
+      "item": "v.16.do"
+    },
+    "kavane": {
+      "hr": "kavane",
+      "nl": "café",
+      "lemma": "kavana",
+      "info": "genitief enkelvoud van kavana",
+      "item": "v.04.kavana"
+    },
+    "tom": {
+      "hr": "tom",
+      "nl": "die",
+      "lemma": "taj",
+      "info": "locatief mannelijk van taj"
+    },
+    "od": {
+      "hr": "od",
+      "nl": "van, vanaf",
+      "item": "v.16.od"
+    },
+    "prvog": {
+      "hr": "prvog",
+      "nl": "eerste",
+      "lemma": "prvi",
+      "info": "genitief mannelijk van prvi, na «od»"
+    },
+    "dana": {
+      "hr": "dana",
+      "nl": "dag",
+      "lemma": "dan",
+      "info": "genitief van dan"
+    },
+    "o": {
+      "hr": "o",
+      "nl": "over (onderwerp)",
+      "item": "v.10.o"
+    },
+    "svemu": {
+      "hr": "svemu",
+      "nl": "alles",
+      "lemma": "sve",
+      "info": "locatief van sve, na «o»"
+    },
+    "ratu": {
+      "hr": "ratu",
+      "nl": "oorlog",
+      "lemma": "rat",
+      "info": "locatief enkelvoud van rat",
+      "item": "v.pr15.rat"
+    },
+    "li": {
+      "hr": "li",
+      "nl": "Mag ik het passen?",
+      "lemma": "Mogu li probati?",
+      "info": "uit «Mogu li probati?»",
+      "item": "v.09.mogu_probati"
+    },
+    "dobro": {
+      "hr": "dobro",
+      "nl": "Goed.",
+      "item": "v.01.dobro"
+    },
+    "sjedio": {
+      "hr": "sjedio",
+      "nl": "zat",
+      "lemma": "sjediti",
+      "info": "deelwoord mannelijk van sjediti"
+    },
+    "s": {
+      "hr": "s",
+      "nl": "met",
+      "info": "voorzetsel met instrumentalis"
+    },
+    "novinama": {
+      "hr": "novinama",
+      "nl": "krant",
+      "lemma": "novine",
+      "info": "instrumentalis meervoud van novine — het woord bestaat alleen in het meervoud"
+    },
+    "pročitao": {
+      "hr": "pročitao",
+      "nl": "uitgelezen",
+      "lemma": "pročitati",
+      "info": "deelwoord mannelijk van pročitati — de voltooide vorm van čitati"
+    },
+    "vinku": {
+      "hr": "vinku",
+      "nl": "aan Vinko",
+      "lemma": "Vinko",
+      "info": "datief van Vinko — de ontvanger"
+    },
+    "rekla": {
+      "hr": "rekla",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord vrouwelijk van reći"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Wat er niet gezegd wordt",
+    "body_nl": "In veel Kroatische families is de generatie die de oorlogen meemaakte gewend om er niet over te praten — niet uit geheimzinnigheid, maar omdat het zo hoorde. Kleinkinderen ontdekken vaak pas na een begrafenis wat er in een familie gebeurd is. «Nikad ga nisam pitao» is daar een gewone zin, en zelden een luchtige."
+  },
+  "vocab": [
+    {
+      "id": "v.pr15.zvoniti",
+      "hr": "zvoniti",
+      "nl": "luiden, bellen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "zvonim",
+      "verb_class": "-iti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.sutjeti",
+      "hr": "šutjeti",
+      "nl": "zwijgen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "šutim",
+      "verb_class": "-jeti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.rat",
+      "hr": "rat",
+      "nl": "oorlog",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "rata",
+      "nom_pl": "ratovi",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.zeljezo",
+      "hr": "željezo",
+      "nl": "ijzer",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "željeza",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.salica",
+      "hr": "šalica",
+      "nl": "kopje",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "šalice",
+      "nom_pl": "šalice",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.oprati",
+      "hr": "oprati",
+      "nl": "afwassen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "operem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.nasuprot",
+      "hr": "nasuprot",
+      "nl": "tegenover",
+      "pos": "prep",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.davno",
+      "hr": "davno",
+      "nl": "lang geleden",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.odakle",
+      "hr": "odakle",
+      "nl": "waarvandaan",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.nigdje",
+      "hr": "nigdje",
+      "nl": "nergens",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.cist",
+      "hr": "čist",
+      "nl": "schoon",
+      "pos": "adj",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr15.otvoriti",
+      "hr": "otvoriti",
+      "nl": "openen",
+      "pos": "verb",
+      "aspect": "perfective",
+      "present_1sg": "otvorim",
+      "verb_class": "-iti",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr15.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een vraag die Vinko zijn vader nooit gesteld heeft, en wat dat met hem doet.",
+      "distractors": [
+        "De geschiedenis van een school in Zagreb.",
+        "Waarom de bel kapot is.",
+        "Hoe Lea eindelijk haar zin krijgt."
+      ],
+      "explain_nl": "De bel is de aanleiding. Waar het om draait staat in alinea 4: «Da sam znao što mu znači, pitao bih ga više» — spijt over een gesprek dat niet meer kan.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr15.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Waar komt de bel vandaan?",
+      "answer": "Uit een school die vroeger in dezelfde straat stond.",
+      "distractors": [
+        "Uit een kerk in Zagreb.",
+        "Uit het huis van Vinko's vader.",
+        "Uit een andere kavana."
+      ],
+      "explain_nl": "«Zvono je došlo iz škole koja je bila u ovoj ulici prije rata.» De betrekkelijke bijzin met «koja» hangt de hele geschiedenis aan één woord.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr15.003",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Waarom waste Vinko twee kopjes die al schoon waren?",
+      "answer": "Om iets te doen te hebben na een gesprek dat hem raakte.",
+      "distractors": [
+        "Omdat ze vies waren.",
+        "Omdat er gasten kwamen.",
+        "Omdat Lea dat vergeten was."
+      ],
+      "explain_nl": "Het staat er niet. Maar «koje su već bile čiste» is een detail dat alleen betekenis heeft als het niet om de kopjes gaat.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr15.004",
+      "skill": "verwijswoord",
+      "type": "choice",
+      "prompt_nl": "«Da sam znao što mu znači.» — naar wie verwijst «mu»?",
+      "answer": "Vinko's vader.",
+      "distractors": [
+        "Vinko zelf.",
+        "Meneer Horvat.",
+        "De bel."
+      ],
+      "explain_nl": "De hele alinea gaat over de vader die hij nooit iets vroeg. «Mu» is datief mannelijk: wat het vóór hem betekende.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr15.005",
+      "skill": "verband",
+      "type": "choice",
+      "prompt_nl": "Waarom staat de terugkeer van meneer Horvat in dit verhaal?",
+      "answer": "Als tegenhanger: hier komt iemand wél terug, en wordt er wél iets gezegd.",
+      "distractors": [
+        "Om te laten zien dat hij beter is.",
+        "Omdat hij de bel ook kende.",
+        "Om het verhaal langer te maken."
+      ],
+      "explain_nl": "Alinea 4 gaat over een gesprek dat nooit meer kan; alinea 6 laat een gesprek zien van drie woorden dat wél nog kan. Dat contrast draagt het slot.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr15.006",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Kao da nije bio nigdje.» Wat betekent dat hier?",
+      "answer": "Alsof hij nooit weg was geweest.",
+      "distractors": [
+        "Alsof hij verdwaald was.",
+        "Alsof hij niets meer wist.",
+        "Alsof hij nergens welkom was."
+      ],
+      "explain_nl": "«Kao da» is «alsof». Hij ging zitten alsof er geen drie maanden tussen zaten — dat is hoe vaste gasten terugkomen.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr15.007",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Wat bedoelt Lea met de laatste zin?",
+      "answer": "Dat de kavana een plek is waar op mensen gewacht wordt.",
+      "distractors": [
+        "Dat de deur vaak openstaat.",
+        "Dat de bel ooit weer zal luiden.",
+        "Dat ze zelf ook op iemand wacht."
+      ],
+      "explain_nl": "Ze verwerpt eerst de voor de hand liggende verklaring («ne zbog zvona») en geeft dan een andere. Het lege tafeltje uit deel 3 en het telefoontje naar het ziekenhuis wijzen dezelfde kant op.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr15.008",
+      "skill": "volgorde",
+      "type": "choice",
+      "prompt_nl": "In welke maand kwam meneer Horvat terug?",
+      "answer": "Januari.",
+      "distractors": [
+        "December.",
+        "Februari.",
+        "Dat staat er niet."
+      ],
+      "explain_nl": "Het gesprek was «u prosincu» (december), de terugkeer «u siječnju» (januari). De Kroatische maandnamen lijken op niets — die moet je gewoon kennen.",
+      "difficulty": 3
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr15.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "«…škole koja je bila u ovoj ulici.» Waarom «koja» en niet «koji»?",
+      "answer": "Omdat het naar škola verwijst, en dat is vrouwelijk.",
+      "distractors": [
+        "Omdat de school er niet meer is.",
+        "Omdat er «iz» voor staat.",
+        "Omdat koja altijd na een komma komt."
+      ],
+      "explain_nl": "Het betrekkelijk voornaamwoord richt zich naar het woord waar het naar verwijst — niet naar de rol die het in de bijzin speelt.",
+      "targets": [
+        "g.mod.q_words"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.002",
+      "type": "interpret",
+      "mode": "receptive",
+      "prompt_nl": "Welke zin gaat over iets dat níét gebeurd is?",
+      "given": "A: Da sam znao, pitao bih ga više.\nB: Kad sam znao, pitao sam ga više.",
+      "answer": "A — «da» plus de bih-vorm is een voorwaarde die niet vervuld is.",
+      "distractors": [
+        "B — de verleden tijd zegt dat het voorbij is.",
+        "Allebei.",
+        "Geen van beide."
+      ],
+      "explain_nl": "De conditionalis met bih beschrijft wat er gebeurd zou zijn. Vinko heeft het niet geweten en heeft dus niet gevraagd — dat is precies waar de alinea over gaat.",
+      "targets": [
+        "g.mod.conditional"
+      ],
+      "difficulty": 5,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.003",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul de betrekkelijke vorm in: «twee kopjes die al schoon waren»",
+      "given": "dvije šalice ___ su već bile čiste",
+      "answer": "koje",
+      "accepts": [
+        "koje"
+      ],
+      "explain_nl": "Šalice is vrouwelijk meervoud en is het onderwerp van de bijzin, dus de nominatief meervoud: koje.",
+      "targets": [
+        "g.mod.q_words"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.004",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Vinko mu je donio kavu bez riječ.",
+      "answer": "Vinko mu je donio kavu bez riječi.",
+      "accepts": [
+        "Vinko mu je donio kavu bez riječi."
+      ],
+      "explain_nl": "Bez vraagt altijd de genitief. Riječ is vrouwelijk op een medeklinker: de genitief is riječi.",
+      "targets": [
+        "g.mod.prepositions"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.005",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "«Nitko ga nikad nije čuo.» Waarom staan er drie ontkenningen?",
+      "answer": "Omdat het Kroatisch de ontkenning door de hele zin herhaalt.",
+      "distractors": [
+        "Om het extra sterk te maken.",
+        "Omdat nitko en nikad niet samen mogen.",
+        "Dat is een fout in de tekst."
+      ],
+      "explain_nl": "Nitko, nikad én nije: waar het Nederlands één ontkenning gebruikt, eist het Kroatisch ze allemaal. «Nitko je čuo» bestaat niet.",
+      "targets": [
+        "g.mod.neg_verb"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.006",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: «Als ik tijd had gehad, was ik gekomen.»",
+      "given": "Als ik tijd had gehad, was ik gekomen.",
+      "answer": "Da sam imao vremena, došao bih.",
+      "accepts": [
+        "Da sam imao vremena, došao bih.",
+        "Da sam imala vremena, došla bih.",
+        "Došao bih da sam imao vremena."
+      ],
+      "explain_nl": "De onvervulde voorwaarde: «da» plus verleden tijd in het eerste deel, «bih» plus deelwoord in het tweede. Vremena is genitief na imati in een ontkennende of hoeveelheidszin.",
+      "targets": [
+        "g.mod.conditional"
+      ],
+      "difficulty": 5,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.007",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «Hij ging tegenover me zitten.»",
+      "given": "Sjeo je nasuprot ___.",
+      "answer": "meni",
+      "accepts": [
+        "meni"
+      ],
+      "explain_nl": "Nasuprot is een van de weinige voorzetsels met de datief. De lange vorm van ja in de datief is meni.",
+      "targets": [
+        "g.12.prijedlozi_dativ"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-15"
+    },
+    {
+      "id": "e.pr15.008",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Schrijf over iets in huis dat een verhaal heeft: waar het vandaan komt, van wie het was, en wat je nooit gevraagd hebt. Minstens zes zinnen, met één zin die begint met «Da sam…».",
+      "model_answer": "U kuhinji imamo stari sat koji je bio bakin. Došao je iz njezine kuće u Splitu. Nikad nije radio, ali ga nitko nije htio baciti. Kad sam bio dijete, mislio sam da je to samo namještaj. Da sam pitao baku odakle je, sada bih znao. Sada nemam koga pitati.",
+      "rubric_nl": [
+        "Minstens zes zinnen",
+        "Eén zin met «Da sam …»",
+        "Eén betrekkelijke bijzin met koji, koja of koje",
+        "Verleden tijd"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 6,
+          "label": "Minstens zes zinnen"
+        },
+        {
+          "kind": "bevat_woord",
+          "woorden": [
+            "koji",
+            "koja",
+            "koje",
+            "kojeg",
+            "kojoj"
+          ],
+          "label": "Een betrekkelijke bijzin"
+        },
+        {
+          "kind": "min_verleden",
+          "n": 4,
+          "label": "Minstens vier keer verleden tijd"
+        }
+      ],
+      "auto_check": false,
+      "targets": [
+        "g.mod.conditional"
+      ],
+      "difficulty": 5,
+      "source": "verhaal-15"
+    }
+  ]
+}

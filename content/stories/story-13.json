@@ -1,0 +1,1013 @@
+{
+  "id": "story-13",
+  "slug": "gospodin-s-novinama",
+  "series": "Kavana Zvono",
+  "part": 3,
+  "title_hr": "Gospodin s novinama",
+  "title_nl": "De meneer met de krant",
+  "cefr": "A2.1",
+  "requires_lesson": 13,
+  "motif": "kavana",
+  "blurb_nl": "Een vaste gast komt op een dag niet meer. Alles staat in de verleden tijd, en de locatief zegt telkens waar iemand is — of juist niet is.",
+  "focus_nl": [
+    "perfekt",
+    "locatief",
+    "deelwoorden",
+    "duur en herhaling"
+  ],
+  "source": "verhaal-13",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "gospodin-s-novinama.p1.s1",
+          "hr": "Gospodin Horvat je dolazio svaki dan.",
+          "nl": "Meneer Horvat kwam elke dag."
+        },
+        {
+          "id": "gospodin-s-novinama.p1.s2",
+          "hr": "Uvijek u deset sati, uvijek za istim stolom.",
+          "nl": "Altijd om tien uur, altijd aan dezelfde tafel."
+        },
+        {
+          "id": "gospodin-s-novinama.p1.s3",
+          "hr": "Naručivao je jednu kavu i čitao novine.",
+          "nl": "Hij bestelde één koffie en las de krant."
+        },
+        {
+          "id": "gospodin-s-novinama.p1.s4",
+          "hr": "Novine je čitao polako, stranicu po stranicu.",
+          "nl": "De krant las hij langzaam, bladzijde voor bladzijde."
+        },
+        {
+          "id": "gospodin-s-novinama.p1.s5",
+          "hr": "Nikad nije govorio puno.",
+          "nl": "Hij zei nooit veel."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "gospodin-s-novinama.p2.s1",
+          "hr": "Prošli tjedan nije došao.",
+          "nl": "Vorige week kwam hij niet."
+        },
+        {
+          "id": "gospodin-s-novinama.p2.s2",
+          "hr": "U utorak također nije došao.",
+          "nl": "Dinsdag kwam hij ook niet."
+        },
+        {
+          "id": "gospodin-s-novinama.p2.s3",
+          "hr": "Sanja je rekla da je možda bolestan.",
+          "nl": "Sanja zei dat hij misschien ziek was."
+        },
+        {
+          "id": "gospodin-s-novinama.p2.s4",
+          "hr": "Vinko nije rekao ništa, ali je gledao prema vratima.",
+          "nl": "Vinko zei niets, maar keek naar de deur."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "gospodin-s-novinama.p3.s1",
+          "hr": "U petak sam pitala Vinka gdje je gospodin Horvat.",
+          "nl": "Vrijdag vroeg ik Vinko waar meneer Horvat was."
+        },
+        {
+          "id": "gospodin-s-novinama.p3.s2",
+          "hr": "«U bolnici», rekao je.",
+          "nl": "«In het ziekenhuis», zei hij."
+        },
+        {
+          "id": "gospodin-s-novinama.p3.s3",
+          "hr": "«Kako znaš?» pitala sam.",
+          "nl": "«Hoe weet je dat?» vroeg ik."
+        },
+        {
+          "id": "gospodin-s-novinama.p3.s4",
+          "hr": "«Zovem ga svaki dan.»",
+          "nl": "«Ik bel hem elke dag.»"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "gospodin-s-novinama.p4.s1",
+          "hr": "Nisam znala da se poznaju tako dobro.",
+          "nl": "Ik wist niet dat ze elkaar zo goed kenden."
+        },
+        {
+          "id": "gospodin-s-novinama.p4.s2",
+          "hr": "U kavani nikad nisu razgovarali.",
+          "nl": "In het café praatten ze nooit."
+        },
+        {
+          "id": "gospodin-s-novinama.p4.s3",
+          "hr": "Vinko je onda rekao nešto čudno.",
+          "nl": "Vinko zei toen iets vreemds."
+        },
+        {
+          "id": "gospodin-s-novinama.p4.s4",
+          "hr": "«Njegov stol je i dalje njegov.»",
+          "nl": "«Zijn tafel is en blijft van hem.»"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "sentences": [
+        {
+          "id": "gospodin-s-novinama.p5.s1",
+          "hr": "Cijeli tjedan nitko nije sjedio za tim stolom.",
+          "nl": "De hele week zat er niemand aan die tafel."
+        },
+        {
+          "id": "gospodin-s-novinama.p5.s2",
+          "hr": "Kad je bilo puno, Vinko je govorio da je zauzet.",
+          "nl": "Als het vol was, zei Vinko dat hij bezet was."
+        },
+        {
+          "id": "gospodin-s-novinama.p5.s3",
+          "hr": "U subotu je jedna žena htjela sjesti tamo.",
+          "nl": "Zaterdag wilde een vrouw daar gaan zitten."
+        },
+        {
+          "id": "gospodin-s-novinama.p5.s4",
+          "hr": "Vinko joj je dao drugi stol, uz prozor.",
+          "nl": "Vinko gaf haar een andere tafel, bij het raam."
+        },
+        {
+          "id": "gospodin-s-novinama.p5.s5",
+          "hr": "Nitko nije pitao zašto.",
+          "nl": "Niemand vroeg waarom."
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "gospodin": {
+      "hr": "gospodin",
+      "nl": "meneer",
+      "item": "v.pr13.gospodin"
+    },
+    "horvat": {
+      "hr": "horvat",
+      "nl": "Horvat",
+      "info": "achternaam — de meest voorkomende in Kroatië"
+    },
+    "je": {
+      "hr": "je",
+      "nl": "is; hij heeft",
+      "lemma": "biti",
+      "info": "korte vorm, 3e persoon enkelvoud — hier het hulpwerkwoord van de verleden tijd"
+    },
+    "dolazio": {
+      "hr": "dolazio",
+      "nl": "komen, aankomen",
+      "lemma": "dolaziti",
+      "info": "deelwoord mannelijk",
+      "item": "v.16.dolaziti"
+    },
+    "svaki": {
+      "hr": "svaki",
+      "nl": "elke dag",
+      "lemma": "svaki dan",
+      "info": "uit «svaki dan»",
+      "item": "v.06.svaki_dan"
+    },
+    "dan": {
+      "hr": "dan",
+      "nl": "dag",
+      "info": "mannelijk; «svaki dan» is elke dag"
+    },
+    "uvijek": {
+      "hr": "uvijek",
+      "nl": "altijd",
+      "item": "v.06.uvijek"
+    },
+    "u": {
+      "hr": "u",
+      "nl": "in, om",
+      "info": "voorzetsel; met locatief bij plaats, met accusatief bij tijdstip"
+    },
+    "deset": {
+      "hr": "deset",
+      "nl": "tien",
+      "item": "v.00.deset"
+    },
+    "sati": {
+      "hr": "sati",
+      "nl": "uur; klok",
+      "lemma": "sat",
+      "info": "nominatief meervoud van sat"
+    },
+    "za": {
+      "hr": "za",
+      "nl": "voor (bestemd voor)",
+      "item": "v.07.za"
+    },
+    "istim": {
+      "hr": "istim",
+      "nl": "dezelfde",
+      "lemma": "isti",
+      "info": "instrumentalis mannelijk van isti"
+    },
+    "stolom": {
+      "hr": "stolom",
+      "nl": "tafel",
+      "lemma": "stol",
+      "info": "instrumentalis enkelvoud van stol",
+      "item": "v.03.stol"
+    },
+    "naručivao": {
+      "hr": "naručivao",
+      "nl": "bestellen",
+      "lemma": "naručivati",
+      "info": "deelwoord mannelijk",
+      "item": "v.08.narucivati"
+    },
+    "jednu": {
+      "hr": "jednu",
+      "nl": "één",
+      "lemma": "jedan",
+      "info": "accusatief vrouwelijk van jedan"
+    },
+    "kavu": {
+      "hr": "kavu",
+      "nl": "koffie",
+      "lemma": "kava",
+      "info": "accusatief enkelvoud van kava"
+    },
+    "i": {
+      "hr": "i",
+      "nl": "en, ook",
+      "item": "v.01.i"
+    },
+    "čitao": {
+      "hr": "čitao",
+      "nl": "lezen",
+      "lemma": "čitati",
+      "info": "deelwoord mannelijk",
+      "item": "v.05.citati"
+    },
+    "novine": {
+      "hr": "novine",
+      "nl": "krant",
+      "item": "v.05.novine"
+    },
+    "nikad": {
+      "hr": "nikad",
+      "nl": "nooit",
+      "item": "v.06.nikad"
+    },
+    "nije": {
+      "hr": "nije",
+      "nl": "is niet, heeft niet",
+      "lemma": "biti",
+      "info": "ontkende vorm van je"
+    },
+    "govorio": {
+      "hr": "govorio",
+      "nl": "spreken",
+      "lemma": "govoriti",
+      "info": "deelwoord mannelijk",
+      "item": "v.09.govoriti"
+    },
+    "puno": {
+      "hr": "puno",
+      "nl": "veel",
+      "item": "v.14.puno"
+    },
+    "prošli": {
+      "hr": "prošli",
+      "nl": "vorige week",
+      "lemma": "prošli tjedan",
+      "info": "uit «prošli tjedan»",
+      "item": "v.11.prosli_tjedan"
+    },
+    "tjedan": {
+      "hr": "tjedan",
+      "nl": "week",
+      "item": "v.07.tjedan"
+    },
+    "došao": {
+      "hr": "došao",
+      "nl": "kwam",
+      "lemma": "doći",
+      "info": "deelwoord mannelijk van doći"
+    },
+    "utorak": {
+      "hr": "utorak",
+      "nl": "dinsdag",
+      "item": "v.07.utorak"
+    },
+    "također": {
+      "hr": "također",
+      "nl": "ook",
+      "item": "v.pr13.takoder"
+    },
+    "sanja": {
+      "hr": "sanja",
+      "nl": "Sanja",
+      "info": "vrouwennaam"
+    },
+    "rekla": {
+      "hr": "rekla",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord vrouwelijk van reći"
+    },
+    "da": {
+      "hr": "da",
+      "nl": "ja",
+      "item": "v.01.da"
+    },
+    "možda": {
+      "hr": "možda",
+      "nl": "misschien",
+      "item": "v.pr13.mozda"
+    },
+    "bolestan": {
+      "hr": "bolestan",
+      "nl": "ziek",
+      "item": "v.18.bolestan"
+    },
+    "vinko": {
+      "hr": "vinko",
+      "nl": "Vinko",
+      "info": "mannennaam"
+    },
+    "rekao": {
+      "hr": "rekao",
+      "nl": "zei",
+      "lemma": "reći",
+      "info": "deelwoord mannelijk van reći"
+    },
+    "ništa": {
+      "hr": "ništa",
+      "nl": "Niets nieuws.",
+      "lemma": "Ništa novo.",
+      "info": "uit «Ništa novo.»",
+      "item": "v.01.nista_novo"
+    },
+    "ali": {
+      "hr": "ali",
+      "nl": "maar",
+      "item": "v.02.ali"
+    },
+    "gledao": {
+      "hr": "gledao",
+      "nl": "kijken, bekijken",
+      "lemma": "gledati",
+      "info": "deelwoord mannelijk",
+      "item": "v.05.gledati"
+    },
+    "prema": {
+      "hr": "prema",
+      "nl": "richting, naar",
+      "item": "v.12.prema"
+    },
+    "vratima": {
+      "hr": "vratima",
+      "nl": "naar de deur",
+      "lemma": "vrata",
+      "info": "datief meervoud van vrata — het woord bestaat alleen in het meervoud"
+    },
+    "petak": {
+      "hr": "petak",
+      "nl": "vrijdag"
+    },
+    "sam": {
+      "hr": "sam",
+      "nl": "alleen",
+      "item": "v.15.sam"
+    },
+    "pitala": {
+      "hr": "pitala",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.06.pitati"
+    },
+    "vinka": {
+      "hr": "vinka",
+      "nl": "Vinko",
+      "lemma": "Vinko",
+      "info": "accusatief van Vinko — bij levende wezens gelijk aan de genitief"
+    },
+    "gdje": {
+      "hr": "gdje",
+      "nl": "waar",
+      "item": "v.02.gdje"
+    },
+    "bolnici": {
+      "hr": "bolnici",
+      "nl": "in het ziekenhuis",
+      "lemma": "bolnica",
+      "info": "locatief van bolnica"
+    },
+    "kako": {
+      "hr": "kako",
+      "nl": "hoe",
+      "item": "v.03.kako"
+    },
+    "znaš": {
+      "hr": "znaš",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "presens ti",
+      "item": "v.05.znati"
+    },
+    "zovem": {
+      "hr": "zovem",
+      "nl": "heten",
+      "lemma": "zvati se",
+      "info": "uit «zovem se»",
+      "item": "v.03.zvati_se"
+    },
+    "ga": {
+      "hr": "ga",
+      "nl": "hem",
+      "lemma": "on",
+      "info": "korte accusatiefvorm van on"
+    },
+    "nisam": {
+      "hr": "nisam",
+      "nl": "Niet zo goed.",
+      "lemma": "Nisam baš dobro.",
+      "info": "uit «Nisam baš dobro.»",
+      "item": "v.01.nisam_bas_dobro"
+    },
+    "znala": {
+      "hr": "znala",
+      "nl": "weten, kennen",
+      "lemma": "znati",
+      "info": "deelwoord vrouwelijk",
+      "item": "v.05.znati"
+    },
+    "se": {
+      "hr": "se",
+      "nl": "elkaar",
+      "info": "wederkerend woordje; hier «elkaar kennen»"
+    },
+    "poznaju": {
+      "hr": "poznaju",
+      "nl": "kennen",
+      "lemma": "poznavati",
+      "info": "presens oni van poznavati"
+    },
+    "tako": {
+      "hr": "tako",
+      "nl": "zo",
+      "info": "bijwoord van graad"
+    },
+    "dobro": {
+      "hr": "dobro",
+      "nl": "Goed.",
+      "item": "v.01.dobro"
+    },
+    "kavani": {
+      "hr": "kavani",
+      "nl": "café",
+      "lemma": "kavana",
+      "info": "locatief enkelvoud van kavana",
+      "item": "v.04.kavana"
+    },
+    "nisu": {
+      "hr": "nisu",
+      "nl": "waren niet, hebben niet",
+      "lemma": "biti",
+      "info": "ontkende vorm, 3e persoon meervoud"
+    },
+    "razgovarali": {
+      "hr": "razgovarali",
+      "nl": "praten, in gesprek zijn",
+      "lemma": "razgovarati",
+      "info": "deelwoord meervoud"
+    },
+    "onda": {
+      "hr": "onda",
+      "nl": "toen, daarna",
+      "info": "bijwoord van tijd"
+    },
+    "nešto": {
+      "hr": "nešto",
+      "nl": "iets",
+      "item": "v.06.nesto"
+    },
+    "čudno": {
+      "hr": "čudno",
+      "nl": "vreemd",
+      "lemma": "čudan",
+      "info": "onzijdig van čudan — «nešto čudno» is iets vreemds"
+    },
+    "njegov": {
+      "hr": "njegov",
+      "nl": "zijn",
+      "lemma": "njegov, njegova, njegovo",
+      "info": "uit «njegov, njegova, njegovo»",
+      "item": "v.03.njegov"
+    },
+    "stol": {
+      "hr": "stol",
+      "nl": "tafel",
+      "item": "v.03.stol"
+    },
+    "dalje": {
+      "hr": "dalje",
+      "nl": "verder",
+      "info": "bijwoord; «i dalje» betekent nog steeds"
+    },
+    "cijeli": {
+      "hr": "cijeli",
+      "nl": "de hele dag",
+      "lemma": "cijeli dan",
+      "info": "uit «cijeli dan»",
+      "item": "v.11.cijeli_dan"
+    },
+    "nitko": {
+      "hr": "nitko",
+      "nl": "niemand",
+      "item": "v.pr13.nitko"
+    },
+    "sjedio": {
+      "hr": "sjedio",
+      "nl": "zat",
+      "lemma": "sjediti",
+      "info": "deelwoord mannelijk van sjediti"
+    },
+    "tim": {
+      "hr": "tim",
+      "nl": "die",
+      "lemma": "taj",
+      "info": "instrumentalis mannelijk van taj"
+    },
+    "kad": {
+      "hr": "kad",
+      "nl": "toen, wanneer",
+      "info": "voegwoord van tijd"
+    },
+    "bilo": {
+      "hr": "bilo",
+      "nl": "was",
+      "lemma": "biti",
+      "info": "deelwoord onzijdig — onpersoonlijk «het was»"
+    },
+    "zauzet": {
+      "hr": "zauzet",
+      "nl": "bezet",
+      "item": "v.pr13.zauzet"
+    },
+    "pitao": {
+      "hr": "pitao",
+      "nl": "vragen",
+      "lemma": "pitati",
+      "info": "deelwoord mannelijk",
+      "item": "v.06.pitati"
+    },
+    "zašto": {
+      "hr": "zašto",
+      "nl": "waarom",
+      "info": "vraagwoord"
+    },
+    "polako": {
+      "hr": "polako",
+      "nl": "langzaam"
+    },
+    "stranicu": {
+      "hr": "stranicu",
+      "nl": "bladzijde",
+      "lemma": "stranica",
+      "info": "accusatief van stranica — «stranicu po stranicu» is bladzij voor bladzij"
+    },
+    "po": {
+      "hr": "po",
+      "nl": "om te halen",
+      "item": "v.07.po"
+    },
+    "subotu": {
+      "hr": "subotu",
+      "nl": "zaterdag",
+      "lemma": "subota",
+      "info": "accusatief enkelvoud van subota",
+      "item": "v.07.subota"
+    },
+    "jedna": {
+      "hr": "jedna",
+      "nl": "een",
+      "lemma": "jedan",
+      "info": "vrouwelijk van jedan"
+    },
+    "žena": {
+      "hr": "žena",
+      "nl": "vrouw",
+      "item": "v.04.zena"
+    },
+    "htjela": {
+      "hr": "htjela",
+      "nl": "wilde",
+      "lemma": "htjeti",
+      "info": "deelwoord vrouwelijk van htjeti"
+    },
+    "sjesti": {
+      "hr": "sjesti",
+      "nl": "gaan zitten"
+    },
+    "tamo": {
+      "hr": "tamo",
+      "nl": "daar",
+      "info": "bijwoord van plaats"
+    },
+    "joj": {
+      "hr": "joj",
+      "nl": "haar, aan haar",
+      "lemma": "ona",
+      "info": "korte datiefvorm van ona — de ontvanger"
+    },
+    "dao": {
+      "hr": "dao",
+      "nl": "geven",
+      "lemma": "dati",
+      "info": "deelwoord mannelijk",
+      "item": "v.13.dati"
+    },
+    "drugi": {
+      "hr": "drugi",
+      "nl": "tweede, ander",
+      "item": "v.17.drugi"
+    },
+    "uz": {
+      "hr": "uz",
+      "nl": "langs, bij",
+      "info": "voorzetsel met accusatief"
+    },
+    "prozor": {
+      "hr": "prozor",
+      "nl": "raam",
+      "info": "mannelijk; genitief prozora"
+    }
+  },
+  "culture_nl": {
+    "title_nl": "Svoj stol",
+    "body_nl": "In een buurtkavana heeft een vaste gast vaak zijn eigen tafel — niet gereserveerd, maar iedereen weet het. Een ober die die tafel vrijhoudt terwijl er mensen staan, doet iets dat economisch nergens op slaat en sociaal alles betekent. Het is dezelfde logica als de vaste plek in een dorpscafé: je hoort ergens omdat je er altijd zat."
+  },
+  "vocab": [
+    {
+      "id": "v.pr13.gospodin",
+      "hr": "gospodin",
+      "nl": "meneer",
+      "pos": "noun",
+      "gender": "m",
+      "animacy": "animate",
+      "declension": "a",
+      "gen_sg": "gospodina",
+      "nom_pl": "gospoda",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.bolnica",
+      "hr": "bolnica",
+      "nl": "ziekenhuis",
+      "pos": "noun",
+      "gender": "f",
+      "animacy": "inanimate",
+      "declension": "e",
+      "gen_sg": "bolnice",
+      "nom_pl": "bolnice",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.vrata",
+      "hr": "vrata",
+      "nl": "deur",
+      "pos": "noun",
+      "gender": "n",
+      "animacy": "inanimate",
+      "declension": "a",
+      "gen_sg": "vrata",
+      "nom_pl": "vrata",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.cudan",
+      "hr": "čudan",
+      "nl": "vreemd",
+      "pos": "adj",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.zauzet",
+      "hr": "zauzet",
+      "nl": "bezet",
+      "pos": "adj",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.poznavati",
+      "hr": "poznavati",
+      "nl": "kennen",
+      "pos": "verb",
+      "aspect": "imperfective",
+      "present_1sg": "poznajem",
+      "verb_class": "onregelmatig",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.mozda",
+      "hr": "možda",
+      "nl": "misschien",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.takoder",
+      "hr": "također",
+      "nl": "ook",
+      "pos": "adv",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    },
+    {
+      "id": "v.pr13.nitko",
+      "hr": "nitko",
+      "nl": "niemand",
+      "pos": "pron",
+      "tags": [
+        "kavana"
+      ],
+      "source": "aangevuld"
+    }
+  ],
+  "comprehension": [
+    {
+      "id": "b.pr13.001",
+      "skill": "hoofdgedachte",
+      "type": "choice",
+      "prompt_nl": "Waar gaat deze tekst vooral over?",
+      "answer": "Een vaste gast blijft weg, en dan blijkt hoeveel hij voor Vinko betekende.",
+      "distractors": [
+        "Hoe druk het in de kavana is geworden.",
+        "Waarom meneer Horvat naar het ziekenhuis moest.",
+        "Dat Lea haar werk niet leuk vindt."
+      ],
+      "explain_nl": "Het ziekenhuis is de aanleiding, niet het onderwerp. Waar het om draait is het lege tafeltje dat Vinko vrijhoudt.",
+      "difficulty": 3
+    },
+    {
+      "id": "b.pr13.002",
+      "skill": "detail",
+      "type": "choice",
+      "prompt_nl": "Hoe laat kwam meneer Horvat altijd?",
+      "answer": "Om tien uur.",
+      "distractors": [
+        "Om acht uur.",
+        "Op dinsdag om tien uur.",
+        "Dat staat er niet."
+      ],
+      "explain_nl": "«Uvijek u deset sati.» Let op: na «deset» komt de genitief meervoud — sati, niet sata.",
+      "difficulty": 1
+    },
+    {
+      "id": "b.pr13.003",
+      "skill": "volgorde",
+      "type": "choice",
+      "prompt_nl": "Op welke dag vraagt Lea aan Vinko waar meneer Horvat is?",
+      "answer": "Vrijdag.",
+      "distractors": [
+        "Dinsdag.",
+        "De week ervoor.",
+        "Zaterdag."
+      ],
+      "explain_nl": "De tekst bouwt de week op: vorige week niets, dinsdag niets, en pas «u petak» stelt ze de vraag.",
+      "difficulty": 2
+    },
+    {
+      "id": "b.pr13.004",
+      "skill": "afleiden",
+      "type": "choice",
+      "prompt_nl": "Wat verrast Lea het meest?",
+      "answer": "Dat Vinko en meneer Horvat contact hebben buiten de kavana.",
+      "distractors": [
+        "Dat meneer Horvat ziek is.",
+        "Dat Vinko een telefoon heeft.",
+        "Dat Sanja het al wist."
+      ],
+      "explain_nl": "«Nisam znala da se poznaju tako dobro» — en de zin erna legt uit waarom dat verrast: in de kavana spraken ze nooit.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr13.005",
+      "skill": "verband",
+      "type": "choice",
+      "prompt_nl": "«U kavani nikad nisu razgovarali.» Welk verband legt deze zin met de zin ervoor?",
+      "answer": "Een tegenstelling: ze kennen elkaar goed, en tóch spraken ze niet.",
+      "distractors": [
+        "Een gevolg: daarom belt Vinko hem.",
+        "Een reden: daarom werd hij ziek.",
+        "Een voorbeeld van hoe druk het is."
+      ],
+      "explain_nl": "Er staat geen «ali», maar de tegenstelling zit in de inhoud. Dat is wat de opmerking van Vinko erna zo veelzeggend maakt.",
+      "difficulty": 4
+    },
+    {
+      "id": "b.pr13.006",
+      "skill": "conclusie",
+      "type": "choice",
+      "prompt_nl": "Waarom houdt Vinko de tafel vrij?",
+      "answer": "Om vast te houden dat meneer Horvat terugkomt.",
+      "distractors": [
+        "Omdat de tafel gereserveerd is.",
+        "Omdat de stoel kapot is.",
+        "Omdat er niemand aan wil zitten."
+      ],
+      "explain_nl": "«Njegov stol je i dalje njegov» is geen mededeling over meubels. Een lege tafel op een volle dag kost geld — dat is precies waarom het iets betekent.",
+      "difficulty": 5
+    },
+    {
+      "id": "b.pr13.007",
+      "skill": "woordbetekenis",
+      "type": "choice",
+      "prompt_nl": "«Vinko je govorio da je zauzet.» Wat betekent «zauzet» hier?",
+      "answer": "bezet",
+      "distractors": [
+        "kapot",
+        "vies",
+        "gereserveerd voor gasten"
+      ],
+      "explain_nl": "Zauzet zegt dat er iemand zit — wat niet waar is. Dat Vinko dat zegt in plaats van de waarheid, hoort bij de zin erna.",
+      "difficulty": 3
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e.pr13.001",
+      "type": "choice",
+      "mode": "receptive",
+      "prompt_nl": "Waarom «je dolazio» en niet «je došao»?",
+      "answer": "Omdat het elke dag gebeurde — dolaziti is de onvoltooide vorm.",
+      "distractors": [
+        "Omdat het lang geleden is.",
+        "Omdat hij nog leeft.",
+        "Omdat er «svaki dan» bij staat en dat de vorm bepaalt."
+      ],
+      "explain_nl": "Aspect draait om de soort gebeurtenis, niet om de tijd. Dolaziti is herhaald of doorlopend, doći is één keer en af.",
+      "targets": [
+        "g.mod.aspect_pairs"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.002",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul aan: «In het ziekenhuis.»",
+      "given": "U ___.",
+      "answer": "bolnici",
+      "accepts": [
+        "bolnici"
+      ],
+      "explain_nl": "U zonder beweging vraagt de locatief: bolnica → bolnici. De c blijft, want die staat al vóór de uitgang.",
+      "targets": [
+        "g.10.lokativ"
+      ],
+      "difficulty": 3,
+      "audio": "U bolnici.",
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.003",
+      "type": "interpret",
+      "mode": "receptive",
+      "prompt_nl": "Welke zin zegt dat hij er nú is?",
+      "given": "A: Ide u bolnicu.\nB: Je u bolnici.",
+      "answer": "B — de locatief zegt waar iemand is.",
+      "distractors": [
+        "A — de accusatief zegt waar iemand is.",
+        "Allebei even goed.",
+        "Geen van beide."
+      ],
+      "explain_nl": "Bolnicu is accusatief en hoort bij beweging ernaartoe; bolnici is locatief en hoort bij zijn.",
+      "targets": [
+        "g.mod.loc_vs_acc"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.004",
+      "type": "cloze",
+      "mode": "productive",
+      "prompt_nl": "Vul de verleden tijd in: «Sanja zei…»",
+      "given": "Sanja ___ rekla da je bolestan.",
+      "answer": "je",
+      "accepts": [
+        "je"
+      ],
+      "explain_nl": "De verleden tijd is een korte vorm van biti plus het deelwoord. Bij ona is dat «je rekla».",
+      "targets": [
+        "g.11.perfekt"
+      ],
+      "difficulty": 2,
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.005",
+      "type": "error_correction",
+      "mode": "productive",
+      "prompt_nl": "Er staat één fout in. Schrijf de zin goed.",
+      "given": "Nitko nije sjedio za taj stolom.",
+      "answer": "Nitko nije sjedio za tim stolom.",
+      "accepts": [
+        "Nitko nije sjedio za tim stolom."
+      ],
+      "explain_nl": "Za met de instrumentalis betekent «aan». Het aanwijzende woord gaat mee: taj → tim.",
+      "targets": [
+        "g.15.instrumental"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.006",
+      "type": "translate_nl_hr",
+      "mode": "productive",
+      "prompt_nl": "Vertaal: «Hij kwam vorige week niet.»",
+      "given": "Hij kwam vorige week niet.",
+      "answer": "Prošli tjedan nije došao.",
+      "accepts": [
+        "Prošli tjedan nije došao.",
+        "Nije došao prošli tjedan.",
+        "On prošli tjedan nije došao."
+      ],
+      "explain_nl": "De ontkende verleden tijd gebruikt nije, niet «ne je». Die vorm bestaat niet.",
+      "targets": [
+        "g.11.perfekt_negacija"
+      ],
+      "difficulty": 3,
+      "source": "verhaal-13"
+    },
+    {
+      "id": "e.pr13.007",
+      "type": "free_production",
+      "mode": "productive",
+      "prompt_nl": "Schrijf vijf zinnen over iemand die je elke week op dezelfde plek zag. Alles in de verleden tijd.",
+      "model_answer": "Moja susjeda je dolazila svaku subotu. Uvijek je sjedila kod prozora. Naručivala je čaj i čitala knjigu. Prošli mjesec nije došla. Nisam pitala zašto.",
+      "rubric_nl": [
+        "Vijf zinnen",
+        "Minstens vier keer verleden tijd",
+        "Een vaste gewoonte en een breuk erin"
+      ],
+      "checks": [
+        {
+          "kind": "min_zinnen",
+          "n": 5,
+          "label": "Vijf zinnen"
+        },
+        {
+          "kind": "min_verleden",
+          "n": 4,
+          "label": "Minstens vier keer verleden tijd"
+        }
+      ],
+      "auto_check": false,
+      "targets": [
+        "g.11.perfekt"
+      ],
+      "difficulty": 4,
+      "source": "verhaal-13"
+    }
+  ]
+}
