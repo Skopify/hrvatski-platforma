@@ -68,12 +68,20 @@ const ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
+/*
+  De volgorde is die van het leren, niet die van het bouwen.
+
+  Bovenaan de vier secties waar je iets nieuws doet — grammatica, lezen,
+  schrijven — en daaronder wat ondersteunt: de lessen uit het boek, het
+  herhalen, de woordenlijst en de cijfers. De lessen stonden eerst tweede,
+  omdat ze het eerst gebouwd zijn; dat is geen reden.
+*/
 const LINKS = [
   { href: "/", label: "Overzicht", icon: "overzicht" },
-  { href: "/lessen", label: "Lessen", icon: "lessen" },
   { href: "/grammatica", label: "Grammatica", icon: "grammatica" },
   { href: "/verhalen", label: "Verhalen", icon: "verhalen" },
   { href: "/schrijven", label: "Schrijven", icon: "schrijven" },
+  { href: "/lessen", label: "Lessen", icon: "lessen" },
   { href: "/oefenen", label: "Oefenen", icon: "herhalen" },
   { href: "/woorden", label: "Woorden", icon: "woorden" },
   { href: "/voortgang", label: "Voortgang", icon: "voortgang" },
