@@ -1043,6 +1043,15 @@ export interface PlacementModuleBlock {
 }
 
 export interface PlacementPlan {
+  /**
+   * 0 zolang er nog geen antwoord gegeven is.
+   *
+   * De rij in `placement_run` werd vroeger bij het opbouwen van dit plan
+   * weggeschreven — dus bij het openen van de pagina. Wie even keek en
+   * wegklikte, liet een lege toets achter; er stonden er vijf. Erger dan
+   * rommel: een lijst met onafgemaakte toetsen suggereert dat er vijf keer
+   * begonnen en vijf keer opgegeven is, en dat is niet gebeurd.
+   */
   runId: number;
   modules: PlacementModuleBlock[];
   bands: { n: number; label: string; probes: import("@/lib/placement").VocabProbe[] }[];
@@ -1063,10 +1072,10 @@ export async function beginPlacement(scope?: string): Promise<PlacementPlan> {
   const { modulesByRank, loadModule } = await import("@/lib/modules");
 
   const lijst = scope ? [loadModule(scope)].filter(Boolean) : modulesByRank();
-  const runId = P.startRun(scope ? "module" : "volledig", scope);
 
   return {
-    runId,
+    // De toets bestaat pas als er iets gemeten is; zie answerPlacement*.
+    runId: 0,
     modules: lijst.map((m) => ({
       code: m!.code,
       title: m!.title_nl,
@@ -1081,15 +1090,24 @@ export async function beginPlacement(scope?: string): Promise<PlacementPlan> {
   };
 }
 
+/**
+ * Een grammatica-antwoord vastleggen, en de toets aanmaken als dit het eerste is.
+ *
+ * Geeft het nummer van de toets terug, omdat dat bij het eerste antwoord pas
+ * ontstaat. De browser onthoudt het en stuurt het bij het volgende antwoord mee.
+ */
 export async function answerPlacementGrammar(
   runId: number,
   moduleCode: string,
   exerciseId: string,
   correct: boolean,
   durationMs: number,
-): Promise<void> {
+  scope?: string,
+): Promise<number> {
   const P = await import("@/lib/placement");
-  P.recordGrammar(runId, moduleCode, exerciseId, correct, durationMs);
+  const id = runId > 0 ? runId : P.startRun(scope ? "module" : "volledig", scope);
+  P.recordGrammar(id, moduleCode, exerciseId, correct, durationMs);
+  return id;
 }
 
 export async function answerPlacementVocab(
@@ -1098,15 +1116,20 @@ export async function answerPlacementVocab(
   itemId: string,
   correct: boolean,
   durationMs: number,
-): Promise<void> {
+  scope?: string,
+): Promise<number> {
   const P = await import("@/lib/placement");
-  P.recordVocab(runId, band, itemId, correct, durationMs);
+  const id = runId > 0 ? runId : P.startRun(scope ? "module" : "volledig", scope);
+  P.recordVocab(id, band, itemId, correct, durationMs);
+  return id;
 }
 
 export async function endPlacement(
   runId: number,
 ): Promise<import("@/lib/placement").PlacementResult> {
   const P = await import("@/lib/placement");
+  // Zonder één beantwoorde vraag is er niets om af te sluiten.
+  if (runId <= 0) return { runId: 0, modules: [], grens: null, gemeten: 0, aangenomen: 0 };
   return P.finishRun(runId);
 }
 

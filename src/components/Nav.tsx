@@ -91,40 +91,57 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
   const pathname = usePathname();
 
   return (
+    /*
+      Op een telefoon een balk onderaan, op een scherm een rail links.
+
+      Bovenaan werkte niet. Acht items naast een logo en de reekstteller zijn
+      samen 648 pixels breed; in een scherm van 375 duwde dat de hele pagina
+      opzij, zodat je hem kon verslepen en Oefenen, Woorden en Voortgang
+      buiten beeld stonden. Onderaan is er geen logo en geen teller nodig — die
+      staan al bovenaan het overzicht — en dan houdt elk item 46 pixels over.
+      Dat is genoeg, en het is waar een duim toch al is.
+    */
     <nav
-      className="sticky top-0 z-40 flex h-16 w-full shrink-0 flex-row items-center gap-1 border-b border-line bg-surface px-3 md:h-screen md:w-[88px] md:flex-col md:gap-1.5 md:border-b-0 md:border-r md:px-0 md:py-5"
+      className="fixed inset-x-0 bottom-0 z-40 flex h-[62px] shrink-0 flex-row items-stretch border-t border-line bg-surface px-1 md:static md:h-screen md:w-[88px] md:flex-col md:items-center md:gap-1.5 md:border-r md:border-t-0 md:px-0 md:py-5"
       aria-label="Hoofdnavigatie"
     >
       <Link
         href="/"
         title="Hrvatski — leerplatform"
-        className="mr-2 flex shrink-0 items-center justify-center transition-transform duration-300 hover:scale-105 md:mr-0 md:mb-4"
+        className="hidden shrink-0 items-center justify-center transition-transform duration-300 hover:scale-105 md:mb-4 md:flex"
       >
         <Logo size={36} />
       </Link>
 
-      <ul className="flex flex-1 flex-row items-center gap-1 md:w-full md:flex-col md:gap-1.5">
+      <ul className="flex w-full flex-1 flex-row items-stretch justify-between px-0.5 md:w-full md:flex-col md:items-center md:justify-start md:gap-1.5 md:px-0">
         {LINKS.map((link) => {
           const active =
             link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
           const badge = link.href === "/oefenen" && due > 0 ? due : null;
 
           return (
-            <li key={link.href} className="relative md:w-full md:px-3.5">
+            /*
+              Op de telefoon krijgt elk item zijn eigen breedte, niet een gelijk
+              achtste. Met flex-1 hield «Grammatica» 46 pixels over voor 49
+              pixels tekst, en dan staat er «Gramm…» — een afgekapt label leest
+              als een storing. Naar behoefte verdeeld passen alle acht samen in
+              346 pixels.
+            */
+            <li key={link.href} className="relative flex md:w-full md:px-3.5">
               {/* De actieve markering: een streep tegen de rand. Onmiskenbaar,
                   zonder dat er een gevulde knop in de rail hoeft. */}
               <span
                 aria-hidden
                 className={`absolute left-1/2 -translate-x-1/2 rounded-full bg-accent transition-all duration-300 ${
                   active
-                    ? "bottom-0 h-[3px] w-8 md:bottom-auto md:left-0 md:top-1/2 md:h-8 md:w-[3px] md:-translate-x-0 md:-translate-y-1/2"
-                    : "bottom-0 h-[3px] w-0 opacity-0 md:top-1/2 md:h-0 md:w-[3px]"
+                    ? "top-0 h-[3px] w-8 md:bottom-auto md:left-0 md:top-1/2 md:h-8 md:w-[3px] md:-translate-x-0 md:-translate-y-1/2"
+                    : "top-0 h-[3px] w-0 opacity-0 md:top-1/2 md:h-0 md:w-[3px]"
                 }`}
               />
               <Link
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`group relative flex flex-col items-center gap-1 rounded-2xl px-2.5 py-2 transition-colors duration-200 md:px-1 md:py-2.5 ${
+                className={`group relative flex w-full flex-col items-center justify-center gap-0.5 rounded-xl px-0.5 py-1.5 transition-colors duration-200 md:gap-1 md:rounded-2xl md:px-1 md:py-2.5 ${
                   active
                     ? "bg-accent-wash text-accent"
                     : "text-ink-muted hover:bg-sunken hover:text-ink-secondary"
@@ -150,7 +167,7 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
                     </span>
                   ) : null}
                 </span>
-                <span className="text-[10px] font-semibold leading-none tracking-tight">
+                <span className="whitespace-nowrap text-[8.5px] font-semibold leading-none tracking-tight md:text-[10px]">
                   {link.label}
                 </span>
               </Link>
@@ -161,7 +178,7 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
 
       {/* Reeks en XP staan altijd in beeld — als geheugensteun dat er iets loopt
           dat je vandaag kunt verliezen, niet als beloning. */}
-      <div className="ml-auto flex shrink-0 flex-row items-center gap-2 md:ml-0 md:w-full md:flex-col md:gap-3 md:border-t md:border-line-soft md:pt-4">
+      <div className="hidden shrink-0 md:flex md:w-full md:flex-col md:items-center md:gap-3 md:border-t md:border-line-soft md:pt-4">
         <span
           title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
           className={`flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-bold md:flex-col md:gap-0.5 md:rounded-none md:bg-transparent md:px-0 ${

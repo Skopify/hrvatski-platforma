@@ -41,7 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <div className="flex min-h-screen flex-col md:flex-row">
           <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} />
-          <main className="min-w-0 flex-1">{children}</main>
+          {/* Ruimte onder de inhoud voor de vaste navigatiebalk op de telefoon. */}
+          <main className="min-w-0 flex-1 pb-[62px] md:pb-0">{children}</main>
         </div>
       </body>
     </html>

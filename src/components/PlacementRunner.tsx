@@ -46,6 +46,8 @@ interface Vraag {
 }
 
 export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: string }) {
+  /* Nul totdat het eerste antwoord de toets aanmaakt — zie beginPlacement. */
+  const runId = useRef(plan.runId);
   const router = useRouter();
 
   const [fase, setFase] = useState<Fase>("intro");
@@ -116,12 +118,12 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
 
   const afronden = useCallback(async () => {
     setBezig(true);
-    const r = await endPlacement(plan.runId);
+    const r = await endPlacement(runId.current);
     setUitslag(r);
     setFase("klaar");
     setBezig(false);
     router.refresh();
-  }, [plan.runId, router]);
+  }, [router]);
 
   const volgende = useCallback(async () => {
     if (keuze === null || bezig) return;
@@ -130,11 +132,22 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
     const duur = Date.now() - start.current;
     setBezig(true);
 
+    /*
+      Het nummer van de toets komt terug van het eerste antwoord.
+
+      Vroeger stond het al in het plan, en werd de rij dus aangemaakt zodra de
+      pagina laadde. Nu ontstaat de toets pas als er iets te meten valt, en
+      onthoudt de browser het nummer voor de vragen daarna.
+    */
     if (v.soort === "grammatica" && v.moduleCode && v.exerciseId) {
-      await answerPlacementGrammar(plan.runId, v.moduleCode, v.exerciseId, goed, duur);
+      runId.current = await answerPlacementGrammar(
+        runId.current, v.moduleCode, v.exerciseId, goed, duur, scope,
+      );
       if (goed) moduleGoed.current++;
     } else if (v.soort === "woord" && v.band !== undefined && v.itemId) {
-      await answerPlacementVocab(plan.runId, v.band, v.itemId, goed, duur);
+      runId.current = await answerPlacementVocab(
+        runId.current, v.band, v.itemId, goed, duur, scope,
+      );
       if (goed) bandGoed.current++;
     }
 

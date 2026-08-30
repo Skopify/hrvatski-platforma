@@ -117,6 +117,30 @@ await test("2", "Er is geen enkele weg om een status zonder antwoorden te zetten
 
 /* ------------------------------------------------------------------ 3 --- */
 
+await test("3", "Het openen van de toets legt nog niets vast", async () => {
+  /*
+    Een toets bestaat pas als er iets gemeten is.
+
+    Het opbouwen van het plan schreef vroeger meteen een rij weg, dus het
+    openen van de pagina telde als een begonnen toets. Er stonden er vier die
+    niemand ooit gedaan had, en een lijst met afgebroken metingen die er geen
+    zijn is erger dan geen lijst.
+  */
+  // Dynamisch importeren: de db-module leest HRVATSKI_DB bij het laden, en die
+  // wordt hierboven pas gezet.
+  const { beginPlacement } = await import("../src/app/actions");
+  const { sqlite } = await import("../src/lib/db");
+  const tel = () => (sqlite.prepare("SELECT count(*) n FROM placement_run").get() as { n: number }).n;
+
+  const voor = tel();
+  const plan = await beginPlacement();
+  const na = tel();
+
+  eis(plan.runId === 0, `plan begint met runId ${plan.runId}, verwacht 0`);
+  eis(na === voor, `openen maakte ${na - voor} rij(en) aan in placement_run`);
+  return `plan opgebouwd met ${plan.modules.length} modules; placement_run bleef op ${na} rij(en)`;
+});
+
 await test("3", "Een afname legt per module een status vast", () => {
   const runId = P.startRun("volledig");
   const modules = modulesByRank();
