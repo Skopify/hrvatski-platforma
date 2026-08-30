@@ -2,6 +2,7 @@ import { and, desc, eq, gte, sql } from "drizzle-orm";
 import { State } from "ts-fsrs";
 
 import { findExercise, loadCaseUsage } from "./content";
+import { normalize } from "./grading";
 import { db } from "./db";
 import {
   attempts,
@@ -686,7 +687,29 @@ export function mistakes(limit = 40): Mistake[] {
     });
   }
 
+  /*
+    Fouten waarvan het juiste antwoord niet meer klopt, vallen af.
+
+    Het foutenlogboek bewaart wat er destijds verwacht werd. Wordt een oefening
+    later herschreven, dan blijft die oude verwachting staan — «noć, kuća» werd
+    zo als fout getoond met «ć ć» ernaast, terwijl de oefening nu juist om de
+    woorden vraagt en «noć, kuća» goedkeurt. Zeven van de achtenvijftig regels
+    stonden er zo bij.
+
+    Ze uit de database gooien zou historie weggooien; ze tonen zou je een
+    antwoord laten instuderen dat het platform zelf afkeurt. Dus blijven ze
+    staan en komen ze niet in beeld.
+  */
+  const nogGeldig = (m: Mistake) => {
+    const gevonden = findExercise(m.exerciseId);
+    if (!gevonden) return true; // drills en losse vragen hebben geen contentregel
+    const e = gevonden.exercise;
+    const goed = [e.answer, ...(e.accepts ?? [])].filter(Boolean).map((x) => normalize(x!));
+    return goed.length === 0 || goed.includes(normalize(m.expected));
+  };
+
   return [...grouped.values()]
+    .filter(nogGeldig)
     .sort((a, b) => b.times - a.times || b.lastAt - a.lastAt)
     .slice(0, limit);
 }
@@ -827,7 +850,7 @@ export function allVocab(): VocabRecord[] {
  * klikt, in plaats van erna.
  */
 export function drillAvailability(): Record<string, { now: number; from: number | null }> {
-  const maxLesson = Math.max(1, highestActiveLesson());
+  const maxLesson = highestActiveLesson();
   const rows = db
     .select({ lesson: items.lesson, payload: items.payload })
     .from(items)
@@ -903,7 +926,7 @@ export function wordOfTheDay(): {
   lesson: number;
   seen: boolean;
 } | null {
-  const maxLesson = Math.max(1, highestActiveLesson());
+  const maxLesson = highestActiveLesson();
 
   const rows = db
     .select({ id: items.id, lesson: items.lesson, payload: items.payload, state: srs.state })
@@ -945,9 +968,28 @@ export function wordOfTheDay(): {
 }
 
 /** Het hoogste lesnummer dat af of onderweg is — bepaalt welk verhaal "op niveau" is. */
+/**
+ * Tot welke les de leergang open staat.
+ *
+ * Dit was «de hoogste les die je begonnen of afgerond hebt», en dat gaf nul —
+ * want het werk van deze leerder zit in de modules en de verhalen, niet in het
+ * lessenspoor. Nul is geen onschuldig getal: de drills zoeken woorden uit
+ * lessen tot en met dit nummer en vonden er dus geen enkele, terwijl het
+ * oefenscherm er 115 beloofde. Dat scherm rekende met Math.max(1, …) en de
+ * drill niet — twee plekken, twee antwoorden, en de leerder ziet een lege
+ * oefening onder een gevulde belofte.
+ *
+ * Nu telt ook een les die je mág openen. Dat is wat de leergang je aanbiedt,
+ * en precies het juiste plafond voor oefenstof. De ondergrens van 1 zit hier
+ * en niet bij de aanroepers, zodat hij niet opnieuw uit elkaar kan lopen.
+ */
 export function highestActiveLesson(): number {
   const rows = db.select().from(lessonProgress).all();
-  return rows
+  const bezig = rows
     .filter((r) => r.status === "done" || r.status === "in_progress")
     .reduce((n, r) => Math.max(n, r.lesson), 0);
+  const open = rows
+    .filter((r) => r.status !== "locked")
+    .reduce((n, r) => Math.max(n, r.lesson), 0);
+  return Math.max(1, bezig, open);
 }

@@ -25,7 +25,8 @@
     "check:verhalen": "tsx scripts/check-verhalen.ts",
     "lexicon": "tsx scripts/lexicon.ts",
     "gloss": "tsx scripts/gloss-hulp.ts",
-    "proef:schrijven": "tsx scripts/proef-schrijven.ts"
+    "proef:schrijven": "tsx scripts/proef-schrijven.ts",
+    "proef:platform": "tsx scripts/proef-platform.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

@@ -56,6 +56,7 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run patch` | contentwijzigingen uit `content/patch-*.json` |
 | `npm run nakijk-oogst` | wat de moedertaalspreker heeft afgekeurd of betwijfeld |
 | `npm run proef:schrijven` | de tien schrijfopdrachten doorlopen als leerder |
+| `npm run proef:platform` | alle secties end-to-end, op een kopie van de database |
 
 ## Geheimen
 
