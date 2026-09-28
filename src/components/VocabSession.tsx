@@ -6,7 +6,7 @@ import { useCallback, useRef, useState } from "react";
 import { submitVocab, type VocabFeedback } from "@/app/actions";
 import type { StageQuestion } from "@/lib/stages";
 import { SpecialChars } from "./SpecialChars";
-import { Bolt } from "./ui";
+import { Bolt, StepTiles } from "./ui";
 
 /** Wat elk stadium van je vraagt, in gewone taal. */
 const STAGE_LABEL: Record<string, string> = {
@@ -131,16 +131,7 @@ export function VocabSession({
             </span>
           </span>
         </div>
-        <div className="flex gap-[3px]">
-          {questions.map((q, i) => (
-            <span
-              key={q.cardId}
-              className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
-                i < index ? "bg-accent" : i === index ? "bg-accent-bright" : "bg-line"
-              }`}
-            />
-          ))}
-        </div>
+        <StepTiles steps={questions.map((_, i) => (i < index ? "done" : i === index ? "current" : "todo"))} />
         <p className="mt-3 text-[12px] text-ink-muted">
           {due} te herhalen · {nieuw} nieuw
         </p>

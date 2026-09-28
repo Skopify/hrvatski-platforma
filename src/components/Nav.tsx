@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLayoutEffect, useRef, useState } from "react";
 
-import { Bolt, Logo } from "./ui";
+import { ThemeToggle } from "./ThemeToggle";
+import { Bolt } from "./ui";
 
 /* Lijniconen, 21px, één stroke-gewicht — geen icoonbibliotheek nodig. */
 const ICONS: Record<string, React.ReactNode> = {
@@ -87,74 +89,132 @@ const LINKS = [
   { href: "/voortgang", label: "Voortgang", icon: "voortgang" },
 ];
 
+/**
+ * Het logo als kubus: zes kanten šahovnica, in 3D. Bij hover draait hij een
+ * kwartslag — een object dat je kunt aanraken, geen plaatje.
+ */
+function LogoCube({ size = 30 }: { size?: number }) {
+  const half = size / 2;
+  const faces = [
+    `rotateY(0deg) translateZ(${half}px)`,
+    `rotateY(90deg) translateZ(${half}px)`,
+    `rotateY(180deg) translateZ(${half}px)`,
+    `rotateY(-90deg) translateZ(${half}px)`,
+    `rotateX(90deg) translateZ(${half}px)`,
+    `rotateX(-90deg) translateZ(${half}px)`,
+  ];
+  return (
+    <span className="block" style={{ width: size, height: size, perspective: 400 }} aria-hidden>
+      <span className="cube block h-full w-full">
+        {faces.map((t) => (
+          <i key={t} style={{ transform: t }} />
+        ))}
+      </span>
+    </span>
+  );
+}
+
+type Box = { x: number; y: number; w: number; h: number };
+
 export function Nav({ streak, xp, due }: { streak: number; xp: number; due: number }) {
   const pathname = usePathname();
+  const list = useRef<HTMLUListElement>(null);
+  const [box, setBox] = useState<Box | null>(null);
+  const [animate, setAnimate] = useState(false);
+
+  const activeIndex = LINKS.findIndex((link) =>
+    link.href === "/" ? pathname === "/" : pathname.startsWith(link.href),
+  );
+
+  /*
+    Eén markering voor het hele menu, die naar het actieve item schuift. Zo
+    zie je waar je vandaan komt en waar je heen gaat, in plaats van dat de ene
+    knop uit en de andere aan flitst. De eerste keer zonder animatie — dan is
+    er geen "vandaan".
+  */
+  useLayoutEffect(() => {
+    const measure = () => {
+      const ul = list.current;
+      const a = ul?.querySelectorAll<HTMLAnchorElement>("a[data-nav]")[activeIndex];
+      if (!ul || !a) return setBox(null);
+      const u = ul.getBoundingClientRect();
+      const r = a.getBoundingClientRect();
+      setBox({ x: r.left - u.left, y: r.top - u.top, w: r.width, h: r.height });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (list.current) ro.observe(list.current);
+    const t = requestAnimationFrame(() => setAnimate(true));
+    return () => {
+      ro.disconnect();
+      cancelAnimationFrame(t);
+    };
+  }, [activeIndex]);
 
   return (
     /*
-      Op een telefoon een balk onderaan, op een scherm een rail links.
+      Op een telefoon een zwevende glazen balk onderaan, op een scherm een rail
+      links die blijft staan als je scrolt.
 
-      Bovenaan werkte niet. Acht items naast een logo en de reekstteller zijn
-      samen 648 pixels breed; in een scherm van 375 duwde dat de hele pagina
-      opzij, zodat je hem kon verslepen en Oefenen, Woorden en Voortgang
-      buiten beeld stonden. Onderaan is er geen logo en geen teller nodig — die
-      staan al bovenaan het overzicht — en dan houdt elk item 46 pixels over.
-      Dat is genoeg, en het is waar een duim toch al is.
+      Op de telefoon passen acht labels niet leesbaar naast elkaar (bij 8,5px
+      wel, maar dat las niemand). Dus: iconen, en alleen het actieve item krijgt
+      zijn naam erbij. Elk icoon houdt een raakvlak van 40 bij 48.
     */
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 flex h-[62px] shrink-0 flex-row items-stretch border-t border-line bg-surface px-1 md:static md:h-screen md:w-[88px] md:flex-col md:items-center md:gap-1.5 md:border-r md:border-t-0 md:px-0 md:py-5"
+      className="glass fixed inset-x-2 bottom-[calc(8px+env(safe-area-inset-bottom))] z-40 flex h-[58px] shrink-0 flex-row items-stretch rounded-[20px] border border-line px-1 shadow-[var(--lift-3)] md:sticky md:inset-auto md:top-0 md:h-screen md:w-[92px] md:flex-col md:items-center md:rounded-none md:border-y-0 md:border-l-0 md:border-r md:bg-surface md:px-0 md:py-5 md:shadow-none md:backdrop-blur-none"
       aria-label="Hoofdnavigatie"
     >
       <Link
         href="/"
         title="Hrvatski — leerplatform"
-        className="hidden shrink-0 items-center justify-center transition-transform duration-300 hover:scale-105 md:mb-4 md:flex"
+        aria-label="Naar het overzicht"
+        className="cube-wrap hidden shrink-0 items-center justify-center rounded-xl p-2 md:mb-5 md:flex"
       >
-        <Logo size={36} />
+        <LogoCube />
       </Link>
 
-      <ul className="flex w-full flex-1 flex-row items-stretch justify-between px-0.5 md:w-full md:flex-col md:items-center md:justify-start md:gap-1.5 md:px-0">
-        {LINKS.map((link) => {
-          const active =
-            link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+      <ul
+        ref={list}
+        className="relative flex w-full flex-1 flex-row items-center justify-between px-0.5 md:w-full md:flex-col md:items-center md:justify-start md:gap-1 md:px-3"
+      >
+        {box ? (
+          <li
+            aria-hidden
+            className="pointer-events-none absolute left-0 top-0 rounded-2xl bg-accent-wash"
+            style={{
+              width: box.w,
+              height: box.h,
+              transform: `translate3d(${box.x}px, ${box.y}px, 0)`,
+              transition: animate
+                ? "transform 380ms var(--ease-in-out-strong), width 380ms var(--ease-in-out-strong), height 380ms var(--ease-in-out-strong)"
+                : "none",
+            }}
+          />
+        ) : null}
+
+        {LINKS.map((link, i) => {
+          const active = i === activeIndex;
           const badge = link.href === "/oefenen" && due > 0 ? due : null;
 
           return (
-            /*
-              Op de telefoon krijgt elk item zijn eigen breedte, niet een gelijk
-              achtste. Met flex-1 hield «Grammatica» 46 pixels over voor 49
-              pixels tekst, en dan staat er «Gramm…» — een afgekapt label leest
-              als een storing. Naar behoefte verdeeld passen alle acht samen in
-              346 pixels.
-            */
-            <li key={link.href} className="relative flex md:w-full md:px-3.5">
-              {/* De actieve markering: een streep tegen de rand. Onmiskenbaar,
-                  zonder dat er een gevulde knop in de rail hoeft. */}
-              <span
-                aria-hidden
-                className={`absolute left-1/2 -translate-x-1/2 rounded-full bg-accent transition-all duration-300 ${
-                  active
-                    ? "top-0 h-[3px] w-8 md:bottom-auto md:left-0 md:top-1/2 md:h-8 md:w-[3px] md:-translate-x-0 md:-translate-y-1/2"
-                    : "top-0 h-[3px] w-0 opacity-0 md:top-1/2 md:h-0 md:w-[3px]"
-                }`}
-              />
+            <li key={link.href} className="relative flex md:w-full">
               <Link
                 href={link.href}
+                data-nav
                 aria-current={active ? "page" : undefined}
-                className={`group relative flex w-full flex-col items-center justify-center gap-0.5 rounded-xl px-0.5 py-1.5 transition-colors duration-200 md:gap-1 md:rounded-2xl md:px-1 md:py-2.5 ${
-                  active
-                    ? "bg-accent-wash text-accent"
-                    : "text-ink-muted hover:bg-sunken hover:text-ink-secondary"
+                aria-label={link.label}
+                className={`group relative flex h-12 w-full flex-col items-center justify-center gap-0.5 rounded-2xl transition-colors duration-200 md:h-auto md:gap-1 md:px-1 md:py-2.5 ${
+                  active ? "min-w-[64px] px-2 text-accent" : "min-w-[38px] text-ink-muted hover:text-ink"
                 }`}
               >
-                <span className="relative">
+                <span className="relative transition-transform duration-200 group-active:scale-90">
                   <svg
-                    width="21"
-                    height="21"
+                    width="22"
+                    height="22"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.6"
+                    strokeWidth={active ? 1.9 : 1.6}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden
@@ -162,12 +222,16 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
                     {ICONS[link.icon]}
                   </svg>
                   {badge ? (
-                    <span className="tabular absolute -right-2.5 -top-1.5 min-w-[17px] rounded-full bg-warm-bright px-1 text-center text-[10px] font-bold leading-[17px] text-white">
+                    <span className="tabular absolute -right-2.5 -top-1.5 min-w-[18px] rounded-full bg-warm px-1 text-center text-[11px] font-bold leading-[18px] text-on-fill">
                       {badge > 99 ? "99" : badge}
                     </span>
                   ) : null}
                 </span>
-                <span className="whitespace-nowrap text-[8.5px] font-semibold leading-none tracking-tight md:text-[10px]">
+                <span
+                  className={`whitespace-nowrap text-[11px] font-semibold leading-none tracking-tight ${
+                    active ? "animate-rise" : "hidden md:inline"
+                  }`}
+                >
                   {link.label}
                 </span>
               </Link>
@@ -176,13 +240,13 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
         })}
       </ul>
 
-      {/* Reeks en XP staan altijd in beeld — als geheugensteun dat er iets loopt
-          dat je vandaag kunt verliezen, niet als beloning. */}
+      {/* Reeks, XP en het thema. De reeks staat altijd in beeld — als
+          geheugensteun dat er iets loopt dat je vandaag kunt verliezen. */}
       <div className="hidden shrink-0 md:flex md:w-full md:flex-col md:items-center md:gap-3 md:border-t md:border-line-soft md:pt-4">
         <span
           title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
-          className={`flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-bold md:flex-col md:gap-0.5 md:rounded-none md:bg-transparent md:px-0 ${
-            streak > 0 ? "bg-warm-wash text-warm" : "bg-sunken text-ink-muted"
+          className={`flex flex-col items-center gap-0.5 text-[12px] font-bold ${
+            streak > 0 ? "text-warm" : "text-ink-muted"
           }`}
         >
           <svg
@@ -197,16 +261,15 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
               fill={streak > 0 ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
             />
           </svg>
-          <span className="tabular">{streak}</span>
+          <span className="num">{streak}</span>
         </span>
 
-        <span
-          title={`${xp} XP totaal`}
-          className="hidden items-center gap-1 text-[11px] font-bold text-ink-muted md:flex md:flex-col md:gap-0.5"
-        >
+        <span title={`${xp} XP totaal`} className="flex flex-col items-center gap-0.5 text-[12px] font-bold text-ink-muted">
           <Bolt className="text-gold-bright" />
-          <span className="tabular">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp}</span>
+          <span className="num">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp}</span>
         </span>
+
+        <ThemeToggle />
       </div>
     </nav>
   );

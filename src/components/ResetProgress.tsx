@@ -102,7 +102,7 @@ export function ResetProgress({
                   setBezig(false);
                 }
               }}
-              className="rounded-full bg-bad px-4 py-2 text-[12.5px] font-semibold text-white transition-colors hover:bg-bad-ink disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-full bg-bad px-4 py-2 text-[12.5px] font-semibold text-on-fill transition-colors hover:bg-bad-ink disabled:cursor-not-allowed disabled:opacity-40"
             >
               {bezig ? "Bezig…" : "Definitief wissen"}
             </button>

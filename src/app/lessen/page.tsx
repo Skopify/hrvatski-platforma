@@ -92,7 +92,7 @@ export default function LessonsPage() {
                   </p>
                   <div className="mt-1.5 h-1.5 w-24 overflow-hidden rounded-full bg-sunken">
                     <div
-                      className="h-full rounded-full bg-accent transition-[width] duration-700"
+                      className="h-full rounded-full bg-accent animate-grow-x origin-left"
                       style={{ width: `${(bandDone / inBand.length) * 100}%` }}
                     />
                   </div>
@@ -116,7 +116,7 @@ export default function LessonsPage() {
                         <span
                           className={`tabular mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold ${
                             status === "done"
-                              ? "bg-accent text-white"
+                              ? "bg-accent text-on-fill"
                               : status === "in_progress"
                                 ? "border-2 border-accent bg-accent-wash text-accent"
                                 : openable

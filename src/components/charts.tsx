@@ -63,7 +63,7 @@ export function StatTile({
   meter?: number;
 }) {
   return (
-    <div className="card card-lift relative flex h-full flex-col overflow-hidden px-5 py-4">
+    <div className="card relative flex h-full flex-col overflow-hidden px-5 py-4">
       <div className="flex items-start justify-between gap-2">
         <p className="text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted">{label}</p>
         {icon ? (
@@ -74,7 +74,7 @@ export function StatTile({
           </span>
         ) : null}
       </div>
-      <p className={`display mt-2 text-[34px] leading-none ${TONE_TEXT[tone]}`}>{value}</p>
+      <p className={`num mt-2 text-[38px] leading-none ${TONE_TEXT[tone]}`}>{value}</p>
       {sub ? <p className="mt-2 text-[12.5px] leading-snug text-ink-secondary">{sub}</p> : null}
       {/* De balk zakt naar de voet van de tegel, zodat tegels met en zonder balk
           in dezelfde rij dezelfde hoogte houden. */}
@@ -82,7 +82,7 @@ export function StatTile({
         <div className="mt-auto pt-3">
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-sunken">
             <div
-              className="h-full rounded-full bg-accent transition-[width] duration-700"
+              className="h-full rounded-full bg-accent animate-grow-x origin-left"
               style={{
                 width: `${Math.min(100, Math.max(meter * 100, meter > 0 ? 4 : 0))}%`,
               }}
@@ -119,7 +119,7 @@ export function Meter({
         aria-valuemax={100}
       >
         <div
-          className="h-full rounded-full bg-accent transition-[width] duration-700"
+          className="h-full rounded-full bg-accent animate-grow-x origin-left"
           style={{ width: `${Math.max(pct * 100, value > 0 ? 3 : 0)}%` }}
         />
       </div>
@@ -269,6 +269,9 @@ export function LineChart({
                 <path d={area} fill={ACCENT} fillOpacity={0.07} />
                 <path
                   d={path}
+                  pathLength={1}
+                  className="animate-draw"
+                  style={{ "--len": 1 } as React.CSSProperties}
                   fill="none"
                   stroke={ACCENT}
                   strokeWidth={2.5}
@@ -415,6 +418,9 @@ export function AreaChart({
           <path d={area} fill={ACCENT} fillOpacity={0.07} />
           <path
             d={line}
+            pathLength={1}
+            className="animate-draw"
+            style={{ "--len": 1 } as React.CSSProperties}
             fill="none"
             stroke={ACCENT}
             strokeWidth={2.5}
@@ -505,6 +511,7 @@ export function BarList({
                   <path
                     d={barPath(Math.max(pct * 300, d.value > 0 ? 4 : 0), 14, 4)}
                     fill={d.emphasis ? "var(--color-bad)" : ACCENT}
+                    className="animate-grow-x"
                   />
                 </svg>
                 <span className="tabular w-14 text-right text-[12.5px] font-bold text-ink">
@@ -619,6 +626,8 @@ export function Heatmap({
               height={size}
               rx={3.5}
               fill={step(c.value)}
+              className="animate-cell"
+              style={{ "--i": c.col + c.row } as React.CSSProperties}
               onMouseEnter={() => setHover({ date: c.date, value: c.value })}
               onMouseLeave={() => setHover(null)}
             />

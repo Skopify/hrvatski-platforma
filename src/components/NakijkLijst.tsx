@@ -115,7 +115,7 @@ export function NakijkLijst({
               type="button"
               disabled={bezig}
               onClick={() => verder("goedgekeurd")}
-              className="rounded-xl bg-accent px-4 py-3.5 text-[14px] font-semibold text-white disabled:opacity-50"
+              className="rounded-xl bg-accent px-4 py-3.5 text-[14px] font-semibold text-on-fill disabled:opacity-50"
             >
               Točno
             </button>
@@ -126,7 +126,7 @@ export function NakijkLijst({
                 setCorrectie(zin.hr);
                 setToon("fout");
               }}
-              className="rounded-xl border border-line-strong bg-white px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
+              className="rounded-xl border border-line-strong bg-surface px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
             >
               Greška
             </button>
@@ -134,7 +134,7 @@ export function NakijkLijst({
               type="button"
               disabled={bezig}
               onClick={() => setToon("twijfel")}
-              className="rounded-xl border border-line-strong bg-white px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
+              className="rounded-xl border border-line-strong bg-surface px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
             >
               Nisam siguran
             </button>
@@ -151,7 +151,7 @@ export function NakijkLijst({
               onChange={(e) => setCorrectie(e.target.value)}
               rows={2}
               autoFocus
-              className="mt-2 w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-[15px] text-ink"
+              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[15px] text-ink"
             />
             <label className="mt-4 block text-[12.5px] font-semibold text-ink-secondary">
               Zašto? (nije obavezno)
@@ -159,21 +159,21 @@ export function NakijkLijst({
             <input
               value={opmerking}
               onChange={(e) => setOpmerking(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-[14px] text-ink"
+              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[14px] text-ink"
             />
             <div className="mt-4 flex gap-2">
               <button
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("fout", correctie, opmerking)}
-                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-white disabled:opacity-50"
+                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
               >
                 Spremi
               </button>
               <button
                 type="button"
                 onClick={() => setToon(null)}
-                className="rounded-xl border border-line-strong bg-white px-5 py-3 text-[14px] font-semibold text-ink"
+                className="rounded-xl border border-line-strong bg-surface px-5 py-3 text-[14px] font-semibold text-ink"
               >
                 Natrag
               </button>
@@ -190,21 +190,21 @@ export function NakijkLijst({
               value={opmerking}
               onChange={(e) => setOpmerking(e.target.value)}
               autoFocus
-              className="mt-2 w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-[14px] text-ink"
+              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[14px] text-ink"
             />
             <div className="mt-4 flex gap-2">
               <button
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("twijfel", undefined, opmerking)}
-                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-white disabled:opacity-50"
+                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
               >
                 Spremi
               </button>
               <button
                 type="button"
                 onClick={() => setToon(null)}
-                className="rounded-xl border border-line-strong bg-white px-5 py-3 text-[14px] font-semibold text-ink"
+                className="rounded-xl border border-line-strong bg-surface px-5 py-3 text-[14px] font-semibold text-ink"
               >
                 Natrag
               </button>

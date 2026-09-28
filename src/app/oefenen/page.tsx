@@ -115,7 +115,7 @@ export default function PracticePage() {
           {due > 0 ? (
             <Link href="/oefenen/herhalen" className="btn btn-primary px-6 py-2.5 text-[13.5px]">
               Start herhaling
-              <span className="tabular rounded-full bg-white/22 px-2 py-0.5 text-[12px]">{due}</span>
+              <span className="tabular rounded-full bg-on-fill/20 px-2 py-0.5 text-[12px]">{due}</span>
             </Link>
           ) : (
             <Link href="/lessen" className="btn btn-ghost px-5 py-2.5 text-[13.5px]">

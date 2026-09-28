@@ -63,7 +63,8 @@ const VERDICT_STYLE: Record<CoverageVerdict, { tone: string; bar: string }> = {
   ideaal: { tone: "text-good-ink", bar: "var(--color-good)" },
   goed: { tone: "text-accent", bar: "var(--color-accent)" },
   pittig: { tone: "text-gold", bar: "var(--color-gold-bright)" },
-  hoog: { tone: "text-bad-ink", bar: "var(--color-bad)" },
+  // Boven je niveau is een waarschuwing, geen fout: oranje, niet rood.
+  hoog: { tone: "text-warm", bar: "var(--color-warm-bright)" },
 };
 
 /** De volgorde van de niveaus, zodat A1.1 boven B1 staat en niet andersom. */
@@ -123,7 +124,7 @@ export default function StoriesPage() {
                               aria-hidden
                               className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
                                 onLevel
-                                  ? "bg-accent text-white"
+                                  ? "bg-accent text-on-fill"
                                   : "bg-sunken text-ink-muted"
                               }`}
                             >
@@ -185,7 +186,7 @@ export default function StoriesPage() {
                                   </div>
                                   <div className="relative mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-sunken">
                                     <div
-                                      className="h-full rounded-full transition-[width] duration-700"
+                                      className="animate-grow-x h-full origin-left rounded-full"
                                       style={{
                                         width: `${Math.max(cov.coverage * 100, 3)}%`,
                                         background: VERDICT_STYLE[verdict].bar,
@@ -195,7 +196,7 @@ export default function StoriesPage() {
                                     <span
                                       aria-hidden
                                       title="95% — de grens voor vlot lezen"
-                                      className="absolute top-0 h-full w-px bg-ink-muted/50"
+                                      className="absolute top-0 h-full w-0.5 bg-ink/60"
                                       style={{ left: "95%" }}
                                     />
                                   </div>

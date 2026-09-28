@@ -20,7 +20,7 @@ import {
 import type { PresentedExercise } from "@/lib/present";
 import { useCroatianTts } from "@/lib/tts";
 import { Answer, ExerciseView, emptyAnswer, isAnswered } from "./ExerciseView";
-import { Bolt } from "./ui";
+import { Bolt, StepTiles, outcomeOf, type StepOutcome } from "./ui";
 
 export interface Step {
   exercise: PresentedExercise;
@@ -80,6 +80,8 @@ export function SessionRunner({
   const [correct, setCorrect] = useState(0);
   const [graded, setGraded] = useState(0);
   const [finished, setFinished] = useState(false);
+  /** Uitkomst per opgave, voor de tegels bovenaan: welke kleur kantelt er om. */
+  const [outcomes, setOutcomes] = useState<Record<string, StepOutcome>>({});
   /**
    * Op welke trede van de escalatie deze oefening staat. 0 = eerste poging.
    * Leeft hier en niet op de server: de server bepaalt wát er op een trede
@@ -203,6 +205,7 @@ export function SessionRunner({
         setXp((v) => v + result.xp);
         setGraded((v) => v + 1);
         if (result.correct) setCorrect((v) => v + 1);
+        setOutcomes((o) => ({ ...o, [step.exercise.id]: outcomeOf(result.correct, result.nearMiss) }));
       }
       setBusy(false);
     } finally {
@@ -233,6 +236,7 @@ export function SessionRunner({
         setXp((v) => v + result.xp);
         setGraded((v) => v + 1);
         if (result.correct) setCorrect((v) => v + 1);
+        setOutcomes((o) => ({ ...o, [step.exercise.id]: outcomeOf(result.correct, result.nearMiss) }));
       } finally {
         setBusy(false);
         inFlight.current = false;
@@ -255,6 +259,7 @@ export function SessionRunner({
       setXp((v) => v + result.xp);
       setGraded((v) => v + 1);
       if (ok) setCorrect((v) => v + 1);
+      setOutcomes((o) => ({ ...o, [step.exercise.id]: ok ? "ok" : "no" }));
       setBusy(false);
       inFlight.current = false;
       advance();
@@ -341,7 +346,7 @@ export function SessionRunner({
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-8 sm:px-8 sm:py-10">
-      <header className="sticky top-16 z-30 -mx-5 mb-8 bg-plane/85 px-5 pb-4 pt-2 backdrop-blur-md sm:-mx-8 sm:px-8 md:top-0 md:pt-4">
+      <header className="sticky top-0 z-30 -mx-5 mb-8 bg-plane/85 px-5 pb-4 pt-2 backdrop-blur-md sm:-mx-8 sm:px-8 md:top-0 md:pt-4">
         <div className="mb-3 flex items-center justify-between gap-4">
           <Link
             href={backHref ?? (kind === "lesson" ? "/lessen" : "/")}
@@ -362,16 +367,11 @@ export function SessionRunner({
 
         {/* Eén segment per stap. Een doorlopende balk zegt "ergens halverwege";
             segmenten zeggen "nog zes" — dat is wat je tijdens een sessie wilt weten. */}
-        <div className="flex gap-[3px]">
-          {steps.map((s, i) => (
-            <span
-              key={s.exercise.id}
-              className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
-                i < index ? "bg-accent" : i === index ? "bg-accent-bright" : "bg-line"
-              }`}
-            />
-          ))}
-        </div>
+        <StepTiles
+          steps={steps.map((s, i) =>
+            outcomes[s.exercise.id] ?? (i < index ? "done" : i === index ? "current" : "todo"),
+          )}
+        />
       </header>
 
       <div key={step.exercise.id} className="animate-rise">
@@ -453,7 +453,7 @@ function CheckLijst({ report }: { report?: import("@/app/actions").Feedback["rep
     <div className="mb-4">
       {report.checks.length ? (
         <>
-          <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+          <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
             Nagekeken
           </p>
           <ul className="mt-2 space-y-1.5">
@@ -507,7 +507,7 @@ function FeedbackPanel({
     return (
       <div className="animate-rise mt-6 rounded-card border border-line bg-sunken px-5 py-5">
         <CheckLijst report={feedback.report} />
-        <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+        <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
           Modelantwoord
         </p>
         <p className="hr-text reading mt-2 text-[18px] text-ink">
@@ -559,7 +559,7 @@ function FeedbackPanel({
       <div className="animate-rise mt-6 rounded-card bg-gold-wash px-5 py-5">
         <div className="flex items-start gap-3">
           <span
-            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-bright text-[13px] font-bold text-white"
+            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold text-[13px] font-bold text-on-fill"
             aria-hidden
           >
             ?
@@ -615,7 +615,7 @@ function FeedbackPanel({
     >
       <div className="flex items-start gap-3">
         <span
-          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-white ${badge}`}
+          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-on-fill ${badge}`}
           aria-hidden
         >
           {feedback.correct ? (

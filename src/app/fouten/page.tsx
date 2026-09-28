@@ -141,7 +141,7 @@ export default function MistakesPage() {
 
                     <div className="mt-3 grid gap-2 sm:grid-cols-2">
                       <div className="rounded-xl bg-bad-wash px-3.5 py-2.5">
-                        <p className="text-[10.5px] font-bold uppercase tracking-[0.06em] text-bad-ink">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.06em] text-bad-ink">
                           Jij schreef
                         </p>
                         <p className="hr-text mt-1 text-[15px] text-ink">
@@ -149,7 +149,7 @@ export default function MistakesPage() {
                         </p>
                       </div>
                       <div className="rounded-xl bg-good-wash px-3.5 py-2.5">
-                        <p className="text-[10.5px] font-bold uppercase tracking-[0.06em] text-good-ink">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.06em] text-good-ink">
                           Het moest zijn
                         </p>
                         <p className="hr-text mt-1 text-[15px] font-semibold text-ink">

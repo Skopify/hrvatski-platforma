@@ -100,7 +100,7 @@ export default function SchrijvenPage() {
                           aria-hidden
                           className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
                             o.werk?.klaar
-                              ? "bg-accent text-white"
+                              ? "bg-accent text-on-fill"
                               : o.werk
                                 ? "bg-accent-wash text-accent"
                                 : "bg-sunken text-ink-muted"
@@ -154,7 +154,7 @@ export default function SchrijvenPage() {
                             </div>
                             <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-sunken">
                               <div
-                                className="h-full rounded-full bg-accent transition-[width] duration-700"
+                                className="h-full rounded-full bg-accent animate-grow-x origin-left"
                                 style={{ width: `${deel * 100}%` }}
                               />
                             </div>

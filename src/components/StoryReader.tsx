@@ -123,7 +123,7 @@ export function StoryReader({
           onClick={() => tapWord(part)}
           className={`rounded-[4px] transition-colors duration-100 ${
             isActive
-              ? "bg-accent text-white"
+              ? "bg-accent text-on-fill"
               : "hover:bg-accent-wash hover:text-accent"
           }`}
         >
@@ -150,7 +150,7 @@ export function StoryReader({
               type="button"
               onClick={() => setShowNl(val)}
               className={`rounded-full px-3.5 py-1.5 text-[12.5px] font-semibold transition-colors ${
-                showNl === val ? "bg-accent text-white" : "text-ink-secondary hover:text-ink"
+                showNl === val ? "bg-accent text-on-fill" : "text-ink-secondary hover:text-ink"
               }`}
             >
               {label}
@@ -171,7 +171,7 @@ export function StoryReader({
                 title={playing === p.id ? "Stop" : "Lees deze alinea voor"}
                 className={`absolute -left-11 top-1 hidden h-8 w-8 items-center justify-center rounded-full border transition-colors md:flex ${
                   playing === p.id
-                    ? "border-accent bg-accent text-white"
+                    ? "border-accent bg-accent text-on-fill"
                     : "border-line bg-surface text-ink-muted opacity-0 hover:border-accent-ring hover:text-accent group-hover:opacity-100"
                 }`}
               >
@@ -206,7 +206,7 @@ export function StoryReader({
       {/* Cultuurnoot */}
       {story.culture_nl ? (
         <aside className="card mt-10 px-6 py-5">
-          <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-warm">
+          <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-warm">
             {story.culture_nl.title_nl}
           </p>
           <p className="mt-2 text-[13.5px] leading-[1.7] text-ink-secondary">
@@ -294,8 +294,8 @@ export function StoryReader({
 
       {/* Het glossariumpaneel — vast onderin, verspringt niet. */}
       {active ? (
-        <div className="fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-8 md:pl-[120px]">
-          <div className="card animate-rise mx-auto max-w-2xl px-5 py-4 shadow-[var(--lift-3)]">
+        <div className="fixed inset-x-0 bottom-[calc(70px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[124px]">
+          <div className="card glass animate-pop mx-auto max-w-2xl px-5 py-4 shadow-[var(--lift-3)]" style={{ transformOrigin: "50% 100%" }}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">

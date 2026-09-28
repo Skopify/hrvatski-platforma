@@ -171,7 +171,7 @@ export function Schrijfblok({
           type="button"
           onClick={nakijken}
           disabled={bezig || !tekst.trim()}
-          className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-white disabled:opacity-40"
+          className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-40"
         >
           {oordeel ? "Opnieuw nakijken" : "Nakijken"}
         </button>

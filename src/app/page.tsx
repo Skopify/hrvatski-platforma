@@ -1,7 +1,10 @@
 import Link from "next/link";
 
 import { Heatmap, LineChart, Meter, StatTile } from "@/components/charts";
-import { Bolt, Checker, Empty, Flame, Page, Pill, ProgressRing, SectionHead } from "@/components/ui";
+import { DayTiles } from "@/components/DayTiles";
+import { SahovnicaVeld } from "@/components/SahovnicaVeld";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Bolt, Empty, Flame, Page, Pill, SectionHead } from "@/components/ui";
 import { WordOfTheDay } from "@/components/WordOfTheDay";
 import { loadLessons } from "@/lib/content";
 import {
@@ -59,28 +62,28 @@ export default function DashboardPage() {
 
   return (
     <Page>
-      {/* ═══ Het vandaag-vlak: alles wat je nú moet weten, in één frisse kaart. ═══ */}
-      <section className="hero animate-rise mb-8 p-7 sm:p-9">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="min-w-0 flex-1">
-            <Checker className="mb-4" />
-            <div className="flex flex-wrap items-center gap-2">
-              <Pill tone="accent" className="bg-surface">
-                {rank.code} · {rank.label}
-              </Pill>
-              {done > 0 ? (
-                <span className="text-[12px] text-ink-muted">
-                  {done} van {lessons.length} lessen af
-                </span>
-              ) : null}
+      {/* ═══ Het vandaag-vlak: links wat je nú moet weten, rechts het veld. ═══ */}
+      <section className="hero relative mb-6 overflow-hidden">
+        <div className="grid lg:grid-cols-[1.05fr_1fr]">
+          <div className="relative z-10 p-6 sm:p-9">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <Pill tone="accent">
+                  {rank.code} · {rank.label}
+                </Pill>
+                {done > 0 ? (
+                  <span className="text-[12.5px] text-ink-muted">
+                    {done} van {lessons.length} lessen af
+                  </span>
+                ) : null}
+              </div>
+              <ThemeToggle className="-mr-2 -mt-2 md:hidden" />
             </div>
 
-            <h1 className="hr-text display mt-4 text-[42px] text-ink sm:text-[52px]">
-              {hello.hr}
-            </h1>
+            <h1 className="hr-text display mt-5 text-[44px] text-ink sm:text-[58px]">{hello.hr}</h1>
             <p className="mt-1.5 text-[13px] text-ink-muted">{hello.nl}</p>
 
-            <p className="mt-5 max-w-lg text-[14.5px] leading-relaxed text-ink-secondary">
+            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-secondary">
               {due > 0
                 ? `${due} ${due === 1 ? "item staat" : "items staan"} klaar om te herhalen. Wat je nu ophaalt, blijft; wat je laat liggen, zakt weg.`
                 : nextLessonData
@@ -88,117 +91,102 @@ export default function DashboardPage() {
                   : "Alles zit op schema. Lees een verhaal, of kom terug wanneer er herhaling klaarstaat."}
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-2.5">
               {due > 0 ? (
-                <Link href="/oefenen/herhalen" className="btn btn-primary px-6 py-3 text-[14.5px]">
+                <Link href="/oefenen/herhalen" className="btn btn-primary h-12 px-6 text-[15px]">
                   Herhalen
-                  <span className="tabular rounded-full bg-white/22 px-2 py-0.5 text-[12px]">
-                    {due}
-                  </span>
+                  <span className="num rounded-full bg-on-fill/20 px-2 py-0.5 text-[12.5px]">{due}</span>
                 </Link>
               ) : null}
 
               {nextLessonData ? (
                 <Link
                   href={`/lessen/${nextLessonData.number}`}
-                  className={`btn px-6 py-3 text-[14.5px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
+                  className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
                 >
                   {nextLesson?.status === "in_progress" ? "Les hervatten" : "Les beginnen"}
-                  <span className="hr-text hidden font-normal opacity-70 sm:inline">
+                  <span className="hr-text hidden max-w-[16ch] truncate font-normal opacity-70 xl:inline">
                     · {nextLessonData.title_hr}
                   </span>
                 </Link>
               ) : (
                 <Link
                   href="/lessen"
-                  className={`btn px-6 py-3 text-[14.5px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
+                  className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
                 >
                   Lessen bekijken
                 </Link>
               )}
-
-              <Link href="/verhalen" className="btn btn-ghost px-6 py-3 text-[14.5px]">
-                Verhalen lezen
-              </Link>
             </div>
-          </div>
 
-          {/* De dagring. Eén blik zegt of vandaag al geteld heeft. */}
-          <div className="flex shrink-0 items-center gap-7 lg:flex-col lg:gap-5">
-            <ProgressRing
-              value={todayXp}
-              max={profile.dailyGoalXp}
-              size={148}
-              stroke={12}
-              tone={goalMet ? "good" : "accent"}
-              track="rgba(14, 94, 199, 0.12)"
-            >
-              <span className="display text-[36px] leading-none text-ink">{todayXp}</span>
-              <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-muted">
-                van {profile.dailyGoalXp} XP
-              </span>
-            </ProgressRing>
-
-            <div className="space-y-2 lg:text-center">
-              <div className="flex items-center gap-2 text-ink lg:justify-center">
-                <Flame days={profile.streakCurrent} alive={profile.streakCurrent > 0} />
-                <span className="text-[12.5px] text-ink-secondary">
-                  {profile.streakCurrent === 1 ? "dag" : "dagen"} op rij
+            {/* Het dagdoel als šahovnica: elk vakje een twaalfde van het doel. */}
+            <div className="mt-9">
+              <DayTiles xp={todayXp} goal={profile.dailyGoalXp} day={today?.date ?? ""} />
+              <div className="mt-3 flex max-w-[300px] items-baseline justify-between gap-3">
+                <span className="text-[13px] text-ink-secondary">
+                  <span className="num text-[22px] text-ink">{todayXp}</span> van {profile.dailyGoalXp} XP
                 </span>
+                {goalMet ? (
+                  <span className="text-[12.5px] font-semibold text-good-ink">Dagdoel gehaald ✓</span>
+                ) : (
+                  <span className="flex items-center gap-1.5 text-[12.5px] font-semibold text-warm">
+                    <Flame alive={profile.streakCurrent > 0} size={12} />
+                    {profile.streakCurrent} {profile.streakCurrent === 1 ? "dag" : "dagen"} op rij
+                  </span>
+                )}
               </div>
-              {goalMet ? (
-                <p className="text-[12px] font-semibold text-good-ink">Dagdoel gehaald ✓</p>
-              ) : (
-                <p className="text-[12px] text-ink-muted">
-                  Nog {profile.dailyGoalXp - todayXp} XP vandaag
-                </p>
-              )}
             </div>
           </div>
+
+          {/* Het veld. Op de telefoon een band bovenaan, op een scherm de hele
+              rechterhelft. Gloeit vanuit het midden naarmate het dagdoel vol raakt. */}
+          <SahovnicaVeld
+            earned={profile.dailyGoalXp ? todayXp / profile.dailyGoalXp : 0}
+            className="order-first h-[210px] cursor-crosshair sm:h-[260px] lg:order-none lg:h-auto lg:min-h-[440px]"
+          />
         </div>
 
         {/* Rangbalk als voet van het vlak — de lange lijn onder de dag. */}
-        <div className="mt-8 border-t border-accent-ring/60 pt-5">
+        <div className="border-t border-line px-6 py-4 sm:px-9">
           <div className="mb-2.5 flex items-baseline justify-between gap-4">
             <span className="text-[12.5px] text-ink-secondary">
               {next
                 ? `Nog ${Math.max(0, next.from - profile.xp)} XP tot ${next.code} — ${next.label.toLowerCase()}`
                 : "Hoogste rang bereikt"}
             </span>
-            <span className="tabular flex items-center gap-1.5 text-[12.5px] font-bold text-ink">
+            <span className="num flex items-center gap-1.5 text-[13px] text-ink">
               <Bolt className="text-gold-bright" />
               {profile.xp}
               {next ? <span className="font-normal text-ink-muted">/ {next.from}</span> : null}
             </span>
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-surface">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-sunken">
             <div
-              className="h-full rounded-full bg-accent transition-[width] duration-700"
+              className="animate-grow-x h-full origin-left rounded-full bg-accent"
               style={{
                 width: `${Math.min(100, Math.max(((profile.xp - rank.from) / ((rank.to ?? profile.xp) - rank.from || 1)) * 100, profile.xp > rank.from ? 3 : 0))}%`,
               }}
             />
           </div>
+          {due === 0 && nextReview ? (
+            <p className="mt-3 text-[12.5px] text-ink-muted">
+              Eerstvolgende herhaling:{" "}
+              {nextReview.toLocaleString("nl-NL", {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+              .
+            </p>
+          ) : null}
         </div>
-
-        {due === 0 && nextReview ? (
-          <p className="mt-5 text-[12.5px] text-ink-muted">
-            Eerstvolgende herhaling:{" "}
-            {nextReview.toLocaleString("nl-NL", {
-              weekday: "long",
-              day: "numeric",
-              month: "long",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-            .
-          </p>
-        ) : null}
       </section>
 
       {/* ═══ Kerncijfers ═══ */}
-      <section className="stagger mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <div className="h-full" style={{ "--i":0 } as React.CSSProperties}>
+      <section className="stagger mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <div className="h-full" style={{ "--i": 0 } as React.CSSProperties}>
           <StatTile
             label="Reeks"
             value={String(profile.streakCurrent)}
@@ -211,32 +199,32 @@ export default function DashboardPage() {
             icon={<Flame alive={profile.streakCurrent > 0} size={13} />}
           />
         </div>
-        <div className="h-full" style={{ "--i":1 } as React.CSSProperties}>
+        <div className="h-full" style={{ "--i": 1 } as React.CSSProperties}>
           <StatTile
             label="XP vandaag"
             value={String(todayXp)}
             sub={goalMet ? "dagdoel gehaald" : `doel ${profile.dailyGoalXp}`}
-            tone={goalMet ? "good" : "gold"}
+            tone={goalMet ? "good" : "neutral"}
             icon={<Bolt />}
             meter={Math.min(1, todayXp / profile.dailyGoalXp)}
           />
         </div>
-        <div className="h-full" style={{ "--i":2 } as React.CSSProperties}>
+        <div className="h-full" style={{ "--i": 2 } as React.CSSProperties}>
           <StatTile
             label="Woorden"
             value={String(vocab.seen)}
             sub={`${vocab.solid} stevig · ${vocab.total} in de cursus`}
-            tone="accent"
+            tone="neutral"
             meter={vocab.total ? vocab.seen / vocab.total : 0}
           />
         </div>
-        <div className="h-full" style={{ "--i":3 } as React.CSSProperties}>
+        <div className="h-full" style={{ "--i": 3 } as React.CSSProperties}>
           <StatTile
             label="Accuratesse"
             value={started ? `${Math.round(accuracy.accuracy * 100)}%` : "—"}
             sub={started ? `over ${accuracy.total} antwoorden` : "nog geen antwoorden"}
             tone={
-              !started ? "neutral" : accuracy.accuracy >= 0.85 ? "good" : accuracy.accuracy >= 0.7 ? "gold" : "bad"
+              !started ? "neutral" : accuracy.accuracy >= 0.85 ? "good" : accuracy.accuracy >= 0.7 ? "neutral" : "bad"
             }
           />
         </div>

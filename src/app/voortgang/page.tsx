@@ -132,7 +132,7 @@ export default function ProgressPage() {
                 </span>
                 <div className="h-2 w-full overflow-hidden rounded-full bg-sunken">
                   <div
-                    className={`h-full rounded-full transition-[width] duration-700 ${
+                    className={`h-full rounded-full animate-grow-x origin-left ${
                       done ? "bg-good" : "bg-accent"
                     }`}
                     style={{ width: `${Math.max(pct * 100, pct > 0 ? 2 : 0)}%` }}
@@ -237,7 +237,7 @@ export default function ProgressPage() {
         </div>
         <div className="mt-5 h-2 w-full overflow-hidden rounded-full bg-sunken">
           <div
-            className="h-full rounded-full bg-accent transition-[width] duration-700"
+            className="h-full rounded-full bg-accent animate-grow-x origin-left"
             style={{ width: `${vocab.total ? (vocab.seen / vocab.total) * 100 : 0}%` }}
           />
         </div>
@@ -277,7 +277,7 @@ export default function ProgressPage() {
                             aria-hidden
                             className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${
                               m.done
-                                ? "bg-good text-white"
+                                ? "bg-good text-on-fill"
                                 : "border-2 border-line-strong bg-transparent"
                             }`}
                           >
@@ -311,7 +311,7 @@ export default function ProgressPage() {
                             {!m.done ? (
                               <div className="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-sunken">
                                 <div
-                                  className="h-full rounded-full bg-accent transition-[width] duration-700"
+                                  className="h-full rounded-full bg-accent animate-grow-x origin-left"
                                   style={{ width: `${Math.max(pct * 100, pct > 0 ? 3 : 0)}%` }}
                                 />
                               </div>
@@ -362,7 +362,7 @@ export default function ProgressPage() {
         </p>
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-sunken">
           <div
-            className="h-full rounded-full bg-accent transition-[width] duration-700"
+            className="h-full rounded-full bg-accent animate-grow-x origin-left"
             style={{
               width: `${((nakijkstand.totaal - nakijkstand.open) / Math.max(1, nakijkstand.totaal)) * 100}%`,
             }}

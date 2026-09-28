@@ -96,7 +96,7 @@ export default async function LessonPage({
         <div className="flex items-start gap-5">
           <span
             aria-hidden
-            className="display flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-2xl bg-accent text-[20px] text-white"
+            className="display flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-2xl bg-accent text-[20px] text-on-fill"
           >
             {String(lesson.number).padStart(2, "0")}
           </span>
@@ -174,7 +174,7 @@ export default async function LessonPage({
 
               {g.contrast_nl ? (
                 <div className="mt-4 overflow-hidden rounded-2xl bg-accent-wash px-4 py-3.5">
-                  <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-accent">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-accent">
                     Tegenover het Nederlands
                   </p>
                   <p className="mt-1.5 text-[13px] leading-relaxed text-ink-secondary">
@@ -187,7 +187,7 @@ export default async function LessonPage({
 
               {g.pitfalls_nl?.length ? (
                 <div className="mt-5 rounded-2xl bg-warn-wash px-4 py-3.5">
-                  <p className="text-[10.5px] font-bold uppercase tracking-[0.07em] text-warn">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-warn">
                     Valkuilen
                   </p>
                   <ul className="mt-2 space-y-1.5">
@@ -246,7 +246,7 @@ export default async function LessonPage({
             <div className="thin-scroll overflow-x-auto">
               <table className="w-full border-collapse text-[13px]">
                 <thead>
-                  <tr className="text-[10.5px] uppercase tracking-[0.06em] text-ink-muted">
+                  <tr className="text-[11px] uppercase tracking-[0.06em] text-ink-muted">
                     <th className="border-b border-line py-2 text-left font-bold">Kroatisch</th>
                     <th className="border-b border-line py-2 text-left font-bold">Nederlands</th>
                     <th className="border-b border-line py-2 text-left font-bold">Geslacht</th>

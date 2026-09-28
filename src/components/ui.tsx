@@ -67,11 +67,10 @@ export function Logo({ size = 38 }: { size?: number }) {
 /* --------------------------------------------------------------- checker --- */
 
 /**
- * De šahovnica-band: twee rijen plat dambord. Dit is het enige ornament van het
- * platform — een vaste, herkenbare markering boven een kop, nooit sfeer.
- *
- * Rood, net als het logo. Daarmee is de band onmiskenbaar het merkteken en niet
- * zomaar een blauw accentje tussen de andere blauwe accenten.
+ * De šahovnica-band: twee rijen dambord boven elke kop. Het enige ornament van
+ * het platform — en het beweegt: bij het laden klappen de vakjes één voor één
+ * omhoog, van links naar rechts. Een kinetisch raster in het klein, als groet
+ * aan Nove tendencije. Puur CSS (`.checker3d` in globals.css).
  */
 export function Checker({
   cols = 9,
@@ -85,21 +84,80 @@ export function Checker({
   className?: string;
 }) {
   return (
-    <svg
-      width={cols * cell}
-      height={2 * cell}
-      viewBox={`0 0 ${cols * cell} ${2 * cell}`}
+    <div
       aria-hidden
-      className={className}
+      className={`checker3d grid ${className}`}
+      style={{ gridTemplateColumns: `repeat(${cols}, ${cell}px)`, width: cols * cell }}
     >
-      {Array.from({ length: 2 }, (_, r) =>
-        Array.from({ length: cols }, (_, c) =>
-          (r + c) % 2 === 0 ? (
-            <rect key={`${r}-${c}`} x={c * cell} y={r * cell} width={cell} height={cell} fill={tone} />
-          ) : null,
-        ),
-      )}
-    </svg>
+      {Array.from({ length: 2 * cols }, (_, k) => {
+        const r = Math.floor(k / cols);
+        const c = k % cols;
+        return (
+          <span
+            key={k}
+            style={
+              {
+                width: cell,
+                height: cell,
+                background: (r + c) % 2 === 0 ? tone : "transparent",
+                "--i": c + r * 2,
+              } as React.CSSProperties
+            }
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+/* --------------------------------------------------------------- tegels --- */
+
+export type StepOutcome = "ok" | "near" | "no";
+export type StepState = StepOutcome | "done" | "current" | "todo";
+
+export function outcomeOf(correct: boolean, nearMiss?: boolean): StepOutcome {
+  return correct ? (nearMiss ? "near" : "ok") : "no";
+}
+
+const TILE_BACK: Record<StepState, string> = {
+  ok: "bg-good",
+  near: "bg-gold-bright",
+  no: "bg-bad",
+  done: "bg-accent",
+  current: "bg-accent",
+  todo: "bg-accent",
+};
+
+/**
+ * Voortgang in een sessie: één tegel per opgave. Is een opgave klaar, dan
+ * kantelt haar tegel om en toont de uitkomst — groen, goud (bijna) of rood.
+ * Een doorlopende balk zegt "ergens halverwege"; tegels zeggen "nog zes, en
+ * zo ging het tot nu toe".
+ */
+export function StepTiles({ steps }: { steps: StepState[] }) {
+  const done = steps.filter((s) => s !== "todo" && s !== "current").length;
+  return (
+    <div
+      className="flex gap-[3px]"
+      role="progressbar"
+      aria-valuemin={0}
+      aria-valuemax={steps.length}
+      aria-valuenow={done}
+      aria-label="Voortgang van de sessie"
+    >
+      {steps.map((s, i) => (
+        <span
+          key={i}
+          className={`tile3d h-2.5 flex-1 rounded-[3px] ${s === "todo" || s === "current" ? "" : "is-on"}`}
+          style={{ "--i": 0 } as React.CSSProperties}
+        >
+          <span
+            className={`face ${s === "current" ? "bg-accent-wash ring-1 ring-inset ring-accent" : "bg-sunken"}`}
+          />
+          <span className={`face back ${TILE_BACK[s]}`} />
+        </span>
+      ))}
+    </div>
   );
 }
 
@@ -156,7 +214,7 @@ export function ProgressRing({
   stroke = 11,
   children,
   tone = "accent",
-  track = "rgba(255,255,255,0.14)",
+  track = "var(--color-sunken)",
 }: {
   value: number;
   max: number;
