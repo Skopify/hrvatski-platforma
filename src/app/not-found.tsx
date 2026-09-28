@@ -1,31 +1,33 @@
 import Link from "next/link";
 
+import { FitTitle } from "@/components/FitTitle";
 import { SahovnicaVeld } from "@/components/SahovnicaVeld";
 import { Page } from "@/components/ui";
 
 /*
-  Een pagina die niet bestaat. Eerst stond hier de kale zwarte standaard van
-  Next, die uit de rest van de app viel; nu dezelfde wereld, met het veld om
-  mee te spelen en één weg terug.
+  Een pagina die niet bestaat: een affiche met het getal zelf van rand tot
+  rand, en het veld om mee te spelen terwijl je bedenkt waar je heen wilde.
 */
 export default function NotFound() {
   return (
     <Page width="detail">
-      <section className="hero relative overflow-hidden">
-        <SahovnicaVeld className="h-[260px] cursor-crosshair sm:h-[320px]" />
-        <div className="relative px-6 pb-9 pt-2 text-center sm:px-10">
-          <p className="num text-[13px] tracking-[0.08em] text-ink-muted">404</p>
-          <h1 className="hr-text display mt-2 text-[40px] text-ink sm:text-[48px]">Ova stranica ne postoji.</h1>
-          <p className="mt-1 text-[13px] text-ink-muted">Deze pagina bestaat niet.</p>
-          <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-ink-secondary">
-            Misschien is het adres veranderd, of zat er een tikfout in. Klik gerust op het veld
-            hierboven terwijl je erover nadenkt.
+      <div className="grid gap-3 sm:gap-4">
+        <section className="tone-crna block-tone animate-paste border-[3px] border-crna p-5 sm:p-8">
+          <FitTitle text="404" max={260} className="animate-type" />
+          <p className="hr-text mt-5 text-[22px] font-bold">Ova stranica ne postoji.</p>
+          <p className="mt-1 text-[14px] opacity-80">Deze pagina bestaat niet.</p>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed opacity-90">
+            Misschien is het adres veranderd, of zat er een tikfout in. Klik gerust in het veld
+            hieronder terwijl je erover nadenkt.
           </p>
-          <Link href="/" className="btn btn-primary mt-7 h-12 px-6 text-[15px]">
+          <Link href="/" className="btn btn-on-tone mt-7 h-12 px-6 text-[15px]">
             Naar het overzicht
           </Link>
+        </section>
+        <div className="tone-plava block-tone relative h-[300px] overflow-hidden border-[3px] border-crna">
+          <SahovnicaVeld fog="--color-plava" className="absolute inset-0 cursor-crosshair" />
         </div>
-      </section>
+      </div>
     </Page>
   );
 }

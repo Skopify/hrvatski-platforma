@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-import { Heatmap, LineChart, Meter, StatTile } from "@/components/charts";
+import { Heatmap, LineChart, Meter } from "@/components/charts";
 import { DayTiles } from "@/components/DayTiles";
+import { FitTitle } from "@/components/FitTitle";
 import { SahovnicaVeld } from "@/components/SahovnicaVeld";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Bolt, Empty, Flame, Page, Pill, SectionHead } from "@/components/ui";
+import { Empty, Page, SectionHead } from "@/components/ui";
 import { WordOfTheDay } from "@/components/WordOfTheDay";
 import { loadLessons } from "@/lib/content";
 import {
@@ -62,171 +63,163 @@ export default function DashboardPage() {
 
   return (
     <Page>
-      {/* ═══ Het vandaag-vlak: links wat je nú moet weten, rechts het veld. ═══ */}
-      <section className="hero relative mb-6 overflow-hidden">
-        <div className="grid lg:grid-cols-[1.05fr_1fr]">
-          <div className="relative z-10 p-6 sm:p-9">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex flex-wrap items-center gap-2">
-                <Pill tone="accent">
-                  {rank.code} · {rank.label}
-                </Pill>
-                {done > 0 ? (
-                  <span className="text-[12.5px] text-ink-muted">
-                    {done} van {lessons.length} lessen af
-                  </span>
-                ) : null}
-              </div>
-              <ThemeToggle className="-mr-2 -mt-2 md:hidden" />
-            </div>
-
-            <h1 className="hr-text display mt-5 text-[44px] text-ink sm:text-[58px]">{hello.hr}</h1>
-            <p className="mt-1.5 text-[13px] text-ink-muted">{hello.nl}</p>
-
-            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-secondary">
-              {due > 0
-                ? `${due} ${due === 1 ? "item staat" : "items staan"} klaar om te herhalen. Wat je nu ophaalt, blijft; wat je laat liggen, zakt weg.`
-                : nextLessonData
-                  ? "Niets te herhalen — het goede moment voor nieuwe stof."
-                  : "Alles zit op schema. Lees een verhaal, of kom terug wanneer er herhaling klaarstaat."}
-            </p>
-
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {due > 0 ? (
-                <Link href="/oefenen/herhalen" className="btn btn-primary h-12 px-6 text-[15px]">
-                  Herhalen
-                  <span className="num rounded-full bg-on-fill/20 px-2 py-0.5 text-[12.5px]">{due}</span>
-                </Link>
-              ) : null}
-
-              {nextLessonData ? (
-                <Link
-                  href={`/lessen/${nextLessonData.number}`}
-                  className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
-                >
-                  {nextLesson?.status === "in_progress" ? "Les hervatten" : "Les beginnen"}
-                  <span className="hr-text hidden max-w-[16ch] truncate font-normal opacity-70 xl:inline">
-                    · {nextLessonData.title_hr}
-                  </span>
-                </Link>
-              ) : (
-                <Link
-                  href="/lessen"
-                  className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
-                >
-                  Lessen bekijken
-                </Link>
-              )}
-            </div>
-
-            {/* Het dagdoel als šahovnica: elk vakje een twaalfde van het doel. */}
-            <div className="mt-9">
-              <DayTiles xp={todayXp} goal={profile.dailyGoalXp} day={today?.date ?? ""} />
-              <div className="mt-3 flex max-w-[300px] items-baseline justify-between gap-3">
-                <span className="text-[13px] text-ink-secondary">
-                  <span className="num text-[22px] text-ink">{todayXp}</span> van {profile.dailyGoalXp} XP
-                </span>
-                {goalMet ? (
-                  <span className="text-[12.5px] font-semibold text-good-ink">Dagdoel gehaald ✓</span>
-                ) : (
-                  <span className="flex items-center gap-1.5 text-[12.5px] font-semibold text-warm">
-                    <Flame alive={profile.streakCurrent > 0} size={12} />
-                    {profile.streakCurrent} {profile.streakCurrent === 1 ? "dag" : "dagen"} op rij
-                  </span>
-                )}
-              </div>
-            </div>
+      {/* ═══ De voorpagina: een mozaïek van affichevlakken ═══════════════════
+          Rood is vandaag (begroeting en de volgende stap), blauw is het veld,
+          geel het dagdoel, zwart de reeks, papier de kerncijfers. Elk vlak één
+          boodschap; de volgorde op de telefoon is die van belang. */}
+      <section className="stagger mb-10 grid grid-cols-1 gap-3 sm:gap-4 lg:grid-cols-12">
+        <div
+          className="tone-crvena block-tone flex flex-col border-[3px] border-crna p-5 sm:p-8 lg:col-span-7"
+          style={{ "--i": 0 } as React.CSSProperties}
+        >
+          <div className="flex items-start justify-between gap-3">
+            <span className="pill bg-crna text-papir">
+              {rank.code} · {rank.label}
+            </span>
+            <ThemeToggle className="-mr-2 -mt-2 text-[var(--on-tone)] md:hidden" />
           </div>
 
-          {/* Het veld. Op de telefoon een band bovenaan, op een scherm de hele
-              rechterhelft. Gloeit vanuit het midden naarmate het dagdoel vol raakt. */}
-          <SahovnicaVeld
-            earned={profile.dailyGoalXp ? todayXp / profile.dailyGoalXp : 0}
-            className="order-first h-[210px] cursor-crosshair sm:h-[260px] lg:order-none lg:h-auto lg:min-h-[440px]"
-          />
+          <FitTitle text={hello.hr} max={150} className="animate-type mt-10" />
+          <p className="label-caps mt-3 opacity-85">{hello.nl}</p>
+
+          <p className="mt-6 max-w-md text-[16px] font-medium leading-relaxed">
+            {due > 0
+              ? `${due} ${due === 1 ? "item staat" : "items staan"} klaar om te herhalen. Wat je nu ophaalt, blijft; wat je laat liggen, zakt weg.`
+              : nextLessonData
+                ? "Niets te herhalen — het goede moment voor nieuwe stof."
+                : "Alles zit op schema. Lees een verhaal, of kom terug wanneer er herhaling klaarstaat."}
+          </p>
+
+          <div className="mt-auto flex flex-wrap gap-3 pt-8">
+            {due > 0 ? (
+              <Link href="/oefenen/herhalen" className="btn btn-primary h-12 px-6 text-[15px]">
+                Herhalen
+                <span className="num bg-zuta px-1.5 text-[14px] text-[#121212]">{due}</span>
+              </Link>
+            ) : null}
+            {nextLessonData ? (
+              <Link
+                href={`/lessen/${nextLessonData.number}`}
+                className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-on-tone" : "btn-primary"}`}
+              >
+                {nextLesson?.status === "in_progress" ? "Les hervatten" : "Les beginnen"}
+              </Link>
+            ) : (
+              <Link
+                href="/lessen"
+                className={`btn h-12 px-6 text-[15px] ${due > 0 ? "btn-on-tone" : "btn-primary"}`}
+              >
+                Lessen bekijken
+              </Link>
+            )}
+          </div>
         </div>
 
-        {/* Rangbalk als voet van het vlak — de lange lijn onder de dag. */}
-        <div className="border-t border-line px-6 py-4 sm:px-9">
-          <div className="mb-2.5 flex items-baseline justify-between gap-4">
-            <span className="text-[12.5px] text-ink-secondary">
-              {next
-                ? `Nog ${Math.max(0, next.from - profile.xp)} XP tot ${next.code} — ${next.label.toLowerCase()}`
-                : "Hoogste rang bereikt"}
+        {/* Het veld: rood-witte tegels in een blauwe zee. Waar je komt, slaan
+            ze geel aan; het midden staat geel naarmate het dagdoel vol raakt. */}
+        <div
+          className="tone-plava block-tone relative min-h-[280px] overflow-hidden border-[3px] border-crna sm:min-h-[340px] lg:col-span-5"
+          style={{ "--i": 1 } as React.CSSProperties}
+        >
+          <SahovnicaVeld
+            fog="--color-plava"
+            earned={profile.dailyGoalXp ? todayXp / profile.dailyGoalXp : 0}
+            className="absolute inset-0 cursor-crosshair"
+          />
+          <p className="label-caps pointer-events-none absolute bottom-4 left-4 bg-plava px-1">
+            Beweeg of klik
+          </p>
+        </div>
+
+        <div
+          className="tone-zuta block-tone border-[3px] border-crna p-5 sm:p-8 lg:col-span-5"
+          style={{ "--i": 2 } as React.CSSProperties}
+        >
+          <p className="label-caps">Dagdoel</p>
+          <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
+            <DayTiles xp={todayXp} goal={profile.dailyGoalXp} day={today?.date ?? ""} />
+            <p className="leading-none">
+              <span className="num text-[72px]">{todayXp}</span>
+              <span className="num text-[22px]"> / {profile.dailyGoalXp} XP</span>
+            </p>
+          </div>
+          <p className="mt-5 text-[14px] font-semibold">
+            {goalMet ? "Gehaald. Alles wat je nu nog doet, is winst." : `Nog ${profile.dailyGoalXp - todayXp} XP vandaag.`}
+          </p>
+        </div>
+
+        <div
+          className="tone-crna block-tone flex flex-col border-[3px] border-crna p-5 sm:p-8 lg:col-span-3"
+          style={{ "--i": 3 } as React.CSSProperties}
+        >
+          <p className="label-caps">Reeks</p>
+          <p className="num mt-4 text-[112px] leading-[0.8] text-crvena">{profile.streakCurrent}</p>
+          <p className="mt-auto pt-4 text-[14px] font-semibold">
+            {profile.streakCurrent === 1 ? "dag" : "dagen"} op rij
+            {profile.streakLongest > profile.streakCurrent ? (
+              <span className="block font-normal opacity-75">langste {profile.streakLongest}</span>
+            ) : null}
+          </p>
+        </div>
+
+        <div
+          className="grid grid-cols-2 border-[3px] border-crna bg-surface lg:col-span-4"
+          style={{ "--i": 4 } as React.CSSProperties}
+        >
+          <div className="p-5 sm:p-7">
+            <p className="label-caps text-ink-muted">Woorden</p>
+            <p className="num mt-3 text-[56px] leading-none">{vocab.seen}</p>
+            <p className="mt-2 text-[13px] leading-snug text-ink-secondary">
+              {vocab.solid} stevig · {vocab.total} in de cursus
+            </p>
+          </div>
+          <div className="border-l-[3px] border-crna p-5 sm:p-7">
+            <p className="label-caps text-ink-muted">Goed</p>
+            <p className="num mt-3 text-[56px] leading-none">
+              {started ? `${Math.round(accuracy.accuracy * 100)}%` : "—"}
+            </p>
+            <p className="mt-2 text-[13px] leading-snug text-ink-secondary">
+              {started ? `over ${accuracy.total} antwoorden` : "nog geen antwoorden"}
+            </p>
+          </div>
+        </div>
+
+        {/* De rang: één lange balk over de hele breedte — de lange lijn onder de dag. */}
+        <div
+          className="border-[3px] border-crna bg-surface p-5 sm:px-8 lg:col-span-12"
+          style={{ "--i": 5 } as React.CSSProperties}
+        >
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <span className="label-caps">
+              {rank.code} {next ? `→ ${next.code}` : ""}
             </span>
-            <span className="num flex items-center gap-1.5 text-[13px] text-ink">
-              <Bolt className="text-gold-bright" />
+            <span className="num text-[18px]">
               {profile.xp}
-              {next ? <span className="font-normal text-ink-muted">/ {next.from}</span> : null}
+              {next ? <span className="text-ink-muted"> / {next.from} XP</span> : " XP"}
             </span>
           </div>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-sunken">
+          <div className="mt-3 h-5 border-[3px] border-crna bg-plane">
             <div
-              className="animate-grow-x h-full origin-left rounded-full bg-accent"
+              className="animate-grow-x h-full origin-left bg-plava"
               style={{
-                width: `${Math.min(100, Math.max(((profile.xp - rank.from) / ((rank.to ?? profile.xp) - rank.from || 1)) * 100, profile.xp > rank.from ? 3 : 0))}%`,
+                width: `${Math.min(100, Math.max(((profile.xp - rank.from) / ((rank.to ?? profile.xp) - rank.from || 1)) * 100, profile.xp > rank.from ? 2 : 0))}%`,
               }}
             />
           </div>
-          {due === 0 && nextReview ? (
-            <p className="mt-3 text-[12.5px] text-ink-muted">
-              Eerstvolgende herhaling:{" "}
-              {nextReview.toLocaleString("nl-NL", {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-              .
-            </p>
-          ) : null}
-        </div>
-      </section>
-
-      {/* ═══ Kerncijfers ═══ */}
-      <section className="stagger mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
-        <div className="h-full" style={{ "--i": 0 } as React.CSSProperties}>
-          <StatTile
-            label="Reeks"
-            value={String(profile.streakCurrent)}
-            sub={
-              profile.streakLongest > profile.streakCurrent
-                ? `langste tot nu toe ${profile.streakLongest}`
-                : "dagen achtereen"
-            }
-            tone="warm"
-            icon={<Flame alive={profile.streakCurrent > 0} size={13} />}
-          />
-        </div>
-        <div className="h-full" style={{ "--i": 1 } as React.CSSProperties}>
-          <StatTile
-            label="XP vandaag"
-            value={String(todayXp)}
-            sub={goalMet ? "dagdoel gehaald" : `doel ${profile.dailyGoalXp}`}
-            tone={goalMet ? "good" : "neutral"}
-            icon={<Bolt />}
-            meter={Math.min(1, todayXp / profile.dailyGoalXp)}
-          />
-        </div>
-        <div className="h-full" style={{ "--i": 2 } as React.CSSProperties}>
-          <StatTile
-            label="Woorden"
-            value={String(vocab.seen)}
-            sub={`${vocab.solid} stevig · ${vocab.total} in de cursus`}
-            tone="neutral"
-            meter={vocab.total ? vocab.seen / vocab.total : 0}
-          />
-        </div>
-        <div className="h-full" style={{ "--i": 3 } as React.CSSProperties}>
-          <StatTile
-            label="Accuratesse"
-            value={started ? `${Math.round(accuracy.accuracy * 100)}%` : "—"}
-            sub={started ? `over ${accuracy.total} antwoorden` : "nog geen antwoorden"}
-            tone={
-              !started ? "neutral" : accuracy.accuracy >= 0.85 ? "good" : accuracy.accuracy >= 0.7 ? "neutral" : "bad"
-            }
-          />
+          <p className="mt-2.5 text-[13px] text-ink-secondary">
+            {next
+              ? `Nog ${Math.max(0, next.from - profile.xp)} XP tot ${next.code} — ${next.label.toLowerCase()}.`
+              : "Hoogste rang bereikt."}
+            {due === 0 && nextReview
+              ? ` Eerstvolgende herhaling: ${nextReview.toLocaleString("nl-NL", {
+                  weekday: "long",
+                  day: "numeric",
+                  month: "long",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}.`
+              : ""}
+          </p>
         </div>
       </section>
 

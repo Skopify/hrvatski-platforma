@@ -1,24 +1,23 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   NOVE TENDENCIJE — het ontwerpsysteem van dit platform
+   PLAKAT — het ontwerpsysteem van dit platform
    ═══════════════════════════════════════════════════════════════════════════
 
-   Zagreb was tussen 1961 en 1973 het centrum van Nove tendencije: kinetische
-   kunst, optische rasters en de eerste computerkunst van Europa. Dat is de
-   bron: een futurisme dat uit Kroatië zelf komt. De šahovnica is hier geen
-   losse versiering maar het raster zelf — een 3D-veld van tegels op het
-   overzicht, tegels die kantelen als je een antwoord geeft, een kubus als logo.
+   De Zagrebse affiche: EXAT 51, Ivan Picelj, Vjenceslav Richter, de
+   posters van Nove tendencije en de Zagrebse tekenfilmschool. Drie
+   drukinkten — rood, blauw, geel — plus zwart en papier. Volle vlakken,
+   harde randen, letters die de hele breedte pakken, geometrie als beeld.
 
-   Twee letters, elk met één taak:
-     Archivo   — alles behalve lezen. Variabel in breedte (62–125) én gewicht:
-                 breed voor koppen, normaal voor de interface, smal voor
-                 cijfers. Eén bestand, drie gezichten.
-     Literata  — lezen. Ontworpen voor schermlezen; draagt de verhalen.
-
-   Licht en donker zijn allebei volwaardig. Het thema staat als data-theme op
-   <html> (een klein script in de layout zet het vóór de eerste verf), zodat
-   elke kleur hieronder één keer per thema bestaat.
+   Hoe het in de interface landt:
+   - Elke sectie heeft een eigen kleur (zie src/lib/secties.ts); de kop van
+     de pagina is een geplakte affiche in die kleur.
+   - Geen afgeronde hoeken, geen zachte schaduwen. Wat je kunt pakken, komt
+     los van het papier met een harde schaduw.
+   - 3D als grafisch object: een kubus in de affichekleuren, het
+     šahovnica-veld in een blauw vlak.
+   - Waar je leert (sessies, verhalen) blijft het rustig: papier, inkt,
+     Literata. Het lawaai zit op de overzichten.
 
    Zie DESIGN.md voor de regels achter de getallen.
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -73,148 +72,161 @@
 /* --------------------------------------------------------------- tokens --- */
 
 @theme {
-  /* Ondergronden — koel kalksteen in plaats van crème: frisser, en het laat
-     het rood van de šahovnica en het blauw van de zee harder spreken. */
-  --color-plane: #f3f4f1;
-  --color-plane-deep: #e9ebe6;
-  --color-surface: #fcfcfb;
-  --color-sunken: #eceee9;
+  /* Papier en inkt. Affichepapier is koel wit, geen crème; de inkt is bijna
+     zwart, nooit #000. */
+  --color-plane: #f2f2ec;
+  --color-plane-deep: #e6e6de;
+  --color-surface: #fbfbf7;
+  --color-sunken: #e6e6de;
 
-  /* Inkt. `ink-muted` haalt nu 5:1 — de oude grijstint haalde 2.8:1 en stond
-     op 203 plekken. */
-  --color-ink: #111418;
-  --color-ink-secondary: #434a53;
-  --color-ink-muted: #5f6771;
+  --color-ink: #121212;
+  --color-ink-secondary: #3a3a3a;
+  --color-ink-muted: #5c5c58;
 
-  /* Lijnen */
-  --color-line: #dde0da;
-  --color-line-soft: #e8eae5;
-  --color-line-strong: #c3c8bf;
+  /* Lijnen zijn inkt: een affiche heeft geen haarlijnen in grijs. Alleen de
+     rasterlijnen in grafieken zijn zacht. */
+  --color-line: #121212;
+  --color-line-soft: #d6d6ce;
+  --color-line-strong: #121212;
 
-  /* Accent — Adriatisch blauw. Het enige accent: alles wat klikbaar is en
-     alles wat voortgang toont. */
-  --color-accent: #1d4fd8;
-  --color-accent-hover: #173fb0;
-  --color-accent-bright: #3d6bf0;
-  --color-accent-wash: #e7edfc;
-  --color-accent-ring: #b9cbf6;
+  /* De drie drukinkten van de affiche, plus zwart en papier. */
+  --color-crvena: #d4190f;
+  --color-plava: #1f3fd6;
+  --color-zuta: #ffcf1a;
+  --color-crna: #121212;
+  --color-papir: #fbfbf7;
 
-  /* Tekst op een gekleurde vulling (knoppen, badges). Wit in licht, bijna
-     zwart in donker — daar zijn de vullingen licht. */
-  --color-on-fill: #ffffff;
+  /* Accent = het blauw: klikbaar, geselecteerd, voortgang. */
+  --color-accent: #1f3fd6;
+  --color-accent-hover: #1631b0;
+  --color-accent-bright: #3a57ea;
+  --color-accent-wash: #dde3fa;
+  --color-accent-ring: #1f3fd6;
 
-  /* Vlagrood — alleen de šahovnica: logo, tegels, merkband. */
-  --color-flag: #d81e2c;
+  --color-on-fill: #fbfbf7;
 
-  /* Reeks */
-  --color-warm: #b4400b;
-  --color-warm-bright: #e8591c;
-  --color-warm-wash: #fcede5;
+  --color-flag: #d4190f;
 
-  /* XP */
-  --color-gold: #975a06;
-  --color-gold-bright: #e39b12;
-  --color-gold-wash: #fbf2de;
+  --color-warm: #c4170f;
+  --color-warm-bright: #d4190f;
+  --color-warm-wash: #fbe1df;
 
-  /* Semantiek */
-  --color-good: #0d7042;
-  --color-good-ink: #0b5a35;
-  --color-good-wash: #e3f3ea;
-  --color-warn: #93530a;
-  --color-warn-wash: #fbf1e1;
-  --color-bad: #c0262d;
-  --color-bad-ink: #a51f25;
-  --color-bad-wash: #fbe9e9;
+  --color-gold: #7a5c00;
+  --color-gold-bright: #ffcf1a;
+  --color-gold-wash: #fff3c2;
 
-  /* Ordinale ramp voor de heatmap: monotone lichtheid, van leeg naar vol. */
-  --color-ramp-0: #e6e9e3;
-  --color-ramp-1: #a9c0f5;
-  --color-ramp-2: #6f95ee;
-  --color-ramp-3: #3d6bf0;
-  --color-ramp-4: #1d4fd8;
-  --color-ramp-5: #11318a;
+  --color-good: #0b7a45;
+  --color-good-ink: #075c33;
+  --color-good-wash: #dcf1e4;
+  --color-warn: #7a5c00;
+  --color-warn-wash: #fff3c2;
+  --color-bad: #c4170f;
+  --color-bad-ink: #a3120c;
+  --color-bad-wash: #fbe1df;
+
+  --color-ramp-0: #e2e2da;
+  --color-ramp-1: #b9c4f4;
+  --color-ramp-2: #7d91ec;
+  --color-ramp-3: #3a57ea;
+  --color-ramp-4: #1f3fd6;
+  --color-ramp-5: #0f1f75;
 
   --font-sans: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-reading: "Literata", ui-serif, Georgia, serif;
 
-  --radius-card: 18px;
-  --radius-tile: 12px;
+  /* Vorm: alles recht. Een affiche heeft geen afgeronde hoeken. Alleen wat
+     écht rond is — tellers, stippen, de afspeelknop — blijft een cirkel
+     (rounded-full valt hier bewust buiten). */
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-card: 0px;
+  --radius-tile: 0px;
 
   --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-spring: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Donker: grafiet, geen navy. Accenten worden licht zodat ze op een donkere
-   grond leesbaar blijven; tekst op vullingen wordt daarom donker. */
+/* Nachtaffiche: zwart papier, witte inkt, dezelfde drie kleuren. Het zwarte
+   vlak wordt het witte vlak, anders verdwijnt het in de grond. */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-plane: #0c0e11;
-  --color-plane-deep: #111418;
-  --color-surface: #15181c;
-  --color-sunken: #1c2025;
+  --color-plane: #121212;
+  --color-plane-deep: #0b0b0b;
+  --color-surface: #1b1b1b;
+  --color-sunken: #262626;
 
-  --color-ink: #eceef1;
-  --color-ink-secondary: #b2b9c2;
-  --color-ink-muted: #8f97a2;
+  --color-ink: #f2f2ec;
+  --color-ink-secondary: #c9c9c2;
+  --color-ink-muted: #9a9a93;
 
-  --color-line: #262b32;
-  --color-line-soft: #1e2227;
-  --color-line-strong: #39404a;
+  --color-line: #f2f2ec;
+  --color-line-soft: #333333;
+  --color-line-strong: #f2f2ec;
 
-  --color-accent: #7ea4ff;
-  --color-accent-hover: #a3bdff;
-  --color-accent-bright: #7ea4ff;
-  --color-accent-wash: #16213a;
-  --color-accent-ring: #2e4474;
+  --color-crna: #f2f2ec;
+  --color-papir: #121212;
 
-  --color-on-fill: #0c0e11;
+  --color-accent: #7d93ff;
+  --color-accent-hover: #a2b2ff;
+  --color-accent-bright: #7d93ff;
+  --color-accent-wash: #1a2250;
+  --color-accent-ring: #7d93ff;
 
-  --color-flag: #ef3b47;
+  --color-on-fill: #121212;
 
-  --color-warm: #ff9a5c;
-  --color-warm-bright: #ff8a47;
-  --color-warm-wash: #2b1a10;
+  --color-warm: #ff6b5e;
+  --color-warm-wash: #3a1412;
+  --color-gold: #ffcf1a;
+  --color-gold-wash: #332a08;
 
-  --color-gold: #f2b54a;
-  --color-gold-bright: #f5b83d;
-  --color-gold-wash: #2a2110;
+  --color-good: #4fce8f;
+  --color-good-ink: #7ddcaa;
+  --color-good-wash: #0f2a1c;
+  --color-warn: #ffcf1a;
+  --color-warn-wash: #332a08;
+  --color-bad: #ff6b5e;
+  --color-bad-ink: #ff8f85;
+  --color-bad-wash: #3a1412;
 
-  --color-good: #4cc98c;
-  --color-good-ink: #6fdca5;
-  --color-good-wash: #10271c;
-  --color-warn: #f0b04f;
-  --color-warn-wash: #2a2010;
-  --color-bad: #ff7a7a;
-  --color-bad-ink: #ff9696;
-  --color-bad-wash: #2c1417;
-
-  --color-ramp-0: #1c2025;
-  --color-ramp-1: #1f3160;
-  --color-ramp-2: #28479a;
-  --color-ramp-3: #3563e9;
-  --color-ramp-4: #7ea4ff;
-  --color-ramp-5: #c2d4ff;
+  --color-ramp-0: #262626;
+  --color-ramp-1: #1f2d6e;
+  --color-ramp-2: #2b44b8;
+  --color-ramp-3: #3a57ea;
+  --color-ramp-4: #7d93ff;
+  --color-ramp-5: #c8d1ff;
 }
 
-/* Diepte. In licht getinte schaduwen; in donker lichtranden en een gloed —
-   in het donker is licht de manier om "dit is de volgende stap" te zeggen. */
-:root {
-  --lift-1: 0 1px 2px rgb(17 20 24 / 0.05);
-  --lift-2: 0 1px 2px rgb(17 20 24 / 0.04), 0 10px 28px -16px rgb(17 20 24 / 0.2);
-  --lift-3: 0 2px 4px rgb(17 20 24 / 0.05), 0 28px 60px -24px rgb(17 20 24 / 0.32);
-  --rim: inset 0 1px 0 rgb(255 255 255 / 0.7);
-  --glow: 0 1px 2px rgb(29 79 216 / 0.3), 0 8px 20px -10px rgb(29 79 216 / 0.55);
-  --sheen: rgb(255 255 255 / 0.55);
+/* Tonen per sectie. Een blok zet .tone-x en gebruikt dan --tone en --on-tone. */
+.tone-crvena {
+  --tone: var(--color-crvena);
+  --on-tone: #fbfbf7;
+  --tone-2: var(--color-zuta);
 }
-:root[data-theme="dark"] {
-  --lift-1: 0 1px 2px rgb(0 0 0 / 0.4);
-  --lift-2: 0 1px 2px rgb(0 0 0 / 0.35), 0 14px 32px -18px rgb(0 0 0 / 0.8);
-  --lift-3: 0 2px 4px rgb(0 0 0 / 0.4), 0 32px 64px -24px rgb(0 0 0 / 0.9);
-  --rim: inset 0 1px 0 rgb(255 255 255 / 0.05);
-  --glow: 0 0 0 1px rgb(126 164 255 / 0.4), 0 10px 30px -8px rgb(53 99 233 / 0.7);
-  --sheen: rgb(160 190 255 / 0.12);
+.tone-plava {
+  --tone: var(--color-plava);
+  --on-tone: #fbfbf7;
+  --tone-2: var(--color-crvena);
+}
+.tone-zuta {
+  --tone: var(--color-zuta);
+  --on-tone: #121212;
+  --tone-2: var(--color-crvena);
+}
+.tone-crna {
+  --tone: var(--color-crna);
+  --on-tone: var(--color-papir);
+  --tone-2: var(--color-zuta);
+}
+.block-tone {
+  background-color: var(--tone);
+  color: var(--on-tone);
 }
 
 /* ----------------------------------------------------------------- basis --- */
@@ -234,27 +246,45 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Koppen: Archivo breed en strak. De breedte-as doet hier het werk dat een
-   schreef eerder deed — karakter zonder decoratie. */
+/* De affichekop: Archivo op volle breedte en volle kracht, in kapitalen,
+   strak op elkaar. FitTitle rekt hem op tot de breedte van zijn blok. */
+.poster-title {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 0.86;
+}
+
+/* Koppen binnen de pagina: breed en zwaar, maar in gewone letters — een
+   Kroatische titel in kapitalen zou de schrijfwijze verbergen. */
 .display {
   font-family: var(--font-display);
-  font-stretch: 116%;
-  font-weight: 760;
-  letter-spacing: -0.032em;
-  line-height: 1.04;
+  font-stretch: 118%;
+  font-weight: 820;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
   text-wrap: balance;
 }
 
 .display-soft {
   font-family: var(--font-display);
-  font-stretch: 110%;
-  font-weight: 680;
+  font-stretch: 112%;
+  font-weight: 760;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
-/* Kroatische tekst. De diakritische tekens zitten bovenop de letter en hebben
-   lucht nodig om als teken herkenbaar te blijven. */
+/* Etiketten op de affiche: klein, kapitalen, ruim gespatieerd. */
+.label-caps {
+  font-size: 11.5px;
+  font-weight: 800;
+  font-stretch: 112%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .hr-text {
   letter-spacing: -0.004em;
   font-feature-settings: "kern" 1;
@@ -270,164 +300,143 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Cijfers als instrument: smal, gelijk breed, strak. */
 .num {
-  font-stretch: 80%;
+  font-stretch: 78%;
   font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 /* --------------------------------------------------------- componenten --- */
 
 @layer components {
-  /* De kaart. Haarlijn, getinte schaduw, en een lichtrand bovenaan die hem
-     een fysieke rand geeft. */
+  /* Het vel: papier met een inktrand. Geen schaduw — op een affiche ligt
+     alles in hetzelfde vlak, tot je het oppakt. */
   .card {
     background-color: var(--color-surface);
-    border: 1px solid var(--color-line);
-    border-radius: var(--radius-card);
-    box-shadow: var(--lift-2), var(--rim);
+    border: 2px solid var(--color-line);
+    border-radius: 0;
   }
 
-  /* Interactieve kaart: kantelt mee met de cursor (TiltLayer zet de transform
-     rechtstreeks) en vangt licht op de plek waar de cursor staat. */
+  /* Oppakken: het vel komt los van het papier en werpt een harde schaduw,
+     als een uitgeknipte vorm. Indrukken drukt het terug. */
   .card-lift {
-    position: relative;
-    transform-style: preserve-3d;
     transition:
-      transform 500ms var(--ease-out-quint),
-      box-shadow 300ms var(--ease-out-quint),
-      border-color 200ms ease;
-  }
-  .card-lift::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    opacity: 0;
-    background: radial-gradient(
-      420px circle at var(--mx, 50%) var(--my, 0%),
-      var(--sheen),
-      transparent 60%
-    );
-    transition: opacity 300ms ease;
+      transform 180ms var(--ease-out-quint),
+      box-shadow 180ms var(--ease-out-quint);
   }
   @media (hover: hover) and (pointer: fine) {
     .card-lift:hover {
-      box-shadow: var(--lift-3), var(--rim);
-      border-color: var(--color-accent-ring);
-    }
-    .card-lift:hover::after {
-      opacity: 1;
+      transform: translate(-4px, -4px);
+      box-shadow: 6px 6px 0 var(--color-ink);
     }
   }
+  .card-lift:active {
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 var(--color-ink);
+    transition-duration: 80ms;
+  }
 
-  /* Het herovlak. */
   .hero {
     background-color: var(--color-surface);
-    border: 1px solid var(--color-line);
-    border-radius: calc(var(--radius-card) + 6px);
-    box-shadow: var(--lift-2), var(--rim);
+    border: 3px solid var(--color-line);
   }
 
-  /* Knoppen: 12px hoek, geen pil — de pil vloekte met het raster. Indrukken
-     geeft een kleine duw, zodat de interface laat merken dat hij luisterde. */
+  /* Knoppen: blokken inkt in kapitalen. Hover tilt het blok op met een rode
+     schaduw eronder; indrukken zet het terug op het papier. */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 12px;
-    font-weight: 620;
-    letter-spacing: -0.006em;
+    border-radius: 0;
+    border: 2px solid var(--color-ink);
+    font-weight: 800;
+    font-stretch: 112%;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     white-space: nowrap;
     transition:
-      background-color 160ms ease,
-      color 160ms ease,
-      border-color 160ms ease,
-      transform 120ms var(--ease-out-quint),
-      box-shadow 200ms ease;
+      transform 140ms var(--ease-out-quint),
+      box-shadow 140ms var(--ease-out-quint),
+      background-color 140ms ease,
+      color 140ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover:not(:disabled) {
+      transform: translate(-3px, -3px);
+      box-shadow: 4px 4px 0 var(--color-crvena);
+    }
   }
   .btn:active:not(:disabled) {
-    transform: scale(0.97);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 var(--color-crvena);
+    transition-duration: 60ms;
   }
 
   .btn-primary {
-    background-color: var(--color-accent);
-    color: var(--color-on-fill);
-    box-shadow: var(--glow);
-  }
-  @media (hover: hover) {
-    .btn-primary:hover:not(:disabled) {
-      background-color: var(--color-accent-hover);
-    }
+    background-color: var(--color-ink);
+    color: var(--color-plane);
   }
   .btn-primary:disabled {
-    background: var(--color-line-strong);
+    background: var(--color-sunken);
+    border-color: var(--color-sunken);
     color: var(--color-ink-muted);
-    box-shadow: none;
     cursor: not-allowed;
   }
 
   .btn-ghost {
     background-color: var(--color-surface);
-    border: 1px solid var(--color-line);
-    color: var(--color-ink-secondary);
-    box-shadow: var(--lift-1), var(--rim);
+    color: var(--color-ink);
   }
-  @media (hover: hover) {
-    .btn-ghost:hover:not(:disabled) {
-      border-color: var(--color-accent-ring);
-      color: var(--color-accent);
+
+  /* Knop op een gekleurd vlak: papier met inkt, schaduw in de tweede kleur. */
+  .btn-on-tone {
+    background-color: var(--color-papir);
+    color: var(--color-crna);
+    border-color: var(--color-crna);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-on-tone:hover:not(:disabled) {
+      box-shadow: 4px 4px 0 var(--color-crna);
     }
   }
 
-  /* Etiket */
+  /* Op een gekleurd vlak valt de rode schaduw weg in de grond; daar neemt
+     de knop de tweede kleur van dat vlak. */
+  @media (hover: hover) and (pointer: fine) {
+    .block-tone .btn:hover:not(:disabled) {
+      box-shadow: 4px 4px 0 var(--tone-2);
+    }
+  }
+
   .pill {
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    border-radius: 9999px;
-    padding: 0.15rem 0.6rem;
-    font-size: 12px;
-    font-weight: 620;
-    letter-spacing: 0.01em;
+    border-radius: 0;
+    padding: 0.15rem 0.5rem;
+    font-size: 11.5px;
+    font-weight: 800;
+    font-stretch: 110%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     line-height: 1.5;
   }
 
-  /* Onderstreping die bij hover doorloopt. */
   .link-sweep {
     background-image: linear-gradient(currentColor, currentColor);
-    background-size: 0% 1.5px;
+    background-size: 0% 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 280ms var(--ease-out-quint);
+    transition: background-size 240ms var(--ease-out-quint);
   }
   .link-sweep:hover {
-    background-size: 100% 1.5px;
-  }
-
-  /* Glas — alleen voor lagen waar de pagina onderdoor loopt. */
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 76%, transparent);
-    backdrop-filter: blur(18px) saturate(1.5);
-    -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  }
-  @media (prefers-reduced-transparency: reduce) {
-    .glass {
-      background-color: var(--color-surface);
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
+    background-size: 100% 2px;
   }
 }
 
 /* ------------------------------------------------------------ 3D-tegels --- */
-/* Eén tegel met twee kanten. De voorkant is leeg, de achterkant gevuld; wie
-   `is-on` krijgt kantelt 180° om de horizontale as. Gedeeld door het dagdoel,
-   de sessievoortgang en de merkband. */
 
 .tile3d {
   position: relative;
@@ -438,7 +447,6 @@ body {
 .tile3d > .face {
   position: absolute;
   inset: 0;
-  border-radius: inherit;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -452,12 +460,12 @@ body {
   transform: perspective(400px) rotateX(0deg);
 }
 
-/* De merkband boven elke kop: de vakjes klappen bij het laden één voor één
-   omhoog, van links naar rechts — een kinetisch raster in het klein. */
+/* Het kleine dambord in de hoek van een affiche: vakjes klappen bij het
+   laden één voor één om. */
 .checker3d > span {
   display: block;
   animation: flip-up 620ms var(--ease-out-quint) backwards;
-  animation-delay: calc(var(--i, 0) * 28ms + 60ms);
+  animation-delay: calc(var(--i, 0) * 28ms + 200ms);
   transform-origin: 50% 100%;
 }
 @keyframes flip-up {
@@ -471,60 +479,108 @@ body {
   }
 }
 
-/* Het veld lost aan de randen op in de kaart eromheen: onderaan op de
-   telefoon (daar ligt de tekst eronder), links op een scherm. */
-.veld {
-  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
-  mask-image: linear-gradient(to bottom, #000 60%, transparent);
-}
-@media (min-width: 1024px) {
-  .veld {
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 28%);
-    mask-image: linear-gradient(to right, transparent, #000 28%);
-  }
-}
-
-/* De logokubus: zes kanten šahovnica. Hij draait een kwartslag bij hover. */
+/* De kubus: zes vlakken in de affichekleuren. Hij draait mee terwijl je
+   scrolt (waar de browser scroll-animaties kent) en een kwartslag bij hover. */
 .cube {
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(-22deg) rotateY(-32deg);
+  transform: rotateX(-24deg) rotateY(-34deg);
   transition: transform 900ms var(--ease-in-out-strong);
 }
 .cube-wrap:hover .cube,
 .cube-wrap:focus-visible .cube {
-  transform: rotateX(-22deg) rotateY(58deg);
+  transform: rotateX(-24deg) rotateY(56deg);
 }
 .cube > i {
   position: absolute;
   inset: 0;
-  border-radius: 3px;
-  background-color: #fff;
-  background-image: repeating-conic-gradient(var(--color-flag) 0 25%, #fff 0 50%);
+  outline: 2px solid var(--color-crna);
+  outline-offset: -1px;
+}
+.cube > i:nth-child(1) {
+  background: var(--color-crvena);
+}
+.cube > i:nth-child(2) {
+  background: var(--color-plava);
+}
+.cube > i:nth-child(3) {
+  background: var(--color-zuta);
+}
+.cube > i:nth-child(4) {
+  background: var(--color-papir);
+}
+.cube > i:nth-child(5) {
+  background-color: var(--color-papir);
+  background-image: repeating-conic-gradient(var(--color-crvena) 0 25%, var(--color-papir) 0 50%);
   background-size: 66.667% 66.667%;
-  background-position: 0 0;
-  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
+}
+.cube > i:nth-child(6) {
+  background: var(--color-crna);
+}
+.cube-logo > i {
+  background-color: #fbfbf7 !important;
+  background-image: repeating-conic-gradient(var(--color-crvena) 0 25%, #fbfbf7 0 50%) !important;
+  background-size: 66.667% 66.667% !important;
+  outline-color: #121212;
+}
+
+@supports (animation-timeline: scroll()) {
+  .cube-scroll {
+    animation: cube-turn linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes cube-turn {
+    from {
+      transform: rotateX(-24deg) rotateY(-34deg);
+    }
+    to {
+      transform: rotateX(336deg) rotateY(326deg);
+    }
+  }
 }
 
 /* ---------------------------------------------------------------- motie --- */
-/* Tokens staan in DESIGN.md §6. Alleen transform en opacity bewegen. */
 
-/* Pagina-ingang: de inhoud kantelt uit de diepte naar voren. Backwards in
-   plaats van both: na afloop staat er géén transform meer, anders wordt de
-   pagina een containing block en verschuiven vaste lagen (vensters). */
-@keyframes enter3d {
+/* Pagina-ingang: de inhoud schuift kort omhoog. */
+@keyframes enter {
   from {
     opacity: 0;
-    transform: perspective(1400px) translateY(14px) rotateX(5deg) scale(0.99);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: perspective(1400px) translateY(0) rotateX(0deg) scale(1);
+    transform: translateY(0);
   }
 }
 .page-enter {
-  animation: enter3d 360ms var(--ease-out-quint) backwards;
-  transform-origin: 50% 0;
+  animation: enter 300ms var(--ease-out-quint) backwards;
+}
+
+/* Een affiche wordt geplakt: het kleurvlak veegt van links naar rechts over
+   het papier, de kop volgt een tel later. */
+@keyframes paste {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.animate-paste {
+  animation: paste 620ms var(--ease-in-out-strong) backwards;
+}
+@keyframes type-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.25em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-type {
+  animation: type-in 520ms var(--ease-out-quint) 260ms backwards;
 }
 
 @keyframes rise {
@@ -554,16 +610,14 @@ body {
 @keyframes pop {
   from {
     opacity: 0;
-    transform: perspective(600px) rotateX(-12deg) scale(0.96);
+    transform: translateY(8px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: perspective(600px) rotateX(0deg) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
-/* De vlam flakkert één keer — bij een reeks die vandaag leeft — en staat dan
-   stil. Een eindeloze lus in de navigatie trok de hele dag aandacht. */
 @keyframes flicker {
   0%,
   100% {
@@ -580,29 +634,24 @@ body {
 .animate-rise {
   animation: rise 300ms var(--ease-out-quint) both;
 }
-
 .animate-shake {
   animation: shake 250ms var(--ease-out-quint) both;
 }
-
 .animate-pop {
-  animation: pop 260ms var(--ease-out-quint) both;
-  transform-origin: 50% 0;
+  animation: pop 240ms var(--ease-out-quint) both;
 }
-
 .animate-flicker {
   animation: flicker 700ms ease-in-out 1 both;
   transform-origin: 50% 100%;
 }
 
-/* Staggering: elk kind zet zijn eigen --i. Maximaal zes stappen, zodat een
-   lange lijst niet seconden op zijn laatste kaart laat wachten. */
+/* De blokken van een raster komen één voor één binnen. Maximaal zes
+   stappen, zodat een lange lijst niet op zijn laatste kaart laat wachten. */
 .stagger > * {
   animation: rise 360ms var(--ease-out-quint) backwards;
-  animation-delay: calc(min(var(--i, 0), 6) * 40ms + 80ms);
+  animation-delay: calc(min(var(--i, 0), 6) * 45ms + 80ms);
 }
 
-/* Grafieken die zich één keer tekenen. */
 @keyframes draw {
   from {
     stroke-dashoffset: var(--len, 1000);
@@ -629,7 +678,6 @@ body {
   animation: grow-y 520ms var(--ease-out-quint) backwards;
   animation-delay: calc(var(--i, 0) * 30ms + 80ms);
 }
-
 @keyframes grow-x {
   from {
     transform: scaleX(0);
@@ -643,8 +691,6 @@ body {
   transform-origin: 0 50%;
   animation: grow-x 620ms var(--ease-out-quint) 120ms backwards;
 }
-
-/* De heatmap bouwt zich diagonaal op, vak voor vak — een raster dat aangaat. */
 @keyframes cell-in {
   from {
     opacity: 0;
@@ -662,38 +708,37 @@ body {
   animation-delay: calc(var(--i, 0) * 14ms + 100ms);
 }
 
-/* Minder beweging: minder, niet niets. Verschuiven, kantelen en schudden
-   vervallen; kleur- en fade-overgangen blijven, zodat goed/fout en de actieve
-   staat nog steeds zichtbaar wisselen. */
+/* Minder beweging: minder, niet niets. Verschuiven, vegen, kantelen en
+   schudden vervallen; fades en kleurwissels blijven. */
 @media (prefers-reduced-motion: reduce) {
   .page-enter,
   .animate-rise,
   .animate-pop,
+  .animate-type,
   .stagger > *,
   .checker3d > span {
     animation: fade 160ms ease both;
   }
+  .animate-paste,
   .animate-shake,
   .animate-flicker,
   .animate-draw,
   .animate-grow,
   .animate-grow-x,
-  .animate-cell {
+  .animate-cell,
+  .cube-scroll {
     animation: none;
   }
   .card-lift,
   .tile3d,
-  .cube {
-    transition: none;
-  }
-  .card-lift {
-    transform: none !important;
-  }
+  .cube,
   .btn {
     transition-property: background-color, color, border-color;
   }
-  .btn:active:not(:disabled) {
+  .card-lift:hover,
+  .btn:hover:not(:disabled) {
     transform: none;
+    box-shadow: none;
   }
 }
 @keyframes fade {
@@ -708,24 +753,21 @@ body {
 /* ---------------------------------------------------------------- rest --- */
 
 ::selection {
-  background-color: var(--color-accent-ring);
-  color: var(--color-ink);
+  background-color: var(--color-zuta);
+  color: #121212;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-  border-radius: 8px;
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
-/* Smalle, terughoudende scrollbalk in de leesweergave. */
 .thin-scroll::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 .thin-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-line-strong);
-  border-radius: 9999px;
+  background: var(--color-ink-muted);
 }
 .thin-scroll::-webkit-scrollbar-track {
   background: transparent;

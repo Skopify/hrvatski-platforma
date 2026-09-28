@@ -4,7 +4,7 @@ import { useLayoutEffect, useState } from "react";
 
 /*
   Het dagdoel als šahovnica: twaalf tegels, één per twaalfde van het doel.
-  Wat je verdient, kantelt om naar rood — en alleen wat er sinds je vorige
+  Wat je verdient, kantelt om naar rood en zwart — en alleen wat er sinds je vorige
   bezoek bij kwam, kantelt waar je bij bent. De rest staat er al. Zo betekent
   de beweging iets: dit heb je net gedaan.
 */
@@ -40,7 +40,7 @@ export function DayTiles({ xp, goal, day }: { xp: number; goal: number; day: str
 
   return (
     <div
-      className="grid w-full max-w-[300px] grid-cols-6 gap-[5px]"
+      className="grid w-full max-w-[276px] grid-cols-6 gap-[6px]"
       role="img"
       aria-label={`Dagdoel: ${xp} van ${goal} XP`}
     >
@@ -52,7 +52,7 @@ export function DayTiles({ xp, goal, day }: { xp: number; goal: number; day: str
         return (
           <span
             key={i}
-            className={`tile3d aspect-square rounded-[7px] ${on ? "is-on" : ""}`}
+            className={`tile3d aspect-square ${on ? "is-on" : ""}`}
             style={
               {
                 "--i": Math.max(0, i - from),
@@ -60,9 +60,9 @@ export function DayTiles({ xp, goal, day }: { xp: number; goal: number; day: str
               } as React.CSSProperties
             }
           >
-            <span className="face border border-line bg-sunken" />
+            <span className="face border-[3px] border-[color-mix(in_srgb,var(--on-tone,var(--color-ink))_28%,transparent)]" />
             <span
-              className={`face back ${solid ? "bg-flag" : "border-2 border-flag bg-surface"}`}
+              className={`face back ${solid ? "bg-crvena" : "bg-[#121212]"}`}
             />
           </span>
         );

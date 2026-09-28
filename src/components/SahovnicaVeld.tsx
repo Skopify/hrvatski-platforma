@@ -46,6 +46,13 @@ void main() {
   int j = gl_InstanceID / ${N};
   vec2 cell = vec2(float(i), float(j)) - float(${N - 1}) * 0.5;
   float d = length(cell);
+  // Een rond eiland van tegels in een blauw vlak: de cirkel in het vierkant,
+  // het oudste motief van de Zagrebse affiche. Tegels buiten de cirkel vallen
+  // buiten beeld; een harde rand, geen vervaging.
+  if (d > 10.5) {
+    gl_Position = vec4(2.0, 2.0, 2.0, 1.0);
+    return;
+  }
 
   // De zee: twee golven die elkaar kruisen, plus een trage deining.
   float wave = sin(d * 0.62 - uTime * 1.15) * 0.5
@@ -97,21 +104,26 @@ out vec4 outColor;
 
 void main() {
   vec3 base = mix(uRed, uWhite, vChecker);
-  vec3 L = normalize(vec3(-0.45, 0.9, 0.35));
-  float diff = max(dot(vNor, L), 0.0);
+  // Affichebelichting: geen verloop, drie vlakke tinten per blok — boven vol,
+  // de zijkanten in twee vaste stappen donkerder, zoals gezeefdrukte kubussen.
   float top = step(0.5, vNor.y);
-  float shade = mix(0.55, 1.0, diff) * mix(0.82, 1.0, top);
+  float side = abs(vNor.x) > 0.5 ? 0.68 : 0.5;
+  float shade = top > 0.5 ? 1.0 : side;
   vec3 col = base * shade;
 
   // Opgetilde tegels vangen het accent — sterker in het donker, waar het
   // licht is in plaats van kleur.
-  col = mix(col, uAccent, vLift * mix(0.55, 0.85, uDark) * mix(0.6, 1.0, top));
-  col += uAccent * vEarned * top * mix(0.10, 0.28, uDark);
+  // Opgetilde tegels krijgen de derde kleur, hard omgeslagen in plaats van
+  // geleidelijk: een tegel is geel of niet.
+  float lifted = step(0.35, vLift);
+  col = mix(col, uAccent * mix(side, 1.0, top), lifted);
+  // Verdiende tegels (het dagdoel) staan hoger en zijn ook geel.
+  col = mix(col, uAccent * mix(side, 1.0, top), vEarned);
 
   // Mist: het veld lost op in de kaart eromheen.
   float dist = length(vWorld - uEye);
-  float fog = smoothstep(uFogNear, uFogNear + 13.0, dist);
-  float edge = smoothstep(10.0, 15.0, length(vWorld.xz));
+  float fog = smoothstep(uFogNear + 4.0, uFogNear + 16.0, dist);
+  float edge = 0.0;
   col = mix(col, uFog, clamp(max(fog, edge), 0.0, 1.0));
   outColor = vec4(col, 1.0);
 }`;
@@ -201,12 +213,19 @@ export function SahovnicaVeld({
   className = "",
   earned = 0,
   fog = "--color-surface",
+  tileA = "--color-crvena",
+  tileB = "--color-papir",
+  lift = "--color-zuta",
 }: {
   className?: string;
-  /** Aandeel van het dagdoel dat gehaald is (0–1): zoveel tegels gloeien vanuit het midden. */
+  /** Aandeel van het dagdoel dat gehaald is (0–1): zoveel tegels staan vanuit het midden hoger. */
   earned?: number;
-  /** Het token waarin het veld oplost — de kleur van wat eromheen ligt. */
+  /** Het token waarin het veld oplost — de kleur van het vlak eromheen. */
   fog?: string;
+  /** Tokens voor de twee tegelkleuren en de kleur van opgetilde tegels. */
+  tileA?: string;
+  tileB?: string;
+  lift?: string;
 }) {
   const wrap = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -257,9 +276,9 @@ export function SahovnicaVeld({
     const readColors = () => {
       const dark = document.documentElement.dataset.theme === "dark";
       fogColor = cssColor(fog, dark ? [0.08, 0.09, 0.11] : [0.99, 0.99, 0.98]);
-      gl.uniform3fv(uRed, cssColor("--color-flag", [0.85, 0.12, 0.17]));
-      gl.uniform3fv(uWhite, dark ? [0.2, 0.22, 0.25] : [0.97, 0.97, 0.96]);
-      gl.uniform3fv(uAccent, cssColor("--color-accent", [0.11, 0.31, 0.85]));
+      gl.uniform3fv(uRed, cssColor(tileA, [0.83, 0.1, 0.06]));
+      gl.uniform3fv(uWhite, cssColor(tileB, dark ? [0.07, 0.07, 0.07] : [0.98, 0.98, 0.97]));
+      gl.uniform3fv(uAccent, cssColor(lift, [1, 0.81, 0.1]));
       gl.uniform3fv(uFog, fogColor);
       gl.uniform1f(uDark, dark ? 1 : 0);
       gl.clearColor(fogColor[0], fogColor[1], fogColor[2], 1);
@@ -350,7 +369,7 @@ export function SahovnicaVeld({
       // Een smal, hoog vlak ziet horizontaal weinig: dan gaat de camera verder
       // weg, zodat er altijd een veld te zien is en niet een handvol blokken.
       const back = Math.min(1.9, Math.max(1, 1.35 / aspect));
-      eye = [orbit + pointer.cx * 2.4, (12.5 - pointer.cy * 1.6) * back, 13.5 * back];
+      eye = [orbit + pointer.cx * 3, (21 - pointer.cy * 2.4) * back, 21 * back];
       gl.uniformMatrix4fv(uViewProj, false, viewProj(eye, [0, 0, 0], fovY, aspect));
       gl.uniform3fv(uEye, eye);
       gl.uniform1f(uFogNear, Math.hypot(eye[1], eye[2]) - 2);
@@ -415,10 +434,16 @@ export function SahovnicaVeld({
       gl.deleteProgram(prog);
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  }, [earned, fog]);
+  }, [earned, fog, tileA, tileB, lift]);
 
   return (
-    <div ref={wrap} className={`veld relative touch-pan-y ${className}`} aria-hidden>
+    // Het canvas ligt absoluut in deze wrapper, dus die moet gepositioneerd zijn —
+    // maar niet "relative" als de aanroeper hem zelf al absoluut neerlegt.
+    <div
+      ref={wrap}
+      className={`touch-pan-y ${/\b(absolute|fixed)\b/.test(className) ? "" : "relative"} ${className}`}
+      aria-hidden
+    >
       <canvas
         ref={canvas}
         className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-700"

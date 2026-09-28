@@ -43,7 +43,8 @@ verhalen binnen de grammatica die je al kent, en nakijken dat taalkundig klopt
 ## Brand Commitments
 
 - Merkteken: de šahovnica (rood-wit dambord) als logo en als enige ornament.
-- Eerder afgewezen: gradients, zwevende decoratieve vormen, donkerblauwe (navy) vlakken in een lichte interface, en pagina's die onderling verschillen in kop of marges.
+- Visuele wereld sinds 29-09-2026: «Plakat», de Zagrebse affiche (zie DESIGN.md), op eigen verzoek gewaagd.
+- Blijvend: pagina's mogen onderling niet verschillen in kop of marges, en navy-vlakken vond hij niet fris.
 
 ## Product Principles
 

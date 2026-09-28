@@ -61,10 +61,10 @@ const MOTIFS: Record<string, React.ReactNode> = {
 /** Kleur en label per dekkingsoordeel — de meter moet in één blik te lezen zijn. */
 const VERDICT_STYLE: Record<CoverageVerdict, { tone: string; bar: string }> = {
   ideaal: { tone: "text-good-ink", bar: "var(--color-good)" },
-  goed: { tone: "text-accent", bar: "var(--color-accent)" },
-  pittig: { tone: "text-gold", bar: "var(--color-gold-bright)" },
-  // Boven je niveau is een waarschuwing, geen fout: oranje, niet rood.
-  hoog: { tone: "text-warm", bar: "var(--color-warm-bright)" },
+  goed: { tone: "text-accent", bar: "var(--color-plava)" },
+  pittig: { tone: "text-gold", bar: "var(--color-zuta)" },
+  // Boven je niveau is een waarschuwing, geen fout: zwaar zwart, geen rood.
+  hoog: { tone: "text-ink", bar: "var(--color-crna)" },
 };
 
 /** De volgorde van de niveaus, zodat A1.1 boven B1 staat en niet andersom. */

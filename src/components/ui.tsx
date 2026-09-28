@@ -123,9 +123,9 @@ const TILE_BACK: Record<StepState, string> = {
   ok: "bg-good",
   near: "bg-gold-bright",
   no: "bg-bad",
-  done: "bg-accent",
-  current: "bg-accent",
-  todo: "bg-accent",
+  done: "bg-crna",
+  current: "bg-crna",
+  todo: "bg-crna",
 };
 
 /**
@@ -148,11 +148,11 @@ export function StepTiles({ steps }: { steps: StepState[] }) {
       {steps.map((s, i) => (
         <span
           key={i}
-          className={`tile3d h-2.5 flex-1 rounded-[3px] ${s === "todo" || s === "current" ? "" : "is-on"}`}
+          className={`tile3d h-3 flex-1 ${s === "todo" || s === "current" ? "" : "is-on"}`}
           style={{ "--i": 0 } as React.CSSProperties}
         >
           <span
-            className={`face ${s === "current" ? "bg-accent-wash ring-1 ring-inset ring-accent" : "bg-sunken"}`}
+            className={`face ${s === "current" ? "bg-zuta ring-2 ring-inset ring-crna" : "bg-sunken"}`}
           />
           <span className={`face back ${TILE_BACK[s]}`} />
         </span>
@@ -344,32 +344,9 @@ export function Page({
 
 /* ------------------------------------------------------------ paginakop --- */
 
-/**
- * De kop van een hoofdpagina. Eén component in plaats van vijf losse koppen,
- * zodat "overal hetzelfde" ook echt door de code wordt afgedwongen: šahovnica,
- * dan een eventueel bovenschrift, dan de titel, dan de inleiding.
- */
-export function PageHeader({
-  title,
-  intro,
-  children,
-}: {
-  title: string;
-  intro?: ReactNode;
-  /** Extra elementen onder de inleiding, bijvoorbeeld knoppen. */
-  children?: ReactNode;
-}) {
-  return (
-    <header className="mb-9">
-      <Checker className="mb-4" />
-      <h1 className="display text-[40px] text-ink sm:text-[46px]">{title}</h1>
-      {intro ? (
-        <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-ink-secondary">{intro}</p>
-      ) : null}
-      {children}
-    </header>
-  );
-}
+// De paginakop leeft in zijn eigen bestand: hij leest de route om de kleur van
+// de sectie te kiezen, en dat kan alleen aan de clientkant.
+export { PageHeader } from "./PageHeader";
 
 /* --------------------------------------------------------------- rubriek --- */
 

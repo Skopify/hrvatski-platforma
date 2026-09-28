@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 
 import { Nav } from "@/components/Nav";
 import { THEME_SCRIPT } from "@/components/ThemeToggle";
-import { TiltLayer } from "@/components/TiltLayer";
 import { getProfile } from "@/lib/stats";
 import { reviewableCount } from "@/lib/planner";
 import "./globals.css";
@@ -44,16 +43,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen antialiased">
-        <TiltLayer />
         <div className="flex min-h-screen flex-col md:flex-row">
           <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} />
           {/*
-            Ruimte onder de inhoud voor de zwevende navigatiebalk op de
-            telefoon: 58px balk + 8px marge + de veilige zone van de telefoon,
+            Ruimte onder de inhoud voor de navigatiebalk op de
+            telefoon: 60px balk plus de veilige zone van de telefoon,
             plus lucht, zodat een knop aan het eind van een pagina er nooit
             onder verdwijnt.
           */}
-          <main className="min-w-0 flex-1 pb-[calc(92px+env(safe-area-inset-bottom))] md:pb-0">
+          <main className="min-w-0 flex-1 pb-[calc(84px+env(safe-area-inset-bottom))] md:pb-0">
             {children}
           </main>
         </div>

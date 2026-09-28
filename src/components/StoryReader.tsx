@@ -294,7 +294,7 @@ export function StoryReader({
 
       {/* Het glossariumpaneel — vast onderin, verspringt niet. */}
       {active ? (
-        <div className="fixed inset-x-0 bottom-[calc(70px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[124px]">
+        <div className="fixed inset-x-0 bottom-[calc(66px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[124px]">
           <div className="card glass animate-pop mx-auto max-w-2xl px-5 py-4 shadow-[var(--lift-3)]" style={{ transformOrigin: "50% 100%" }}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
