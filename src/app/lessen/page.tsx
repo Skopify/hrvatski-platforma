@@ -100,7 +100,7 @@ export default function LessonsPage() {
                 </div>
               </div>
 
-              <ul className="stagger grid gap-3 sm:grid-cols-2">
+              <ul className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {inBand.map((lesson, i) => {
                   const isBuilt = built.has(lesson.number);
                   const status = statuses.get(lesson.number) ?? "locked";
@@ -135,7 +135,7 @@ export default function LessonsPage() {
                         <div className="min-w-0 flex-1">
                           <div className="flex items-start justify-between gap-3">
                             <p
-                              className={`hr-text truncate text-[15.5px] font-bold ${
+                              className={`hr-text text-[15.5px] font-bold sm:truncate ${
                                 openable ? "text-ink" : "text-ink-secondary"
                               }`}
                             >

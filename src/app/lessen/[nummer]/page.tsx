@@ -223,7 +223,7 @@ export default async function LessonPage({
             <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
               Uitdrukkingen
             </h3>
-            <ul className="grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
+            <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
               {phrases.map((v) => (
                 <li key={v.id} className="flex items-baseline justify-between gap-3 text-[13.5px]">
                   <span className="hr-text font-medium text-ink">{v.hr}</span>
@@ -284,7 +284,7 @@ export default async function LessonPage({
             <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
               Overige woorden
             </h3>
-            <ul className="grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
+            <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
               {rest.map((v) => (
                 <li key={v.id} className="flex items-baseline justify-between gap-3 text-[13.5px]">
                   <span className="hr-text font-medium text-ink">

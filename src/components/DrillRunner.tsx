@@ -327,7 +327,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
           {/* Het antwoord */}
           <div className="mt-6">
             {meta.input === "choice" ? (
-              <div className="grid gap-2 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                 {(question.choices ?? meta.choices ?? []).map((c) => {
                   // Na het antwoord staan er twee dingen op het scherm: wat goed
                   // was (groen) en, als die verschilt, wat jij koos (rood).

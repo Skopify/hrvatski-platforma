@@ -289,7 +289,7 @@ export default function DashboardPage() {
       ) : null}
 
       {/* ═══ Verloop ═══ */}
-      <section className="mb-8 grid gap-4 lg:grid-cols-2">
+      <section className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <LineChart
           data={days.slice(-14).map((d) => ({ label: d.date.slice(5), value: d.accuracy }))}
           title="Accuratesse"
@@ -305,7 +305,7 @@ export default function DashboardPage() {
       </section>
 
       {/* ═══ Diagnose en het woord van vandaag ═══ */}
-      <section className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
+      <section className="grid grid-cols-1 gap-4 lg:grid-cols-[1.6fr_1fr]">
         <div>
           <SectionHead
             title="Zwakke punten"
@@ -313,7 +313,7 @@ export default function DashboardPage() {
             action={{ href: "/voortgang", label: "Alle cijfers" }}
           />
           {weak.length > 0 ? (
-            <ul className="stagger grid gap-3 sm:grid-cols-2">
+            <ul className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
               {weak.map((w, i) => (
                 <li key={w.topic} style={{ "--i": i } as React.CSSProperties}>
                   <div className={`rounded-card border-2 border-outline px-5 py-4 text-on-pop shadow-[var(--hard-sm)] ${["bg-pop-peach", "bg-pop-pink", "bg-pop-coral", "bg-pop-lilac"][i % 4]}`}>

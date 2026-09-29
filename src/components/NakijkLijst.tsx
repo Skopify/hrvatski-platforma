@@ -110,7 +110,7 @@ export function NakijkLijst({
         ) : null}
 
         {toon === null ? (
-          <div className="mt-7 grid gap-2 sm:grid-cols-3">
+          <div className="mt-7 grid grid-cols-1 gap-2 sm:grid-cols-3">
             <button
               type="button"
               disabled={bezig}

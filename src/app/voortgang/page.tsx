@@ -151,7 +151,7 @@ export default function ProgressPage() {
         </div>
       </section>
 
-      <section className="mb-8 grid gap-4 lg:grid-cols-2">
+      <section className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <LineChart
           data={days.map((d) => ({ label: d.date.slice(5), value: d.accuracy }))}
           title="Accuratesse over tijd"
@@ -163,7 +163,7 @@ export default function ProgressPage() {
         />
       </section>
 
-      <section className="mb-8 grid gap-4 lg:grid-cols-2">
+      <section className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <BarList
           title="Beheersing per onderwerp"
           pop="mint"
@@ -192,7 +192,7 @@ export default function ProgressPage() {
         />
       </section>
 
-      <section className="mb-8 grid gap-4 lg:grid-cols-2">
+      <section className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <BarList
           title="Herhalingen komende twee weken"
           pop="sky"
@@ -273,7 +273,7 @@ export default function ProgressPage() {
                 <h3 className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
                   {group}
                 </h3>
-                <ul className="grid gap-3 sm:grid-cols-2">
+                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {inGroup.map((m) => {
                     const pct = Math.min(1, m.goal > 0 ? m.value / m.goal : 0);
                     return (

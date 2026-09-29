@@ -63,7 +63,7 @@ export function ResetProgress({
           <p className="text-[13px] font-semibold uppercase tracking-wide text-bad-ink">
             Dit raak je kwijt
           </p>
-          <ul className="tabular mt-2.5 grid gap-x-6 gap-y-1 text-[13px] text-ink-secondary sm:grid-cols-2">
+          <ul className="tabular mt-2.5 grid grid-cols-1 gap-x-6 gap-y-1 text-[13px] text-ink-secondary sm:grid-cols-2">
             <li>{samenvatting.xp.toLocaleString("nl-NL")} XP</li>
             <li>{samenvatting.attempts.toLocaleString("nl-NL")} antwoorden</li>
             <li>{samenvatting.reviews.toLocaleString("nl-NL")} herhalingen in het logboek</li>

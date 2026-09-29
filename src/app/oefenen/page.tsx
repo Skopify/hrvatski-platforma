@@ -79,7 +79,7 @@ export default function PracticePage() {
           <span className="hand text-[14px] font-semibold text-ink-muted">Eindeloos · stopt wanneer jij stopt</span>
         </div>
 
-        <ul className="stagger grid gap-3 sm:grid-cols-2">
+        <ul className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2">
           {DRILL_KINDS.map((kind, i) => {
             const d = DRILLS[kind];
             const avail = availability[kind] ?? { now: 0, from: null };

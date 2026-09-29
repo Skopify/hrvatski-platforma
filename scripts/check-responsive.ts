@@ -58,6 +58,14 @@ check("R12", "woorden in een verhaal blijven inline tekst en krijgen geen 44px-k
 check("R13", "de Kroatische lettertoetsen zijn er niet op een aanraakscherm (daar wissel je van toetsenbordtaal)",
   /@media \(pointer: coarse\)[\s\S]*\.special-chars[\s\S]*display:\s*none/.test(css) && /special-chars flex/.test(lees("src/components/SpecialChars.tsx")) && /special-chars-wrap/.test(lees("src/components/GesprekRunner.tsx")), "");
 
+// Een grid zonder basiskolom laat de kolom meegroeien met de breedste inhoud: één lange
+// regel (truncate!) maakt dan het hele blokje breder dan het scherm. grid-cols-1 = minmax(0, 1fr).
+const rooster = alles
+  .flatMap(({ f, t }) => [...t.matchAll(/className="([^"]*)"/g)].map((m) => ({ f, c: m[1]! })))
+  .filter(({ c }) => /(^|\s)grid(\s|$)/.test(c) && /\b(sm|md|lg|xl):grid-cols/.test(c) && !/(^|\s)grid-cols-/.test(c))
+  .map((x) => x.f);
+check("R14", "elk grid met kolommen vanaf een breakpoint heeft een basiskolom (grid-cols-1), zodat niets breder wordt dan het scherm", rooster.length === 0, [...new Set(rooster)].join(", "));
+
 const breedte = Math.max(...results.map((r) => r.naam.length));
 for (const r of results) console.log(`${r.ok ? "✓" : "✗"} ${r.punt.padEnd(4)} ${r.naam.padEnd(breedte)}${r.ok || !r.detail ? "" : "  → " + r.detail}`);
 const fout = results.filter((r) => !r.ok);

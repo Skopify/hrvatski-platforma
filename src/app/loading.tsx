@@ -14,7 +14,7 @@ export default function Loading() {
         <div className="h-12 w-72 max-w-full rounded-xl border-2 border-dashed border-line-strong" />
         <div className="mt-5 h-4 w-[34rem] max-w-full rounded-lg bg-sunken" />
         <div className="mt-2 h-4 w-[26rem] max-w-full rounded-lg bg-sunken" />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {Array.from({ length: 4 }, (_, i) => (
             <div key={i} className="h-40 rounded-card border-2 border-dashed border-line-strong" />
           ))}

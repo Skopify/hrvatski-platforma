@@ -48,17 +48,43 @@ export function CaseTimeline({
   const slotX = (i: number) => padX + slot * (i + 0.5);
 
   return (
-    <figure className="card overflow-hidden px-5 pb-4 pt-5 sm:px-7">
+    <figure className="card overflow-hidden px-5 pb-5 pt-5 shadow-[var(--hard-sm)] sm:px-7">
       <figcaption className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
-        <span className="display-soft text-[15px] text-ink">Wanneer komt welke naamval?</span>
-        <span className="text-[13px] text-ink-muted">
-          {active ? active.note : "Beweeg over een naamval voor de reden"}
+        <span className="display text-[22px] leading-tight text-ink">Wanneer komt welke naamval?</span>
+        <span className="hand hidden text-[13.5px] font-bold text-ink-secondary md:inline">
+          {active ? active.note : "Wijs of tik een naamval aan voor de reden"}
         </span>
       </figcaption>
 
+      {/* Telefoon: een verticale lijn met de reden erbij. Hover bestaat niet op aanraking en
+          zeven labels van 5px op één as zijn onleesbaar. */}
+      <ol className="mt-4 md:hidden">
+        {cases.map((c, i) => {
+          const reached = c.lesson <= current;
+          return (
+            <li key={c.name} className="relative flex gap-3 pb-4 last:pb-0">
+              {i < cases.length - 1 ? (
+                <span aria-hidden className="absolute left-[13px] top-7 h-[calc(100%-14px)] w-0.5 bg-line-strong" />
+              ) : null}
+              <span
+                aria-hidden
+                className={`relative z-10 mt-0.5 h-7 w-7 shrink-0 rounded-full border-2 border-outline ${reached ? "bg-pop-mint" : "bg-surface"}`}
+              />
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="display text-[17px] capitalize leading-tight">{c.name}</span>
+                  <span className="hand text-[13px] font-bold text-ink-secondary">les {c.lesson}</span>
+                </p>
+                <p className="mt-0.5 text-[14px] leading-snug text-ink-secondary">{c.note}</p>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
       <svg
         viewBox={`0 0 ${w} ${h}`}
-        className="mt-3 w-full"
+        className="mt-3 hidden w-full md:block"
         role="img"
         aria-label="Naamvallen per les"
       >
@@ -68,7 +94,7 @@ export function CaseTimeline({
           x2={w - padX}
           y1={axisY}
           y2={axisY}
-          stroke="var(--color-line)"
+          stroke="var(--color-outline)"
           strokeWidth={3}
           strokeLinecap="round"
         />
@@ -96,13 +122,15 @@ export function CaseTimeline({
             strokeWidth={1}
           />
         ))}
-        <text x={padX} y={axisY - 11} fontSize={10} fill="var(--color-ink-muted)" textAnchor="middle">
+        <text x={padX} y={axisY - 11} fontSize={12} fontFamily="var(--font-hand)" fontWeight={700} fill="var(--color-ink-muted)" textAnchor="middle">
           les 0
         </text>
         <text
           x={w - padX}
           y={axisY - 11}
-          fontSize={10}
+          fontSize={12}
+          fontFamily="var(--font-hand)"
+          fontWeight={700}
           fill="var(--color-ink-muted)"
           textAnchor="middle"
         >
@@ -121,7 +149,8 @@ export function CaseTimeline({
               key={c.name}
               onMouseEnter={() => setActive(c)}
               onMouseLeave={() => setActive(null)}
-              style={{ cursor: "default" }}
+              onClick={() => setActive((a) => (a?.name === c.name ? null : c))}
+              style={{ cursor: "pointer" }}
             >
               {/* Aanwijslijn: recht omlaag van de stip, dan schuin naar het vak. */}
               <path
@@ -145,7 +174,9 @@ export function CaseTimeline({
                 x={lx}
                 y={labelTop}
                 textAnchor="middle"
-                fontSize={10.5}
+                fontSize={12}
+                fontFamily="var(--font-hand)"
+                fontWeight={700}
                 fill="var(--color-ink-muted)"
                 className="tabular"
               >
@@ -155,8 +186,9 @@ export function CaseTimeline({
                 x={lx}
                 y={labelTop + 15}
                 textAnchor="middle"
-                fontSize={11.5}
-                fontWeight={isActive ? 700 : 600}
+                fontSize={13}
+                fontFamily="var(--font-display)"
+                fontWeight={isActive ? 800 : 700}
                 fill={reached ? "var(--color-ink)" : "var(--color-ink-muted)"}
                 style={{ textTransform: "capitalize" }}
               >

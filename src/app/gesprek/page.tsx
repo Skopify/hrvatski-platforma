@@ -65,7 +65,7 @@ export default async function GesprekPage() {
         </div>
       ) : null}
 
-      <div className="stagger grid gap-4 sm:grid-cols-2">
+      <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-2">
         {scenarios.map((s, i) => (
           <Link
             key={s.id}
