@@ -17,7 +17,8 @@ export type SectionKey =
   | "lessen"
   | "oefenen"
   | "woorden"
-  | "voortgang";
+  | "voortgang"
+  | "gesprek";
 
 export interface Section {
   key: SectionKey;
@@ -39,6 +40,7 @@ export const SECTIONS: Section[] = [
   { key: "oefenen", href: "/oefenen", label: "Oefenen", doodle: "loop", pop: "var(--color-pop-yellow)", deep: "#f2b100" },
   { key: "woorden", href: "/woorden", label: "Woorden", doodle: "bubble", pop: "var(--color-pop-lime)", deep: "#7bc40a" },
   { key: "voortgang", href: "/voortgang", label: "Voortgang", doodle: "chart", pop: "var(--color-pop-coral)", deep: "#ff5a4d" },
+  { key: "gesprek", href: "/gesprek", label: "Gesprek", doodle: "praat", pop: "var(--color-pop-aqua)", deep: "#12b5c4" },
 ];
 
 /** Welke sectie hoort bij dit pad. Pagina's buiten het menu lenen de stift van hun familie. */

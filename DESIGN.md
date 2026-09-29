@@ -32,7 +32,7 @@ het blijft een studieomgeving.
 
 Zes pastelstiften plus twee (`--color-pop-*`), altijd met donkere inkt (`on-pop`) erop.
 Elke sectie heeft er een (`sections.tsx`): Overzicht sky, Grammatica lilac, Verhalen peach,
-Schrijven pink, Lessen mint, Oefenen yellow, Woorden lime, Voortgang coral.
+Schrijven pink, Lessen mint, Oefenen yellow, Woorden lime, Voortgang coral, Gesprek aqua.
 
 | Token | Licht | Donker | Rol |
 |---|---|---|---|

@@ -1,0 +1,253 @@
+{
+  "_opmerking": "De openingszinnen van de bot zijn zelf geschreven en lopen door check:gesprek (taalpoorten). Markeer bij twijfel voor de nakijker; de rest van het gesprek wordt door het model gemaakt en niet nagekeken, alleen mechanisch gecontroleerd.",
+  "scenarios": [
+    {
+      "id": "kavana",
+      "titel_nl": "In het café",
+      "titel_hr": "U kavani",
+      "situatie_nl": "Je zit op een terras en de ober komt bij je tafel.",
+      "bot_rol": "a waiter in a café in Zagreb",
+      "opening_hr": "Dobar dan! Što želite piti?",
+      "opening_nl": "Goedendag! Wat wilt u drinken?",
+      "doodle": "kavana",
+      "woorden": [
+        {
+          "hr": "kava",
+          "nl": "koffie"
+        },
+        {
+          "hr": "čaj",
+          "nl": "thee"
+        },
+        {
+          "hr": "sok",
+          "nl": "sap"
+        },
+        {
+          "hr": "voda",
+          "nl": "water"
+        },
+        {
+          "hr": "mlijeko",
+          "nl": "melk"
+        },
+        {
+          "hr": "kolač",
+          "nl": "gebak"
+        },
+        {
+          "hr": "račun",
+          "nl": "rekening"
+        },
+        {
+          "hr": "izvolite",
+          "nl": "alstublieft (bij het geven)"
+        }
+      ]
+    },
+    {
+      "id": "trznica",
+      "titel_nl": "Op de markt",
+      "titel_hr": "Na tržnici",
+      "situatie_nl": "Je koopt fruit en groente bij een kraam.",
+      "bot_rol": "a friendly vendor at a market stall",
+      "opening_hr": "Dobar dan! Što želite?",
+      "opening_nl": "Goedendag! Wat wilt u?",
+      "doodle": "trznica",
+      "woorden": [
+        {
+          "hr": "jabuka",
+          "nl": "appel"
+        },
+        {
+          "hr": "kruška",
+          "nl": "peer"
+        },
+        {
+          "hr": "jagode",
+          "nl": "aardbeien"
+        },
+        {
+          "hr": "rajčica",
+          "nl": "tomaat"
+        },
+        {
+          "hr": "krumpir",
+          "nl": "aardappel"
+        },
+        {
+          "hr": "kilogram",
+          "nl": "kilo"
+        },
+        {
+          "hr": "euro",
+          "nl": "euro"
+        },
+        {
+          "hr": "svježe",
+          "nl": "vers"
+        }
+      ]
+    },
+    {
+      "id": "upoznavanje",
+      "titel_nl": "Kennismaken",
+      "titel_hr": "Upoznavanje",
+      "situatie_nl": "Je ontmoet iemand op een feestje en stelt jezelf voor.",
+      "bot_rol": "a young woman called Ana at a party",
+      "opening_hr": "Bok! Ja se zovem Ana. A ti?",
+      "opening_nl": "Hoi! Ik heet Ana. En jij?",
+      "doodle": "obitelj",
+      "woorden": [
+        {
+          "hr": "zovem se",
+          "nl": "ik heet"
+        },
+        {
+          "hr": "ime",
+          "nl": "naam"
+        },
+        {
+          "hr": "dolazim",
+          "nl": "ik kom"
+        },
+        {
+          "hr": "Nizozemska",
+          "nl": "Nederland"
+        },
+        {
+          "hr": "Hrvatska",
+          "nl": "Kroatië"
+        },
+        {
+          "hr": "živim",
+          "nl": "ik woon"
+        },
+        {
+          "hr": "drago mi je",
+          "nl": "aangenaam"
+        }
+      ]
+    },
+    {
+      "id": "put",
+      "titel_nl": "De weg vragen",
+      "titel_hr": "Put do centra",
+      "situatie_nl": "Je bent verdwaald in de stad en vraagt een voorbijganger om hulp.",
+      "bot_rol": "a helpful passer-by in a Croatian town",
+      "opening_hr": "Dobar dan! Trebate li pomoć?",
+      "opening_nl": "Goedendag! Hebt u hulp nodig?",
+      "doodle": "izlet",
+      "woorden": [
+        {
+          "hr": "ravno",
+          "nl": "rechtdoor"
+        },
+        {
+          "hr": "lijevo",
+          "nl": "links"
+        },
+        {
+          "hr": "desno",
+          "nl": "rechts"
+        },
+        {
+          "hr": "ulica",
+          "nl": "straat"
+        },
+        {
+          "hr": "trg",
+          "nl": "plein"
+        },
+        {
+          "hr": "centar",
+          "nl": "centrum"
+        },
+        {
+          "hr": "blizu",
+          "nl": "dichtbij"
+        },
+        {
+          "hr": "daleko",
+          "nl": "ver"
+        }
+      ]
+    },
+    {
+      "id": "obitelj",
+      "titel_nl": "Over je familie",
+      "titel_hr": "Moja obitelj",
+      "situatie_nl": "Een nieuwe vriend vraagt naar je familie.",
+      "bot_rol": "a new friend who is curious about the learner's family",
+      "opening_hr": "Bok! Imaš li obitelj?",
+      "opening_nl": "Hoi! Heb je familie?",
+      "doodle": "obitelj",
+      "woorden": [
+        {
+          "hr": "majka",
+          "nl": "moeder"
+        },
+        {
+          "hr": "otac",
+          "nl": "vader"
+        },
+        {
+          "hr": "sestra",
+          "nl": "zus"
+        },
+        {
+          "hr": "brat",
+          "nl": "broer"
+        },
+        {
+          "hr": "djeca",
+          "nl": "kinderen"
+        },
+        {
+          "hr": "imam",
+          "nl": "ik heb"
+        },
+        {
+          "hr": "obitelj",
+          "nl": "familie"
+        }
+      ]
+    },
+    {
+      "id": "dan",
+      "titel_nl": "Even bijpraten",
+      "titel_hr": "Kratki razgovor",
+      "situatie_nl": "Een vriend belt je en vraagt hoe het gaat.",
+      "bot_rol": "a friend who calls in the evening",
+      "opening_hr": "Bok! Kako si? Što radiš?",
+      "opening_nl": "Hoi! Hoe gaat het? Wat doe je?",
+      "doodle": "knjiga",
+      "woorden": [
+        {
+          "hr": "dobro",
+          "nl": "goed"
+        },
+        {
+          "hr": "loše",
+          "nl": "slecht"
+        },
+        {
+          "hr": "posao",
+          "nl": "werk"
+        },
+        {
+          "hr": "radim",
+          "nl": "ik werk / doe"
+        },
+        {
+          "hr": "umoran",
+          "nl": "moe"
+        },
+        {
+          "hr": "večer",
+          "nl": "avond"
+        }
+      ]
+    }
+  ]
+}

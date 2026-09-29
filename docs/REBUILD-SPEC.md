@@ -628,6 +628,8 @@ Geen aparte dienst die per aanroep geld kost en die van buitenaf niet te overzie
 
 **Dat is iets anders dan "er wordt geen tekst geschreven".** Content die als onderdeel van een gewone taak wordt geschreven — in een commit, zichtbaar in een diff, daarna door de validatiepoorten en langs een menselijke nakijker — valt hier niet onder. Het verschil zit in overzicht en kosten, niet in wie de pen vasthoudt. Zie §5.4 voor de gekozen route.
 
+> **Uitzondering, 29-09-2026: de gespreksbot (BETA).** Op verzoek van de eigenaar is er één afgebakende plek waar een model tijdens gebruik Kroatisch genereert: de sectie Gesprek. De bezwaren van hierboven zijn daar ondervangen. *Kosten*: het model draait lokaal (Ollama, `gemma3:12b`), dus geen dienst en geen API-plafond. *Overzicht*: elke zin gaat langs de taalpoorten van §7 (spelling, voorzetsel + naamval, servismen) plus een woordenschatgrens (alleen lessen tot het gekozen niveau en de eigen woorden van het scenario); halen drie pogingen de poorten niet, dan toont de app niets in plaats van iets verzonnens. Het gesprek schrijft niets naar de leerhistorie. Wat het model zegt is **niet door de nakijker gezien** en staat als BETA gelabeld. `npm run check:gesprek` bewaakt die grenzen. Voor de leersecties blijft "geen generatiepipeline" ongewijzigd.
+
 ### 5. Native check — beantwoord: **ja, er is een nakijker**
 
 En dat verandert de planning, want **die persoon is de schaarste van dit project**. Zijn tijd is de duurste bron die er is; alles wat elders bespaard wordt is goedkoper dan een uur van hem.

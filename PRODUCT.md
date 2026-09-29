@@ -38,7 +38,8 @@ verhalen binnen de grammatica die je al kent, en nakijken dat taalkundig klopt
 - Feedback bij fouten escaleert: hint, dan keuze, dan antwoord met uitleg.
 - Content is data (`content/*.json`); componenten tonen, verzinnen niets.
 - Een meting die iets niet weet, zegt dat. Getallen op het scherm beloven niet meer dan ze waarmaken.
-- Routes en navigatievolgorde liggen vast: Overzicht, Grammatica, Verhalen, Schrijven, Lessen, Oefenen, Woorden, Voortgang.
+- Routes en navigatievolgorde liggen vast: Overzicht, Grammatica, Verhalen, Schrijven, Lessen, Oefenen, Woorden, Voortgang, en als negende Gesprek (BETA, sinds 29-09-2026).
+- Gesprek is de enige plek waar een model Kroatisch genereert: lokaal (Ollama, gratis), elke zin door de taalpoorten, alleen woorden uit de lessen, en niets van het gesprek telt als voortgang.
 
 ## Brand Commitments
 

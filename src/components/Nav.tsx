@@ -179,7 +179,7 @@ export function Nav({
       </nav>
 
       {/* ═══ Tabbalk (telefoon): een sticker-strook onderaan ═══
-          Acht leesbare labels passen niet naast elkaar; daarom krabbels, en het
+          Negen leesbare labels passen niet naast elkaar; daarom krabbels, en het
           actieve item krijgt zijn naam. */}
       <nav
         aria-label="Hoofdnavigatie"
@@ -198,7 +198,7 @@ export function Nav({
                   data-nav
                   aria-current={on ? "page" : undefined}
                   aria-label={s.label}
-                  className={`group flex h-[52px] flex-col items-center justify-center gap-0.5 ${on ? "min-w-[72px] px-2" : "min-w-[36px]"}`}
+                  className={`group flex h-[52px] flex-col items-center justify-center gap-0.5 ${on ? "min-w-[68px] px-1.5" : "min-w-[32px]"}`}
                 >
                   <span
                     key={on ? "aan" : "uit"}
