@@ -450,7 +450,7 @@ function Shell({
       <div className="mb-6 flex items-center justify-between gap-4">
         <Link
           href="/oefenen"
-          className="hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
+          className="tap-link hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
         >
           <span aria-hidden>←</span> Oefenen
         </Link>

@@ -21,8 +21,8 @@ is de uitzondering en schrijft niets naar de leerhistorie.
 
 Het platform draait lokaal, maar een lokale server is voor je browser een website.
 
-- **Bereik.** `npm run dev` en `npm start` luisteren alleen op `127.0.0.1`. Voor je
-  telefoon: `npm run dev:lan`.
+- **Bereik.** `npm run dev` en `npm start` luisteren alleen op `127.0.0.1`. Telefoon en iPad komen
+  er niet rechtstreeks bij: zie *Telefoon en iPad*.
 - **Poort** (`src/middleware.ts`). Alleen eigen hostnamen (localhost, loopback,
   privé-IP, `.local`) tegen DNS-rebinding; API-verzoeken en acties moeten van het
   platform zelf komen (`Sec-Fetch-Site`, `Origin`). Extra namen:
@@ -58,6 +58,35 @@ is), start de productieserver alleen op `127.0.0.1` en opent Safari.
   stopt na 15 minuten zonder gesprek en bij het afsluiten. **Alleen als wij het gestart hebben**
   (`data/ollama-door-app.pid`): draaide Ollama al, dan blijft het aan.
 - Instelbaar met `HRVATSKI_IDLE_SECONDS` en `HRVATSKI_OLLAMA_IDLE_SECONDS`. Logboek: `data/app.log`.
+
+## Telefoon en iPad
+
+De app blijft op `127.0.0.1`. Zet je in Hrvatski.app *Telefoon & iPad* aan (paneel in de zijbalk,
+alleen op de laptop), dan start er naast de app een poortwachter op het netwerk
+(`src/lib/lan-proxy.ts`, poort 3001) die alles doorstuurt, maar alleen voor gekoppelde apparaten.
+
+- **Koppelen.** Een code van zes cijfers, alleen zichtbaar op de laptop en nieuw bij elke start. Wie hem
+  tikt krijgt een ondertekend cookie (HMAC, `data/geheim.txt`, 180 dagen). Alle apparaten ontkoppelen =
+  het geheim vervangen. Gokken wordt begrensd: 5 fouten per minuut per apparaat, 15 in totaal, dan
+  tien minuten dicht.
+- **Zonder cookie komt er niets door**: pagina's sturen naar `/koppel`, al het andere krijgt 401 en
+  bereikt de app nooit. Alleen manifest, iconen en statische bestanden zijn openbaar.
+- **Beheer alleen op de laptop.** Elk doorgestuurd verzoek krijgt `x-hrvatski-via: lan` (een meegestuurde
+  waarde wordt overschreven); afsluiten, koppelcode, herstart en de schakelaar zelf weigeren dat.
+- **Host en Origin** worden herschreven naar `localhost`, doorverwijzingen naar het adres van het apparaat.
+- **Verkeer is niet versleuteld** (http op je thuiswifi). Zet het niet aan op een openbaar netwerk.
+- Met telefoon aan wacht de app 30 minuten in plaats van 10 op een teken van leven, want een
+  vergrendelde telefoon stuurt er geen.
+- `npm run check:lan` bewijst dit met een nep-app en de echte poortwachter.
+
+### Responsive
+
+Ontwerp voor duim en vinger: onder `pointer: coarse` zijn knoppen en velden minstens 44 punten en
+nooit een lettertype onder 16px (iOS zoomt anders in), losse links hebben een ruime raakzone
+(`.tap-link`), en `min-h-dvh` in plaats van `100vh`. De tabbalk op de telefoon heeft vijf plekken:
+Overzicht, Lessen, Oefenen, Verhalen en *Meer* (overige secties, zoeken en thema). Vanaf 768 px staat er
+een smalle zijbalk, vanaf 1024 px de volle. Als app op het beginscherm: `manifest.ts`, `appleWebApp` en
+de iconen in `public/icons` (`npm run icons`). `npm run check:responsive` bewaakt dit statisch.
 
 ## Prestaties
 

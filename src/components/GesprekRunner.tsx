@@ -81,6 +81,8 @@ export function GesprekRunner({
   const [fout, setFout] = useState<Fout>(null);
   const [les, setLes] = useState(startLes);
   const [toonNl, setToonNl] = useState<Record<number, boolean>>({});
+  const [woordenOpen, setWoordenOpen] = useState(false);
+  useEffect(() => setWoordenOpen(matchMedia("(min-width: 768px)").matches), []);
   const [vertalend, setVertalend] = useState<Record<number, boolean>>({});
   const veld = useRef<HTMLInputElement>(null);
   const einde = useRef<HTMLDivElement>(null);
@@ -204,9 +206,14 @@ export function GesprekRunner({
   return (
     <div>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-        <Link href="/gesprek" className="hand text-[14px] font-bold text-ink-secondary hover:text-ink">
-          ← Alle gesprekken
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/gesprek" className="tap-link hand inline-flex text-[14px] font-bold text-ink-secondary hover:text-ink">
+            ← Alle gesprekken
+          </Link>
+          <button type="button" onClick={opnieuw} className="tap-link hand inline-flex text-[14px] font-bold text-ink-secondary hover:text-ink">
+            Opnieuw beginnen
+          </button>
+        </div>
         <label className="hand flex items-center gap-2 text-[14px] font-bold">
           Woorden tot les
           <select
@@ -223,8 +230,15 @@ export function GesprekRunner({
         </label>
       </div>
 
-      <div className="mb-6 rounded-card border-2 border-dashed border-outline bg-surface px-4 py-3">
-        <p className="hand text-[13.5px] font-bold">Handige woorden in dit gesprek</p>
+      {/* Op een telefoon dicht: de woorden nemen anders de helft van het scherm in. */}
+      <details
+        open={woordenOpen}
+        onToggle={(e) => setWoordenOpen((e.target as HTMLDetailsElement).open)}
+        className="mb-6 rounded-card border-2 border-dashed border-outline bg-surface px-4 py-3"
+      >
+        <summary className="hand cursor-pointer text-[13.5px] font-bold">
+          Handige woorden in dit gesprek ({scenario.woorden.length})
+        </summary>
         <ul className="mt-2 flex flex-wrap gap-2">
           {scenario.woorden.map((w) => (
             <li key={w.hr} className="pill h-8 gap-1.5 bg-white px-3 text-[13.5px] text-on-pop">
@@ -233,7 +247,7 @@ export function GesprekRunner({
             </li>
           ))}
         </ul>
-      </div>
+      </details>
 
       <ul className="space-y-5" aria-live="polite">
         {berichten.map((b, i) =>
@@ -317,7 +331,7 @@ export function GesprekRunner({
       {fout ? <FoutKaart fout={fout} model={status.model} onOpnieuw={laatsteIsJij ? () => verstuur(berichten.at(-1)!.tekst) : undefined} /> : null}
 
       {/* De invoerbalk plakt onderaan; de ruimte zorgt dat de laatste zin er nooit onder verdwijnt. */}
-      <div ref={einde} style={{ scrollMarginBottom: 260 }} />
+      <div ref={einde} className="scroll-mb-[240px] md:scroll-mb-[260px]" />
 
       <div className="sticky bottom-[calc(84px+env(safe-area-inset-bottom))] mt-8 md:bottom-4">
         <form
@@ -345,12 +359,9 @@ export function GesprekRunner({
             </button>
           </div>
           <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-            <div className="min-w-0 max-w-full overflow-x-auto [&>div]:flex-nowrap">
+            <div className="special-chars-wrap min-w-0 max-w-full overflow-x-auto [&>div]:flex-nowrap">
               <SpecialChars onInsert={invoegen} />
             </div>
-            <button type="button" onClick={opnieuw} className="hand text-[13.5px] font-bold text-ink-secondary hover:text-ink">
-              Opnieuw beginnen
-            </button>
           </div>
         </form>
       </div>

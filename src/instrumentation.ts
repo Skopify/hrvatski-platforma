@@ -6,5 +6,8 @@ export async function register() {
   if (process.env.NEXT_RUNTIME === "nodejs") {
     const { startWacht } = await import("./lib/levenscyclus");
     startWacht();
+    // Telefoon en iPad: de poortwachter op het netwerk, alleen als dat aan staat.
+    const { startPoortwachter } = await import("./lib/telefoon");
+    startPoortwachter();
   }
 }

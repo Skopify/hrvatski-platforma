@@ -248,7 +248,7 @@ export function SectionHead({
         {hint ? <p className="mt-1 text-[14px] leading-relaxed text-ink-secondary">{hint}</p> : null}
       </div>
       {action ? (
-        <Link href={action.href} className="link-sweep hand shrink-0 text-[14px] font-bold text-accent">
+        <Link href={action.href} className="tap-link link-sweep hand shrink-0 text-[14px] font-bold text-accent">
           {action.label} →
         </Link>
       ) : null}

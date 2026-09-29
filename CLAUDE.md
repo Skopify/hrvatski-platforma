@@ -52,7 +52,9 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run check:fase15` | acceptatietests Fase 1.5 (plaatsingstoets) |
 | `npm run check:beveiliging` | geheimen, back-up vóór schrijven, hostcontrole, koppen, invoergrenzen |
 | `npm run typecheck` | TypeScript zonder te bouwen |
-| `npm run dev:lan` | dev-server bereikbaar voor je telefoon (standaard alleen dit apparaat) |
+| `npm run check:lan` | koppelen en de poortwachter voor telefoon en iPad: niets door zonder koppeling |
+| `npm run check:responsive` | telefoon en iPad: aanraakmaten, geen 100vh, manifest, iconen, tabbalk |
+| `npm run icons` | app-iconen voor het beginscherm opnieuw tekenen |
 | `npm run audit:prod` | bekende kwetsbaarheden in de productieafhankelijkheden |
 | `npm run app:maak` | maakt `Hrvatski.app` (één klik: start alles, opent Safari, zet zichzelf uit) |
 | `npm run check:levenscyclus` | starten en stoppen: nooit te vroeg, nooit iets uitzetten dat we niet startten |

@@ -14,10 +14,17 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Hrvatski — leerplatform",
   description: "Kroatisch leren met grammatica in context, spaced repetition en echte productie.",
+  // Als app op het beginscherm van een iPhone of iPad: eigen naam en icoon, geen Safari-balk.
+  appleWebApp: { capable: true, title: "Hrvatski", statusBarStyle: "default" },
+  icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
   viewportFit: "cover",
+  // Het toetsenbord verkleint de pagina in plaats van eroverheen te schuiven, zodat een
+  // invoerbalk onderaan (Gesprek) zichtbaar blijft terwijl je typt.
+  interactiveWidget: "resizes-content",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fbfaf7" },
     { media: "(prefers-color-scheme: dark)", color: "#17161d" },
@@ -40,12 +47,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-dvh antialiased">
         <RoughFilter />
         <Island />
         <Levensteken beheerd={beheerd} />
         <CommandMenu />
-        <div className="flex min-h-screen flex-col md:flex-row">
+        <div className="flex min-h-dvh flex-col md:flex-row">
           <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} todayXp={todayXp} goalXp={profile.dailyGoalXp} beheerd={beheerd} />
           {/*
             Ruimte onder de inhoud voor de zwevende tabbalk op de telefoon:
@@ -53,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             knop aan het eind van een pagina er nooit onder verdwijnt.
             overflow-x: clip voorkomt dat een sticker of krabbel de pagina breder maakt.
           */}
-          <main className="min-w-0 flex-1 overflow-x-clip pb-[calc(100px+env(safe-area-inset-bottom))] md:pb-0">
+          <main className="min-w-0 flex-1 overflow-x-clip pb-[calc(100px+env(safe-area-inset-bottom))] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] md:pb-0">
             {children}
           </main>
         </div>

@@ -49,7 +49,8 @@ export function beslis(nu: number, s: Leven, i: Instelling): { stopServer: boole
 export function instelling(): Instelling {
   return {
     beheerd: process.env.HRVATSKI_MANAGED === "1",
-    idleMs: (Number(process.env.HRVATSKI_IDLE_SECONDS) || 600) * 1000,
+    // Met telefoon en iPad aan: een dichtgeklapte telefoon stuurt geen tekens meer, dus dan langer.
+    idleMs: (Number(process.env.HRVATSKI_IDLE_SECONDS) || (process.env.HRVATSKI_LAN === "1" ? 1800 : 600)) * 1000,
     ollamaIdleMs: (Number(process.env.HRVATSKI_OLLAMA_IDLE_SECONDS) || 900) * 1000,
   };
 }

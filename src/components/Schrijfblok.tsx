@@ -351,7 +351,7 @@ export function Schrijfblok({
       ) : null}
 
       <p className="mt-8 text-[13px] text-ink-secondary">
-        <Link href="/schrijven" className="link-sweep font-semibold text-accent">
+        <Link href="/schrijven" className="tap-link link-sweep font-semibold text-accent">
           ← Alle schrijfopdrachten
         </Link>
       </p>

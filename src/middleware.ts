@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+import { hostToegestaan as hostToegestaanBasis } from "@/lib/host";
+
 /*
   De poort naar het platform.
 
@@ -26,24 +28,11 @@ const EXTRA = (process.env.HRVATSKI_ALLOWED_HOSTS ?? "")
   .map((h) => h.trim().toLowerCase())
   .filter(Boolean);
 
-const PRIVATE_IPV4 = /^(10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3})$/;
-
-function hostnameOf(host: string): string {
-  // "[::1]:3000" → "[::1]"; "localhost:3000" → "localhost"
-  return host.startsWith("[") ? host.slice(0, host.indexOf("]") + 1) : host.split(":")[0]!;
-}
-
 export function hostToegestaan(host: string | null): boolean {
-  if (!host) return false;
-  const naam = hostnameOf(host.toLowerCase());
-  return (
-    naam === "localhost" ||
-    naam === "[::1]" ||
-    naam.endsWith(".local") ||
-    PRIVATE_IPV4.test(naam) ||
-    EXTRA.includes(naam)
-  );
+  return hostToegestaanBasis(host, EXTRA);
 }
+
+const MAC_ALLEEN = ["/api/afsluiten", "/api/koppelcode", "/api/lan", "/api/herstart"];
 
 const LEZEN = new Set(["GET", "HEAD", "OPTIONS"]);
 
@@ -51,6 +40,13 @@ export function middleware(req: NextRequest) {
   const host = req.headers.get("host");
   if (!hostToegestaan(host)) {
     return new NextResponse("Deze hostnaam is niet toegestaan.", { status: 403 });
+  }
+
+  // Beheer (afsluiten, koppelcode, telefoon aan/uit) is er alleen op de laptop zelf.
+  // De poortwachter voor telefoon en iPad zet x-hrvatski-via op elk verzoek dat
+  // hij doorgeeft; een verzoek met die kop komt dus van een ander apparaat.
+  if (req.headers.get("x-hrvatski-via") && MAC_ALLEEN.some((p) => req.nextUrl.pathname === p)) {
+    return new NextResponse("Alleen op de laptop zelf.", { status: 403 });
   }
 
   const site = req.headers.get("sec-fetch-site");

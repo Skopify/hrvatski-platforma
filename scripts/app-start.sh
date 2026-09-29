@@ -17,13 +17,17 @@
 #
 # Er staat niets in dit script dat iets uit data/ verwijdert.
 
+# Wat de vorige server aan omgeving meegaf (bij "opnieuw starten") telt niet: de instellingen
+# in data/instellingen.json bepalen of Telefoon & iPad aan staat.
+unset HRVATSKI_LAN HRVATSKI_MANAGED
+
 cd "$(dirname "$0")/.." || exit 1
 mkdir -p data
 LOG="data/app.log"
 URL="http://localhost:3000"
 
 melding() { osascript -e "display notification \"$1\" with title \"Hrvatski\"" >/dev/null 2>&1 }
-open_safari() { open -a Safari "$URL" }
+open_safari() { [ -n "$HRVATSKI_GEEN_BROWSER" ] || open -a Safari "$URL" }
 
 # 1. Draait er al iets?
 if curl -s -o /dev/null --max-time 2 "$URL"; then
@@ -55,6 +59,12 @@ melding "Hrvatski start…"
   if [ ! -f .next-build/BUILD_ID ] || [ -n "$(find src content package.json next.config.ts -newer .next-build/BUILD_ID -print -quit 2>/dev/null)" ]; then
     melding "Even bijwerken, een halve minuut…"
     NODE_ENV=production node node_modules/next/dist/bin/next build || exit 1
+  fi
+
+  # Telefoon & iPad: aan als je dat in het paneel gekozen hebt. De app zelf blijft
+  # op 127.0.0.1; een poortwachter (src/lib/lan-proxy.ts) laat alleen gekoppelde apparaten door.
+  if [ -f data/instellingen.json ] && grep -q '"lan": *true' data/instellingen.json; then
+    export HRVATSKI_LAN=1
   fi
 
   # 4. Starten. exec zodat het proces zelf de server is (en niet een schil eromheen).

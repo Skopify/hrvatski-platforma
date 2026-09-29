@@ -15,9 +15,12 @@ import { Doodle } from "./doodles";
   Alleen actief in de app die Hrvatski.app gestart heeft.
 */
 const AFGESLOTEN = "hr-afgesloten";
+const HERSTART = "hr-herstart";
 
 export function Levensteken({ beheerd }: { beheerd: boolean }) {
-  const [weg, setWeg] = useState<"nee" | "gestopt" | "afgesloten">("nee");
+  const [weg, setWeg] = useState<"nee" | "gestopt" | "afgesloten" | "herstart">("nee");
+  // Op een telefoon of iPad kun je de app niet zelf opnieuw starten: dat moet op de laptop.
+  const opLaptop = typeof location === "undefined" || ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
 
   useEffect(() => {
     if (!beheerd) return;
@@ -29,19 +32,38 @@ export function Levensteken({ beheerd }: { beheerd: boolean }) {
         mislukt = 0;
       } catch {
         // Twee keer achter elkaar: één haperende verbinding is geen afgesloten server.
-        if (++mislukt >= 2) setWeg((w) => (w === "afgesloten" ? w : "gestopt"));
+        if (++mislukt >= 2) setWeg((w) => (w === "afgesloten" || w === "herstart" ? w : "gestopt"));
       }
     };
     void melden();
     const id = setInterval(melden, 30_000);
     const opnieuwZichtbaar = () => document.visibilityState === "visible" && void melden();
     const afgesloten = () => setWeg("afgesloten");
+    // Opnieuw starten (Telefoon & iPad aan of uit): wachten tot de app terug is en dan verversen.
+    let wacht: ReturnType<typeof setInterval> | undefined;
+    const herstart = () => {
+      setWeg("herstart");
+      clearInterval(id);
+      const begin = Date.now();
+      wacht = setInterval(async () => {
+        if (Date.now() - begin < 4000) return; // de oude app moet eerst echt weg zijn
+        try {
+          const r = await fetch("/api/leven", { method: "POST", cache: "no-store" });
+          if (r.ok) location.reload();
+        } catch {
+          // nog niet terug
+        }
+      }, 1500);
+    };
+    window.addEventListener(HERSTART, herstart);
     document.addEventListener("visibilitychange", opnieuwZichtbaar);
     window.addEventListener(AFGESLOTEN, afgesloten);
     return () => {
       clearInterval(id);
       document.removeEventListener("visibilitychange", opnieuwZichtbaar);
       window.removeEventListener(AFGESLOTEN, afgesloten);
+      window.removeEventListener(HERSTART, herstart);
+      clearInterval(wacht);
     };
   }, [beheerd]);
 
@@ -50,13 +72,17 @@ export function Levensteken({ beheerd }: { beheerd: boolean }) {
     <div className="fixed inset-0 z-[90] flex items-center justify-center bg-plane/95 px-6" role="alertdialog" aria-live="assertive">
       <div className="hero max-w-md bg-pop-yellow px-8 py-10 text-center text-on-pop">
         <div className="mx-auto flex h-20 w-20 rotate-3 items-center justify-center rounded-[22px] border-2 border-outline bg-white shadow-[4px_4px_0_#1b1a22]">
-          <Doodle name={weg === "afgesloten" ? "check" : "moon"} size={48} color="var(--color-pop-mint)" />
+          <Doodle name={weg === "afgesloten" ? "check" : weg === "herstart" ? "loop" : "moon"} size={48} color="var(--color-pop-mint)" />
         </div>
-        <h1 className="display mt-6 text-[30px]">{weg === "afgesloten" ? "Tot de volgende keer." : "Hrvatski is gestopt."}</h1>
+        <h1 className="display mt-6 text-[30px]">{weg === "afgesloten" ? "Tot de volgende keer." : weg === "herstart" ? "Even opnieuw starten…" : "Hrvatski is gestopt."}</h1>
         <p className="mt-3 text-[15.5px] font-semibold leading-relaxed">
           {weg === "afgesloten"
             ? "Alles is afgesloten. Je voortgang staat veilig opgeslagen. Je kunt dit tabblad sluiten."
-            : "De app is na een tijdje stilte vanzelf uitgegaan. Je voortgang staat veilig opgeslagen. Open Hrvatski opnieuw via het icoon."}
+            : weg === "herstart"
+              ? "Dit duurt een paar seconden. Deze pagina laadt daarna vanzelf opnieuw."
+              : opLaptop
+                ? "De app is na een tijdje stilte vanzelf uitgegaan. Je voortgang staat veilig opgeslagen. Open Hrvatski opnieuw via het icoon."
+                : "De app op de laptop is gestopt (of de laptop slaapt). Je voortgang staat veilig opgeslagen. Open Hrvatski op de laptop en probeer het dan opnieuw."}
         </p>
       </div>
     </div>
@@ -67,7 +93,10 @@ export function Levensteken({ beheerd }: { beheerd: boolean }) {
 export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; compact?: boolean }) {
   const [zeker, setZeker] = useState(false);
   const [bezig, setBezig] = useState(false);
-  if (!beheerd) return null;
+  // Afsluiten kan alleen op de laptop zelf; op een telefoon of iPad is de knop er niet.
+  const [laptop, setLaptop] = useState(false);
+  useEffect(() => setLaptop(["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)), []);
+  if (!beheerd || !laptop) return null;
 
   async function afsluiten() {
     setBezig(true);

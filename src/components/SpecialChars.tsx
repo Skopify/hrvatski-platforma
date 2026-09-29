@@ -5,6 +5,10 @@
  * leerder ze structureel weglaten — en dan traint het platform precies de fout die
  * het moet afleren.
  *
+ * Op telefoon en iPad (aanraakscherm) staat de rij er niet: daar wissel je gewoon van
+ * toetsenbordtaal en heeft het toetsenbord zelf alle Kroatische letters. Zie
+ * .special-chars in globals.css.
+ *
  * Getekend als toetsen van het iPhone-toetsenbord: een lichte kap met een
  * schaduwrand eronder, die bij aanraken meteen inzakt. Kleine letters eerst,
  * de hoofdletters na een tussenruimte — zo vind je ze op de tast.
@@ -26,7 +30,7 @@ export function SpecialChars({ onInsert }: { onInsert: (ch: string) => void }) {
     </button>
   );
   return (
-    <div className="flex flex-wrap items-center gap-1.5">
+    <div className="special-chars flex flex-wrap items-center gap-1.5">
       {LOWER.map(key)}
       <span aria-hidden className="w-2" />
       {UPPER.map(key)}

@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-import { SearchButton } from "./CommandMenu";
+import { openSearch, SearchButton } from "./CommandMenu";
 import { Doodle } from "./doodles";
-import { SECTIONS } from "./sections";
+import { SECTIONS, type SectionKey } from "./sections";
 import { AfsluitKnop } from "./Levensteken";
 import { PillMeter } from "./PillMeter";
+import { TelefoonKnop } from "./TelefoonPaneel";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./ui";
 
@@ -22,6 +23,11 @@ import { Logo } from "./ui";
   van kleur wisselt: je ziet waar je vandaan komt en waar je heen gaat.
 */
 
+/** De vier secties in de tabbalk op de telefoon; de rest zit achter "Meer". */
+const TAB_KEYS: SectionKey[] = ["overzicht", "lessen", "oefenen", "verhalen"];
+const TAB_SECTIONS = TAB_KEYS.map((k) => SECTIONS.find((s) => s.key === k)!);
+const MEER_SECTIONS = SECTIONS.filter((s) => !TAB_KEYS.includes(s.key));
+
 type Box = { x: number; y: number; w: number; h: number };
 
 /** Meet de positie van het actieve item, zodat één blok ernaartoe kan schuiven. */
@@ -33,7 +39,7 @@ function useIndicator(activeIndex: number) {
   useLayoutEffect(() => {
     const measure = () => {
       const ul = list.current;
-      const a = ul?.querySelectorAll<HTMLAnchorElement>("a[data-nav]")[activeIndex];
+      const a = ul?.querySelectorAll<HTMLElement>("[data-nav]")[activeIndex];
       if (!ul || !a || !a.offsetParent) return setBox(null);
       const u = ul.getBoundingClientRect();
       const r = a.getBoundingClientRect();
@@ -73,7 +79,20 @@ export function Nav({
   );
   const active = SECTIONS[activeIndex];
   const side = useIndicator(activeIndex);
-  const tab = useIndicator(activeIndex);
+  // Op de telefoon staat het blok in de tabbalk: op de vier vaste plekken, of op "Meer".
+  const [meer, setMeer] = useState(false);
+  const tabIndex = TAB_KEYS.indexOf(active?.key as SectionKey);
+  const inMeer = Boolean(active) && tabIndex < 0;
+  const tab = useIndicator(tabIndex >= 0 ? tabIndex : 4);
+
+  // Een nieuwe pagina sluit het paneel; Escape ook.
+  useEffect(() => setMeer(false), [pathname]);
+  useEffect(() => {
+    if (!meer) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMeer(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [meer]);
 
   // Emils regel: wat over het scherm beweegt gebruikt ease-in-out, en blijft
   // onder de 300ms. De kleur van het blok wisselt mee, zonder eigen timing.
@@ -103,7 +122,7 @@ export function Nav({
       {/* ═══ Zijbalk (tablet en groter) ═══ */}
       <nav
         aria-label="Hoofdnavigatie"
-        className="sticky top-0 z-40 hidden h-screen w-[92px] shrink-0 flex-col border-r-2 border-outline bg-surface px-2.5 pb-4 pt-5 md:flex lg:w-[268px] lg:px-4"
+        className="sticky top-0 z-40 hidden h-dvh w-[92px] shrink-0 flex-col border-r-2 border-outline bg-surface px-2.5 pb-4 pt-5 md:flex lg:w-[268px] lg:px-4"
       >
         <Link href="/" className="mb-5 flex items-center justify-center gap-3 px-1 lg:justify-start" title="Hrvatski — leerplatform">
           <Logo size={38} />
@@ -181,60 +200,129 @@ export function Nav({
         </div>
         {beheerd ? (
           <>
-            <div className="mt-3 hidden justify-center lg:flex">
+            <div className="mt-3 hidden flex-wrap justify-center gap-2 lg:flex">
+              <TelefoonKnop beheerd={beheerd} />
               <AfsluitKnop beheerd={beheerd} />
             </div>
-            <div className="mt-3 flex justify-center lg:hidden">
+            <div className="mt-3 flex flex-col items-center gap-2 lg:hidden">
+              <TelefoonKnop beheerd={beheerd} compact />
               <AfsluitKnop beheerd={beheerd} compact />
             </div>
           </>
         ) : null}
       </nav>
 
-      {/* ═══ Tabbalk (telefoon): een sticker-strook onderaan ═══
-          Negen leesbare labels passen niet naast elkaar; daarom krabbels, en het
-          actieve item krijgt zijn naam. */}
+      {/* ═══ Tabbalk (telefoon) ═══
+          Vijf plekken, zoals bij Apple: de vier die je dagelijks gebruikt en "Meer"
+          voor de rest. Negen iconen naast elkaar waren elk 32 punten breed, en een
+          vinger heeft er 44 nodig. */}
       <nav
         aria-label="Hoofdnavigatie"
-        className="fixed inset-x-3 bottom-[calc(10px+env(safe-area-inset-bottom))] z-40 flex h-[64px] items-stretch border-2 border-outline bg-surface px-1.5 shadow-[4px_4px_0_var(--color-outline)] md:hidden"
+        className="fixed inset-x-3 bottom-[calc(10px+env(safe-area-inset-bottom))] z-40 flex h-[68px] items-stretch border-2 border-outline bg-surface px-1.5 shadow-[4px_4px_0_var(--color-outline)] md:hidden"
         style={{ borderRadius: "28px 32px 29px 34px / 32px 28px 34px 29px" }}
       >
-        <ul ref={tab.list} className="relative flex w-full items-center justify-between">
+        <ul ref={tab.list} className="relative grid w-full grid-cols-5 items-center">
           {tab.box ? block(tab.box, tab.animate, "20px 24px 21px 25px / 24px 20px 25px 21px") : null}
-          {SECTIONS.map((s, i) => {
-            const on = i === activeIndex;
+          {TAB_SECTIONS.map((s) => {
+            const on = s.key === active?.key;
             const badge = s.key === "oefenen" && due > 0 ? due : null;
             return (
-              <li key={s.href} className="relative flex">
+              <li key={s.href} className="relative flex justify-center">
                 <Link
                   href={s.href}
                   data-nav
                   aria-current={on ? "page" : undefined}
-                  aria-label={s.label}
-                  className={`group flex h-[52px] flex-col items-center justify-center gap-0.5 ${on ? "min-w-[68px] px-1.5" : "min-w-[32px]"}`}
+                  className="tab-item group flex h-[56px] w-full flex-col items-center justify-center gap-0.5"
                 >
-                  <span
-                    key={on ? "aan" : "uit"}
-                    className={`relative transition-transform duration-150 ease-out group-active:scale-90 ${on ? "animate-pop" : ""}`}
-                  >
+                  <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
                     <Doodle name={s.doodle} size={26} color={on ? "#ffffff" : s.pop} />
                     {badge ? (
-                      <span className="num absolute -right-2.5 -top-2 min-w-[18px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] text-ink leading-[14px] text-on-pop">
+                      <span className="num absolute -right-3 -top-2 min-w-[18px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] leading-[14px] text-ink">
                         {badge > 99 ? "99" : badge}
                       </span>
                     ) : null}
                   </span>
-                  {on ? (
-                    <span className="animate-rise whitespace-nowrap text-[12px] font-extrabold leading-none text-on-pop">
-                      {s.label}
-                    </span>
-                  ) : null}
+                  <span className={`text-[12px] leading-none ${on ? "font-extrabold text-on-pop" : "font-semibold text-ink"}`}>
+                    {s.label}
+                  </span>
                 </Link>
               </li>
             );
           })}
+          <li className="relative flex justify-center">
+            <button
+              type="button"
+              data-nav
+              onClick={() => setMeer(true)}
+              aria-haspopup="dialog"
+              aria-expanded={meer}
+              aria-current={inMeer ? "page" : undefined}
+              className="tab-item group flex h-[56px] w-full flex-col items-center justify-center gap-0.5"
+            >
+              <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
+                {inMeer && active ? (
+                  <Doodle name={active.doodle} size={26} color="#ffffff" />
+                ) : (
+                  <Doodle name="punten" size={26} color="var(--color-pop-lilac)" />
+                )}
+              </span>
+              <span className={`max-w-full truncate text-[12px] leading-none ${inMeer ? "font-extrabold text-on-pop" : "font-semibold text-ink"}`}>
+                {inMeer && active ? active.label : "Meer"}
+              </span>
+            </button>
+          </li>
         </ul>
       </nav>
+
+      {/* ═══ "Meer": de overige secties, zoeken en thema, als paneel van onderen ═══ */}
+      <div className={`fixed inset-0 z-[60] md:hidden ${meer ? "" : "pointer-events-none"}`} inert={!meer} aria-hidden={!meer}>
+        <div
+          className="absolute inset-0 bg-black/40 transition-opacity duration-200"
+          style={{ opacity: meer ? 1 : 0 }}
+          onClick={() => setMeer(false)}
+        />
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Meer"
+          data-open={meer}
+          className="sheet absolute inset-x-0 bottom-0 rounded-t-[32px] border-2 border-b-0 border-outline bg-surface px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-3 shadow-[0_-4px_0_var(--color-outline)]"
+        >
+          <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-line-strong" aria-hidden />
+          <ul className="grid grid-cols-2 gap-3">
+            {MEER_SECTIONS.map((s) => {
+              const on = s.key === active?.key;
+              return (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className={`flex min-h-[64px] items-center gap-3 rounded-[20px] border-2 border-outline px-3 py-2 text-[16px] font-bold shadow-[3px_3px_0_var(--color-outline)] active:translate-x-px active:translate-y-px active:shadow-[1px_1px_0_var(--color-outline)] ${on ? "text-on-pop" : "bg-surface text-ink"}`}
+                    style={on ? { background: s.pop } : undefined}
+                  >
+                    <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} />
+                    {s.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="mt-4 flex items-center gap-3 border-t-2 border-dashed border-line-strong pt-4">
+            <button
+              type="button"
+              onClick={() => {
+                setMeer(false);
+                setTimeout(openSearch, 50);
+              }}
+              className="pill h-11 flex-1 justify-start gap-2 bg-plane px-4 text-[15px] text-ink"
+            >
+              <Doodle name="search" size={22} color="var(--color-pop-sky)" />
+              Zoeken
+            </button>
+            <ThemeToggle />
+            {beheerd ? <AfsluitKnop beheerd={beheerd} compact /> : null}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

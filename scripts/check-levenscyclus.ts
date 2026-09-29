@@ -101,6 +101,8 @@ check("L18", "de starter migreert via npm run migrate (met back-up), niet vanuit
 check("L19", "de starter verwijdert nooit iets uit data/", !/rm\s+[^\n]*data\//.test(starter), "");
 check("L20", "de starter luistert alleen op dit apparaat (127.0.0.1)", /-H 127\.0\.0\.1/.test(starter), "");
 
+check("L21", "de starter neemt niets uit de omgeving van een vorige server over (aan/uit komt uit de instellingen)", /unset HRVATSKI_LAN/.test(starter) && /HRVATSKI_LAN: _lan/.test(leesRoot("src/lib/telefoon.ts")), "");
+
 const breedte = Math.max(...results.map((r) => r.naam.length));
 for (const r of results) console.log(`${r.ok ? "✓" : "✗"} ${r.punt.padEnd(4)} ${r.naam.padEnd(breedte)}${r.ok || !r.detail ? "" : "  → " + r.detail}`);
 const fout = results.filter((r) => !r.ok);

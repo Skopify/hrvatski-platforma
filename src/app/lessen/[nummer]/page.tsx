@@ -85,7 +85,7 @@ export default async function LessonPage({
     <Page width="detail">
       <Link
         href="/lessen"
-        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-muted transition-colors hover:text-accent"
+        className="tap-link inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-muted transition-colors hover:text-accent"
       >
         <span aria-hidden>←</span> Lessen
       </Link>

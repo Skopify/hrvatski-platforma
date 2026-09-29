@@ -129,7 +129,7 @@ export function StoryReader({
           key={i}
           type="button"
           onClick={() => tapWord(part)}
-          className={`rounded-[4px] transition-colors duration-100 ${
+          className={`no-tap rounded-[4px] transition-colors duration-100 ${
             isActive
               ? "bg-pop-yellow text-on-pop shadow-[0_2px_0_var(--color-outline)]"
               : "hover:bg-pop-yellow/50 hover:text-ink"
@@ -411,7 +411,7 @@ export function StoryHeader({ story, minutes, words }: { story: Story; minutes: 
     <header className="mb-9">
       <Link
         href="/verhalen"
-        className="hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
+        className="tap-link hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
       >
         <span aria-hidden>←</span> Verhalen
       </Link>

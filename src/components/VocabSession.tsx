@@ -120,7 +120,7 @@ export function VocabSession({
     <div className="mx-auto max-w-2xl px-5 py-9 sm:px-8">
       <header className="mb-8">
         <div className="mb-3 flex items-center justify-between">
-          <Link href="/woorden" className="hand text-[14px] font-bold text-ink-secondary hover:text-accent">
+          <Link href="/woorden" className="tap-link hand text-[14px] font-bold text-ink-secondary hover:text-accent">
             ← Woorden
           </Link>
           <span className="flex items-center gap-3">

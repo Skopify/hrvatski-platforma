@@ -1024,3 +1024,64 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .typing i { animation: none; opacity: 0.6; }
 }
+
+
+/* ═══ Aanraken: telefoon en iPad ═══
+   Een vinger is dikker dan een muis. Apple raadt minstens 44 punten aan voor
+   alles wat je kunt raken; hieronder staat dat voor knoppen, invoer en losse
+   links. Alleen bij `pointer: coarse`, zodat de laptop compact blijft. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Geen wachttijd en geen zoom bij dubbel tikken op knoppen en links. */
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+summary,
+label {
+  touch-action: manipulation;
+}
+
+/* Een ruime rand onder de pagina trekken (pull-to-refresh, bounce) laat de
+   sticker-tabbalk niet verspringen. */
+body {
+  overscroll-behavior-y: contain;
+}
+
+@media (pointer: coarse) {
+  /* iOS zoomt in op elk veld met een letter kleiner dan 16px en zoomt niet
+     meer terug. Daarom nooit kleiner dan 16px op aanraakschermen. */
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+  button:not(.no-tap),
+  [role="button"]:not(.no-tap),
+  summary {
+    min-height: 44px;
+  }
+  /* Losse links (terug, "Alle cijfers"): een hoge raakzone, zonder dat de tekst groter wordt. */
+  .tap-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  /* De Kroatische lettertoetsen: op een aanraakscherm heeft het toetsenbord ze zelf (wissel
+     van toetsenbordtaal), dus de rij zou alleen ruimte kosten. */
+  .special-chars,
+  .special-chars-wrap {
+    display: none !important;
+  }
+  /* Hover bestaat niet op aanraking; een vastgeplakte hoverstand na een tik is erger dan geen. */
+  .card-lift:hover {
+    transform: none;
+    box-shadow: 3px 3px 0 var(--color-outline);
+  }
+}

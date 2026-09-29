@@ -46,6 +46,8 @@ jobs:
           npm run check:beveiliging
           npm run check:migraties
           npm run check:levenscyclus
+          npm run check:lan
+          npm run check:responsive
 
       - name: Productiebuild
         run: npm run build

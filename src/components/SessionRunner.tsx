@@ -344,7 +344,7 @@ export function SessionRunner({
         <div className="mb-3 flex items-center justify-between gap-4">
           <Link
             href={backHref ?? (kind === "lesson" ? "/lessen" : "/")}
-            className="hand inline-flex min-w-0 items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
+            className="tap-link hand inline-flex min-w-0 items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
           >
             <span aria-hidden>←</span> <span className="truncate">{title}</span>
           </Link>

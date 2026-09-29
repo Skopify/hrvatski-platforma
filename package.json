@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "next dev -H 127.0.0.1",
-    "dev:lan": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start -H 127.0.0.1",
     "seed": "tsx scripts/seed.ts",
@@ -34,7 +33,10 @@
     "check:beveiliging": "tsx scripts/check-beveiliging.ts",
     "check:migraties": "tsx scripts/check-migraties.ts",
     "check:levenscyclus": "tsx scripts/check-levenscyclus.ts",
-    "app:maak": "zsh scripts/maak-app.sh"
+    "app:maak": "zsh scripts/maak-app.sh",
+    "icons": "zsh scripts/maak-icons.sh",
+    "check:lan": "tsx scripts/check-lan.ts",
+    "check:responsive": "tsx scripts/check-responsive.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",
