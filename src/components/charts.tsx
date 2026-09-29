@@ -22,6 +22,44 @@ const ACCENT = "var(--color-accent)";
 const BRIGHT = "var(--color-accent-bright)";
 const SURFACE = "var(--color-surface)";
 
+/* ------------------------------------------------------------ grafiekkaart --- */
+
+const CARD_POP = {
+  sky: "bg-pop-sky",
+  mint: "bg-pop-mint",
+  lilac: "bg-pop-lilac",
+  yellow: "bg-pop-yellow",
+  peach: "bg-pop-peach",
+} as const;
+
+/**
+ * De kaart om elke grafiek: een pastelvlak met inktrand en harde schaduw, een
+ * kop in de displayletter, een handgeschreven toelichting, en de grafiek zelf
+ * op een wit vlak zodat lijnen en cijfers altijd leesbaar zijn (ook in het
+ * donker: binnen een pastelvlak gelden de lichte kleuren).
+ */
+function ChartCard({
+  title,
+  hint,
+  pop = "sky",
+  children,
+}: {
+  title: string;
+  hint?: string;
+  pop?: keyof typeof CARD_POP;
+  children: React.ReactNode;
+}) {
+  return (
+    <figure className={`rounded-card border-2 border-outline p-5 text-on-pop shadow-[var(--hard)] ${CARD_POP[pop]}`}>
+      <figcaption>
+        <span className="display text-[22px] leading-tight">{title}</span>
+      </figcaption>
+      {hint ? <p className="hand mb-3 mt-1 text-[13.5px] font-bold leading-snug">{hint}</p> : <div className="mb-3" />}
+      <div className="rounded-[20px] border-2 border-outline bg-white p-3">{children}</div>
+    </figure>
+  );
+}
+
 /* ------------------------------------------------------------- stattegel --- */
 
 /**
@@ -191,9 +229,13 @@ function smoothPath(pts: { x: number; y: number }[]): string {
     // Tension 0.5 houdt de curve dicht bij de data; hoger gaat overschieten en
     // dan suggereert de grafiek waarden die er niet zijn.
     const c1x = p1.x + (p2.x - p0.x) / 6;
-    const c1y = p1.y + (p2.y - p0.y) / 6;
+    const lo = Math.min(p1.y, p2.y);
+    const hi = Math.max(p1.y, p2.y);
+    // Binnen het bereik van de twee punten blijven: een curve die eronder duikt
+    // toont een dip (soms onder 0%) die in de data niet bestaat.
+    const c1y = Math.min(hi, Math.max(lo, p1.y + (p2.y - p0.y) / 6));
     const c2x = p2.x - (p3.x - p1.x) / 6;
-    const c2y = p2.y - (p3.y - p1.y) / 6;
+    const c2y = Math.min(hi, Math.max(lo, p2.y - (p3.y - p1.y) / 6));
     d += ` C${c1x},${c1y} ${c2x},${c2y} ${p2.x},${p2.y}`;
   }
   return d;
@@ -222,7 +264,7 @@ export function LineChart({
   const id = useId();
 
   const pad = { top: 16, right: 50, bottom: 26, left: 36 };
-  const w = 640;
+  const w = 520;
   const h = height;
   const innerW = w - pad.left - pad.right;
   const innerH = h - pad.top - pad.bottom;
@@ -243,11 +285,7 @@ export function LineChart({
   const hasData = data.some((d) => d.value > 0);
 
   return (
-    <figure className="card p-5">
-      <figcaption className="mb-1">
-        <span className="display-soft text-[15px] text-ink">{title}</span>
-      </figcaption>
-      {hint ? <p className="mb-3 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
+    <ChartCard title={title} hint={hint} pop="sky">
       <div className="relative">
         <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
           <g transform={`translate(${pad.left},${pad.top})`}>
@@ -259,7 +297,7 @@ export function LineChart({
                   y={y(t)}
                   textAnchor="end"
                   dominantBaseline="middle"
-                  fontSize={10.5}
+                  fontSize={12.5}
                   fill={MUTED}
                   className="tabular"
                 >
@@ -271,7 +309,7 @@ export function LineChart({
 
             {hasData ? (
               <>
-                <path d={area} fill={ACCENT} fillOpacity={0.07} />
+                <path d={area} fill={ACCENT} fillOpacity={0.14} />
                 <path
                   d={path}
                   pathLength={1}
@@ -279,24 +317,16 @@ export function LineChart({
                   style={{ "--len": 1 } as React.CSSProperties}
                   fill="none"
                   stroke={ACCENT}
-                  strokeWidth={2.5}
+                  strokeWidth={3.5}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                <circle cx={x(data.length - 1)} cy={y(last.value)} r={5} fill={ACCENT} />
-                <circle
-                  cx={x(data.length - 1)}
-                  cy={y(last.value)}
-                  r={5}
-                  fill="none"
-                  stroke={SURFACE}
-                  strokeWidth={2.5}
-                />
+                <circle cx={x(data.length - 1)} cy={y(last.value)} r={6.5} fill="var(--color-pop-yellow)" stroke={INK} strokeWidth={2.5} />
                 <text
                   x={x(data.length - 1) + 11}
                   y={y(last.value)}
                   dominantBaseline="middle"
-                  fontSize={12}
+                  fontSize={14}
                   fill={INK}
                   fontWeight={700}
                   className="tabular"
@@ -338,10 +368,10 @@ export function LineChart({
               />
             ))}
 
-            <text x={0} y={innerH + 17} fontSize={10.5} fill={MUTED}>
+            <text x={0} y={innerH + 17} fontSize={12.5} fill={MUTED}>
               {data[0]?.label}
             </text>
-            <text x={innerW} y={innerH + 17} fontSize={10.5} fill={MUTED} textAnchor="end">
+            <text x={innerW} y={innerH + 17} fontSize={12.5} fill={MUTED} textAnchor="end">
               {last?.label}
             </text>
           </g>
@@ -362,7 +392,7 @@ export function LineChart({
           </div>
         ) : null}
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -380,7 +410,7 @@ export function AreaChart({
   height?: number;
 }) {
   const pad = { top: 16, right: 48, bottom: 26, left: 36 };
-  const w = 640;
+  const w = 520;
   const h = height;
   const innerW = w - pad.left - pad.right;
   const innerH = h - pad.top - pad.bottom;
@@ -396,11 +426,7 @@ export function AreaChart({
   const last = data[data.length - 1];
 
   return (
-    <figure className="card p-5">
-      <figcaption className="mb-1">
-        <span className="display-soft text-[15px] text-ink">{title}</span>
-      </figcaption>
-      {hint ? <p className="mb-3 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
+    <ChartCard title={title} hint={hint} pop="mint">
       <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
         <g transform={`translate(${pad.left},${pad.top})`}>
           {ticks.map((t) => (
@@ -411,7 +437,7 @@ export function AreaChart({
                 y={y(t)}
                 textAnchor="end"
                 dominantBaseline="middle"
-                fontSize={10.5}
+                fontSize={12.5}
                 fill={MUTED}
                 className="tabular"
               >
@@ -420,7 +446,7 @@ export function AreaChart({
             </g>
           ))}
           <line x1={0} x2={innerW} y1={innerH} y2={innerH} stroke={BASE} strokeWidth={1} />
-          <path d={area} fill={ACCENT} fillOpacity={0.07} />
+          <path d={area} fill={ACCENT} fillOpacity={0.14} />
           <path
             d={line}
             pathLength={1}
@@ -428,19 +454,11 @@ export function AreaChart({
             style={{ "--len": 1 } as React.CSSProperties}
             fill="none"
             stroke={ACCENT}
-            strokeWidth={2.5}
+            strokeWidth={3.5}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle cx={x(data.length - 1)} cy={y(last.value)} r={5} fill={ACCENT} />
-          <circle
-            cx={x(data.length - 1)}
-            cy={y(last.value)}
-            r={5}
-            fill="none"
-            stroke={SURFACE}
-            strokeWidth={2.5}
-          />
+          <circle cx={x(data.length - 1)} cy={y(last.value)} r={6.5} fill="var(--color-pop-yellow)" stroke={INK} strokeWidth={2.5} />
           <text
             x={x(data.length - 1) + 11}
             y={y(last.value)}
@@ -452,15 +470,15 @@ export function AreaChart({
           >
             {Math.round(last.value)}
           </text>
-          <text x={0} y={innerH + 17} fontSize={10.5} fill={MUTED}>
+          <text x={0} y={innerH + 17} fontSize={12.5} fill={MUTED}>
             {data[0]?.label}
           </text>
-          <text x={innerW} y={innerH + 17} fontSize={10.5} fill={MUTED} textAnchor="end">
+          <text x={innerW} y={innerH + 17} fontSize={12.5} fill={MUTED} textAnchor="end">
             {last?.label}
           </text>
         </g>
       </svg>
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -495,11 +513,7 @@ export function BarList({
   const max = Math.max(...data.map((d) => d.value), percent ? 1 : 1);
 
   return (
-    <figure className="card p-5">
-      <figcaption className="mb-1">
-        <span className="display-soft text-[15px] text-ink">{title}</span>
-      </figcaption>
-      {hint ? <p className="mb-4 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
+    <ChartCard title={title} hint={hint} pop="lilac">
       {data.length === 0 ? (
         <p className="py-6 text-center text-[13px] text-ink-muted">{emptyLabel}</p>
       ) : (
@@ -527,7 +541,7 @@ export function BarList({
           })}
         </ul>
       )}
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -581,8 +595,8 @@ export function Heatmap({
     return "var(--color-ramp-5)";
   };
 
-  const size = 13;
-  const gap = 3.5;
+  const size = 14;
+  const gap = 4;
 
   // Maandlabels: alleen bij de kolom waarin een nieuwe maand begint.
   const monthMarks: { col: number; label: string }[] = [];
@@ -598,11 +612,7 @@ export function Heatmap({
   }
 
   return (
-    <figure className="card p-5">
-      <figcaption className="mb-1">
-        <span className="display-soft text-[15px] text-ink">{title}</span>
-      </figcaption>
-      {hint ? <p className="mb-4 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
+    <ChartCard title={title} hint={hint} pop="yellow">
       <div className="thin-scroll relative overflow-x-auto">
         <svg
           width={weeks * (size + gap)}
@@ -616,7 +626,7 @@ export function Heatmap({
               key={`${m.col}-${m.label}`}
               x={m.col * (size + gap)}
               y={10}
-              fontSize={10}
+              fontSize={12}
               fill={MUTED}
             >
               {m.label}
@@ -629,8 +639,10 @@ export function Heatmap({
               y={c.row * (size + gap) + 16}
               width={size}
               height={size}
-              rx={3.5}
+              rx={4}
               fill={step(c.value)}
+              stroke={c.value > 0 ? INK : "none"}
+              strokeWidth={1.5}
               className="animate-cell"
               style={{ "--i": c.col + c.row } as React.CSSProperties}
               onMouseEnter={() => setHover({ date: c.date, value: c.value })}
@@ -640,21 +652,21 @@ export function Heatmap({
         </svg>
       </div>
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-        <p className="tabular text-[13px] text-ink-muted">
+        <p className="tabular hand text-[13.5px] font-bold">
           {hover ? `${hover.date} — ${hover.value} XP` : `Laatste ${weeks} weken`}
         </p>
         <div className="flex items-center gap-1.5">
-          <span className="text-[12px] text-ink-muted">minder</span>
+          <span className="hand text-[13px] font-bold">minder</span>
           {[0, 1, 2, 3, 4, 5].map((i) => (
             <span
               key={i}
-              className="inline-block h-2.5 w-2.5 rounded-[3px]"
+              className="inline-block h-3 w-3 rounded-[4px] border border-outline"
               style={{ background: `var(--color-ramp-${i})` }}
             />
           ))}
-          <span className="text-[12px] text-ink-muted">meer</span>
+          <span className="hand text-[13px] font-bold">meer</span>
         </div>
       </div>
-    </figure>
+    </ChartCard>
   );
 }

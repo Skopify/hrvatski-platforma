@@ -244,7 +244,7 @@ export function SectionHead({
   return (
     <div className="mb-4 flex items-end justify-between gap-4">
       <div className="min-w-0">
-        <h2 className="display-soft text-[24px] text-ink">{title}</h2>
+        <h2 className="display text-[28px] text-ink">{title}</h2>
         {hint ? <p className="mt-1 text-[14px] leading-relaxed text-ink-secondary">{hint}</p> : null}
       </div>
       {action ? (

@@ -316,17 +316,17 @@ export default function DashboardPage() {
             <ul className="stagger grid gap-3 sm:grid-cols-2">
               {weak.map((w, i) => (
                 <li key={w.topic} style={{ "--i": i } as React.CSSProperties}>
-                  <div className="card px-5 py-4">
+                  <div className={`rounded-card border-2 border-outline px-5 py-4 text-on-pop shadow-[var(--hard-sm)] ${["bg-pop-peach", "bg-pop-pink", "bg-pop-coral", "bg-pop-lilac"][i % 4]}`}>
                     <div className="flex items-baseline justify-between gap-3">
-                      <span className="truncate text-[14px] font-semibold text-ink">{w.topic}</span>
-                      <span className="tabular shrink-0 text-[14px] font-bold text-bad-ink">
+                      <span className="truncate text-[15px] font-extrabold">{w.topic}</span>
+                      <span className="num shrink-0 text-[18px]">
                         {Math.round(w.accuracy * 100)}%
                       </span>
                     </div>
                     <div className="mt-2.5">
                       <Meter value={w.accuracy} max={1} height={6} />
                     </div>
-                    <p className="mt-2 text-[13px] text-ink-muted">over {w.attempts} pogingen</p>
+                    <p className="hand mt-2 text-[13px] font-bold">over {w.attempts} pogingen</p>
                   </div>
                 </li>
               ))}

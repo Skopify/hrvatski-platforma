@@ -263,6 +263,14 @@
   --color-bad-ink: #a01a4d;
   --color-warm: #b34700;
   --color-gold: #8a5a00;
+  --color-line-soft: #ece8dd;
+  --color-accent-bright: #3b4cff;
+  --color-ramp-0: #ebe7db;
+  --color-ramp-1: #c6ccff;
+  --color-ramp-2: #8f99ff;
+  --color-ramp-3: #5967ff;
+  --color-ramp-4: #3b4cff;
+  --color-ramp-5: #1f2aa8;
 }
 
 :root {

@@ -1,7 +1,6 @@
 "use client";
 
 import { useCroatianTts } from "@/lib/tts";
-import { Pill } from "./ui";
 
 /*
   Woord van de dag. Eén woord, met precies de gegevens die het Kroatisch nodig
@@ -45,22 +44,20 @@ export function WordOfTheDay({
   const tts = useCroatianTts();
 
   return (
-    <div className="card h-full px-6 py-5">
+    <div className="h-full rounded-card border-2 border-outline bg-pop-lime px-6 py-5 text-on-pop shadow-[var(--hard)]">
       <div className="flex items-start justify-between gap-3">
-        <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted">
-          Woord van de dag
-        </p>
-        {word.seen ? <Pill tone="good">Al gezien</Pill> : <Pill tone="accent">Nieuw</Pill>}
+        <p className="hand text-[15px] font-bold">Woord van de dag</p>
+        <span className="pill rotate-3 bg-white text-on-pop">{word.seen ? "Al gezien" : "Nieuw"}</span>
       </div>
 
       <div className="mt-3 flex items-baseline gap-3">
-        <p className="hr-text display text-[34px] leading-none text-ink">{word.hr}</p>
+        <p className="hr-text display text-[38px] leading-none">{word.hr}</p>
         {tts.voice ? (
           <button
             type="button"
             onClick={() => tts.speak(word.hr)}
             title="Uitspreken"
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-ink-muted transition-colors hover:border-accent-ring hover:bg-accent-wash hover:text-accent"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-outline bg-pop-yellow text-on-pop transition-transform duration-150 active:scale-90"
           >
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path d="M3 6v4h2.5L9 13V3L5.5 6H3Z" fill="currentColor" />
@@ -75,34 +72,34 @@ export function WordOfTheDay({
         ) : null}
       </div>
 
-      <p className="mt-1.5 text-[15px] text-ink-secondary">{word.nl}</p>
+      <p className="mt-1.5 text-[16px] font-semibold">{word.nl}</p>
 
-      <dl className="mt-4 space-y-1.5 border-t border-line-soft pt-3.5 text-[13px]">
+      <dl className="mt-4 space-y-1.5 rounded-[18px] border-2 border-outline bg-white px-4 py-3 text-[14px]">
         <div className="flex gap-2">
-          <dt className="w-20 shrink-0 text-ink-muted">soort</dt>
-          <dd className="text-ink-secondary">{POS_LABEL[word.pos] ?? word.pos}</dd>
+          <dt className="w-20 shrink-0 font-bold">soort</dt>
+          <dd className="font-medium">{POS_LABEL[word.pos] ?? word.pos}</dd>
         </div>
         {word.gender ? (
           <div className="flex gap-2">
-            <dt className="w-20 shrink-0 text-ink-muted">geslacht</dt>
-            <dd className="text-ink-secondary">{GENDER_LABEL[word.gender] ?? word.gender}</dd>
+            <dt className="w-20 shrink-0 font-bold">geslacht</dt>
+            <dd className="font-medium">{GENDER_LABEL[word.gender] ?? word.gender}</dd>
           </div>
         ) : null}
         {word.gen_sg ? (
           <div className="flex gap-2">
-            <dt className="w-20 shrink-0 text-ink-muted">genitief</dt>
-            <dd className="hr-text font-medium text-ink">{word.gen_sg}</dd>
+            <dt className="w-20 shrink-0 font-bold">genitief</dt>
+            <dd className="hr-text font-extrabold">{word.gen_sg}</dd>
           </div>
         ) : null}
         {word.nom_pl ? (
           <div className="flex gap-2">
-            <dt className="w-20 shrink-0 text-ink-muted">meervoud</dt>
-            <dd className="hr-text font-medium text-ink">{word.nom_pl}</dd>
+            <dt className="w-20 shrink-0 font-bold">meervoud</dt>
+            <dd className="hr-text font-extrabold">{word.nom_pl}</dd>
           </div>
         ) : null}
         <div className="flex gap-2">
-          <dt className="w-20 shrink-0 text-ink-muted">uit</dt>
-          <dd className="text-ink-secondary">les {word.lesson}</dd>
+          <dt className="w-20 shrink-0 font-bold">uit</dt>
+          <dd className="font-medium">les {word.lesson}</dd>
         </div>
       </dl>
     </div>
