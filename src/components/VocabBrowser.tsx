@@ -143,7 +143,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
               }}
               className={`rounded-full px-3 py-1 text-[12px] font-semibold transition-colors ${
                 status === val
-                  ? "bg-accent text-on-fill"
+                  ? "bg-accent-fill text-on-fill"
                   : "bg-sunken text-ink-secondary hover:text-ink"
               }`}
             >

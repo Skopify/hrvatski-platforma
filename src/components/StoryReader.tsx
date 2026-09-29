@@ -48,6 +48,11 @@ export function StoryReader({
 
   const [showNl, setShowNl] = useState(false);
   const [active, setActive] = useState<ActiveWord | null>(null);
+  /** Het laatst getoonde woord: blijft staan terwijl het paneel wegglijdt. */
+  const [shown, setShown] = useState(active);
+  useEffect(() => {
+    if (active) setShown(active);
+  }, [active]);
   const [saved, setSaved] = useState<Set<string>>(new Set());
   const [justRead, setJustRead] = useState<{ xp: number; encountered: number } | null>(null);
   const [busy, setBusy] = useState(false);
@@ -123,7 +128,7 @@ export function StoryReader({
           onClick={() => tapWord(part)}
           className={`rounded-[4px] transition-colors duration-100 ${
             isActive
-              ? "bg-accent text-on-fill"
+              ? "bg-accent-fill text-on-fill"
               : "hover:bg-accent-wash hover:text-accent"
           }`}
         >
@@ -140,7 +145,14 @@ export function StoryReader({
         <p className="text-[12.5px] text-ink-muted">
           Tik een woord aan voor de betekenis en zijn vorm.
         </p>
-        <div className="flex rounded-full border border-line bg-surface p-0.5">
+        {/* Segmented control zoals in iOS: de witte duim schuift met een veer
+            naar de gekozen kant, zodat je ziet dat het één keuze is uit twee. */}
+        <div role="radiogroup" aria-label="Leesstand" className="relative grid grid-cols-2 rounded-[10px] bg-sunken p-[3px]">
+          <span
+            aria-hidden
+            className="absolute bottom-[3px] left-[3px] top-[3px] w-[calc(50%-3px)] rounded-[8px] bg-surface shadow-[0_2px_6px_rgb(0_0_0/0.12)] transition-transform duration-[420ms] [transition-timing-function:var(--ease-ios)]"
+            style={{ transform: showNl ? "translateX(100%)" : "translateX(0)" }}
+          />
           {([
             [false, "Kroatisch"],
             [true, "Met vertaling"],
@@ -148,9 +160,11 @@ export function StoryReader({
             <button
               key={label}
               type="button"
+              role="radio"
+              aria-checked={showNl === val}
               onClick={() => setShowNl(val)}
-              className={`rounded-full px-3.5 py-1.5 text-[12.5px] font-semibold transition-colors ${
-                showNl === val ? "bg-accent text-on-fill" : "text-ink-secondary hover:text-ink"
+              className={`relative px-4 py-1.5 text-[13px] font-semibold transition-colors ${
+                showNl === val ? "text-ink" : "text-ink-muted hover:text-ink"
               }`}
             >
               {label}
@@ -171,7 +185,7 @@ export function StoryReader({
                 title={playing === p.id ? "Stop" : "Lees deze alinea voor"}
                 className={`absolute -left-11 top-1 hidden h-8 w-8 items-center justify-center rounded-full border transition-colors md:flex ${
                   playing === p.id
-                    ? "border-accent bg-accent text-on-fill"
+                    ? "border-accent bg-accent-fill text-on-fill"
                     : "border-line bg-surface text-ink-muted opacity-0 hover:border-accent-ring hover:text-accent group-hover:opacity-100"
                 }`}
               >
@@ -292,24 +306,32 @@ export function StoryReader({
         )}
       </div>
 
-      {/* Het glossariumpaneel — vast onderin, verspringt niet. */}
-      {active ? (
-        <div className="fixed inset-x-0 bottom-[calc(66px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[124px]">
-          <div className="card glass animate-pop mx-auto max-w-2xl px-5 py-4 shadow-[var(--lift-3)]" style={{ transformOrigin: "50% 100%" }}>
+      {/* Het woordpaneel: een paneel dat van onderen omhoog komt en bij sluiten
+          langs hetzelfde pad terug naar beneden gaat. Het houdt het laatste
+          woord vast tot het uit beeld is, anders zou het leeg wegglijden. */}
+      {shown ? (
+        <div
+          data-open={Boolean(active)}
+          aria-hidden={!active}
+          inert={!active}
+          className="sheet fixed inset-x-0 bottom-[calc(62px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[112px] lg:pl-[280px]"
+        >
+          <div className="glass mx-auto max-w-2xl rounded-[22px] px-5 pb-4 pt-2.5 shadow-[var(--lift-3)]">
+            <div aria-hidden className="mx-auto mb-2.5 h-[5px] w-9 rounded-full bg-line-strong" />
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-                  <span className="hr-text text-[19px] font-bold text-ink">{active.gloss.hr}</span>
-                  {active.gloss.lemma && active.gloss.lemma !== active.gloss.hr ? (
+                  <span className="hr-text text-[19px] font-bold text-ink">{shown.gloss.hr}</span>
+                  {shown.gloss.lemma && shown.gloss.lemma !== shown.gloss.hr ? (
                     <span className="hr-text text-[13px] text-ink-muted">
-                      ← {active.gloss.lemma}
+                      ← {shown.gloss.lemma}
                     </span>
                   ) : null}
-                  <span className="text-[15px] text-ink-secondary">{active.gloss.nl}</span>
+                  <span className="text-[15px] text-ink-secondary">{shown.gloss.nl}</span>
                 </div>
-                {active.gloss.info ? (
+                {shown.gloss.info ? (
                   <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-muted">
-                    {active.gloss.info}
+                    {shown.gloss.info}
                   </p>
                 ) : null}
               </div>
@@ -318,7 +340,7 @@ export function StoryReader({
                 {tts.voice ? (
                   <button
                     type="button"
-                    onClick={() => tts.speak(active.gloss.hr)}
+                    onClick={() => tts.speak(shown.gloss.hr)}
                     title="Uitspreken"
                     className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
                   >
@@ -344,9 +366,9 @@ export function StoryReader({
               </div>
             </div>
 
-            {active.gloss.item ? (
+            {shown.gloss.item ? (
               <div className="mt-3 border-t border-line-soft pt-3">
-                {saved.has(active.gloss.item) ? (
+                {saved.has(shown.gloss.item) ? (
                   <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-good-ink">
                     <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden>
                       <path

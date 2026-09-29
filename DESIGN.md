@@ -1,120 +1,103 @@
-# DESIGN.md: Hrvatski «Plakat»
+# DESIGN.md: Hrvatski «Lagano»
 
-Status: **gebouwd.** Op 29 september 2026 gekozen door Antonio ("meer gewaagd, durf het
-roer om te gooien"), uit twee richtingen: *Zagreb Noć* (donkere 3D-ruimte) of *Plakat*
-(Zagrebse affiche). Vervangt «Nove tendencije» van een dag eerder. Dit document
+Status: **gebouwd.** Op 29 september 2026 gekozen door Antonio, met een voorbeeld van een
+strakke app-site erbij: "iOS-achtige stijl, maar beter, met logische animaties". Vervangt
+«Plakat» (affiche, die was het niet) en «Nove tendencije» (3D-veld). Dit document
 beschrijft wat er in de code staat; bij verschil wint dit document tot het is bijgewerkt.
 
 ## 1. Richting
 
-De Zagrebse affiche: EXAT 51, Ivan Picelj, Vjenceslav Richter, de posters van Nove
-tendencije en de Zagrebse tekenfilmschool. Drie drukinkten (rood, blauw, geel) plus
-zwart en papier. Volle vlakken, harde randen, letters die de hele breedte pakken,
-geometrie als beeld.
+"Lagano": licht, zonder moeite. Niet een telefoon nagebootst, maar de logica van iOS:
 
-- **Elke sectie is een affiche in een eigen kleur.** De paginakop is een geplakt
-  kleurvlak met de titel van rand tot rand. Je ziet aan de kleur waar je bent.
-- **Het overzicht is een mozaïek van vlakken**: rood (vandaag en de volgende stap),
-  blauw (het šahovnica-veld), geel (dagdoel), zwart (reeks), papier (kerncijfers) en
-  één lange rangbalk.
-- **3D als grafisch object**: een kubus in de affichekleuren in elke kop, het logo
-  als šahovnica-kubus, en een rond eiland van 3D-tegels dat in een blauw vlak zweeft
-  (de cirkel in het vierkant, hét motief van de Zagrebse affiche).
-- **Luid waar je kijkt, rustig waar je leert.** Sessies en verhalen blijven papier,
-  inkt en Literata; alleen de voortgangstegels dragen kleur.
+- **De letter van het apparaat** (SF Pro op Mac en iPhone). Die heeft optische maten en
+  spatiëring per grootte al ingebouwd. Alleen de leesletter (Literata) wordt meegeleverd.
+- **Witte kaarten op een lichtgrijze grond**, zoals gegroepeerde lijsten in Instellingen.
+- **Glas voor wat boven de inhoud zweeft**: de titelbalk, de tabbalk, de zijbalk en het
+  woordpaneel. De pagina loopt eronder door.
+- **Beweging die vertelt waar je bent** (zie §6). Indrukken reageert meteen.
+- **Een grote titel per pagina**, die bij scrollen klein in de glazen balk verschijnt.
+- **Het overzicht als widgets**, met het dagdoel als ring zoals in de Activiteit-app.
 
 ## 2. Kleur
 
 | Token | Licht | Donker | Rol |
 |---|---|---|---|
-| `crvena` | `#d4190f` | idem | rood vlak; Grammatica, Oefenen, Fouten; overzicht "vandaag" |
-| `plava` | `#1f3fd6` | idem | blauw vlak; Verhalen, Woorden, Plaatsingstoets; het veld |
-| `zuta` | `#ffcf1a` | idem | geel vlak; Schrijven, Voortgang; dagdoel, selectie |
-| `crna` | `#121212` | `#f2f2ec` | zwart vlak; Lessen, Nakijken; reeks. In donker wordt het een papieren vlak |
-| `papir` | `#fbfbf7` | `#121212` | papier op een vlak |
-| `plane` / `surface` | `#f2f2ec` / `#fbfbf7` | `#121212` / `#1b1b1b` | ondergrond / vel |
-| `ink` | `#121212` | `#f2f2ec` | tekst én alle lijnen |
-| `accent` | `#1f3fd6` | `#7d93ff` | klikbaar, geselecteerd, voortgang |
-| `good` / `bad` | `#0b7a45` / `#c4170f` | `#4fce8f` / `#ff6b5e` | goed / fout in sessies |
+| `plane` | `#f2f2f7` | `#0b0b0c` | gegroepeerde achtergrond |
+| `surface` | `#ffffff` | `#1c1c1e` | kaart |
+| `sunken` | `#ececf1` | `#2c2c2e` | grijze knop, spoor, segmented control |
+| `ink` / `-secondary` / `-muted` | `#1d1d1f` / `#48484d` / `#6e6e73` | `#f5f5f7` / `#c7c7cc` / `#98989d` | tekst |
+| `accent` | `#0066cc` | `#4da3ff` | links en blauwe tekst |
+| `accent-fill` | `#0071e3` | idem | vulling van knoppen en selectie (witte tekst 4,7:1) |
+| `ring` | `#ff2d55` | `#ff375f` | de dagdoelring |
+| `good` / `bad` / `warm` | `#1a7f37` / `#d70015` / `#b25000` | `#32d74b` / `#ff453a` / `#ff9f0a` | goed, fout, reeks |
+| `flag` | `#d81e2c` | idem | alleen het logo (šahovnica) |
 
-Tekst op vlakken: papier op rood (5,1:1) en blauw (7,4:1), inkt op geel (12,7:1). Alle
-tekstkleuren op papier halen minstens 4,8:1. De sectiekleuren staan in
-`src/lib/secties.ts`; een blok zet `tone-<kleur> block-tone` en gebruikt `--tone`,
-`--on-tone` en `--tone-2` (de tweede kleur, voor schaduwen op dat vlak).
+Alle tekstkleuren halen WCAG AA op hun ondergrond, in beide thema's.
 
 ## 3. Typografie
 
-- **Archivo** (variabel: breedte 62–125, gewicht 100–900) voor alles behalve lezen.
-  - `.poster-title`: breedte 125, gewicht 900, kapitalen, regelafstand 0,86.
-    `FitTitle` rekt hem op tot de breedte van zijn blok (max 220px).
-  - `.display`: breedte 118, 820, gewone letters. Kroatische titels blijven in
-    gewone letters, zodat je de schrijfwijze ziet.
-  - `.label-caps`: 11,5px, 800, kapitalen, spatiëring 0,08em, voor etiketten.
-  - `.num`: breedte 78, 800, gelijke cijfers, voor alle getallen.
-  - Knoppen: kapitalen, breedte 112, 800.
-- **Literata** voor verhalen en leestekst.
+- Systeemletter (`-apple-system`, SF Pro); elders valt hij terug op Segoe UI of Roboto.
+- Grote titel: 34–46px, gewicht 700, spatiëring -0,028em.
+- Kopjes boven een groep (`.eyebrow`): 13px, 600, grijs, zoals in Instellingen.
+- Cijfers (`.num`): gelijke breedte, 700.
+- Literata voor verhalen en leestekst.
 
 ## 4. Vorm en diepte
 
-- **Alles recht.** Alle radii staan op 0 (`--radius-*` in `@theme`). Alleen wat echt
-  rond is (tellers, de afspeelknop) is een cirkel.
-- **Lijnen zijn inkt**: kaarten 2px, affichevlakken 3px. Alleen rasterlijnen in
-  grafieken zijn zacht.
-- **Geen zachte schaduwen.** Wat je kunt pakken, komt bij hover los van het papier:
-  4px verschoven, met een harde schaduw van 6px in inkt. Knoppen krijgen een rode
-  schaduw, op een kleurvlak de tweede kleur van dat vlak. Indrukken zet alles terug
-  op het papier.
-- **Geen gradients, geen glas, geen gloed.** Het enige "verloop" in de code is het
-  dambordpatroon van de logokubus.
+- Kaarten 22px afgerond, geen rand in licht, een heel zachte schaduw. In donker een
+  lichte binnenrand in plaats van schaduw.
+- Knoppen als capsules: **blauw gevuld** voor de hoofdactie, **grijs** voor een tweede keuze.
+- Glas: `backdrop-filter: blur(24px) saturate(1.8)` met een lichte rand; bij
+  `prefers-reduced-transparency` effen.
 
 ## 5. Componenten
 
-- `PageHeader`: affichevlak in de sectiekleur, klein dambord linksboven, kubus
-  rechtsboven, `FitTitle` onderaan; de inleiding staat eronder op papier.
-- `FitTitle`: kop die zijn blok vult; te lange titels mogen over meer regels.
-- `PosterCube`: CSS-kubus met zes vlakken (rood, blauw, geel, papier, šahovnica, zwart).
-- `SahovnicaVeld`: WebGL2-eiland van 3D-tegels met affichebelichting (drie vlakke
-  tinten, geen verloop). Opgetilde en verdiende tegels slaan geel aan.
-- `DayTiles`: 12 tegels die omklappen naar rood en zwart op het gele vlak.
-- `StepTiles`: voortgang in een sessie; de huidige tegel geel met inktrand, klaar =
-  omgeklapt naar groen, goud of rood.
-- Navigatie: zwarte strook met een gele rand; het actieve item is een blok in de
-  kleur van zijn sectie dat naar het nieuwe item schuift en onderweg van kleur wisselt.
+- `PageHeader`: grote titel en inleiding; verschijnt klein in een glazen balk zodra de
+  titel uit beeld scrolt.
+- Navigatie: tabbalk van glas op de telefoon (iconen, het actieve item met naam),
+  smalle zijbalk op een tablet, volle zijbalk zoals iPadOS op een scherm. De selectie
+  schuift met een veer naar het nieuwe item; het nieuwe icoon maakt een klein sprongetje.
+- `Ring`: dagdoel als ring die zich bij het laden tekent.
+- `StepTiles`: capsules per opgave die zich van links vullen in groen, goud of rood.
+- Segmented control (leesstand in verhalen): witte duim die met een veer verschuift.
+- Woordpaneel (verhalen): paneel van glas met een greepje, van onderen in en weer
+  naar onderen uit.
+- `HoverLight`: klikbare kaarten lichten zacht op waar de muis staat (het hover-effect
+  van visionOS), zodat je ziet wat je gaat raken.
 
-## 6. Beweging
+## 6. Beweging: logisch, niet decoratief
 
-| Moment | Wat | Duur / easing | Waarom |
+| Moment | Wat | Duur / curve | Waarom |
 |---|---|---|---|
-| Paginakop | het kleurvlak veegt van links naar rechts (`clip-path`), de titel volgt | 620ms in-out, titel 520ms na 260ms | een affiche die geplakt wordt: zegt "nieuwe pagina" |
-| Dambord in de kop | vakjes klappen één voor één omhoog | 620ms, 28ms per vak | kinetisch raster |
-| Kubus | draait mee met het scrollen; kwartslag bij hover | scrollgebonden / 900ms | een object in de ruimte, geen plaatje |
-| Blokken en kaarten laden | schuiven 8px omhoog, na elkaar | 360ms, 45ms per blok, max 6 | het mozaïek bouwt zich op |
-| Kaart of knop onder de muis | los van het papier met harde schaduw | 140–180ms ease-out | laat zien wat je kunt pakken |
-| Indrukken | terug op het papier | 60–80ms | directe bevestiging |
-| Navigatieblok | schuift naar het nieuwe item en wisselt van kleur | 380ms in-out | waar je vandaan komt en heen gaat |
-| Šahovnica-veld | golft; tegels onder de cursor slaan geel aan; klik = rimpeling | live, gedempt | het ene grote 3D-moment |
-| Dagdoel | nieuwe tegels klappen om | 520ms, 34ms per tegel | alleen wat sinds je vorige bezoek bijkwam |
-| Antwoord in sessie | tegel klapt om naar groen/goud/rood | 520ms | directe feedback |
-| Grafieken en balken | tekenen zich, groeien, heatmap bouwt diagonaal op | 420–900ms | een meting die binnenkomt |
+| Dieper in een sectie (Verhalen → verhaal) | nieuwe pagina schuift van rechts | 380ms veer | je gaat een laag dieper |
+| Terug naar boven | pagina komt van links | 380ms veer | je komt terug waar je was |
+| Naar een andere sectie | vervaagt op zijn plek | 240ms | tabs liggen naast elkaar, niet achter elkaar |
+| Grote titel uit beeld | titel verschijnt klein in de glazen balk | 200–300ms | je weet altijd waar je bent |
+| Selectie in het menu | schuift naar het nieuwe item, icoon springt | 460ms veer | waar je vandaan komt en heen gaat |
+| Indrukken (knop, kaart) | kleiner en iets doorzichtig, meteen | 80ms in, veer terug | de app hoort je op het moment van aanraken |
+| Woordpaneel | van onderen in, naar onderen uit | 440ms / 280ms | hetzelfde pad heen en terug |
+| Segmented control | duim schuift | 420ms veer | één keuze uit twee |
+| Antwoord goed/fout | capsule vult zich in de kleur | 420ms veer | je ziet de sessie vorderen |
+| Fout antwoord | het "nee"-schudden van iOS | 360ms | herkenbaar, zonder alarm |
+| Dagdoel, balken, grafieken | ring en lijnen tekenen zich één keer | 700–1100ms | je ziet de voortgang geteld worden |
 
-Bewust niet: de volgende vraag na Enter komt direct; geen scroll-animaties behalve de
-kubus; geen eindeloze lussen buiten het veld; het vlammetje flakkert één keer.
+De veer is Apple's standaard: kritisch gedempt, geen doorschieten
+(`cubic-bezier(0.32, 0.72, 0, 1)`). Bewust niet: de volgende vraag na Enter komt
+direct; geen scroll-animaties; geen eindeloze lussen.
 
-**Minder beweging:** vegen, verschuiven, kantelen, draaien en schudden vervallen;
-fades en kleurwissels blijven. Hover geeft geen verschuiving en geen schaduw meer.
-Het veld is één stilstaand beeld.
+**Minder beweging:** geen verschuiven, schalen of schudden; wel korte fades en
+kleurwissels, zodat je nog steeds ziet dat iets verandert.
 
-**Techniek:** geen nieuwe bibliotheek. Het veld is ruwe WebGL2 met instancing en
-tekent alleen in beeld. De rest is CSS: `clip-path`, `perspective`,
-`backface-visibility`, en `animation-timeline: scroll()` waar de browser het kent.
+**Techniek:** geen nieuwe bibliotheek. CSS-transities en -animaties; `template.tsx`
+kiest push, pop of tab op basis van het vorige pad.
 
 ## 7. Waar wat staat
 
-- Tokens, tonen, typografie, componentklassen, 3D en beweging: `src/app/globals.css`
-- Sectiekleuren: `src/lib/secties.ts`
-- Kop: `PageHeader.tsx`, `FitTitle.tsx`, `PosterCube.tsx`
-- Overzicht: `src/app/page.tsx` · veld: `SahovnicaVeld.tsx` · dagdoel: `DayTiles.tsx`
-- Tegels, dambord: `ui.tsx` · navigatie en logokubus: `Nav.tsx` · thema: `ThemeToggle.tsx`
+- Tokens, componentklassen en beweging: `src/app/globals.css`
+- Overgangen tussen pagina's: `src/app/template.tsx`
+- Kop: `PageHeader.tsx` · navigatie: `Nav.tsx` · hover-licht: `HoverLight.tsx` · thema: `ThemeToggle.tsx`
+- Ring, capsules, logo: `ui.tsx` · overzicht: `src/app/page.tsx`
+- Woordpaneel en segmented control: `StoryReader.tsx`
 - 404 en laden: `app/not-found.tsx`, `app/loading.tsx`
 
 Routes, inhoud, teksten en functies zijn niet veranderd.

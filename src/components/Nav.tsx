@@ -4,9 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLayoutEffect, useRef, useState } from "react";
 
-import { toneFor } from "@/lib/secties";
 import { ThemeToggle } from "./ThemeToggle";
-import { Bolt } from "./ui";
+import { Bolt, Logo } from "./ui";
 
 /* Lijniconen, 21px, één stroke-gewicht — geen icoonbibliotheek nodig. */
 const ICONS: Record<string, React.ReactNode> = {
@@ -90,31 +89,6 @@ const LINKS = [
   { href: "/voortgang", label: "Voortgang", icon: "voortgang" },
 ];
 
-/**
- * Het logo als kubus: zes kanten šahovnica, in 3D. Bij hover draait hij een
- * kwartslag — een object dat je kunt aanraken, geen plaatje.
- */
-function LogoCube({ size = 30 }: { size?: number }) {
-  const half = size / 2;
-  const faces = [
-    `rotateY(0deg) translateZ(${half}px)`,
-    `rotateY(90deg) translateZ(${half}px)`,
-    `rotateY(180deg) translateZ(${half}px)`,
-    `rotateY(-90deg) translateZ(${half}px)`,
-    `rotateX(90deg) translateZ(${half}px)`,
-    `rotateX(-90deg) translateZ(${half}px)`,
-  ];
-  return (
-    <span className="block" style={{ width: size, height: size, perspective: 400 }} aria-hidden>
-      <span className="cube cube-logo block h-full w-full">
-        {faces.map((t) => (
-          <i key={t} style={{ transform: t }} />
-        ))}
-      </span>
-    </span>
-  );
-}
-
 type Box = { x: number; y: number; w: number; h: number };
 
 export function Nav({ streak, xp, due }: { streak: number; xp: number; due: number }) {
@@ -128,9 +102,9 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
   );
 
   /*
-    Eén markering voor het hele menu, die naar het actieve item schuift. Zo
-    zie je waar je vandaan komt en waar je heen gaat, in plaats van dat de ene
-    knop uit en de andere aan flitst. De eerste keer zonder animatie — dan is
+    Eén selectie voor het hele menu, die met een veer naar het nieuwe item
+    schuift — zoals de selectie in de zijbalk van iPadOS. Je ziet waar je
+    vandaan komt en waar je heen gaat. De eerste keer zonder animatie: dan is
     er geen "vandaan".
   */
   useLayoutEffect(() => {
@@ -152,47 +126,40 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
     };
   }, [activeIndex]);
 
-  const tone = activeIndex > 0 ? toneFor(LINKS[activeIndex].href) : "crvena";
-
   return (
     /*
-      Een zwarte strook, zoals de rand van een affichewand. Het actieve item is
-      een blok in de kleur van zijn sectie; dat blok schuift naar het nieuwe
-      item en neemt onderweg de nieuwe kleur aan.
-
-      Op de telefoon een balk onderaan: iconen, en alleen het actieve item
-      krijgt zijn naam erbij (acht leesbare labels passen niet naast elkaar).
+      Drie vormen van dezelfde navigatie:
+        telefoon  — tabbalk van glas onderaan; iconen, en alleen het actieve
+                    item draagt zijn naam (acht leesbare labels passen niet)
+        tablet    — smalle zijbalk met icoon en klein label
+        scherm    — volle zijbalk zoals iPadOS: icoon en naam naast elkaar
     */
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 flex h-[calc(60px+env(safe-area-inset-bottom))] shrink-0 flex-row items-stretch border-t-[3px] border-zuta bg-[#121212] px-1 pb-[env(safe-area-inset-bottom)] text-[#fbfbf7] md:sticky md:inset-auto md:top-0 md:h-screen md:w-[96px] md:flex-col md:items-center md:border-r-[3px] md:border-t-0 md:px-0 md:pb-0 md:pt-5"
+      className="glass fixed inset-x-0 bottom-0 z-40 flex h-[calc(56px+env(safe-area-inset-bottom))] shrink-0 flex-row items-stretch border-t border-[var(--material-edge)] px-1 pb-[env(safe-area-inset-bottom)] md:sticky md:inset-auto md:top-0 md:h-screen md:w-[88px] md:flex-col md:items-stretch md:border-r md:border-t-0 md:px-2 md:pb-4 md:pt-5 lg:w-[256px] lg:px-4"
       aria-label="Hoofdnavigatie"
     >
       <Link
         href="/"
         title="Hrvatski — leerplatform"
-        aria-label="Naar het overzicht"
-        className="cube-wrap hidden shrink-0 items-center justify-center p-2 md:mb-6 md:flex"
+        className="mb-6 hidden items-center justify-center gap-3 rounded-xl px-2 py-1 md:flex lg:justify-start"
       >
-        <LogoCube size={32} />
+        <Logo size={30} />
+        <span className="hidden text-[17px] font-bold tracking-tight lg:inline">Hrvatski</span>
       </Link>
 
       <ul
         ref={list}
-        className="relative flex w-full flex-1 flex-row items-center justify-between px-0.5 md:w-full md:flex-col md:items-stretch md:justify-start md:gap-0 md:px-0"
+        className="relative flex w-full flex-1 flex-row items-center justify-between md:flex-col md:items-stretch md:justify-start md:gap-0.5"
       >
         {box ? (
           <li
             aria-hidden
-            className={`tone-${tone} pointer-events-none absolute left-0 top-0`}
+            className="pointer-events-none absolute left-0 top-0 hidden rounded-xl bg-accent-wash md:block lg:bg-accent-fill"
             style={{
               width: box.w,
               height: box.h,
-              // Zwart op zwart zie je niet: de zwarte sectie krijgt een vel papier.
-              background: tone === "crna" ? "#fbfbf7" : "var(--tone)",
               transform: `translate3d(${box.x}px, ${box.y}px, 0)`,
-              transition: animate
-                ? "transform 380ms var(--ease-in-out-strong), width 380ms var(--ease-in-out-strong), height 380ms var(--ease-in-out-strong), background-color 380ms ease"
-                : "none",
+              transition: animate ? "transform 460ms var(--ease-ios)" : "none",
             }}
           />
         ) : null}
@@ -200,74 +167,91 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
         {LINKS.map((link, i) => {
           const active = i === activeIndex;
           const badge = link.href === "/oefenen" && due > 0 ? due : null;
-          const on = active ? toneFor(link.href) : null;
 
           return (
-            <li key={link.href} className="relative flex md:w-full">
+            <li key={link.href} className="relative flex">
               <Link
                 href={link.href}
                 data-nav
                 aria-current={active ? "page" : undefined}
                 aria-label={link.label}
-                className={`group relative flex h-12 w-full flex-col items-center justify-center gap-1 transition-colors duration-200 md:h-auto md:py-3 ${
+                className={`group relative flex h-12 w-full flex-col items-center justify-center gap-0.5 rounded-xl transition-colors duration-200 md:h-auto md:gap-1 md:py-2.5 lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:py-2 ${
                   active
-                    ? `min-w-[66px] px-2 ${on === "zuta" || on === "crna" ? "text-[#121212]" : "text-[#fbfbf7]"}`
-                    : "min-w-[38px] text-[#fbfbf7]/60 hover:text-[#fbfbf7]"
+                    ? "min-w-[64px] px-1.5 text-accent lg:text-on-fill"
+                    : "min-w-[38px] text-ink-muted hover:text-ink lg:text-ink lg:hover:bg-sunken"
                 }`}
               >
-                <span className="relative transition-transform duration-150 group-active:scale-90">
+                <span
+                  key={active ? "aan" : "uit"}
+                  className={`relative transition-transform duration-150 group-active:scale-90 ${active ? "animate-pop" : ""}`}
+                >
                   <svg
                     width="22"
                     height="22"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="square"
-                    strokeLinejoin="miter"
+                    strokeWidth={active ? 2 : 1.7}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     aria-hidden
                   >
                     {ICONS[link.icon]}
                   </svg>
                   {badge ? (
-                    <span className="num absolute -right-3 -top-2 min-w-[20px] border-2 border-[#121212] bg-zuta px-1 text-center text-[11px] leading-[16px] text-[#121212]">
+                    <span className="num absolute -right-2.5 -top-1.5 min-w-[18px] rounded-full bg-bad px-1 text-center text-[11px] leading-[18px] text-on-fill lg:hidden">
                       {badge > 99 ? "99" : badge}
                     </span>
                   ) : null}
                 </span>
                 <span
-                  className={`label-caps whitespace-nowrap !text-[10.5px] leading-none !tracking-[0.04em] ${
-                    active ? "animate-rise" : "hidden md:inline"
+                  className={`whitespace-nowrap text-[10.5px] font-semibold leading-none lg:text-[15px] lg:font-medium ${
+                    active ? "" : "hidden md:inline"
                   }`}
                 >
                   {link.label}
                 </span>
+                {badge ? (
+                  <span
+                    className={`num ml-auto hidden rounded-full px-2 text-[12px] leading-[20px] lg:inline ${
+                      active ? "bg-on-fill/25 text-on-fill" : "bg-bad text-on-fill"
+                    }`}
+                  >
+                    {badge > 99 ? "99+" : badge}
+                  </span>
+                ) : null}
               </Link>
             </li>
           );
         })}
       </ul>
 
-      <div className="hidden shrink-0 md:flex md:w-full md:flex-col md:items-center md:gap-3 md:border-t-[3px] md:border-[#fbfbf7]/15 md:py-4">
-        <span
-          title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
-          className={`flex flex-col items-center gap-0.5 text-[12px] ${streak > 0 ? "text-[#ff6b5e]" : "text-[#fbfbf7]/50"}`}
-        >
-          <svg width="14" height="17" viewBox="0 0 17 20" aria-hidden className={streak > 0 ? "animate-flicker" : ""}>
-            <path
-              d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span className="num text-[15px]">{streak}</span>
-        </span>
-
-        <span title={`${xp} XP totaal`} className="flex flex-col items-center gap-0.5 text-[12px] text-zuta">
-          <Bolt />
-          <span className="num text-[13px] text-[#fbfbf7]">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp}</span>
-        </span>
-
-        <ThemeToggle onDark />
+      {/* Reeks, XP en het thema. */}
+      <div className="hidden shrink-0 md:flex md:flex-col md:items-center md:gap-3 md:border-t md:border-line md:pt-4 lg:flex-row lg:justify-between lg:px-2">
+        <div className="flex flex-col items-center gap-3 lg:flex-row lg:gap-4">
+          <span
+            title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
+            className={`flex flex-col items-center gap-0.5 text-[12px] lg:flex-row lg:gap-1.5 lg:text-[14px] ${
+              streak > 0 ? "text-warm" : "text-ink-muted"
+            }`}
+          >
+            <svg width="14" height="17" viewBox="0 0 17 20" aria-hidden className={streak > 0 ? "animate-flicker" : ""}>
+              <path
+                d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z"
+                fill={streak > 0 ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
+              />
+            </svg>
+            <span className="num">{streak}</span>
+          </span>
+          <span
+            title={`${xp} XP totaal`}
+            className="flex flex-col items-center gap-0.5 text-[12px] text-ink-muted lg:flex-row lg:gap-1.5 lg:text-[14px]"
+          >
+            <Bolt className="text-gold-bright" />
+            <span className="num text-ink">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp}</span>
+          </span>
+        </div>
+        <ThemeToggle />
       </div>
     </nav>
   );

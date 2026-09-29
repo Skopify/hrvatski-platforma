@@ -116,7 +116,7 @@ export default function LessonsPage() {
                         <span
                           className={`tabular mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold ${
                             status === "done"
-                              ? "bg-accent text-on-fill"
+                              ? "bg-accent-fill text-on-fill"
                               : status === "in_progress"
                                 ? "border-2 border-accent bg-accent-wash text-accent"
                                 : openable

@@ -1,52 +1,28 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   PLAKAT — het ontwerpsysteem van dit platform
+   LAGANO — het ontwerpsysteem van dit platform
    ═══════════════════════════════════════════════════════════════════════════
 
-   De Zagrebse affiche: EXAT 51, Ivan Picelj, Vjenceslav Richter, de
-   posters van Nove tendencije en de Zagrebse tekenfilmschool. Drie
-   drukinkten — rood, blauw, geel — plus zwart en papier. Volle vlakken,
-   harde randen, letters die de hele breedte pakken, geometrie als beeld.
+   "Lagano": licht, zonder moeite. De manier van werken van iOS — niet de
+   telefoon nagebootst, maar de logica erachter:
 
-   Hoe het in de interface landt:
-   - Elke sectie heeft een eigen kleur (zie src/lib/secties.ts); de kop van
-     de pagina is een geplakte affiche in die kleur.
-   - Geen afgeronde hoeken, geen zachte schaduwen. Wat je kunt pakken, komt
-     los van het papier met een harde schaduw.
-   - 3D als grafisch object: een kubus in de affichekleuren, het
-     šahovnica-veld in een blauw vlak.
-   - Waar je leert (sessies, verhalen) blijft het rustig: papier, inkt,
-     Literata. Het lawaai zit op de overzichten.
+   - De letter van het systeem (SF Pro op Apple-apparaten). Die heeft optische
+     maten en spatiëring per grootte al ingebouwd.
+   - Witte kaarten op een lichtgrijze grond, zoals gegroepeerde lijsten.
+   - Lagen van glas voor wat boven de inhoud zweeft: de balk bovenaan, de
+     tabbalk, de zijbalk en het woordpaneel. De pagina loopt eronder door.
+   - Beweging die vertelt waar je bent. Dieper een sectie in schuift van
+     rechts, terug komt van links, van sectie wisselen vervaagt, een paneel
+     komt van onderen en gaat weer naar onderen. Indrukken reageert meteen.
 
+   Letters: systeemletter voor alles, Literata voor de verhalen.
    Zie DESIGN.md voor de regels achter de getallen.
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ------------------------------------------------------------- webfonts --- */
-/* Zelf gehost. Geen CDN, geen verzoek dat de machine verlaat. */
-
-@font-face {
-  font-family: "Archivo";
-  font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
-    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Archivo";
-  font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Alleen de leesletter wordt meegeleverd; de interface gebruikt de letter
+   van het apparaat. Zelf gehost, geen verzoek dat de machine verlaat. */
 
 @font-face {
   font-family: "Literata";
@@ -72,161 +48,140 @@
 /* --------------------------------------------------------------- tokens --- */
 
 @theme {
-  /* Papier en inkt. Affichepapier is koel wit, geen crème; de inkt is bijna
-     zwart, nooit #000. */
-  --color-plane: #f2f2ec;
-  --color-plane-deep: #e6e6de;
-  --color-surface: #fbfbf7;
-  --color-sunken: #e6e6de;
+  /* Gegroepeerde achtergrond en kaarten, zoals iOS ze stapelt. */
+  --color-plane: #f2f2f7;
+  --color-plane-deep: #e9e9ef;
+  --color-surface: #ffffff;
+  --color-sunken: #ececf1;
 
-  --color-ink: #121212;
-  --color-ink-secondary: #3a3a3a;
-  --color-ink-muted: #5c5c58;
+  --color-ink: #1d1d1f;
+  --color-ink-secondary: #48484d;
+  --color-ink-muted: #6e6e73;
 
-  /* Lijnen zijn inkt: een affiche heeft geen haarlijnen in grijs. Alleen de
-     rasterlijnen in grafieken zijn zacht. */
-  --color-line: #121212;
-  --color-line-soft: #d6d6ce;
-  --color-line-strong: #121212;
+  --color-line: #e3e3e8;
+  --color-line-soft: #ededf2;
+  --color-line-strong: #c7c7cc;
 
-  /* De drie drukinkten van de affiche, plus zwart en papier. */
-  --color-crvena: #d4190f;
-  --color-plava: #1f3fd6;
-  --color-zuta: #ffcf1a;
-  --color-crna: #121212;
-  --color-papir: #fbfbf7;
+  /* Blauw: alles wat klikbaar is. `accent` is de tekstkleur (5:1 op de
+     grond), `accent-fill` de vulling van knoppen (4,7:1 met witte tekst). */
+  --color-accent: #0066cc;
+  --color-accent-fill: #0071e3;
+  --color-accent-hover: #0058b0;
+  --color-accent-bright: #0071e3;
+  --color-accent-wash: #e5f0fd;
+  --color-accent-ring: #a9cdf7;
 
-  /* Accent = het blauw: klikbaar, geselecteerd, voortgang. */
-  --color-accent: #1f3fd6;
-  --color-accent-hover: #1631b0;
-  --color-accent-bright: #3a57ea;
-  --color-accent-wash: #dde3fa;
-  --color-accent-ring: #1f3fd6;
+  --color-on-fill: #ffffff;
 
-  --color-on-fill: #fbfbf7;
+  --color-flag: #d81e2c;
 
-  --color-flag: #d4190f;
+  /* Systeemkleuren voor betekenis. */
+  --color-warm: #b25000;
+  --color-warm-bright: #ff9500;
+  --color-warm-wash: #fff3e3;
 
-  --color-warm: #c4170f;
-  --color-warm-bright: #d4190f;
-  --color-warm-wash: #fbe1df;
+  --color-gold: #8a5a00;
+  --color-gold-bright: #ffb800;
+  --color-gold-wash: #fff6dc;
 
-  --color-gold: #7a5c00;
-  --color-gold-bright: #ffcf1a;
-  --color-gold-wash: #fff3c2;
+  --color-good: #1a7f37;
+  --color-good-ink: #146c2e;
+  --color-good-wash: #e6f6ea;
+  --color-warn: #8a5a00;
+  --color-warn-wash: #fff6dc;
+  --color-bad: #d70015;
+  --color-bad-ink: #b00012;
+  --color-bad-wash: #fdeceb;
 
-  --color-good: #0b7a45;
-  --color-good-ink: #075c33;
-  --color-good-wash: #dcf1e4;
-  --color-warn: #7a5c00;
-  --color-warn-wash: #fff3c2;
-  --color-bad: #c4170f;
-  --color-bad-ink: #a3120c;
-  --color-bad-wash: #fbe1df;
+  /* De ring van het dagdoel. */
+  --color-ring: #ff2d55;
+  --color-ring-track: #ffd6df;
 
-  --color-ramp-0: #e2e2da;
-  --color-ramp-1: #b9c4f4;
-  --color-ramp-2: #7d91ec;
-  --color-ramp-3: #3a57ea;
-  --color-ramp-4: #1f3fd6;
-  --color-ramp-5: #0f1f75;
+  --color-ramp-0: #e5e5ea;
+  --color-ramp-1: #b3d4fb;
+  --color-ramp-2: #74aef6;
+  --color-ramp-3: #2f89f0;
+  --color-ramp-4: #0071e3;
+  --color-ramp-5: #00489a;
 
-  --font-sans: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, "Segoe UI", Roboto, sans-serif;
   --font-reading: "Literata", ui-serif, Georgia, serif;
 
-  /* Vorm: alles recht. Een affiche heeft geen afgeronde hoeken. Alleen wat
-     écht rond is — tellers, stippen, de afspeelknop — blijft een cirkel
-     (rounded-full valt hier bewust buiten). */
-  --radius-xs: 0px;
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-2xl: 0px;
-  --radius-3xl: 0px;
-  --radius-card: 0px;
-  --radius-tile: 0px;
+  --radius-card: 22px;
+  --radius-tile: 14px;
 
+  /* Kritisch gedempte veer (Apple's standaard: geen doorschieten) en een
+     lichte veer voor wat met vaart binnenkomt. */
   --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
-  --ease-spring: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
-/* Nachtaffiche: zwart papier, witte inkt, dezelfde drie kleuren. Het zwarte
-   vlak wordt het witte vlak, anders verdwijnt het in de grond. */
+/* Donker: zoals iOS, bijna zwart met grijze lagen erbovenop. */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-plane: #121212;
-  --color-plane-deep: #0b0b0b;
-  --color-surface: #1b1b1b;
-  --color-sunken: #262626;
+  --color-plane: #0b0b0c;
+  --color-plane-deep: #000000;
+  --color-surface: #1c1c1e;
+  --color-sunken: #2c2c2e;
 
-  --color-ink: #f2f2ec;
-  --color-ink-secondary: #c9c9c2;
-  --color-ink-muted: #9a9a93;
+  --color-ink: #f5f5f7;
+  --color-ink-secondary: #c7c7cc;
+  --color-ink-muted: #98989d;
 
-  --color-line: #f2f2ec;
-  --color-line-soft: #333333;
-  --color-line-strong: #f2f2ec;
+  --color-line: #2c2c2e;
+  --color-line-soft: #232325;
+  --color-line-strong: #48484a;
 
-  --color-crna: #f2f2ec;
-  --color-papir: #121212;
+  --color-accent: #4da3ff;
+  --color-accent-fill: #0071e3;
+  --color-accent-hover: #7cbaff;
+  --color-accent-bright: #4da3ff;
+  --color-accent-wash: #0f2540;
+  --color-accent-ring: #1f4a7a;
 
-  --color-accent: #7d93ff;
-  --color-accent-hover: #a2b2ff;
-  --color-accent-bright: #7d93ff;
-  --color-accent-wash: #1a2250;
-  --color-accent-ring: #7d93ff;
+  --color-on-fill: #ffffff;
 
-  --color-on-fill: #121212;
+  --color-warm: #ff9f0a;
+  --color-warm-wash: #2e1f08;
+  --color-gold: #ffd60a;
+  --color-gold-wash: #2b2508;
+  --color-good: #32d74b;
+  --color-good-ink: #5de06f;
+  --color-good-wash: #0d2a14;
+  --color-warn: #ffd60a;
+  --color-warn-wash: #2b2508;
+  --color-bad: #ff453a;
+  --color-bad-ink: #ff6961;
+  --color-bad-wash: #331311;
 
-  --color-warm: #ff6b5e;
-  --color-warm-wash: #3a1412;
-  --color-gold: #ffcf1a;
-  --color-gold-wash: #332a08;
+  --color-ring: #ff375f;
+  --color-ring-track: #3a1520;
 
-  --color-good: #4fce8f;
-  --color-good-ink: #7ddcaa;
-  --color-good-wash: #0f2a1c;
-  --color-warn: #ffcf1a;
-  --color-warn-wash: #332a08;
-  --color-bad: #ff6b5e;
-  --color-bad-ink: #ff8f85;
-  --color-bad-wash: #3a1412;
-
-  --color-ramp-0: #262626;
-  --color-ramp-1: #1f2d6e;
-  --color-ramp-2: #2b44b8;
-  --color-ramp-3: #3a57ea;
-  --color-ramp-4: #7d93ff;
-  --color-ramp-5: #c8d1ff;
+  --color-ramp-0: #2c2c2e;
+  --color-ramp-1: #0f3462;
+  --color-ramp-2: #1656a3;
+  --color-ramp-3: #0a7bf0;
+  --color-ramp-4: #4da3ff;
+  --color-ramp-5: #b8dbff;
 }
 
-/* Tonen per sectie. Een blok zet .tone-x en gebruikt dan --tone en --on-tone. */
-.tone-crvena {
-  --tone: var(--color-crvena);
-  --on-tone: #fbfbf7;
-  --tone-2: var(--color-zuta);
+:root {
+  --lift-1: 0 1px 2px rgb(0 0 0 / 0.04);
+  --lift-2: 0 1px 2px rgb(0 0 0 / 0.04), 0 6px 20px -10px rgb(0 0 0 / 0.12);
+  --lift-3: 0 2px 6px rgb(0 0 0 / 0.05), 0 20px 44px -18px rgb(0 0 0 / 0.22);
+  --sheen: rgb(255 255 255 / 0.9);
+  --material: rgb(249 249 251 / 0.72);
+  --material-edge: rgb(0 0 0 / 0.08);
 }
-.tone-plava {
-  --tone: var(--color-plava);
-  --on-tone: #fbfbf7;
-  --tone-2: var(--color-crvena);
-}
-.tone-zuta {
-  --tone: var(--color-zuta);
-  --on-tone: #121212;
-  --tone-2: var(--color-crvena);
-}
-.tone-crna {
-  --tone: var(--color-crna);
-  --on-tone: var(--color-papir);
-  --tone-2: var(--color-zuta);
-}
-.block-tone {
-  background-color: var(--tone);
-  color: var(--on-tone);
+:root[data-theme="dark"] {
+  --lift-1: 0 1px 2px rgb(0 0 0 / 0.5);
+  --lift-2: 0 0 0 1px rgb(255 255 255 / 0.04);
+  --lift-3: 0 0 0 1px rgb(255 255 255 / 0.08), 0 20px 44px -18px rgb(0 0 0 / 0.9);
+  --sheen: rgb(255 255 255 / 0.06);
+  --material: rgb(28 28 30 / 0.72);
+  --material-edge: rgb(255 255 255 / 0.08);
 }
 
 /* ----------------------------------------------------------------- basis --- */
@@ -242,47 +197,25 @@ body {
   background-color: var(--color-plane);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-stretch: 100%;
+  font-size: 15px;
+  letter-spacing: -0.005em;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* De affichekop: Archivo op volle breedte en volle kracht, in kapitalen,
-   strak op elkaar. FitTitle rekt hem op tot de breedte van zijn blok. */
-.poster-title {
-  font-family: var(--font-display);
-  font-stretch: 125%;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.035em;
-  line-height: 0.86;
-}
-
-/* Koppen binnen de pagina: breed en zwaar, maar in gewone letters — een
-   Kroatische titel in kapitalen zou de schrijfwijze verbergen. */
+/* De grote titel: SF Display zwaar, strakke spatiëring die meeschaalt. */
 .display {
   font-family: var(--font-display);
-  font-stretch: 118%;
-  font-weight: 820;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1.06;
   text-wrap: balance;
 }
 
 .display-soft {
   font-family: var(--font-display);
-  font-stretch: 112%;
-  font-weight: 760;
-  letter-spacing: -0.02em;
+  font-weight: 650;
+  letter-spacing: -0.018em;
   text-wrap: balance;
-}
-
-/* Etiketten op de affiche: klein, kapitalen, ruim gespatieerd. */
-.label-caps {
-  font-size: 11.5px;
-  font-weight: 800;
-  font-stretch: 112%;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .hr-text {
@@ -296,117 +229,121 @@ body {
   letter-spacing: -0.003em;
 }
 
-.tabular {
+.tabular,
+.num {
   font-variant-numeric: tabular-nums;
 }
-
 .num {
-  font-stretch: 78%;
-  font-variant-numeric: tabular-nums;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Kleine kopjes boven een groep, zoals in Instellingen. */
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--color-ink-muted);
 }
 
 /* --------------------------------------------------------- componenten --- */
 
 @layer components {
-  /* Het vel: papier met een inktrand. Geen schaduw — op een affiche ligt
-     alles in hetzelfde vlak, tot je het oppakt. */
   .card {
     background-color: var(--color-surface);
-    border: 2px solid var(--color-line);
-    border-radius: 0;
+    border-radius: var(--radius-card);
+    box-shadow: var(--lift-2);
   }
 
-  /* Oppakken: het vel komt los van het papier en werpt een harde schaduw,
-     als een uitgeknipte vorm. Indrukken drukt het terug. */
+  /* Klikbare kaart. Indrukken reageert meteen (op pointer-down, via :active),
+     loslaten veert terug. Met een muis licht hij op waar de cursor staat —
+     het "hover-effect" van visionOS, zodat je ziet wat je gaat raken. */
   .card-lift {
+    position: relative;
     transition:
-      transform 180ms var(--ease-out-quint),
-      box-shadow 180ms var(--ease-out-quint);
+      transform 420ms var(--ease-ios),
+      box-shadow 300ms var(--ease-out-quint);
+  }
+  .card-lift::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      360px circle at var(--mx, 50%) var(--my, 0%),
+      var(--sheen),
+      transparent 65%
+    );
+    mix-blend-mode: soft-light;
+    transition: opacity 250ms ease;
   }
   @media (hover: hover) and (pointer: fine) {
     .card-lift:hover {
-      transform: translate(-4px, -4px);
-      box-shadow: 6px 6px 0 var(--color-ink);
+      transform: translateY(-2px);
+      box-shadow: var(--lift-3);
+    }
+    .card-lift:hover::after {
+      opacity: 1;
     }
   }
   .card-lift:active {
-    transform: translate(0, 0);
-    box-shadow: 0 0 0 var(--color-ink);
-    transition-duration: 80ms;
+    transform: scale(0.98);
+    transition-duration: 90ms;
   }
 
   .hero {
     background-color: var(--color-surface);
-    border: 3px solid var(--color-line);
+    border-radius: calc(var(--radius-card) + 4px);
+    box-shadow: var(--lift-2);
   }
 
-  /* Knoppen: blokken inkt in kapitalen. Hover tilt het blok op met een rode
-     schaduw eronder; indrukken zet het terug op het papier. */
+  /* Knoppen als capsules. Gevuld = de hoofdactie, grijs = een tweede keuze. */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 0;
-    border: 2px solid var(--color-ink);
-    font-weight: 800;
-    font-stretch: 112%;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     white-space: nowrap;
     transition:
-      transform 140ms var(--ease-out-quint),
-      box-shadow 140ms var(--ease-out-quint),
-      background-color 140ms ease,
-      color 140ms ease;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .btn:hover:not(:disabled) {
-      transform: translate(-3px, -3px);
-      box-shadow: 4px 4px 0 var(--color-crvena);
-    }
+      background-color 180ms ease,
+      color 180ms ease,
+      opacity 120ms ease,
+      transform 380ms var(--ease-ios);
   }
   .btn:active:not(:disabled) {
-    transform: translate(0, 0);
-    box-shadow: 0 0 0 var(--color-crvena);
-    transition-duration: 60ms;
+    transform: scale(0.96);
+    opacity: 0.85;
+    transition-duration: 80ms;
   }
 
   .btn-primary {
-    background-color: var(--color-ink);
-    color: var(--color-plane);
+    background-color: var(--color-accent-fill);
+    color: var(--color-on-fill);
+  }
+  @media (hover: hover) {
+    .btn-primary:hover:not(:disabled) {
+      background-color: #0077ed;
+    }
   }
   .btn-primary:disabled {
     background: var(--color-sunken);
-    border-color: var(--color-sunken);
     color: var(--color-ink-muted);
     cursor: not-allowed;
   }
 
   .btn-ghost {
-    background-color: var(--color-surface);
+    background-color: var(--color-sunken);
     color: var(--color-ink);
   }
-
-  /* Knop op een gekleurd vlak: papier met inkt, schaduw in de tweede kleur. */
-  .btn-on-tone {
-    background-color: var(--color-papir);
-    color: var(--color-crna);
-    border-color: var(--color-crna);
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .btn-on-tone:hover:not(:disabled) {
-      box-shadow: 4px 4px 0 var(--color-crna);
-    }
-  }
-
-  /* Op een gekleurd vlak valt de rode schaduw weg in de grond; daar neemt
-     de knop de tweede kleur van dat vlak. */
-  @media (hover: hover) and (pointer: fine) {
-    .block-tone .btn:hover:not(:disabled) {
-      box-shadow: 4px 4px 0 var(--tone-2);
+  @media (hover: hover) {
+    .btn-ghost:hover:not(:disabled) {
+      background-color: var(--color-line-strong);
     }
   }
 
@@ -414,174 +351,103 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    border-radius: 0;
-    padding: 0.15rem 0.5rem;
-    font-size: 11.5px;
-    font-weight: 800;
-    font-stretch: 110%;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    padding: 0.18rem 0.65rem;
+    font-size: 12px;
+    font-weight: 600;
     line-height: 1.5;
   }
 
   .link-sweep {
     background-image: linear-gradient(currentColor, currentColor);
-    background-size: 0% 2px;
+    background-size: 0% 1.5px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 240ms var(--ease-out-quint);
+    transition: background-size 280ms var(--ease-out-quint);
   }
   .link-sweep:hover {
-    background-size: 100% 2px;
+    background-size: 100% 1.5px;
+  }
+
+  /* Materiaal: het glas van de balken en panelen. Een lichte rand bovenaan
+     vangt het licht, zoals bij iOS. */
+  .glass {
+    background-color: var(--material);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    .glass {
+      background-color: var(--color-surface);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
   }
 }
 
-/* ------------------------------------------------------------ 3D-tegels --- */
+/* ------------------------------------------------------ navigatiemotie --- */
+/* De ingang van een pagina zegt waar je naartoe ging:
+     push  — dieper in dezelfde sectie: schuift van rechts naar binnen
+     pop   — terug naar boven: komt van links
+     tab   — naar een andere sectie: vervaagt op zijn plek
+   RouteTransition (template) kiest er één op basis van het vorige pad. */
 
-.tile3d {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 520ms var(--ease-out-quint);
-  transition-delay: calc(var(--i, 0) * 34ms);
-}
-.tile3d > .face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.tile3d > .face.back {
-  transform: rotateX(180deg);
-}
-.tile3d.is-on {
-  transform: perspective(400px) rotateX(180deg);
-}
-.tile3d:not(.is-on) {
-  transform: perspective(400px) rotateX(0deg);
-}
-
-/* Het kleine dambord in de hoek van een affiche: vakjes klappen bij het
-   laden één voor één om. */
-.checker3d > span {
-  display: block;
-  animation: flip-up 620ms var(--ease-out-quint) backwards;
-  animation-delay: calc(var(--i, 0) * 28ms + 200ms);
-  transform-origin: 50% 100%;
-}
-@keyframes flip-up {
+@keyframes push-in {
   from {
-    transform: perspective(160px) rotateX(-95deg);
     opacity: 0;
+    transform: translateX(28px);
   }
   to {
-    transform: perspective(160px) rotateX(0deg);
     opacity: 1;
+    transform: translateX(0);
   }
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: scale(0.992);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.route-push {
+  animation: push-in 380ms var(--ease-ios) backwards;
+}
+.route-pop {
+  animation: pop-in 380ms var(--ease-ios) backwards;
+}
+.route-tab {
+  animation: tab-in 240ms var(--ease-out-quint) backwards;
 }
 
-/* De kubus: zes vlakken in de affichekleuren. Hij draait mee terwijl je
-   scrolt (waar de browser scroll-animaties kent) en een kwartslag bij hover. */
-.cube {
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateX(-24deg) rotateY(-34deg);
-  transition: transform 900ms var(--ease-in-out-strong);
+/* Het woordpaneel: komt van onderen, gaat naar onderen — hetzelfde pad. */
+.sheet {
+  transform: translateY(0);
+  opacity: 1;
+  transition:
+    transform 440ms var(--ease-ios),
+    opacity 200ms ease;
 }
-.cube-wrap:hover .cube,
-.cube-wrap:focus-visible .cube {
-  transform: rotateX(-24deg) rotateY(56deg);
-}
-.cube > i {
-  position: absolute;
-  inset: 0;
-  outline: 2px solid var(--color-crna);
-  outline-offset: -1px;
-}
-.cube > i:nth-child(1) {
-  background: var(--color-crvena);
-}
-.cube > i:nth-child(2) {
-  background: var(--color-plava);
-}
-.cube > i:nth-child(3) {
-  background: var(--color-zuta);
-}
-.cube > i:nth-child(4) {
-  background: var(--color-papir);
-}
-.cube > i:nth-child(5) {
-  background-color: var(--color-papir);
-  background-image: repeating-conic-gradient(var(--color-crvena) 0 25%, var(--color-papir) 0 50%);
-  background-size: 66.667% 66.667%;
-}
-.cube > i:nth-child(6) {
-  background: var(--color-crna);
-}
-.cube-logo > i {
-  background-color: #fbfbf7 !important;
-  background-image: repeating-conic-gradient(var(--color-crvena) 0 25%, #fbfbf7 0 50%) !important;
-  background-size: 66.667% 66.667% !important;
-  outline-color: #121212;
-}
-
-@supports (animation-timeline: scroll()) {
-  .cube-scroll {
-    animation: cube-turn linear both;
-    animation-timeline: scroll(root);
-  }
-  @keyframes cube-turn {
-    from {
-      transform: rotateX(-24deg) rotateY(-34deg);
-    }
-    to {
-      transform: rotateX(336deg) rotateY(326deg);
-    }
-  }
+.sheet[data-open="false"] {
+  transform: translateY(calc(100% + 24px));
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 280ms, 200ms;
 }
 
 /* ---------------------------------------------------------------- motie --- */
-
-/* Pagina-ingang: de inhoud schuift kort omhoog. */
-@keyframes enter {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.page-enter {
-  animation: enter 300ms var(--ease-out-quint) backwards;
-}
-
-/* Een affiche wordt geplakt: het kleurvlak veegt van links naar rechts over
-   het papier, de kop volgt een tel later. */
-@keyframes paste {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-.animate-paste {
-  animation: paste 620ms var(--ease-in-out-strong) backwards;
-}
-@keyframes type-in {
-  from {
-    opacity: 0;
-    transform: translateY(0.25em);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-type {
-  animation: type-in 520ms var(--ease-out-quint) 260ms backwards;
-}
 
 @keyframes rise {
   from {
@@ -599,22 +465,25 @@ body {
   100% {
     transform: translateX(0);
   }
-  30% {
-    transform: translateX(-4px);
+  20% {
+    transform: translateX(-6px);
   }
-  60% {
-    transform: translateX(3px);
+  45% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
   }
 }
 
 @keyframes pop {
   from {
     opacity: 0;
-    transform: translateY(8px) scale(0.98);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
   }
 }
 
@@ -632,37 +501,34 @@ body {
 }
 
 .animate-rise {
-  animation: rise 300ms var(--ease-out-quint) both;
+  animation: rise 320ms var(--ease-out-quint) both;
 }
+/* Fout: het "nee"-schudden van iOS bij een verkeerd wachtwoord. */
 .animate-shake {
-  animation: shake 250ms var(--ease-out-quint) both;
+  animation: shake 360ms var(--ease-out-quint) both;
 }
 .animate-pop {
-  animation: pop 240ms var(--ease-out-quint) both;
+  animation: pop 260ms var(--ease-ios) both;
 }
 .animate-flicker {
   animation: flicker 700ms ease-in-out 1 both;
   transform-origin: 50% 100%;
 }
 
-/* De blokken van een raster komen één voor één binnen. Maximaal zes
-   stappen, zodat een lange lijst niet op zijn laatste kaart laat wachten. */
 .stagger > * {
-  animation: rise 360ms var(--ease-out-quint) backwards;
-  animation-delay: calc(min(var(--i, 0), 6) * 45ms + 80ms);
+  animation: rise 380ms var(--ease-out-quint) backwards;
+  animation-delay: calc(min(var(--i, 0), 6) * 40ms + 60ms);
 }
 
+/* Ringen en lijnen tekenen zich: je ziet de voortgang geteld worden. */
 @keyframes draw {
   from {
     stroke-dashoffset: var(--len, 1000);
   }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 .animate-draw {
   stroke-dasharray: var(--len, 1000);
-  animation: draw 900ms var(--ease-out-quint) 120ms backwards;
+  animation: draw 1100ms var(--ease-out-quint) 150ms backwards;
 }
 @keyframes grow-y {
   from {
@@ -689,7 +555,7 @@ body {
 .animate-grow-x {
   transform-box: fill-box;
   transform-origin: 0 50%;
-  animation: grow-x 620ms var(--ease-out-quint) 120ms backwards;
+  animation: grow-x 700ms var(--ease-out-quint) 150ms backwards;
 }
 @keyframes cell-in {
   from {
@@ -708,37 +574,49 @@ body {
   animation-delay: calc(var(--i, 0) * 14ms + 100ms);
 }
 
-/* Minder beweging: minder, niet niets. Verschuiven, vegen, kantelen en
-   schudden vervallen; fades en kleurwissels blijven. */
+/* Een stap in de sessievoortgang vult zich van links, in de kleur van de
+   uitkomst. */
+.step-fill {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 420ms var(--ease-ios);
+}
+.step-fill[data-on="true"] {
+  transform: scaleX(1);
+}
+
+/* Minder beweging: geen verschuiven, schalen of schudden — wel korte fades en
+   kleurwissels, zodat je nog steeds ziet dat iets verandert. */
 @media (prefers-reduced-motion: reduce) {
-  .page-enter,
+  .route-push,
+  .route-pop,
+  .route-tab,
   .animate-rise,
   .animate-pop,
-  .animate-type,
-  .stagger > *,
-  .checker3d > span {
+  .stagger > * {
     animation: fade 160ms ease both;
   }
-  .animate-paste,
   .animate-shake,
   .animate-flicker,
   .animate-draw,
   .animate-grow,
   .animate-grow-x,
-  .animate-cell,
-  .cube-scroll {
+  .animate-cell {
     animation: none;
   }
+  .sheet,
+  .sheet[data-open="false"] {
+    transform: none;
+    transition: opacity 160ms ease;
+  }
   .card-lift,
-  .tile3d,
-  .cube,
-  .btn {
-    transition-property: background-color, color, border-color;
+  .step-fill {
+    transition: none;
   }
   .card-lift:hover,
-  .btn:hover:not(:disabled) {
+  .card-lift:active,
+  .btn:active:not(:disabled) {
     transform: none;
-    box-shadow: none;
   }
 }
 @keyframes fade {
@@ -753,13 +631,14 @@ body {
 /* ---------------------------------------------------------------- rest --- */
 
 ::selection {
-  background-color: var(--color-zuta);
-  color: #121212;
+  background-color: var(--color-accent-ring);
+  color: var(--color-ink);
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
+  outline: 3px solid color-mix(in srgb, var(--color-accent-fill) 55%, transparent);
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
 .thin-scroll::-webkit-scrollbar {
@@ -767,7 +646,8 @@ body {
   height: 8px;
 }
 .thin-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-ink-muted);
+  background: var(--color-line-strong);
+  border-radius: 9999px;
 }
 .thin-scroll::-webkit-scrollbar-track {
   background: transparent;

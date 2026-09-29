@@ -43,7 +43,7 @@ verhalen binnen de grammatica die je al kent, en nakijken dat taalkundig klopt
 ## Brand Commitments
 
 - Merkteken: de šahovnica (rood-wit dambord) als logo en als enige ornament.
-- Visuele wereld sinds 29-09-2026: «Plakat», de Zagrebse affiche (zie DESIGN.md), op eigen verzoek gewaagd.
+- Visuele wereld sinds 29-09-2026: «Lagano», iOS-achtig maar beter, met logische animaties (zie DESIGN.md). Zijn referentie: strakke, lichte app-sites met pilknoppen en zwevende panelen.
 - Blijvend: pagina's mogen onderling niet verschillen in kop of marges, en navy-vlakken vond hij niet fris.
 
 ## Product Principles

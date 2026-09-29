@@ -47,7 +47,7 @@ export function ThemeToggle({ className = "", onDark = false }: { className?: st
       onClick={toggle}
       aria-label={label}
       title={label}
-      className={`group relative flex h-10 w-10 items-center justify-center transition-colors ${onDark ? "text-[#fbfbf7]/70 hover:bg-[#fbfbf7]/10 hover:text-[#fbfbf7]" : "text-ink-muted hover:bg-sunken hover:text-ink"} ${className}`}
+      className={`group relative flex h-10 w-10 items-center justify-center rounded-full transition-colors ${onDark ? "text-[#fbfbf7]/70 hover:bg-[#fbfbf7]/10 hover:text-[#fbfbf7]" : "text-ink-muted hover:bg-sunken hover:text-ink"} ${className}`}
     >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden
         className="transition-transform duration-500 [transition-timing-function:var(--ease-in-out-strong)] group-active:scale-90"

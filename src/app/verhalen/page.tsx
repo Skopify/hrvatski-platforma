@@ -61,10 +61,10 @@ const MOTIFS: Record<string, React.ReactNode> = {
 /** Kleur en label per dekkingsoordeel — de meter moet in één blik te lezen zijn. */
 const VERDICT_STYLE: Record<CoverageVerdict, { tone: string; bar: string }> = {
   ideaal: { tone: "text-good-ink", bar: "var(--color-good)" },
-  goed: { tone: "text-accent", bar: "var(--color-plava)" },
-  pittig: { tone: "text-gold", bar: "var(--color-zuta)" },
-  // Boven je niveau is een waarschuwing, geen fout: zwaar zwart, geen rood.
-  hoog: { tone: "text-ink", bar: "var(--color-crna)" },
+  goed: { tone: "text-accent", bar: "var(--color-accent-fill)" },
+  pittig: { tone: "text-gold", bar: "var(--color-gold-bright)" },
+  // Boven je niveau is een waarschuwing, geen fout: oranje, geen rood.
+  hoog: { tone: "text-warm", bar: "var(--color-warm-bright)" },
 };
 
 /** De volgorde van de niveaus, zodat A1.1 boven B1 staat en niet andersom. */
@@ -124,7 +124,7 @@ export default function StoriesPage() {
                               aria-hidden
                               className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
                                 onLevel
-                                  ? "bg-accent text-on-fill"
+                                  ? "bg-accent-fill text-on-fill"
                                   : "bg-sunken text-ink-muted"
                               }`}
                             >

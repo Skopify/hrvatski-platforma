@@ -100,7 +100,7 @@ export default function SchrijvenPage() {
                           aria-hidden
                           className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
                             o.werk?.klaar
-                              ? "bg-accent text-on-fill"
+                              ? "bg-accent-fill text-on-fill"
                               : o.werk
                                 ? "bg-accent-wash text-accent"
                                 : "bg-sunken text-ink-muted"

@@ -67,10 +67,8 @@ export function Logo({ size = 38 }: { size?: number }) {
 /* --------------------------------------------------------------- checker --- */
 
 /**
- * De šahovnica-band: twee rijen dambord boven elke kop. Het enige ornament van
- * het platform — en het beweegt: bij het laden klappen de vakjes één voor één
- * omhoog, van links naar rechts. Een kinetisch raster in het klein, als groet
- * aan Nove tendencije. Puur CSS (`.checker3d` in globals.css).
+ * Een klein plat stukje šahovnica: twee rijen dambord, het merkteken van het
+ * platform. Rood, net als het logo.
  */
 export function Checker({
   cols = 9,
@@ -84,29 +82,21 @@ export function Checker({
   className?: string;
 }) {
   return (
-    <div
+    <svg
+      width={cols * cell}
+      height={2 * cell}
+      viewBox={`0 0 ${cols * cell} ${2 * cell}`}
       aria-hidden
-      className={`checker3d grid ${className}`}
-      style={{ gridTemplateColumns: `repeat(${cols}, ${cell}px)`, width: cols * cell }}
+      className={className}
     >
-      {Array.from({ length: 2 * cols }, (_, k) => {
-        const r = Math.floor(k / cols);
-        const c = k % cols;
-        return (
-          <span
-            key={k}
-            style={
-              {
-                width: cell,
-                height: cell,
-                background: (r + c) % 2 === 0 ? tone : "transparent",
-                "--i": c + r * 2,
-              } as React.CSSProperties
-            }
-          />
-        );
-      })}
-    </div>
+      {Array.from({ length: 2 }, (_, r) =>
+        Array.from({ length: cols }, (_, c) =>
+          (r + c) % 2 === 0 ? (
+            <rect key={`${r}-${c}`} x={c * cell} y={r * cell} width={cell} height={cell} fill={tone} />
+          ) : null,
+        ),
+      )}
+    </svg>
   );
 }
 
@@ -123,22 +113,22 @@ const TILE_BACK: Record<StepState, string> = {
   ok: "bg-good",
   near: "bg-gold-bright",
   no: "bg-bad",
-  done: "bg-crna",
-  current: "bg-crna",
-  todo: "bg-crna",
+  done: "bg-accent-fill",
+  current: "bg-accent-fill",
+  todo: "bg-accent-fill",
 };
 
 /**
- * Voortgang in een sessie: één tegel per opgave. Is een opgave klaar, dan
- * kantelt haar tegel om en toont de uitkomst — groen, goud (bijna) of rood.
- * Een doorlopende balk zegt "ergens halverwege"; tegels zeggen "nog zes, en
- * zo ging het tot nu toe".
+ * Voortgang in een sessie: één capsule per opgave. Is een opgave klaar, dan
+ * vult haar capsule zich van links in de kleur van de uitkomst — groen,
+ * goud (bijna) of rood. Een doorlopende balk zegt "ergens halverwege";
+ * capsules zeggen "nog zes, en zo ging het tot nu toe".
  */
 export function StepTiles({ steps }: { steps: StepState[] }) {
   const done = steps.filter((s) => s !== "todo" && s !== "current").length;
   return (
     <div
-      className="flex gap-[3px]"
+      className="flex gap-1"
       role="progressbar"
       aria-valuemin={0}
       aria-valuemax={steps.length}
@@ -148,13 +138,14 @@ export function StepTiles({ steps }: { steps: StepState[] }) {
       {steps.map((s, i) => (
         <span
           key={i}
-          className={`tile3d h-3 flex-1 ${s === "todo" || s === "current" ? "" : "is-on"}`}
-          style={{ "--i": 0 } as React.CSSProperties}
+          className={`relative h-1.5 flex-1 overflow-hidden rounded-full ${
+            s === "current" ? "bg-accent-ring" : "bg-line"
+          }`}
         >
           <span
-            className={`face ${s === "current" ? "bg-zuta ring-2 ring-inset ring-crna" : "bg-sunken"}`}
+            data-on={s !== "todo" && s !== "current"}
+            className={`step-fill absolute inset-0 rounded-full ${TILE_BACK[s]}`}
           />
-          <span className={`face back ${TILE_BACK[s]}`} />
         </span>
       ))}
     </div>
@@ -257,6 +248,55 @@ export function ProgressRing({
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
         {children}
       </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ ring --- */
+
+/**
+ * Een ring zoals in de Activiteit-app: het dagdoel als cirkel die zich
+ * sluit. Bij het laden tekent hij zich van nul tot waar je nu bent, zodat je
+ * de voortgang ziet optellen. Voorbij het doel loopt hij een tweede ronde.
+ */
+export function Ring({
+  value,
+  max,
+  size = 148,
+  stroke = 18,
+  children,
+}: {
+  value: number;
+  max: number;
+  size?: number;
+  stroke?: number;
+  children?: ReactNode;
+}) {
+  const pct = max > 0 ? Math.max(0, value / max) : 0;
+  const lap = Math.min(1, pct);
+  const r = (size - stroke) / 2;
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90" aria-hidden>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--color-ring-track)" strokeWidth={stroke} />
+        {pct > 0 ? (
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={r}
+            fill="none"
+            stroke="var(--color-ring)"
+            strokeWidth={stroke}
+            strokeLinecap="round"
+            pathLength={1}
+            strokeDasharray={1}
+            strokeDashoffset={1 - Math.max(lap, 0.001)}
+            className="animate-draw"
+            style={{ "--len": 1 } as React.CSSProperties}
+          />
+        ) : null}
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">{children}</div>
     </div>
   );
 }
