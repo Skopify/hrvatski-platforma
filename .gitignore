@@ -9,6 +9,7 @@ next-env.d.ts
 # persoonlijke data en hoort niet in een repository. `npm run seed` bouwt de
 # database opnieuw op uit content/.
 data/
+data-test/
 
 # De bronboeken. Dit zijn gescande hoofdstukken uit een commercieel lesboek
 # (Hrvatski za početnike). Die mogen niet mee: het auteursrecht ligt niet hier,
