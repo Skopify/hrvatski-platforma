@@ -1,3 +1,4 @@
+import { eisEigenaar } from "@/lib/accounts/api";
 import { instelling } from "@/lib/levenscyclus";
 import { adressen, koppelcode, lanAan, leesInstellingen, ontkoppelAlles, schrijfInstellingen } from "@/lib/telefoon";
 
@@ -6,7 +7,9 @@ export const dynamic = "force-dynamic";
 const toegestaan = (request: Request) => instelling().beheerd && request.headers.get("x-hrvatski-actie") === "lan";
 
 /** Hoe staat "Telefoon & iPad"? Alleen in de app zelf en alleen op de laptop. */
-export async function GET() {
+export async function GET(request: Request) {
+  const eigenaar = eisEigenaar(request);
+  if ("fout" in eigenaar) return eigenaar.fout;
   if (!instelling().beheerd) return Response.json({ beheerd: false });
   const aan = lanAan();
   return Response.json(
@@ -17,6 +20,8 @@ export async function GET() {
 
 /** Aan of uit zetten (gaat pas in na een herstart), of alle apparaten ontkoppelen. */
 export async function POST(request: Request) {
+  const eigenaar = eisEigenaar(request);
+  if ("fout" in eigenaar) return eigenaar.fout;
   if (!toegestaan(request)) return Response.json({ ok: false }, { status: 403 });
   let body: { aan?: unknown; ontkoppel?: unknown };
   try {

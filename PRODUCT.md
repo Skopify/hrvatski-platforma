@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Eén volwassen Nederlandstalige leerder die Kroatisch leert voor zichzelf, naast werk.
+Nederlandstalige volwassenen (de eigenaar en wie hij uitnodigt) die Kroatisch leren voor zichzelf, naast werk.
 Hij gebruikt het platform elke dag kort (een herhaalsessie, een verhaal, een
 schrijfopdracht), op een laptop en op zijn telefoon, vaak 's avonds.
 
@@ -30,7 +30,7 @@ verhalen binnen de grammatica die je al kent, en nakijken dat taalkundig klopt
 - Dagelijkse herhaalsessie en drills: tientallen tot honderden antwoorden per dag, veel typen, met č/ć/š/ž/đ.
 - Verhalen lezen met woorden aantikken voor betekenis en vorm.
 - Schrijfopdrachten per niveau, nagekeken op spelling, naamval en servismen.
-- Draait lokaal (Next.js + SQLite), geen accounts, geen externe verzoeken.
+- Draait lokaal (Next.js + SQLite), geen externe verzoeken. Sinds 29-09-2026 met accounts: elke gebruiker heeft een eigen login en eigen voortgang op dezelfde computer; er is geen e-mail of cloud (wachtwoordherstel gaat met een herstelcode).
 
 ## Capabilities and Constraints
 

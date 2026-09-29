@@ -1,3 +1,4 @@
+import { eisGebruiker } from "@/lib/accounts/api";
 import { searchIndex } from "@/lib/zoekindex";
 
 /**
@@ -6,6 +7,8 @@ import { searchIndex } from "@/lib/zoekindex";
  * tientallen kilobytes op elke pagina en de index verandert toch alleen
  * als de content verandert.
  */
-export async function GET() {
+export async function GET(request: Request) {
+  const ingelogd = eisGebruiker(request);
+  if ("fout" in ingelogd) return ingelogd.fout;
   return Response.json(searchIndex(), { headers: { "Cache-Control": "private, max-age=300" } });
 }

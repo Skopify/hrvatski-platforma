@@ -65,6 +65,7 @@ export function Nav({
   todayXp,
   goalXp,
   beheerd,
+  gebruiker,
 }: {
   streak: number;
   xp: number;
@@ -72,6 +73,7 @@ export function Nav({
   todayXp: number;
   goalXp: number;
   beheerd: boolean;
+  gebruiker: { naam: string; eigenaar: boolean };
 }) {
   const pathname = usePathname();
   const activeIndex = SECTIONS.findIndex((s) =>
@@ -171,6 +173,18 @@ export function Nav({
             );
           })}
         </ul>
+
+        {/* Wie ben je: klik voor je account. */}
+        <Link
+          href="/account"
+          aria-label={`Account van ${gebruiker.naam}`}
+          className="mb-3 hidden items-center gap-2.5 rounded-full border-2 border-outline bg-plane px-2 py-1.5 md:flex lg:px-2.5"
+        >
+          <span aria-hidden className="num flex h-8 w-8 shrink-0 -rotate-3 items-center justify-center rounded-full border-2 border-outline bg-pop-lilac text-[14px] text-on-pop">
+            {gebruiker.naam.slice(0, 1).toUpperCase()}
+          </span>
+          <span className="hidden min-w-0 flex-1 truncate text-[14.5px] font-bold lg:block">{gebruiker.naam}</span>
+        </Link>
 
         {/* Het dagdoel blijft op elke pagina in beeld: de reden om nog één ronde te doen. */}
         <div className="mb-3 hidden px-1 md:block" title={`Dagdoel: ${todayXp} van ${goalXp} XP`}>
@@ -306,6 +320,16 @@ export function Nav({
               );
             })}
           </ul>
+          <Link
+            href="/account"
+            className="mt-3 flex min-h-[56px] items-center gap-3 rounded-[20px] border-2 border-outline bg-surface px-3 py-2 text-[16px] font-bold shadow-[3px_3px_0_var(--color-outline)]"
+          >
+            <span aria-hidden className="num flex h-9 w-9 shrink-0 -rotate-3 items-center justify-center rounded-full border-2 border-outline bg-pop-lilac text-[15px] text-on-pop">
+              {gebruiker.naam.slice(0, 1).toUpperCase()}
+            </span>
+            <span className="min-w-0 flex-1 truncate">{gebruiker.naam}</span>
+            <span className="hand text-[13px] font-bold text-ink-secondary">Account</span>
+          </Link>
           <div className="mt-4 flex items-center gap-3 border-t-2 border-dashed border-line-strong pt-4">
             <button
               type="button"

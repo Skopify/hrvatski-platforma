@@ -4,6 +4,44 @@ Stand 29-09-2026. Dit document beschrijft hoe het platform in elkaar zit en welk
 afspraken de code bewaakt. De regels zelf staan in `CLAUDE.md`; de productkeuzes in
 `docs/REBUILD-SPEC.md`.
 
+## Accounts en gescheiden voortgang
+
+Elke gebruiker heeft een **eigen database** (`data/gebruikers/<id>/hrvatski.db`, hetzelfde schema als altijd)
+en er is een aparte `data/accounts.db` met wie er bestaat. Waarom zo, en niet één database met overal een
+`user_id`: de scheiding is dan fysiek. Er bestaat geen zoekopdracht die per ongeluk andermans voortgang kan
+tonen, omdat die in een ander bestand staat; het schema en alle code eronder blijven ongewijzigd; een account
+verwijderen of exporteren is één bestand; en jouw bestaande database is gewoon het bestand van jouw account.
+
+- **Welke database is dit?** `db` en `sqlite` (`src/lib/db`) zijn doorgeefluiken die bij elk gebruik de database
+  van de ingelogde gebruiker ophalen, uit het sessiecookie (`src/lib/accounts/context.ts`). Zonder gebruiker
+  geven ze een fout: **faalt dicht**. Scripts en tests wijzen één database aan met `HRVATSKI_DB` of
+  `metGebruiker()`. Het lezen van het cookie gaat via een interne opslag van Next (`workUnitAsyncStorage`),
+  omdat `cookies()` asynchroon is en de database synchroon; die ene plek is bewaakt door `check:accounts:http`.
+- **Inloggen.** Gebruikersnaam + wachtwoord (scrypt, eigen zout, geen extra pakket). Sessies zijn willekeurige
+  tokens; in de database staat alleen hun hash; cookie `hr_sessie` is HttpOnly, SameSite=Lax (en Secure bij
+  https), 30 dagen schuivend. Fout inloggen: dezelfde melding voor een onbekende naam en een fout wachtwoord,
+  evenveel rekentijd, 5 fouten per naam en dan een kwartier dicht (per naam, zodat niemand iedereen kan
+  buitensluiten), plus een limiet per apparaat.
+- **Wachtwoord vergeten** zonder mail: bij het maken van een account krijg je een **herstelcode** (80 bits,
+  eenmalig zichtbaar, één keer bruikbaar). Kwijt? De eigenaar geeft een tijdelijk wachtwoord, of je draait
+  `npm run gebruiker -- wachtwoord <naam>` op de computer zelf.
+- **Rollen.** De eerste account is de **eigenaar** (beheer, Telefoon & iPad, afsluiten) en kan alleen op de
+  laptop zelf worden gemaakt. De eigenaar sluit registratie voor anderen, geeft tijdelijke wachtwoorden en
+  verwijdert accounts. Een gewone gebruiker ziet en kan niets van anderen.
+- **Je bestaande voortgang** (`data/hrvatski.db`) wordt door de eerste account **overgenomen**: eerst een
+  back-up (`voor-accounts`), dan verplaatst (niet gekopieerd), dan een controle dat het aantal rijen klopt;
+  klopt het niet, dan gaat het bestand terug en mislukt de registratie.
+- **Nieuwe gebruikers** beginnen als kopie van `data/sjabloon.db`, een database zonder voortgang die
+  `seed` en `migrate` net als de rest bijhouden. `npm run seed` en `npm run migrate` lopen langs
+  álle databases (elk met zijn eigen back-up).
+- **Toegang op meerdere lagen:** de poortwachter voor telefoon en iPad (apparaat), de middleware (een
+  sessiecookie), de layout van `(app)` en elke API-route (een geldige sessie), en de database zelf. Vergeet
+  je bij een nieuwe route de controle, dan faalt `check:beveiliging` (B16).
+- **Verwijderen** maakt eerst een kopie in `data/backups/verwijderd-<naam>-…`. **Export**: je eigen
+  database als bestand (`/api/account/export`).
+- Bewezen door `check:accounts` (39 tests: hashing, sessies, isolatie, overnemen, beheer) en
+  `check:accounts:http` (28 tests met echte cookies tegen de echte server).
+
 ## Lagen
 
 | Laag | Waar | Regel |

@@ -184,9 +184,10 @@ export async function sluitAf(): Promise<void> {
   s.stopt = true;
   stopOllamaAlsEigen();
   try {
-    const { sqlite } = await import("./db");
-    sqlite.pragma("wal_checkpoint(TRUNCATE)");
-    sqlite.close();
+    const { sluitAlleDbs } = await import("./db");
+    const { sluitAccounts } = await import("./accounts/store");
+    sluitAlleDbs();
+    sluitAccounts();
   } catch {
     // de database was niet geopend: dan valt er niets af te sluiten
   }

@@ -39,12 +39,14 @@ export function maakPoortwachter(o: PoortwachterOpties): http.Server {
 
   const stuurNaarApp = (req: http.IncomingMessage, res: http.ServerResponse, host: string) => {
     const headers: http.OutgoingHttpHeaders = {};
-    for (const [k, v] of Object.entries(req.headers)) if (!HOP.has(k) && k !== "x-hrvatski-via") headers[k] = v;
+    for (const [k, v] of Object.entries(req.headers)) if (!HOP.has(k) && k !== "x-hrvatski-via" && k !== "x-hrvatski-bron") headers[k] = v;
     const intern = `localhost:${o.upstreamPoort}`;
     headers.host = intern;
     if (typeof req.headers.origin === "string") headers.origin = `http://${intern}`;
     if (typeof req.headers.referer === "string") headers.referer = req.headers.referer.replace(/^https?:\/\/[^/]+/, `http://${intern}`);
     headers["x-hrvatski-via"] = "lan";
+    // Voor de begrenzing van foute inlogpogingen per apparaat; een meegestuurde waarde wordt overschreven.
+    headers["x-hrvatski-bron"] = req.socket.remoteAddress ?? "onbekend";
 
     const up = http.request({ host: "127.0.0.1", port: o.upstreamPoort, method: req.method, path: req.url, headers }, (ur) => {
       const uit: http.OutgoingHttpHeaders = {};

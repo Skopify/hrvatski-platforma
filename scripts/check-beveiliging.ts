@@ -44,7 +44,9 @@ const schrijvers = scripts.filter((f) => {
   const t = fs.readFileSync(path.join(root, "scripts", f), "utf8");
   const raaktEchteDb = /hrvatski\.db|src\/lib\/db"|\.\.\/src\/lib\/db['"]/.test(t) && !/HRVATSKI_DB\s*=\s*WERK_DB/.test(t);
   const schrijft = /\.(run|exec)\(|db\.(insert|update|delete)\b/.test(t);
-  return raaktEchteDb && schrijft;
+  // Scripts die in een eigen tijdelijke map werken raken geen echte voortgang aan.
+  const tijdelijk = /HRVATSKI_DATA\s*=|mkdtempSync/.test(t);
+  return raaktEchteDb && schrijft && !tijdelijk;
 });
 const zonderBackup = schrijvers.filter((f) => !/backupDatabase/.test(fs.readFileSync(path.join(root, "scripts", f), "utf8")));
 check("B5", "elk script dat naar de echte database schrijft maakt eerst een back-up (CLAUDE.md)",
@@ -77,6 +79,33 @@ check("B11", "de server luistert standaard alleen op dit apparaat (127.0.0.1)",
 const { antwoordtijd, binnen, tekst } = await import("../src/lib/valideer");
 check("B12", "vreemde getallen worden begrensd", antwoordtijd(1e15) === 3_600_000 && antwoordtijd(-5) === 0 && antwoordtijd("x") === 0 && binnen(NaN, 1, 9, 5) === 5, "");
 check("B13", "tekst wordt afgekapt en niet-tekst wordt leeg", tekst("a".repeat(50), 10).length === 10 && tekst({ x: 1 }, 10) === "", "");
+
+/* -------------------------------------------------------- accounts en toegang --- */
+
+const apiRoutes = (dir: string): string[] =>
+  fs.readdirSync(path.join(root, dir), { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory() ? apiRoutes(path.join(dir, e.name)) : e.name === "route.ts" ? [path.join(dir, e.name)] : [],
+  );
+const OPENBAAR_API = ["api/auth/inloggen", "api/auth/registreren", "api/auth/vergeten", "api/auth/uitloggen", "api/leven"];
+const onbeschermd = apiRoutes("src/app/api")
+  .filter((f) => !OPENBAAR_API.some((o) => f.replace(/\\/g, "/").includes(o + "/route.ts")))
+  .filter((f) => !/eisGebruiker|eisEigenaar|gebruikerVanRequest/.test(fs.readFileSync(path.join(root, f), "utf8")));
+check("B16", "elke API-route vraagt om een ingelogde gebruiker, behalve inloggen, registreren en het teken van leven",
+  onbeschermd.length === 0, onbeschermd.join(", "));
+
+const appLayout = fs.readFileSync(path.join(root, "src/app/(app)/layout.tsx"), "utf8");
+check("B17", "alles onder (app) zit achter vereisGebruiker() in de layout", /vereisGebruiker\(\)/.test(appLayout), "");
+
+const dbIndexTekst = fs.readFileSync(path.join(root, "src/lib/db/index.ts"), "utf8");
+check("B18", "de database geeft zonder gebruiker een fout in plaats van een lege of gedeelde database (faalt dicht)",
+  /GeenGebruikerError/.test(dbIndexTekst) && /huidigeGebruikerId\(\)/.test(dbIndexTekst), "");
+
+const mid = fs.readFileSync(path.join(root, "src/middleware.ts"), "utf8");
+check("B19", "de middleware stuurt niet-ingelogden naar /inloggen en houdt beheer alleen op de laptop",
+  /const PUBLIEK/.test(mid) && /\/inloggen/.test(mid) && /MAC_ALLEEN/.test(mid), "");
+
+const wachtwoordTekst = fs.readFileSync(path.join(root, "src/lib/accounts/wachtwoord.ts"), "utf8");
+check("B20", "wachtwoorden gaan door scrypt met eigen zout (geen zwakke of snelle hash)", /scrypt/.test(wachtwoordTekst) && !/createHash\("(md5|sha1)"/.test(wachtwoordTekst), "");
 
 /* -------------------------------------------------------- Azure-instelling --- */
 

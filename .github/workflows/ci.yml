@@ -47,11 +47,15 @@ jobs:
           npm run check:migraties
           npm run check:levenscyclus
           npm run check:lan
+          npm run check:accounts
           npm run check:responsive
           npm run check:stijl
 
       - name: Productiebuild
         run: npm run build
+
+      - name: Accounts door de echte server
+        run: npm run check:accounts:http
 
       # Alleen productieafhankelijkheden: die draaien op de machine van de gebruiker.
       - name: Kwetsbare afhankelijkheden

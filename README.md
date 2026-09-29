@@ -61,6 +61,8 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | `npm run check:responsive` | Telefoon en iPad: aanraakmaten, geen 100vh, manifest en iconen, tabbalk |
 | `npm run check:lan` | Koppelen en de poortwachter voor telefoon en iPad |
 | `npm run typecheck` | TypeScript-controle zonder te bouwen |
+| `npm run gebruiker -- lijst` | Accounts beheren vanaf de terminal: `lijst`, `wachtwoord <naam>`, `verwijder <naam>`, `registratie open/dicht` |
+| `npm run check:accounts` / `check:accounts:http` | Accounts, sessies en gescheiden voortgang, in de logica en door de echte server |
 | `npm run check:beveiliging` | Geheimen, back-up vóór schrijven, hostcontrole, koppen en invoergrenzen |
 | `npm run check:migraties` | Bewaakt dat een gedraaide migratie nooit verandert |
 | `npm run build` | Productiebuild. Mag gerust terwijl de dev-server draait: die schrijft in `.next/`, de build in `.next-build/` |

@@ -32,6 +32,23 @@ export function hostToegestaan(host: string | null): boolean {
   return hostToegestaanBasis(host, EXTRA);
 }
 
+/*
+  Wie niet ingelogd is, komt alleen bij de inlogpagina's. Deze poort kan in de Edge-runtime de
+  sessie niet tegen de database controleren; ze kijkt alleen of er een sessiecookie is.
+  De echte controle staat in (app)/layout.tsx, in elke API-route, en in de database zelf: zonder
+  geldige sessie geeft `db` niets (src/lib/db). Deze poort is dus het eerste net, niet het enige.
+*/
+const PUBLIEK = [
+  /^\/inloggen(\/|$)/,
+  /^\/registreren(\/|$)/,
+  /^\/wachtwoord-vergeten(\/|$)/,
+  /^\/api\/auth\/(inloggen|registreren|vergeten)$/,
+  /^\/api\/leven$/,
+  /^\/manifest\.webmanifest$/,
+  /^\/icons\//,
+];
+const SESSIE_COOKIE = "hr_sessie";
+
 const MAC_ALLEEN = ["/api/afsluiten", "/api/koppelcode", "/api/lan", "/api/herstart"];
 
 const LEZEN = new Set(["GET", "HEAD", "OPTIONS"]);
@@ -51,6 +68,15 @@ export function middleware(req: NextRequest) {
 
   const site = req.headers.get("sec-fetch-site");
   const isApi = req.nextUrl.pathname.startsWith("/api/");
+
+  if (!PUBLIEK.some((r) => r.test(req.nextUrl.pathname)) && !req.cookies.get(SESSIE_COOKIE)?.value) {
+    if (isApi) return NextResponse.json({ ok: false, melding: "Niet ingelogd." }, { status: 401 });
+    const naar = req.nextUrl.clone();
+    const terug = req.nextUrl.pathname + req.nextUrl.search;
+    naar.pathname = "/inloggen";
+    naar.search = terug !== "/" ? `?terug=${encodeURIComponent(terug)}` : "";
+    return NextResponse.redirect(naar);
+  }
 
   // Acties en API's: alleen van het platform zelf. "none" is een adres dat je
   // zelf intypt; dat mag voor een pagina, niet voor iets wat data verandert.

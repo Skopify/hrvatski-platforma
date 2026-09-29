@@ -1,3 +1,4 @@
+import { eisEigenaar } from "@/lib/accounts/api";
 import { instelling, sluitAf } from "@/lib/levenscyclus";
 
 export const dynamic = "force-dynamic";
@@ -9,6 +10,8 @@ export const dynamic = "force-dynamic";
  * src/middleware.ts, zodat een vergissing in één van de twee niet genoeg is.
  */
 export async function POST(request: Request) {
+  const eigenaar = eisEigenaar(request);
+  if ("fout" in eigenaar) return eigenaar.fout;
   if (instelling().beheerd !== true || request.headers.get("x-hrvatski-actie") !== "afsluiten") {
     return Response.json({ ok: false }, { status: 403 });
   }

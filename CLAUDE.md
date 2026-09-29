@@ -7,12 +7,12 @@ Lees die spec vóór elke taak — en §12 het eerst, want daar staat wat er al 
 
 - Content is DATA (`content/*.json`), nooit hardcoded in componenten.
 - Het SRS-algoritme is FSRS via `ts-fsrs`. Nooit zelf schrijven of aanpassen.
-- Alle secties lezen en schrijven dezelfde knowledge state. Geen aparte voortgang per sectie. De schrijfsectie is de uitzondering die de regel bevestigt: `schrijfwerk` bewaart tekst, geen kennis, en gaat daarom niet mee met «voortgang wissen».
+- Alle secties lezen en schrijven dezelfde knowledge state. Geen aparte voortgang per sectie. Sinds de accounts is die state **per gebruiker**: elke gebruiker heeft een eigen database (`data/gebruikers/<id>/hrvatski.db`) en `db` geeft zonder ingelogde gebruiker een fout. Voortgang van de ene gebruiker is nooit zichtbaar voor een andere. De schrijfsectie is de uitzondering die de regel bevestigt: `schrijfwerk` bewaart tekst, geen kennis, en gaat daarom niet mee met «voortgang wissen».
 - Kroatische content wordt NOOIT aan de gebruiker getoond zonder de validatiepoorten uit §7.
 - Nooit een oefening genereren met woorden die niet in `known_set` zitten, tenzij het doel woordenschat is.
 - Uitleg is in het Nederlands, doeltaalvoorbeelden in het Kroatisch (standaardkroatisch, geen Servische varianten). `npm run check:taal` bewaakt dat; nieuwe content draait daar doorheen vóór ze op het scherm komt.
 - Feedback bij fouten escaleert: hint → keuze → antwoord + uitleg. Nooit meteen het antwoord.
-- Elke wijziging aan het datamodel gaat via een migratie; bestaande review-historie mag nooit verloren gaan.
+- Elke wijziging aan het datamodel van de voortgang gaat via een migratie (`accounts.db` heeft zijn eigen, kleine versie in `src/lib/accounts/store.ts`); bestaande review-historie mag nooit verloren gaan.
 - **Modulestatus volgt uit prestatie, nooit uit zelfinschatting.** Het curriculum is compleet van nul tot eind; het pad erdoorheen mag kort zijn waar de leerder sterk is. Dat is niet hetzelfde.
 - **Een meting die iets niet weet, zegt dat.** Onbekende woorden tellen nooit stilzwijgend als bekend, en een getal op het scherm belooft niet meer dan het waarmaakt.
 
@@ -38,8 +38,11 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | | |
 |---|---|
 | `npm run dev` | ontwikkelserver |
-| `npm run migrate` | openstaande migraties, met back-up vooraf |
-| `npm run seed` | content-JSON → database (idempotent) |
+| `npm run migrate` | openstaande migraties voor élke database (oude installatie, sjabloon, elke gebruiker), elk met back-up vooraf |
+| `npm run seed` | content-JSON → élke database (idempotent); bouwt bij een nieuwe installatie het sjabloon |
+| `npm run gebruiker -- lijst` | accounts beheren vanaf de terminal (wachtwoord resetten, verwijderen); vooraf een kopie |
+| `npm run check:accounts` | accounts, sessies en gescheiden voortgang (39 tests) |
+| `npm run check:accounts:http` | dezelfde garanties door de echte server met cookies (vraagt eerst `npm run build`) |
 | `npm run check` | nakijklogica |
 | `npm run check:content` | contentvalidatie |
 | `npm run check:taal` | het Kroatisch zelf: spelling, voorzetsel+naamval, servismen |

@@ -22,7 +22,8 @@
 unset HRVATSKI_LAN HRVATSKI_MANAGED
 
 cd "$(dirname "$0")/.." || exit 1
-mkdir -p data
+DATA="${HRVATSKI_DATA:-data}"
+mkdir -p data "$DATA"
 LOG="data/app.log"
 URL="http://localhost:3000"
 
@@ -53,7 +54,12 @@ melding "Hrvatski start…"
 
   # 3. Klaarzetten.
   [ -d node_modules ] || npm install || exit 1
-  [ -f data/hrvatski.db ] || npm run seed || exit 1
+  # Elke gebruiker heeft een eigen database; seed en migrate lopen langs allemaal (en bouwen bij een
+  # nieuwe installatie het sjabloon). Elk maakt zijn eigen back-up.
+  if [ ! -f "$DATA/sjabloon.db" ] && [ ! -f "$DATA/hrvatski.db" ] && [ ! -d "$DATA/gebruikers" ]; then
+    npm run seed || exit 1
+  fi
+  [ -f "$DATA/sjabloon.db" ] || HRVATSKI_DB="$DATA/sjabloon.db" npm run -s seed:een || exit 1
   npm run -s migrate || exit 1
 
   if [ ! -f .next-build/BUILD_ID ] || [ -n "$(find src content package.json next.config.ts -newer .next-build/BUILD_ID -print -quit 2>/dev/null)" ]; then

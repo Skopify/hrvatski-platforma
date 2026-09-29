@@ -23,7 +23,8 @@ import path from "node:path";
 
 import Database from "better-sqlite3";
 
-const REAL_DB = path.join(process.cwd(), "data", "hrvatski.db");
+import { testBron } from "../src/lib/data";
+const REAL_DB = testBron();
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), "hrvatski-gesprek-"));
 const WERK_DB = path.join(TMP, "werk.db");
 {

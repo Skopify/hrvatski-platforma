@@ -1,3 +1,4 @@
+import { eisGebruiker } from "@/lib/accounts/api";
 import { beurt, bouwPrompt, loadScenario, woordenTotLes, type Bericht } from "@/lib/gesprek";
 import { ollamaGebruikt, ollamaToestand } from "@/lib/levenscyclus";
 import { MODEL, ollamaChat } from "@/lib/ollama";
@@ -29,7 +30,9 @@ async function opDeBeurt<T>(werk: () => Promise<T>): Promise<T | "druk"> {
 }
 
 /** Is Ollama bereikbaar, en staat het model erop? */
-export async function GET() {
+export async function GET(request: Request) {
+  const ingelogd = eisGebruiker(request);
+  if ("fout" in ingelogd) return ingelogd.fout;
   // Starten als hij niet draait: de pagina vraagt hierna opnieuw tot hij klaar is.
   return Response.json({ ...(await ollamaToestand()), model: MODEL });
 }
@@ -40,6 +43,8 @@ export async function GET() {
  * Er wordt niets opgeslagen.
  */
 export async function POST(request: Request) {
+  const ingelogd = eisGebruiker(request);
+  if ("fout" in ingelogd) return ingelogd.fout;
   let body: { scenario?: unknown; les?: unknown; historie?: unknown; warm?: unknown; vertaal?: unknown };
   try {
     const ruw = await request.text();

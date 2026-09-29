@@ -1,3 +1,4 @@
+import { eisGebruiker } from "@/lib/accounts/api";
 import { croatianSpeech, azureConfigured } from "@/lib/speech/azure";
 
 /**
@@ -7,6 +8,8 @@ import { croatianSpeech, azureConfigured } from "@/lib/speech/azure";
  * "gebruik de browserstem" en de luisteroefening blijft gewoon werken.
  */
 export async function GET(request: Request) {
+  const ingelogd = eisGebruiker(request);
+  if ("fout" in ingelogd) return ingelogd.fout;
   const url = new URL(request.url);
   const text = (url.searchParams.get("tekst") ?? "").slice(0, 600);
   const voice = url.searchParams.get("stem") ?? undefined;

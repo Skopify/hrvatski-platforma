@@ -1,3 +1,4 @@
+import { eisGebruiker } from "@/lib/accounts/api";
 import { AZURE_VOICES, azureConfigured, cacheStats } from "@/lib/speech/azure";
 import { usage } from "@/lib/speech/budget";
 
@@ -8,7 +9,9 @@ import { usage } from "@/lib/speech/budget";
  * Eén keer opvragen bij het laden is genoeg; zonder dit zou elke luisteroefening
  * eerst de server moeten bevragen om te ontdekken dat er geen sleutel is.
  */
-export async function GET() {
+export async function GET(request: Request) {
+  const ingelogd = eisGebruiker(request);
+  if ("fout" in ingelogd) return ingelogd.fout;
   const on = azureConfigured();
   return Response.json({
     available: on,
