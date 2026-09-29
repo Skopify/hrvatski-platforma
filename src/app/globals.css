@@ -111,8 +111,8 @@
   --radius-card: 22px;
   --radius-tile: 14px;
 
-  /* Kritisch gedempte veer (Apple's standaard: geen doorschieten) en een
-     lichte veer voor wat met vaart binnenkomt. */
+  /* `ease-ios` benadert Apple's kritisch gedempte veer: snel vertrek, zachte
+     landing, geen doorschieten. Voor alles wat schuift of veert. */
   --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
