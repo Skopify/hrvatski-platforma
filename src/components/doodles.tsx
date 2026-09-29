@@ -355,6 +355,11 @@ export function RoughFilter() {
           <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="7" result="noise" />
           <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
         </filter>
+        {/* Voor grafieklijnen: een ruimer gebied en meer golf, want de tekening is groter dan een icoon. */}
+        <filter id="rough-chart" filterUnits="userSpaceOnUse" x="-60" y="-60" width="1000" height="700">
+          <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="4" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
       </defs>
     </svg>
   );

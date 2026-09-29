@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 /*
   Alle grafieken hier zijn handgeschreven SVG — geen grafiekbibliotheek, want een
@@ -21,6 +21,8 @@ const BASE = "var(--color-line)";
 const ACCENT = "var(--color-accent)";
 const BRIGHT = "var(--color-accent-bright)";
 const SURFACE = "var(--color-surface)";
+const HAND = "var(--font-hand)";
+const DISPLAY = "var(--font-display)";
 
 /* ------------------------------------------------------------ grafiekkaart --- */
 
@@ -198,6 +200,25 @@ export function Sparkline({
   );
 }
 
+/**
+ * De breedte van de kaart, zodat de grafiek 1:1 getekend wordt. Met een vaste
+ * tekenbreedte krimpt alles mee op een telefoon en wordt 13px-tekst 8px.
+ */
+function useChartWidth(fallback = 420) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [w, setW] = useState(fallback);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const meet = () => setW(Math.max(260, Math.round(el.getBoundingClientRect().width)));
+    meet();
+    const ro = new ResizeObserver(meet);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return [ref, w] as const;
+}
+
 /* ------------------------------------------------------------ lijngrafiek --- */
 
 export interface Point {
@@ -263,8 +284,8 @@ export function LineChart({
   const [hover, setHover] = useState<number | null>(null);
   const id = useId();
 
-  const pad = { top: 16, right: 50, bottom: 26, left: 36 };
-  const w = 520;
+  const pad = { top: 18, right: 72, bottom: 30, left: 54 };
+  const [boxRef, w] = useChartWidth();
   const h = height;
   const innerW = w - pad.left - pad.right;
   const innerH = h - pad.top - pad.bottom;
@@ -286,18 +307,18 @@ export function LineChart({
 
   return (
     <ChartCard title={title} hint={hint} pop="sky">
-      <div className="relative">
+      <div className="relative" ref={boxRef}>
         <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
           <g transform={`translate(${pad.left},${pad.top})`}>
             {ticks.map((t) => (
               <g key={t}>
-                <line x1={0} x2={innerW} y1={y(t)} y2={y(t)} stroke={GRID} strokeWidth={1} />
-                <text
+                <line x1={0} x2={innerW} y1={y(t)} y2={y(t)} stroke={BASE} strokeWidth={1.5} strokeDasharray="1 7" strokeLinecap="round" />
+                <text fontFamily={HAND} fontWeight={700}
                   x={-9}
                   y={y(t)}
                   textAnchor="end"
                   dominantBaseline="middle"
-                  fontSize={12.5}
+                  fontSize={13}
                   fill={MUTED}
                   className="tabular"
                 >
@@ -305,11 +326,12 @@ export function LineChart({
                 </text>
               </g>
             ))}
-            <line x1={0} x2={innerW} y1={innerH} y2={innerH} stroke={BASE} strokeWidth={1} />
+            <line x1={0} x2={innerW} y1={innerH} y2={innerH} stroke={INK} strokeWidth={2.5} strokeLinecap="round" filter="url(#rough-chart)" />
+            <line x1={0} x2={0} y1={0} y2={innerH} stroke={INK} strokeWidth={2.5} strokeLinecap="round" filter="url(#rough-chart)" />
 
             {hasData ? (
               <>
-                <path d={area} fill={ACCENT} fillOpacity={0.14} />
+                <path d={area} fill="var(--color-pop-yellow)" fillOpacity={0.7} />
                 <path
                   d={path}
                   pathLength={1}
@@ -317,7 +339,8 @@ export function LineChart({
                   style={{ "--len": 1 } as React.CSSProperties}
                   fill="none"
                   stroke={ACCENT}
-                  strokeWidth={3.5}
+                  strokeWidth={4}
+                  filter="url(#rough-chart)"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -326,16 +349,17 @@ export function LineChart({
                   x={x(data.length - 1) + 11}
                   y={y(last.value)}
                   dominantBaseline="middle"
-                  fontSize={14}
+                  fontSize={17}
                   fill={INK}
-                  fontWeight={700}
+                  fontFamily={DISPLAY}
+                  fontWeight={800}
                   className="tabular"
                 >
                   {percent ? `${Math.round(last.value * 100)}%` : format(last.value)}
                 </text>
               </>
             ) : (
-              <text x={innerW / 2} y={innerH / 2} textAnchor="middle" fontSize={12} fill={MUTED}>
+              <text fontFamily={HAND} fontWeight={700} x={innerW / 2} y={innerH / 2} textAnchor="middle" fontSize={12} fill={MUTED}>
                 Nog geen data
               </text>
             )}
@@ -368,10 +392,10 @@ export function LineChart({
               />
             ))}
 
-            <text x={0} y={innerH + 17} fontSize={12.5} fill={MUTED}>
+            <text fontFamily={HAND} fontWeight={700} x={0} y={innerH + 22} fontSize={13} fill={MUTED}>
               {data[0]?.label}
             </text>
-            <text x={innerW} y={innerH + 17} fontSize={12.5} fill={MUTED} textAnchor="end">
+            <text fontFamily={HAND} fontWeight={700} x={innerW} y={innerH + 22} fontSize={13} fill={MUTED} textAnchor="end">
               {last?.label}
             </text>
           </g>
@@ -409,8 +433,8 @@ export function AreaChart({
   hint?: string;
   height?: number;
 }) {
-  const pad = { top: 16, right: 48, bottom: 26, left: 36 };
-  const w = 520;
+  const pad = { top: 18, right: 72, bottom: 30, left: 54 };
+  const [boxRef, w] = useChartWidth();
   const h = height;
   const innerW = w - pad.left - pad.right;
   const innerH = h - pad.top - pad.bottom;
@@ -427,17 +451,18 @@ export function AreaChart({
 
   return (
     <ChartCard title={title} hint={hint} pop="mint">
+      <div ref={boxRef}>
       <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
         <g transform={`translate(${pad.left},${pad.top})`}>
           {ticks.map((t) => (
             <g key={t}>
-              <line x1={0} x2={innerW} y1={y(t)} y2={y(t)} stroke={GRID} strokeWidth={1} />
-              <text
+              <line x1={0} x2={innerW} y1={y(t)} y2={y(t)} stroke={BASE} strokeWidth={1.5} strokeDasharray="1 7" strokeLinecap="round" />
+              <text fontFamily={HAND} fontWeight={700}
                 x={-9}
                 y={y(t)}
                 textAnchor="end"
                 dominantBaseline="middle"
-                fontSize={12.5}
+                fontSize={13}
                 fill={MUTED}
                 className="tabular"
               >
@@ -445,8 +470,9 @@ export function AreaChart({
               </text>
             </g>
           ))}
-          <line x1={0} x2={innerW} y1={innerH} y2={innerH} stroke={BASE} strokeWidth={1} />
-          <path d={area} fill={ACCENT} fillOpacity={0.14} />
+          <line x1={0} x2={innerW} y1={innerH} y2={innerH} stroke={INK} strokeWidth={2.5} strokeLinecap="round" filter="url(#rough-chart)" />
+            <line x1={0} x2={0} y1={0} y2={innerH} stroke={INK} strokeWidth={2.5} strokeLinecap="round" filter="url(#rough-chart)" />
+          <path d={area} fill="var(--color-pop-yellow)" fillOpacity={0.7} />
           <path
             d={line}
             pathLength={1}
@@ -454,7 +480,8 @@ export function AreaChart({
             style={{ "--len": 1 } as React.CSSProperties}
             fill="none"
             stroke={ACCENT}
-            strokeWidth={3.5}
+            strokeWidth={4}
+            filter="url(#rough-chart)"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
@@ -463,21 +490,23 @@ export function AreaChart({
             x={x(data.length - 1) + 11}
             y={y(last.value)}
             dominantBaseline="middle"
-            fontSize={12}
+            fontSize={17}
             fill={INK}
-            fontWeight={700}
+            fontFamily={DISPLAY}
+            fontWeight={800}
             className="tabular"
           >
             {Math.round(last.value)}
           </text>
-          <text x={0} y={innerH + 17} fontSize={12.5} fill={MUTED}>
+          <text fontFamily={HAND} fontWeight={700} x={0} y={innerH + 22} fontSize={13} fill={MUTED}>
             {data[0]?.label}
           </text>
-          <text x={innerW} y={innerH + 17} fontSize={12.5} fill={MUTED} textAnchor="end">
+          <text fontFamily={HAND} fontWeight={700} x={innerW} y={innerH + 22} fontSize={13} fill={MUTED} textAnchor="end">
             {last?.label}
           </text>
         </g>
       </svg>
+      </div>
     </ChartCard>
   );
 }
@@ -622,7 +651,7 @@ export function Heatmap({
           className="max-w-full"
         >
           {monthMarks.map((m) => (
-            <text
+            <text fontFamily={HAND} fontWeight={700}
               key={`${m.col}-${m.label}`}
               x={m.col * (size + gap)}
               y={10}
