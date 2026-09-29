@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { resetAllProgress } from "@/app/actions";
+import { resetAllProgress } from "@/app/actions/les";
 
 /**
  * Opnieuw beginnen.

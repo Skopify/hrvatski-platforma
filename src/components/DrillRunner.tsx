@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { drillBatch, endSession, startSession, submitDrill } from "@/app/actions";
+import { drillBatch, submitDrill } from "@/app/actions/drill";
+import { endSession, startSession } from "@/app/actions/les";
 import type { DrillFeedback, DrillKind, DrillMeta, DrillQuestion } from "@/lib/drills";
 import { TTS_RATES, useCroatianTts } from "@/lib/tts";
 import { SpecialChars } from "./SpecialChars";

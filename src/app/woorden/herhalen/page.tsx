@@ -1,4 +1,4 @@
-import { vocabQueue } from "@/app/actions";
+import { vocabQueue } from "@/app/actions/woorden";
 import { VocabSession } from "@/components/VocabSession";
 
 export const dynamic = "force-dynamic";

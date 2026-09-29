@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { collectWord, markStoryRead } from "@/app/actions";
+import { collectWord, markStoryRead } from "@/app/actions/verhalen";
 import { island } from "@/lib/island";
 import { glossKey, type Gloss, type Story } from "@/lib/story";
 import { useCroatianTts } from "@/lib/tts";

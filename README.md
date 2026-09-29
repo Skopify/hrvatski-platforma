@@ -29,7 +29,7 @@ npm run seed
 npm run dev
 ```
 
-Daarna staat het platform op <http://localhost:3000>.
+Daarna staat het platform op <http://localhost:3000>. Hoe alles in elkaar zit, en welke beveiligingsafspraken er gelden, staat in [docs/ARCHITECTUUR.md](docs/ARCHITECTUUR.md).
 
 **Ook op je telefoon.** De dev-server luistert ook op je lokale netwerk — Next print
 bij het starten een tweede adres (`Network: http://192.168.x.x:3000`). Zit je telefoon
@@ -55,7 +55,11 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | `npm run patch` | Verwerkt content/patch-*.json in de lessen (idempotent, raakt alleen de gewijzigde fragmenten aan) |
 | `npm run check` | Zelfcontrole van de beoordelingsladder — laat zien hoe antwoorden door exact/diakritisch/tikfout/fout vallen |
 | `npm run check:content` | Valideert de content: dubbele id's, oefeningen zonder antwoord, targets die nergens naar wijzen, vreemde tekens, en de afgeleide naamvalsvormen |
-| `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang, zonder kopie.** Wil je alleen opnieuw beginnen, gebruik dan de knop op Voortgang: die maakt eerst een back-up |
+| `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang**, maar vraagt eerst om bevestiging (typ RESET) en maakt een kopie in `data/backups/`. Wil je alleen opnieuw beginnen, gebruik dan de knop op Voortgang |
+| `npm run dev:lan` | Dev-server bereikbaar voor je telefoon op hetzelfde wifi. Standaard luistert `npm run dev` alleen op dit apparaat |
+| `npm run typecheck` | TypeScript-controle zonder te bouwen |
+| `npm run check:beveiliging` | Geheimen, back-up vóór schrijven, hostcontrole, koppen en invoergrenzen |
+| `npm run check:migraties` | Bewaakt dat een gedraaide migratie nooit verandert |
 | `npm run build` | Productiebuild. Mag gerust terwijl de dev-server draait: die schrijft in `.next/`, de build in `.next-build/` |
 
 ### Als de pagina raar doet

@@ -44,6 +44,7 @@ jobs:
           npm run check:fase15
           npm run check:gesprek
           npm run check:beveiliging
+          npm run check:migraties
 
       - name: Productiebuild
         run: npm run build

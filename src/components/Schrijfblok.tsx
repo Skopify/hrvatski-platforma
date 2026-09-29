@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState, useTransition } from "react";
 
-import { beoordeelSchrijfwerk, bewaarSchrijfwerk } from "@/app/actions";
+import { beoordeelSchrijfwerk, bewaarSchrijfwerk } from "@/app/actions/schrijven";
 import { SpecialChars } from "./SpecialChars";
 import type { Bankwoord, Opdracht, Schrijfoordeel } from "@/lib/schrijven";
 

@@ -31,7 +31,8 @@
     "proef:platform": "tsx scripts/proef-platform.ts",
     "typecheck": "tsc --noEmit",
     "audit:prod": "npm audit --omit=dev",
-    "check:beveiliging": "tsx scripts/check-beveiliging.ts"
+    "check:beveiliging": "tsx scripts/check-beveiliging.ts",
+    "check:migraties": "tsx scripts/check-migraties.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

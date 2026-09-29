@@ -4,19 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import {
-  acknowledgeTeaching,
-  completeLesson,
-  completeModule,
-  endSession,
-  markModuleStepDone,
-  markStepDone,
-  markStoryQuizDone,
-  selfAssess,
-  startSession,
-  submitAnswer,
-  type Feedback,
-} from "@/app/actions";
+import { acknowledgeTeaching, selfAssess, submitAnswer } from "@/app/actions/oefenen";
+import { completeLesson, endSession, markStepDone, startSession } from "@/app/actions/les";
+import { completeModule, markModuleStepDone } from "@/app/actions/modules";
+import { markStoryQuizDone } from "@/app/actions/verhalen";
+import { type Feedback } from "@/lib/leerlogboek";
 import type { PresentedExercise } from "@/lib/present";
 import { useCroatianTts } from "@/lib/tts";
 import { Answer, ExerciseView, emptyAnswer, isAnswered } from "./ExerciseView";
@@ -446,7 +438,7 @@ export function SessionRunner({
  * alleen een vinkje. Zonder die bevinding is een vinkje een bewering, en dan kun
  * je niet zien of het over jouw zin gaat of over iets anders.
  */
-function CheckLijst({ report }: { report?: import("@/app/actions").Feedback["report"] }) {
+function CheckLijst({ report }: { report?: import("@/lib/leerlogboek").Feedback["report"] }) {
   if (!report || (!report.checks.length && !report.suggesties.length)) return null;
   return (
     <div className="mb-4">

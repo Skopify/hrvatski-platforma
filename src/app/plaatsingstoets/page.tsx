@@ -1,6 +1,6 @@
 import { PlacementRunner } from "@/components/PlacementRunner";
 import { Page, PageHeader } from "@/components/ui";
-import { beginPlacement } from "@/app/actions";
+import { beginPlacement } from "@/app/actions/plaatsing";
 import { loadModule } from "@/lib/modules";
 
 export const dynamic = "force-dynamic";

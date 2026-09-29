@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { restartModule } from "@/app/actions";
+import { restartModule } from "@/app/actions/modules";
 
 /**
  * De weg terug naar stap één.

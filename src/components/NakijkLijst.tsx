@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 
-import { bewaarNakijkOordeel, volgendeNakijkBatch, wisNakijkOordeel } from "@/app/actions";
+import { bewaarNakijkOordeel, volgendeNakijkBatch, wisNakijkOordeel } from "@/app/actions/nakijken";
 import type { ReviewStatus, Stand, Zin } from "@/lib/nakijken";
 
 /**

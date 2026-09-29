@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
 
-import { submitVocab, type VocabFeedback } from "@/app/actions";
+import { submitVocab, type VocabFeedback } from "@/app/actions/woorden";
 import type { StageQuestion } from "@/lib/stages";
 import { SpecialChars } from "./SpecialChars";
 import { Doodle, Sparkle } from "./doodles";

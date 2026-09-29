@@ -4,12 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo, useRef, useState } from "react";
 
-import {
-  answerPlacementGrammar,
-  answerPlacementVocab,
-  endPlacement,
-  type PlacementPlan,
-} from "@/app/actions";
+import { answerPlacementGrammar, answerPlacementVocab, endPlacement, type PlacementPlan } from "@/app/actions/plaatsing";
 import type { PlacementResult } from "@/lib/placement";
 
 /*

@@ -4,7 +4,7 @@ import { VocabBrowser } from "@/components/VocabBrowser";
 import { Page, PageHeader } from "@/components/ui";
 import { leeches } from "@/lib/stages";
 import { allVocab } from "@/lib/stats";
-import { restoreLeech } from "@/app/actions";
+import { restoreLeech } from "@/app/actions/woorden";
 import { LeechList } from "@/components/LeechList";
 
 export const dynamic = "force-dynamic";
