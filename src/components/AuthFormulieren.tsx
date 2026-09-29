@@ -84,7 +84,7 @@ const Fout = ({ tekst }: { tekst: string }) =>
 
 /* ------------------------------------------------------------- inloggen --- */
 
-export function LoginForm({ terug }: { terug?: string }) {
+export function LoginForm({ terug, geenAccounts }: { terug?: string; geenAccounts?: boolean }) {
   const [naam, setNaam] = useState("");
   const [wachtwoord, setWachtwoord] = useState("");
   const [fout, setFout] = useState("");
@@ -103,7 +103,7 @@ export function LoginForm({ terug }: { terug?: string }) {
   }
 
   return (
-    <Kaart pop="bg-pop-sky" titel="Welkom terug" tekst="Log in om verder te leren waar je gebleven was.">
+    <Kaart pop="bg-pop-sky" titel="Welkom terug" tekst={geenAccounts ? "Er bestaat nog geen account op deze computer, dus inloggen kan nog niet. Maak eerst je eerste account aan; daar wordt je bestaande voortgang aan gekoppeld." : "Log in om verder te leren waar je gebleven was."}>
       <form onSubmit={verstuur} className="space-y-4">
         <Veld label="Gebruikersnaam" naam="naam" waarde={naam} zet={setNaam} autoComplete="username" />
         <Veld label="Wachtwoord" naam="wachtwoord" type="password" waarde={wachtwoord} zet={setWachtwoord} autoComplete="current-password" />
@@ -117,7 +117,7 @@ export function LoginForm({ terug }: { terug?: string }) {
           Wachtwoord vergeten?
         </Link>
         <Link href="/registreren" className="tap-link underline decoration-2 underline-offset-4">
-          Nieuw account
+          {geenAccounts ? "Account maken" : "Nieuw account"}
         </Link>
       </p>
     </Kaart>
@@ -221,14 +221,12 @@ export function RegistreerForm({ eerste, overnemen }: { eerste: boolean; overnem
           {bezig ? "Account maken…" : "Account maken"}
         </button>
       </form>
-      {!eerste ? (
-        <p className="mt-5 text-[14.5px] font-bold">
-          Heb je al een account?{" "}
-          <Link href="/inloggen" className="tap-link underline decoration-2 underline-offset-4">
-            Inloggen
-          </Link>
-        </p>
-      ) : null}
+      <p className="mt-5 text-[14.5px] font-bold">
+        Heb je al een account?{" "}
+        <Link href={eerste ? "/inloggen?toon=1" : "/inloggen"} className="tap-link underline decoration-2 underline-offset-4">
+          Inloggen
+        </Link>
+      </p>
     </Kaart>
   );
 }
