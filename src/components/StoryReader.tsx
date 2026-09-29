@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { collectWord, markStoryRead } from "@/app/actions";
+import { island } from "@/lib/island";
 import { glossKey, type Gloss, type Story } from "@/lib/story";
 import { useCroatianTts } from "@/lib/tts";
 import { Bolt, Checker, Pill } from "./ui";
@@ -100,6 +101,7 @@ export function StoryReader({
     setBusy(true);
     await collectWord(story.slug, active.gloss.item);
     setSaved((s) => new Set(s).add(active.gloss.item!));
+    island({ text: "Bewaard voor herhaling", sub: active.gloss.hr, tone: "good" });
     setBusy(false);
   };
 
@@ -314,7 +316,7 @@ export function StoryReader({
           data-open={Boolean(active)}
           aria-hidden={!active}
           inert={!active}
-          className="sheet fixed inset-x-0 bottom-[calc(62px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[112px] lg:pl-[280px]"
+          className="sheet fixed inset-x-0 bottom-[calc(80px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[112px] lg:pl-[288px]"
         >
           <div className="glass mx-auto max-w-2xl rounded-[22px] px-5 pb-4 pt-2.5 shadow-[var(--lift-3)]">
             <div aria-hidden className="mx-auto mb-2.5 h-[5px] w-9 rounded-full bg-line-strong" />

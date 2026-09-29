@@ -264,12 +264,15 @@ export function Ring({
   max,
   size = 148,
   stroke = 18,
+  light = false,
   children,
 }: {
   value: number;
   max: number;
   size?: number;
   stroke?: number;
+  /** Wit op een gekleurd vlak (de mesh op het overzicht). */
+  light?: boolean;
   children?: ReactNode;
 }) {
   const pct = max > 0 ? Math.max(0, value / max) : 0;
@@ -278,14 +281,14 @@ export function Ring({
   return (
     <div className="relative shrink-0" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90" aria-hidden>
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--color-ring-track)" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={light ? "rgb(255 255 255 / 0.22)" : "var(--color-ring-track)"} strokeWidth={stroke} />
         {pct > 0 ? (
           <circle
             cx={size / 2}
             cy={size / 2}
             r={r}
             fill="none"
-            stroke="var(--color-ring)"
+            stroke={light ? "#fff" : "var(--color-ring)"}
             strokeWidth={stroke}
             strokeLinecap="round"
             pathLength={1}

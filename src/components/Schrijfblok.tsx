@@ -155,7 +155,7 @@ export function Schrijfblok({
         spellCheck={false}
         autoCorrect="off"
         autoCapitalize="off"
-        className="hr-text w-full rounded-card border border-line-strong bg-surface px-5 py-4 text-[16px] leading-relaxed text-ink outline-none transition-all focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)]"
+        className="hr-text w-full rounded-card border border-line-strong bg-surface px-5 py-4 text-[16px] leading-relaxed text-ink outline-none transition-all focus:border-accent-fill focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent-fill)_22%,transparent)]"
       />
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
@@ -171,7 +171,7 @@ export function Schrijfblok({
           type="button"
           onClick={nakijken}
           disabled={bezig || !tekst.trim()}
-          className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-40"
+          className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-40"
         >
           {oordeel ? "Opnieuw nakijken" : "Nakijken"}
         </button>

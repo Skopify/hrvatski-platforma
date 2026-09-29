@@ -4,114 +4,30 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLayoutEffect, useRef, useState } from "react";
 
+import { SearchButton } from "./CommandMenu";
+import { AppIcon, ICONS, SECTIONS } from "./sections";
 import { ThemeToggle } from "./ThemeToggle";
 import { Bolt, Logo } from "./ui";
 
-/* Lijniconen, 21px, één stroke-gewicht — geen icoonbibliotheek nodig. */
-const ICONS: Record<string, React.ReactNode> = {
-  overzicht: (
-    <>
-      <rect x="3" y="3" width="7.5" height="7.5" rx="2" />
-      <rect x="13.5" y="3" width="7.5" height="7.5" rx="2" />
-      <rect x="3" y="13.5" width="7.5" height="7.5" rx="2" />
-      <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" />
-    </>
-  ),
-  lessen: (
-    <>
-      <path d="M12 3 3 7.2l9 4.2 9-4.2L12 3Z" />
-      <path d="M3 12.2 12 16.4l9-4.2" />
-      <path d="M3 16.9 12 21l9-4.1" />
-    </>
-  ),
-  grammatica: (
-    <>
-      <path d="M4 4.5h16" />
-      <path d="M4 9.5h16" />
-      <path d="M4 14.5h9" />
-      <path d="M4 19.5h9" />
-      <path d="M17.5 14.5v5" />
-      <path d="M15 17h5" />
-    </>
-  ),
-  verhalen: (
-    <>
-      <path d="M12 6.6C10.6 5.2 8.6 4.5 6 4.5c-1.1 0-2 .1-2.6.3v13c.6-.2 1.5-.3 2.6-.3 2.6 0 4.6.7 6 2.1" />
-      <path d="M12 6.6c1.4-1.4 3.4-2.1 6-2.1 1.1 0 2 .1 2.6.3v13c-.6-.2-1.5-.3-2.6-.3-2.6 0-4.6.7-6 2.1" />
-      <path d="M12 6.6V20" />
-    </>
-  ),
-  schrijven: (
-    <>
-      <path d="M4 20.5h16" />
-      <path d="M15.6 4.1a2 2 0 0 1 2.8 2.8L9 16.4l-3.6.9.9-3.6 9.3-9.6Z" />
-    </>
-  ),
-  herhalen: (
-    <>
-      <path d="M20.5 12a8.5 8.5 0 1 1-2.5-6" />
-      <path d="M20.5 3.5V9H15" />
-    </>
-  ),
-  woorden: (
-    <>
-      <circle cx="11" cy="11" r="7" />
-      <path d="m20.5 20.5-4.2-4.2" />
-    </>
-  ),
-  voortgang: (
-    <>
-      <path d="M3.5 20.5V3.5" />
-      <path d="M3.5 20.5h17" />
-      <path d="M8 17v-4.5" />
-      <path d="M13 17V8" />
-      <path d="M18 17v-7" />
-    </>
-  ),
-};
-
 /*
-  De volgorde is die van het leren, niet die van het bouwen.
-
-  Bovenaan de vier secties waar je iets nieuws doet — grammatica, lezen,
-  schrijven — en daaronder wat ondersteunt: de lessen uit het boek, het
-  herhalen, de woordenlijst en de cijfers. De lessen stonden eerst tweede,
-  omdat ze het eerst gebouwd zijn; dat is geen reden.
+  De volgorde is die van het leren, niet die van het bouwen: bovenaan waar
+  je iets nieuws doet — grammatica, lezen, schrijven — en daaronder wat
+  ondersteunt: de lessen, het herhalen, de woordenlijst en de cijfers.
 */
-const LINKS = [
-  { href: "/", label: "Overzicht", icon: "overzicht" },
-  { href: "/grammatica", label: "Grammatica", icon: "grammatica" },
-  { href: "/verhalen", label: "Verhalen", icon: "verhalen" },
-  { href: "/schrijven", label: "Schrijven", icon: "schrijven" },
-  { href: "/lessen", label: "Lessen", icon: "lessen" },
-  { href: "/oefenen", label: "Oefenen", icon: "herhalen" },
-  { href: "/woorden", label: "Woorden", icon: "woorden" },
-  { href: "/voortgang", label: "Voortgang", icon: "voortgang" },
-];
 
 type Box = { x: number; y: number; w: number; h: number };
 
-export function Nav({ streak, xp, due }: { streak: number; xp: number; due: number }) {
-  const pathname = usePathname();
+/** Meet de positie van het actieve item, zodat één markering ernaartoe kan schuiven. */
+function useIndicator(activeIndex: number) {
   const list = useRef<HTMLUListElement>(null);
   const [box, setBox] = useState<Box | null>(null);
   const [animate, setAnimate] = useState(false);
 
-  const activeIndex = LINKS.findIndex((link) =>
-    link.href === "/" ? pathname === "/" : pathname.startsWith(link.href),
-  );
-
-  /*
-    Eén selectie voor het hele menu, die met een veer naar het nieuwe item
-    schuift — zoals de selectie in de zijbalk van iPadOS. Je ziet waar je
-    vandaan komt en waar je heen gaat. De eerste keer zonder animatie: dan is
-    er geen "vandaan".
-  */
   useLayoutEffect(() => {
     const measure = () => {
       const ul = list.current;
       const a = ul?.querySelectorAll<HTMLAnchorElement>("a[data-nav]")[activeIndex];
-      if (!ul || !a) return setBox(null);
+      if (!ul || !a || !a.offsetParent) return setBox(null);
       const u = ul.getBoundingClientRect();
       const r = a.getBoundingClientRect();
       setBox({ x: r.left - u.left, y: r.top - u.top, w: r.width, h: r.height });
@@ -126,133 +42,167 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
     };
   }, [activeIndex]);
 
+  return { list, box, animate };
+}
+
+export function Nav({ streak, xp, due }: { streak: number; xp: number; due: number }) {
+  const pathname = usePathname();
+  const activeIndex = SECTIONS.findIndex((s) =>
+    s.href === "/" ? pathname === "/" : pathname.startsWith(s.href),
+  );
+  const side = useIndicator(activeIndex);
+  const tab = useIndicator(activeIndex);
+
+  const slide = (animate: boolean) => (animate ? "transform 520ms var(--ease-ios)" : "none");
+
   return (
-    /*
-      Drie vormen van dezelfde navigatie:
-        telefoon  — tabbalk van glas onderaan; iconen, en alleen het actieve
-                    item draagt zijn naam (acht leesbare labels passen niet)
-        tablet    — smalle zijbalk met icoon en klein label
-        scherm    — volle zijbalk zoals iPadOS: icoon en naam naast elkaar
-    */
-    <nav
-      className="glass fixed inset-x-0 bottom-0 z-40 flex h-[calc(56px+env(safe-area-inset-bottom))] shrink-0 flex-row items-stretch border-t border-[var(--material-edge)] px-1 pb-[env(safe-area-inset-bottom)] md:sticky md:inset-auto md:top-0 md:h-screen md:w-[88px] md:flex-col md:items-stretch md:border-r md:border-t-0 md:px-2 md:pb-4 md:pt-5 lg:w-[256px] lg:px-4"
-      aria-label="Hoofdnavigatie"
-    >
-      <Link
-        href="/"
-        title="Hrvatski — leerplatform"
-        className="mb-6 hidden items-center justify-center gap-3 rounded-xl px-2 py-1 md:flex lg:justify-start"
+    <>
+      {/* ═══ Zijbalk (tablet en groter): zoals Instellingen op een iPad ═══ */}
+      <nav
+        aria-label="Hoofdnavigatie"
+        className="sticky top-0 z-40 hidden h-screen w-[88px] shrink-0 flex-col border-r border-[var(--material-edge)] bg-[color-mix(in_srgb,var(--color-surface)_55%,transparent)] px-2 pb-4 pt-5 backdrop-blur-xl md:flex lg:w-[264px] lg:px-4"
       >
-        <Logo size={30} />
-        <span className="hidden text-[17px] font-bold tracking-tight lg:inline">Hrvatski</span>
-      </Link>
+        <Link href="/" className="mb-5 flex items-center justify-center gap-3 px-2 lg:justify-start" title="Hrvatski — leerplatform">
+          <Logo size={34} />
+          <span className="hidden leading-tight lg:block">
+            <span className="block text-[17px] font-bold tracking-tight text-ink">Hrvatski</span>
+            <span className="block text-[12px] text-ink-muted">Kroatisch leren</span>
+          </span>
+        </Link>
 
-      <ul
-        ref={list}
-        className="relative flex w-full flex-1 flex-row items-center justify-between md:flex-col md:items-stretch md:justify-start md:gap-0.5"
-      >
-        {box ? (
-          <li
-            aria-hidden
-            className="pointer-events-none absolute left-0 top-0 hidden rounded-xl bg-accent-wash md:block lg:bg-accent-fill"
-            style={{
-              width: box.w,
-              height: box.h,
-              transform: `translate3d(${box.x}px, ${box.y}px, 0)`,
-              transition: animate ? "transform 460ms var(--ease-ios)" : "none",
-            }}
-          />
-        ) : null}
+        <SearchButton compact className="mx-auto mb-4 h-10 w-10 justify-center bg-sunken lg:hidden" />
+        <SearchButton className="mb-5 hidden h-10 bg-sunken px-3 lg:flex" />
 
-        {LINKS.map((link, i) => {
-          const active = i === activeIndex;
-          const badge = link.href === "/oefenen" && due > 0 ? due : null;
-
-          return (
-            <li key={link.href} className="relative flex">
-              <Link
-                href={link.href}
-                data-nav
-                aria-current={active ? "page" : undefined}
-                aria-label={link.label}
-                className={`group relative flex h-12 w-full flex-col items-center justify-center gap-0.5 rounded-xl transition-colors duration-200 md:h-auto md:gap-1 md:py-2.5 lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:py-2 ${
-                  active
-                    ? "min-w-[64px] px-1.5 text-accent lg:text-on-fill"
-                    : "min-w-[38px] text-ink-muted hover:text-ink lg:text-ink lg:hover:bg-sunken"
-                }`}
-              >
-                <span
-                  key={active ? "aan" : "uit"}
-                  className={`relative transition-transform duration-150 group-active:scale-90 ${active ? "animate-pop" : ""}`}
+        <ul ref={side.list} className="relative flex flex-1 flex-col gap-0.5">
+          {side.box ? (
+            <li
+              aria-hidden
+              className="pointer-events-none absolute left-0 top-0 rounded-[12px] bg-[rgb(0_0_0/0.06)] dark:bg-white/10"
+              style={{
+                width: side.box.w,
+                height: side.box.h,
+                transform: `translate3d(${side.box.x}px, ${side.box.y}px, 0)`,
+                transition: slide(side.animate),
+              }}
+            />
+          ) : null}
+          {SECTIONS.map((s, i) => {
+            const active = i === activeIndex;
+            const badge = s.key === "oefenen" && due > 0 ? due : null;
+            return (
+              <li key={s.href} className="relative">
+                <Link
+                  href={s.href}
+                  data-nav
+                  aria-current={active ? "page" : undefined}
+                  className="group relative flex flex-col items-center gap-1 rounded-[12px] px-1 py-2 transition-colors lg:flex-row lg:gap-3 lg:px-2.5 lg:py-[7px]"
                 >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={active ? 2 : 1.7}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
+                  <span className="relative transition-transform duration-200 group-active:scale-90">
+                    <AppIcon section={s} size={30} />
+                    {badge ? (
+                      <span className="num absolute -right-2 -top-1.5 min-w-[18px] rounded-full bg-bad px-1 text-center text-[11px] leading-[18px] text-white ring-2 ring-surface lg:hidden">
+                        {badge > 99 ? "99" : badge}
+                      </span>
+                    ) : null}
+                  </span>
+                  <span
+                    className={`text-[10.5px] leading-none text-ink lg:text-[15px] ${active ? "font-semibold" : "font-medium text-ink-secondary lg:text-ink"}`}
                   >
-                    {ICONS[link.icon]}
-                  </svg>
+                    {s.label}
+                  </span>
                   {badge ? (
-                    <span className="num absolute -right-2.5 -top-1.5 min-w-[18px] rounded-full bg-bad px-1 text-center text-[11px] leading-[18px] text-on-fill lg:hidden">
-                      {badge > 99 ? "99" : badge}
+                    <span className="num ml-auto hidden rounded-full bg-bad px-2 text-[12px] leading-[20px] text-white lg:inline">
+                      {badge > 99 ? "99+" : badge}
                     </span>
                   ) : null}
-                </span>
-                <span
-                  className={`whitespace-nowrap text-[10.5px] font-semibold leading-none lg:text-[15px] lg:font-medium ${
-                    active ? "" : "hidden md:inline"
-                  }`}
-                >
-                  {link.label}
-                </span>
-                {badge ? (
-                  <span
-                    className={`num ml-auto hidden rounded-full px-2 text-[12px] leading-[20px] lg:inline ${
-                      active ? "bg-on-fill/25 text-on-fill" : "bg-bad text-on-fill"
-                    }`}
-                  >
-                    {badge > 99 ? "99+" : badge}
-                  </span>
-                ) : null}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* Reeks, XP en het thema. */}
-      <div className="hidden shrink-0 md:flex md:flex-col md:items-center md:gap-3 md:border-t md:border-line md:pt-4 lg:flex-row lg:justify-between lg:px-2">
-        <div className="flex flex-col items-center gap-3 lg:flex-row lg:gap-4">
-          <span
-            title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
-            className={`flex flex-col items-center gap-0.5 text-[12px] lg:flex-row lg:gap-1.5 lg:text-[14px] ${
-              streak > 0 ? "text-warm" : "text-ink-muted"
-            }`}
-          >
-            <svg width="14" height="17" viewBox="0 0 17 20" aria-hidden className={streak > 0 ? "animate-flicker" : ""}>
-              <path
-                d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z"
-                fill={streak > 0 ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
-              />
-            </svg>
-            <span className="num">{streak}</span>
-          </span>
-          <span
-            title={`${xp} XP totaal`}
-            className="flex flex-col items-center gap-0.5 text-[12px] text-ink-muted lg:flex-row lg:gap-1.5 lg:text-[14px]"
-          >
-            <Bolt className="text-gold-bright" />
-            <span className="num text-ink">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp}</span>
-          </span>
+        {/* Reeks, XP en het thema — een klein kaartje onderin, zoals je profiel. */}
+        <div className="flex flex-col items-center gap-3 border-t border-[var(--material-edge)] pt-4 lg:flex-row lg:justify-between lg:px-1">
+          <div className="flex flex-col items-center gap-2.5 lg:flex-row lg:gap-4">
+            <span
+              title={`Reeks: ${streak} ${streak === 1 ? "dag" : "dagen"}`}
+              className={`flex flex-col items-center gap-0.5 text-[12px] lg:flex-row lg:gap-1.5 lg:text-[14px] ${streak > 0 ? "text-warm" : "text-ink-muted"}`}
+            >
+              <svg width="14" height="17" viewBox="0 0 17 20" aria-hidden className={streak > 0 ? "animate-flicker" : ""}>
+                <path
+                  d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z"
+                  fill={streak > 0 ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
+                />
+              </svg>
+              <span className="num">{streak}</span>
+            </span>
+            <span title={`${xp} XP totaal`} className="flex flex-col items-center gap-0.5 text-[12px] lg:flex-row lg:gap-1.5 lg:text-[14px]">
+              <Bolt className="text-gold-bright" />
+              <span className="num text-ink">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp.toLocaleString("nl-NL")}</span>
+            </span>
+          </div>
+          <ThemeToggle />
         </div>
-        <ThemeToggle />
-      </div>
-    </nav>
+      </nav>
+
+      {/* ═══ Tabbalk (telefoon): een zwevende capsule van Liquid Glass ═══
+          Acht leesbare labels passen niet naast elkaar; daarom iconen, en het
+          actieve item krijgt zijn naam en zijn eigen kleur. Een glazen lens
+          schuift met een veer naar het item dat je kiest. */}
+      <nav
+        aria-label="Hoofdnavigatie"
+        className="liquid fixed inset-x-3 bottom-[calc(10px+env(safe-area-inset-bottom))] z-40 flex h-[62px] items-stretch rounded-[31px] px-1.5 md:hidden"
+      >
+        <ul ref={tab.list} className="relative flex w-full items-center justify-between">
+          {tab.box ? (
+            <li
+              aria-hidden
+              className="pointer-events-none absolute left-0 top-0 rounded-[24px] bg-[rgb(0_0_0/0.06)] dark:bg-white/12"
+              style={{
+                width: tab.box.w,
+                height: tab.box.h,
+                transform: `translate3d(${tab.box.x}px, ${tab.box.y}px, 0)`,
+                transition: slide(tab.animate),
+              }}
+            />
+          ) : null}
+          {SECTIONS.map((s, i) => {
+            const active = i === activeIndex;
+            const badge = s.key === "oefenen" && due > 0 ? due : null;
+            return (
+              <li key={s.href} className="relative flex">
+                <Link
+                  href={s.href}
+                  data-nav
+                  aria-current={active ? "page" : undefined}
+                  aria-label={s.label}
+                  className={`group flex h-[50px] flex-col items-center justify-center gap-0.5 rounded-[24px] ${active ? "min-w-[70px] px-2" : "min-w-[36px]"}`}
+                >
+                  {/* Het icoon neemt de kleur van de sectie; het label blijft inkt,
+                      want gekleurde tekst van 10px haalt het contrast niet. */}
+                  <span
+                    key={active ? "aan" : "uit"}
+                    style={active ? { color: s.hue[1] } : undefined}
+                    className={`relative transition-transform duration-150 group-active:scale-90 ${active ? "animate-pop" : "text-ink-secondary"}`}
+                  >
+                    <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.1 : 1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      {ICONS[s.icon]}
+                    </svg>
+                    {badge ? (
+                      <span className="num absolute -right-2.5 -top-1.5 min-w-[17px] rounded-full bg-bad px-1 text-center text-[10.5px] leading-[17px] text-white">
+                        {badge > 99 ? "99" : badge}
+                      </span>
+                    ) : null}
+                  </span>
+                  {active ? (
+                    <span className="animate-rise whitespace-nowrap text-[10.5px] font-semibold leading-none text-ink">{s.label}</span>
+                  ) : null}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </>
   );
 }

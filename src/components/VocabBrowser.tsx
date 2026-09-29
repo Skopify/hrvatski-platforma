@@ -165,9 +165,14 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
           </p>
         </div>
       ) : (
-        <ul className="space-y-1.5">
+        // Eén gegroepeerde lijst zoals in iOS: één kaart, rijen met een
+        // scheidingslijn die pas na het streepje begint.
+        <ul className="card overflow-hidden">
           {shown.map((w) => (
-            <li key={w.id} className="card px-4 py-3">
+            <li
+              key={w.id}
+              className="relative px-4 py-3 after:absolute after:bottom-0 after:left-[34px] after:right-0 after:h-px after:bg-line last:after:hidden"
+            >
               <div className="flex items-center gap-3">
                 {/* Geheugenstand als smalle staaf links — kleur zegt genoeg. */}
                 <span

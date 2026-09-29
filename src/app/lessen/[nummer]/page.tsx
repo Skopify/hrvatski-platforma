@@ -96,7 +96,7 @@ export default async function LessonPage({
         <div className="flex items-start gap-5">
           <span
             aria-hidden
-            className="display flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-2xl bg-accent text-[20px] text-on-fill"
+            className="display flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[14px] bg-accent-fill text-[20px] text-on-fill"
           >
             {String(lesson.number).padStart(2, "0")}
           </span>

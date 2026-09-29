@@ -65,7 +65,7 @@ export function StatTile({
   return (
     <div className="card relative flex h-full flex-col overflow-hidden px-5 py-4">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted">{label}</p>
+        <p className="eyebrow">{label}</p>
         {icon ? (
           <span
             className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${TONE_WASH[tone]}`}
@@ -74,7 +74,8 @@ export function StatTile({
           </span>
         ) : null}
       </div>
-      <p className={`num mt-2 text-[38px] leading-none ${TONE_TEXT[tone]}`}>{value}</p>
+      {/* Het getal is inkt; kleur alleen als hij iets betekent (goed of fout). */}
+      <p className={`num mt-2 text-[38px] leading-none ${tone === "good" || tone === "bad" ? TONE_TEXT[tone] : "text-ink"}`}>{value}</p>
       {sub ? <p className="mt-2 text-[12.5px] leading-snug text-ink-secondary">{sub}</p> : null}
       {/* De balk zakt naar de voet van de tegel, zodat tegels met en zonder balk
           in dezelfde rij dezelfde hoogte houden. */}
@@ -82,7 +83,7 @@ export function StatTile({
         <div className="mt-auto pt-3">
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-sunken">
             <div
-              className="h-full rounded-full bg-accent animate-grow-x origin-left"
+              className="h-full rounded-full bg-accent-fill animate-grow-x origin-left"
               style={{
                 width: `${Math.min(100, Math.max(meter * 100, meter > 0 ? 4 : 0))}%`,
               }}
@@ -150,7 +151,18 @@ export function Sparkline({
   return (
     <svg viewBox={`0 0 ${w} ${h}`} className="w-full" preserveAspectRatio="none" aria-hidden>
       <path d={`${line} L${w},${h} L0,${h} Z`} fill={tone} fillOpacity={0.08} />
-      <path d={line} fill="none" stroke={tone} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d={line}
+        pathLength={1}
+        className="animate-draw"
+        style={{ "--len": 1 } as React.CSSProperties}
+        fill="none"
+        stroke={tone}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
     </svg>
   );
 }

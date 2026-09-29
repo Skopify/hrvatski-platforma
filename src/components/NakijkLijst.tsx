@@ -115,7 +115,7 @@ export function NakijkLijst({
               type="button"
               disabled={bezig}
               onClick={() => verder("goedgekeurd")}
-              className="rounded-xl bg-accent px-4 py-3.5 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+              className="rounded-full bg-accent-fill px-5 py-3.5 text-[14px] font-semibold text-on-fill disabled:opacity-50"
             >
               Točno
             </button>
@@ -166,7 +166,7 @@ export function NakijkLijst({
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("fout", correctie, opmerking)}
-                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+                className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
               >
                 Spremi
               </button>
@@ -197,7 +197,7 @@ export function NakijkLijst({
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("twijfel", undefined, opmerking)}
-                className="rounded-xl bg-accent px-5 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+                className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
               >
                 Spremi
               </button>

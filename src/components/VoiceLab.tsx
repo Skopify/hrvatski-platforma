@@ -263,7 +263,7 @@ function VoiceRow({
         <button
           type="button"
           onClick={onKies}
-          className="rounded-full bg-accent px-3.5 py-1.5 text-[12.5px] font-semibold text-on-fill transition-colors hover:bg-accent-hover"
+          className="rounded-full bg-accent-fill px-3.5 py-1.5 text-[12.5px] font-semibold text-on-fill transition-colors hover:bg-accent-hover"
         >
           Gebruik deze
         </button>

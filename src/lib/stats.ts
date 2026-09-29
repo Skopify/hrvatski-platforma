@@ -63,8 +63,26 @@ export function rankFor(xp: number): { rank: Rank; next: Rank | null; progress: 
   return { rank, next, progress };
 }
 
+function localDayKey(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+/**
+ * Het profiel, met de reeks zoals hij nú is.
+ *
+ * De opgeslagen reeks wordt alleen bijgewerkt als je studeert. Sla je een dag
+ * over, dan staat er dus nog het oude getal tot je weer iets doet — en dan
+ * belooft het scherm een reeks die al gebroken is. Daarom telt de reeks hier
+ * alleen als je vandaag of gisteren hebt gestudeerd; anders is hij 0. Er
+ * wordt niets weggeschreven: bumpStreak blijft de enige die de reeks zet.
+ */
 export function getProfile() {
-  return db.select().from(profile).where(eq(profile.id, 1)).get()!;
+  const row = db.select().from(profile).where(eq(profile.id, 1)).get()!;
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const alive =
+    row.lastStudyDate === localDayKey(new Date()) || row.lastStudyDate === localDayKey(yesterday);
+  return alive ? row : { ...row, streakCurrent: 0 };
 }
 
 /* ------------------------------------------------------------ beheersing --- */

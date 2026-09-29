@@ -240,7 +240,7 @@ export function ExerciseView({
         autoCorrect="off"
         autoCapitalize="off"
         spellCheck={false}
-        className="hr-text w-full rounded-2xl border border-line bg-surface px-4 py-3.5 text-[18px] font-medium text-ink shadow-[var(--lift-1)] outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)] disabled:bg-sunken disabled:text-ink-secondary"
+        className="hr-text w-full rounded-[16px] border border-transparent bg-surface px-4 py-4 text-[19px] font-medium text-ink shadow-[var(--lift-1)] outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent-fill focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent-fill)_22%,transparent)] disabled:bg-sunken disabled:text-ink-secondary"
       />
       {!locked ? <SpecialChars onInsert={insert} /> : null}
     </div>
@@ -377,7 +377,7 @@ export function ExerciseView({
       return (
         <div className="space-y-4">
           {exercise.given ? (
-            <p className="hr-text whitespace-pre-line rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
+            <p className="hr-text whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -417,7 +417,7 @@ export function ExerciseView({
       return (
         <div className="space-y-3">
           {exercise.given ? (
-            <p className="hr-text whitespace-pre-line rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
+            <p className="hr-text whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-4 py-3 text-[17px] text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -472,7 +472,7 @@ export function ExerciseView({
                   onClick={() =>
                     setAnswer({ kind: "order", value: chosen.filter((_, j) => j !== i) })
                   }
-                  className="hr-text animate-pop rounded-xl bg-accent px-3.5 py-2 text-[15.5px] font-semibold text-on-fill shadow-[var(--lift-1)] transition-transform hover:-translate-y-px"
+                  className="hr-text animate-pop rounded-xl bg-accent-fill px-3.5 py-2 text-[15.5px] font-semibold text-on-fill shadow-[var(--lift-1)] transition-transform hover:-translate-y-px"
                 >
                   {t}
                 </button>
@@ -521,7 +521,7 @@ export function ExerciseView({
         <div className="space-y-4">
           {exercise.given ? (
             <div className="flex items-center gap-3">
-              <p className="hr-text whitespace-pre-line flex-1 rounded-xl border border-line bg-sunken px-4 py-3 text-[17px] text-ink">
+              <p className="hr-text whitespace-pre-line flex-1 rounded-[18px] bg-surface shadow-[var(--lift-2)] px-4 py-3 text-[17px] text-ink">
                 {exercise.given}
               </p>
               <PlayButton text={exercise.given} tts={tts} />

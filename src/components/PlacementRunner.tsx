@@ -349,11 +349,11 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
       </p>
 
       {fase === "woorden" ? (
-        <p className="hr-text mb-4 rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[22px] font-semibold text-ink">
+        <p className="hr-text mb-4 rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[22px] font-semibold text-ink">
           {v.prompt}
         </p>
       ) : v.given ? (
-        <p className="hr-text mb-4 whitespace-pre-line rounded-xl border border-line bg-sunken px-5 py-4 text-center text-[20px] font-semibold leading-snug text-ink">
+        <p className="hr-text mb-4 whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[20px] font-semibold leading-snug text-ink">
           {v.given}
         </p>
       ) : null}

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* dark: volgt het thema dat de app zelf zet (data-theme), niet alleen het systeem. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /* ═══════════════════════════════════════════════════════════════════════════
    LAGANO — het ontwerpsysteem van dit platform
    ═══════════════════════════════════════════════════════════════════════════
@@ -253,7 +256,10 @@ body {
   .card {
     background-color: var(--color-surface);
     border-radius: var(--radius-card);
-    box-shadow: var(--lift-2);
+    box-shadow: var(--lift-2), inset 0 0 0 1px rgb(0 0 0 / 0.035);
+  }
+  :root[data-theme="dark"] .card {
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.06);
   }
 
   /* Klikbare kaart. Indrukken reageert meteen (op pointer-down, via :active),
@@ -383,6 +389,132 @@ body {
       -webkit-backdrop-filter: none;
     }
   }
+}
+
+/* ------------------------------------------------------ liquid glass --- */
+/* Het materiaal van iOS 26: glas dat licht vangt. Een verloop in de rand
+   (licht boven, donker onder) en een glanslijn bovenin maken er een dik,
+   fysiek object van in plaats van een vlakke blur. */
+
+.liquid {
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.78), rgb(255 255 255 / 0.62));
+  backdrop-filter: blur(28px) saturate(1.9);
+  -webkit-backdrop-filter: blur(28px) saturate(1.9);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    inset 0 0 0 1px rgb(255 255 255 / 0.35),
+    0 1px 1px rgb(0 0 0 / 0.04),
+    0 18px 40px -16px rgb(20 30 60 / 0.28);
+}
+:root[data-theme="dark"] .liquid {
+  background: linear-gradient(180deg, rgb(58 58 64 / 0.62), rgb(36 36 40 / 0.66));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.14),
+    inset 0 0 0 1px rgb(255 255 255 / 0.07),
+    0 18px 40px -16px rgb(0 0 0 / 0.8);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .liquid {
+    background: var(--color-surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* ------------------------------------------------------------- de mesh --- */
+/* Het hoofdvlak van het overzicht: een verloop van Adriatisch blauw via
+   indigo naar een warme gloed, zoals de hero van een productlancering. Witte
+   tekst erop haalt overal 4,5:1 (het lichtste punt, #2a6cf0, haalt 4,7:1). */
+
+.mesh {
+  background-color: #1d4ed8;
+  background-image:
+    radial-gradient(80% 90% at 0% 0%, #2a6cf0 0%, transparent 60%),
+    radial-gradient(70% 80% at 100% 0%, #6d4dff 0%, transparent 60%),
+    radial-gradient(60% 70% at 100% 100%, #a930c0 0%, transparent 65%),
+    radial-gradient(70% 80% at 0% 100%, #0a3fb8 0%, transparent 60%);
+  color: #fff;
+}
+.mesh-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Knop op de mesh: wit glas met donkere tekst. */
+.btn-light {
+  background-color: #fff;
+  color: #0b1b3f;
+  box-shadow: 0 8px 20px -8px rgb(0 0 0 / 0.35);
+}
+.btn-glass {
+  background-color: rgb(255 255 255 / 0.18);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ------------------------------------------------------ sectiegloed --- */
+/* Achter de paginakop een zachte gloed in de kleur van de sectie: je voelt
+   waar je bent zonder dat het vlak kleurt. */
+
+.section-glow {
+  position: absolute;
+  pointer-events: none;
+  inset: -140px auto auto -120px;
+  width: 560px;
+  height: 360px;
+  background: radial-gradient(closest-side, var(--glow, #0a6cff), transparent);
+  opacity: 0.22;
+  filter: blur(8px);
+}
+:root[data-theme="dark"] .section-glow {
+  opacity: 0.3;
+}
+
+/* --------------------------------------------------------- het eiland --- */
+/* De Dynamic Island: een zwarte pil bovenaan die openvouwt tot een melding
+   en weer dichtklapt. Opent van het midden naar buiten (clip-path), zodat
+   het leest als één object dat groeit. */
+
+.island {
+  clip-path: inset(0 calc(50% - 18px) round 999px);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+  transition:
+    clip-path 520ms var(--ease-ios),
+    opacity 200ms ease,
+    transform 520ms var(--ease-ios);
+}
+.island[data-open="true"] {
+  clip-path: inset(0 0 round 999px);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ------------------------------------------------------ zoekvenster --- */
+
+.palette-backdrop {
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+.palette-backdrop[data-open="true"] {
+  opacity: 1;
+}
+.palette-panel {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.97);
+  transition:
+    opacity 180ms ease,
+    transform 420ms var(--ease-ios);
+}
+.palette-panel[data-open="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ------------------------------------------------------ navigatiemotie --- */
@@ -603,6 +735,12 @@ body {
   .animate-grow-x,
   .animate-cell {
     animation: none;
+  }
+  .island,
+  .island[data-open="true"],
+  .palette-panel,
+  .palette-panel[data-open="true"] {
+    transform: none;
   }
   .sheet,
   .sheet[data-open="false"] {
