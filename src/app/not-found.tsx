@@ -1,30 +1,40 @@
 import Link from "next/link";
 
+import { Arrow, Doodle, Sparkle, Squiggle } from "@/components/doodles";
 import { Page } from "@/components/ui";
 
 /*
-  Een pagina die niet bestaat: een rustige lege staat die zegt wat er aan de
-  hand is en één weg terug biedt.
+  Een pagina die niet bestaat: een grote vraagteken-sticker, één duidelijke
+  weg terug, en een pijl die er expres naartoe wijst.
 */
 export default function NotFound() {
   return (
     <Page width="focus">
-      <section className="card animate-pop mt-10 px-6 py-12 text-center sm:px-12">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-[20px] bg-accent-wash text-accent">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20.5 20.5-4.2-4.2" />
-            <path d="M8.5 11h5" />
-          </svg>
+      <section className="hero animate-pop relative mt-10 bg-pop-pink px-6 pb-10 pt-12 text-center text-on-pop sm:px-12">
+        <Sparkle size={30} className="absolute left-8 top-8 -rotate-12" color="var(--color-pop-yellow)" />
+        <Sparkle size={20} className="absolute right-10 top-14 rotate-12" color="#ffffff" />
+
+        <div className="mx-auto flex h-24 w-24 -rotate-6 items-center justify-center rounded-[26px] border-2 border-outline bg-white shadow-[4px_4px_0_#1b1a22]">
+          <Doodle name="question" size={62} color="var(--color-pop-yellow)" />
         </div>
-        <h1 className="hr-text display mt-6 text-[28px]">Ova stranica ne postoji.</h1>
-        <p className="mt-1 text-[15px] text-ink-muted">Deze pagina bestaat niet.</p>
-        <p className="mx-auto mt-4 max-w-sm text-[15px] leading-relaxed text-ink-secondary">
+
+        <h1 className="hr-text display mt-8 text-[38px] sm:text-[46px]">
+          <span className="relative inline-block pb-3">
+            Ova stranica ne postoji.
+            <Squiggle slow color="#1b1a22" className="absolute -bottom-0.5 left-0 h-[14px] w-full" />
+          </span>
+        </h1>
+        <p className="hand mt-2 text-[16px] font-bold">Deze pagina bestaat niet.</p>
+        <p className="mx-auto mt-4 max-w-sm text-[15.5px] font-medium leading-relaxed">
           Misschien is het adres veranderd, of zat er een tikfout in.
         </p>
-        <Link href="/" className="btn btn-primary mt-7 h-11 px-6 text-[15px]">
-          Naar het overzicht
-        </Link>
+
+        <div className="relative mt-9 inline-block">
+          <Arrow className="absolute -left-16 -top-6 hidden h-12 w-14 sm:block" />
+          <Link href="/" className="btn btn-primary h-[52px] px-8 text-[16px]">
+            Naar het overzicht
+          </Link>
+        </div>
       </section>
     </Page>
   );

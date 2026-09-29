@@ -102,7 +102,7 @@ export function Schrijfblok({
         <button
           type="button"
           onClick={() => setModel((m) => !m)}
-          className="flex w-full items-center justify-between gap-3 rounded-card border border-line bg-sunken px-5 py-3 text-left"
+          className="flex w-full items-center justify-between gap-3 rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-3 text-left"
         >
           <span className="text-[13.5px] font-semibold text-ink">
             {opdracht.soort === "verhaal" ? "Een voorbeeld — pas openen als je vastzit" : "Zo doet iemand anders het"}
@@ -110,7 +110,7 @@ export function Schrijfblok({
           <span className="text-[12px] text-ink-muted">{model ? "verbergen" : "bekijken"}</span>
         </button>
         {model ? (
-          <div className="mt-2 rounded-card border border-line bg-surface px-5 py-4">
+          <div className="mt-2 rounded-card border-2 border-outline bg-surface px-5 py-4">
             <p className="hr-text whitespace-pre-line text-[15.5px] leading-relaxed text-ink">
               {opdracht.model_nl}
             </p>
@@ -124,7 +124,7 @@ export function Schrijfblok({
 
       {/* 2. De bouwstenen. */}
       {bank.length ? (
-        <section className="mb-5 rounded-card border border-line bg-surface px-5 py-4">
+        <section className="mb-5 rounded-card border-2 border-outline bg-surface px-5 py-4">
           <p className="mb-2.5 text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
             Woorden die je hier kunt gebruiken
           </p>
@@ -155,7 +155,7 @@ export function Schrijfblok({
         spellCheck={false}
         autoCorrect="off"
         autoCapitalize="off"
-        className="hr-text w-full rounded-card border border-line-strong bg-surface px-5 py-4 text-[16px] leading-relaxed text-ink outline-none transition-all focus:border-accent-fill focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent-fill)_22%,transparent)]"
+        className="input hr-text w-full px-5 py-4 text-[17px] leading-relaxed"
       />
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
@@ -171,7 +171,7 @@ export function Schrijfblok({
           type="button"
           onClick={nakijken}
           disabled={bezig || !tekst.trim()}
-          className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-40"
+          className="btn btn-primary h-11 px-7 text-[15px] disabled:opacity-40"
         >
           {oordeel ? "Opnieuw nakijken" : "Nakijken"}
         </button>
@@ -186,7 +186,7 @@ export function Schrijfblok({
             </p>
           ) : null}
 
-          <section className="rounded-card border border-line bg-surface px-5 py-4">
+          <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
             <h3 className="display-soft mb-3 text-[16px] text-ink">Waar het om ging</h3>
             <ul className="space-y-2">
               {opdracht.rubriek_nl.map((r) => {
@@ -290,7 +290,7 @@ export function Schrijfblok({
               </ul>
             </section>
           ) : (
-            <p className="rounded-card border border-line bg-surface px-5 py-4 text-[13.5px] text-ink-secondary">
+            <p className="rounded-card border-2 border-outline bg-surface px-5 py-4 text-[13.5px] text-ink-secondary">
               Geen vergeten tekens, geen voorzetsel met de verkeerde naamval, geen Servische
               vormen. Dat is alles wat ik kan zien — of de zinnen ook klinken zoals een Kroaat ze
               zou zeggen, kan ik niet beoordelen.
@@ -298,7 +298,7 @@ export function Schrijfblok({
           )}
 
           {(vormen.length || onbekend.length || namen.length) ? (
-            <section className="rounded-card border border-line bg-surface px-5 py-4">
+            <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
               <h3 className="display-soft mb-1.5 text-[16px] text-ink">Wat ik niet kon plaatsen</h3>
               <p className="mb-2.5 text-[12.5px] leading-relaxed text-ink-muted">
                 Geen fouten — dingen waar ik niets over kan zeggen. Het Kroatisch is groter dan
@@ -330,7 +330,7 @@ export function Schrijfblok({
             </section>
           ) : null}
 
-          <section className="rounded-card border border-line bg-surface px-5 py-4">
+          <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
             <p className="text-[13px] leading-relaxed text-ink-secondary">
               {oordeel.woorden} woorden, {oordeel.zinnen} zinnen
               {opdracht.soort === "verhaal" ? `, ${oordeel.alineas} alinea's` : ""}.

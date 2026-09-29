@@ -48,7 +48,7 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
       {/* De uitslag met zijn teller erbij, en altijd de weg terug. Wie tijdens de
           module merkt dat "beheerst" niet klopt, moet dat kunnen rechtzetten
           zonder de hele toets over te doen. */}
-      <div className="rounded-card mb-8 border border-line bg-sunken px-5 py-4">
+      <div className="rounded-card mb-8 border-2 border-dashed border-line-strong bg-sunken px-5 py-4">
         {status ? (
           <>
             <p className="text-[14px] font-bold text-ink">

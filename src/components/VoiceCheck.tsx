@@ -6,7 +6,7 @@ export function VoiceCheck() {
   const tts = useCroatianTts();
 
   return (
-    <section className="rounded-card border border-line bg-surface p-6">
+    <section className="rounded-card border-2 border-outline bg-surface p-6">
       <h2 className="text-[13.5px] font-medium text-ink">Audio</h2>
 
       {!tts.supported ? (
@@ -27,7 +27,7 @@ export function VoiceCheck() {
           <button
             type="button"
             onClick={() => tts.speak("Dobar dan! Ja sam tvoj glas za hrvatski jezik.")}
-            className="mt-4 rounded-full border border-line bg-surface px-4 py-2 text-[13px] text-ink-secondary transition-colors hover:border-accent-ring hover:bg-accent-wash hover:text-accent"
+            className="mt-4 rounded-full border-2 border-outline bg-surface px-4 py-2 text-[13px] text-ink-secondary transition-colors hover:border-accent-ring hover:bg-accent-wash hover:text-accent"
           >
             Test de uitspraak
           </button>

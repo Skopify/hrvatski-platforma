@@ -20,7 +20,9 @@ import {
 import type { PresentedExercise } from "@/lib/present";
 import { useCroatianTts } from "@/lib/tts";
 import { Answer, ExerciseView, emptyAnswer, isAnswered } from "./ExerciseView";
-import { Bolt, StepTiles, outcomeOf, type StepOutcome } from "./ui";
+import { Doodle, Sparkle, Squiggle } from "./doodles";
+import { StepTiles, outcomeOf, type StepOutcome } from "./ui";
+import { XpChip } from "./XpChip";
 
 export interface Step {
   exercise: PresentedExercise;
@@ -36,9 +38,9 @@ export interface Step {
 }
 
 const REASON_STYLE: Record<Step["reason"], string> = {
-  introductie: "bg-accent-wash text-accent",
-  oefening: "bg-sunken text-ink-secondary",
-  herhaling: "bg-gold-wash text-gold",
+  introductie: "bg-pop-sky text-on-pop",
+  oefening: "bg-surface text-ink",
+  herhaling: "bg-pop-yellow text-on-pop",
 };
 
 export function SessionRunner({
@@ -287,36 +289,36 @@ export function SessionRunner({
     const accuracy = graded ? Math.round((correct / graded) * 100) : 0;
     return (
       <div className="mx-auto max-w-2xl px-5 py-14 sm:px-8 sm:py-20">
-        <div className="hero animate-rise px-8 py-11 text-center sm:px-10">
-          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-good-wash">
-            <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden className="animate-pop">
-              <path
-                d="M3 8.4 6.2 11.6 13 4.8"
-                fill="none"
-                stroke="var(--color-good)"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+        <div className="hero animate-pop relative px-8 py-11 text-center sm:px-10">
+          <Sparkle size={26} className="absolute left-8 top-8 -rotate-12" color="var(--color-pop-pink)" />
+          <Sparkle size={34} className="absolute right-9 top-10 rotate-12" color="var(--color-pop-yellow)" />
+          <Sparkle size={16} className="absolute right-24 top-24" color="var(--color-pop-sky)" />
+          <div className="animate-sticker mx-auto mb-6 flex h-20 w-20 items-center justify-center">
+            <Doodle name="star" size={80} color="var(--color-pop-yellow)" stroke={1.7} />
           </div>
 
-          <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-ink-muted">
+          <p className="hand text-[16px] font-bold text-ink-muted">
             {doneLabel ?? (kind === "lesson" ? "Les afgerond" : "Herhaling afgerond")}
           </p>
-          <h1 className="hr-text display mt-2.5 text-[38px] text-ink">Bravo!</h1>
+          <h1 className="hr-text display mt-1 text-[52px] text-ink">
+            <span className="relative inline-block pb-3">
+              Bravo!
+              <Squiggle slow color="var(--color-ring)" className="absolute -bottom-0.5 left-0 h-[14px] w-full" />
+            </span>
+          </h1>
 
           <div className="mt-9 grid grid-cols-3 gap-3">
             {[
-              { v: `+${xp}`, l: "XP", tone: "text-gold" },
-              { v: `${correct}/${graded}`, l: "Goed", tone: "text-ink" },
-              { v: `${accuracy}%`, l: "Accuratesse", tone: "text-ink" },
+              { v: `+${xp}`, l: "XP", bg: "bg-pop-yellow", r: "-rotate-2" },
+              { v: `${correct}/${graded}`, l: "Goed", bg: "bg-pop-mint", r: "rotate-1" },
+              { v: `${accuracy}%`, l: "Accuratesse", bg: "bg-pop-sky", r: "-rotate-1" },
             ].map((s) => (
-              <div key={s.l} className="rounded-2xl border border-line bg-surface py-4">
-                <p className={`display tabular text-[30px] leading-none ${s.tone}`}>{s.v}</p>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink-muted">
-                  {s.l}
-                </p>
+              <div
+                key={s.l}
+                className={`rounded-2xl border-2 border-outline py-4 text-on-pop shadow-[3px_3px_0_var(--color-outline)] ${s.bg} ${s.r}`}
+              >
+                <p className="num text-[32px] leading-none">{s.v}</p>
+                <p className="hand mt-2 text-[13px] font-bold">{s.l}</p>
               </div>
             ))}
           </div>
@@ -327,10 +329,10 @@ export function SessionRunner({
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/" className="btn btn-primary px-5 py-2.5 text-[14px]">
+            <Link href="/" className="btn btn-primary h-11 px-6 text-[15px]">
               Naar overzicht
             </Link>
-            <Link href="/voortgang" className="btn btn-ghost px-5 py-2.5 text-[14px]">
+            <Link href="/voortgang" className="btn btn-ghost h-11 px-6 text-[15px]">
               Voortgang bekijken
             </Link>
           </div>
@@ -346,27 +348,24 @@ export function SessionRunner({
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-8 sm:px-8 sm:py-10">
-      <header className="sticky top-0 z-30 -mx-5 mb-8 bg-plane/85 px-5 pb-4 pt-2 backdrop-blur-md sm:-mx-8 sm:px-8 md:top-0 md:pt-4">
+      <header className="sticky top-0 z-30 -mx-5 mb-8 border-b-2 border-dashed border-line-strong bg-plane px-5 pb-4 pt-3 sm:-mx-8 sm:px-8 md:pt-4">
         <div className="mb-3 flex items-center justify-between gap-4">
           <Link
             href={backHref ?? (kind === "lesson" ? "/lessen" : "/")}
-            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-muted transition-colors hover:text-accent"
+            className="hand inline-flex min-w-0 items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
           >
-            <span aria-hidden>←</span> {title}
+            <span aria-hidden>←</span> <span className="truncate">{title}</span>
           </Link>
-          <span className="tabular flex items-center gap-3 text-[12.5px] text-ink-muted">
-            <span>
+          <span className="flex shrink-0 items-center gap-3">
+            <span className="hand text-[14px] font-bold text-ink-secondary tabular-nums">
               {index + 1} / {steps.length}
             </span>
-            <span className="flex items-center gap-1 font-bold text-gold">
-              <Bolt />
-              {xp}
-            </span>
+            <XpChip xp={xp} />
           </span>
         </div>
 
-        {/* Eén segment per stap. Een doorlopende balk zegt "ergens halverwege";
-            segmenten zeggen "nog zes" — dat is wat je tijdens een sessie wilt weten. */}
+        {/* Eén stukje per stap. Een doorlopende balk zegt "ergens halverwege";
+            stukjes zeggen "nog zes" — dat is wat je tijdens een sessie wilt weten. */}
         <StepTiles
           steps={steps.map((s, i) =>
             outcomes[s.exercise.id] ?? (i < index ? "done" : i === index ? "current" : "todo"),
@@ -374,15 +373,15 @@ export function SessionRunner({
         />
       </header>
 
-      <div key={step.exercise.id} className="animate-rise">
+      <div key={step.exercise.id}>
         <div className="mb-4">
           <div className="flex flex-wrap items-center gap-2">
             <span
-              className={`pill uppercase ${step.badge ? "bg-accent-wash text-accent" : REASON_STYLE[step.reason]}`}
+              className={`pill ${step.badge ? "bg-pop-lilac text-on-pop" : REASON_STYLE[step.reason]}`}
             >
               {step.badge?.label ?? step.reason}
             </span>
-            <span className="text-[12px] text-ink-muted">{step.sectionTitle}</span>
+            <span className="hand text-[13px] font-semibold text-ink-muted">{step.sectionTitle}</span>
           </div>
           {step.badge?.hint ? (
             <p className="mt-2 text-[12.5px] leading-relaxed text-ink-muted">{step.badge.hint}</p>
@@ -390,7 +389,7 @@ export function SessionRunner({
         </div>
 
         {!passive ? (
-          <h2 className="mb-5 text-[17px] font-bold leading-snug text-ink">
+          <h2 className="display-soft mb-5 text-[24px] leading-snug text-ink">
             {step.exercise.prompt_nl}
           </h2>
         ) : null}
@@ -409,7 +408,7 @@ export function SessionRunner({
           <button
             type="button"
             onClick={advance}
-            className="text-[13px] font-medium text-ink-muted transition-colors hover:text-ink-secondary"
+            className="hand text-[14px] font-bold text-ink-muted transition-colors hover:text-ink"
           >
             Overslaan
           </button>
@@ -419,7 +418,7 @@ export function SessionRunner({
               type="button"
               disabled={busy || (!feedback && !canCheck)}
               onClick={() => (escalating ? retry() : feedback ? advance() : void check())}
-              className="btn btn-primary px-7 py-3 text-[14.5px]"
+              className="btn btn-primary h-12 px-8 text-[16px]"
             >
               {escalating
                 ? "Nog een poging"
@@ -505,11 +504,9 @@ function FeedbackPanel({
 }) {
   if (feedback.selfAssess) {
     return (
-      <div className="animate-rise mt-6 rounded-card border border-line bg-sunken px-5 py-5">
+      <div className="animate-rise mt-6 rounded-card border-2 border-outline bg-surface px-5 py-5 shadow-[var(--hard)]">
         <CheckLijst report={feedback.report} />
-        <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
-          Modelantwoord
-        </p>
+        <p className="eyebrow">Modelantwoord</p>
         <p className="hr-text reading mt-2 text-[18px] text-ink">
           {feedback.selfAssess.model_answer}
         </p>
@@ -530,7 +527,7 @@ function FeedbackPanel({
             type="button"
             disabled={busy}
             onClick={() => onAssess(true)}
-            className="btn btn-primary px-5 py-2.5 text-[14px] disabled:opacity-50"
+            className="btn btn-primary h-11 px-6 text-[15px] disabled:opacity-50"
           >
             Dat had ik
           </button>
@@ -538,7 +535,7 @@ function FeedbackPanel({
             type="button"
             disabled={busy}
             onClick={() => onAssess(false)}
-            className="btn btn-ghost px-5 py-2.5 text-[14px] hover:border-bad hover:bg-bad-wash hover:text-bad-ink disabled:opacity-50"
+            className="btn btn-ghost h-11 px-6 text-[15px] disabled:opacity-50"
           >
             Nog niet
           </button>
@@ -556,20 +553,13 @@ function FeedbackPanel({
    */
   if (feedback.stage === "hint" || feedback.stage === "choice") {
     return (
-      <div className="animate-rise mt-6 rounded-card bg-gold-wash px-5 py-5">
+      <div className="animate-rise mt-6 rounded-card border-2 border-outline bg-pop-yellow px-5 py-5 text-on-pop shadow-[var(--hard)]">
         <div className="flex items-start gap-3">
-          <span
-            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold text-[13px] font-bold text-on-fill"
-            aria-hidden
-          >
-            ?
-          </span>
+          <Doodle name="question" size={30} color="#ffffff" className="mt-0.5" />
           <div className="min-w-0 flex-1">
-            <p className="text-[14.5px] font-bold text-gold">{feedback.message}</p>
+            <p className="text-[16px] font-extrabold">{feedback.message}</p>
             {feedback.hint ? (
-              <p className="mt-2 text-[13.5px] leading-relaxed text-ink-secondary">
-                {feedback.hint}
-              </p>
+              <p className="mt-2 text-[14.5px] font-medium leading-relaxed">{feedback.hint}</p>
             ) : null}
 
             {feedback.stage === "choice" && feedback.options?.length ? (
@@ -580,7 +570,7 @@ function FeedbackPanel({
                     type="button"
                     disabled={busy}
                     onClick={() => onPick?.(optie)}
-                    className="hr-text btn btn-ghost px-4 py-2 text-[15px] font-semibold hover:border-accent hover:bg-accent-wash hover:text-accent disabled:opacity-50"
+                    className="hr-text btn btn-ghost h-11 px-5 text-[16px] disabled:opacity-50"
                   >
                     {optie}
                   </button>
@@ -595,62 +585,36 @@ function FeedbackPanel({
 
   const tone = feedback.correct
     ? feedback.nearMiss
-      ? "bg-gold-wash"
-      : "bg-good-wash"
-    : "bg-bad-wash";
-  const textTone = feedback.correct
-    ? feedback.nearMiss
-      ? "text-gold"
-      : "text-good-ink"
-    : "text-bad-ink";
-  const badge = feedback.correct
-    ? feedback.nearMiss
-      ? "bg-gold-bright"
-      : "bg-good"
-    : "bg-bad";
+      ? "bg-pop-yellow"
+      : "bg-pop-mint"
+    : "bg-pop-pink";
+  const badge = feedback.correct ? (feedback.nearMiss ? "question" : "check") : "cross";
 
   return (
     <div
-      className={`mt-6 rounded-card px-5 py-5 ${tone} ${feedback.correct ? "animate-rise" : "animate-shake"}`}
+      className={`mt-6 rounded-card border-2 border-outline px-5 py-5 text-on-pop shadow-[var(--hard)] ${tone} ${feedback.correct ? "animate-rise" : "animate-shake"}`}
     >
       <div className="flex items-start gap-3">
         <span
-          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-on-fill ${badge}`}
+          className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-outline bg-white"
           aria-hidden
         >
-          {feedback.correct ? (
-            feedback.nearMiss ? (
-              <span className="text-[13px] font-bold">!</span>
-            ) : (
-              <svg width="13" height="13" viewBox="0 0 16 16">
-                <path
-                  d="M3 8.4 6.2 11.6 13 4.8"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )
-          ) : (
-            <span className="text-[13px] font-bold">✕</span>
-          )}
+          <Doodle name={badge} size={20} stroke={2.6} color="transparent" />
         </span>
 
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <p className={`text-[14.5px] font-bold ${textTone}`}>{feedback.message}</p>
-            <span
-              className={`tabular flex shrink-0 items-center gap-1 text-[12px] font-bold ${textTone}`}
-            >
-              <Bolt />+{feedback.xp}
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-[16px] font-extrabold">{feedback.message}</p>
+            {/* De XP-sticker: springt binnen met een kleine overshoot en blijft liggen. */}
+            <span className="animate-sticker pill rotate-[3deg] gap-1 bg-white px-2.5 text-on-pop">
+              <Doodle name="bolt" size={14} color="var(--color-pop-yellow)" />
+              <span className="num text-[14px]">+{feedback.xp} XP</span>
             </span>
           </div>
 
           {!feedback.correct || feedback.nearMiss ? (
-            <p className="hr-text mt-2 text-[16px] font-semibold text-ink">
-              <span className="font-normal text-ink-muted">Juist: </span>
+            <p className="hr-text mt-2 text-[17px] font-bold">
+              <span className="hand font-bold">Juist: </span>
               {feedback.expected}
             </p>
           ) : null}
@@ -659,7 +623,7 @@ function FeedbackPanel({
             <CheckLijst report={feedback.report} />
           </div>
           {feedback.explain_nl ? (
-            <p className="mt-2.5 text-[13px] leading-relaxed text-ink-secondary">
+            <p className="mt-2.5 text-[14px] font-medium leading-relaxed">
               {feedback.explain_nl}
             </p>
           ) : null}

@@ -10,7 +10,8 @@ import { island } from "@/lib/island";
   Nooit bij minder beweging (dan alleen de melding), en nooit twee keer
   op dezelfde dag.
 */
-const COLORS = ["#ff2d55", "#0a84ff", "#ffd60a", "#30d158", "#bf5af2", "#ff9f0a"];
+// De stiften van het platform, zodat de confetti bij de rest hoort.
+const COLORS = ["#ffe45c", "#ffb3d1", "#a8ecc8", "#a9d8ff", "#cdbcff", "#ffc9a3", "#3b4cff"];
 
 export function Celebrate({ when, day }: { when: boolean; day: string }) {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -69,7 +70,10 @@ export function Celebrate({ when, day }: { when: boolean; day: string }) {
         ctx.translate(b.x, b.y);
         ctx.rotate(b.rot);
         ctx.fillStyle = b.c;
+        ctx.strokeStyle = "#1b1a22";
+        ctx.lineWidth = 1.4;
         ctx.fillRect(-b.w / 2, -b.h / 2, b.w, b.h);
+        ctx.strokeRect(-b.w / 2, -b.h / 2, b.w, b.h);
         ctx.restore();
       }
       if (t < 2200) raf = requestAnimationFrame(frame);

@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
   return (
-    <div className="thin-scroll mt-4 overflow-x-auto rounded-2xl border border-line bg-plane/60 p-1">
+    <div className="thin-scroll mt-4 overflow-x-auto rounded-2xl border-2 border-dashed border-line-strong bg-plane/60 p-1">
       <table className="w-full border-collapse text-[13.5px]">
         <caption className="px-3 pb-2 pt-2.5 text-left text-[12px] text-ink-muted">
           {paradigm.caption_nl}
@@ -96,7 +96,7 @@ export default async function LessonPage({
         <div className="flex items-start gap-5">
           <span
             aria-hidden
-            className="display flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[14px] bg-accent-fill text-[20px] text-on-fill"
+            className="num flex h-14 w-14 shrink-0 -rotate-3 items-center justify-center rounded-tile border-2 border-outline bg-pop-mint text-[22px] text-on-pop shadow-[3px_3px_0_var(--color-outline)]"
           >
             {String(lesson.number).padStart(2, "0")}
           </span>
@@ -138,7 +138,7 @@ export default async function LessonPage({
             <li
               key={c}
               style={{ "--i": i } as React.CSSProperties}
-              className="flex gap-3 rounded-2xl border border-line bg-surface px-4 py-3"
+              className="flex gap-3 rounded-2xl border-2 border-outline bg-surface px-4 py-3"
             >
               <span
                 className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-wash text-accent"

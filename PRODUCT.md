@@ -43,7 +43,7 @@ verhalen binnen de grammatica die je al kent, en nakijken dat taalkundig klopt
 ## Brand Commitments
 
 - Merkteken: de šahovnica (rood-wit dambord) als logo en als enige ornament.
-- Visuele wereld sinds 29-09-2026: «Lagano», iOS-achtig maar beter, met logische animaties (zie DESIGN.md). Zijn referentie: strakke, lichte app-sites met pilknoppen en zwevende panelen.
+- Visuele wereld sinds 29-09-2026: «Krabbel», speels en uitdagend scribble-ontwerp met dynamische pills en handgetekende iconen (zie DESIGN.md). Hij vond eerdere richtingen te generiek of "te AI"; de iconen moeten met de hand ontworpen zijn.
 - Blijvend: pagina's mogen onderling niet verschillen in kop of marges, en navy-vlakken vond hij niet fris.
 
 ## Product Principles

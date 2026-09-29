@@ -138,7 +138,7 @@ function PlayButton({ text, tts }: { text: string; tts: TtsState }) {
           ? "Geen Kroatische stem geïnstalleerd — zie de melding onder Voortgang"
           : "Uitspreken"
       }
-      className="inline-flex h-9 items-center gap-2 rounded-lg border border-line bg-surface px-3 text-[13px] text-ink-secondary transition-colors hover:border-accent-ring hover:bg-accent-wash hover:text-accent disabled:cursor-not-allowed disabled:opacity-40"
+      className="btn btn-ghost h-9 px-3.5 text-[13.5px] disabled:cursor-not-allowed disabled:opacity-40"
     >
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
         <path
@@ -176,7 +176,7 @@ function SpeedPicker({ tts }: { tts: TtsState }) {
           aria-pressed={tts.rate === r.value}
           className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
             tts.rate === r.value
-              ? "bg-surface text-accent shadow-[var(--lift-1)]"
+              ? "bg-pop-yellow text-on-pop"
               : "text-ink-muted hover:text-ink-secondary"
           }`}
         >
@@ -240,7 +240,7 @@ export function ExerciseView({
         autoCorrect="off"
         autoCapitalize="off"
         spellCheck={false}
-        className="hr-text w-full rounded-[16px] border border-transparent bg-surface px-4 py-4 text-[19px] font-medium text-ink shadow-[var(--lift-1)] outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent-fill focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent-fill)_22%,transparent)] disabled:bg-sunken disabled:text-ink-secondary"
+        className="input hr-text w-full px-4 py-4 text-[19px]"
       />
       {!locked ? <SpecialChars onInsert={insert} /> : null}
     </div>
@@ -288,7 +288,7 @@ export function ExerciseView({
           </div>
 
           {exercise.body_nl ? (
-            <details className="rounded-card border border-line bg-sunken px-5 py-3.5">
+            <details className="rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-3.5">
               <summary className="cursor-pointer text-[13px] text-ink-secondary transition-colors hover:text-accent">
                 Vertaling tonen
               </summary>
@@ -343,7 +343,7 @@ export function ExerciseView({
         <div className="space-y-3">
           {hr.map((h) => (
             <div key={h} className="grid grid-cols-[1fr_auto_1.4fr] items-center gap-3">
-              <span className="hr-text rounded-lg border border-line bg-surface px-3.5 py-2.5 text-[15px] text-ink">
+              <span className="hr-text rounded-lg border-2 border-outline bg-surface px-3.5 py-2.5 text-[15px] text-ink">
                 {h}
               </span>
               <span className="text-ink-muted">→</span>
@@ -353,7 +353,7 @@ export function ExerciseView({
                 onChange={(e) =>
                   setAnswer({ kind: "match", value: { ...mapping, [h]: e.target.value } })
                 }
-                className="w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-[14px] text-ink outline-none transition-colors focus:border-accent disabled:bg-sunken"
+                className="input w-full px-3 py-2.5 text-[14.5px]"
               >
                 <option value="">Kies…</option>
                 {nl.map((n) => (
@@ -377,7 +377,7 @@ export function ExerciseView({
       return (
         <div className="space-y-4">
           {exercise.given ? (
-            <p className="hr-text whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
+            <p className="hr-text whitespace-pre-line rounded-2xl border-2 border-outline bg-surface shadow-[var(--hard-sm)] px-5 py-4 text-center text-[22px] font-semibold leading-snug text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -393,17 +393,15 @@ export function ExerciseView({
                   type="button"
                   disabled={locked}
                   onClick={() => setAnswer({ kind: "choice", value: opt })}
-                  className={`flex items-start gap-3 rounded-2xl border px-4 py-3 text-left text-[15px] leading-snug transition-all duration-200 ${
+                  className={`flex items-start gap-3 rounded-2xl border-2 px-4 py-3 text-left text-[15px] leading-snug font-semibold leading-snug transition-[transform,box-shadow,background-color] duration-150 ${
                     selected
-                      ? "border-accent bg-accent-wash text-accent shadow-[0_0_0_3px_var(--color-accent-ring)]"
-                      : "border-line bg-surface text-ink hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash"
+                      ? "border-outline bg-pop-yellow text-on-pop shadow-[3px_3px_0_var(--color-outline)]"
+                      : "border-outline bg-surface text-ink shadow-[3px_3px_0_var(--color-outline)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-x-px [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-px"
                   } disabled:cursor-not-allowed`}
                 >
                   <span
                     aria-hidden
-                    className={`mt-0.5 h-4 w-4 shrink-0 rounded-full border-2 transition-colors ${
-                      selected ? "border-accent bg-accent" : "border-line-strong bg-transparent"
-                    }`}
+                    className={`mt-0.5 h-5 w-5 shrink-0 rounded-full border-2 border-outline transition-colors ${selected ? "bg-outline" : "bg-white"}`}
                   />
                   {opt}
                 </button>
@@ -417,7 +415,7 @@ export function ExerciseView({
       return (
         <div className="space-y-3">
           {exercise.given ? (
-            <p className="hr-text whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-4 py-3 text-[17px] text-ink">
+            <p className="hr-text whitespace-pre-line rounded-2xl border-2 border-outline bg-surface shadow-[var(--hard-sm)] px-4 py-3 text-[17px] text-ink">
               {exercise.given}
             </p>
           ) : null}
@@ -430,17 +428,15 @@ export function ExerciseView({
                   type="button"
                   disabled={locked}
                   onClick={() => setAnswer({ kind: "choice", value: opt })}
-                  className={`hr-text group flex items-center gap-3 rounded-2xl border px-4 py-3 text-left text-[15.5px] font-medium transition-all duration-200 ${
+                  className={`hr-text group flex items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left text-[15.5px] font-medium font-semibold leading-snug transition-[transform,box-shadow,background-color] duration-150 ${
                     selected
-                      ? "border-accent bg-accent-wash text-accent shadow-[0_0_0_3px_var(--color-accent-ring)]"
-                      : "border-line bg-surface text-ink hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash"
+                      ? "border-outline bg-pop-yellow text-on-pop shadow-[3px_3px_0_var(--color-outline)]"
+                      : "border-outline bg-surface text-ink shadow-[3px_3px_0_var(--color-outline)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-x-px [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-px"
                   } disabled:cursor-not-allowed`}
                 >
                   <span
                     aria-hidden
-                    className={`h-4 w-4 shrink-0 rounded-full border-2 transition-colors ${
-                      selected ? "border-accent bg-accent" : "border-line-strong bg-transparent"
-                    }`}
+                    className={`h-5 w-5 shrink-0 rounded-full border-2 border-outline transition-colors ${selected ? "bg-outline" : "bg-white"}`}
                   />
                   {opt}
                 </button>
@@ -472,7 +468,7 @@ export function ExerciseView({
                   onClick={() =>
                     setAnswer({ kind: "order", value: chosen.filter((_, j) => j !== i) })
                   }
-                  className="hr-text animate-pop rounded-xl bg-accent-fill px-3.5 py-2 text-[15.5px] font-semibold text-on-fill shadow-[var(--lift-1)] transition-transform hover:-translate-y-px"
+                  className="hr-text animate-pop rounded-xl border-2 border-outline bg-pop-yellow px-3.5 py-2 text-[16px] font-bold text-on-pop shadow-[2px_2px_0_var(--color-outline)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
                 >
                   {t}
                 </button>
@@ -486,7 +482,7 @@ export function ExerciseView({
                 type="button"
                 disabled={locked}
                 onClick={() => setAnswer({ kind: "order", value: [...chosen, t] })}
-                className="hr-text rounded-xl border border-line bg-surface px-3.5 py-2 text-[15.5px] font-medium text-ink shadow-[var(--lift-1)] transition-all duration-200 hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash hover:text-accent"
+                className="hr-text rounded-xl border-2 border-outline bg-surface px-3.5 py-2 text-[16px] font-bold text-ink shadow-[2px_2px_0_var(--color-outline)] transition-[transform,box-shadow] duration-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
               >
                 {t}
               </button>
@@ -505,7 +501,7 @@ export function ExerciseView({
             <SpeedPicker tts={tts} />
           </div>
           {tts.ready && !tts.voice ? (
-            <p className="rounded-lg border border-line bg-warn-wash px-3.5 py-2.5 text-[12.5px] leading-relaxed text-ink-secondary">
+            <p className="rounded-lg border-2 border-outline bg-pop-yellow text-on-pop px-3.5 py-2.5 text-[12.5px] leading-relaxed text-ink-secondary">
               Er is geen Kroatische stem geïnstalleerd, dus deze oefening kan niet worden
               voorgelezen. Zie <span className="font-medium">Voortgang → Audio</span> voor de
               installatie. Je kunt de oefening overslaan.
@@ -521,7 +517,7 @@ export function ExerciseView({
         <div className="space-y-4">
           {exercise.given ? (
             <div className="flex items-center gap-3">
-              <p className="hr-text whitespace-pre-line flex-1 rounded-[18px] bg-surface shadow-[var(--lift-2)] px-4 py-3 text-[17px] text-ink">
+              <p className="hr-text whitespace-pre-line flex-1 rounded-2xl border-2 border-outline bg-surface shadow-[var(--hard-sm)] px-4 py-3 text-[17px] text-ink">
                 {exercise.given}
               </p>
               <PlayButton text={exercise.given} tts={tts} />
@@ -535,7 +531,7 @@ export function ExerciseView({
             rows={3}
             placeholder={exercise.placeholder ?? "Schrijf je antwoord in het Kroatisch…"}
             spellCheck={false}
-            className="hr-text w-full resize-none rounded-2xl border border-line bg-surface px-4 py-3 text-[16px] leading-relaxed text-ink outline-none transition-colors placeholder:text-ink-muted focus:border-accent disabled:bg-sunken"
+            className="input hr-text w-full resize-none px-4 py-3 text-[16px] leading-relaxed"
           />
           {!locked ? <SpecialChars onInsert={insert} /> : null}
           {/* Na inzending herhaalt het modelpaneel deze criteria — niet dubbel tonen. */}
@@ -583,11 +579,7 @@ export function ExerciseView({
           {exercise.given ? (
             <div className="flex items-start gap-3">
               <p
-                className={`hr-text whitespace-pre-line flex-1 rounded-xl px-4 py-3 text-[17px] leading-relaxed ${
-                  exercise.type === "error_correction"
-                    ? "border border-bad-wash bg-bad-wash text-ink"
-                    : "border border-line bg-sunken text-ink"
-                }`}
+                className={`hr-text whitespace-pre-line flex-1 rounded-xl border-2 border-outline px-4 py-3 text-[17px] font-medium leading-relaxed text-on-pop ${exercise.type === "error_correction" ? "bg-pop-pink" : "bg-pop-sky"}`}
               >
                 {exercise.given}
               </p>

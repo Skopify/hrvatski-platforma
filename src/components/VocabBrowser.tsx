@@ -104,7 +104,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
               placeholder="Zoek in het Kroatisch of Nederlands…"
               autoComplete="off"
               spellCheck={false}
-              className="hr-text w-full rounded-full border border-line bg-surface py-2.5 pl-10 pr-4 text-[14px] text-ink outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)]"
+              className="hr-text w-full rounded-full border-2 border-outline bg-surface py-2.5 pl-10 pr-4 text-[14px] text-ink outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)]"
             />
           </div>
 
@@ -114,7 +114,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
               setPos(e.target.value);
               setLimit(120);
             }}
-            className="rounded-full border border-line bg-surface px-4 py-2.5 text-[13px] font-medium text-ink-secondary outline-none focus:border-accent"
+            className="rounded-full border-2 border-outline bg-surface px-4 py-2.5 text-[13px] font-medium text-ink-secondary outline-none focus:border-accent"
           >
             <option value="alle">Alle soorten</option>
             {posOptions.map(([p, n]) => (
@@ -158,7 +158,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
 
       {/* Resultaten */}
       {shown.length === 0 ? (
-        <div className="rounded-card border border-dashed border-line-strong px-6 py-10 text-center">
+        <div className="rounded-card border-2 border-dashed border-line-strong px-6 py-10 text-center">
           <p className="text-[13.5px] text-ink-secondary">
             Geen woorden gevonden. Zoeken werkt ook zonder diakritische tekens — «cokolada»
             vindt čokolada.

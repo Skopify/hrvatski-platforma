@@ -3,20 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 
 import { ISLAND_EVENT, type IslandMessage } from "@/lib/island";
+import { Doodle } from "./doodles";
 
 /*
-  De Dynamic Island: een zwarte pil bovenaan die openvouwt tot een melding en
-  na een paar tellen weer dichtklapt. Voor bevestigingen die je niet hoeft
-  te lezen om verder te kunnen ("Bewaard", "Dagdoel gehaald") — nooit voor
+  Het eiland: een gele sticker bovenaan die openvouwt tot een melding en na
+  een paar tellen weer dichtklapt. Voor bevestigingen die je niet hoeft te
+  lezen om verder te kunnen ("Bewaard", "Dagdoel gehaald") — nooit voor
   fouten die om actie vragen; die staan bij het ding zelf.
 
   Leest voor schermlezers via aria-live, zodat de melding ook zonder ogen
   aankomt.
 */
 const TONE: Record<string, string> = {
-  good: "#32d74b",
-  info: "#4da3ff",
-  warm: "#ff9f0a",
+  good: "var(--color-pop-mint)",
+  info: "var(--color-pop-sky)",
+  warm: "var(--color-pop-peach)",
 };
 
 export function Island() {
@@ -30,7 +31,7 @@ export function Island() {
       clearTimeout(timer.current);
       setMsg(detail);
       requestAnimationFrame(() => setOpen(true));
-      timer.current = setTimeout(() => setOpen(false), 2600);
+      timer.current = setTimeout(() => setOpen(false), 2800);
     };
     window.addEventListener(ISLAND_EVENT, onMsg);
     return () => {
@@ -41,27 +42,26 @@ export function Island() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-x-0 top-[calc(10px+env(safe-area-inset-top))] z-[60] flex justify-center px-4"
+      className="pointer-events-none fixed inset-x-0 top-[calc(12px+env(safe-area-inset-top))] z-[60] flex justify-center px-4"
       aria-live="polite"
       role="status"
     >
       <div
         data-open={open}
-        className="island flex min-w-[220px] max-w-[92vw] items-center gap-3 rounded-full bg-[#0b0b0c] py-2.5 pl-3 pr-5 text-white shadow-[0_18px_40px_-14px_rgb(0_0_0/0.55)]"
+        className="island flex min-w-[230px] max-w-[92vw] items-center gap-3 border-2 border-outline bg-pop-yellow py-2 pl-2.5 pr-5 text-on-pop shadow-[4px_4px_0_var(--color-outline)]"
+        style={{ borderRadius: 999 }}
       >
         {msg ? (
           <>
             <span
-              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-outline"
               style={{ background: TONE[msg.tone ?? "good"] }}
             >
-              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden>
-                <path d="M3 8.4 6.2 11.6 13 4.8" fill="none" stroke="#0b0b0c" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <Doodle name="check" size={18} stroke={2.6} />
             </span>
             <span className="min-w-0">
-              <span className="block truncate text-[14px] font-semibold leading-tight">{msg.text}</span>
-              {msg.sub ? <span className="block truncate text-[12px] leading-tight text-white/65">{msg.sub}</span> : null}
+              <span className="block truncate text-[14.5px] font-extrabold leading-tight">{msg.text}</span>
+              {msg.sub ? <span className="hand block truncate text-[12.5px] font-semibold leading-tight">{msg.sub}</span> : null}
             </span>
           </>
         ) : null}

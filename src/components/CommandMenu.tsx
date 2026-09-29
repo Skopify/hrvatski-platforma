@@ -3,12 +3,16 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { AppIcon, SECTIONS, type SectionKey } from "./sections";
+import { Doodle } from "./doodles";
+import { SECTIONS, SectionSticker, type SectionKey } from "./sections";
 
 /*
   Het zoekvenster (⌘K): overal vandaan meteen naar een pagina, les, verhaal
-  of grammaticaonderwerp. Zoals in Linear of Raycast, maar met de rust van
-  Spotlight: één veld, resultaten per groep, pijltjes en Enter.
+  of grammaticaonderwerp. Één veld, resultaten per groep, pijltjes en Enter.
+
+  Het opent met het toetsenbord en dus honderden keren per dag: daarom heeft
+  het geen animatie, alleen aan of uit. (Emils regel: wat je honderd keer per
+  dag doet, animeer je niet.)
 
   Zoeken negeert hoofdletters en dakjes, zodat "cafe" ook "café" en "zivot"
   ook "život" vindt — typen zonder Kroatisch toetsenbord moet gewoon werken.
@@ -110,35 +114,34 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
     <div className={`fixed inset-0 z-[70] ${open ? "" : "pointer-events-none"}`} inert={!open} aria-hidden={!open}>
       <div
         data-open={open}
-        className="palette-backdrop absolute inset-0 bg-black/25 backdrop-blur-[3px] dark:bg-black/50"
+        className="palette-backdrop absolute inset-0 bg-black/30 dark:bg-black/55"
         onClick={() => setOpen(false)}
       />
       <div
         data-open={open}
         role="dialog"
         aria-label="Zoeken"
-        className="palette-panel liquid relative mx-auto mt-[12vh] w-[min(640px,calc(100vw-24px))] overflow-hidden rounded-[26px]"
+        className="palette-panel relative mx-auto mt-[12vh] w-[min(640px,calc(100vw-24px))] overflow-hidden rounded-[28px] border-2 border-outline bg-surface shadow-[6px_6px_0_var(--color-outline)]"
         onKeyDown={onKeyDown}
       >
-        <div className="flex items-center gap-3 border-b border-[var(--material-edge)] px-5">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="shrink-0 text-ink-muted" aria-hidden>
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20.5 20.5-4.2-4.2" />
-          </svg>
+        <div className="flex items-center gap-3 border-b-2 border-outline px-5">
+          <Doodle name="search" size={24} color="var(--color-pop-sky)" />
           <input
             ref={input}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Zoek een les, verhaal of onderwerp…"
             aria-label="Zoeken"
-            className="h-14 w-full bg-transparent text-[17px] text-ink outline-none placeholder:text-ink-muted"
+            className="no-ring h-14 w-full bg-transparent text-[17px] font-medium text-ink outline-none placeholder:font-normal placeholder:text-ink-muted"
           />
-          <kbd className="hidden shrink-0 rounded-md bg-sunken px-1.5 py-0.5 text-[11px] font-semibold text-ink-muted sm:inline">esc</kbd>
+          <kbd className="hand hidden shrink-0 rounded-md border-2 border-outline bg-plane px-1.5 py-0.5 text-[11px] font-bold sm:inline">
+            esc
+          </kbd>
         </div>
 
         <ul ref={list} className="thin-scroll max-h-[52vh] overflow-y-auto p-2" role="listbox">
           {results.length === 0 ? (
-            <li className="px-4 py-10 text-center text-[14px] text-ink-muted">
+            <li className="px-4 py-10 text-center text-[14.5px] text-ink-muted">
               Niets gevonden voor “{query}”.
             </li>
           ) : null}
@@ -146,33 +149,34 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
             const header = it.group !== lastGroup ? it.group : null;
             lastGroup = it.group;
             const section = SECTIONS.find((s) => s.key === it.section)!;
+            const selected = i === cursor;
             return (
               <li key={`${it.href}-${i}`} role="presentation">
-                {header ? (
-                  <p className="px-3 pb-1 pt-3 text-[12px] font-semibold text-ink-muted">{header}</p>
-                ) : null}
+                {header ? <p className="eyebrow px-3 pb-1 pt-3">{header}</p> : null}
                 <button
                   type="button"
                   role="option"
-                  aria-selected={i === cursor}
+                  aria-selected={selected}
                   data-i={i}
                   onMouseMove={() => setCursor(i)}
                   onClick={() => go(it)}
-                  className={`flex w-full items-center gap-3 rounded-[14px] px-3 py-2.5 text-left transition-colors duration-100 ${
-                    i === cursor ? "bg-accent-fill text-white" : "text-ink"
+                  className={`flex w-full items-center gap-3 rounded-[16px] border-2 px-3 py-2.5 text-left ${
+                    selected ? "border-outline bg-pop-yellow text-on-pop" : "border-transparent text-ink"
                   }`}
                 >
-                  <AppIcon section={section} size={30} />
+                  <SectionSticker section={section} size={32} tilt={-4} />
                   <span className="min-w-0 flex-1">
-                    <span className="hr-text block truncate text-[15px] font-semibold">{it.label}</span>
+                    <span className="hr-text block truncate text-[15.5px] font-bold">{it.label}</span>
                     {it.sub ? (
-                      <span className={`block truncate text-[12.5px] ${i === cursor ? "text-white/80" : "text-ink-muted"}`}>
+                      <span className={`block truncate text-[13px] ${selected ? "text-on-pop" : "text-ink-muted"}`}>
                         {it.sub}
                       </span>
                     ) : null}
                   </span>
-                  {i === cursor ? (
-                    <kbd className="shrink-0 rounded-md bg-white/20 px-1.5 py-0.5 text-[11px] font-semibold">↵</kbd>
+                  {selected ? (
+                    <kbd className="hand shrink-0 rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[11px] font-bold text-ink">
+                      ↵
+                    </kbd>
                   ) : null}
                 </button>
               </li>
@@ -191,16 +195,13 @@ export function SearchButton({ className = "", compact = false }: { className?: 
       type="button"
       onClick={openSearch}
       aria-label="Zoeken"
-      className={`group flex items-center gap-2.5 rounded-[12px] text-ink-muted transition-colors hover:text-ink ${className}`}
+      className={`group flex items-center gap-2.5 text-ink transition-transform duration-150 active:scale-95 ${className}`}
     >
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
-        <circle cx="11" cy="11" r="7" />
-        <path d="m20.5 20.5-4.2-4.2" />
-      </svg>
+      <Doodle name="search" size={22} color="var(--color-pop-sky)" />
       {compact ? null : (
         <>
-          <span className="flex-1 text-left text-[14px]">Zoeken</span>
-          <kbd className="rounded-md bg-surface px-1.5 py-0.5 text-[11px] font-semibold shadow-[var(--lift-1)]">⌘K</kbd>
+          <span className="flex-1 text-left text-[14.5px] font-semibold text-ink-secondary">Zoeken</span>
+          <kbd className="hand rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[11px] font-bold">⌘K</kbd>
         </>
       )}
     </button>

@@ -2,17 +2,21 @@
 
 import { useEffect, useState } from "react";
 
+import { Doodle } from "./doodles";
+
 /*
   Licht of donker. Zonder eigen keuze volgt de app het systeem (en wisselt hij
   mee als het systeem 's avonds omschakelt); met één klik leg je het vast.
   Het script in de layout zet het thema al vóór de eerste verf, zodat er
   nooit een witte flits is.
+
+  Het knopje toont waar je heen gaat: een maan in het licht, een zon in het donker.
 */
 export const THEME_KEY = "hr-thema";
 
 export const THEME_SCRIPT = `(function(){try{var m=localStorage.getItem("${THEME_KEY}");var d=m==="dark"||(m!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.theme=d?"dark":"light";}catch(e){document.documentElement.dataset.theme="light";}})();`;
 
-export function ThemeToggle({ className = "", onDark = false }: { className?: string; /** Op de zwarte navigatiestrook. */ onDark?: boolean }) {
+export function ThemeToggle({ className = "" }: { className?: string }) {
   const [dark, setDark] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -47,16 +51,11 @@ export function ThemeToggle({ className = "", onDark = false }: { className?: st
       onClick={toggle}
       aria-label={label}
       title={label}
-      className={`group relative flex h-10 w-10 items-center justify-center rounded-full transition-colors ${onDark ? "text-[#fbfbf7]/70 hover:bg-[#fbfbf7]/10 hover:text-[#fbfbf7]" : "text-ink-muted hover:bg-sunken hover:text-ink"} ${className}`}
+      className={`group flex h-10 w-10 items-center justify-center rounded-xl border-2 border-transparent transition-colors hover:border-outline hover:bg-surface ${className}`}
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden
-        className="transition-transform duration-500 [transition-timing-function:var(--ease-in-out-strong)] group-active:scale-90"
-        style={{ transform: dark ? "rotate(180deg)" : "rotate(0deg)" }}
-      >
-        {/* Een halve maan die een halve slag draait: het donkere deel wisselt van kant. */}
-        <circle cx="12" cy="12" r="8.5" />
-        <path d="M12 3.5a8.5 8.5 0 0 1 0 17Z" fill="currentColor" stroke="none" />
-      </svg>
+      <span key={dark ? "zon" : "maan"} className="animate-pop block transition-transform duration-150 group-active:scale-90">
+        <Doodle name={dark ? "sun" : "moon"} size={24} color={dark ? "var(--color-pop-yellow)" : "var(--color-pop-lilac)"} />
+      </span>
     </button>
   );
 }

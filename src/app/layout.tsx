@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { CommandMenu, type CommandItem } from "@/components/CommandMenu";
-import { HoverLight } from "@/components/HoverLight";
+import { RoughFilter } from "@/components/doodles";
 import { Island } from "@/components/Island";
 import { Nav } from "@/components/Nav";
 import { SECTIONS } from "@/components/sections";
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2f2f7" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0c" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfaf7" },
+    { media: "(prefers-color-scheme: dark)", color: "#17161d" },
   ],
 };
 
@@ -71,16 +71,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body className="min-h-screen antialiased">
-        <HoverLight />
+        <RoughFilter />
         <Island />
         <CommandMenu items={searchIndex()} />
         <div className="flex min-h-screen flex-col md:flex-row">
           <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} />
           {/*
             Ruimte onder de inhoud voor de zwevende tabbalk op de telefoon:
-            62px capsule + 10px marge + de veilige zone, plus lucht, zodat een
+            64px balk + 10px marge + de veilige zone, plus lucht, zodat een
             knop aan het eind van een pagina er nooit onder verdwijnt.
-            overflow-x: clip houdt de gloed achter de koppen binnen beeld.
+            overflow-x: clip voorkomt dat een sticker of krabbel de pagina breder maakt.
           */}
           <main className="min-w-0 flex-1 overflow-x-clip pb-[calc(100px+env(safe-area-inset-bottom))] md:pb-0">
             {children}

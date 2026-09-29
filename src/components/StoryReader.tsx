@@ -8,7 +8,8 @@ import { collectWord, markStoryRead } from "@/app/actions";
 import { island } from "@/lib/island";
 import { glossKey, type Gloss, type Story } from "@/lib/story";
 import { useCroatianTts } from "@/lib/tts";
-import { Bolt, Checker, Pill } from "./ui";
+import { Doodle, SHAPES, Squiggle, type DoodleName } from "./doodles";
+import { Bolt, Pill } from "./ui";
 
 /*
   De verhaallezer.
@@ -130,8 +131,8 @@ export function StoryReader({
           onClick={() => tapWord(part)}
           className={`rounded-[4px] transition-colors duration-100 ${
             isActive
-              ? "bg-accent-fill text-on-fill"
-              : "hover:bg-accent-wash hover:text-accent"
+              ? "bg-pop-yellow text-on-pop shadow-[0_2px_0_var(--color-outline)]"
+              : "hover:bg-pop-yellow/50 hover:text-ink"
           }`}
         >
           {part}
@@ -144,15 +145,15 @@ export function StoryReader({
     <div className="pb-40">
       {/* Leesstand-schakelaar */}
       <div className="mb-7 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-[12.5px] text-ink-muted">
+        <p className="hand text-[14px] font-semibold text-ink-muted">
           Tik een woord aan voor de betekenis en zijn vorm.
         </p>
         {/* Segmented control zoals in iOS: de witte duim schuift met een veer
             naar de gekozen kant, zodat je ziet dat het één keuze is uit twee. */}
-        <div role="radiogroup" aria-label="Leesstand" className="relative grid grid-cols-2 rounded-[10px] bg-sunken p-[3px]">
+        <div role="radiogroup" aria-label="Leesstand" className="relative grid grid-cols-2 rounded-full border-2 border-outline bg-surface p-[3px]">
           <span
             aria-hidden
-            className="absolute bottom-[3px] left-[3px] top-[3px] w-[calc(50%-3px)] rounded-[8px] bg-surface shadow-[0_2px_6px_rgb(0_0_0/0.12)] transition-transform duration-[420ms] [transition-timing-function:var(--ease-ios)]"
+            className="absolute bottom-[3px] left-[3px] top-[3px] w-[calc(50%-3px)] rounded-full border-2 border-outline bg-pop-peach transition-transform duration-[260ms] [transition-timing-function:var(--ease-in-out-strong)]"
             style={{ transform: showNl ? "translateX(100%)" : "translateX(0)" }}
           />
           {([
@@ -165,8 +166,8 @@ export function StoryReader({
               role="radio"
               aria-checked={showNl === val}
               onClick={() => setShowNl(val)}
-              className={`relative px-4 py-1.5 text-[13px] font-semibold transition-colors ${
-                showNl === val ? "text-ink" : "text-ink-muted hover:text-ink"
+              className={`relative px-4 py-1.5 text-[13.5px] font-bold transition-colors ${
+                showNl === val ? "text-on-pop" : "text-ink-secondary hover:text-ink"
               }`}
             >
               {label}
@@ -318,7 +319,7 @@ export function StoryReader({
           inert={!active}
           className="sheet fixed inset-x-0 bottom-[calc(80px+env(safe-area-inset-bottom))] z-50 px-3 pb-2 sm:px-8 md:bottom-0 md:pb-4 md:pl-[112px] lg:pl-[288px]"
         >
-          <div className="glass mx-auto max-w-2xl rounded-[22px] px-5 pb-4 pt-2.5 shadow-[var(--lift-3)]">
+          <div className="mx-auto max-w-2xl rounded-[24px] border-2 border-outline bg-surface px-5 pb-4 pt-2.5 shadow-[6px_6px_0_var(--color-outline)]">
             <div aria-hidden className="mx-auto mb-2.5 h-[5px] w-9 rounded-full bg-line-strong" />
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
@@ -344,7 +345,7 @@ export function StoryReader({
                     type="button"
                     onClick={() => tts.speak(shown.gloss.hr)}
                     title="Uitspreken"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-outline bg-surface text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
                   >
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
                       <path d="M3 6v4h2.5L9 13V3L5.5 6H3Z" fill="currentColor" />
@@ -405,32 +406,43 @@ export function StoryReader({
 
 /** De kop boven de lezer — server-vriendelijke data, maar met TTS-knop. */
 export function StoryHeader({ story, minutes, words }: { story: Story; minutes: number; words: number }) {
+  const motif = (story.motif in SHAPES ? story.motif : "izlet") as DoodleName;
   return (
-    <header className="mb-8">
+    <header className="mb-9">
       <Link
         href="/verhalen"
-        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-muted transition-colors hover:text-accent"
+        className="hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
       >
         <span aria-hidden>←</span> Verhalen
       </Link>
 
-      <div className="mt-5">
-        <Checker className="mb-3.5" />
-        <div className="flex flex-wrap items-center gap-2">
-          {story.series ? (
-            <Pill tone="accent">
-              {story.series} · deel {story.part}
-            </Pill>
-          ) : null}
-          <Pill>{story.cefr}</Pill>
-          <span className="tabular text-[12px] text-ink-muted">
-            ± {minutes} min · {words} woorden
-          </span>
+      <div className="mt-5 flex items-start gap-4">
+        <span
+          aria-hidden
+          className="mt-1 flex h-16 w-16 shrink-0 -rotate-3 items-center justify-center rounded-tile border-2 border-outline bg-pop-peach shadow-[4px_4px_0_var(--color-outline)]"
+        >
+          <Doodle name={motif} size={40} color="#ffffff" />
+        </span>
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            {story.series ? (
+              <Pill tone="lilac">
+                {story.series} · deel {story.part}
+              </Pill>
+            ) : null}
+            <Pill>{story.cefr}</Pill>
+            <span className="hand text-[13.5px] font-semibold text-ink-muted">
+              ± {minutes} min · {words} woorden
+            </span>
+          </div>
+          <h1 className="hr-text display mt-3 text-[40px] text-ink sm:text-[52px]">
+            <span className="relative inline-block pb-3">
+              {story.title_hr}
+              <Squiggle color="#ff8a3d" className="absolute -bottom-0.5 left-0 h-[14px] w-full" />
+            </span>
+          </h1>
+          <p className="hand mt-1 text-[16px] font-semibold text-ink-secondary">{story.title_nl}</p>
         </div>
-        <h1 className="hr-text display mt-3.5 text-[36px] text-ink sm:text-[44px]">
-          {story.title_hr}
-        </h1>
-        <p className="mt-1.5 text-[15px] text-ink-secondary">{story.title_nl}</p>
       </div>
     </header>
   );

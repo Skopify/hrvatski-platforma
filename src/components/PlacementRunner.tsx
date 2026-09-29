@@ -218,7 +218,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
 
   if (fase === "intro") {
     return (
-      <div className="rounded-card border border-line bg-surface p-6">
+      <div className="rounded-card border-2 border-outline bg-surface p-6">
         <h2 className="text-[17px] font-bold text-ink">
           {scope ? "Deze module opnieuw meten" : "Waar sta je?"}
         </h2>
@@ -268,7 +268,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
 
     return (
       <div className="flex flex-col gap-5">
-        <div className="rounded-card border border-line bg-surface p-6">
+        <div className="rounded-card border-2 border-outline bg-surface p-6">
           <h2 className="text-[17px] font-bold text-ink">Wat er gemeten is</h2>
           <div className="mt-4 grid grid-cols-3 gap-3">
             {[
@@ -289,7 +289,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
         </div>
 
         {uitslag && plan.bands.length > 0 ? (
-          <div className="rounded-card border border-line bg-surface p-6">
+          <div className="rounded-card border-2 border-outline bg-surface p-6">
             <h2 className="text-[17px] font-bold text-ink">Woordenschat</h2>
             <p className="mt-2 text-[14.5px] leading-relaxed text-ink-secondary">
               {uitslag.grens === null ? (
@@ -349,11 +349,11 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
       </p>
 
       {fase === "woorden" ? (
-        <p className="hr-text mb-4 rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[22px] font-semibold text-ink">
+        <p className="hr-text mb-4 rounded-2xl border-2 border-outline bg-surface shadow-[var(--hard-sm)] px-5 py-4 text-center text-[22px] font-semibold text-ink">
           {v.prompt}
         </p>
       ) : v.given ? (
-        <p className="hr-text mb-4 whitespace-pre-line rounded-[18px] bg-surface shadow-[var(--lift-2)] px-5 py-4 text-center text-[20px] font-semibold leading-snug text-ink">
+        <p className="hr-text mb-4 whitespace-pre-line rounded-2xl border-2 border-outline bg-surface shadow-[var(--hard-sm)] px-5 py-4 text-center text-[20px] font-semibold leading-snug text-ink">
           {v.given}
         </p>
       ) : null}

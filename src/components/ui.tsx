@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { Doodle } from "./doodles";
+
 /*
   Gedeelde bouwstenen. Alles hier is puur presentatie en server-veilig — geen
   state, geen effecten. Wat beweegt, beweegt via CSS uit globals.css.
@@ -9,13 +11,10 @@ import type { ReactNode } from "react";
 /* ------------------------------------------------------------------ merk --- */
 
 /**
- * Het merkteken: een fragment šahovnica, het Kroatische schaakbordpatroon.
- * Drie bij drie in plaats van vijf bij vijf — dan is het een verwijzing en
- * geen vlag, wat het juiste register is voor een studieomgeving.
- *
- * Rood en wit, de kleuren van het patroon zelf, met rood linksboven zoals op
- * het echte wapen. Het rood staat los van de interface-kleuren: het is het
- * enige plekje waar het voorkomt, en juist daardoor leest het als een merk.
+ * Het merkteken: een fragment šahovnica, het Kroatische schaakbordpatroon,
+ * als sticker op een schrift — met een inktrand, een harde schaduw en een
+ * fractie scheef. Drie bij drie in plaats van vijf bij vijf: dan is het een
+ * verwijzing en geen vlag, wat het juiste register is voor een studieomgeving.
  */
 export function Logo({ size = 38 }: { size?: number }) {
   const cells = [
@@ -23,43 +22,44 @@ export function Logo({ size = 38 }: { size?: number }) {
     [0, 1, 0],
     [1, 0, 1],
   ];
-  const s = size / 3;
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden>
-      <defs>
-        <clipPath id="logo-clip">
-          <rect width={size} height={size} rx={size * 0.26} />
-        </clipPath>
-      </defs>
-      <g clipPath="url(#logo-clip)">
-        <rect width={size} height={size} fill="#ffffff" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden
+      focusable="false"
+      className="shrink-0 overflow-visible"
+      style={{ rotate: "-6deg" }}
+    >
+      <g className="rough">
+        <rect x="3.4" y="3.4" width="18" height="18" rx="3" style={{ fill: "var(--color-outline)" }} />
+        <rect x="1.5" y="1.5" width="18" height="18" rx="3" fill="#ffffff" />
         {cells.flatMap((row, r) =>
           row.map((on, c) =>
             on ? (
               <rect
                 key={`${r}-${c}`}
-                x={c * s}
-                y={r * s}
-                width={s}
-                height={s}
-                fill="var(--color-flag)"
+                x={1.5 + c * 6}
+                y={1.5 + r * 6}
+                width="6"
+                height="6"
+                style={{ fill: "var(--color-flag)" }}
               />
             ) : null,
           ),
         )}
+        <rect
+          x="1.5"
+          y="1.5"
+          width="18"
+          height="18"
+          rx="3"
+          fill="none"
+          style={{ stroke: "var(--color-outline)" }}
+          strokeWidth="2"
+        />
       </g>
-      {/* Het patroon is voor de helft wit, dus zonder rand zou het merkteken op
-          een witte zijbalk uit elkaar vallen in losse rode blokjes. */}
-      <rect
-        x={0.5}
-        y={0.5}
-        width={size - 1}
-        height={size - 1}
-        rx={size * 0.26 - 0.5}
-        fill="none"
-        stroke="var(--color-flag)"
-        strokeOpacity={0.32}
-      />
     </svg>
   );
 }
@@ -102,55 +102,10 @@ export function Checker({
 
 /* --------------------------------------------------------------- tegels --- */
 
-export type StepOutcome = "ok" | "near" | "no";
-export type StepState = StepOutcome | "done" | "current" | "todo";
-
-export function outcomeOf(correct: boolean, nearMiss?: boolean): StepOutcome {
-  return correct ? (nearMiss ? "near" : "ok") : "no";
-}
-
-const TILE_BACK: Record<StepState, string> = {
-  ok: "bg-good",
-  near: "bg-gold-bright",
-  no: "bg-bad",
-  done: "bg-accent-fill",
-  current: "bg-accent-fill",
-  todo: "bg-accent-fill",
-};
-
-/**
- * Voortgang in een sessie: één capsule per opgave. Is een opgave klaar, dan
- * vult haar capsule zich van links in de kleur van de uitkomst — groen,
- * goud (bijna) of rood. Een doorlopende balk zegt "ergens halverwege";
- * capsules zeggen "nog zes, en zo ging het tot nu toe".
- */
-export function StepTiles({ steps }: { steps: StepState[] }) {
-  const done = steps.filter((s) => s !== "todo" && s !== "current").length;
-  return (
-    <div
-      className="flex gap-1"
-      role="progressbar"
-      aria-valuemin={0}
-      aria-valuemax={steps.length}
-      aria-valuenow={done}
-      aria-label="Voortgang van de sessie"
-    >
-      {steps.map((s, i) => (
-        <span
-          key={i}
-          className={`relative h-1.5 flex-1 overflow-hidden rounded-full ${
-            s === "current" ? "bg-accent-ring" : "bg-line"
-          }`}
-        >
-          <span
-            data-on={s !== "todo" && s !== "current"}
-            className={`step-fill absolute inset-0 rounded-full ${TILE_BACK[s]}`}
-          />
-        </span>
-      ))}
-    </div>
-  );
-}
+// De voortgangs-pill leeft in zijn eigen bestand: hij geeft mee als gel
+// wanneer er iets bijkomt, en dat vraagt een effect aan de clientkant.
+export { StepTiles, outcomeOf } from "./StepPill";
+export type { StepOutcome, StepState } from "./StepPill";
 
 /* ----------------------------------------------------------------- kaart --- */
 
@@ -172,12 +127,18 @@ export function Card({
 /* ------------------------------------------------------------------- pil --- */
 
 const PILL_TONE: Record<string, string> = {
-  neutral: "bg-sunken text-ink-secondary",
+  neutral: "bg-surface text-ink-secondary",
   accent: "bg-accent-wash text-accent",
   warm: "bg-warm-wash text-warm",
   gold: "bg-gold-wash text-gold",
   good: "bg-good-wash text-good-ink",
   bad: "bg-bad-wash text-bad-ink",
+  yellow: "bg-pop-yellow text-on-pop",
+  pink: "bg-pop-pink text-on-pop",
+  mint: "bg-pop-mint text-on-pop",
+  sky: "bg-pop-sky text-on-pop",
+  lilac: "bg-pop-lilac text-on-pop",
+  peach: "bg-pop-peach text-on-pop",
 };
 
 export function Pill({
@@ -192,118 +153,6 @@ export function Pill({
   return <span className={`pill ${PILL_TONE[tone] ?? PILL_TONE.neutral} ${className}`}>{children}</span>;
 }
 
-/* ------------------------------------------------------------- ringmeter --- */
-
-/**
- * Ronde voortgangsmeter. De ring tekent zichzelf bij het laden — via
- * stroke-dashoffset, dus zonder één regel JavaScript.
- */
-export function ProgressRing({
-  value,
-  max,
-  size = 132,
-  stroke = 11,
-  children,
-  tone = "accent",
-  track = "var(--color-sunken)",
-}: {
-  value: number;
-  max: number;
-  size?: number;
-  stroke?: number;
-  children?: ReactNode;
-  tone?: "accent" | "gold" | "good";
-  track?: string;
-}) {
-  const pct = max > 0 ? Math.min(1, Math.max(0, value / max)) : 0;
-  const r = (size - stroke) / 2;
-  const circ = 2 * Math.PI * r;
-  const color =
-    tone === "gold"
-      ? "var(--color-gold-bright)"
-      : tone === "good"
-        ? "var(--color-good)"
-        : "var(--color-accent-bright)";
-
-  return (
-    <div className="relative shrink-0" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90" aria-hidden>
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={track} strokeWidth={stroke} />
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={r}
-          fill="none"
-          stroke={color}
-          strokeWidth={stroke}
-          strokeLinecap="round"
-          strokeDasharray={circ}
-          className="animate-rise"
-          style={{
-            strokeDashoffset: circ * (1 - pct),
-            transition: "stroke-dashoffset 900ms var(--ease-out-quint)",
-          }}
-        />
-      </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        {children}
-      </div>
-    </div>
-  );
-}
-
-/* ------------------------------------------------------------------ ring --- */
-
-/**
- * Een ring zoals in de Activiteit-app: het dagdoel als cirkel die zich
- * sluit. Bij het laden tekent hij zich van nul tot waar je nu bent, zodat je
- * de voortgang ziet optellen. Voorbij het doel loopt hij een tweede ronde.
- */
-export function Ring({
-  value,
-  max,
-  size = 148,
-  stroke = 18,
-  light = false,
-  children,
-}: {
-  value: number;
-  max: number;
-  size?: number;
-  stroke?: number;
-  /** Wit op een gekleurd vlak (de mesh op het overzicht). */
-  light?: boolean;
-  children?: ReactNode;
-}) {
-  const pct = max > 0 ? Math.max(0, value / max) : 0;
-  const lap = Math.min(1, pct);
-  const r = (size - stroke) / 2;
-  return (
-    <div className="relative shrink-0" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90" aria-hidden>
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={light ? "rgb(255 255 255 / 0.22)" : "var(--color-ring-track)"} strokeWidth={stroke} />
-        {pct > 0 ? (
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={r}
-            fill="none"
-            stroke={light ? "#fff" : "var(--color-ring)"}
-            strokeWidth={stroke}
-            strokeLinecap="round"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - Math.max(lap, 0.001)}
-            className="animate-draw"
-            style={{ "--len": 1 } as React.CSSProperties}
-          />
-        ) : null}
-      </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">{children}</div>
-    </div>
-  );
-}
-
 /* ------------------------------------------------------------------ vuur --- */
 
 /**
@@ -313,7 +162,7 @@ export function Ring({
 export function Flame({
   days,
   alive = true,
-  size = 17,
+  size = 20,
 }: {
   /** Weglaten om alleen het vlammetje te tonen, zonder getal. */
   days?: number;
@@ -322,18 +171,12 @@ export function Flame({
 }) {
   return (
     <span className="inline-flex items-center gap-1.5">
-      <svg
-        width={size}
-        height={size * 1.18}
-        viewBox="0 0 17 20"
-        aria-hidden
+      <Doodle
+        name="flame"
+        size={size}
+        color={alive ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
         className={alive ? "animate-flicker" : ""}
-      >
-        <path
-          d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z"
-          fill={alive ? "var(--color-warm-bright)" : "var(--color-line-strong)"}
-        />
-      </svg>
+      />
       {days !== undefined ? <span className="tabular text-[15px] font-bold">{days}</span> : null}
     </span>
   );
@@ -341,12 +184,8 @@ export function Flame({
 
 /* ------------------------------------------------------------------- xp --- */
 
-export function Bolt({ className = "" }: { className?: string }) {
-  return (
-    <svg width="13" height="16" viewBox="0 0 13 16" aria-hidden className={className}>
-      <path d="M7.8 0 0 9.2h4.3L5.2 16 13 6.6H8.6L7.8 0Z" fill="currentColor" />
-    </svg>
-  );
+export function Bolt({ className = "", size = 16 }: { className?: string; size?: number }) {
+  return <Doodle name="bolt" size={size} color="var(--color-pop-yellow)" className={className} />;
 }
 
 /* ---------------------------------------------------------- paginabreedte --- */
@@ -387,7 +226,7 @@ export function Page({
 
 /* ------------------------------------------------------------ paginakop --- */
 
-// De paginakop leeft in zijn eigen bestand: hij leest de route om de kleur van
+// De paginakop leeft in zijn eigen bestand: hij leest de route om de stift van
 // de sectie te kiezen, en dat kan alleen aan de clientkant.
 export { PageHeader } from "./PageHeader";
 
@@ -405,14 +244,11 @@ export function SectionHead({
   return (
     <div className="mb-4 flex items-end justify-between gap-4">
       <div className="min-w-0">
-        <h2 className="display-soft text-[20px] text-ink">{title}</h2>
-        {hint ? <p className="mt-1 text-[13px] leading-relaxed text-ink-secondary">{hint}</p> : null}
+        <h2 className="display-soft text-[24px] text-ink">{title}</h2>
+        {hint ? <p className="mt-1 text-[14px] leading-relaxed text-ink-secondary">{hint}</p> : null}
       </div>
       {action ? (
-        <Link
-          href={action.href}
-          className="link-sweep shrink-0 text-[13px] font-semibold text-accent"
-        >
+        <Link href={action.href} className="link-sweep hand shrink-0 text-[14px] font-bold text-accent">
           {action.label} →
         </Link>
       ) : null}
@@ -424,8 +260,8 @@ export function SectionHead({
 
 export function Empty({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-card border border-dashed border-line-strong bg-surface/50 px-6 py-8 text-center">
-      <p className="mx-auto max-w-md text-[13.5px] leading-relaxed text-ink-secondary">{children}</p>
+    <div className="rounded-card border-2 border-dashed border-line-strong bg-surface/60 px-6 py-8 text-center">
+      <p className="mx-auto max-w-md text-[14px] leading-relaxed text-ink-secondary">{children}</p>
     </div>
   );
 }

@@ -72,7 +72,7 @@ export function NakijkLijst({
 
   if (!zin) {
     return (
-      <div className="rounded-card border border-line bg-surface px-6 py-10 text-center">
+      <div className="rounded-card border-2 border-outline bg-surface px-6 py-10 text-center">
         <p className="display-soft text-[22px] text-ink">Gotovo — hvala!</p>
         <p className="mt-2 text-[13.5px] text-ink-secondary">
           Sve rečenice su pregledane. {huidigeStand.goedgekeurd} ispravnih,{" "}
@@ -93,7 +93,7 @@ export function NakijkLijst({
           </span>
           <span>{zin.herkomst === "verhaal" ? "priča" : zin.herkomst === "les" ? "lekcija" : "gramatika"} · {zin.plek}</span>
         </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-line">
+        <div className="mt-2 h-3.5 overflow-hidden rounded-full border-2 border-outline bg-surface">
           <div
             className="h-full rounded-full bg-accent transition-[width] duration-300"
             style={{ width: `${(gedaan / Math.max(1, huidigeStand.totaal)) * 100}%` }}
@@ -101,8 +101,8 @@ export function NakijkLijst({
         </div>
       </div>
 
-      <div className="rounded-card border border-line bg-surface px-6 py-8">
-        <p className="display text-[26px] leading-snug text-ink sm:text-[30px]">{zin.hr}</p>
+      <div className="rounded-card border-2 border-outline bg-surface px-6 py-8">
+        <p className="hr-text reading text-[24px] font-medium leading-snug text-ink sm:text-[28px]">{zin.hr}</p>
         {zin.nl ? (
           <p className="mt-3 text-[13.5px] italic leading-relaxed text-ink-secondary">
             {zin.nl}
@@ -115,7 +115,7 @@ export function NakijkLijst({
               type="button"
               disabled={bezig}
               onClick={() => verder("goedgekeurd")}
-              className="rounded-full bg-accent-fill px-5 py-3.5 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+              className="btn btn-primary h-11 px-6 text-[15px] disabled:opacity-50"
             >
               Točno
             </button>
@@ -126,7 +126,7 @@ export function NakijkLijst({
                 setCorrectie(zin.hr);
                 setToon("fout");
               }}
-              className="rounded-xl border border-line-strong bg-surface px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
+              className="btn btn-ghost h-11 px-5 text-[15px] disabled:opacity-50"
             >
               Greška
             </button>
@@ -134,7 +134,7 @@ export function NakijkLijst({
               type="button"
               disabled={bezig}
               onClick={() => setToon("twijfel")}
-              className="rounded-xl border border-line-strong bg-surface px-4 py-3.5 text-[14px] font-semibold text-ink disabled:opacity-50"
+              className="btn btn-ghost h-11 px-5 text-[15px] disabled:opacity-50"
             >
               Nisam siguran
             </button>
@@ -151,7 +151,7 @@ export function NakijkLijst({
               onChange={(e) => setCorrectie(e.target.value)}
               rows={2}
               autoFocus
-              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[15px] text-ink"
+              className="mt-2 w-full rounded-xl border-2 border-outline bg-surface px-4 py-3 text-[15px] text-ink"
             />
             <label className="mt-4 block text-[12.5px] font-semibold text-ink-secondary">
               Zašto? (nije obavezno)
@@ -159,21 +159,21 @@ export function NakijkLijst({
             <input
               value={opmerking}
               onChange={(e) => setOpmerking(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[14px] text-ink"
+              className="mt-2 input w-full px-4 py-3 text-[14.5px]"
             />
             <div className="mt-4 flex gap-2">
               <button
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("fout", correctie, opmerking)}
-                className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+                className="btn btn-primary h-11 px-7 text-[15px] disabled:opacity-50"
               >
                 Spremi
               </button>
               <button
                 type="button"
                 onClick={() => setToon(null)}
-                className="rounded-xl border border-line-strong bg-surface px-5 py-3 text-[14px] font-semibold text-ink"
+                className="btn btn-ghost h-11 px-6 text-[15px]"
               >
                 Natrag
               </button>
@@ -190,21 +190,21 @@ export function NakijkLijst({
               value={opmerking}
               onChange={(e) => setOpmerking(e.target.value)}
               autoFocus
-              className="mt-2 w-full rounded-xl border border-line-strong bg-surface px-4 py-3 text-[14px] text-ink"
+              className="mt-2 input w-full px-4 py-3 text-[14.5px]"
             />
             <div className="mt-4 flex gap-2">
               <button
                 type="button"
                 disabled={bezig}
                 onClick={() => verder("twijfel", undefined, opmerking)}
-                className="rounded-full bg-accent-fill px-6 py-3 text-[14px] font-semibold text-on-fill disabled:opacity-50"
+                className="btn btn-primary h-11 px-7 text-[15px] disabled:opacity-50"
               >
                 Spremi
               </button>
               <button
                 type="button"
                 onClick={() => setToon(null)}
-                className="rounded-xl border border-line-strong bg-surface px-5 py-3 text-[14px] font-semibold text-ink"
+                className="btn btn-ghost h-11 px-6 text-[15px]"
               >
                 Natrag
               </button>

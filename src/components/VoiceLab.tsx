@@ -36,7 +36,7 @@ export function VoiceLab() {
   const browserNaam = tts.voice?.name;
 
   return (
-    <section className="rounded-card border border-line bg-surface p-6">
+    <section className="rounded-card border-2 border-outline bg-surface p-6">
       <h2 className="text-[13.5px] font-medium text-ink">Stemmen vergelijken</h2>
       <p className="mt-2 text-[13px] leading-relaxed text-ink-secondary">
         Zelfde zin, verschillende stemmen. Let vooral op de č tegenover de ć — daar
@@ -79,7 +79,7 @@ export function VoiceLab() {
               aria-pressed={tts.rate === r.value}
               className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
                 tts.rate === r.value
-                  ? "bg-surface text-accent shadow-[var(--lift-1)]"
+                  ? "bg-pop-yellow text-on-pop"
                   : "text-ink-muted hover:text-ink-secondary"
               }`}
             >
@@ -174,7 +174,7 @@ function AzureTest() {
       {/* De kostenteller. Dit is de enige plek waar zichtbaar wordt of het
           gratis blijft, dus die hoort in beeld en niet in een logbestand. */}
       {verbruik ? (
-        <div className="mb-4 rounded-lg border border-line bg-sunken px-4 py-3">
+        <div className="mb-4 rounded-lg border-2 border-dashed border-line-strong bg-sunken px-4 py-3">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
               Verbruik deze maand
@@ -184,7 +184,7 @@ function AzureTest() {
               {verbruik.limit.toLocaleString("nl-NL")} tekens
             </p>
           </div>
-          <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-plane-deep">
+          <div className="mt-2 h-3.5 w-full overflow-hidden rounded-full border-2 border-outline bg-surface">
             <div
               className={`h-full rounded-full ${verbruik.share > 0.8 ? "bg-warm" : "bg-good"}`}
               style={{ width: `${Math.max(verbruik.share * 100, verbruik.characters > 0 ? 1 : 0)}%` }}
@@ -211,7 +211,7 @@ function AzureTest() {
             setBezig(false);
           }
         }}
-        className="rounded-full border border-line bg-surface px-4 py-2 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent disabled:opacity-50"
+        className="rounded-full border-2 border-outline bg-surface px-4 py-2 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent disabled:opacity-50"
       >
         {bezig ? "Bezig…" : "Verbinding testen"}
       </button>
@@ -255,7 +255,7 @@ function VoiceRow({
       <button
         type="button"
         onClick={onSpeel}
-        className="rounded-full border border-line bg-surface px-3.5 py-1.5 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
+        className="rounded-full border-2 border-outline bg-surface px-3.5 py-1.5 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
       >
         Beluister
       </button>
@@ -263,7 +263,7 @@ function VoiceRow({
         <button
           type="button"
           onClick={onKies}
-          className="rounded-full bg-accent-fill px-3.5 py-1.5 text-[12.5px] font-semibold text-on-fill transition-colors hover:bg-accent-hover"
+          className="btn btn-primary h-9 px-4 text-[13.5px] transition-colors hover:bg-accent-hover"
         >
           Gebruik deze
         </button>

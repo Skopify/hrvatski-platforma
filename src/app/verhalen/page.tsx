@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Doodle, SHAPES, type DoodleName } from "@/components/doodles";
 import { Page, PageHeader, Pill } from "@/components/ui";
 import { loadStories, storyMinutes, storyWordCount } from "@/lib/content";
 import {
@@ -11,52 +12,6 @@ import {
 import { highestActiveLesson, storyStatuses } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
-
-/* Eén plat motieficoon per verhaal — 22px, één lijndikte. */
-const MOTIFS: Record<string, React.ReactNode> = {
-  obitelj: (
-    <>
-      <circle cx="8.5" cy="8" r="3" />
-      <path d="M3.5 20c0-3.3 2.2-5.5 5-5.5s5 2.2 5 5.5" />
-      <circle cx="16.5" cy="9.5" r="2.4" />
-      <path d="M14.5 20c.3-2.8 2-4.4 4.2-4.4 1 0 1.9.3 2.6.9" />
-    </>
-  ),
-  trznica: (
-    <>
-      <path d="M4 9.5 5.2 4h13.6L20 9.5" />
-      <path d="M5 9.5V20h14V9.5" />
-      <path d="M9.5 20v-6h5v6" />
-    </>
-  ),
-  izlet: (
-    <>
-      <circle cx="16.5" cy="7" r="2.8" />
-      <path d="M2.5 19.5 8 11l4.2 6.3L15 14l6 5.5" />
-    </>
-  ),
-  kavana: (
-    <>
-      <path d="M3.5 6.5h13v6a5 5 0 0 1-5 5h-3a5 5 0 0 1-5-5v-6Z" />
-      <path d="M16.5 8.5h1.8a2.6 2.6 0 0 1 0 5.2h-1.8" />
-      <path d="M6 3v1.5M10 3v1.5M14 3v1.5" />
-    </>
-  ),
-  knjiga: (
-    <>
-      <path d="M4.5 4.5h11a2 2 0 0 1 2 2v13H6.5a2 2 0 0 1-2-2v-13Z" />
-      <path d="M17.5 15.5h2v4h-2" />
-      <path d="M8 9h6M8 12.5h6" />
-    </>
-  ),
-  more: (
-    <>
-      <path d="M3 14c1.5-1.6 3-1.6 4.5 0s3 1.6 4.5 0 3-1.6 4.5 0 3 1.6 4.5 0" />
-      <path d="M3 18.5c1.5-1.6 3-1.6 4.5 0s3 1.6 4.5 0 3-1.6 4.5 0 3 1.6 4.5 0" />
-      <path d="M12 10V4l4.5 3.2L12 9" />
-    </>
-  ),
-};
 
 /** Kleur en label per dekkingsoordeel — de meter moet in één blik te lezen zijn. */
 const VERDICT_STYLE: Record<CoverageVerdict, { tone: string; bar: string }> = {
@@ -93,11 +48,11 @@ export default function StoriesPage() {
           return (
             <section key={band} className="mb-8">
               <div className="mb-3 flex items-center gap-3">
-                <h2 className="display-soft text-[15px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+                <h2 className="display-soft rounded-lg border-2 border-outline bg-pop-peach px-3 py-0.5 text-[17px] text-on-pop">
                   {band}
                 </h2>
-                <span className="h-px flex-1 bg-line" />
-                <span className="text-[12px] text-ink-muted">
+                <span className="h-0.5 flex-1 border-t-2 border-dashed border-line-strong" />
+                <span className="hand text-[13.5px] font-semibold text-ink-muted">
                   {gelezen} van {inBand.length} afgerond
                 </span>
               </div>
@@ -119,42 +74,33 @@ export default function StoriesPage() {
                       <Link href={`/verhalen/${story.slug}`} className="block">
                         <article className="card card-lift px-6 py-5">
                           <div className="flex items-start gap-5">
-                            {/* Motiefblok: plat accentvlak met lijnicoon. */}
+                            {/* Motief: een sticker met een krabbel. Boven je niveau is hij grijs. */}
                             <span
                               aria-hidden
-                              className={`mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
-                                onLevel
-                                  ? "bg-accent-fill text-on-fill"
-                                  : "bg-sunken text-ink-muted"
-                              }`}
+                              className={`mt-0.5 flex h-14 w-14 shrink-0 items-center justify-center rounded-tile border-2 border-outline ${
+                                onLevel ? "bg-pop-peach shadow-[3px_3px_0_var(--color-outline)]" : "bg-sunken"
+                              } ${i % 2 ? "rotate-2" : "-rotate-2"}`}
                             >
-                              <svg
-                                width="22"
-                                height="22"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.6"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                {MOTIFS[story.motif] ?? MOTIFS.izlet}
-                              </svg>
+                              <Doodle
+                                name={(story.motif in SHAPES ? story.motif : "izlet") as DoodleName}
+                                size={34}
+                                color={onLevel ? "#ffffff" : "var(--color-line-strong)"}
+                              />
                             </span>
 
                             <div className="min-w-0 flex-1">
                               <div className="flex flex-wrap items-center gap-2">
                                 {story.series ? (
-                                  <span className="text-[11.5px] font-bold uppercase tracking-[0.06em] text-accent">
+                                  <span className="hand text-[13.5px] font-bold text-accent">
                                     {story.series} ·{" "}
                                     {String(story.part).padStart(2, "0")}
                                   </span>
                                 ) : null}
                                 <Pill>{story.cefr}</Pill>
                                 {st?.quizDoneAt ? (
-                                  <Pill tone="good">✓ Afgerond</Pill>
+                                  <Pill tone="mint">✓ Afgerond</Pill>
                                 ) : st?.readAt ? (
-                                  <Pill tone="gold">
+                                  <Pill tone="yellow">
                                     Gelezen — vragen nog niet
                                   </Pill>
                                 ) : null}
@@ -175,7 +121,7 @@ export default function StoriesPage() {
                               {cov && verdict ? (
                                 <div className="mt-3.5 max-w-md">
                                   <div className="flex items-baseline justify-between gap-3">
-                                    <span className="text-[11.5px] font-semibold text-ink-secondary">
+                                    <span className="hand text-[13px] font-bold text-ink-secondary">
                                       Woorddekking
                                     </span>
                                     <span
@@ -184,7 +130,7 @@ export default function StoriesPage() {
                                       {Math.round(cov.coverage * 100)}%
                                     </span>
                                   </div>
-                                  <div className="relative mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-sunken">
+                                  <div className="relative mt-1.5 h-3.5 w-full overflow-hidden rounded-full border-2 border-outline bg-surface">
                                     <div
                                       className="animate-grow-x h-full origin-left rounded-full"
                                       style={{
@@ -196,7 +142,7 @@ export default function StoriesPage() {
                                     <span
                                       aria-hidden
                                       title="95% — de grens voor vlot lezen"
-                                      className="absolute top-0 h-full w-0.5 bg-ink/60"
+                                      className="absolute top-0 h-full w-0.5 bg-outline"
                                       style={{ left: "95%" }}
                                     />
                                   </div>

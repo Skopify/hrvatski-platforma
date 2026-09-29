@@ -4,8 +4,10 @@ import { Celebrate } from "@/components/Celebrate";
 import { Heatmap, LineChart, Meter, Sparkline } from "@/components/charts";
 import { SearchButton } from "@/components/CommandMenu";
 import { CountUp } from "@/components/CountUp";
+import { Arrow, Doodle, Sparkle, Squiggle } from "@/components/doodles";
+import { PillMeter } from "@/components/PillMeter";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Empty, Page, Ring, SectionHead } from "@/components/ui";
+import { Empty, Page, SectionHead } from "@/components/ui";
 import { WordOfTheDay } from "@/components/WordOfTheDay";
 import { loadLessons } from "@/lib/content";
 import {
@@ -60,202 +62,220 @@ export default function DashboardPage() {
     : undefined;
 
   const started = accuracy.total > 0;
-  const done = statuses.filter((s) => s.status === "done").length;
   const hello = greeting();
   const datum = new Date().toLocaleDateString("nl-NL", { weekday: "long", day: "numeric", month: "long" });
+  const rankPct = Math.min(
+    100,
+    Math.max(
+      ((profile.xp - rank.from) / ((rank.to ?? profile.xp) - rank.from || 1)) * 100,
+      profile.xp > rank.from ? 2 : 0,
+    ),
+  );
 
   return (
     <Page>
       <Celebrate when={goalMet} day={today?.date ?? ""} />
 
-      {/* ═══ Kop: de datum klein erboven, de groet groot — zoals Vandaag in iOS ═══ */}
-      <header className="mb-7 flex items-end justify-between gap-4">
+      {/* ═══ Kop: de datum in handschrift, de groet groot met een golf eronder ═══ */}
+      <header className="mb-9 flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-[13px] font-semibold uppercase tracking-[0.05em] text-bad">{datum}</p>
-          <h1 className="hr-text display mt-1 text-[40px] text-ink sm:text-[52px]">{hello.hr}</h1>
-          <p className="mt-1 text-[15px] text-ink-muted">{hello.nl}</p>
+          <p className="hand text-[18px] font-bold text-warm">{datum}</p>
+          <h1 className="hr-text display mt-1 text-[46px] text-ink sm:text-[74px]">
+            <span className="relative inline-block pb-3.5">
+              {hello.hr}
+              <Squiggle slow color="var(--color-ring)" className="absolute -bottom-0.5 left-0 h-[16px] w-full" />
+            </span>
+          </h1>
+          <p className="hand mt-2 text-[16px] text-ink-muted">{hello.nl}</p>
         </div>
         <div className="flex items-center gap-1 md:hidden">
-          <SearchButton compact className="h-10 w-10 justify-center rounded-full" />
+          <SearchButton compact className="h-10 w-10 justify-center rounded-xl" />
           <ThemeToggle />
         </div>
       </header>
 
-      <section className="stagger mb-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-6">
-        {/* ═══ Het hoofdvlak: wat je nú doet. Mesh-verloop, witte ring. ═══ */}
+      <section className="stagger mb-10 grid grid-cols-2 gap-4 lg:grid-cols-6">
+        {/* ═══ Het hoofdvlak: wat je nú doet, met het dagdoel als pill onderaan ═══ */}
         <div
-          className="mesh relative col-span-2 overflow-hidden rounded-[28px] p-6 shadow-[0_24px_60px_-28px_rgb(40_60_200/0.7)] sm:p-8 lg:col-span-4"
+          className="relative col-span-2 overflow-hidden rounded-card border-[2.5px] border-outline bg-pop-lilac p-6 text-on-pop shadow-[6px_6px_0_var(--color-outline)] sm:p-8 lg:col-span-4"
           style={{ "--i": 0 } as React.CSSProperties}
         >
-          <div aria-hidden className="mesh-grain" />
-          <div className="relative flex flex-col-reverse gap-7 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0 flex-1">
-              <span className="pill btn-glass">
-                {rank.code} · {rank.label}
-              </span>
-              <p className="display mt-5 text-[34px] leading-[1.05] sm:text-[42px]">
-                {due > 0 ? (
-                  <>
-                    <CountUp value={due} /> {due === 1 ? "item wacht" : "items wachten"} op je.
-                  </>
-                ) : nextLessonData ? (
-                  "Tijd voor nieuwe stof."
-                ) : (
-                  "Alles zit op schema."
-                )}
-              </p>
-              <p className="mt-2.5 max-w-sm text-[15px] leading-relaxed text-white/85">
-                {due > 0
-                  ? "Wat je nu ophaalt, blijft; wat je laat liggen, zakt weg."
-                  : nextLessonData
-                    ? "Niets te herhalen. Het goede moment om verder te gaan."
-                    : "Lees een verhaal, of kom terug wanneer er herhaling klaarstaat."}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2.5">
-                {due > 0 ? (
-                  <Link href="/oefenen/herhalen" className="btn btn-light h-12 px-6 text-[15px]">
-                    Start herhaling
-                    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                  </Link>
-                ) : null}
-                {nextLessonData ? (
-                  <Link
-                    href={`/lessen/${nextLessonData.number}`}
-                    className={`btn h-12 max-w-full px-5 text-[15px] ${due > 0 ? "btn-glass" : "btn-light"}`}
-                  >
-                    <span className="truncate">
-                      {nextLesson?.status === "in_progress" ? "Hervat je les" : "Volgende les"}
-                    </span>
-                  </Link>
-                ) : null}
-              </div>
-            </div>
+          <Sparkle size={30} className="absolute right-6 top-5 rotate-12" color="var(--color-pop-yellow)" />
+          <Sparkle size={18} className="absolute right-[72px] top-12 -rotate-6" color="#ffffff" />
 
-            <div className="flex items-center gap-5 sm:flex-col sm:gap-3">
-              <Ring value={todayXp} max={profile.dailyGoalXp} size={150} stroke={16} light>
-                <CountUp value={todayXp} className="num text-[34px] leading-none" />
-                <span className="mt-1 text-[12px] font-semibold text-white/75">van {profile.dailyGoalXp} XP</span>
-              </Ring>
-              <p className="text-[13px] font-semibold text-white/85 sm:text-center">
-                {goalMet ? "Dagdoel gehaald" : `nog ${profile.dailyGoalXp - todayXp} XP vandaag`}
+          <span className="pill bg-white text-on-pop">
+            {rank.code} · {rank.label}
+          </span>
+          <p className="display mt-5 max-w-[16ch] text-[36px] leading-[1.02] sm:text-[52px]">
+            {due > 0 ? (
+              <>
+                <CountUp value={due} /> {due === 1 ? "item wacht" : "items wachten"} op je.
+              </>
+            ) : nextLessonData ? (
+              "Tijd voor nieuwe stof."
+            ) : (
+              "Alles zit op schema."
+            )}
+          </p>
+
+          <div className="relative mt-4">
+            <p className="hand max-w-[30ch] rotate-[-1.5deg] text-[16px] font-bold">
+              {due > 0
+                ? "wat je nu ophaalt, blijft. wat je laat liggen, zakt weg."
+                : nextLessonData
+                  ? "niets te herhalen. tijd om verder te gaan!"
+                  : "lees een verhaal, of kom later terug."}
+            </p>
+            <Arrow className="absolute -bottom-9 left-[17rem] hidden h-11 w-14 sm:block" />
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {due > 0 ? (
+              <Link href="/oefenen/herhalen" className="btn btn-primary h-[52px] px-7 text-[16px]">
+                Start herhaling
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
+                  <path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            ) : null}
+            {nextLessonData ? (
+              <Link
+                href={`/lessen/${nextLessonData.number}`}
+                className={`btn h-[52px] px-6 text-[16px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
+              >
+                {nextLesson?.status === "in_progress" ? "Hervat je les" : "Volgende les"}
+              </Link>
+            ) : null}
+          </div>
+
+          <div className="mt-8">
+            <div className="mb-2 flex items-baseline justify-between gap-3">
+              <p className="hand text-[15px] font-bold">Dagdoel</p>
+              <p className="text-[13.5px] font-semibold">
+                {goalMet ? "gehaald!" : `nog ${profile.dailyGoalXp - todayXp} XP vandaag`}
               </p>
             </div>
+            <PillMeter value={todayXp} max={profile.dailyGoalXp} color="var(--color-pop-yellow)" height={38} />
           </div>
         </div>
 
-        {/* ═══ De reeks, met de week eronder — elke dag die telde een vlam. ═══ */}
-        <div className="card col-span-2 flex flex-col p-6 lg:col-span-2" style={{ "--i": 1 } as React.CSSProperties}>
-          <div className="flex items-center justify-between">
-            <p className="eyebrow">Reeks</p>
-            <span className="flex h-9 w-9 items-center justify-center rounded-[11px] bg-gradient-to-b from-[#ffb340] to-[#ff6a00] shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_6px_14px_-6px_#ff6a00]">
-              <svg width="15" height="18" viewBox="0 0 17 20" aria-hidden className={profile.streakCurrent > 0 ? "animate-flicker" : ""}>
-                <path d="M8.5 0.5c.9 3.1-.6 4.6-2.1 6.2C4.6 8.6 3 10.4 3 13a5.5 5.5 0 0 0 11 0c0-2-.7-3.3-1.7-4.6-.4 1-1 1.6-1.9 1.9.6-2.6-.2-5.4-1.9-9.8Z" fill="#fff" />
-              </svg>
-            </span>
+        {/* ═══ De reeks, met de week eronder ═══ */}
+        <div
+          className="relative col-span-2 flex flex-col overflow-hidden rounded-card border-[2.5px] border-outline bg-pop-yellow p-6 text-on-pop shadow-[6px_6px_0_var(--color-outline)] lg:col-span-2"
+          style={{ "--i": 1 } as React.CSSProperties}
+        >
+          <div className="flex items-start justify-between">
+            <p className="hand text-[16px] font-bold">Reeks</p>
+            <Doodle
+              name="flame"
+              size={54}
+              color={profile.streakCurrent > 0 ? "var(--color-warm-bright)" : "#ffffff"}
+              className={`-mr-1 -mt-1 rotate-6 ${profile.streakCurrent > 0 ? "animate-flicker" : ""}`}
+            />
           </div>
-          <p className="mt-2 leading-none">
-            <CountUp value={profile.streakCurrent} className="num text-[52px]" />
-            <span className="ml-1.5 text-[16px] font-semibold text-ink-muted">
-              {profile.streakCurrent === 1 ? "dag" : "dagen"}
-            </span>
+          <p className="-mt-3 leading-none">
+            <CountUp value={profile.streakCurrent} className="num text-[76px]" />
+            <span className="hand ml-2 text-[18px] font-bold">{profile.streakCurrent === 1 ? "dag" : "dagen"}</span>
           </p>
-          <div className="mt-auto flex justify-between gap-1 pt-5">
+
+          <div className="mt-auto flex justify-between gap-1 pt-6">
             {week.map((d, i) => {
-              const done = d.xp > 0;
+              const did = d.xp > 0;
               const isToday = i === week.length - 1;
               return (
                 <div key={d.date} className="flex flex-col items-center gap-1.5">
                   <span
-                    className={`flex h-8 w-8 items-center justify-center rounded-full text-[11px] ${
-                      done
-                        ? "bg-gradient-to-b from-[#ffb340] to-[#ff6a00] text-white shadow-[0_4px_10px_-4px_#ff6a00]"
-                        : isToday
-                          ? "ring-2 ring-inset ring-[#ff9500]"
-                          : "bg-sunken"
-                    }`}
                     title={`${d.date}: ${d.xp} XP`}
+                    className={`flex h-9 w-9 items-center justify-center rounded-full border-2 ${
+                      did
+                        ? "border-outline bg-warm-bright"
+                        : isToday
+                          ? "border-dashed border-outline bg-white/60"
+                          : "border-outline/40 bg-white/50"
+                    }`}
                   >
-                    {done ? (
-                      <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden><path d="M3 8.4 6.2 11.6 13 4.8" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                    ) : null}
+                    {did ? <Doodle name="check" size={16} stroke={2.6} /> : null}
                   </span>
-                  <span className={`text-[11px] font-semibold ${isToday ? "text-ink" : "text-ink-muted"}`}>
-                    {new Date(d.date).toLocaleDateString("nl-NL", { weekday: "narrow" }).toUpperCase()}
+                  <span className="hand text-[12px] font-bold">
+                    {new Date(`${d.date}T12:00:00`).toLocaleDateString("nl-NL", { weekday: "narrow" }).toUpperCase()}
                   </span>
                 </div>
               );
             })}
           </div>
-          <p className="mt-3 text-[12.5px] text-ink-muted">
+          <p className="mt-3 text-[13.5px] font-semibold">
             {profile.streakCurrent === 0
-              ? `Oefen vandaag om een nieuwe reeks te beginnen.${profile.streakLongest > 0 ? ` Je record: ${profile.streakLongest}.` : ""}`
+              ? `Oefen vandaag voor een nieuwe reeks.${profile.streakLongest > 0 ? ` Je record: ${profile.streakLongest}.` : ""}`
               : profile.streakLongest > profile.streakCurrent
                 ? `Je record: ${profile.streakLongest} dagen.`
-                : "Dit is je langste reeks tot nu toe."}
+                : "Dit is je langste reeks tot nu toe!"}
           </p>
         </div>
 
-        {/* ═══ Drie cijfers, elk met een lijntje dat laat zien waar het heen gaat. ═══ */}
-        <div className="card flex flex-col p-5 lg:col-span-2" style={{ "--i": 2 } as React.CSSProperties}>
-          <p className="eyebrow">Goed</p>
+        {/* ═══ Drie cijfers, elk in een eigen stift ═══ */}
+        <div
+          className="flex flex-col rounded-card border-2 border-outline bg-pop-mint p-5 text-on-pop shadow-[var(--hard)] lg:col-span-2"
+          style={{ "--i": 2 } as React.CSSProperties}
+        >
+          <p className="hand text-[15px] font-bold">Goed</p>
           <p className="mt-1.5 leading-none">
-            {started ? <CountUp value={Math.round(accuracy.accuracy * 100)} suffix="%" className="num text-[36px]" /> : <span className="num text-[36px]">—</span>}
+            {started ? (
+              <CountUp value={Math.round(accuracy.accuracy * 100)} suffix="%" className="num text-[46px]" />
+            ) : (
+              <span className="num text-[46px]">—</span>
+            )}
           </p>
-          {/* Alleen dagen waarop je echt oefende: een dag zonder antwoorden is
-              geen 0% goed, maar geen meting. */}
           {practiced.length >= 2 ? (
             <div className="mt-auto pt-3">
-              <Sparkline data={practiced} tone="var(--color-good)" height={30} />
+              <Sparkline data={practiced} tone="var(--color-outline)" height={30} />
             </div>
           ) : (
             <div className="mt-auto" />
           )}
-          <p className="mt-1.5 text-[12.5px] text-ink-muted">
+          <p className="mt-2 text-[13.5px] font-semibold">
             {started ? `over ${accuracy.total} antwoorden` : "nog geen antwoorden"}
           </p>
         </div>
 
-        <div className="card flex flex-col p-5 lg:col-span-2" style={{ "--i": 3 } as React.CSSProperties}>
-          <p className="eyebrow">Woorden</p>
+        <div
+          className="flex flex-col rounded-card border-2 border-outline bg-pop-sky p-5 text-on-pop shadow-[var(--hard)] lg:col-span-2"
+          style={{ "--i": 3 } as React.CSSProperties}
+        >
+          <p className="hand text-[15px] font-bold">Woorden</p>
           <p className="mt-1.5 leading-none">
-            <CountUp value={vocab.seen} className="num text-[36px]" />
-            <span className="ml-1 text-[14px] font-semibold text-ink-muted">/ {vocab.total}</span>
+            <CountUp value={vocab.seen} className="num text-[46px]" />
+            <span className="hand ml-1.5 text-[15px] font-bold">/ {vocab.total}</span>
           </p>
           <div className="mt-auto pt-4">
-            <div className="h-2 overflow-hidden rounded-full bg-sunken">
-              <div
-                className="animate-grow-x h-full origin-left rounded-full bg-gradient-to-r from-[#6aeadb] to-[#12b0a0]"
-                style={{ width: `${vocab.total ? Math.max(2, (vocab.seen / vocab.total) * 100) : 0}%` }}
-              />
-            </div>
+            <PillMeter value={vocab.seen} max={vocab.total} color="var(--color-pop-yellow)" height={22} showBurst={false}>
+              {vocab.total ? Math.round((vocab.seen / vocab.total) * 100) : 0}%
+            </PillMeter>
           </div>
-          <p className="mt-2 text-[12.5px] text-ink-muted">{vocab.solid} stevig in je geheugen</p>
+          <p className="mt-2 text-[13.5px] font-semibold">{vocab.solid} stevig in je geheugen</p>
         </div>
 
-        <div className="card col-span-2 flex flex-col p-5 lg:col-span-2" style={{ "--i": 4 } as React.CSSProperties}>
-          <p className="eyebrow">Niveau</p>
+        <div
+          className="col-span-2 flex flex-col rounded-card border-2 border-outline bg-pop-pink p-5 text-on-pop shadow-[var(--hard)] lg:col-span-2"
+          style={{ "--i": 4 } as React.CSSProperties}
+        >
+          <p className="hand text-[15px] font-bold">Niveau</p>
           <p className="mt-1.5 leading-none">
-            <span className="num text-[36px]">{rank.code}</span>
-            <span className="ml-1.5 text-[14px] font-semibold text-ink-muted">{rank.label}</span>
+            <span className="num text-[46px]">{rank.code}</span>
+            <span className="hand ml-2 text-[15px] font-bold">{rank.label}</span>
           </p>
           <div className="mt-auto pt-4">
-            <div className="h-2 overflow-hidden rounded-full bg-sunken">
-              <div
-                className="animate-grow-x h-full origin-left rounded-full bg-gradient-to-r from-[#a99bff] to-[#5e5ce6]"
-                style={{
-                  width: `${Math.min(100, Math.max(((profile.xp - rank.from) / ((rank.to ?? profile.xp) - rank.from || 1)) * 100, profile.xp > rank.from ? 2 : 0))}%`,
-                }}
-              />
-            </div>
+            <PillMeter value={Math.round(rankPct)} max={100} color="var(--color-pop-lilac)" height={22} showBurst={false}>
+              {Math.round(rankPct)}%
+            </PillMeter>
           </div>
-          <p className="mt-2 text-[12.5px] text-ink-muted">
+          <p className="mt-2 text-[13.5px] font-semibold">
             {next ? `nog ${Math.max(0, next.from - profile.xp).toLocaleString("nl-NL")} XP tot ${next.code}` : "hoogste rang"}
           </p>
         </div>
       </section>
 
       {due === 0 && nextReview ? (
-        <p className="-mt-4 mb-8 text-[13px] text-ink-muted">
+        <p className="hand -mt-6 mb-10 text-[14.5px] font-semibold text-ink-secondary">
           Eerstvolgende herhaling:{" "}
           {nextReview.toLocaleString("nl-NL", {
             weekday: "long",

@@ -81,9 +81,9 @@ export function StatTile({
           in dezelfde rij dezelfde hoogte houden. */}
       {meter !== undefined ? (
         <div className="mt-auto pt-3">
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-sunken">
+          <div className="h-3.5 w-full overflow-hidden rounded-full border-2 border-outline bg-surface">
             <div
-              className="h-full rounded-full bg-accent-fill animate-grow-x origin-left"
+              className="h-full rounded-full border-r-2 border-outline bg-pop-yellow animate-grow-x origin-left"
               style={{
                 width: `${Math.min(100, Math.max(meter * 100, meter > 0 ? 4 : 0))}%`,
               }}
@@ -112,15 +112,15 @@ export function Meter({
   return (
     <div>
       <div
-        className="w-full overflow-hidden rounded-full bg-sunken"
-        style={{ height }}
+        className="w-full overflow-hidden rounded-full border-2 border-outline bg-surface"
+        style={{ height: Math.max(height, 14) }}
         role="progressbar"
         aria-valuenow={Math.round(pct * 100)}
         aria-valuemin={0}
         aria-valuemax={100}
       >
         <div
-          className="h-full rounded-full bg-accent animate-grow-x origin-left"
+          className="h-full rounded-full border-r-2 border-outline bg-pop-yellow animate-grow-x origin-left"
           style={{ width: `${Math.max(pct * 100, value > 0 ? 3 : 0)}%` }}
         />
       </div>
@@ -356,7 +356,7 @@ export function LineChart({
 
         {hover !== null && hasData ? (
           <div
-            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-xl border border-line bg-surface px-3 py-1.5 text-[12px] shadow-lg"
+            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-xl border-2 border-outline bg-surface px-3 py-1.5 text-[12px] shadow-lg"
             style={{
               left: `${((pad.left + x(hover)) / w) * 100}%`,
               top: `${((pad.top + y(data[hover].value) - 10) / h) * 100}%`,

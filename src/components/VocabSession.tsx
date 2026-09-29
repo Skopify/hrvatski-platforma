@@ -6,7 +6,9 @@ import { useCallback, useRef, useState } from "react";
 import { submitVocab, type VocabFeedback } from "@/app/actions";
 import type { StageQuestion } from "@/lib/stages";
 import { SpecialChars } from "./SpecialChars";
-import { Bolt, StepTiles } from "./ui";
+import { Doodle, Sparkle } from "./doodles";
+import { StepTiles } from "./ui";
+import { XpChip } from "./XpChip";
 
 /** Wat elk stadium van je vraagt, in gewone taal. */
 const STAGE_LABEL: Record<string, string> = {
@@ -89,24 +91,24 @@ export function VocabSession({
   if (klaar) {
     return (
       <div className="mx-auto max-w-2xl px-5 py-14 sm:px-8">
-        <div className="hero animate-rise px-8 py-11 text-center sm:px-10">
-          <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-ink-muted">
-            Woorden afgerond
-          </p>
-          <h1 className="hr-text display mt-2.5 text-[38px] text-ink">Gotovo!</h1>
+        <div className="hero animate-pop relative px-8 py-11 text-center sm:px-10">
+          <Sparkle size={30} className="absolute right-9 top-9 rotate-12" color="var(--color-pop-yellow)" />
+          <Sparkle size={20} className="absolute left-10 top-12 -rotate-12" color="var(--color-pop-pink)" />
+          <p className="hand text-[16px] font-bold text-ink-muted">Woorden afgerond</p>
+          <h1 className="hr-text display mt-1 text-[52px] text-ink">Gotovo!</h1>
           <div className="mt-9 grid grid-cols-2 gap-3">
-            <div className="rounded-card bg-sunken px-4 py-5">
-              <p className="tabular text-[26px] font-bold text-gold">+{xp}</p>
-              <p className="mt-1 text-[12px] text-ink-muted">XP</p>
+            <div className="rotate-[-1.5deg] rounded-card border-2 border-outline bg-pop-yellow px-4 py-5 text-on-pop shadow-[3px_3px_0_var(--color-outline)]">
+              <p className="num text-[32px] leading-none">+{xp}</p>
+              <p className="hand mt-2 text-[13px] font-bold">XP</p>
             </div>
-            <div className="rounded-card bg-sunken px-4 py-5">
-              <p className="tabular text-[26px] font-bold text-ink">
+            <div className="rotate-[1deg] rounded-card border-2 border-outline bg-pop-mint px-4 py-5 text-on-pop shadow-[3px_3px_0_var(--color-outline)]">
+              <p className="num text-[32px] leading-none">
                 {goed}/{questions.length}
               </p>
-              <p className="mt-1 text-[12px] text-ink-muted">Goed</p>
+              <p className="hand mt-2 text-[13px] font-bold">Goed</p>
             </div>
           </div>
-          <Link href="/woorden" className="btn btn-primary mt-9 inline-flex px-7 py-3 text-[14.5px]">
+          <Link href="/woorden" className="btn btn-primary mt-9 inline-flex h-12 px-8 text-[16px]">
             Klaar
           </Link>
         </div>
@@ -118,31 +120,28 @@ export function VocabSession({
     <div className="mx-auto max-w-2xl px-5 py-9 sm:px-8">
       <header className="mb-8">
         <div className="mb-3 flex items-center justify-between">
-          <Link href="/woorden" className="text-[13px] text-ink-muted hover:text-ink-secondary">
+          <Link href="/woorden" className="hand text-[14px] font-bold text-ink-secondary hover:text-accent">
             ← Woorden
           </Link>
-          <span className="tabular flex items-center gap-3 text-[12.5px] text-ink-muted">
-            <span>
+          <span className="flex items-center gap-3">
+            <span className="hand text-[14px] font-bold text-ink-secondary tabular-nums">
               {index + 1} / {questions.length}
             </span>
-            <span className="flex items-center gap-1 font-bold text-gold">
-              <Bolt />
-              {xp}
-            </span>
+            <XpChip xp={xp} />
           </span>
         </div>
         <StepTiles steps={questions.map((_, i) => (i < index ? "done" : i === index ? "current" : "todo"))} />
-        <p className="mt-3 text-[12px] text-ink-muted">
+        <p className="hand mt-3 text-[13.5px] font-semibold text-ink-muted">
           {due} te herhalen · {nieuw} nieuw
         </p>
       </header>
 
-      <div key={vraag.cardId} className="animate-rise">
+      <div key={vraag.cardId}>
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="pill bg-accent-wash uppercase text-accent">
+          <span className="pill bg-pop-lilac text-on-pop">
             {STAGE_LABEL[vraag.kind] ?? vraag.kind}
           </span>
-          <span className="text-[12px] text-ink-muted">{STAGE_HINT[vraag.kind]}</span>
+          <span className="hand text-[13px] font-semibold text-ink-muted">{STAGE_HINT[vraag.kind]}</span>
         </div>
 
         <p
@@ -170,7 +169,7 @@ export function VocabSession({
             else void check();
           }}
           placeholder={vraag.mode === "productive" ? "Typ het Kroatisch…" : "Typ de betekenis…"}
-          className="input w-full px-4 py-3 text-[17px]"
+          className="input w-full px-4 py-3.5 text-[18px]"
         />
 
         {vraag.mode === "productive" ? (
@@ -184,34 +183,25 @@ export function VocabSession({
 
         {feedback ? (
           <div
-            className={`mt-6 rounded-card px-5 py-5 ${
+            className={`mt-6 rounded-card border-2 border-outline px-5 py-5 text-on-pop shadow-[var(--hard)] ${
               feedback.correct
                 ? feedback.nearMiss
-                  ? "bg-gold-wash"
-                  : "bg-good-wash"
-                : "bg-bad-wash"
+                  ? "bg-pop-yellow"
+                  : "bg-pop-mint"
+                : "bg-pop-pink"
             } ${feedback.correct ? "animate-rise" : "animate-shake"}`}
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <p
-                className={`text-[14.5px] font-bold ${
-                  feedback.correct
-                    ? feedback.nearMiss
-                      ? "text-gold"
-                      : "text-good-ink"
-                    : "text-bad-ink"
-                }`}
-              >
-                {feedback.message}
-              </p>
-              <span className="tabular flex items-center gap-1 text-[12px] font-bold text-gold">
-                <Bolt />+{feedback.xp}
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-[16px] font-extrabold">{feedback.message}</p>
+              <span className="animate-sticker pill rotate-[3deg] gap-1 bg-white px-2.5 text-on-pop">
+                <Doodle name="bolt" size={14} color="var(--color-pop-yellow)" />
+                <span className="num text-[14px]">+{feedback.xp} XP</span>
               </span>
             </div>
 
             {!feedback.correct || feedback.nearMiss ? (
-              <p className="hr-text mt-2 text-[16px] font-semibold text-ink">
-                <span className="font-normal text-ink-muted">Juist: </span>
+              <p className="hr-text mt-2 text-[17px] font-bold">
+                <span className="hand font-bold">Juist: </span>
                 {feedback.expected}
               </p>
             ) : null}

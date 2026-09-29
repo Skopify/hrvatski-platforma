@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Doodle, type DoodleName } from "@/components/doodles";
 import { Page, PageHeader, Pill } from "@/components/ui";
 import { DRILLS, DRILL_KINDS } from "@/lib/drills";
 import { nextReviewableAt, reviewableCount } from "@/lib/planner";
@@ -17,71 +18,17 @@ function whenLabel(due: Date): string {
   return due.toLocaleDateString("nl-NL", { weekday: "long", day: "numeric", month: "long" });
 }
 
-/* Plat lijnicoon per drill, 22px. */
-const DRILL_ICONS: Record<string, React.ReactNode> = {
-  oblik: (
-    <>
-      <rect x="3.5" y="4" width="17" height="16" rx="2" />
-      <path d="M3.5 9.5h17" />
-      <path d="M9 9.5V20" />
-    </>
-  ),
-  padezi: (
-    <>
-      <path d="M12 3v18" />
-      <path d="M5 8.5 12 5l7 3.5" />
-      <path d="M4 20h16" />
-      <path d="M8.5 12.5h7" />
-    </>
-  ),
-  rod: (
-    <>
-      <circle cx="12" cy="8" r="4.5" />
-      <path d="M12 12.5V21" />
-      <path d="M8.5 17.5h7" />
-    </>
-  ),
-  genitiv: (
-    <>
-      <path d="M4 19 10 5h1.5l6 14" />
-      <path d="M6.5 14h8" />
-      <path d="M19.5 12v7" />
-    </>
-  ),
-  mnozina: (
-    <>
-      <rect x="3" y="6" width="8" height="12" rx="2" />
-      <path d="M14 6h7v12h-7" />
-      <path d="M14 10h4M14 14h4" />
-    </>
-  ),
-  glagol: (
-    <>
-      <path d="M5 12a7 7 0 0 1 12-4.9" />
-      <path d="M17 3.5V7h-3.5" />
-      <path d="M19 12a7 7 0 0 1-12 4.9" />
-      <path d="M7 20.5V17h3.5" />
-    </>
-  ),
-  brojevi: (
-    <>
-      <path d="M9 4 7 20" />
-      <path d="M17 4l-2 16" />
-      <path d="M4.5 9.5h16" />
-      <path d="M3.5 14.5h16" />
-    </>
-  ),
-  diktat: (
-    <>
-      <path d="M3 10v4" />
-      <path d="M7 7v10" />
-      <path d="M11 4v16" />
-      <path d="M15 8v8" />
-      <path d="M19 10v4" />
-    </>
-  ),
-};
-
+/* Elke drill heeft zijn eigen stift; de krabbel zelf staat in doodles.tsx. */
+const DRILL_POP = [
+  "var(--color-pop-sky)",
+  "var(--color-pop-lilac)",
+  "var(--color-pop-pink)",
+  "var(--color-pop-mint)",
+  "var(--color-pop-peach)",
+  "var(--color-pop-yellow)",
+  "var(--color-pop-lime)",
+  "var(--color-pop-coral)",
+];
 export default function PracticePage() {
   const due = reviewableCount();
   const next = nextReviewableAt();
@@ -96,15 +43,15 @@ export default function PracticePage() {
       />
 
       {/* Herhaalstatus — de planning bepaalt of dit een knop of een mededeling is. */}
-      <section className="hero mb-9 px-6 py-5">
+      <section className="hero mb-10 bg-pop-yellow px-6 py-5 text-on-pop">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
-            <p className="text-[14.5px] font-bold text-ink">
+            <p className="display-soft text-[20px]">
               {due > 0
                 ? `${due} ${due === 1 ? "item staat" : "items staan"} klaar`
                 : "Niets te herhalen"}
             </p>
-            <p className="mt-1 max-w-xl text-[13px] leading-relaxed text-ink-secondary">
+            <p className="mt-1 max-w-xl text-[14px] font-medium leading-relaxed">
               {due > 0
                 ? "Gemengd door elkaar, met voorrang voor wat je het vaakst mist."
                 : next
@@ -113,12 +60,12 @@ export default function PracticePage() {
             </p>
           </div>
           {due > 0 ? (
-            <Link href="/oefenen/herhalen" className="btn btn-primary px-6 py-2.5 text-[13.5px]">
+            <Link href="/oefenen/herhalen" className="btn btn-primary h-12 px-6 text-[15.5px]">
               Start herhaling
-              <span className="tabular rounded-full bg-on-fill/20 px-2 py-0.5 text-[12px]">{due}</span>
+              <span className="num rounded-full bg-white px-2 text-[13px] leading-[20px] text-on-pop">{due}</span>
             </Link>
           ) : (
-            <Link href="/lessen" className="btn btn-ghost px-5 py-2.5 text-[13.5px]">
+            <Link href="/lessen" className="btn btn-ghost h-12 px-6 text-[15.5px]">
               Naar de lessen
             </Link>
           )}
@@ -128,8 +75,8 @@ export default function PracticePage() {
       {/* Drills */}
       <section>
         <div className="mb-4 flex items-baseline justify-between gap-4">
-          <h2 className="display-soft text-[20px] text-ink">Drills</h2>
-          <span className="text-[12.5px] text-ink-muted">Eindeloos · stopt wanneer jij stopt</span>
+          <h2 className="display-soft text-[26px] text-ink">Drills</h2>
+          <span className="hand text-[14px] font-semibold text-ink-muted">Eindeloos · stopt wanneer jij stopt</span>
         </div>
 
         <ul className="stagger grid gap-3 sm:grid-cols-2">
@@ -144,33 +91,27 @@ export default function PracticePage() {
                     <div className="flex items-start gap-4">
                       <span
                         aria-hidden
-                        className={`mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${
-                          ready ? "bg-accent-wash text-accent" : "bg-sunken text-ink-muted"
-                        }`}
+                        className={`mt-0.5 flex h-14 w-14 shrink-0 items-center justify-center rounded-tile border-2 border-outline ${
+                          ready ? "shadow-[3px_3px_0_var(--color-outline)]" : "bg-sunken"
+                        } ${i % 2 ? "rotate-2" : "-rotate-2"}`}
+                        style={ready ? { background: DRILL_POP[i % DRILL_POP.length] } : undefined}
                       >
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          {DRILL_ICONS[kind]}
-                        </svg>
+                        <Doodle
+                          name={kind as DoodleName}
+                          size={34}
+                          color={ready ? "#ffffff" : "var(--color-line-strong)"}
+                        />
                       </span>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
-                          <h3 className="text-[15.5px] font-bold text-ink">{d.title}</h3>
-                          <span className="hr-text text-[12px] text-ink-muted">{d.title_hr}</span>
+                          <h3 className="display-soft text-[18px] text-ink">{d.title}</h3>
+                          <span className="hr-text hand text-[13px] font-semibold text-ink-muted">{d.title_hr}</span>
                           {d.needsVoice ? <Pill tone="accent">audio</Pill> : null}
                         </div>
-                        <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-secondary">
+                        <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-secondary">
                           {d.description}
                         </p>
-                        <p className="mt-2 text-[11.5px] font-semibold text-ink-muted">
+                        <p className="hand mt-2 text-[13px] font-bold text-ink-muted">
                           {ready
                             ? kind === "brojevi"
                               ? "0 tot 100"
@@ -189,7 +130,7 @@ export default function PracticePage() {
         </ul>
       </section>
 
-      <p className="mt-8 text-[12.5px] leading-relaxed text-ink-muted">
+      <p className="hand mt-8 text-[14px] font-semibold leading-relaxed text-ink-muted">
         Drills gebruiken alleen woorden uit lessen die je al kunt openen, en elk antwoord
         telt mee in de spaced repetition van dat woord — een drill is dus nooit verloren
         tijd, ook niet als de herhaling leeg is.
@@ -203,29 +144,16 @@ export default function PracticePage() {
             <div className="flex items-start gap-4">
               <span
                 aria-hidden
-                className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-bad-wash text-bad-ink"
+                className="mt-0.5 flex h-14 w-14 shrink-0 rotate-2 items-center justify-center rounded-tile border-2 border-outline bg-pop-pink shadow-[3px_3px_0_var(--color-outline)]"
               >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 3.5 21 19.5H3L12 3.5Z" />
-                  <path d="M12 10v4" />
-                  <path d="M12 16.8v.2" />
-                </svg>
+                <Doodle name="cross" size={30} stroke={2.8} />
               </span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-[15.5px] font-bold text-ink">Jouw fouten</h3>
+                  <h3 className="display-soft text-[18px] text-ink">Jouw fouten</h3>
                   {mistakeCount > 0 ? <Pill tone="bad">{mistakeCount}</Pill> : null}
                 </div>
-                <p className="mt-1.5 max-w-2xl text-[12.5px] leading-relaxed text-ink-secondary">
+                <p className="mt-1.5 max-w-2xl text-[13.5px] leading-relaxed text-ink-secondary">
                   Alles wat je ooit misging, met wat jij typte naast wat er moest staan.
                   Fouten die vaker terugkomen staan bovenaan — die zeggen iets over een
                   patroon in plaats van over een verschrijving.

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { CaseTimeline } from "@/components/CaseTimeline";
+import { Doodle } from "@/components/doodles";
 import { Page, PageHeader, Pill } from "@/components/ui";
 import { loadLessons, loadSyllabus } from "@/lib/content";
 import { lessonStatuses } from "@/lib/stats";
@@ -79,20 +80,20 @@ export default function LessonsPage() {
               <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
                 <div className="min-w-0">
                   <div className="flex items-center gap-2.5">
-                    <Pill tone="accent">{band.cefr}</Pill>
-                    <h2 className="display-soft text-[21px] text-ink">{band.title}</h2>
+                    <Pill tone="mint">{band.cefr}</Pill>
+                    <h2 className="display-soft text-[26px] text-ink">{band.title}</h2>
                   </div>
-                  <p className="mt-1.5 max-w-xl text-[13px] leading-relaxed text-ink-secondary">
+                  <p className="mt-1.5 max-w-xl text-[14px] leading-relaxed text-ink-secondary">
                     {band.blurb}
                   </p>
                 </div>
                 <div className="shrink-0 text-right">
-                  <p className="tabular text-[13px] font-bold text-ink">
+                  <p className="hand text-[14px] font-bold text-ink">
                     {bandDone}/{inBand.length}
                   </p>
-                  <div className="mt-1.5 h-1.5 w-24 overflow-hidden rounded-full bg-sunken">
+                  <div className="mt-1.5 h-3.5 w-24 overflow-hidden rounded-full border-2 border-outline bg-surface">
                     <div
-                      className="h-full rounded-full bg-accent animate-grow-x origin-left"
+                      className="h-full rounded-full border-r-2 border-outline bg-pop-mint animate-grow-x origin-left"
                       style={{ width: `${(bandDone / inBand.length) * 100}%` }}
                     />
                   </div>
@@ -114,27 +115,18 @@ export default function LessonsPage() {
                         {/* De knoop: gevuld als het af is, ring als het openstaat,
                             gestippeld als het nog dicht zit. */}
                         <span
-                          className={`tabular mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold ${
+                          className={`num mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-[14px] ${
                             status === "done"
-                              ? "bg-accent-fill text-on-fill"
+                              ? "border-outline bg-pop-mint text-on-pop"
                               : status === "in_progress"
-                                ? "border-2 border-accent bg-accent-wash text-accent"
+                                ? "border-outline bg-pop-yellow text-on-pop shadow-[2px_2px_0_var(--color-outline)]"
                                 : openable
-                                  ? "border border-line-strong bg-surface text-ink-secondary"
-                                  : "border border-dashed border-line-strong bg-sunken text-ink-muted"
+                                  ? "border-outline bg-surface text-ink"
+                                  : "border-dashed border-line-strong bg-sunken text-ink-muted"
                           }`}
                         >
                           {status === "done" ? (
-                            <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden>
-                              <path
-                                d="M3 8.4 6.2 11.6 13 4.8"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2.2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
+                            <Doodle name="check" size={18} stroke={2.8} />
                           ) : (
                             String(lesson.number).padStart(2, "0")
                           )}
@@ -167,14 +159,14 @@ export default function LessonsPage() {
 
                           <div className="mt-2.5 flex flex-wrap gap-1.5">
                             {caseHere ? (
-                              <Pill tone="gold" className="capitalize">
+                              <Pill tone="yellow" className="capitalize">
                                 ★ {caseHere.name}
                               </Pill>
                             ) : null}
                             {(lesson.grammar ?? []).slice(0, caseHere ? 1 : 2).map((g) => (
                               <span
                                 key={g}
-                                className="truncate rounded-full bg-sunken px-2 py-0.5 text-[11px] text-ink-secondary"
+                                className="truncate rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[12px] font-semibold text-ink-secondary"
                               >
                                 {g}
                               </span>

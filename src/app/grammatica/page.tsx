@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Doodle } from "@/components/doodles";
 import { Page, PageHeader } from "@/components/ui";
 import { modulesByBand, moduleExercises, moduleStepCount } from "@/lib/modules";
 import { hasPlacement, moduleStatuses, STATUS_TEXT, type ModuleStatusValue } from "@/lib/placement";
@@ -16,25 +17,14 @@ const BAND_UITLEG: Record<string, string> = {
 
 /** Het vinkje bij een afgeronde module. */
 function Vinkje() {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden className="h-3.5 w-3.5" fill="none">
-      <circle cx="8" cy="8" r="7" className="fill-good-wash" />
-      <path
-        d="M4.8 8.2l2.1 2.1 4.3-4.4"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <Doodle name="check" size={16} stroke={2.8} />;
 }
 
 /** Hoe een gemeten status eruitziet. Ongemeten krijgt bewust geen pil. */
 const STATUS_STIJL: Record<ModuleStatusValue, string> = {
-  beheerst: "bg-good-wash text-good",
-  onzeker: "bg-gold-wash text-gold",
-  onbekend: "bg-sunken text-ink-secondary",
+  beheerst: "bg-pop-mint text-on-pop",
+  onzeker: "bg-pop-yellow text-on-pop",
+  onbekend: "bg-surface text-ink-secondary",
 };
 
 export default function GrammaticaPage() {
@@ -55,19 +45,19 @@ export default function GrammaticaPage() {
       {/* Wie de toets nog niet gedaan heeft, ziet hier waarom hij bestaat. Wie hem
           wél deed, ziet per module de uitslag mét teller — een status zonder
           teller belooft meer dan hij waarmaakt. */}
-      <div className="rounded-card mb-8 border border-line bg-sunken px-5 py-4">
+      <div className="rounded-card mb-10 border-2 border-outline bg-pop-lilac px-5 py-4 text-on-pop shadow-[var(--hard-sm)]">
         {gemeten ? (
-          <p className="text-[13.5px] leading-relaxed text-ink-secondary">
+          <p className="text-[14.5px] font-medium leading-relaxed">
             De etiketten hieronder komen uit je antwoorden op de plaatsingstoets, niet uit een
             zelfinschatting. Modules zonder etiket zijn niet gemeten.{" "}
-            <Link href="/plaatsingstoets" className="font-semibold text-accent hover:underline">
+            <Link href="/plaatsingstoets" className="font-extrabold underline decoration-2 underline-offset-2">
               Opnieuw meten
             </Link>
           </p>
         ) : (
-          <p className="text-[13.5px] leading-relaxed text-ink-secondary">
+          <p className="text-[14.5px] font-medium leading-relaxed">
             Het curriculum loopt van nul tot eind, maar jouw pad hoeft dat niet te doen.{" "}
-            <Link href="/plaatsingstoets" className="font-semibold text-accent hover:underline">
+            <Link href="/plaatsingstoets" className="font-extrabold underline decoration-2 underline-offset-2">
               Doe de plaatsingstoets
             </Link>{" "}
             en elke module krijgt een status die uit je antwoorden volgt.
@@ -79,11 +69,11 @@ export default function GrammaticaPage() {
       {banden.map(({ band, modules }) => (
         <section key={band} className="mb-10 last:mb-0">
           <div className="mb-3">
-            <h2 className="text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h2 className="display-soft inline-block rounded-lg border-2 border-outline bg-pop-lilac px-3 py-0.5 text-[19px] text-on-pop">
               {band}
             </h2>
             {BAND_UITLEG[band] ? (
-              <p className="mt-1 text-[13px] leading-relaxed text-ink-secondary">
+              <p className="mt-2 text-[14px] leading-relaxed text-ink-secondary">
                 {BAND_UITLEG[band]}
               </p>
             ) : null}
@@ -94,16 +84,14 @@ export default function GrammaticaPage() {
               <Link
                 key={m.code}
                 href={`/grammatica/${m.code.toLowerCase()}`}
-                className={`rounded-card group border px-5 py-5 transition-all duration-200 hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash ${
-                  voortgang.get(m.code)?.afgerondOp
-                    ? "border-good/40 bg-good-wash/40"
-                    : "border-line bg-surface"
+                className={`card card-lift group px-5 py-5 ${
+                  voortgang.get(m.code)?.afgerondOp ? "bg-pop-mint text-on-pop" : ""
                 }`}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="hr-text text-[19px] font-semibold text-ink">{m.title_hr}</p>
+                  <p className="hr-text display-soft text-[22px] text-ink">{m.title_hr}</p>
                   <span className="flex shrink-0 items-center gap-2">
-                    <span className="tabular text-[12px] font-bold text-accent">{m.rank}</span>
+                    <span className="num text-[14px] text-accent">{m.rank}</span>
                     {statussen.get(m.code) ? (
                       <span
                         className={`pill ${STATUS_STIJL[statussen.get(m.code)!.status]}`}
@@ -113,15 +101,15 @@ export default function GrammaticaPage() {
                         {statussen.get(m.code)!.total}
                       </span>
                     ) : (
-                      <span className="pill bg-sunken text-ink-secondary">{m.cefr}</span>
+                      <span className="pill bg-surface text-ink-secondary">{m.cefr}</span>
                     )}
                   </span>
                 </div>
-                <p className="mt-1 text-[15px] font-bold text-ink">{m.title_nl}</p>
+                <p className="mt-1 text-[16px] font-bold text-ink">{m.title_nl}</p>
                 <p className="mt-2 text-[13.5px] leading-relaxed text-ink-secondary">
                   {m.blurb_nl}
                 </p>
-                <p className="mt-3 flex flex-wrap items-center gap-x-2 text-[12px] text-ink-muted">
+                <p className="hand mt-3 flex flex-wrap items-center gap-x-2 text-[13px] font-semibold text-ink-muted">
                   <span>
                     {m.phases.length} stappen · {moduleExercises(m).length} opgaven
                   </span>

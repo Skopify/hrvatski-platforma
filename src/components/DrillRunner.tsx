@@ -7,7 +7,8 @@ import { drillBatch, endSession, startSession, submitDrill } from "@/app/actions
 import type { DrillFeedback, DrillKind, DrillMeta, DrillQuestion } from "@/lib/drills";
 import { TTS_RATES, useCroatianTts } from "@/lib/tts";
 import { SpecialChars } from "./SpecialChars";
-import { Bolt } from "./ui";
+import { Doodle } from "./doodles";
+import { XpChip } from "./XpChip";
 
 /*
   De drill-loop. Anders dan een les is dit eindeloos: porties van twaalf vragen,
@@ -176,28 +177,24 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
     return (
       <Shell meta={meta}>
         <div className="hero animate-rise px-8 py-10 text-center">
-          <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-ink-muted">
-            Drill klaar
-          </p>
+          <p className="hand text-[16px] font-bold text-ink-muted">Drill klaar</p>
           <h2 className="display mt-2 text-[32px] text-ink">
             {stats.total === 0 ? "Volgende keer!" : `${pct}% goed`}
           </h2>
           <div className="mt-7 grid grid-cols-3 gap-3">
             {[
-              { v: `${stats.good}/${stats.total}`, l: "Goed" },
-              { v: `+${stats.xp}`, l: "XP" },
-              { v: `${stats.best}`, l: "Langste reeks" },
+              { v: `${stats.good}/${stats.total}`, l: "Goed", bg: "bg-pop-mint" },
+              { v: `+${stats.xp}`, l: "XP", bg: "bg-pop-yellow" },
+              { v: `${stats.best}`, l: "Langste reeks", bg: "bg-pop-sky" },
             ].map((s) => (
-              <div key={s.l} className="rounded-2xl border border-line bg-surface py-4">
-                <p className="display tabular text-[26px] leading-none text-ink">{s.v}</p>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-ink-muted">
-                  {s.l}
-                </p>
+              <div key={s.l} className={`rounded-2xl border-2 border-outline py-4 text-on-pop shadow-[3px_3px_0_var(--color-outline)] ${s.bg}`}>
+                <p className="num text-[28px] leading-none">{s.v}</p>
+                <p className="hand mt-2 text-[13px] font-bold">{s.l}</p>
               </div>
             ))}
           </div>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Link href="/oefenen" className="btn btn-primary px-5 py-2.5 text-[14px]">
+            <Link href="/oefenen" className="btn btn-primary h-11 px-6 text-[15px]">
               Terug naar oefenen
             </Link>
           </div>
@@ -222,29 +219,24 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
     <Shell
       meta={meta}
       right={
-        <div className="tabular flex items-center gap-4 text-[12.5px] text-ink-muted">
+        <div className="tabular flex items-center gap-3 text-[13px] text-ink-muted">
           {stats.combo >= 3 ? (
-            <span className="animate-pop font-bold text-warm">×{stats.combo}</span>
+            <span className="animate-sticker pill rotate-[-3deg] bg-pop-coral text-on-pop">×{stats.combo}</span>
           ) : null}
           {/* Pas tonen zodra er iets te tellen valt — "0/0" bij de eerste vraag
               leest als een kapotte teller, niet als een lege score. */}
           {stats.total > 0 ? (
-            <span>
+            <span className="hand text-[14px] font-bold">
               {stats.good}/{stats.total}
             </span>
           ) : null}
-          <span className="flex items-center gap-1 font-bold text-gold">
-            <Bolt />
-            {stats.xp}
-          </span>
+          <XpChip xp={stats.xp} />
         </div>
       }
     >
-      <div key={question.ref + stats.total} className="animate-rise">
-        <div className="card px-7 py-8">
-          <p className="text-[12px] font-semibold uppercase tracking-[0.07em] text-ink-muted">
-            {meta.ask}
-          </p>
+      <div key={question.ref + stats.total}>
+        <div className="card px-7 py-8 shadow-[var(--hard)]">
+          <p className="eyebrow">{meta.ask}</p>
 
           {/* De opgave */}
           {meta.kind === "padezi" ? (
@@ -260,7 +252,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
                     <span key={i}>
                       {isFocus ? (
                         <>
-                          <mark className="rounded bg-accent-wash px-1 font-semibold text-accent">
+                          <mark className="rounded bg-pop-yellow px-1 font-bold text-on-pop">
                             {bare}
                           </mark>
                           {tail}
@@ -307,7 +299,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
                     aria-pressed={tts.rate === r.value}
                     className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
                       tts.rate === r.value
-                        ? "bg-surface text-accent shadow-[var(--lift-1)]"
+                        ? "bg-pop-yellow text-on-pop"
                         : "text-ink-muted hover:text-ink-secondary"
                     }`}
                   >
@@ -346,15 +338,15 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
                       type="button"
                       disabled={busy || Boolean(feedback)}
                       onClick={() => void check(c)}
-                      className={`hr-text rounded-2xl border px-4 py-3.5 text-[15.5px] font-semibold transition-all duration-150 ${
+                      className={`hr-text rounded-2xl border-2 px-4 py-3.5 text-[16px] font-bold transition-[transform,box-shadow,background-color] duration-150 disabled:cursor-default ${
                         isRight
-                          ? "border-good bg-good-wash text-good-ink"
+                          ? "border-outline bg-pop-mint text-on-pop shadow-[3px_3px_0_var(--color-outline)]"
                           : isWrongPick
-                            ? "border-bad bg-bad-wash text-bad-ink"
+                            ? "border-outline bg-pop-pink text-on-pop shadow-[3px_3px_0_var(--color-outline)]"
                             : feedback
-                              ? "border-line bg-surface text-ink-muted"
-                              : "border-line bg-surface text-ink hover:-translate-y-px hover:border-accent-ring hover:bg-accent-wash hover:text-accent"
-                      } disabled:cursor-default`}
+                              ? "border-line-strong bg-surface text-ink-muted"
+                              : "border-outline bg-surface text-ink shadow-[3px_3px_0_var(--color-outline)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-x-px [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-px [@media(hover:hover)_and_(pointer:fine)]:hover:shadow-[4px_4px_0_var(--color-outline)]"
+                      }`}
                     >
                       {c}
                     </button>
@@ -374,7 +366,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
                   autoCorrect="off"
                   autoCapitalize="off"
                   spellCheck={false}
-                  className="hr-text w-full rounded-2xl border border-line bg-surface px-4 py-3.5 text-[18px] font-medium text-ink shadow-[var(--lift-1)] outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)] disabled:bg-sunken"
+                  className="input hr-text w-full px-4 py-3.5 text-[19px]"
                 />
                 {!feedback ? <SpecialChars onInsert={insert} /> : null}
               </div>
@@ -384,39 +376,26 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
           {/* Feedback */}
           {feedback ? (
             <div
-              className={`mt-5 rounded-2xl px-4 py-3.5 ${
+              className={`mt-5 rounded-2xl border-2 border-outline px-4 py-3.5 text-on-pop shadow-[3px_3px_0_var(--color-outline)] ${
                 feedback.correct
                   ? feedback.nearMiss
-                    ? "bg-gold-wash"
-                    : "bg-good-wash"
-                  : "animate-shake bg-bad-wash"
+                    ? "bg-pop-yellow"
+                    : "bg-pop-mint"
+                  : "animate-shake bg-pop-pink"
               }`}
             >
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p
-                  className={`text-[14px] font-bold ${
-                    feedback.correct
-                      ? feedback.nearMiss
-                        ? "text-gold"
-                        : "text-good-ink"
-                      : "text-bad-ink"
-                  }`}
-                >
-                  {feedback.message}
-                </p>
-                <span className="tabular text-[12px] font-bold text-ink-muted">
-                  +{feedback.xp} XP
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-[15.5px] font-extrabold">{feedback.message}</p>
+                <span className="animate-sticker pill rotate-[3deg] gap-1 bg-white px-2.5 text-on-pop">
+                  <Doodle name="bolt" size={14} color="var(--color-pop-yellow)" />
+                  <span className="num text-[13.5px]">+{feedback.xp} XP</span>
                 </span>
               </div>
               {!feedback.correct || feedback.nearMiss ? (
-                <p className="hr-text mt-1.5 text-[15.5px] font-semibold text-ink">
-                  {feedback.expected}
-                </p>
+                <p className="hr-text mt-1.5 text-[16.5px] font-bold">{feedback.expected}</p>
               ) : null}
               {feedback.explain ? (
-                <p className="mt-2 text-[13px] leading-relaxed text-ink-secondary">
-                  {feedback.explain}
-                </p>
+                <p className="mt-2 text-[14px] font-medium leading-relaxed">{feedback.explain}</p>
               ) : null}
             </div>
           ) : null}
@@ -427,7 +406,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
           <button
             type="button"
             onClick={() => void stop()}
-            className="text-[13px] font-medium text-ink-muted transition-colors hover:text-ink-secondary"
+            className="hand text-[14px] font-bold text-ink-muted transition-colors hover:text-ink"
           >
             Stoppen
           </button>
@@ -436,7 +415,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
               type="button"
               disabled={busy || !answer.trim()}
               onClick={() => void check(answer)}
-              className="btn btn-primary px-6 py-2.5 text-[14px]"
+              className="btn btn-primary h-12 px-7 text-[15.5px]"
             >
               Nakijken
             </button>
@@ -445,7 +424,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
               type="button"
               disabled={busy}
               onClick={() => void advance()}
-              className="btn btn-primary px-6 py-2.5 text-[14px]"
+              className="btn btn-primary h-12 px-7 text-[15.5px]"
             >
               Verder
             </button>
@@ -470,7 +449,7 @@ function Shell({
       <div className="mb-6 flex items-center justify-between gap-4">
         <Link
           href="/oefenen"
-          className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-muted transition-colors hover:text-accent"
+          className="hand inline-flex items-center gap-1.5 text-[14px] font-bold text-ink-secondary transition-colors hover:text-accent"
         >
           <span aria-hidden>←</span> Oefenen
         </Link>
