@@ -98,11 +98,12 @@ export function bouwPrompt(scenario: Scenario, woorden: Woord[]): string {
     `- Use ONLY words from the allowed list below, forms of those words, and basic function words (i, je, sam, u, na, s, ne, da, li, što, kako, gdje, and similar). Do not use any other content words.`,
     `- End with one simple question so that the conversation continues.`,
     `- React naturally to what the learner just said (answer their question, confirm their order), like a real person in this situation would. Do not repeat yourself.`,
+    `- ALWAYS check the learner's last message word by word: case endings (e.g. the object after "hoću", "želim", "imam" is accusative: "kavu", "vodu", "sok"), verb forms, word order, missing diacritics. If anything is wrong, put the fully corrected message in "verbeterd_hr"; only leave it empty if the message is completely correct.`,
     `- Facts: Croatia uses the euro (euro/eura), not the kuna. Stay realistic.`,
     `- Stay in your role. Do not explain grammar in Croatian.`,
-    `Example of the style (café): learner "Kavu, molim." -> {"hr": "Naravno. Želite li i vodu?", "nl": "Natuurlijk. Wilt u ook water?", "tip_nl": ""}`,
+    `Example of the style (café): learner "Kavu, molim." -> {"hr": "Naravno. Želite li i vodu?", "verbeterd_hr": ""}; learner "Ja hocu kava." -> {"hr": "Naravno. Želite li i vodu?", "verbeterd_hr": "Ja hoću kavu."}`,
     `Reply ONLY with a JSON object of this exact shape:`,
-    `{"hr": "your Croatian reply", "nl": "Dutch translation of your reply", "tip_nl": "if the learner's last message contained a mistake, one short friendly tip in Dutch, otherwise an empty string"}`,
+    `{"hr": "your Croatian reply", "verbeterd_hr": "the learner's last message rewritten as correct standard Croatian if it contained a grammar, spelling or word mistake, otherwise an empty string"}`,
     `Extra allowed words for this situation: ${scenario.woorden.map((w) => w.hr).join(", ")}`,
     `Allowed words: ${lijst}`,
   ].join("\n");
@@ -179,6 +180,46 @@ export function keurBotAf(
   return redenen;
 }
 
+/* ------------------------------------------------------ jouw zin verbeteren --- */
+
+function metHoofdletterVan(bron: string, nieuw: string): string {
+  return bron[0] && bron[0] !== bron[0].toLowerCase() ? nieuw[0]!.toUpperCase() + nieuw.slice(1) : nieuw;
+}
+
+function vervang(tekst: string, oud: string, nieuw: string): string {
+  const i = tekst.toLowerCase().indexOf(oud.toLowerCase());
+  if (i < 0) return tekst;
+  return tekst.slice(0, i) + metHoofdletterVan(tekst.slice(i, i + oud.length), nieuw) + tekst.slice(i + oud.length);
+}
+
+/**
+ * De zin van de leerder met alles hersteld wat de poorten met zekerheid weten:
+ * vergeten tekens, een naamval waarvan de catalogus de goede vorm kent, en
+ * Servische woorden. Null als er niets te herstellen valt. Dit is het
+ * betrouwbare deel; het model mag daar alleen iets aan toevoegen als het niets
+ * vond dat zeker was.
+ */
+export function herstelTekst(tekst: string, c: Tekstbevindingen): string | null {
+  let uit = tekst;
+  for (const s of c.spelling) if (s.soort === "diakriet" && s.bedoeld) uit = vervang(uit, s.woord, s.bedoeld);
+  for (const n of c.naamvallen) if (n.bedoeld) uit = vervang(uit, n.woord, n.bedoeld);
+  for (const v of c.servismen) uit = vervang(uit, v.fout, v.goed);
+  return uit === tekst ? null : uit;
+}
+
+const alsVergelijk = (t: string) => t.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+
+/** Mag de verbetering van het model getoond worden? Ze moet anders zijn dan jouw zin en de poorten halen. */
+function keurVerbeteringGoed(verbeterd: string, jouwTekst: string): boolean {
+  if (!verbeterd.trim() || alsVergelijk(verbeterd) === alsVergelijk(jouwTekst)) return false;
+  const c = controleer(verbeterd);
+  return (
+    c.naamvallen.length === 0 &&
+    c.servismen.length === 0 &&
+    !c.spelling.some((x) => x.soort === "diakriet" || x.soort === "vorm")
+  );
+}
+
 /* ---------------------------------------------------------------- beurt --- */
 
 export interface Bericht {
@@ -195,16 +236,17 @@ export type BeurtUitkomst =
   | {
       ok: true;
       hr: string;
+      /** Leeg: de vertaling wordt pas op verzoek gemaakt, want ze kost het model extra seconden. */
       nl: string;
-      /** Een tip van het model. Niet nagekeken: de app toont hem als tip, niet als regel. */
-      tip_nl: string;
+      /** Jouw laatste zin, goed geschreven. "controle" is zeker; "bot" is een voorstel dat de poorten haalde. */
+      verbeterd: { tekst: string; bron: "controle" | "bot" } | null;
       /** Wat de poorten van jouw eigen laatste zin vonden. */
       jouw: Tekstbevindingen;
       pogingen: number;
     }
   | { ok: false; reden: "offline" | "model-ontbreekt" | "geen-goed-antwoord" | "fout"; detail?: string };
 
-function alsJson(ruw: string): { hr?: unknown; nl?: unknown; tip_nl?: unknown } | null {
+function alsJson(ruw: string): { hr?: unknown; verbeterd_hr?: unknown } | null {
   const zonderHek = ruw.trim().replace(/^```(?:json)?\s*/i, "").replace(/```$/, "").trim();
   try {
     const v = JSON.parse(zonderHek);
@@ -281,14 +323,20 @@ export async function beurt(opties: {
       );
       continue;
     }
-    return {
-      ok: true,
-      hr,
-      nl: typeof data.nl === "string" ? data.nl.trim() : "",
-      tip_nl: typeof data.tip_nl === "string" ? data.tip_nl.trim() : "",
-      jouw,
-      pogingen: poging,
-    };
+    const jouwTekst = laatste?.rol === "jij" ? laatste.tekst : "";
+    const zeker = jouwTekst ? herstelTekst(jouwTekst, jouw) : null;
+    const voorstel = typeof data.verbeterd_hr === "string" ? data.verbeterd_hr.trim() : "";
+    // Haalt het voorstel van het model de poorten (en dus ook alles wat de controle
+    // vond), dan is het vollediger dan alleen de zekere herstellingen: het model ziet
+    // ook fouten die de controle niet kent, zoals «kava» waar «kavu» hoort. Haalt het
+    // ze niet, dan blijft de zekere versie staan.
+    const verbeterd =
+      jouwTekst && keurVerbeteringGoed(voorstel, jouwTekst)
+        ? { tekst: voorstel, bron: "bot" as const }
+        : zeker
+          ? { tekst: zeker, bron: "controle" as const }
+          : null;
+    return { ok: true, hr, nl: "", verbeterd, jouw, pogingen: poging };
   }
   return { ok: false, reden: "geen-goed-antwoord", detail: laatsteReden };
 }

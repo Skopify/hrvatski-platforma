@@ -20,7 +20,8 @@ interface Bericht {
   rol: "bot" | "jij";
   tekst: string;
   nl?: string;
-  tip?: string;
+  /** Jouw zin, goed geschreven. "controle" is zeker; "bot" is een voorstel dat de taalpoorten haalde. */
+  verbeterd?: { tekst: string; bron: "controle" | "bot" } | null;
   /** Wat de poorten van jouw zin vonden. */
   vondsten?: string[];
 }
@@ -78,6 +79,7 @@ export function GesprekRunner({
   const [fout, setFout] = useState<Fout>(null);
   const [les, setLes] = useState(startLes);
   const [toonNl, setToonNl] = useState<Record<number, boolean>>({});
+  const [vertalend, setVertalend] = useState<Record<number, boolean>>({});
   const veld = useRef<HTMLInputElement>(null);
   const einde = useRef<HTMLDivElement>(null);
 
@@ -97,6 +99,27 @@ export function GesprekRunner({
       body: JSON.stringify({ warm: true, scenario: scenario.id, les }),
     }).catch(() => {});
   }, [scenario.id, les, status.staat]);
+
+  async function vertaal(i: number) {
+    const b = berichten[i];
+    if (!b || b.nl || vertalend[i]) return;
+    setVertalend((v) => ({ ...v, [i]: true }));
+    try {
+      const res = await fetch("/api/gesprek", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ vertaal: b.tekst }),
+      });
+      const data = await res.json();
+      setBerichten((lijst) =>
+        lijst.map((x, j) => (j === i ? { ...x, nl: data.ok ? data.nl : "(vertalen lukte niet, probeer het nog eens)" } : x)),
+      );
+    } catch {
+      setBerichten((lijst) => lijst.map((x, j) => (j === i ? { ...x, nl: "(vertalen lukte niet, probeer het nog eens)" } : x)));
+    } finally {
+      setVertalend((v) => ({ ...v, [i]: false }));
+    }
+  }
 
   async function verstuur(tekstIn?: string) {
     const tekst = (tekstIn ?? invoer).trim();
@@ -125,8 +148,10 @@ export function GesprekRunner({
       }
       const vondsten = vondstenVan(data.jouw as Bevindingen);
       setBerichten([
-        ...nieuw.map((b, i) => (i === nieuw.length - 1 && b.rol === "jij" ? { ...b, vondsten } : b)),
-        { rol: "bot", tekst: data.hr, nl: data.nl, tip: data.tip_nl || undefined },
+        ...nieuw.map((b, i) =>
+          i === nieuw.length - 1 && b.rol === "jij" ? { ...b, vondsten, verbeterd: data.verbeterd ?? null } : b,
+        ),
+        { rol: "bot", tekst: data.hr },
       ]);
     } catch {
       setFout({ reden: "offline" });
@@ -203,18 +228,21 @@ export function GesprekRunner({
               <div className="min-w-0">
                 <div className="rounded-card border-2 border-outline bg-surface px-5 py-4 shadow-[var(--hard)]">
                   <p className="hr-text text-[19px] font-bold leading-snug text-ink">{b.tekst}</p>
-                  {toonNl[i] && b.nl ? <p className="mt-2 text-[14.5px] text-ink-secondary">{b.nl}</p> : null}
+                  {toonNl[i] ? (
+                    <p className="mt-2 text-[14.5px] text-ink-secondary">{b.nl || (vertalend[i] ? "Vertalen…" : "")}</p>
+                  ) : null}
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
-                  {b.nl ? (
-                    <button
-                      type="button"
-                      onClick={() => setToonNl((t) => ({ ...t, [i]: !t[i] }))}
-                      className="pill h-8 bg-white px-3 text-[13px] text-on-pop active:scale-95"
-                    >
-                      {toonNl[i] ? "Verberg vertaling" : "Toon vertaling"}
-                    </button>
-                  ) : null}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (!toonNl[i]) void vertaal(i);
+                      setToonNl((t) => ({ ...t, [i]: !t[i] }));
+                    }}
+                    className="pill h-8 bg-white px-3 text-[13px] text-on-pop active:scale-95"
+                  >
+                    {toonNl[i] ? "Verberg vertaling" : "Toon vertaling"}
+                  </button>
                   {tts.voice ? (
                     <button
                       type="button"
@@ -225,12 +253,6 @@ export function GesprekRunner({
                     </button>
                   ) : null}
                 </div>
-                {b.tip ? (
-                  <p className="mt-3 rounded-card border-2 border-dashed border-outline bg-pop-yellow px-4 py-3 text-[14px] font-semibold leading-snug text-on-pop">
-                    <span className="hand font-bold">Tip van de bot · niet nagekeken: </span>
-                    {b.tip}
-                  </p>
-                ) : null}
               </div>
             </li>
           ) : (
@@ -238,6 +260,14 @@ export function GesprekRunner({
               <div className="rounded-card border-2 border-outline bg-pop-sky px-5 py-4 text-on-pop shadow-[var(--hard)]">
                 <p className="hr-text text-[18px] font-bold leading-snug">{b.tekst}</p>
               </div>
+              {b.verbeterd ? (
+                <div className="mt-2 rounded-card border-2 border-outline bg-pop-mint px-4 py-3 text-on-pop shadow-[var(--hard-sm)]">
+                  <p className="hand text-[13px] font-bold">
+                    Zo kan het{b.verbeterd.bron === "bot" ? " (voorstel van de bot, door de taalpoorten gehaald)" : ""}:
+                  </p>
+                  <p className="hr-text mt-0.5 text-[18px] font-extrabold leading-snug">{b.verbeterd.tekst}</p>
+                </div>
+              ) : null}
               {b.vondsten ? (
                 b.vondsten.length ? (
                   <ul className="mt-2 space-y-1 rounded-card border-2 border-outline bg-pop-pink px-4 py-3 text-[14px] font-semibold text-on-pop">
@@ -245,7 +275,7 @@ export function GesprekRunner({
                       <li key={v}>{v}</li>
                     ))}
                   </ul>
-                ) : (
+                ) : b.verbeterd ? null : (
                   <p className="hand mt-2 text-right text-[13px] font-bold text-ink-secondary">
                     De controle vond niets. Dat is geen garantie, wel een goed teken.
                   </p>

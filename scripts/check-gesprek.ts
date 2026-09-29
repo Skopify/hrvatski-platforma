@@ -33,7 +33,7 @@ const WERK_DB = path.join(TMP, "werk.db");
 }
 process.env.HRVATSKI_DB = WERK_DB;
 
-const { beurt, bouwPrompt, gezienVormen, keurBotAf, loadScenarios, woordenTotLes } = await import("../src/lib/gesprek");
+const { beurt, bouwPrompt, gezienVormen, herstelTekst, keurBotAf, loadScenarios, woordenTotLes } = await import("../src/lib/gesprek");
 const { controleer } = await import("../src/lib/tekstcontrole");
 
 interface Result {
@@ -120,12 +120,12 @@ check("G19", "een woord dat de bot zelf al zei mag hij herhalen, ook buiten het 
 
 const s0 = scenarios[0]!;
 const vooraf = tel();
-const json = (hr: string, nl = "vertaling", tip_nl = "") => JSON.stringify({ hr, nl, tip_nl });
+const json = (hr: string) => JSON.stringify({ hr, verbeterd_hr: "" });
 
 let aanroepen = 0;
 const eerstFoutDanGoed = async () => {
   aanroepen++;
-  return aanroepen === 1 ? json("Molim vas, hoću kafu i hleb.") : json(goedeZin, "Dat is iets.");
+  return aanroepen === 1 ? json("Molim vas, hoću kafu i hleb.") : json(goedeZin);
 };
 const r1 = await beurt({
   scenario: s0,
@@ -168,6 +168,32 @@ const r4 = await beurt({
   generate: async () => (++m === 1 ? "dit is geen json {" : json(goedeZin)),
 });
 check("G16", "ongeldige JSON van het model telt als een mislukte poging, niet als crash", r4.ok && m === 2, "");
+
+/* ----------------------------------------------------------- verbeterde zin --- */
+
+const h1 = herstelTekst("Ja hocu cokolada.", controleer("Ja hocu cokolada."));
+check("G20", "vergeten tekens worden hersteld in de zin van de leerder", h1 === "Ja hoću čokolada.", String(h1));
+const h2 = herstelTekst("Ja idem iz škola.", controleer("Ja idem iz škola."));
+check("G21", "een verkeerde naamval wordt hersteld als de catalogus de vorm kent", h2 === "Ja idem iz škole.", String(h2));
+const h3 = herstelTekst("Molim vas, hoću kafu.", controleer("Molim vas, hoću kafu."));
+check("G22", "een servisme wordt vervangen door de Kroatische vorm", h3 === "Molim vas, hoću kavu.", String(h3));
+check("G23", "een goede zin blijft ongemoeid", herstelTekst("Idem u školu.", controleer("Idem u školu.")) === null, "");
+
+const metCorrectie = (verbeterd: string) => async () => JSON.stringify({ hr: goedeZin, verbeterd_hr: verbeterd });
+const r5 = await beurt({ scenario: s0, les: 3, historie: [{ rol: "bot", tekst: s0.opening_hr }, { rol: "jij", tekst: "Ja hocu cokolada." }], generate: metCorrectie("Ja hoću čokoladu.") });
+check("G24", "een voorstel van het model dat de poorten haalt is vollediger dan alleen de zekere herstellingen",
+  r5.ok && r5.verbeterd?.bron === "bot" && r5.verbeterd.tekst === "Ja hoću čokoladu.", JSON.stringify(r5.ok && r5.verbeterd));
+const r5b = await beurt({ scenario: s0, les: 3, historie: [{ rol: "bot", tekst: s0.opening_hr }, { rol: "jij", tekst: "Ja hocu cokolada." }], generate: metCorrectie("Ja hocu čokoladu.") });
+check("G24b", "haalt het voorstel de poorten niet, dan blijft de zekere herstelling staan",
+  r5b.ok && r5b.verbeterd?.bron === "controle" && r5b.verbeterd.tekst === "Ja hoću čokolada.", JSON.stringify(r5b.ok && r5b.verbeterd));
+const r6 = await beurt({ scenario: s0, les: 3, historie: [{ rol: "bot", tekst: s0.opening_hr }, { rol: "jij", tekst: "Ja hoću vodu i sok." }], generate: metCorrectie("Ja hoću vodu i sok.") });
+check("G25", "een «verbetering» die gelijk is aan je eigen zin wordt niet getoond", r6.ok && r6.verbeterd === null, "");
+const r7 = await beurt({ scenario: s0, les: 3, historie: [{ rol: "bot", tekst: s0.opening_hr }, { rol: "jij", tekst: "Ja hoću kavu molim." }], generate: metCorrectie("Molim vas, hoću kafu i hleb.") });
+check("G26", "een verbetering van het model die de poorten niet haalt, wordt niet getoond", r7.ok && r7.verbeterd === null, "");
+const r8 = await beurt({ scenario: s0, les: 3, historie: [{ rol: "bot", tekst: s0.opening_hr }, { rol: "jij", tekst: "Ja hoću kava, molim." }], generate: metCorrectie("Ja hoću kavu, molim.") });
+check("G27", "een goede verbetering van het model wordt getoond, met de bron erbij",
+  r8.ok && r8.verbeterd?.bron === "bot" && r8.verbeterd.tekst === "Ja hoću kavu, molim.", JSON.stringify(r8.ok && r8.verbeterd));
+check("G28", "het antwoord van de bot hoeft geen vertaling mee te leveren (die komt op verzoek)", r8.ok && r8.nl === "", "");
 
 let gezien = "";
 let k = 0;

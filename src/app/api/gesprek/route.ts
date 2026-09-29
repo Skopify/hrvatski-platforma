@@ -14,11 +14,33 @@ export async function GET() {
  * Er wordt niets opgeslagen.
  */
 export async function POST(request: Request) {
-  let body: { scenario?: unknown; les?: unknown; historie?: unknown; warm?: unknown };
+  let body: { scenario?: unknown; les?: unknown; historie?: unknown; warm?: unknown; vertaal?: unknown };
   try {
     body = await request.json();
   } catch {
     return Response.json({ ok: false, reden: "fout", detail: "ongeldig verzoek" }, { status: 400 });
+  }
+
+  // Vertaling op verzoek: kort en apart, zodat gewone beurten sneller zijn.
+  if (typeof body.vertaal === "string" && body.vertaal.trim()) {
+    try {
+      const ruw = await ollamaChat(
+        [
+          {
+            role: "system",
+            content:
+              'Translate the Croatian sentence into natural Dutch. Reply ONLY with JSON: {"nl": "the Dutch translation"}.',
+          },
+          { role: "user", content: body.vertaal.slice(0, 300) },
+        ],
+        60_000,
+        { num_predict: 80 },
+      );
+      const nl = (JSON.parse(ruw) as { nl?: unknown }).nl;
+      return Response.json({ ok: typeof nl === "string" && nl.trim() !== "", nl: typeof nl === "string" ? nl.trim() : "" });
+    } catch {
+      return Response.json({ ok: false, nl: "" });
+    }
   }
 
   const scenario = typeof body.scenario === "string" ? loadScenario(body.scenario) : undefined;
