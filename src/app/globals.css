@@ -248,6 +248,7 @@
    vlak zelf: zijn eigen rand en schaduw blijven de krijtkleur van het thema),
    zodat de componenten er niets van hoeven te weten. */
 [class*="bg-pop-"] * {
+  --doodle-mix: 100%;
   --color-surface: #ffffff;
   --color-sunken: #f1eee7;
   --color-outline: #1b1a22;
@@ -280,6 +281,8 @@
 }
 :root[data-theme="dark"] {
   --dot: rgb(245 242 234 / 0.07);
+  /* Iconen: de pastelvlek wordt donkerder, zodat de krijtlijn erop afsteekt (beide licht was vlak). */
+  --doodle-mix: 74%;
 }
 
 /* ----------------------------------------------------------------- basis --- */

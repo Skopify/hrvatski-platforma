@@ -14,7 +14,7 @@ export default function NotFound() {
         <Sparkle size={30} className="absolute left-8 top-8 -rotate-12" color="var(--color-pop-yellow)" />
         <Sparkle size={20} className="absolute right-10 top-14 rotate-12" color="#ffffff" />
 
-        <div className="mx-auto flex h-24 w-24 -rotate-6 items-center justify-center rounded-[26px] border-2 border-outline bg-white shadow-[4px_4px_0_#1b1a22]">
+        <div className="mx-auto flex h-24 w-24 -rotate-6 items-center justify-center rounded-[26px] border-2 border-outline bg-surface shadow-[4px_4px_0_#1b1a22]">
           <Doodle name="question" size={62} color="var(--color-pop-yellow)" />
         </div>
 

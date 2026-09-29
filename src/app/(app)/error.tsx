@@ -21,7 +21,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
   return (
     <Page width="focus">
       <section className="hero relative mt-10 bg-pop-peach px-6 pb-10 pt-12 text-center text-on-pop sm:px-12">
-        <div className="mx-auto flex h-24 w-24 rotate-6 items-center justify-center rounded-[26px] border-2 border-outline bg-white shadow-[4px_4px_0_#1b1a22]">
+        <div className="mx-auto flex h-24 w-24 rotate-6 items-center justify-center rounded-[26px] border-2 border-outline bg-surface shadow-[4px_4px_0_#1b1a22]">
           <Doodle name="cross" size={56} color="var(--color-pop-pink)" />
         </div>
         <h1 className="hr-text display mt-8 text-[34px] sm:text-[42px]">

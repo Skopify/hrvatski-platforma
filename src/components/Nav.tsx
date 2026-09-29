@@ -151,7 +151,7 @@ export function Nav({
                   className="group relative flex flex-col items-center gap-1 rounded-xl px-1 py-2 lg:flex-row lg:gap-3 lg:px-3 lg:py-2"
                 >
                   <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
-                    <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} />
+                    <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} opVlak={on} />
                     {badge ? (
                       <span className="num absolute -right-2 -top-1.5 min-w-[19px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] text-ink leading-[15px] text-on-pop lg:hidden">
                         {badge > 99 ? "99" : badge}
@@ -249,7 +249,7 @@ export function Nav({
                   className="tab-item group flex h-[56px] w-full flex-col items-center justify-center gap-0.5"
                 >
                   <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
-                    <Doodle name={s.doodle} size={26} color={on ? "#ffffff" : s.pop} />
+                    <Doodle name={s.doodle} size={26} color={on ? "#ffffff" : s.pop} opVlak={on} />
                     {badge ? (
                       <span className="num absolute -right-3 -top-2 min-w-[18px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] leading-[14px] text-ink">
                         {badge > 99 ? "99" : badge}
@@ -275,7 +275,7 @@ export function Nav({
             >
               <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
                 {inMeer && active ? (
-                  <Doodle name={active.doodle} size={26} color="#ffffff" />
+                  <Doodle name={active.doodle} size={26} color="#ffffff" opVlak />
                 ) : (
                   <Doodle name="punten" size={26} color="var(--color-pop-lilac)" />
                 )}
@@ -313,7 +313,7 @@ export function Nav({
                     className={`flex min-h-[64px] items-center gap-3 rounded-[20px] border-2 border-outline px-3 py-2 text-[16px] font-bold shadow-[3px_3px_0_var(--color-outline)] active:translate-x-px active:translate-y-px active:shadow-[1px_1px_0_var(--color-outline)] ${on ? "text-on-pop" : "bg-surface text-ink"}`}
                     style={on ? { background: s.pop } : undefined}
                   >
-                    <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} />
+                    <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} opVlak={on} />
                     {s.label}
                   </Link>
                 </li>

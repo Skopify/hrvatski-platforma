@@ -198,6 +198,7 @@ export function Doodle({
   stroke = 2,
   className = "",
   style,
+  opVlak = false,
 }: {
   name: DoodleName;
   size?: number;
@@ -205,6 +206,8 @@ export function Doodle({
   stroke?: number;
   className?: string;
   style?: CSSProperties;
+  /** Ligt het icoon op een pastelvlak dat geen ouder is (zoals het schuivende menu-blok)? Dan altijd donkere inkt. */
+  opVlak?: boolean;
 }) {
   const shape: Shape = SHAPES[name];
   return (
@@ -216,11 +219,11 @@ export function Doodle({
       aria-hidden
       focusable="false"
       className={`shrink-0 overflow-visible ${className}`}
-      style={style}
+      style={opVlak ? ({ ...style, "--color-outline": "#1b1a22", "--doodle-mix": "100%" } as CSSProperties) : style}
     >
       <g className="rough">
         {shape.f ? (
-          <g transform="translate(1.7 1.7)" style={{ fill: color }} stroke="none">
+          <g transform="translate(1.7 1.7)" style={{ fill: `color-mix(in srgb, ${color} var(--doodle-mix, 100%), var(--color-plane))` }} stroke="none">
             {shape.f.map((d, i) => (
               <path key={i} d={d} />
             ))}

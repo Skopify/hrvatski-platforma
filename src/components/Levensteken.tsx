@@ -71,7 +71,7 @@ export function Levensteken({ beheerd }: { beheerd: boolean }) {
   return (
     <div className="fixed inset-0 z-[90] flex items-center justify-center bg-plane/95 px-6" role="alertdialog" aria-live="assertive">
       <div className="hero max-w-md bg-pop-yellow px-8 py-10 text-center text-on-pop">
-        <div className="mx-auto flex h-20 w-20 rotate-3 items-center justify-center rounded-[22px] border-2 border-outline bg-white shadow-[4px_4px_0_#1b1a22]">
+        <div className="mx-auto flex h-20 w-20 rotate-3 items-center justify-center rounded-[22px] border-2 border-outline bg-surface shadow-[4px_4px_0_#1b1a22]">
           <Doodle name={weg === "afgesloten" ? "check" : weg === "herstart" ? "loop" : "moon"} size={48} color="var(--color-pop-mint)" />
         </div>
         <h1 className="display mt-6 text-[30px]">{weg === "afgesloten" ? "Tot de volgende keer." : weg === "herstart" ? "Even opnieuw starten…" : "Hrvatski is gestopt."}</h1>
@@ -112,7 +112,7 @@ export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; co
       <button type="button" onClick={afsluiten} disabled={bezig} className="pill h-8 bg-pop-coral px-3 text-[13px] text-on-pop active:scale-95">
         Ja, sluit af
       </button>
-      <button type="button" onClick={() => setZeker(false)} className="pill h-8 bg-white px-3 text-[13px] text-on-pop active:scale-95">
+      <button type="button" onClick={() => setZeker(false)} className="pill h-8 bg-surface px-3 text-[13px] text-ink active:scale-95">
         Nee
       </button>
     </div>
@@ -122,7 +122,7 @@ export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; co
       onClick={() => setZeker(true)}
       title="Hrvatski afsluiten"
       aria-label="Hrvatski afsluiten"
-      className="pill h-8 gap-1.5 bg-white px-3 text-[13px] text-on-pop active:scale-95"
+      className="pill h-8 gap-1.5 bg-surface px-3 text-[13px] text-ink active:scale-95"
     >
       <Doodle name="moon" size={16} color="var(--color-pop-lilac)" />
       {compact ? null : "Afsluiten"}

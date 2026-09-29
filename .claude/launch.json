@@ -13,6 +13,15 @@
         "127.0.0.1"
       ],
       "port": 3000
+    },
+    {
+      "name": "hrvatski-test",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": [
+        "-c",
+        "HRVATSKI_DATA=\"$PWD/data-test\" exec /usr/local/bin/node node_modules/next/dist/bin/next dev --port 3200 -H 127.0.0.1"
+      ],
+      "port": 3200
     }
   ]
 }

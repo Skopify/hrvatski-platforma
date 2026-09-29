@@ -30,7 +30,7 @@ export function TelefoonKnop({ beheerd, compact = false }: { beheerd: boolean; c
         onClick={() => setOpen(true)}
         title="Telefoon & iPad"
         aria-label="Telefoon en iPad"
-        className="pill h-8 gap-1.5 bg-white px-3 text-[13px] text-on-pop active:scale-95"
+        className="pill h-8 gap-1.5 bg-surface px-3 text-[13px] text-ink active:scale-95"
       >
         <Doodle name="praat" size={16} color="var(--color-pop-aqua)" />
         {compact ? null : "Telefoon"}
