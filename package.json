@@ -41,6 +41,7 @@
     "check:accounts": "tsx scripts/check-accounts.ts",
     "gebruiker": "tsx scripts/gebruiker.ts",
     "testaccount": "tsx scripts/maak-testaccount.ts",
+    "meet:gesprek": "tsx scripts/meet-gesprek.ts",
     "dev:test": "HRVATSKI_DATA=$PWD/data-test next dev --port 3200 -H 127.0.0.1",
     "seed:een": "tsx scripts/seed.ts",
     "check:accounts:http": "tsx scripts/check-accounts-http.ts"

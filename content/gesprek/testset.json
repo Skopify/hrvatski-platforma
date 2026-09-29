@@ -1,0 +1,29 @@
+{
+  "_opmerking": "Meetset voor de gespreksbot (npm run meet:gesprek). Per beurt: wat de leerder zegt en, bij een fout, de zin zoals die hoort. Alleen eenvoudige, zekere correcties; markeer bij twijfel voor de nakijker en haal de beurt weg. Dit is geen leerinhoud en komt nooit op het scherm.",
+  "beurten": [
+    { "scenario": "kavana", "jij": "Kavu, molim." },
+    { "scenario": "kavana", "jij": "Ja hocu kava.", "goed": "Ja hoću kavu." },
+    { "scenario": "kavana", "jij": "Želim čaj i kolač." },
+    { "scenario": "kavana", "jij": "Ja zelim vodu.", "goed": "Ja želim vodu." },
+    { "scenario": "upoznavanje", "jij": "Zovem se Anna." },
+    { "scenario": "upoznavanje", "jij": "Ja sam iz Nizozemska.", "goed": "Ja sam iz Nizozemske." },
+    { "scenario": "upoznavanje", "jij": "Drago mi je." },
+    { "scenario": "upoznavanje", "jij": "Imam trideset godina." },
+    { "scenario": "trznica", "jij": "Molim kilu jabuka." },
+    { "scenario": "trznica", "jij": "Ja hocu sok.", "goed": "Ja hoću sok." },
+    { "scenario": "trznica", "jij": "Koliko kosta sok?", "goed": "Koliko košta sok?" },
+    { "scenario": "trznica", "jij": "Želim jabuke." },
+    { "scenario": "put", "jij": "Gdje je stanica?" },
+    { "scenario": "put", "jij": "Idem u Zagreb." },
+    { "scenario": "put", "jij": "Ja idem u Zagreba.", "goed": "Ja idem u Zagreb." },
+    { "scenario": "put", "jij": "Gdje je kolodvor?" },
+    { "scenario": "obitelj", "jij": "Imam sestru." },
+    { "scenario": "obitelj", "jij": "Imam brata." },
+    { "scenario": "obitelj", "jij": "Imam sestra.", "goed": "Imam sestru." },
+    { "scenario": "obitelj", "jij": "Moja majka je učiteljica." },
+    { "scenario": "dan", "jij": "Dobro jutro." },
+    { "scenario": "dan", "jij": "Dobar dan!" },
+    { "scenario": "dan", "jij": "Dobra dan.", "goed": "Dobar dan." },
+    { "scenario": "dan", "jij": "Ja sam umoran." }
+  ]
+}
