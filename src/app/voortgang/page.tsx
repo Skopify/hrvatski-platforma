@@ -27,6 +27,10 @@ export const dynamic = "force-dynamic";
 
 const GROUPS: Milestone["group"][] = ["Volhouden", "Woordenschat", "Vakmanschap", "Verhalen"];
 
+const MAANDEN = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
+/** "2026-09-29" → "29 sep": leesbaarder dan "09-29". */
+const dagLabel = (iso: string) => `${Number(iso.slice(8, 10))} ${MAANDEN[Number(iso.slice(5, 7)) - 1]}`;
+
 export default function ProgressPage() {
   const nakijkstand = stand();
   const profile = getProfile();
@@ -162,6 +166,8 @@ export default function ProgressPage() {
       <section className="mb-8 grid gap-4 lg:grid-cols-2">
         <BarList
           title="Beheersing per onderwerp"
+          pop="mint"
+          fill="mint"
           data={topics.map((t) => ({
             label: t.topic,
             value: t.mastery,
@@ -171,6 +177,8 @@ export default function ProgressPage() {
         />
         <BarList
           title="Zwakke punten — accuratesse"
+          pop="peach"
+          fill="pink"
           data={weak.map((t) => ({
             label: t.topic,
             value: t.accuracy,
@@ -187,13 +195,17 @@ export default function ProgressPage() {
       <section className="mb-8 grid gap-4 lg:grid-cols-2">
         <BarList
           title="Herhalingen komende twee weken"
-          data={forecast.map((d) => ({ label: d.date.slice(5), value: d.count }))}
+          pop="sky"
+          fill="sky"
+          data={forecast.map((d) => ({ label: dagLabel(d.date), value: d.count }))}
           percent={false}
           emptyLabel="Nog niets ingepland"
         />
         <BarList
           title="Minuten per dag, laatste 14 dagen"
-          data={time.map((d) => ({ label: d.date.slice(5), value: Math.round(d.minutes) }))}
+          pop="yellow"
+          fill="yellow"
+          data={time.map((d) => ({ label: dagLabel(d.date), value: Math.round(d.minutes) }))}
           percent={false}
           emptyLabel="Nog geen sessies"
         />

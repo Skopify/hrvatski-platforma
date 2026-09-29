@@ -520,49 +520,63 @@ export interface BarDatum {
   emphasis?: boolean;
 }
 
-function barPath(w: number, h: number, r: number): string {
-  const rr = Math.min(r, w, h / 2);
-  if (w <= 0) return "";
-  return `M0,0 H${w - rr} A${rr},${rr} 0 0 1 ${w},${rr} V${h - rr} A${rr},${rr} 0 0 1 ${w - rr},${h} H0 Z`;
-}
 
+const BAR_FILL = {
+  yellow: "bg-pop-yellow",
+  mint: "bg-pop-mint",
+  sky: "bg-pop-sky",
+  pink: "bg-pop-pink",
+  peach: "bg-pop-peach",
+  lilac: "bg-pop-lilac",
+} as const;
+
+/**
+ * Staven als dikke pillen met inktrand, zoals «Uren tegenover het niveau» en de
+ * meters op het overzicht: een witte pill met een gekleurd vulstuk dat aan het eind
+ * een inktlijn heeft. Labels in het handschrift, cijfers in de displayletter.
+ * Een staaf die opvalt (emphasis) krijgt koraal in plaats van de gewone kleur.
+ */
 export function BarList({
   data,
   title,
   hint,
   percent = true,
   emptyLabel = "Nog geen data",
+  pop = "lilac",
+  fill = "yellow",
 }: {
   data: BarDatum[];
   title: string;
   hint?: string;
   percent?: boolean;
   emptyLabel?: string;
+  /** De kleur van de kaart. */
+  pop?: keyof typeof CARD_POP;
+  /** De kleur van het vulstuk. */
+  fill?: keyof typeof BAR_FILL;
 }) {
-  const max = Math.max(...data.map((d) => d.value), percent ? 1 : 1);
+  const max = Math.max(...data.map((d) => d.value), 1);
 
   return (
-    <ChartCard title={title} hint={hint} pop="lilac">
+    <ChartCard title={title} hint={hint} pop={pop}>
       {data.length === 0 ? (
-        <p className="py-6 text-center text-[13px] text-ink-muted">{emptyLabel}</p>
+        <p className="hand py-6 text-center text-[14px] font-bold">{emptyLabel}</p>
       ) : (
-        <ul className="space-y-3">
+        <ul className="space-y-2.5">
           {data.map((d) => {
-            const pct = max > 0 ? d.value / max : 0;
+            const pct = percent ? Math.min(1, d.value) : d.value / max;
             return (
-              <li key={d.label} className="grid grid-cols-[128px_1fr_auto] items-center gap-3">
-                <span className="truncate text-[13px] font-medium text-ink-secondary" title={d.label}>
+              <li key={d.label} className="grid grid-cols-[minmax(0,9rem)_1fr_auto] items-center gap-3">
+                <span className="hand truncate text-[13.5px] font-bold" title={d.label}>
                   {d.label}
                 </span>
-                <svg viewBox="0 0 300 14" preserveAspectRatio="none" className="h-3.5 w-full">
-                  <rect x={0} y={0} width={300} height={14} fill="var(--color-ramp-0)" rx={0} />
-                  <path
-                    d={barPath(Math.max(pct * 300, d.value > 0 ? 4 : 0), 14, 4)}
-                    fill={d.emphasis ? "var(--color-bad)" : ACCENT}
-                    className="animate-grow-x"
+                <div className="h-5 w-full overflow-hidden rounded-full border-2 border-outline bg-white">
+                  <div
+                    className={`h-full origin-left animate-grow-x rounded-full border-r-2 border-outline ${d.emphasis ? "bg-pop-coral" : BAR_FILL[fill]}`}
+                    style={{ width: `${d.value > 0 ? Math.max(pct * 100, 4) : 0}%` }}
                   />
-                </svg>
-                <span className="tabular w-14 text-right text-[13px] font-bold text-ink">
+                </div>
+                <span className="num w-12 text-right text-[15px]">
                   {percent ? `${Math.round(d.value * 100)}%` : Math.round(d.value)}
                 </span>
               </li>
