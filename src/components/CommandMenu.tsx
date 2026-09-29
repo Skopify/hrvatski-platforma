@@ -134,7 +134,7 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
             aria-label="Zoeken"
             className="no-ring h-14 w-full bg-transparent text-[17px] font-medium text-ink outline-none placeholder:font-normal placeholder:text-ink-muted"
           />
-          <kbd className="hand hidden shrink-0 rounded-md border-2 border-outline bg-plane px-1.5 py-0.5 text-[11px] font-bold sm:inline">
+          <kbd className="hand hidden shrink-0 rounded-md border-2 border-outline bg-plane px-1.5 py-0.5 text-[12px] font-bold sm:inline">
             esc
           </kbd>
         </div>
@@ -174,7 +174,7 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
                     ) : null}
                   </span>
                   {selected ? (
-                    <kbd className="hand shrink-0 rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[11px] font-bold text-ink">
+                    <kbd className="hand shrink-0 rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[12px] font-bold text-ink">
                       ↵
                     </kbd>
                   ) : null}
@@ -190,6 +190,9 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
 
 /** Knop die het zoekvenster opent — voor de zijbalk en het overzicht. */
 export function SearchButton({ className = "", compact = false }: { className?: string; compact?: boolean }) {
+  // Op Windows en Linux is de sneltoets Ctrl+K; de eerste verf blijft ⌘K (server = client).
+  const [mac, setMac] = useState(true);
+  useEffect(() => setMac(/Mac|iPhone|iPad/.test(navigator.platform)), []);
   return (
     <button
       type="button"
@@ -201,7 +204,7 @@ export function SearchButton({ className = "", compact = false }: { className?: 
       {compact ? null : (
         <>
           <span className="flex-1 text-left text-[14.5px] font-semibold text-ink-secondary">Zoeken</span>
-          <kbd className="hand rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[11px] font-bold">⌘K</kbd>
+          <kbd className="hand rounded-md border-2 border-outline bg-surface px-1.5 py-0.5 text-[12px] font-bold">{mac ? "⌘K" : "Ctrl K"}</kbd>
         </>
       )}
     </button>

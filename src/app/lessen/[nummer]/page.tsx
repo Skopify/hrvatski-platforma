@@ -11,7 +11,7 @@ function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
   return (
     <div className="thin-scroll mt-4 overflow-x-auto rounded-2xl border-2 border-dashed border-line-strong bg-plane/60 p-1">
       <table className="w-full border-collapse text-[13.5px]">
-        <caption className="px-3 pb-2 pt-2.5 text-left text-[12px] text-ink-muted">
+        <caption className="px-3 pb-2 pt-2.5 text-left text-[13px] text-ink-muted">
           {paradigm.caption_nl}
         </caption>
         <thead>
@@ -20,7 +20,7 @@ function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
             {paradigm.columns.map((c) => (
               <th
                 key={c}
-                className="px-3 py-2 text-left text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted"
+                className="px-3 py-2 text-left text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted"
               >
                 {c}
               </th>
@@ -31,7 +31,7 @@ function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
           {/* Labels mogen herhalen (twee rijen 'muški'), dus de index is hier de sleutel. */}
           {paradigm.rows.map((row, rowIndex) => (
             <tr key={rowIndex} className="odd:bg-surface">
-              <td className="rounded-l-lg py-2.5 pl-3 pr-3 text-[12px] font-medium text-ink-muted">
+              <td className="rounded-l-lg py-2.5 pl-3 pr-3 text-[13px] font-medium text-ink-muted">
                 {row.label}
               </td>
               {row.cells.map((cell, i) => (
@@ -104,7 +104,7 @@ export default async function LessonPage({
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-2">
               <Pill tone="accent">{lesson.cefr}</Pill>
-              <span className="text-[12px] text-ink-muted">Eenheid {lesson.number}</span>
+              <span className="text-[13px] text-ink-muted">Eenheid {lesson.number}</span>
               {status === "done" ? <Pill tone="good">Afgerond</Pill> : null}
               {status === "in_progress" ? <Pill tone="gold">Bezig</Pill> : null}
             </div>
@@ -123,7 +123,7 @@ export default async function LessonPage({
           >
             {status === "done" ? "Nog een keer" : status === "in_progress" ? "Hervatten" : "Start les"}
           </Link>
-          <span className="tabular text-[12.5px] text-ink-muted">
+          <span className="tabular text-[13px] text-ink-muted">
             {exerciseCount} oefeningen · {lesson.vocab.length} woorden ·{" "}
             {lesson.grammar.length} grammaticapunten
           </span>
@@ -174,7 +174,7 @@ export default async function LessonPage({
 
               {g.contrast_nl ? (
                 <div className="mt-4 overflow-hidden rounded-2xl bg-accent-wash px-4 py-3.5">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-accent">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-accent">
                     Tegenover het Nederlands
                   </p>
                   <p className="mt-1.5 text-[13px] leading-relaxed text-ink-secondary">
@@ -187,7 +187,7 @@ export default async function LessonPage({
 
               {g.pitfalls_nl?.length ? (
                 <div className="mt-5 rounded-2xl bg-warn-wash px-4 py-3.5">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-warn">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-warn">
                     Valkuilen
                   </p>
                   <ul className="mt-2 space-y-1.5">
@@ -207,7 +207,7 @@ export default async function LessonPage({
               ) : null}
 
               {g.source ? (
-                <p className="mt-4 text-[11.5px] text-ink-muted">Bron: {g.source}</p>
+                <p className="mt-4 text-[13px] text-ink-muted">Bron: {g.source}</p>
               ) : null}
             </article>
           ))}
@@ -220,7 +220,7 @@ export default async function LessonPage({
 
         {phrases.length > 0 ? (
           <div className="card mb-4 px-6 py-5">
-            <h3 className="mb-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
               Uitdrukkingen
             </h3>
             <ul className="grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
@@ -236,17 +236,17 @@ export default async function LessonPage({
 
         {nouns.length > 0 ? (
           <div className="card mb-4 px-6 py-5">
-            <h3 className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
               Zelfstandige naamwoorden
             </h3>
-            <p className="mb-4 mt-1.5 text-[12px] leading-relaxed text-ink-muted">
+            <p className="mb-4 mt-1.5 text-[13px] leading-relaxed text-ink-muted">
               Het geslacht en de genitief staan erbij omdat ze samen de hele verbuiging
               vastleggen — een woord zonder die twee moet je later opnieuw leren.
             </p>
             <div className="thin-scroll overflow-x-auto">
               <table className="w-full border-collapse text-[13px]">
                 <thead>
-                  <tr className="text-[11px] uppercase tracking-[0.06em] text-ink-muted">
+                  <tr className="text-[12px] uppercase tracking-[0.06em] text-ink-muted">
                     <th className="border-b border-line py-2 text-left font-bold">Kroatisch</th>
                     <th className="border-b border-line py-2 text-left font-bold">Nederlands</th>
                     <th className="border-b border-line py-2 text-left font-bold">Geslacht</th>
@@ -281,7 +281,7 @@ export default async function LessonPage({
 
         {rest.length > 0 ? (
           <div className="card px-6 py-5">
-            <h3 className="mb-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
               Overige woorden
             </h3>
             <ul className="grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
@@ -306,7 +306,7 @@ export default async function LessonPage({
         ) : null}
       </section>
 
-      <p className="text-[12px] text-ink-muted">
+      <p className="text-[13px] text-ink-muted">
         Bron: udžbenik p. {lesson.source.udzbenik_pages}, vježbenica p.{" "}
         {lesson.source.vjezbenica_pages}.
       </p>

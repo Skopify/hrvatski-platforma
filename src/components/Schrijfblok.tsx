@@ -107,14 +107,14 @@ export function Schrijfblok({
           <span className="text-[13.5px] font-semibold text-ink">
             {opdracht.soort === "verhaal" ? "Een voorbeeld — pas openen als je vastzit" : "Zo doet iemand anders het"}
           </span>
-          <span className="text-[12px] text-ink-muted">{model ? "verbergen" : "bekijken"}</span>
+          <span className="text-[13px] text-ink-muted">{model ? "verbergen" : "bekijken"}</span>
         </button>
         {model ? (
           <div className="mt-2 rounded-card border-2 border-outline bg-surface px-5 py-4">
             <p className="hr-text whitespace-pre-line text-[15.5px] leading-relaxed text-ink">
               {opdracht.model_nl}
             </p>
-            <p className="mt-3 text-[12.5px] leading-relaxed text-ink-muted">
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               Niet hét antwoord — een antwoord. Kijk hoe de zinnen gebouwd zijn, schrijf dan
               iets van jezelf.
             </p>
@@ -125,7 +125,7 @@ export function Schrijfblok({
       {/* 2. De bouwstenen. */}
       {bank.length ? (
         <section className="mb-5 rounded-card border-2 border-outline bg-surface px-5 py-4">
-          <p className="mb-2.5 text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+          <p className="mb-2.5 text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
             Woorden die je hier kunt gebruiken
           </p>
           <ul className="flex flex-wrap gap-1.5">
@@ -139,7 +139,7 @@ export function Schrijfblok({
               </li>
             ))}
           </ul>
-          <p className="mt-2.5 text-[12px] text-ink-muted">
+          <p className="mt-2.5 text-[13px] text-ink-muted">
             Woordenboekvormen — de juiste uitgang moet je zelf maken.
           </p>
         </section>
@@ -160,7 +160,7 @@ export function Schrijfblok({
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
         <SpecialChars onInsert={invoegen} />
-        <span className="text-[12.5px] text-ink-muted">
+        <span className="text-[13px] text-ink-muted">
           {woorden} van {opdracht.streef_woorden} woorden
           {bewaard ? " · bewaard" : ""}
         </span>
@@ -222,7 +222,7 @@ export function Schrijfblok({
           {fouten ? (
             <section className="rounded-card border border-warm/30 bg-warm-wash px-5 py-4">
               <h3 className="display-soft mb-1 text-[16px] text-ink">Kijk hier nog eens naar</h3>
-              <p className="mb-3 text-[12.5px] text-ink-muted">
+              <p className="mb-3 text-[13px] text-ink-muted">
                 Ik zeg wat er aan de hand is, niet meteen wat het moet zijn. Kom je er niet uit,
                 klik dan door.
               </p>
@@ -300,7 +300,7 @@ export function Schrijfblok({
           {(vormen.length || onbekend.length || namen.length) ? (
             <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
               <h3 className="display-soft mb-1.5 text-[16px] text-ink">Wat ik niet kon plaatsen</h3>
-              <p className="mb-2.5 text-[12.5px] leading-relaxed text-ink-muted">
+              <p className="mb-2.5 text-[13px] leading-relaxed text-ink-muted">
                 Geen fouten — dingen waar ik niets over kan zeggen. Het Kroatisch is groter dan
                 deze leergang.
               </p>

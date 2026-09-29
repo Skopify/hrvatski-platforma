@@ -113,7 +113,7 @@ export default function ProgressPage() {
               {hours < 10 ? hours.toFixed(1) : Math.round(hours)}
               <span className="ml-1 text-[16px] text-ink-muted">u</span>
             </p>
-            <p className="mt-1.5 text-[12px] text-ink-muted">hier gemaakt</p>
+            <p className="mt-1.5 text-[13px] text-ink-muted">hier gemaakt</p>
           </div>
         </div>
 
@@ -124,13 +124,13 @@ export default function ProgressPage() {
             return (
               <div key={r.code} className="grid grid-cols-[58px_1fr_auto] items-center gap-3">
                 <span
-                  className={`text-[12px] font-bold ${
+                  className={`text-[13px] font-bold ${
                     r.code === rank.code ? "text-accent" : done ? "text-good-ink" : "text-ink-muted"
                   }`}
                 >
                   {r.code}
                 </span>
-                <div className="h-3.5 w-full overflow-hidden rounded-full border-2 border-outline bg-surface">
+                <div className="h-5 w-full overflow-hidden rounded-full border-2 border-outline bg-surface">
                   <div
                     className={`h-full rounded-full border-r-2 border-outline animate-grow-x origin-left ${
                       done ? "bg-pop-mint" : "bg-pop-yellow"
@@ -138,7 +138,7 @@ export default function ProgressPage() {
                     style={{ width: `${Math.max(pct * 100, pct > 0 ? 2 : 0)}%` }}
                   />
                 </div>
-                <span className="tabular w-24 text-right text-[12px] text-ink-muted">
+                <span className="tabular w-24 text-right text-[13px] text-ink-muted">
                   {Math.round(hours)} / {r.hours} u
                 </span>
               </div>
@@ -210,13 +210,13 @@ export default function ProgressPage() {
         <div className="mt-5 flex flex-wrap items-baseline gap-10">
           <div>
             <p className="display tabular text-[30px] leading-none text-warm">{near.nearMiss}</p>
-            <p className="mt-2 text-[12px] text-ink-muted">bijna-goed antwoorden</p>
+            <p className="mt-2 text-[13px] text-ink-muted">bijna-goed antwoorden</p>
           </div>
           <div>
             <p className="display tabular text-[30px] leading-none text-ink">
               {near.total ? `${Math.round(near.share * 100)}%` : "—"}
             </p>
-            <p className="mt-2 text-[12px] text-ink-muted">van alle goedgekeurde antwoorden</p>
+            <p className="mt-2 text-[13px] text-ink-muted">van alle goedgekeurde antwoorden</p>
           </div>
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function ProgressPage() {
           ].map((s) => (
             <div key={s.l}>
               <p className={`display tabular text-[30px] leading-none ${s.tone}`}>{s.v}</p>
-              <p className="mt-2 text-[12px] leading-snug text-ink-muted">{s.l}</p>
+              <p className="mt-2 text-[13px] leading-snug text-ink-muted">{s.l}</p>
             </div>
           ))}
         </div>
@@ -247,7 +247,7 @@ export default function ProgressPage() {
       <section className="mb-8">
         <div className="mb-4 flex items-baseline justify-between gap-4">
           <h2 className="display-soft text-[19px] text-ink">Mijlpalen</h2>
-          <span className="tabular text-[12.5px] text-ink-muted">
+          <span className="tabular text-[13px] text-ink-muted">
             {marks.filter((m) => m.done).length} van {marks.length} behaald
           </span>
         </div>
@@ -258,7 +258,7 @@ export default function ProgressPage() {
             if (inGroup.length === 0) return null;
             return (
               <div key={group}>
-                <h3 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+                <h3 className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
                   {group}
                 </h3>
                 <ul className="grid gap-3 sm:grid-cols-2">
@@ -301,11 +301,11 @@ export default function ProgressPage() {
                               >
                                 {m.title}
                               </p>
-                              <span className="tabular shrink-0 text-[12px] font-semibold text-ink-muted">
+                              <span className="tabular shrink-0 text-[13px] font-semibold text-ink-muted">
                                 {Math.min(m.value, m.goal)}/{m.goal}
                               </span>
                             </div>
-                            <p className="mt-1 text-[12.5px] leading-relaxed text-ink-secondary">
+                            <p className="mt-1 text-[13px] leading-relaxed text-ink-secondary">
                               {m.hint}
                             </p>
                             {!m.done ? (

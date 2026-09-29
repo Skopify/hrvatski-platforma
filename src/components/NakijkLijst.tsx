@@ -87,7 +87,7 @@ export function NakijkLijst({
   return (
     <div>
       <div className="mb-5">
-        <div className="flex items-baseline justify-between text-[12.5px] text-ink-secondary">
+        <div className="flex items-baseline justify-between text-[13px] text-ink-secondary">
           <span>
             {gedaan} / {huidigeStand.totaal} pregledano
           </span>
@@ -143,7 +143,7 @@ export function NakijkLijst({
 
         {toon === "fout" ? (
           <div className="mt-7">
-            <label className="block text-[12.5px] font-semibold text-ink-secondary">
+            <label className="block text-[13px] font-semibold text-ink-secondary">
               Kako bi trebalo glasiti?
             </label>
             <textarea
@@ -153,7 +153,7 @@ export function NakijkLijst({
               autoFocus
               className="mt-2 w-full rounded-xl border-2 border-outline bg-surface px-4 py-3 text-[15px] text-ink"
             />
-            <label className="mt-4 block text-[12.5px] font-semibold text-ink-secondary">
+            <label className="mt-4 block text-[13px] font-semibold text-ink-secondary">
               Zašto? (nije obavezno)
             </label>
             <input
@@ -183,7 +183,7 @@ export function NakijkLijst({
 
         {toon === "twijfel" ? (
           <div className="mt-7">
-            <label className="block text-[12.5px] font-semibold text-ink-secondary">
+            <label className="block text-[13px] font-semibold text-ink-secondary">
               Što te smeta?
             </label>
             <input
@@ -218,7 +218,7 @@ export function NakijkLijst({
           type="button"
           onClick={terug}
           disabled={bezig}
-          className="mt-4 text-[12.5px] text-ink-secondary underline underline-offset-4 disabled:opacity-50"
+          className="mt-4 text-[13px] text-ink-secondary underline underline-offset-4 disabled:opacity-50"
         >
           Vrati prethodnu ({laatste.zin.hr.slice(0, 34)}
           {laatste.zin.hr.length > 34 ? "…" : ""})

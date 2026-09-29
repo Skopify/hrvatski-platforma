@@ -105,7 +105,7 @@
 
   --color-ink: #1b1a22;
   --color-ink-secondary: #3f3c4a;
-  --color-ink-muted: #5f5c6b;
+  --color-ink-muted: #54515f;
 
   /* De omlijning: altijd inkt. `line` is het zachte streepje BINNEN een kaart. */
   --color-outline: #1b1a22;
@@ -252,7 +252,7 @@
   --color-outline: #1b1a22;
   --color-ink: #1b1a22;
   --color-ink-secondary: #3f3c4a;
-  --color-ink-muted: #5f5c6b;
+  --color-ink-muted: #54515f;
   --color-line: rgb(27 26 34 / 0.22);
   --color-line-strong: rgb(27 26 34 / 0.4);
   --color-accent: #2f3fe0;

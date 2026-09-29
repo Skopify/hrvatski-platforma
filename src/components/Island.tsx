@@ -61,7 +61,7 @@ export function Island() {
             </span>
             <span className="min-w-0">
               <span className="block truncate text-[14.5px] font-extrabold leading-tight">{msg.text}</span>
-              {msg.sub ? <span className="hand block truncate text-[12.5px] font-semibold leading-tight">{msg.sub}</span> : null}
+              {msg.sub ? <span className="hand block truncate text-[13px] font-semibold leading-tight">{msg.sub}</span> : null}
             </span>
           </>
         ) : null}

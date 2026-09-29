@@ -129,7 +129,7 @@ export default function DashboardPage() {
             <Arrow className="absolute -bottom-9 left-[17rem] hidden h-11 w-14 sm:block" />
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             {due > 0 ? (
               <Link href="/oefenen/herhalen" className="btn btn-primary h-[52px] px-7 text-[16px]">
                 Start herhaling
@@ -141,14 +141,14 @@ export default function DashboardPage() {
             {nextLessonData ? (
               <Link
                 href={`/lessen/${nextLessonData.number}`}
-                className={`btn h-[52px] px-6 text-[16px] ${due > 0 ? "btn-ghost" : "btn-primary"}`}
+                className={`btn ${due > 0 ? "btn-ghost h-11 px-5 text-[14.5px]" : "btn-primary h-[52px] px-6 text-[16px]"}`}
               >
                 {nextLesson?.status === "in_progress" ? "Hervat je les" : "Volgende les"}
               </Link>
             ) : null}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <div className="mb-2 flex items-baseline justify-between gap-3">
               <p className="hand text-[15px] font-bold">Dagdoel</p>
               <p className="text-[13.5px] font-semibold">
@@ -196,7 +196,7 @@ export default function DashboardPage() {
                   >
                     {did ? <Doodle name="check" size={16} stroke={2.6} /> : null}
                   </span>
-                  <span className="hand text-[12px] font-bold">
+                  <span className="hand text-[13px] font-bold">
                     {new Date(`${d.date}T12:00:00`).toLocaleDateString("nl-NL", { weekday: "narrow" }).toUpperCase()}
                   </span>
                 </div>
@@ -205,7 +205,7 @@ export default function DashboardPage() {
           </div>
           <p className="mt-3 text-[13.5px] font-semibold">
             {profile.streakCurrent === 0
-              ? `Oefen vandaag voor een nieuwe reeks.${profile.streakLongest > 0 ? ` Je record: ${profile.streakLongest}.` : ""}`
+              ? `Eén ronde vandaag start je reeks.${profile.streakLongest > 0 ? ` Je record: ${profile.streakLongest}.` : ""}`
               : profile.streakLongest > profile.streakCurrent
                 ? `Je record: ${profile.streakLongest} dagen.`
                 : "Dit is je langste reeks tot nu toe!"}
@@ -326,7 +326,7 @@ export default function DashboardPage() {
                     <div className="mt-2.5">
                       <Meter value={w.accuracy} max={1} height={6} />
                     </div>
-                    <p className="mt-2 text-[12px] text-ink-muted">over {w.attempts} pogingen</p>
+                    <p className="mt-2 text-[13px] text-ink-muted">over {w.attempts} pogingen</p>
                   </div>
                 </li>
               ))}

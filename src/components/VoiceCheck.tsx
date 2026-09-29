@@ -36,7 +36,7 @@ export function VoiceCheck() {
               kwaliteit gesorteerd, dus de bovenste is meestal de juiste. */}
           {tts.croatianVoices.length > 1 ? (
             <div className="mt-4">
-              <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+              <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
                 Stem kiezen
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -46,7 +46,7 @@ export function VoiceCheck() {
                     type="button"
                     onClick={() => tts.setVoiceName(v.name)}
                     aria-pressed={tts.voice?.name === v.name}
-                    className={`rounded-full border px-3.5 py-1.5 text-[12.5px] transition-colors ${
+                    className={`rounded-full border px-3.5 py-1.5 text-[13px] transition-colors ${
                       tts.voice?.name === v.name
                         ? "border-accent-ring bg-accent-wash text-accent"
                         : "border-line bg-surface text-ink-secondary hover:border-accent-ring"
@@ -54,7 +54,7 @@ export function VoiceCheck() {
                   >
                     {v.name}
                     {!v.localService ? (
-                      <span className="ml-1.5 text-[11px] text-ink-muted">online</span>
+                      <span className="ml-1.5 text-[12px] text-ink-muted">online</span>
                     ) : null}
                   </button>
                 ))}
@@ -66,38 +66,38 @@ export function VoiceCheck() {
               slikt medeklinkers in. Bij een taal waar het verschil tussen č en ć
               het hele punt is, is dat geen detail. */}
           <div className="mt-4 rounded-lg bg-sunken px-4 py-3">
-            <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+            <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
               Klinkt het blikkerig?
             </p>
-            <p className="mt-2 text-[12.5px] leading-relaxed text-ink-secondary">
+            <p className="mt-2 text-[13px] leading-relaxed text-ink-secondary">
               Dan hoor je waarschijnlijk de compacte stem van macOS. Twee manieren om
               dat te verhelpen, allebei gratis:
             </p>
-            <p className="mt-2.5 text-[12.5px] font-semibold text-ink">
+            <p className="mt-2.5 text-[13px] font-semibold text-ink">
               1. Open dit platform in Microsoft Edge
             </p>
-            <p className="mt-1 text-[12.5px] leading-relaxed text-ink-secondary">
+            <p className="mt-1 text-[13px] leading-relaxed text-ink-secondary">
               Edge brengt eigen neurale stemmen mee die een stuk natuurlijker klinken dan
               wat macOS levert. Open dit platform daar en er verschijnt hierboven een
               keuzelijst; het platform pakt dan vanzelf de beste. Ze werken wel alleen
               met internet.
             </p>
-            <p className="mt-3 text-[12.5px] font-semibold text-ink">
+            <p className="mt-3 text-[13px] font-semibold text-ink">
               2. Haal de betere Apple-stem op
             </p>
-            <ol className="mt-1 space-y-1 text-[12.5px] leading-relaxed text-ink-secondary">
+            <ol className="mt-1 space-y-1 text-[13px] leading-relaxed text-ink-secondary">
               <li>Systeeminstellingen → Toegankelijkheid → Gesproken materiaal</li>
               <li>Systeemstem → Stemmen beheren</li>
               <li>Zoek Kroatisch en kies de variant met (Verbeterd) of (Premium)</li>
               <li>Herstart je browser</li>
             </ol>
-            <p className="mt-2 text-[12px] leading-relaxed text-ink-muted">
+            <p className="mt-2 text-[13px] leading-relaxed text-ink-muted">
               Biedt macOS alleen de gewone Lana aan, dan is er geen betere Apple-versie
               voor Kroatisch en is Edge je beste optie.
             </p>
           </div>
 
-          <p className="mt-3 text-[12px] leading-relaxed text-ink-muted">
+          <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
             Te snel? De spreeksnelheid staat bij elke luisteroefening en bij het dictee,
             en die keuze wordt onthouden.
           </p>
@@ -113,17 +113,17 @@ export function VoiceCheck() {
                 je uitspraak actief bederven.
               </p>
               <div className="mt-4 rounded-lg bg-sunken px-4 py-3">
-                <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+                <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
                   Installeren op macOS
                 </p>
-                <ol className="mt-2 space-y-1 text-[12.5px] leading-relaxed text-ink-secondary">
+                <ol className="mt-2 space-y-1 text-[13px] leading-relaxed text-ink-secondary">
                   <li>1. Systeeminstellingen → Toegankelijkheid → Gesproken materiaal</li>
                   <li>2. Klik bij Systeemstem op de knop rechts → Stemmen beheren</li>
                   <li>3. Zoek Kroatisch, vink een stem aan en download die</li>
                   <li>4. Herstart de browser en laad deze pagina opnieuw</li>
                 </ol>
               </div>
-              <p className="mt-3 text-[12px] text-ink-muted">
+              <p className="mt-3 text-[13px] text-ink-muted">
                 {tts.voices.length} stemmen beschikbaar, geen daarvan met taalcode hr.
               </p>
             </div>

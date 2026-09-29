@@ -7,6 +7,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { SearchButton } from "./CommandMenu";
 import { Doodle } from "./doodles";
 import { SECTIONS } from "./sections";
+import { PillMeter } from "./PillMeter";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./ui";
 
@@ -50,7 +51,19 @@ function useIndicator(activeIndex: number) {
   return { list, box, animate };
 }
 
-export function Nav({ streak, xp, due }: { streak: number; xp: number; due: number }) {
+export function Nav({
+  streak,
+  xp,
+  due,
+  todayXp,
+  goalXp,
+}: {
+  streak: number;
+  xp: number;
+  due: number;
+  todayXp: number;
+  goalXp: number;
+}) {
   const pathname = usePathname();
   const activeIndex = SECTIONS.findIndex((s) =>
     s.href === "/" ? pathname === "/" : pathname.startsWith(s.href),
@@ -116,18 +129,18 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
                   <span className="relative transition-transform duration-150 ease-out group-active:scale-90">
                     <Doodle name={s.doodle} size={30} color={on ? "#ffffff" : s.pop} />
                     {badge ? (
-                      <span className="num absolute -right-2 -top-1.5 min-w-[19px] rounded-full border-2 border-outline bg-pop-pink px-1 text-center text-[11px] leading-[15px] text-on-pop lg:hidden">
+                      <span className="num absolute -right-2 -top-1.5 min-w-[19px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] text-ink leading-[15px] text-on-pop lg:hidden">
                         {badge > 99 ? "99" : badge}
                       </span>
                     ) : null}
                   </span>
                   <span
-                    className={`text-[11px] leading-none lg:text-[16px] ${on ? "font-extrabold text-on-pop" : "font-semibold text-ink"}`}
+                    className={`text-[12px] leading-none lg:text-[16px] ${on ? "font-extrabold text-on-pop" : "font-semibold text-ink"}`}
                   >
                     {s.label}
                   </span>
                   {badge ? (
-                    <span className="num ml-auto hidden rounded-full border-2 border-outline bg-pop-pink px-2 text-[12px] leading-[17px] text-on-pop lg:inline">
+                    <span className="num ml-auto hidden rounded-full border-2 border-outline bg-surface px-2 text-[13px] leading-[17px] text-ink lg:inline">
                       {badge > 99 ? "99+" : badge}
                     </span>
                   ) : null}
@@ -136,6 +149,15 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
             );
           })}
         </ul>
+
+        {/* Het dagdoel blijft op elke pagina in beeld: de reden om nog één ronde te doen. */}
+        <div className="mb-3 hidden px-1 md:block" title={`Dagdoel: ${todayXp} van ${goalXp} XP`}>
+          <p className="hand mb-1.5 hidden items-baseline justify-between text-[13px] font-bold lg:flex">
+            <span>Dagdoel</span>
+            <span className="num">{Math.min(todayXp, goalXp)} / {goalXp}</span>
+          </p>
+          <PillMeter value={todayXp} max={goalXp} color="var(--color-pop-yellow)" height={16} showBurst={false} bare />
+        </div>
 
         {/* Reeks en XP als twee stickers, en het thema. */}
         <div className="flex flex-col items-center gap-3 border-t-2 border-dashed border-line-strong pt-4 lg:flex-row lg:justify-between">
@@ -184,13 +206,13 @@ export function Nav({ streak, xp, due }: { streak: number; xp: number; due: numb
                   >
                     <Doodle name={s.doodle} size={26} color={on ? "#ffffff" : s.pop} />
                     {badge ? (
-                      <span className="num absolute -right-2.5 -top-2 min-w-[18px] rounded-full border-2 border-outline bg-pop-pink px-1 text-center text-[10.5px] leading-[14px] text-on-pop">
+                      <span className="num absolute -right-2.5 -top-2 min-w-[18px] rounded-full border-2 border-outline bg-surface px-1 text-center text-[12px] text-ink leading-[14px] text-on-pop">
                         {badge > 99 ? "99" : badge}
                       </span>
                     ) : null}
                   </span>
                   {on ? (
-                    <span className="animate-rise whitespace-nowrap text-[10.5px] font-extrabold leading-none text-on-pop">
+                    <span className="animate-rise whitespace-nowrap text-[12px] font-extrabold leading-none text-on-pop">
                       {s.label}
                     </span>
                   ) : null}

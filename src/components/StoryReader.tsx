@@ -223,7 +223,7 @@ export function StoryReader({
       {/* Cultuurnoot */}
       {story.culture_nl ? (
         <aside className="card mt-10 px-6 py-5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-warm">
+          <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-warm">
             {story.culture_nl.title_nl}
           </p>
           <p className="mt-2 text-[13.5px] leading-[1.7] text-ink-secondary">
@@ -302,7 +302,7 @@ export function StoryReader({
                 Meteen naar de vragen ({comprehensionCount + exerciseCount})
               </Link>
             ) : null}
-            <p className="text-[12.5px] text-ink-muted">
+            <p className="text-[13px] text-ink-muted">
               Eerste keer lezen levert 20 XP op; daarna kun je door naar de vragen.
             </p>
           </div>
@@ -333,7 +333,7 @@ export function StoryReader({
                   <span className="text-[15px] text-ink-secondary">{shown.gloss.nl}</span>
                 </div>
                 {shown.gloss.info ? (
-                  <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-muted">
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-ink-muted">
                     {shown.gloss.info}
                   </p>
                 ) : null}
@@ -372,7 +372,7 @@ export function StoryReader({
             {shown.gloss.item ? (
               <div className="mt-3 border-t border-line-soft pt-3">
                 {saved.has(shown.gloss.item) ? (
-                  <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-good-ink">
+                  <p className="flex items-center gap-1.5 text-[13px] font-semibold text-good-ink">
                     <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden>
                       <path
                         d="M3 8.4 6.2 11.6 13 4.8"
@@ -390,7 +390,7 @@ export function StoryReader({
                     type="button"
                     onClick={save}
                     disabled={busy}
-                    className="text-[12.5px] font-semibold text-accent transition-colors hover:text-accent-hover disabled:opacity-50"
+                    className="text-[13px] font-semibold text-accent transition-colors hover:text-accent-hover disabled:opacity-50"
                   >
                     + Bewaar voor herhaling
                   </button>

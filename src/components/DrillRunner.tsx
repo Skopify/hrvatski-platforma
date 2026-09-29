@@ -297,7 +297,7 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
                     type="button"
                     onClick={() => tts.setRate(r.value)}
                     aria-pressed={tts.rate === r.value}
-                    className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
+                    className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
                       tts.rate === r.value
                         ? "bg-pop-yellow text-on-pop"
                         : "text-ink-muted hover:text-ink-secondary"

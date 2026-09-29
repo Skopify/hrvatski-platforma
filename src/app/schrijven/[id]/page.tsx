@@ -29,7 +29,7 @@ export default async function SchrijfOpdrachtPage({
 
       {opdracht.hulp_nl.length ? (
         <div className="mb-6 rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-4">
-          <p className="mb-2 text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+          <p className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
             Een zetje
           </p>
           <ul className="space-y-1.5">

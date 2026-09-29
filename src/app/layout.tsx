@@ -8,7 +8,7 @@ import { SECTIONS } from "@/components/sections";
 import { THEME_SCRIPT } from "@/components/ThemeToggle";
 import { loadLessons, loadStories } from "@/lib/content";
 import { loadModules } from "@/lib/modules";
-import { getProfile } from "@/lib/stats";
+import { dailyStats, getProfile } from "@/lib/stats";
 import { reviewableCount } from "@/lib/planner";
 import "./globals.css";
 
@@ -63,6 +63,7 @@ function searchIndex(): CommandItem[] {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   const due = reviewableCount();
+  const todayXp = dailyStats(1).at(-1)?.xp ?? 0;
 
   return (
     // Het thema-script zet data-theme vóór React er is; dat verschil is bedoeld.
@@ -75,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Island />
         <CommandMenu items={searchIndex()} />
         <div className="flex min-h-screen flex-col md:flex-row">
-          <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} />
+          <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} todayXp={todayXp} goalXp={profile.dailyGoalXp} />
           {/*
             Ruimte onder de inhoud voor de zwevende tabbalk op de telefoon:
             64px balk + 10px marge + de veilige zone, plus lucht, zodat een

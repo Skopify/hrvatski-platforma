@@ -51,7 +51,7 @@ export function VoiceLab() {
             type="button"
             onClick={() => setZin(i)}
             aria-pressed={i === zin}
-            className={`rounded-full border px-3 py-1.5 text-[12px] transition-colors ${
+            className={`rounded-full border px-3 py-1.5 text-[13px] transition-colors ${
               i === zin
                 ? "border-accent-ring bg-accent-wash text-accent"
                 : "border-line bg-surface text-ink-secondary hover:border-accent-ring"
@@ -63,11 +63,11 @@ export function VoiceLab() {
       </div>
 
       <p className="hr-text reading mt-3.5 text-[16px] leading-snug text-ink">{proef.hr}</p>
-      <p className="mt-1 text-[12.5px] text-ink-muted">{proef.nl}</p>
+      <p className="mt-1 text-[13px] text-ink-muted">{proef.nl}</p>
 
       {/* Snelheid geldt voor alle knoppen hieronder */}
       <div className="mt-4 flex flex-wrap items-center gap-2">
-        <span className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+        <span className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
           Tempo
         </span>
         <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
@@ -77,7 +77,7 @@ export function VoiceLab() {
               type="button"
               onClick={() => tts.setRate(r.value)}
               aria-pressed={tts.rate === r.value}
-              className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
+              className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
                 tts.rate === r.value
                   ? "bg-pop-yellow text-on-pop"
                   : "text-ink-muted hover:text-ink-secondary"
@@ -131,7 +131,7 @@ export function VoiceLab() {
       </div>
 
       {!tts.serverVoices.length ? (
-        <p className="mt-4 rounded-lg bg-sunken px-4 py-3 text-[12.5px] leading-relaxed text-ink-secondary">
+        <p className="mt-4 rounded-lg bg-sunken px-4 py-3 text-[13px] leading-relaxed text-ink-secondary">
           Er staat nog geen Azure-sleutel ingesteld, dus je hoort alleen de stem van je
           systeem. Zie <span className="font-medium">README → Betere stemmen</span> voor de
           vijf minuten die het kost — en het blijft binnen de gratis laag.
@@ -176,10 +176,10 @@ function AzureTest() {
       {verbruik ? (
         <div className="mb-4 rounded-lg border-2 border-dashed border-line-strong bg-sunken px-4 py-3">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <p className="text-[12px] font-semibold uppercase tracking-wide text-ink-muted">
+            <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
               Verbruik deze maand
             </p>
-            <p className="tabular text-[12.5px] text-ink-secondary">
+            <p className="tabular text-[13px] text-ink-secondary">
               {verbruik.characters.toLocaleString("nl-NL")} van{" "}
               {verbruik.limit.toLocaleString("nl-NL")} tekens
             </p>
@@ -190,7 +190,7 @@ function AzureTest() {
               style={{ width: `${Math.max(verbruik.share * 100, verbruik.characters > 0 ? 1 : 0)}%` }}
             />
           </div>
-          <p className="mt-2 text-[12px] leading-relaxed text-ink-muted">
+          <p className="mt-2 text-[13px] leading-relaxed text-ink-muted">
             De grens ligt op 80% van wat Azure gratis geeft. Erboven stopt het platform met
             ophalen en gebruikt het weer je systeemstem — er wordt niets in rekening
             gebracht. Wat al is opgeslagen blijft gewoon werken en telt nooit opnieuw mee.
@@ -211,14 +211,14 @@ function AzureTest() {
             setBezig(false);
           }
         }}
-        className="rounded-full border-2 border-outline bg-surface px-4 py-2 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent disabled:opacity-50"
+        className="rounded-full border-2 border-outline bg-surface px-4 py-2 text-[13px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent disabled:opacity-50"
       >
         {bezig ? "Bezig…" : "Verbinding testen"}
       </button>
 
       {uitslag ? (
         <p
-          className={`mt-3 rounded-lg px-4 py-3 text-[12.5px] leading-relaxed ${
+          className={`mt-3 rounded-lg px-4 py-3 text-[13px] leading-relaxed ${
             uitslag.ok ? "bg-good-wash text-good-ink" : "bg-bad-wash text-bad-ink"
           }`}
         >
@@ -250,12 +250,12 @@ function VoiceRow({
     >
       <div className="min-w-0 flex-1">
         <p className="text-[13.5px] font-semibold text-ink">{titel}</p>
-        <p className="text-[12px] text-ink-muted">{onder}</p>
+        <p className="text-[13px] text-ink-muted">{onder}</p>
       </div>
       <button
         type="button"
         onClick={onSpeel}
-        className="rounded-full border-2 border-outline bg-surface px-3.5 py-1.5 text-[12.5px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
+        className="rounded-full border-2 border-outline bg-surface px-3.5 py-1.5 text-[13px] text-ink-secondary transition-colors hover:border-accent-ring hover:text-accent"
       >
         Beluister
       </button>
@@ -269,7 +269,7 @@ function VoiceRow({
         </button>
       ) : null}
       {actief ? (
-        <span className="text-[12px] font-semibold text-accent">In gebruik</span>
+        <span className="text-[13px] font-semibold text-accent">In gebruik</span>
       ) : null}
     </div>
   );

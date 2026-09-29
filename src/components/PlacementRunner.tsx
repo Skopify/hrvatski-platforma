@@ -278,7 +278,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
             ].map(([label, n, kleur]) => (
               <div key={label as string} className="rounded-card bg-sunken px-4 py-3">
                 <p className={`tabular text-[22px] font-bold ${kleur}`}>{n as number}</p>
-                <p className="text-[12.5px] text-ink-muted">{label as string}</p>
+                <p className="text-[13px] text-ink-muted">{label as string}</p>
               </div>
             ))}
           </div>
@@ -334,12 +334,12 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
   return (
     <div>
       <div className="mb-5 flex items-baseline justify-between gap-3">
-        <p className="text-[12.5px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+        <p className="text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">
           {fase === "grammatica"
             ? v.moduleTitle
             : `Woordenschat · band ${v.band} van ${plan.bands.length}`}
         </p>
-        <p className="tabular text-[12.5px] text-ink-muted">
+        <p className="tabular text-[13px] text-ink-muted">
           {idx + 1} / {vragen.length}
         </p>
       </div>
@@ -379,7 +379,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <p className="text-[12.5px] text-ink-muted">Geen feedback tot het eind.</p>
+        <p className="text-[13px] text-ink-muted">Geen feedback tot het eind.</p>
         <button
           type="button"
           onClick={volgende}

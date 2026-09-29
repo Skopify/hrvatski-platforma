@@ -21,6 +21,7 @@ export function PillMeter({
   height = 34,
   unit = "XP",
   showBurst = true,
+  bare = false,
   children,
   className = "",
 }: {
@@ -31,6 +32,8 @@ export function PillMeter({
   unit?: string;
   /** De "+n"-sticker bij een toename. Niet bij meters die geen XP zijn. */
   showBurst?: boolean;
+  /** Geen tekst in de pill (voor kleine meters, bv. in de zijbalk). */
+  bare?: boolean;
   /** Tekst in de pill; standaard "value / max unit". */
   children?: React.ReactNode;
   className?: string;
@@ -91,15 +94,20 @@ export function PillMeter({
         >
           <span className="pill-shine" />
         </div>
-        <div className="relative flex h-full items-center justify-center px-3 text-[13px] font-bold text-on-pop mix-blend-normal">
-          <span className="rounded-full bg-surface/80 px-2 py-px text-ink">
-            {children ?? (
-              <>
-                {value} / {max} {unit}
-              </>
-            )}
-          </span>
-        </div>
+        {bare ? null : (
+          <div className="relative flex h-full items-center justify-center px-3 text-[13px] font-bold text-on-pop mix-blend-normal">
+            <span className="rounded-full bg-surface/80 px-2 py-px text-ink">
+              {children ??
+                (value === 0 ? (
+                  <>begin met één ronde · 0 / {max} {unit}</>
+                ) : (
+                  <>
+                    {value} / {max} {unit}
+                  </>
+                ))}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* "+n"-stickers: springen op vanaf het uiteinde van het vulstuk. */}

@@ -125,7 +125,7 @@ export default function StoriesPage() {
                                       Woorddekking
                                     </span>
                                     <span
-                                      className={`tabular text-[12.5px] font-bold ${VERDICT_STYLE[verdict].tone}`}
+                                      className={`tabular text-[13px] font-bold ${VERDICT_STYLE[verdict].tone}`}
                                     >
                                       {Math.round(cov.coverage * 100)}%
                                     </span>
@@ -146,32 +146,32 @@ export default function StoriesPage() {
                                       style={{ left: "95%" }}
                                     />
                                   </div>
-                                  <p className="mt-1.5 text-[11.5px] leading-snug text-ink-muted">
+                                  <p className="mt-1.5 text-[13px] leading-snug text-ink-muted">
                                     {VERDICT_TEXT[verdict]}
                                   </p>
                                 </div>
                               ) : null}
 
                               <div className="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2">
-                                <span className="tabular text-[12px] text-ink-muted">
+                                <span className="tabular text-[13px] text-ink-muted">
                                   ± {minutes} min · {words} woorden
                                 </span>
                                 {(story.comprehension?.length ?? 0) +
                                   story.exercises.length >
                                 0 ? (
-                                  <span className="tabular text-[12px] font-semibold text-accent">
+                                  <span className="tabular text-[13px] font-semibold text-accent">
                                     {(story.comprehension?.length ?? 0) +
                                       story.exercises.length}{" "}
                                     vragen
                                   </span>
                                 ) : null}
                                 <span
-                                  className="text-[12px] text-ink-muted"
+                                  className="text-[13px] text-ink-muted"
                                   aria-hidden
                                 >
                                   ·
                                 </span>
-                                <span className="text-[12px] text-ink-muted">
+                                <span className="text-[13px] text-ink-muted">
                                   {onLevel
                                     ? "Op jouw niveau"
                                     : `Op niveau na les ${story.requires_lesson}`}
@@ -180,7 +180,7 @@ export default function StoriesPage() {
                                   {story.focus_nl.slice(0, 3).map((f) => (
                                     <span
                                       key={f}
-                                      className="rounded-full bg-sunken px-2 py-0.5 text-[11px] text-ink-secondary"
+                                      className="rounded-full bg-sunken px-2 py-0.5 text-[12px] text-ink-secondary"
                                     >
                                       {f}
                                     </span>
@@ -207,7 +207,7 @@ export default function StoriesPage() {
         },
       )}
 
-      <p className="mt-9 text-[12.5px] leading-relaxed text-ink-muted">
+      <p className="mt-9 text-[13px] leading-relaxed text-ink-muted">
         Verhalen boven je niveau zijn niet op slot — maar verwacht dat je er
         meer in moet opzoeken. Opgezochte woorden kun je met één tik in je
         herhaling zetten.

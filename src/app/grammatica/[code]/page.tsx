@@ -96,7 +96,7 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
               <p className="text-[14px] font-bold text-ink">
                 <span className="tabular mr-2 text-accent">{p.step}</span>
                 {p.title_nl}
-                <span className="ml-2 text-[12px] font-medium text-ink-muted">
+                <span className="ml-2 text-[13px] font-medium text-ink-muted">
                   {STAP_LABEL[p.kind]}
                 </span>
               </p>

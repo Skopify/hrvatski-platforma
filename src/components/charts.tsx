@@ -24,28 +24,19 @@ const SURFACE = "var(--color-surface)";
 
 /* ------------------------------------------------------------- stattegel --- */
 
-const TONE_TEXT: Record<string, string> = {
-  neutral: "text-ink",
-  accent: "text-accent",
-  good: "text-good-ink",
-  warm: "text-warm",
-  gold: "text-gold",
-  bad: "text-bad-ink",
-};
-
-const TONE_WASH: Record<string, string> = {
-  neutral: "bg-sunken text-ink-secondary",
-  accent: "bg-accent-wash text-accent",
-  good: "bg-good-wash text-good-ink",
-  warm: "bg-warm-wash text-warm",
-  gold: "bg-gold-wash text-gold",
-  bad: "bg-bad-wash text-bad-ink",
-};
-
 /**
  * Eén kerncijfer. Het getal staat in de displayletter en op 34px: dat is de reden
  * dat je hem in één oogopslag leest zonder het label te hoeven zoeken.
  */
+const TILE_POP = {
+  neutral: "bg-pop-lilac",
+  accent: "bg-pop-sky",
+  good: "bg-pop-mint",
+  warm: "bg-pop-peach",
+  gold: "bg-pop-yellow",
+  bad: "bg-pop-pink",
+} as const;
+
 export function StatTile({
   label,
   value,
@@ -63,20 +54,22 @@ export function StatTile({
   meter?: number;
 }) {
   return (
-    <div className="card relative flex h-full flex-col overflow-hidden px-5 py-4">
+    <div
+      className={`relative flex h-full flex-col overflow-hidden rounded-card border-2 border-outline px-5 py-4 text-on-pop shadow-[var(--hard)] ${TILE_POP[tone]}`}
+    >
       <div className="flex items-start justify-between gap-2">
-        <p className="eyebrow">{label}</p>
+        <p className="hand text-[14px] font-bold">{label}</p>
         {icon ? (
           <span
-            className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${TONE_WASH[tone]}`}
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border-2 border-outline bg-white"
           >
             {icon}
           </span>
         ) : null}
       </div>
       {/* Het getal is inkt; kleur alleen als hij iets betekent (goed of fout). */}
-      <p className={`num mt-2 text-[38px] leading-none ${tone === "good" || tone === "bad" ? TONE_TEXT[tone] : "text-ink"}`}>{value}</p>
-      {sub ? <p className="mt-2 text-[12.5px] leading-snug text-ink-secondary">{sub}</p> : null}
+      <p className="num mt-2 text-[40px] leading-none">{value}</p>
+      {sub ? <p className="mt-2 text-[13.5px] font-semibold leading-snug">{sub}</p> : null}
       {/* De balk zakt naar de voet van de tegel, zodat tegels met en zonder balk
           in dezelfde rij dezelfde hoogte houden. */}
       {meter !== undefined ? (
@@ -124,7 +117,7 @@ export function Meter({
           style={{ width: `${Math.max(pct * 100, value > 0 ? 3 : 0)}%` }}
         />
       </div>
-      {caption ? <p className="mt-2.5 text-[12.5px] text-ink-secondary">{caption}</p> : null}
+      {caption ? <p className="mt-2.5 text-[13px] text-ink-secondary">{caption}</p> : null}
     </div>
   );
 }
@@ -254,7 +247,7 @@ export function LineChart({
       <figcaption className="mb-1">
         <span className="display-soft text-[15px] text-ink">{title}</span>
       </figcaption>
-      {hint ? <p className="mb-3 text-[12px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
+      {hint ? <p className="mb-3 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
       <div className="relative">
         <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
           <g transform={`translate(${pad.left},${pad.top})`}>
@@ -356,7 +349,7 @@ export function LineChart({
 
         {hover !== null && hasData ? (
           <div
-            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-xl border-2 border-outline bg-surface px-3 py-1.5 text-[12px] shadow-lg"
+            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-xl border-2 border-outline bg-surface px-3 py-1.5 text-[13px] shadow-lg"
             style={{
               left: `${((pad.left + x(hover)) / w) * 100}%`,
               top: `${((pad.top + y(data[hover].value) - 10) / h) * 100}%`,
@@ -407,7 +400,7 @@ export function AreaChart({
       <figcaption className="mb-1">
         <span className="display-soft text-[15px] text-ink">{title}</span>
       </figcaption>
-      {hint ? <p className="mb-3 text-[12px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
+      {hint ? <p className="mb-3 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-3" />}
       <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label={title}>
         <g transform={`translate(${pad.left},${pad.top})`}>
           {ticks.map((t) => (
@@ -506,16 +499,16 @@ export function BarList({
       <figcaption className="mb-1">
         <span className="display-soft text-[15px] text-ink">{title}</span>
       </figcaption>
-      {hint ? <p className="mb-4 text-[12px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
+      {hint ? <p className="mb-4 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
       {data.length === 0 ? (
-        <p className="py-6 text-center text-[12.5px] text-ink-muted">{emptyLabel}</p>
+        <p className="py-6 text-center text-[13px] text-ink-muted">{emptyLabel}</p>
       ) : (
         <ul className="space-y-3">
           {data.map((d) => {
             const pct = max > 0 ? d.value / max : 0;
             return (
               <li key={d.label} className="grid grid-cols-[128px_1fr_auto] items-center gap-3">
-                <span className="truncate text-[12.5px] font-medium text-ink-secondary" title={d.label}>
+                <span className="truncate text-[13px] font-medium text-ink-secondary" title={d.label}>
                   {d.label}
                 </span>
                 <svg viewBox="0 0 300 14" preserveAspectRatio="none" className="h-3.5 w-full">
@@ -526,7 +519,7 @@ export function BarList({
                     className="animate-grow-x"
                   />
                 </svg>
-                <span className="tabular w-14 text-right text-[12.5px] font-bold text-ink">
+                <span className="tabular w-14 text-right text-[13px] font-bold text-ink">
                   {percent ? `${Math.round(d.value * 100)}%` : Math.round(d.value)}
                 </span>
               </li>
@@ -609,7 +602,7 @@ export function Heatmap({
       <figcaption className="mb-1">
         <span className="display-soft text-[15px] text-ink">{title}</span>
       </figcaption>
-      {hint ? <p className="mb-4 text-[12px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
+      {hint ? <p className="mb-4 text-[13px] text-ink-muted">{hint}</p> : <div className="mb-4" />}
       <div className="thin-scroll relative overflow-x-auto">
         <svg
           width={weeks * (size + gap)}
@@ -647,11 +640,11 @@ export function Heatmap({
         </svg>
       </div>
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-        <p className="tabular text-[12px] text-ink-muted">
+        <p className="tabular text-[13px] text-ink-muted">
           {hover ? `${hover.date} — ${hover.value} XP` : `Laatste ${weeks} weken`}
         </p>
         <div className="flex items-center gap-1.5">
-          <span className="text-[11px] text-ink-muted">minder</span>
+          <span className="text-[12px] text-ink-muted">minder</span>
           {[0, 1, 2, 3, 4, 5].map((i) => (
             <span
               key={i}
@@ -659,7 +652,7 @@ export function Heatmap({
               style={{ background: `var(--color-ramp-${i})` }}
             />
           ))}
-          <span className="text-[11px] text-ink-muted">meer</span>
+          <span className="text-[12px] text-ink-muted">meer</span>
         </div>
       </div>
     </figure>

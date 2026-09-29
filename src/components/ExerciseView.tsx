@@ -48,11 +48,11 @@ function MiniParadigm({ table }: { table: Paradigm }) {
       <table className="w-full border-collapse text-left">
         <thead>
           <tr>
-            <th className="pb-2 pr-3 text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted" />
+            <th className="pb-2 pr-3 text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted" />
             {table.columns.map((c) => (
               <th
                 key={c}
-                className="pb-2 pr-3 text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted"
+                className="pb-2 pr-3 text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted"
               >
                 {c}
               </th>
@@ -65,7 +65,7 @@ function MiniParadigm({ table }: { table: Paradigm }) {
               tweemaal, en met het label als sleutel liet React er een vallen. */}
           {table.rows.map((row, i) => (
             <tr key={i} className="border-t border-line/60">
-              <th className="py-2 pr-3 text-[12.5px] font-medium text-ink-secondary">
+              <th className="py-2 pr-3 text-[13px] font-medium text-ink-secondary">
                 {row.label}
               </th>
               {row.cells.map((cell, i) => (
@@ -78,7 +78,7 @@ function MiniParadigm({ table }: { table: Paradigm }) {
         </tbody>
       </table>
       {table.caption_nl ? (
-        <figcaption className="mt-2 text-[12px] text-ink-muted">{table.caption_nl}</figcaption>
+        <figcaption className="mt-2 text-[13px] text-ink-muted">{table.caption_nl}</figcaption>
       ) : null}
     </figure>
   );
@@ -174,7 +174,7 @@ function SpeedPicker({ tts }: { tts: TtsState }) {
           type="button"
           onClick={() => tts.setRate(r.value)}
           aria-pressed={tts.rate === r.value}
-          className={`rounded-md px-2.5 py-1 text-[12px] font-medium transition-colors ${
+          className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
             tts.rate === r.value
               ? "bg-pop-yellow text-on-pop"
               : "text-ink-muted hover:text-ink-secondary"
@@ -254,7 +254,7 @@ export function ExerciseView({
         <div className="space-y-4">
           <div className="card px-5 py-5">
             <div className="mb-3.5 flex items-center justify-between gap-3">
-              <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+              <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
                 Lees en luister
               </p>
               <PlayButton text={lines.map((l) => l.replace(/^[^:]{2,14}:\s*/, "")).join(" ")} tts={tts} />
@@ -266,7 +266,7 @@ export function ExerciseView({
                   <p key={i} className="hr-text reading text-[17px] leading-[1.7] text-ink">
                     {m ? (
                       <>
-                        <span className="mr-2 inline-block min-w-[84px] font-sans text-[12.5px] font-semibold text-accent">
+                        <span className="mr-2 inline-block min-w-[84px] font-sans text-[13px] font-semibold text-accent">
                           {m[1]}
                         </span>
                         <button
@@ -300,7 +300,7 @@ export function ExerciseView({
             </details>
           ) : null}
 
-          <p className="text-[12px] leading-relaxed text-ink-muted">
+          <p className="text-[13px] leading-relaxed text-ink-muted">
             Probeer eerst zonder vertaling te begrijpen wat er gebeurt. Wat je uit de context
             haalt, blijft beter hangen dan wat je vertaald krijgt.
           </p>
@@ -315,7 +315,7 @@ export function ExerciseView({
       return (
         <div className="rounded-card relative overflow-hidden bg-gold-wash px-5 py-5">
           <span aria-hidden className="absolute inset-y-0 left-0 w-1 bg-gold-bright" />
-          <p className="mb-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.07em] text-gold">
+          <p className="mb-2.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.07em] text-gold">
             <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden>
               <path
                 d="M8 1.5a4.5 4.5 0 0 0-2.6 8.2c.4.3.6.7.6 1.1v.4h4v-.4c0-.4.2-.8.6-1.1A4.5 4.5 0 0 0 8 1.5ZM6.2 13.2h3.6M6.8 14.8h2.4"
@@ -382,7 +382,7 @@ export function ExerciseView({
             </p>
           ) : null}
           {exercise.hint ? (
-            <p className="text-center text-[12.5px] text-ink-muted">{exercise.hint}</p>
+            <p className="text-center text-[13px] text-ink-muted">{exercise.hint}</p>
           ) : null}
           <div className="grid gap-2">
             {(exercise.options ?? []).map((opt) => {
@@ -501,7 +501,7 @@ export function ExerciseView({
             <SpeedPicker tts={tts} />
           </div>
           {tts.ready && !tts.voice ? (
-            <p className="rounded-lg border-2 border-outline bg-pop-yellow text-on-pop px-3.5 py-2.5 text-[12.5px] leading-relaxed text-ink-secondary">
+            <p className="rounded-lg border-2 border-outline bg-pop-yellow text-on-pop px-3.5 py-2.5 text-[13px] leading-relaxed text-ink-secondary">
               Er is geen Kroatische stem geïnstalleerd, dus deze oefening kan niet worden
               voorgelezen. Zie <span className="font-medium">Voortgang → Audio</span> voor de
               installatie. Je kunt de oefening overslaan.
@@ -536,7 +536,7 @@ export function ExerciseView({
           {!locked ? <SpecialChars onInsert={insert} /> : null}
           {/* Na inzending herhaalt het modelpaneel deze criteria — niet dubbel tonen. */}
           {!locked && exercise.rubric_nl?.length ? (
-            <ul className="space-y-1 text-[12.5px] text-ink-muted">
+            <ul className="space-y-1 text-[13px] text-ink-muted">
               {exercise.rubric_nl.map((r) => (
                 <li key={r}>· {r}</li>
               ))}

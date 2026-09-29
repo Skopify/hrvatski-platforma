@@ -45,7 +45,7 @@ export function LeechList({
           <li key={l.cardId} className="flex flex-wrap items-center justify-between gap-3">
             <span className="hr-text text-[15px] text-ink">{l.label}</span>
             <span className="flex items-center gap-3">
-              <span className="tabular text-[12px] text-ink-muted">{l.lapses}× mis</span>
+              <span className="tabular text-[13px] text-ink-muted">{l.lapses}× mis</span>
               <button
                 type="button"
                 disabled={bezig}
@@ -55,7 +55,7 @@ export function LeechList({
                     setHersteld((s) => new Set(s).add(l.cardId));
                   })
                 }
-                className="btn btn-ghost px-3 py-1.5 text-[12.5px] disabled:opacity-50"
+                className="btn btn-ghost px-3 py-1.5 text-[13px] disabled:opacity-50"
               >
                 Terugzetten
               </button>

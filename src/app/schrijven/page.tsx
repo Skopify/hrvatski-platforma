@@ -118,7 +118,7 @@ export default function SchrijvenPage() {
                               <span className="hand text-[13px] font-bold text-ink-secondary">
                                 {geschreven ? "Jouw tekst" : "Streeflengte"}
                               </span>
-                              <span className="tabular text-[12.5px] font-bold text-ink-secondary">
+                              <span className="tabular text-[13px] font-bold text-ink-secondary">
                                 {geschreven ? `${geschreven} / ` : ""}
                                 {o.streef_woorden} woorden
                               </span>
@@ -136,7 +136,7 @@ export default function SchrijvenPage() {
                             {o.vraagt_nl.map((t) => (
                               <span
                                 key={t}
-                                className="rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[12px] font-semibold text-ink-secondary"
+                                className="rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[13px] font-semibold text-ink-secondary"
                               >
                                 {t}
                               </span>

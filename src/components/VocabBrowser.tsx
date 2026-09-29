@@ -77,7 +77,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
   return (
     <div>
       {/* Filters */}
-      <div className="card mb-5 px-5 py-4">
+      <div className="card mb-6 bg-pop-sky px-5 py-5 text-on-pop">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <svg
@@ -104,7 +104,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
               placeholder="Zoek in het Kroatisch of Nederlands…"
               autoComplete="off"
               spellCheck={false}
-              className="hr-text w-full rounded-full border-2 border-outline bg-surface py-2.5 pl-10 pr-4 text-[14px] text-ink outline-none transition-all duration-200 placeholder:font-normal placeholder:text-ink-muted focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-ring)]"
+              className="input hr-text w-full rounded-full py-3 pl-10 pr-4 text-[15px]"
             />
           </div>
 
@@ -114,7 +114,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
               setPos(e.target.value);
               setLimit(120);
             }}
-            className="rounded-full border-2 border-outline bg-surface px-4 py-2.5 text-[13px] font-medium text-ink-secondary outline-none focus:border-accent"
+            className="input rounded-full px-4 py-3 text-[14px] font-semibold"
           >
             <option value="alle">Alle soorten</option>
             {posOptions.map(([p, n]) => (
@@ -141,16 +141,15 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
                 setStatus(val);
                 setLimit(120);
               }}
-              className={`rounded-full px-3 py-1 text-[12px] font-semibold transition-colors ${
-                status === val
-                  ? "bg-accent-fill text-on-fill"
-                  : "bg-sunken text-ink-secondary hover:text-ink"
+              className={`pill h-8 px-3.5 text-[13.5px] transition-transform duration-150 active:scale-95 ${
+                status === val ? "bg-pop-yellow text-on-pop" : "bg-white text-on-pop"
               }`}
+              aria-pressed={status === val}
             >
               {label}
             </button>
           ))}
-          <span className="tabular ml-auto text-[12px] text-ink-muted">
+          <span className="hand tabular ml-auto text-[13.5px] font-bold">
             {filtered.length} van {words.length} · {seenCount} gezien
           </span>
         </div>
@@ -171,7 +170,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
           {shown.map((w) => (
             <li
               key={w.id}
-              className="relative px-4 py-3 after:absolute after:bottom-0 after:left-[34px] after:right-0 after:h-px after:bg-line last:after:hidden"
+              className="relative px-4 py-3.5 after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0 after:border-b-2 after:border-dashed after:border-line-strong last:after:hidden"
             >
               <div className="flex items-center gap-3">
                 {/* Geheugenstand als smalle staaf links — kleur zegt genoeg. */}
@@ -182,7 +181,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
                       ? "Nog niet gezien"
                       : `Geschatte retentie ${Math.round(w.retention * 100)}%`
                   }
-                  className="h-9 w-1 shrink-0 rounded-full"
+                  className="h-10 w-2.5 shrink-0 rounded-full border-2 border-outline"
                   style={{
                     background:
                       w.retention === null
@@ -197,19 +196,19 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
 
                 <div className="min-w-0 flex-[1.1]">
                   <div className="flex items-baseline gap-2">
-                    <span className="hr-text truncate text-[15.5px] font-bold text-ink">
+                    <span className="hr-text truncate text-[19px] font-extrabold text-ink">
                       {w.hr}
                     </span>
-                    <span className="shrink-0 text-[11px] text-ink-muted">
+                    <span className="shrink-0 text-[12px] text-ink-muted">
                       {POS_LABEL[w.pos] ?? w.pos}
                       {w.gender ? ` ${w.gender}.` : ""}
                     </span>
                   </div>
-                  <p className="truncate text-[13px] text-ink-secondary">{w.nl}</p>
+                  <p className="truncate text-[14.5px] text-ink-secondary">{w.nl}</p>
                 </div>
 
                 {/* De grammaticale kern */}
-                <div className="hidden min-w-0 flex-1 gap-4 text-[12px] sm:flex">
+                <div className="hidden min-w-0 flex-1 gap-4 text-[14px] sm:flex">
                   {w.gen_sg ? (
                     <span className="min-w-0 truncate">
                       <span className="text-ink-muted">gen. </span>
@@ -230,7 +229,7 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
                   ) : null}
                 </div>
 
-                <span className="tabular hidden shrink-0 text-[11.5px] text-ink-muted md:block">
+                <span className="tabular hidden shrink-0 text-[13px] text-ink-muted md:block">
                   les {w.lesson}
                 </span>
 
@@ -239,9 +238,9 @@ export function VocabBrowser({ words }: { words: VocabRecord[] }) {
                     type="button"
                     onClick={() => tts.speak(w.hr)}
                     title="Uitspreken"
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-ink-muted transition-colors hover:bg-accent-wash hover:text-accent"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-outline bg-pop-yellow text-on-pop transition-transform duration-150 active:scale-90"
                   >
-                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden>
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
                       <path d="M3 6v4h2.5L9 13V3L5.5 6H3Z" fill="currentColor" />
                       <path
                         d="M11 5.5a3.5 3.5 0 0 1 0 5"

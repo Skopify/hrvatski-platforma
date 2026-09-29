@@ -51,7 +51,7 @@ export function CaseTimeline({
     <figure className="card overflow-hidden px-5 pb-4 pt-5 sm:px-7">
       <figcaption className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
         <span className="display-soft text-[15px] text-ink">Wanneer komt welke naamval?</span>
-        <span className="text-[12px] text-ink-muted">
+        <span className="text-[13px] text-ink-muted">
           {active ? active.note : "Beweeg over een naamval voor de reden"}
         </span>
       </figcaption>

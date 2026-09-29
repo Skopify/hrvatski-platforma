@@ -384,7 +384,7 @@ export function SessionRunner({
             <span className="hand text-[13px] font-semibold text-ink-muted">{step.sectionTitle}</span>
           </div>
           {step.badge?.hint ? (
-            <p className="mt-2 text-[12.5px] leading-relaxed text-ink-muted">{step.badge.hint}</p>
+            <p className="mt-2 text-[13px] leading-relaxed text-ink-muted">{step.badge.hint}</p>
           ) : null}
         </div>
 
@@ -452,7 +452,7 @@ function CheckLijst({ report }: { report?: import("@/app/actions").Feedback["rep
     <div className="mb-4">
       {report.checks.length ? (
         <>
-          <p className="text-[11px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+          <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
             Nagekeken
           </p>
           <ul className="mt-2 space-y-1.5">
@@ -474,7 +474,7 @@ function CheckLijst({ report }: { report?: import("@/app/actions").Feedback["rep
         </>
       ) : null}
       {report.suggesties.length ? (
-        <p className="mt-3 text-[12.5px] leading-relaxed text-ink-muted">
+        <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
           Bedoelde je{" "}
           {report.suggesties.map((s, i) => (
             <span key={s.geschreven}>
@@ -511,7 +511,7 @@ function FeedbackPanel({
           {feedback.selfAssess.model_answer}
         </p>
         {feedback.selfAssess.rubric_nl?.length ? (
-          <ul className="mt-3 space-y-1 text-[12.5px] text-ink-secondary">
+          <ul className="mt-3 space-y-1 text-[13px] text-ink-secondary">
             {feedback.selfAssess.rubric_nl.map((r) => (
               <li key={r}>· {r}</li>
             ))}

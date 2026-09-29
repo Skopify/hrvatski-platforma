@@ -142,7 +142,7 @@ export default function LessonsPage() {
                               {lesson.title_hr}
                             </p>
                             <span
-                              className={`shrink-0 text-[11.5px] font-semibold ${
+                              className={`shrink-0 text-[13px] font-semibold ${
                                 status === "done"
                                   ? "text-good-ink"
                                   : status === "in_progress"
@@ -153,7 +153,7 @@ export default function LessonsPage() {
                               {isBuilt ? STATUS_LABEL[status] : "Volgt"}
                             </span>
                           </div>
-                          <p className="mt-0.5 truncate text-[12.5px] text-ink-muted">
+                          <p className="mt-0.5 truncate text-[13px] text-ink-muted">
                             {lesson.title_nl}
                           </p>
 
@@ -166,7 +166,7 @@ export default function LessonsPage() {
                             {(lesson.grammar ?? []).slice(0, caseHere ? 1 : 2).map((g) => (
                               <span
                                 key={g}
-                                className="truncate rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[12px] font-semibold text-ink-secondary"
+                                className="truncate rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[13px] font-semibold text-ink-secondary"
                               >
                                 {g}
                               </span>
@@ -195,7 +195,7 @@ export default function LessonsPage() {
         })}
       </div>
 
-      <p className="mt-10 text-[12.5px] leading-relaxed text-ink-muted">
+      <p className="mt-10 text-[13px] leading-relaxed text-ink-muted">
         {doneCount} van {syllabus.lessons.length} eenheden afgerond. Lessen gaan pas open als
         de vorige af is: de accusatief in les 5 leunt op het geslacht en de levendheid uit
         de lessen daarvoor.

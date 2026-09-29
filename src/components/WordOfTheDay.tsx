@@ -47,7 +47,7 @@ export function WordOfTheDay({
   return (
     <div className="card h-full px-6 py-5">
       <div className="flex items-start justify-between gap-3">
-        <p className="text-[11px] font-bold uppercase tracking-[0.06em] text-ink-muted">
+        <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted">
           Woord van de dag
         </p>
         {word.seen ? <Pill tone="good">Al gezien</Pill> : <Pill tone="accent">Nieuw</Pill>}
@@ -77,7 +77,7 @@ export function WordOfTheDay({
 
       <p className="mt-1.5 text-[15px] text-ink-secondary">{word.nl}</p>
 
-      <dl className="mt-4 space-y-1.5 border-t border-line-soft pt-3.5 text-[12.5px]">
+      <dl className="mt-4 space-y-1.5 border-t border-line-soft pt-3.5 text-[13px]">
         <div className="flex gap-2">
           <dt className="w-20 shrink-0 text-ink-muted">soort</dt>
           <dd className="text-ink-secondary">{POS_LABEL[word.pos] ?? word.pos}</dd>
