@@ -69,9 +69,11 @@ export function GesprekRunner({
   startLes: number;
   /** Aantal woorden per lesniveau (index = les), voor de keuzelijst. */
   aantallen: number[];
-  status: { staat: "klaar" | "offline" | "model-ontbreekt"; model?: string };
+  status: { staat: "klaar" | "offline" | "model-ontbreekt" | "starten" | "geen-programma"; model?: string };
 }) {
   const tts = useCroatianTts();
+  // De bot start op verzoek (Ollama); zolang dat duurt vragen we elke twee seconden of hij er is.
+  const [staat, setStaat] = useState(status.staat);
   const opening: Bericht = { rol: "bot", tekst: scenario.opening_hr, nl: scenario.opening_nl };
   const [berichten, setBerichten] = useState<Bericht[]>([opening]);
   const [invoer, setInvoer] = useState("");
@@ -89,7 +91,7 @@ export function GesprekRunner({
 
   // Het model alvast de prompt laten lezen terwijl je de opening leest.
   useEffect(() => {
-    if (status.staat !== "klaar") return;
+    if (staat !== "klaar") return;
     const sleutel = `${scenario.id}:${les}`;
     if (opgewarmd.has(sleutel)) return;
     opgewarmd.add(sleutel);
@@ -98,7 +100,22 @@ export function GesprekRunner({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ warm: true, scenario: scenario.id, les }),
     }).catch(() => {});
-  }, [scenario.id, les, status.staat]);
+  }, [scenario.id, les, staat]);
+
+  useEffect(() => {
+    if (staat === "klaar" || staat === "model-ontbreekt" || staat === "geen-programma") return;
+    const begin = Date.now();
+    const id = setInterval(async () => {
+      if (Date.now() - begin > 90_000) return clearInterval(id);
+      try {
+        const d = (await (await fetch("/api/gesprek", { cache: "no-store" })).json()) as { staat?: typeof staat };
+        if (d.staat && d.staat !== "starten" && d.staat !== "offline") setStaat(d.staat);
+      } catch {
+        // volgende ronde
+      }
+    }, 2000);
+    return () => clearInterval(id);
+  }, [staat]);
 
   async function vertaal(i: number) {
     const b = berichten[i];
@@ -181,7 +198,7 @@ export function GesprekRunner({
     });
   }
 
-  const beschikbaar = status.staat === "klaar";
+  const beschikbaar = staat === "klaar";
   const laatsteIsJij = berichten.at(-1)?.rol === "jij";
 
   return (
@@ -316,7 +333,7 @@ export function GesprekRunner({
               value={invoer}
               onChange={(e) => setInvoer(e.target.value)}
               disabled={!beschikbaar}
-              placeholder={beschikbaar ? "Antwoord in het Kroatisch…" : "De bot is nog niet beschikbaar"}
+              placeholder={beschikbaar ? "Antwoord in het Kroatisch…" : staat === "starten" ? "De bot wordt wakker gemaakt…" : "De bot is nog niet beschikbaar"}
               autoComplete="off"
               autoCapitalize="off"
               spellCheck={false}
@@ -343,7 +360,7 @@ export function GesprekRunner({
 
 function FoutKaart({ fout, model, onOpnieuw }: { fout: NonNullable<Fout>; model?: string; onOpnieuw?: () => void }) {
   const uitleg: Record<string, { kop: string; tekst: string }> = {
-    offline: { kop: "Ollama draait niet", tekst: "Start het met «ollama serve» in een terminal en probeer het opnieuw." },
+    offline: { kop: "De bot is niet bereikbaar", tekst: "Ga terug naar Gesprek: het platform start hem dan zelf opnieuw." },
     "model-ontbreekt": {
       kop: "Het model staat er nog niet op",
       tekst: `Haal het op met «ollama pull ${model ?? "gemma3:12b"}». Dat is een keer een paar GB.`,

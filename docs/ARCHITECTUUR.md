@@ -38,6 +38,27 @@ Het platform draait lokaal, maar een lokale server is voor je browser een websit
 - **Afhankelijkheden.** `npm run audit:prod`. Open: de PostCSS in Next 15 (build-tijd,
   verwerkt alleen eigen CSS); die verdwijnt met Next 16.
 
+## Starten en stoppen
+
+`Hrvatski.app` (gemaakt met `npm run app:maak`, gitignored) roept `scripts/app-start.sh` aan:
+kijkt of er al een server draait, zoekt een werkende node, zet klaar wat ontbreekt
+(pakketten, database, `npm run migrate` met back-up, een verse build als de code nieuwer
+is), start de productieserver alleen op `127.0.0.1` en opent Safari.
+
+- **Beheerd.** De server start met `HRVATSKI_MANAGED=1`; alleen dan mag hij zichzelf uitzetten.
+  Een gewone `npm run dev` doet dat nooit.
+- **Teken van leven.** Elke open pagina meldt zich elke 30 seconden (`/api/leven`). Na 10 minuten
+  stilte sluit de server af (`src/lib/levenscyclus.ts`); bij het starten geldt dezelfde tijd, dus
+  een trage start wordt niet afgebroken. Afsluiten is netjes: het WAL van SQLite wordt leeggemaakt
+  en de database gesloten.
+- **Knop Afsluiten** (zijbalk) roept `/api/afsluiten` aan, alleen in de beheerde app en alleen met
+  een eigen kop, bovenop de herkomstcontrole van de middleware.
+- **Ollama op verzoek.** Alleen de sectie Gesprek start Ollama, niet het leren. Het model wordt na
+  10 minuten zonder bericht uit het geheugen gehaald (Ollama's `keep_alive`); het Ollama-proces zelf
+  stopt na 15 minuten zonder gesprek en bij het afsluiten. **Alleen als wij het gestart hebben**
+  (`data/ollama-door-app.pid`): draaide Ollama al, dan blijft het aan.
+- Instelbaar met `HRVATSKI_IDLE_SECONDS` en `HRVATSKI_OLLAMA_IDLE_SECONDS`. Logboek: `data/app.log`.
+
 ## Prestaties
 
 Gemeten op een productiebuild met een kopie van de echte database.

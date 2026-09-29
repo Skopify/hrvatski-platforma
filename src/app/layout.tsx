@@ -3,9 +3,11 @@ import type { Metadata, Viewport } from "next";
 import { CommandMenu } from "@/components/CommandMenu";
 import { RoughFilter } from "@/components/doodles";
 import { Island } from "@/components/Island";
+import { Levensteken } from "@/components/Levensteken";
 import { Nav } from "@/components/Nav";
 import { THEME_SCRIPT } from "@/components/ThemeToggle";
 import { dailyStats, getProfile } from "@/lib/stats";
+import { instelling } from "@/lib/levenscyclus";
 import { reviewableCount } from "@/lib/planner";
 import "./globals.css";
 
@@ -29,6 +31,7 @@ export const dynamic = "force-dynamic";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   const due = reviewableCount();
+  const beheerd = instelling().beheerd;
   const todayXp = dailyStats(1).at(-1)?.xp ?? 0;
 
   return (
@@ -40,9 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <RoughFilter />
         <Island />
+        <Levensteken beheerd={beheerd} />
         <CommandMenu />
         <div className="flex min-h-screen flex-col md:flex-row">
-          <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} todayXp={todayXp} goalXp={profile.dailyGoalXp} />
+          <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} todayXp={todayXp} goalXp={profile.dailyGoalXp} beheerd={beheerd} />
           {/*
             Ruimte onder de inhoud voor de zwevende tabbalk op de telefoon:
             64px balk + 10px marge + de veilige zone, plus lucht, zodat een

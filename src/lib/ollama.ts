@@ -27,7 +27,8 @@ export async function ollamaChat(
       messages: berichten,
       stream: false,
       format: "json",
-      keep_alive: "30m",
+      // Tien minuten na je laatste bericht geeft Ollama het model (8 GB) weer vrij.
+      keep_alive: "10m",
       options: { temperature: 0.3, num_ctx: 4096, ...extra },
     }),
     signal: AbortSignal.timeout(timeoutMs),

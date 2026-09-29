@@ -1,5 +1,6 @@
 import { beurt, bouwPrompt, loadScenario, woordenTotLes, type Bericht } from "@/lib/gesprek";
-import { MODEL, ollamaChat, ollamaStatus } from "@/lib/ollama";
+import { ollamaGebruikt, ollamaToestand } from "@/lib/levenscyclus";
+import { MODEL, ollamaChat } from "@/lib/ollama";
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +17,7 @@ let wachtend = 0;
 
 async function opDeBeurt<T>(werk: () => Promise<T>): Promise<T | "druk"> {
   if (wachtend >= MAX_WACHTRIJ) return "druk";
+  ollamaGebruikt();
   wachtend++;
   const mijn = wachtrij.then(werk, werk);
   wachtrij = mijn.catch(() => undefined);
@@ -28,7 +30,8 @@ async function opDeBeurt<T>(werk: () => Promise<T>): Promise<T | "druk"> {
 
 /** Is Ollama bereikbaar, en staat het model erop? */
 export async function GET() {
-  return Response.json({ ...(await ollamaStatus()), model: MODEL });
+  // Starten als hij niet draait: de pagina vraagt hierna opnieuw tot hij klaar is.
+  return Response.json({ ...(await ollamaToestand()), model: MODEL });
 }
 
 /**

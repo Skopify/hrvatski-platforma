@@ -3,13 +3,15 @@ import Link from "next/link";
 import { Doodle, type DoodleName } from "@/components/doodles";
 import { Page, PageHeader } from "@/components/ui";
 import { loadScenarios } from "@/lib/gesprek";
-import { MODEL, ollamaStatus } from "@/lib/ollama";
+import { WachtOpBot } from "@/components/WachtOpBot";
+import { ollamaToestand } from "@/lib/levenscyclus";
+import { MODEL } from "@/lib/ollama";
 
 export const dynamic = "force-dynamic";
 
 export default async function GesprekPage() {
   const scenarios = loadScenarios();
-  const status = await ollamaStatus();
+  const status = await ollamaToestand();
 
   return (
     <Page>
@@ -37,14 +39,29 @@ export default async function GesprekPage() {
 
       {status.staat !== "klaar" ? (
         <div className="mb-8 rounded-card border-2 border-outline bg-pop-peach p-5 text-on-pop shadow-[var(--hard)]">
-          <p className="hand text-[16px] font-bold">
-            {status.staat === "offline" ? "Ollama draait nog niet" : "Het model staat er nog niet op"}
-          </p>
-          <p className="mt-1 text-[14.5px] font-semibold leading-relaxed">
-            {status.staat === "offline"
-              ? "Start het met «ollama serve» in een terminal. Daarna kun je hieronder een gesprek kiezen."
-              : `Haal het op met «ollama pull ${MODEL}» (een paar GB, eenmalig).`}
-          </p>
+          {status.staat === "starten" ? (
+            <>
+              <WachtOpBot />
+              <p className="hand text-[16px] font-bold">De bot wordt wakker gemaakt…</p>
+              <p className="mt-1 text-[14.5px] font-semibold leading-relaxed">
+                Dat duurt een paar seconden. Deze pagina ververst zichzelf zodra hij klaar is.
+              </p>
+            </>
+          ) : status.staat === "geen-programma" ? (
+            <>
+              <p className="hand text-[16px] font-bold">Ollama is niet geïnstalleerd</p>
+              <p className="mt-1 text-[14.5px] font-semibold leading-relaxed">
+                Installeer het met «brew install ollama». Daarna start het platform het zelf als je hier komt.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="hand text-[16px] font-bold">Het model staat er nog niet op</p>
+              <p className="mt-1 text-[14.5px] font-semibold leading-relaxed">
+                Haal het op met «ollama pull {MODEL}» (een paar GB, eenmalig).
+              </p>
+            </>
+          )}
         </div>
       ) : null}
 

@@ -31,3 +31,6 @@ secrets/
 
 # voorstellen van npm run gloss — werkbestanden, geen content
 .gloss/
+
+# De zelfgemaakte app (npm run app:maak); bevat het pad naar deze map.
+Hrvatski.app/

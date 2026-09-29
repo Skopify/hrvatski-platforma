@@ -7,6 +7,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { SearchButton } from "./CommandMenu";
 import { Doodle } from "./doodles";
 import { SECTIONS } from "./sections";
+import { AfsluitKnop } from "./Levensteken";
 import { PillMeter } from "./PillMeter";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./ui";
@@ -57,12 +58,14 @@ export function Nav({
   due,
   todayXp,
   goalXp,
+  beheerd,
 }: {
   streak: number;
   xp: number;
   due: number;
   todayXp: number;
   goalXp: number;
+  beheerd: boolean;
 }) {
   const pathname = usePathname();
   const activeIndex = SECTIONS.findIndex((s) =>
@@ -176,6 +179,16 @@ export function Nav({
           </div>
           <ThemeToggle />
         </div>
+        {beheerd ? (
+          <>
+            <div className="mt-3 hidden justify-center lg:flex">
+              <AfsluitKnop beheerd={beheerd} />
+            </div>
+            <div className="mt-3 flex justify-center lg:hidden">
+              <AfsluitKnop beheerd={beheerd} compact />
+            </div>
+          </>
+        ) : null}
       </nav>
 
       {/* ═══ Tabbalk (telefoon): een sticker-strook onderaan ═══

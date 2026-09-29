@@ -45,6 +45,7 @@ jobs:
           npm run check:gesprek
           npm run check:beveiliging
           npm run check:migraties
+          npm run check:levenscyclus
 
       - name: Productiebuild
         run: npm run build

@@ -32,7 +32,9 @@
     "typecheck": "tsc --noEmit",
     "audit:prod": "npm audit --omit=dev",
     "check:beveiliging": "tsx scripts/check-beveiliging.ts",
-    "check:migraties": "tsx scripts/check-migraties.ts"
+    "check:migraties": "tsx scripts/check-migraties.ts",
+    "check:levenscyclus": "tsx scripts/check-levenscyclus.ts",
+    "app:maak": "zsh scripts/maak-app.sh"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

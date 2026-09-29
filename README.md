@@ -56,6 +56,7 @@ voorbereid: de zijbalk wordt een bovenbalk. Je Mac moet dan wel aan staan.
 | `npm run check` | Zelfcontrole van de beoordelingsladder — laat zien hoe antwoorden door exact/diakritisch/tikfout/fout vallen |
 | `npm run check:content` | Valideert de content: dubbele id's, oefeningen zonder antwoord, targets die nergens naar wijzen, vreemde tekens, en de afgeleide naamvalsvormen |
 | `npm run db:reset` | Gooit de database weg en seedt opnieuw. **Wist alle voortgang**, maar vraagt eerst om bevestiging (typ RESET) en maakt een kopie in `data/backups/`. Wil je alleen opnieuw beginnen, gebruik dan de knop op Voortgang |
+| `npm run app:maak` | Maakt **Hrvatski.app** in de projectmap. Sleep hem naar je Dock: één klik start het platform (en Ollama zodra je op Gesprek klikt), opent Safari, en na 10 minuten zonder gebruik gaat alles vanzelf uit. Of gebruik de knop *Afsluiten* in de zijbalk |
 | `npm run dev:lan` | Dev-server bereikbaar voor je telefoon op hetzelfde wifi. Standaard luistert `npm run dev` alleen op dit apparaat |
 | `npm run typecheck` | TypeScript-controle zonder te bouwen |
 | `npm run check:beveiliging` | Geheimen, back-up vóór schrijven, hostcontrole, koppen en invoergrenzen |

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { GesprekRunner } from "@/components/GesprekRunner";
 import { Page, PageHeader } from "@/components/ui";
 import { loadScenario, standaardLes, woordenTotLes } from "@/lib/gesprek";
-import { ollamaStatus } from "@/lib/ollama";
+import { ollamaToestand } from "@/lib/levenscyclus";
 import { lessonStatuses } from "@/lib/stats";
 
 export const dynamic = "force-dynamic";
@@ -15,7 +15,7 @@ export default async function GesprekScenarioPage({ params }: { params: Promise<
 
   const open = lessonStatuses().filter((l) => l.status !== "locked").map((l) => l.lesson);
   const aantallen = Array.from({ length: 22 }, (_, les) => woordenTotLes(les).length);
-  const status = await ollamaStatus();
+  const status = await ollamaToestand();
 
   return (
     <Page width="detail">
