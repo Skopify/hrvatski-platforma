@@ -59,9 +59,14 @@ export function azureEnv(): AzureEnv {
 
   // Wat het proces zelf al meekrijgt wint: zo kun je hem tijdelijk overschrijven
   // zonder een bestand aan te passen.
+  //
+  // Alleen de eigen namen (AZURE_SPEECH_*) mogen uit de omgeving komen. De
+  // algemene namen (KEY, REGION, LOCATION) zijn bedoeld voor azure.env: in de
+  // omgeving van je terminal betekenen ze vaak iets anders, en dan zou een
+  // willekeurige waarde als sleutel naar Azure gestuurd worden.
   const pick = (names: string[]) => {
     for (const n of names) {
-      if (process.env[n]) return process.env[n]!;
+      if (n.startsWith("AZURE_SPEECH_") && process.env[n]) return process.env[n]!;
       if (found[n]) return found[n]!;
     }
     return null;
@@ -71,6 +76,10 @@ export function azureEnv(): AzureEnv {
   const region =
     pick(REGION_NAMES) ?? regionFromEndpoint(found.ENDPOINT ?? process.env.AZURE_SPEECH_ENDPOINT);
 
-  cached = { key, region: region?.toLowerCase() ?? null };
+  // De regio komt in een hostnaam terecht, en de sleutel gaat mee naar die host.
+  // Een waarde met een punt of slash zou het verzoek naar een ander adres sturen.
+  const veiligeRegio = region && /^[a-z0-9-]{2,30}$/i.test(region) ? region.toLowerCase() : null;
+
+  cached = { key, region: veiligeRegio };
   return cached;
 }

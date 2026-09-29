@@ -50,6 +50,10 @@ Gebruik `/usr/local/bin/node` (v20.11.1). De Homebrew-node op het pad is stuk (o
 | `npm run check:fase05` | acceptatietests Fase 0.5 (escalerende feedback) |
 | `npm run check:fase1` | acceptatietests Fase 1 (woordenschat) |
 | `npm run check:fase15` | acceptatietests Fase 1.5 (plaatsingstoets) |
+| `npm run check:beveiliging` | geheimen, back-up vóór schrijven, hostcontrole, koppen, invoergrenzen |
+| `npm run typecheck` | TypeScript zonder te bouwen |
+| `npm run dev:lan` | dev-server bereikbaar voor je telefoon (standaard alleen dit apparaat) |
+| `npm run audit:prod` | bekende kwetsbaarheden in de productieafhankelijkheden |
 | `npm run check:gesprek` | acceptatietests gespreksbot (BETA): taalpoorten, lexicon, niets naar de leerhistorie |
 | `npm run check:freq` | validatiepoorten kernwoordenschat |
 | `npm run codes` | grammaticacodes + dekking van het curriculum |

@@ -41,7 +41,10 @@ function fold(s: string): string {
     .replace(/đ/g, "d");
 }
 
-export function VocabBrowser({ words }: { words: VocabRecord[] }) {
+/** Wat de lijst nodig heeft; de rest blijft op de server (scheelt de helft van de paginagrootte). */
+export type VocabRij = Omit<VocabRecord, "cefr" | "reps" | "lapses" | "aspect">;
+
+export function VocabBrowser({ words }: { words: VocabRij[] }) {
   const tts = useCroatianTts();
   const [q, setQ] = useState("");
   const [pos, setPos] = useState<string>("alle");

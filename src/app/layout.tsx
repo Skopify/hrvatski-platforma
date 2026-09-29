@@ -1,13 +1,10 @@
 import type { Metadata, Viewport } from "next";
 
-import { CommandMenu, type CommandItem } from "@/components/CommandMenu";
+import { CommandMenu } from "@/components/CommandMenu";
 import { RoughFilter } from "@/components/doodles";
 import { Island } from "@/components/Island";
 import { Nav } from "@/components/Nav";
-import { SECTIONS } from "@/components/sections";
 import { THEME_SCRIPT } from "@/components/ThemeToggle";
-import { loadLessons, loadStories } from "@/lib/content";
-import { loadModules } from "@/lib/modules";
 import { dailyStats, getProfile } from "@/lib/stats";
 import { reviewableCount } from "@/lib/planner";
 import "./globals.css";
@@ -29,37 +26,6 @@ export const viewport: Viewport = {
 // moeten per verzoek vers zijn, dus mag de layout niet vooraf gerenderd worden.
 export const dynamic = "force-dynamic";
 
-/** Alles waar het zoekvenster (⌘K) naartoe kan springen. */
-function searchIndex(): CommandItem[] {
-  const pages: CommandItem[] = SECTIONS.map((s) => ({
-    group: "Ga naar",
-    label: s.label,
-    href: s.href,
-    section: s.key,
-  }));
-  const lessons: CommandItem[] = loadLessons().map((l) => ({
-    group: "Lessen",
-    label: `Les ${l.number} · ${l.title_hr}`,
-    sub: l.title_nl,
-    href: `/lessen/${l.number}`,
-    section: "lessen",
-  }));
-  const stories: CommandItem[] = loadStories().map((s) => ({
-    group: "Verhalen",
-    label: s.title_hr,
-    sub: s.title_nl,
-    href: `/verhalen/${s.slug}`,
-    section: "verhalen",
-  }));
-  const grammar: CommandItem[] = loadModules().map((m) => ({
-    group: "Grammatica",
-    label: m.title_nl,
-    href: `/grammatica/${m.code}`,
-    section: "grammatica",
-  }));
-  return [...pages, ...lessons, ...stories, ...grammar];
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   const due = reviewableCount();
@@ -74,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <RoughFilter />
         <Island />
-        <CommandMenu items={searchIndex()} />
+        <CommandMenu />
         <div className="flex min-h-screen flex-col md:flex-row">
           <Nav streak={profile.streakCurrent} xp={profile.xp} due={due} todayXp={todayXp} goalXp={profile.dailyGoalXp} />
           {/*

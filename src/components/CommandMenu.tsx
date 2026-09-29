@@ -38,8 +38,9 @@ const fold = (s: string) =>
     .replace(/[̀-ͯ]/g, "")
     .replace(/đ/g, "dj");
 
-export function CommandMenu({ items }: { items: CommandItem[] }) {
+export function CommandMenu() {
   const router = useRouter();
+  const [items, setItems] = useState<CommandItem[]>([]);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [cursor, setCursor] = useState(0);
@@ -73,6 +74,15 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
       window.removeEventListener(OPEN_SEARCH, onOpen);
     };
   }, [open]);
+
+  // De index wordt pas bij het eerste openen opgehaald (zie /api/zoek).
+  useEffect(() => {
+    if (!open || items.length) return;
+    fetch("/api/zoek")
+      .then((r) => (r.ok ? r.json() : []))
+      .then((lijst: CommandItem[]) => setItems(lijst))
+      .catch(() => {});
+  }, [open, items.length]);
 
   useEffect(() => {
     if (open) {
@@ -142,7 +152,7 @@ export function CommandMenu({ items }: { items: CommandItem[] }) {
         <ul ref={list} className="thin-scroll max-h-[52vh] overflow-y-auto p-2" role="listbox">
           {results.length === 0 ? (
             <li className="px-4 py-10 text-center text-[14.5px] text-ink-muted">
-              Niets gevonden voor “{query}”.
+              {items.length === 0 ? "Even laden…" : <>Niets gevonden voor “{query}”.</>}
             </li>
           ) : null}
           {results.map((it, i) => {

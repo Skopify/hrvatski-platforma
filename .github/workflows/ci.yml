@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Typecontrole
+        run: npm run typecheck
+
+      # De database staat niet in de repo (persoonlijke data). De seed bouwt hem
+      # op uit content/, en de acceptatietests draaien op een kopie daarvan.
+      - name: Database opbouwen uit de content
+        run: npm run seed
+
+      - name: Contentpoorten
+        run: |
+          npm run check:content
+          npm run check:taal
+          npm run check:verhalen
+          npm run check:freq
+
+      - name: Acceptatietests
+        run: |
+          npm run check
+          npm run check:fase0
+          npm run check:fase05
+          npm run check:fase1
+          npm run check:fase15
+          npm run check:gesprek
+          npm run check:beveiliging
+
+      - name: Productiebuild
+        run: npm run build
+
+      # Alleen productieafhankelijkheden: die draaien op de machine van de gebruiker.
+      - name: Kwetsbare afhankelijkheden
+        run: npm audit --omit=dev --audit-level=critical

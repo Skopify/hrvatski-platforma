@@ -1,5 +1,6 @@
 "use server";
 
+import { antwoordtijd, binnen, MAX_SCHRIJFTEKST, tekst as begrensTekst } from "@/lib/valideer";
 import { eq, sql } from "drizzle-orm";
 
 import {
@@ -211,6 +212,8 @@ export async function submitAnswer(
   durationMs: number,
   stage = 0,
 ): Promise<Feedback> {
+  durationMs = antwoordtijd(durationMs);
+  stage = binnen(stage, 0, 10, 0);
   const found = findExercise(exerciseId);
   if (!found) throw new Error(`Onbekende oefening: ${exerciseId}`);
   const { exercise, lesson } = found;
@@ -383,6 +386,7 @@ export async function selfAssess(
   /** Meegegeven wanneer het programma zelf heeft nagekeken. */
   report?: import("@/lib/freecheck").FreeReport,
 ): Promise<Feedback> {
+  durationMs = antwoordtijd(durationMs);
   const found = findExercise(exerciseId);
   if (!found) throw new Error(`Onbekende oefening: ${exerciseId}`);
   const { exercise, lesson } = found;
@@ -532,6 +536,7 @@ const GENDER_LABEL: Record<string, string> = { m: "muški", f: "ženski", n: "sr
 
 /** Een portie vragen, geschud, zonder antwoorden. */
 export async function drillBatch(kind: DrillKind, count = 12): Promise<DrillQuestion[]> {
+  count = Math.round(binnen(count, 1, 50, 12));
   if (kind === "oblik") {
     // Gelijk verdeeld over de naamvallen. Zomaar trekken uit de hele bak zou de
     // drill laten scheefgroeien naar wat er het meest van is; per naamval een
@@ -636,6 +641,8 @@ export async function submitDrill(
   answer: string,
   durationMs: number,
 ): Promise<DrillFeedback> {
+  durationMs = antwoordtijd(durationMs);
+  answer = begrensTekst(answer, 500);
   let expected: string;
   let accepts: string[];
   let nl = "";
@@ -978,6 +985,8 @@ export async function submitVocab(
   answer: string,
   durationMs: number,
 ): Promise<VocabFeedback> {
+  durationMs = antwoordtijd(durationMs);
+  answer = begrensTekst(answer, 500);
   const vraag = questionFor(cardId);
   if (!vraag) throw new Error(`Onbekende kaart: ${cardId}`);
 
@@ -1218,7 +1227,7 @@ export async function bewaarNakijkOordeel(
   correctie?: string,
   opmerking?: string,
 ): Promise<void> {
-  bewaarOordeel(hash, hr, status, correctie, opmerking);
+  bewaarOordeel(begrensTekst(hash, 100), begrensTekst(hr, 500), status, correctie === undefined ? undefined : begrensTekst(correctie, 500), opmerking === undefined ? undefined : begrensTekst(opmerking, 2000));
 }
 
 /** Een oordeel terugdraaien — de nakijker die zich vergist heeft. */
@@ -1228,13 +1237,14 @@ export async function wisNakijkOordeel(hash: string): Promise<void> {
 
 /** De volgende stapel, nadat de vorige af is. */
 export async function volgendeNakijkBatch(grootte = 20): Promise<{ zinnen: Zin[]; stand: Stand }> {
+  grootte = Math.round(binnen(grootte, 1, 100, 20));
   return { zinnen: volgendeBatch(grootte), stand: stand() };
 }
 
 /* --------------------------------------------------------------- schrijven --- */
 
 export async function bewaarSchrijfwerk(id: string, tekst: string, klaar: boolean): Promise<void> {
-  bewaarWerk(id, tekst, klaar);
+  bewaarWerk(id, begrensTekst(tekst, MAX_SCHRIJFTEKST), Boolean(klaar));
 }
 
 /**
@@ -1246,5 +1256,5 @@ export async function bewaarSchrijfwerk(id: string, tekst: string, klaar: boolea
 export async function beoordeelSchrijfwerk(id: string, tekst: string): Promise<Schrijfoordeel> {
   const opdracht = loadOpdracht(id);
   if (!opdracht) throw new Error(`Onbekende schrijfopdracht: ${id}`);
-  return beoordeel(opdracht, tekst);
+  return beoordeel(opdracht, begrensTekst(tekst, MAX_SCHRIJFTEKST));
 }

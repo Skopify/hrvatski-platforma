@@ -41,6 +41,13 @@ function create() {
   const sqlite = new Database(DB_PATH);
   sqlite.pragma("journal_mode = WAL");
   sqlite.pragma("foreign_keys = ON");
+  // Een tweede proces (een script, een test) dat tegelijk schrijft, wacht een
+  // paar seconden in plaats van meteen "database is locked" te geven.
+  sqlite.pragma("busy_timeout = 5000");
+  // Met WAL is NORMAL veilig tegen corruptie en een stuk sneller dan FULL: bij
+  // een stroomstoring kan de laatste transactie verloren gaan, de database niet.
+  sqlite.pragma("synchronous = NORMAL");
+  sqlite.pragma("temp_store = MEMORY");
 
   if (nieuw) {
     migrate(sqlite);

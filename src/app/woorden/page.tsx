@@ -11,6 +11,12 @@ export const dynamic = "force-dynamic";
 
 export default function VocabPage() {
   const words = allVocab();
+  // Alleen de velden die de lijst toont, en de retentie op drie decimalen: het
+  // scheelt meer dan de helft van de bytes die naar de browser gaan.
+  const rijen = words.map(({ cefr: _c, reps: _r, lapses: _l, aspect: _a, retention, ...rest }) => ({
+    ...rest,
+    retention: retention === null ? null : Math.round(retention * 1000) / 1000,
+  }));
   const uitRotatie = leeches();
 
   return (
@@ -29,7 +35,7 @@ export default function VocabPage() {
 
       {uitRotatie.length ? <LeechList leeches={uitRotatie} onRestore={restoreLeech} /> : null}
 
-      <VocabBrowser words={words} />
+      <VocabBrowser words={rijen} />
     </Page>
   );
 }

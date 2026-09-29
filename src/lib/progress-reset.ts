@@ -1,7 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
-
 import { sqlite } from "./db";
+import { backupDatabase } from "./db/backup";
 
 /**
  * Alle voortgang wissen en opnieuw beginnen.
@@ -21,8 +19,6 @@ import { sqlite } from "./db";
  * gaat er altijd een kopie aan vooraf — ook als je er nooit naar omkijkt.
  */
 
-const DB_PATH = path.join(process.cwd(), "data", "hrvatski.db");
-const BACKUP_DIR = path.join(process.cwd(), "data", "backups");
 
 /**
  * Tabellen die voortgang bevatten. `items` staat hier bewust niet bij.
@@ -65,19 +61,8 @@ export interface ResetResult {
   cleared: Record<string, number>;
 }
 
-/** Een kopie van de database wegschrijven, met de tijd in de naam. */
-export function backupDatabase(): string {
-  fs.mkdirSync(BACKUP_DIR, { recursive: true });
-  const stamp = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "").replace(/(\d{8})/, "$1-");
-  const file = path.join(BACKUP_DIR, `hrvatski-${stamp}.db`);
-  // Via de VACUUM INTO van SQLite: die maakt een consistente kopie, ook terwijl
-  // er verbindingen openstaan. Een kaal bestandskopie zou de WAL kunnen missen.
-  sqlite.prepare("VACUUM INTO ?").run(file);
-  return path.relative(process.cwd(), file);
-}
-
 export function resetProgress(): ResetResult {
-  const backup = backupDatabase();
+  const backup = backupDatabase(sqlite, "voor-reset").file;
   const cleared: Record<string, number> = {};
 
   const run = sqlite.transaction(() => {
