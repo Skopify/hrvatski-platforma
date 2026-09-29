@@ -381,7 +381,7 @@ export function SessionRunner({
         </div>
 
         {!passive ? (
-          <h2 className="display-soft mb-5 text-[24px] leading-snug text-ink">
+          <h2 className="display mb-5 text-[24px] leading-snug text-ink">
             {step.exercise.prompt_nl}
           </h2>
         ) : null}
@@ -444,7 +444,7 @@ function CheckLijst({ report }: { report?: import("@/lib/leerlogboek").Feedback[
     <div className="mb-4">
       {report.checks.length ? (
         <>
-          <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+          <p className="hand text-[14px] font-bold text-ink-secondary">
             Nagekeken
           </p>
           <ul className="mt-2 space-y-1.5">

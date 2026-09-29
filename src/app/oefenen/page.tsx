@@ -46,7 +46,7 @@ export default function PracticePage() {
       <section className="hero mb-10 bg-pop-yellow px-6 py-5 text-on-pop">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
-            <p className="display-soft text-[20px]">
+            <p className="display text-[24px]">
               {due > 0
                 ? `${due} ${due === 1 ? "item staat" : "items staan"} klaar`
                 : "Niets te herhalen"}
@@ -75,7 +75,7 @@ export default function PracticePage() {
       {/* Drills */}
       <section>
         <div className="mb-4 flex items-baseline justify-between gap-4">
-          <h2 className="display-soft text-[26px] text-ink">Drills</h2>
+          <h2 className="display text-[26px] text-ink">Drills</h2>
           <span className="hand text-[14px] font-semibold text-ink-muted">Eindeloos · stopt wanneer jij stopt</span>
         </div>
 
@@ -104,7 +104,7 @@ export default function PracticePage() {
                       </span>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
-                          <h3 className="display-soft text-[18px] text-ink">{d.title}</h3>
+                          <h3 className="display text-[18px] text-ink">{d.title}</h3>
                           <span className="hr-text hand text-[13px] font-semibold text-ink-muted">{d.title_hr}</span>
                           {d.needsVoice ? <Pill tone="accent">audio</Pill> : null}
                         </div>
@@ -150,7 +150,7 @@ export default function PracticePage() {
               </span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="display-soft text-[18px] text-ink">Jouw fouten</h3>
+                  <h3 className="display text-[18px] text-ink">Jouw fouten</h3>
                   {mistakeCount > 0 ? <Pill tone="bad">{mistakeCount}</Pill> : null}
                 </div>
                 <p className="mt-1.5 max-w-2xl text-[13.5px] leading-relaxed text-ink-secondary">

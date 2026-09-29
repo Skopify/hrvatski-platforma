@@ -52,7 +52,7 @@ export function PageHeader({
         }`}
       >
         <SectionSticker section={section} size={30} tilt={-5} />
-        <span className="display-soft truncate text-[19px]">{title}</span>
+        <span className="display truncate text-[24px]">{title}</span>
       </div>
 
       <SectionSticker section={section} size={56} tilt={-5} className="mb-5" />

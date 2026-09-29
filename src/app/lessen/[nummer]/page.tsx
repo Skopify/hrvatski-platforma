@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
   return (
-    <div className="thin-scroll mt-4 overflow-x-auto rounded-2xl border-2 border-dashed border-line-strong bg-plane/60 p-1">
+    <div className="thin-scroll mt-4 overflow-x-auto rounded-[20px] border-2 border-dashed border-outline bg-surface p-1">
       <table className="w-full border-collapse text-[13.5px]">
         <caption className="px-3 pb-2 pt-2.5 text-left text-[13px] text-ink-muted">
           {paradigm.caption_nl}
@@ -20,7 +20,7 @@ function ParadigmTable({ paradigm }: { paradigm: Paradigm }) {
             {paradigm.columns.map((c) => (
               <th
                 key={c}
-                className="px-3 py-2 text-left text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted"
+                className="hand px-3 py-2 text-left text-[14px] font-bold text-ink-secondary"
               >
                 {c}
               </th>
@@ -116,7 +116,7 @@ export default async function LessonPage({
           </div>
         </div>
 
-        <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-line-soft pt-5">
+        <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-3 border-t-2 border-dashed border-line-strong pt-5">
           <Link
             href={`/lessen/${lesson.number}/sessie`}
             className="btn btn-primary px-6 py-3 text-[14.5px]"
@@ -132,7 +132,7 @@ export default async function LessonPage({
 
       {/* Leerdoelen */}
       <section className="mb-10">
-        <h2 className="display-soft mb-4 text-[20px] text-ink">Na deze les kun je</h2>
+        <h2 className="display mb-4 text-[24px] text-ink">Na deze les kun je</h2>
         <ul className="stagger grid gap-2.5">
           {lesson.can_do_nl.map((c, i) => (
             <li
@@ -141,7 +141,7 @@ export default async function LessonPage({
               className="flex gap-3 rounded-2xl border-2 border-outline bg-surface px-4 py-3"
             >
               <span
-                className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-wash text-accent"
+                className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-outline bg-pop-mint text-on-pop"
                 aria-hidden
               >
                 <svg width="11" height="11" viewBox="0 0 16 16">
@@ -163,7 +163,7 @@ export default async function LessonPage({
 
       {/* Grammatica */}
       <section className="mb-10">
-        <h2 className="display-soft mb-4 text-[20px] text-ink">Grammatica</h2>
+        <h2 className="display mb-4 text-[24px] text-ink">Grammatica</h2>
         <div className="space-y-4">
           {lesson.grammar.map((g) => (
             <article key={g.id} className="card px-6 py-6">
@@ -173,8 +173,8 @@ export default async function LessonPage({
               </p>
 
               {g.contrast_nl ? (
-                <div className="mt-4 overflow-hidden rounded-2xl bg-accent-wash px-4 py-3.5">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-accent">
+                <div className="mt-4 overflow-hidden rounded-[20px] border-2 border-outline bg-pop-sky px-4 py-3.5 text-on-pop">
+                  <p className="hand text-[14px] font-bold text-on-pop">
                     Tegenover het Nederlands
                   </p>
                   <p className="mt-1.5 text-[13px] leading-relaxed text-ink-secondary">
@@ -186,8 +186,8 @@ export default async function LessonPage({
               {g.paradigm ? <ParadigmTable paradigm={g.paradigm} /> : null}
 
               {g.pitfalls_nl?.length ? (
-                <div className="mt-5 rounded-2xl bg-warn-wash px-4 py-3.5">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-warn">
+                <div className="mt-5 rounded-[20px] border-2 border-outline bg-pop-peach px-4 py-3.5 text-on-pop">
+                  <p className="hand text-[14px] font-bold text-on-pop">
                     Valkuilen
                   </p>
                   <ul className="mt-2 space-y-1.5">
@@ -196,7 +196,7 @@ export default async function LessonPage({
                         key={p}
                         className="flex gap-2.5 text-[13px] leading-relaxed text-ink-secondary"
                       >
-                        <span className="mt-[1px] shrink-0 font-bold text-warn" aria-hidden>
+                        <span className="mt-[1px] shrink-0 font-bold text-on-pop" aria-hidden>
                           !
                         </span>
                         <span>{p}</span>
@@ -216,11 +216,11 @@ export default async function LessonPage({
 
       {/* Woordenschat */}
       <section className="mb-10">
-        <h2 className="display-soft mb-4 text-[20px] text-ink">Woordenschat</h2>
+        <h2 className="display mb-4 text-[24px] text-ink">Woordenschat</h2>
 
         {phrases.length > 0 ? (
           <div className="card mb-4 px-6 py-5">
-            <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="hand mb-3.5 text-[14px] font-bold text-ink-secondary">
               Uitdrukkingen
             </h3>
             <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
@@ -236,7 +236,7 @@ export default async function LessonPage({
 
         {nouns.length > 0 ? (
           <div className="card mb-4 px-6 py-5">
-            <h3 className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="hand text-[14px] font-bold text-ink-secondary">
               Zelfstandige naamwoorden
             </h3>
             <p className="mb-4 mt-1.5 text-[13px] leading-relaxed text-ink-muted">
@@ -246,29 +246,29 @@ export default async function LessonPage({
             <div className="thin-scroll overflow-x-auto">
               <table className="w-full border-collapse text-[13px]">
                 <thead>
-                  <tr className="text-[12px] uppercase tracking-[0.06em] text-ink-muted">
-                    <th className="border-b border-line py-2 text-left font-bold">Kroatisch</th>
-                    <th className="border-b border-line py-2 text-left font-bold">Nederlands</th>
-                    <th className="border-b border-line py-2 text-left font-bold">Geslacht</th>
-                    <th className="border-b border-line py-2 text-left font-bold">Genitief</th>
-                    <th className="border-b border-line py-2 text-left font-bold">Meervoud</th>
+                  <tr className="hand text-[14px] text-ink-secondary">
+                    <th className="border-b-2 border-outline py-2 text-left font-bold">Kroatisch</th>
+                    <th className="border-b-2 border-outline py-2 text-left font-bold">Nederlands</th>
+                    <th className="border-b-2 border-outline py-2 text-left font-bold">Geslacht</th>
+                    <th className="border-b-2 border-outline py-2 text-left font-bold">Genitief</th>
+                    <th className="border-b-2 border-outline py-2 text-left font-bold">Meervoud</th>
                   </tr>
                 </thead>
                 <tbody>
                   {nouns.map((v) => (
                     <tr key={v.id} className="transition-colors hover:bg-accent-wash/50">
-                      <td className="hr-text border-b border-line-soft py-2.5 font-bold text-ink">
+                      <td className="hr-text border-b-2 border-dashed border-line py-2.5 font-bold text-ink">
                         {v.hr}
                       </td>
-                      <td className="border-b border-line-soft py-2.5 text-ink-secondary">{v.nl}</td>
-                      <td className="border-b border-line-soft py-2.5 text-ink-muted">
+                      <td className="border-b-2 border-dashed border-line py-2.5 text-ink-secondary">{v.nl}</td>
+                      <td className="border-b-2 border-dashed border-line py-2.5 text-ink-muted">
                         {v.gender === "m" ? "m." : v.gender === "f" ? "v." : "o."}
                         {v.animacy === "animate" ? " · levend" : ""}
                       </td>
-                      <td className="hr-text border-b border-line-soft py-2.5 text-ink-secondary">
+                      <td className="hr-text border-b-2 border-dashed border-line py-2.5 text-ink-secondary">
                         {v.gen_sg ?? "—"}
                       </td>
-                      <td className="hr-text border-b border-line-soft py-2.5 text-ink-secondary">
+                      <td className="hr-text border-b-2 border-dashed border-line py-2.5 text-ink-secondary">
                         {v.nom_pl ?? "—"}
                       </td>
                     </tr>
@@ -281,7 +281,7 @@ export default async function LessonPage({
 
         {rest.length > 0 ? (
           <div className="card px-6 py-5">
-            <h3 className="mb-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+            <h3 className="hand mb-3.5 text-[14px] font-bold text-ink-secondary">
               Overige woorden
             </h3>
             <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">

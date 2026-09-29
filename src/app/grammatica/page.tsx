@@ -69,7 +69,7 @@ export default function GrammaticaPage() {
       {banden.map(({ band, modules }) => (
         <section key={band} className="mb-10 last:mb-0">
           <div className="mb-3">
-            <h2 className="display-soft inline-block rounded-lg border-2 border-outline bg-pop-lilac px-3 py-0.5 text-[19px] text-on-pop">
+            <h2 className="display inline-block rounded-lg border-2 border-outline bg-pop-lilac px-3 py-0.5 text-[24px] text-on-pop">
               {band}
             </h2>
             {BAND_UITLEG[band] ? (
@@ -89,7 +89,7 @@ export default function GrammaticaPage() {
                 }`}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="hr-text display-soft text-[22px] text-ink">{m.title_hr}</p>
+                  <p className="hr-text display text-[22px] text-ink">{m.title_hr}</p>
                   <span className="flex shrink-0 items-center gap-2">
                     <span className="num text-[14px] text-accent">{m.rank}</span>
                     {statussen.get(m.code) ? (

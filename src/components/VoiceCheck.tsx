@@ -36,7 +36,7 @@ export function VoiceCheck() {
               kwaliteit gesorteerd, dus de bovenste is meestal de juiste. */}
           {tts.croatianVoices.length > 1 ? (
             <div className="mt-4">
-              <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+              <p className="hand text-[15px] font-bold text-ink-secondary">
                 Stem kiezen
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -48,7 +48,7 @@ export function VoiceCheck() {
                     aria-pressed={tts.voice?.name === v.name}
                     className={`rounded-full border px-3.5 py-1.5 text-[13px] transition-colors ${
                       tts.voice?.name === v.name
-                        ? "border-accent-ring bg-accent-wash text-accent"
+                        ? "border-outline bg-pop-yellow text-on-pop"
                         : "border-line bg-surface text-ink-secondary hover:border-accent-ring"
                     }`}
                   >
@@ -65,8 +65,8 @@ export function VoiceCheck() {
           {/* De compacte stem die macOS standaard installeert klinkt blikkerig en
               slikt medeklinkers in. Bij een taal waar het verschil tussen č en ć
               het hele punt is, is dat geen detail. */}
-          <div className="mt-4 rounded-lg bg-sunken px-4 py-3">
-            <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+          <div className="mt-4 rounded-[18px] border-2 border-dashed border-outline bg-surface px-4 py-3">
+            <p className="hand text-[15px] font-bold text-ink-secondary">
               Klinkt het blikkerig?
             </p>
             <p className="mt-2 text-[13px] leading-relaxed text-ink-secondary">
@@ -112,8 +112,8 @@ export function VoiceCheck() {
                 overgeslagen in plaats van met een Engelse stem voorgelezen — dat laatste zou
                 je uitspraak actief bederven.
               </p>
-              <div className="mt-4 rounded-lg bg-sunken px-4 py-3">
-                <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+              <div className="mt-4 rounded-[18px] border-2 border-dashed border-outline bg-surface px-4 py-3">
+                <p className="hand text-[15px] font-bold text-ink-secondary">
                   Installeren op macOS
                 </p>
                 <ol className="mt-2 space-y-1 text-[13px] leading-relaxed text-ink-secondary">

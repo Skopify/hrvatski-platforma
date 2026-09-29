@@ -104,7 +104,7 @@ export default function ProgressPage() {
       <section className="card mb-8 px-6 py-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h2 className="display-soft text-[19px] text-ink">Uren tegenover het niveau</h2>
+            <h2 className="display text-[24px] text-ink">Uren tegenover het niveau</h2>
             <p className="mt-1.5 max-w-xl text-[13px] leading-relaxed text-ink-secondary">
               Een CEFR-niveau kost volgens de gangbare richtlijn 100 tot 200 begeleide
               lesuren, en dat loopt op naarmate je hoger komt. Geen enkele app levert die
@@ -212,7 +212,7 @@ export default function ProgressPage() {
       </section>
 
       <section className="card mb-8 px-6 py-6">
-        <h2 className="display-soft text-[19px] text-ink">Bijna goed</h2>
+        <h2 className="display text-[24px] text-ink">Bijna goed</h2>
         <p className="mt-1.5 max-w-2xl text-[13px] leading-relaxed text-ink-secondary">
           Antwoorden die zijn goedgekeurd maar een diakritisch teken of één letter misten.
           Deze tellen mee als goed, maar komen wél sneller terug — en ze staan hier apart,
@@ -234,7 +234,7 @@ export default function ProgressPage() {
       </section>
 
       <section className="card mb-8 px-6 py-6">
-        <h2 className="display-soft text-[19px] text-ink">Woordenschat</h2>
+        <h2 className="display text-[24px] text-ink">Woordenschat</h2>
         <div className="mt-5 grid grid-cols-3 gap-6">
           {[
             { v: vocab.total, l: "in de content", tone: "text-ink" },
@@ -258,7 +258,7 @@ export default function ProgressPage() {
       {/* Mijlpalen. Geen verborgen badges: je ziet waar je naartoe werkt. */}
       <section className="mb-8">
         <div className="mb-4 flex items-baseline justify-between gap-4">
-          <h2 className="display-soft text-[19px] text-ink">Mijlpalen</h2>
+          <h2 className="display text-[24px] text-ink">Mijlpalen</h2>
           <span className="tabular text-[13px] text-ink-muted">
             {marks.filter((m) => m.done).length} van {marks.length} behaald
           </span>
@@ -270,7 +270,7 @@ export default function ProgressPage() {
             if (inGroup.length === 0) return null;
             return (
               <div key={group}>
-                <h3 className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+                <h3 className="hand mb-2.5 text-[14px] font-bold text-ink-secondary">
                   {group}
                 </h3>
                 <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -279,7 +279,7 @@ export default function ProgressPage() {
                     return (
                       <li
                         key={m.id}
-                        className={`card px-5 py-4 ${m.done ? "border-good/40 bg-good-wash" : ""}`}
+                        className={`card px-5 py-4 ${m.done ? "bg-pop-mint text-on-pop shadow-[var(--hard-sm)]" : ""}`}
                       >
                         <div className="flex items-start gap-3">
                           {/* Behaald: vinkje. Nog niet: een lege ring. De breuk

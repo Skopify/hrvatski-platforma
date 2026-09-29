@@ -73,7 +73,7 @@ export function NakijkLijst({
   if (!zin) {
     return (
       <div className="rounded-card border-2 border-outline bg-surface px-6 py-10 text-center">
-        <p className="display-soft text-[22px] text-ink">Gotovo — hvala!</p>
+        <p className="display text-[22px] text-ink">Gotovo — hvala!</p>
         <p className="mt-2 text-[13.5px] text-ink-secondary">
           Sve rečenice su pregledane. {huidigeStand.goedgekeurd} ispravnih,{" "}
           {huidigeStand.fout} s greškom, {huidigeStand.twijfel} pod upitnikom.

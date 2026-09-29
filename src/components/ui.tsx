@@ -128,11 +128,11 @@ export function Card({
 
 const PILL_TONE: Record<string, string> = {
   neutral: "bg-surface text-ink-secondary",
-  accent: "bg-accent-wash text-accent",
+  accent: "bg-pop-sky text-on-pop",
   warm: "bg-warm-wash text-warm",
-  gold: "bg-gold-wash text-gold",
-  good: "bg-good-wash text-good-ink",
-  bad: "bg-bad-wash text-bad-ink",
+  gold: "bg-pop-yellow text-on-pop",
+  good: "bg-pop-mint text-on-pop",
+  bad: "bg-pop-pink text-on-pop",
   yellow: "bg-pop-yellow text-on-pop",
   pink: "bg-pop-pink text-on-pop",
   mint: "bg-pop-mint text-on-pop",

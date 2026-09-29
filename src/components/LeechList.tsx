@@ -30,7 +30,7 @@ export function LeechList({
   if (!over.length) return null;
 
   return (
-    <section className="mb-8 rounded-card bg-gold-wash px-5 py-5">
+    <section className="mb-8 rounded-card border-2 border-outline bg-pop-yellow px-5 py-5 text-on-pop shadow-[var(--hard-sm)]">
       <h2 className="text-[14.5px] font-bold text-gold">
         {over.length} {over.length === 1 ? "woord staat" : "woorden staan"} even uit de rotatie
       </h2>

@@ -48,7 +48,7 @@ export default function StoriesPage() {
           return (
             <section key={band} className="mb-8">
               <div className="mb-3 flex items-center gap-3">
-                <h2 className="display-soft rounded-lg border-2 border-outline bg-pop-peach px-3 py-0.5 text-[17px] text-on-pop">
+                <h2 className="display rounded-lg border-2 border-outline bg-pop-peach px-3 py-0.5 text-[17px] text-on-pop">
                   {band}
                 </h2>
                 <span className="h-0.5 flex-1 border-t-2 border-dashed border-line-strong" />
@@ -106,7 +106,7 @@ export default function StoriesPage() {
                                 ) : null}
                               </div>
 
-                              <h2 className="hr-text display-soft mt-2 text-[22px] text-ink">
+                              <h2 className="hr-text display mt-2 text-[22px] text-ink">
                                 {story.title_hr}
                                 <span className="ml-2.5 font-sans text-[13px] font-normal text-ink-muted">
                                   {story.title_nl}
@@ -180,7 +180,7 @@ export default function StoriesPage() {
                                   {story.focus_nl.slice(0, 3).map((f) => (
                                     <span
                                       key={f}
-                                      className="rounded-full bg-sunken px-2 py-0.5 text-[12px] text-ink-secondary"
+                                      className="rounded-full border-[1.5px] border-outline bg-surface px-2.5 py-0.5 text-[13px] font-semibold text-ink-secondary"
                                     >
                                       {f}
                                     </span>

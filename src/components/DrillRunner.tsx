@@ -291,14 +291,14 @@ export function DrillRunner({ meta }: { meta: DrillMeta }) {
               </button>
               {/* Dezelfde onthouden snelheid als in de lessen — één instelling
                   voor het hele platform, niet per scherm opnieuw kiezen. */}
-              <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
+              <div className="inline-flex items-center gap-1 rounded-full border-2 border-outline bg-surface p-1">
                 {TTS_RATES.map((r) => (
                   <button
                     key={r.value}
                     type="button"
                     onClick={() => tts.setRate(r.value)}
                     aria-pressed={tts.rate === r.value}
-                    className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
+                    className={`rounded-full px-3 py-1 text-[13px] font-medium transition-colors ${
                       tts.rate === r.value
                         ? "bg-pop-yellow text-on-pop"
                         : "text-ink-muted hover:text-ink-secondary"

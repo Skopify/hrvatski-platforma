@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Doodle } from "@/components/doodles";
+import { PillMeter } from "@/components/PillMeter";
 import { Page, PageHeader } from "@/components/ui";
 import { loadModule, moduleExercises, moduleStepCount, type ModulePhase } from "@/lib/modules";
 import { moduleStatuses, STATUS_TEXT } from "@/lib/placement";
@@ -32,14 +34,27 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
   const afgerondOp = moduleProgressMap().get(module.code)?.afgerondOp ?? null;
   const resterend = Math.max(0, stappen - gedaan);
 
+  // Elke soort stap krijgt zijn eigen stift, zodat je aan de kleur ziet wat er komt.
+  const STAP_POP: Record<ModulePhase["kind"], string> = {
+    noticing: "bg-pop-sky",
+    rule: "bg-pop-lilac",
+    interpretation: "bg-pop-peach",
+    blocked: "bg-pop-yellow",
+    interleaved: "bg-pop-pink",
+    context: "bg-pop-mint",
+  };
+  // De uitslag van de meting bepaalt de kleur van de kaart.
+  const uitslagPop = !status ? "bg-pop-lilac" : status.status === "beheerst" ? "bg-pop-mint" : status.status === "onzeker" ? "bg-pop-yellow" : "bg-pop-peach";
+
   return (
     <Page>
       <PageHeader title={module.title_nl} intro={module.blurb_nl} />
 
-      <div className="mb-6 flex flex-wrap items-baseline gap-3">
-        <p className="hr-text text-[20px] font-semibold text-ink">{module.title_hr}</p>
+      <div className="mb-7 flex flex-wrap items-center gap-3">
+        <p className="hr-text display text-[26px] leading-tight">{module.title_hr}</p>
         {afgerondOp ? (
-          <span className="pill bg-good-wash text-good">
+          <span className="pill -rotate-2 bg-pop-mint text-on-pop">
+            <Doodle name="check" size={16} stroke={2.6} />
             afgerond op {new Date(afgerondOp).toLocaleDateString("nl-NL")}
           </span>
         ) : null}
@@ -48,69 +63,74 @@ export default async function ModulePage({ params }: { params: Promise<{ code: s
       {/* De uitslag met zijn teller erbij, en altijd de weg terug. Wie tijdens de
           module merkt dat "beheerst" niet klopt, moet dat kunnen rechtzetten
           zonder de hele toets over te doen. */}
-      <div className="rounded-card mb-8 border-2 border-dashed border-line-strong bg-sunken px-5 py-4">
+      <div className={`mb-9 rounded-card border-2 border-outline px-6 py-5 text-on-pop shadow-[var(--hard)] ${uitslagPop}`}>
+        <p className="hand text-[16px] font-bold">{status ? "Wat we gemeten hebben" : "Nog niet gemeten"}</p>
         {status ? (
           <>
-            <p className="text-[14px] font-bold text-ink">
-              Gemeten: {status.status} — {status.correct} van {status.total} goed
+            <p className="display mt-1 text-[24px] capitalize leading-tight">
+              {status.status} — {status.correct} van {status.total} goed
             </p>
-            <p className="mt-1 text-[13.5px] leading-relaxed text-ink-secondary">
-              {STATUS_TEXT[status.status]}
-            </p>
+            <p className="mt-1.5 text-[15px] font-medium leading-relaxed">{STATUS_TEXT[status.status]}</p>
           </>
         ) : (
-          <p className="text-[13.5px] leading-relaxed text-ink-secondary">
-            Deze module is nog niet gemeten. Dat is iets anders dan onbekend — er is alleen niets
-            over te zeggen.
+          <p className="mt-1 text-[15px] font-medium leading-relaxed">
+            Dat is iets anders dan onbekend: er is alleen niets over te zeggen. Drie vragen laten zien waar je staat.
           </p>
         )}
-        <Link
-          href={`/plaatsingstoets?module=${module.code.toLowerCase()}`}
-          className="mt-2 inline-block text-[13.5px] font-semibold text-accent hover:underline"
-        >
+        <Link href={`/plaatsingstoets?module=${module.code.toLowerCase()}`} className="btn btn-ghost mt-4 h-11 px-5 text-[14.5px]">
           Test je hieruit — drie vragen
         </Link>
       </div>
 
-      <section className="mb-8">
-        <h2 className="mb-3 text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">
-          Na deze module
-        </h2>
-        <ul className="flex flex-col gap-1.5">
+      <section className="mb-10">
+        <h2 className="display mb-4 text-[26px]">Na deze module</h2>
+        <ul className="flex flex-col gap-2.5">
           {module.can_do_nl.map((c) => (
-            <li key={c} className="flex gap-2.5 text-[14.5px] leading-relaxed text-ink-secondary">
-              <span aria-hidden className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              {c}
+            <li key={c} className="flex items-start gap-3 rounded-[20px] border-2 border-outline bg-surface px-4 py-3">
+              <span aria-hidden className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-outline bg-pop-mint text-on-pop">
+                <Doodle name="check" size={13} stroke={3} />
+              </span>
+              <span className="text-[15px] font-medium leading-relaxed">{c}</span>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mb-9">
-        <h2 className="mb-3 text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">
-          Hoe het gaat — {module.phases.length} stappen, {aantal} opgaven
-        </h2>
-        <ol className="flex flex-col gap-2.5">
+      <section className="mb-10">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-x-4 gap-y-1">
+          <h2 className="display text-[26px]">Hoe het gaat</h2>
+          <p className="hand text-[14.5px] font-bold text-ink-secondary">
+            {module.phases.length} stappen · {aantal} opgaven
+          </p>
+        </div>
+        {gedaan > 0 ? (
+          <div className="mb-4">
+            <PillMeter value={gedaan} max={stappen} unit="stappen" height={30} showBurst={false} color="var(--color-pop-mint)" />
+          </div>
+        ) : null}
+        <ol className="flex flex-col gap-3">
           {module.phases.map((p) => (
-            <li key={p.step} className="rounded-card bg-sunken px-4 py-3.5">
-              <p className="text-[14px] font-bold text-ink">
-                <span className="tabular mr-2 text-accent">{p.step}</span>
-                {p.title_nl}
-                <span className="ml-2 text-[13px] font-medium text-ink-muted">
-                  {STAP_LABEL[p.kind]}
-                </span>
-              </p>
-              <p className="mt-1 text-[13px] leading-relaxed text-ink-secondary">{p.why_nl}</p>
+            <li key={p.step} className="flex gap-4 rounded-card border-2 border-outline bg-surface px-4 py-4 shadow-[var(--hard-sm)]">
+              <span
+                aria-hidden
+                className={`num flex h-11 w-11 shrink-0 -rotate-3 items-center justify-center rounded-[14px] border-2 border-outline text-[20px] text-on-pop shadow-[2px_2px_0_var(--color-outline)] ${STAP_POP[p.kind]}`}
+              >
+                {p.step}
+              </span>
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                  <span className="display text-[19px] leading-tight">{p.title_nl}</span>
+                  <span className={`pill h-7 px-2.5 text-[13px] text-on-pop ${STAP_POP[p.kind]}`}>{STAP_LABEL[p.kind]}</span>
+                </p>
+                <p className="mt-1.5 text-[14.5px] leading-relaxed text-ink-secondary">{p.why_nl}</p>
+              </div>
             </li>
           ))}
         </ol>
       </section>
 
       <div className="flex flex-wrap items-center gap-4">
-        <Link
-          href={`/grammatica/${module.code.toLowerCase()}/sessie`}
-          className="btn btn-primary inline-flex px-7 py-3 text-[14.5px]"
-        >
+        <Link href={`/grammatica/${module.code.toLowerCase()}/sessie`} className="btn btn-primary h-[52px] px-8 text-[16px]">
           {gedaan
             ? `Hervatten — nog ${resterend} van ${stappen}`
             : afgerondOp

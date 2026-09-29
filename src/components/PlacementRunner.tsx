@@ -271,7 +271,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
               ["onzeker", onzeker.length, "text-gold"],
               ["onbekend", onbekend.length, "text-ink-secondary"],
             ].map(([label, n, kleur]) => (
-              <div key={label as string} className="rounded-card bg-sunken px-4 py-3">
+              <div key={label as string} className="rounded-card border-2 border-dashed border-outline bg-surface px-4 py-3">
                 <p className={`tabular text-[22px] font-bold ${kleur}`}>{n as number}</p>
                 <p className="text-[13px] text-ink-muted">{label as string}</p>
               </div>
@@ -329,7 +329,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
   return (
     <div>
       <div className="mb-5 flex items-baseline justify-between gap-3">
-        <p className="text-[13px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+        <p className="hand text-[15px] font-bold text-ink-secondary">
           {fase === "grammatica"
             ? v.moduleTitle
             : `Woordenschat · band ${v.band} van ${plan.bands.length}`}
@@ -363,7 +363,7 @@ export function PlacementRunner({ plan, scope }: { plan: PlacementPlan; scope?: 
               onClick={() => setKeuze(opt)}
               className={`rounded-card border px-4 py-3 text-left text-[14.5px] transition-colors ${
                 gekozen
-                  ? "border-accent bg-accent-wash text-ink"
+                  ? "border-outline bg-pop-yellow text-on-pop"
                   : "border-line bg-surface text-ink-secondary hover:border-accent-ring"
               }`}
             >

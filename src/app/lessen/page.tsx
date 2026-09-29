@@ -81,7 +81,7 @@ export default function LessonsPage() {
                 <div className="min-w-0">
                   <div className="flex items-center gap-2.5">
                     <Pill tone="mint">{band.cefr}</Pill>
-                    <h2 className="display-soft text-[26px] text-ink">{band.title}</h2>
+                    <h2 className="display text-[26px] text-ink">{band.title}</h2>
                   </div>
                   <p className="mt-1.5 max-w-xl text-[14px] leading-relaxed text-ink-secondary">
                     {band.blurb}

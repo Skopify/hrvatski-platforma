@@ -223,7 +223,7 @@ export function StoryReader({
       {/* Cultuurnoot */}
       {story.culture_nl ? (
         <aside className="card mt-10 px-6 py-5">
-          <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-warm">
+          <p className="hand text-[14px] font-bold text-warm">
             {story.culture_nl.title_nl}
           </p>
           <p className="mt-2 text-[13.5px] leading-[1.7] text-ink-secondary">
@@ -233,9 +233,9 @@ export function StoryReader({
       ) : null}
 
       {/* Afronden */}
-      <div className="mt-10 border-t border-line pt-7">
+      <div className="mt-10 border-t-2 border-outline pt-7">
         {afgerondOp && !justRead ? (
-          <div className="rounded-card border border-good/40 bg-good-wash/50 px-6 py-5">
+          <div className="rounded-card border-2 border-outline bg-pop-mint px-6 py-5 text-on-pop shadow-[var(--hard-sm)]">
             <p className="flex items-center gap-2 text-[14.5px] font-bold text-good">
               <span aria-hidden>✓</span> Verhaal afgerond op{" "}
               {new Date(afgerondOp).toLocaleDateString("nl-NL")}
@@ -370,7 +370,7 @@ export function StoryReader({
             </div>
 
             {shown.gloss.item ? (
-              <div className="mt-3 border-t border-line-soft pt-3">
+              <div className="mt-3 border-t-2 border-dashed border-line-strong pt-3">
                 {saved.has(shown.gloss.item) ? (
                   <p className="flex items-center gap-1.5 text-[13px] font-semibold text-good-ink">
                     <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden>

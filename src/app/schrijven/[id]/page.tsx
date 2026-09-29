@@ -28,8 +28,8 @@ export default async function SchrijfOpdrachtPage({
       </PageHeader>
 
       {opdracht.hulp_nl.length ? (
-        <div className="mb-6 rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-4">
-          <p className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+        <div className="mb-6 rounded-card border-2 border-outline bg-pop-yellow px-5 py-4 text-on-pop shadow-[var(--hard-sm)]">
+          <p className="hand mb-2 text-[15px] font-bold text-ink-secondary">
             Een zetje
           </p>
           <ul className="space-y-1.5">

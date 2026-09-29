@@ -48,6 +48,7 @@ jobs:
           npm run check:levenscyclus
           npm run check:lan
           npm run check:responsive
+          npm run check:stijl
 
       - name: Productiebuild
         run: npm run build

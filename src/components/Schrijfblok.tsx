@@ -102,7 +102,7 @@ export function Schrijfblok({
         <button
           type="button"
           onClick={() => setModel((m) => !m)}
-          className="flex w-full items-center justify-between gap-3 rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-3 text-left"
+          className="flex w-full items-center justify-between gap-3 rounded-card border-2 border-dashed border-outline bg-surface px-5 py-3 text-left"
         >
           <span className="text-[13.5px] font-semibold text-ink">
             {opdracht.soort === "verhaal" ? "Een voorbeeld — pas openen als je vastzit" : "Zo doet iemand anders het"}
@@ -125,14 +125,14 @@ export function Schrijfblok({
       {/* 2. De bouwstenen. */}
       {bank.length ? (
         <section className="mb-5 rounded-card border-2 border-outline bg-surface px-5 py-4">
-          <p className="mb-2.5 text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+          <p className="hand mb-2.5 text-[15px] font-bold text-ink-secondary">
             Woorden die je hier kunt gebruiken
           </p>
           <ul className="flex flex-wrap gap-1.5">
             {bank.map((w) => (
               <li
                 key={w.hr}
-                className="rounded-lg bg-sunken px-2.5 py-1 text-[13px] text-ink-secondary"
+                className="rounded-full border-2 border-outline bg-surface px-3 py-1 text-[13.5px] text-ink-secondary"
               >
                 <span className="hr-text font-semibold text-ink">{w.hr}</span>{" "}
                 <span className="text-ink-muted">{w.nl}</span>
@@ -181,13 +181,13 @@ export function Schrijfblok({
       {oordeel ? (
         <div className="mt-6 space-y-4">
           {vooruit ? (
-            <p className="rounded-card border border-accent-ring bg-accent-wash px-5 py-3 text-[13.5px] font-semibold text-accent">
+            <p className="rounded-card border-2 border-outline bg-pop-sky px-5 py-3 text-[13.5px] font-semibold text-on-pop">
               Beter: {vorigeFouten} → {fouten} {fouten === 1 ? "ding" : "dingen"} om naar te kijken.
             </p>
           ) : null}
 
           <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
-            <h3 className="display-soft mb-3 text-[16px] text-ink">Waar het om ging</h3>
+            <h3 className="display mb-3 text-[16px] text-ink">Waar het om ging</h3>
             <ul className="space-y-2">
               {opdracht.rubriek_nl.map((r) => {
                 const check = oordeel.checks.find((c) => c.label === r);
@@ -221,7 +221,7 @@ export function Schrijfblok({
 
           {fouten ? (
             <section className="rounded-card border border-warm/30 bg-warm-wash px-5 py-4">
-              <h3 className="display-soft mb-1 text-[16px] text-ink">Kijk hier nog eens naar</h3>
+              <h3 className="display mb-1 text-[16px] text-ink">Kijk hier nog eens naar</h3>
               <p className="mb-3 text-[13px] text-ink-muted">
                 Ik zeg wat er aan de hand is, niet meteen wat het moet zijn. Kom je er niet uit,
                 klik dan door.
@@ -299,7 +299,7 @@ export function Schrijfblok({
 
           {(vormen.length || onbekend.length || namen.length) ? (
             <section className="rounded-card border-2 border-outline bg-surface px-5 py-4">
-              <h3 className="display-soft mb-1.5 text-[16px] text-ink">Wat ik niet kon plaatsen</h3>
+              <h3 className="display mb-1.5 text-[16px] text-ink">Wat ik niet kon plaatsen</h3>
               <p className="mb-2.5 text-[13px] leading-relaxed text-ink-muted">
                 Geen fouten — dingen waar ik niets over kan zeggen. Het Kroatisch is groter dan
                 deze leergang.

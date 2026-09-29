@@ -30,7 +30,7 @@ export function ResetProgress({
 
   if (klaar?.ok) {
     return (
-      <section className="rounded-card border border-good/30 bg-good-wash p-6">
+      <section className="rounded-card border-2 border-outline bg-pop-mint p-6 text-on-pop shadow-[var(--hard-sm)]">
         <h2 className="text-[13.5px] font-medium text-good-ink">Opnieuw begonnen</h2>
         <p className="mt-2 text-[13px] leading-relaxed text-good-ink">{klaar.message}</p>
       </section>
@@ -47,20 +47,20 @@ export function ResetProgress({
       </p>
 
       {leeg ? (
-        <p className="mt-4 rounded-lg bg-sunken px-4 py-3 text-[13px] text-ink-secondary">
+        <p className="mt-4 rounded-[18px] border-2 border-dashed border-outline bg-surface px-4 py-3 text-[13px] text-ink-secondary">
           Er staat nog geen voortgang om te wissen.
         </p>
       ) : !open ? (
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-4 rounded-full border border-bad/40 bg-surface px-4 py-2 text-[13px] font-medium text-bad-ink transition-colors hover:bg-bad-wash"
+          className="mt-4 rounded-full border-2 border-outline bg-surface px-4 py-2 text-[13px] font-medium text-bad-ink transition-colors hover:bg-bad-wash"
         >
           Voortgang resetten…
         </button>
       ) : (
-        <div className="mt-4 rounded-lg border border-bad/30 bg-bad-wash px-4 py-4">
-          <p className="text-[13px] font-semibold uppercase tracking-wide text-bad-ink">
+        <div className="mt-4 rounded-[18px] border-2 border-outline bg-pop-pink px-4 py-4 text-on-pop">
+          <p className="hand text-[15px] font-bold text-bad-ink">
             Dit raak je kwijt
           </p>
           <ul className="tabular mt-2.5 grid grid-cols-1 gap-x-6 gap-y-1 text-[13px] text-ink-secondary sm:grid-cols-2">

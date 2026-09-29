@@ -53,7 +53,7 @@ export function VoiceLab() {
             aria-pressed={i === zin}
             className={`rounded-full border px-3 py-1.5 text-[13px] transition-colors ${
               i === zin
-                ? "border-accent-ring bg-accent-wash text-accent"
+                ? "border-outline bg-pop-yellow text-on-pop"
                 : "border-line bg-surface text-ink-secondary hover:border-accent-ring"
             }`}
           >
@@ -67,17 +67,17 @@ export function VoiceLab() {
 
       {/* Snelheid geldt voor alle knoppen hieronder */}
       <div className="mt-4 flex flex-wrap items-center gap-2">
-        <span className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+        <span className="hand text-[15px] font-bold text-ink-secondary">
           Tempo
         </span>
-        <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
+        <div className="inline-flex items-center gap-1 rounded-full border-2 border-outline bg-surface p-1">
           {TTS_RATES.map((r) => (
             <button
               key={r.value}
               type="button"
               onClick={() => tts.setRate(r.value)}
               aria-pressed={tts.rate === r.value}
-              className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
+              className={`rounded-full px-3 py-1 text-[13px] font-medium transition-colors ${
                 tts.rate === r.value
                   ? "bg-pop-yellow text-on-pop"
                   : "text-ink-muted hover:text-ink-secondary"
@@ -131,7 +131,7 @@ export function VoiceLab() {
       </div>
 
       {!tts.serverVoices.length ? (
-        <p className="mt-4 rounded-lg bg-sunken px-4 py-3 text-[13px] leading-relaxed text-ink-secondary">
+        <p className="mt-4 rounded-[18px] border-2 border-dashed border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-ink-secondary">
           Er staat nog geen Azure-sleutel ingesteld, dus je hoort alleen de stem van je
           systeem. Zie <span className="font-medium">README → Betere stemmen</span> voor de
           vijf minuten die het kost — en het blijft binnen de gratis laag.
@@ -174,9 +174,9 @@ function AzureTest() {
       {/* De kostenteller. Dit is de enige plek waar zichtbaar wordt of het
           gratis blijft, dus die hoort in beeld en niet in een logbestand. */}
       {verbruik ? (
-        <div className="mb-4 rounded-lg border-2 border-dashed border-line-strong bg-sunken px-4 py-3">
+        <div className="mb-4 rounded-[18px] border-2 border-dashed border-outline bg-surface px-4 py-3">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <p className="text-[13px] font-semibold uppercase tracking-wide text-ink-muted">
+            <p className="hand text-[15px] font-bold text-ink-secondary">
               Verbruik deze maand
             </p>
             <p className="tabular text-[13px] text-ink-secondary">
@@ -219,7 +219,7 @@ function AzureTest() {
       {uitslag ? (
         <p
           className={`mt-3 rounded-lg px-4 py-3 text-[13px] leading-relaxed ${
-            uitslag.ok ? "bg-good-wash text-good-ink" : "bg-bad-wash text-bad-ink"
+            uitslag.ok ? "border-2 border-outline bg-pop-mint text-on-pop" : "border-2 border-outline bg-pop-pink text-on-pop"
           }`}
         >
           {uitslag.message}
@@ -245,7 +245,7 @@ function VoiceRow({
   return (
     <div
       className={`flex flex-wrap items-center gap-3 rounded-xl border px-4 py-3 ${
-        actief ? "border-accent-ring bg-accent-wash" : "border-line bg-surface"
+        actief ? "border-outline bg-pop-yellow text-on-pop" : "border-outline/40 bg-surface"
       }`}
     >
       <div className="min-w-0 flex-1">

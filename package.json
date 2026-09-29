@@ -36,7 +36,8 @@
     "app:maak": "zsh scripts/maak-app.sh",
     "icons": "zsh scripts/maak-icons.sh",
     "check:lan": "tsx scripts/check-lan.ts",
-    "check:responsive": "tsx scripts/check-responsive.ts"
+    "check:responsive": "tsx scripts/check-responsive.ts",
+    "check:stijl": "tsx scripts/check-stijl.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.7.0",

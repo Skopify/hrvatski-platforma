@@ -51,7 +51,7 @@ export default function MistakesPage() {
       {patterns.length > 0 ? (
         <section className="mb-10">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="display-soft text-[20px] text-ink">Patronen</h2>
+            <h2 className="display text-[24px] text-ink">Patronen</h2>
             <span className="text-[13px] text-ink-muted">
               Wat er structureel misgaat, niet wat er één keer misging
             </span>
@@ -110,7 +110,7 @@ export default function MistakesPage() {
         <div className="space-y-10">
           <section>
             <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
-              <h2 className="display-soft text-[20px] text-ink">Echt fout</h2>
+              <h2 className="display text-[24px] text-ink">Echt fout</h2>
               <span className="tabular text-[13px] text-ink-muted">{wrong.length} stuks</span>
             </div>
 
@@ -140,16 +140,16 @@ export default function MistakesPage() {
                     ) : null}
 
                     <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                      <div className="rounded-xl bg-bad-wash px-3.5 py-2.5">
-                        <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-bad-ink">
+                      <div className="rounded-[16px] border-2 border-outline bg-pop-pink px-3.5 py-2.5 text-on-pop">
+                        <p className="hand text-[14px] font-bold text-bad-ink">
                           Jij schreef
                         </p>
                         <p className="hr-text mt-1 text-[15px] text-ink">
                           {m.given || <span className="text-ink-muted">— niets —</span>}
                         </p>
                       </div>
-                      <div className="rounded-xl bg-good-wash px-3.5 py-2.5">
-                        <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-good-ink">
+                      <div className="rounded-[16px] border-2 border-outline bg-pop-mint px-3.5 py-2.5 text-on-pop">
+                        <p className="hand text-[14px] font-bold text-good-ink">
                           Het moest zijn
                         </p>
                         <p className="hr-text mt-1 text-[15px] font-semibold text-ink">
@@ -169,7 +169,7 @@ export default function MistakesPage() {
             <section>
               <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
                 <div>
-                  <h2 className="display-soft text-[20px] text-ink">Bijna goed</h2>
+                  <h2 className="display text-[24px] text-ink">Bijna goed</h2>
                   <p className="mt-1 max-w-xl text-[13px] leading-relaxed text-ink-secondary">
                     Je wist het antwoord, maar miste een diakritisch teken of één letter.
                     Deze zijn goedgekeurd — ze staan hier omdat het weglaten van č, ć, š, ž

@@ -48,11 +48,11 @@ function MiniParadigm({ table }: { table: Paradigm }) {
       <table className="w-full border-collapse text-left">
         <thead>
           <tr>
-            <th className="pb-2 pr-3 text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted" />
+            <th className="hand pb-2 pr-3 text-[14px] font-bold text-ink-secondary" />
             {table.columns.map((c) => (
               <th
                 key={c}
-                className="pb-2 pr-3 text-[12px] font-bold uppercase tracking-[0.06em] text-ink-muted"
+                className="hand pb-2 pr-3 text-[14px] font-bold text-ink-secondary"
               >
                 {c}
               </th>
@@ -64,7 +64,7 @@ function MiniParadigm({ table }: { table: Paradigm }) {
               naam dragen. In de accusatiefmodule staat "mannelijk, levend"
               tweemaal, en met het label als sleutel liet React er een vallen. */}
           {table.rows.map((row, i) => (
-            <tr key={i} className="border-t border-line/60">
+            <tr key={i} className="border-t-2 border-outline/60">
               <th className="py-2 pr-3 text-[13px] font-medium text-ink-secondary">
                 {row.label}
               </th>
@@ -167,14 +167,14 @@ function PlayButton({ text, tts }: { text: string; tts: TtsState }) {
 function SpeedPicker({ tts }: { tts: TtsState }) {
   if (!tts.supported || !tts.voice) return null;
   return (
-    <div className="inline-flex items-center gap-1 rounded-lg bg-sunken p-1">
+    <div className="inline-flex items-center gap-1 rounded-full border-2 border-outline bg-surface p-1">
       {TTS_RATES.map((r) => (
         <button
           key={r.value}
           type="button"
           onClick={() => tts.setRate(r.value)}
           aria-pressed={tts.rate === r.value}
-          className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
+          className={`rounded-full px-3 py-1 text-[13px] font-medium transition-colors ${
             tts.rate === r.value
               ? "bg-pop-yellow text-on-pop"
               : "text-ink-muted hover:text-ink-secondary"
@@ -254,7 +254,7 @@ export function ExerciseView({
         <div className="space-y-4">
           <div className="card px-5 py-5">
             <div className="mb-3.5 flex items-center justify-between gap-3">
-              <p className="text-[12px] font-bold uppercase tracking-[0.07em] text-ink-muted">
+              <p className="hand text-[14px] font-bold text-ink-secondary">
                 Lees en luister
               </p>
               <PlayButton text={lines.map((l) => l.replace(/^[^:]{2,14}:\s*/, "")).join(" ")} tts={tts} />
@@ -288,7 +288,7 @@ export function ExerciseView({
           </div>
 
           {exercise.body_nl ? (
-            <details className="rounded-card border-2 border-dashed border-line-strong bg-sunken px-5 py-3.5">
+            <details className="rounded-card border-2 border-dashed border-outline bg-surface px-5 py-3.5">
               <summary className="cursor-pointer text-[13px] text-ink-secondary transition-colors hover:text-accent">
                 Vertaling tonen
               </summary>
@@ -313,9 +313,9 @@ export function ExerciseView({
     // beoordeling.
     case "teaching_moment":
       return (
-        <div className="rounded-card relative overflow-hidden bg-gold-wash px-5 py-5">
+        <div className="rounded-card relative overflow-hidden border-2 border-outline bg-pop-yellow px-5 py-5 text-on-pop">
           <span aria-hidden className="absolute inset-y-0 left-0 w-1 bg-gold-bright" />
-          <p className="mb-2.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.07em] text-gold">
+          <p className="hand mb-2.5 flex items-center gap-2 text-[14px] font-bold text-gold">
             <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden>
               <path
                 d="M8 1.5a4.5 4.5 0 0 0-2.6 8.2c.4.3.6.7.6 1.1v.4h4v-.4c0-.4.2-.8.6-1.1A4.5 4.5 0 0 0 8 1.5ZM6.2 13.2h3.6M6.8 14.8h2.4"
@@ -454,7 +454,7 @@ export function ExerciseView({
       );
       return (
         <div className="space-y-4">
-          <div className="flex min-h-[62px] flex-wrap items-center gap-2 rounded-2xl border-2 border-dashed border-line-strong bg-sunken px-3.5 py-3.5">
+          <div className="flex min-h-[62px] flex-wrap items-center gap-2 rounded-2xl border-2 border-dashed border-outline bg-surface px-3.5 py-3.5">
             {chosen.length === 0 ? (
               <span className="text-[13px] text-ink-muted">
                 Klik de woorden in de juiste volgorde

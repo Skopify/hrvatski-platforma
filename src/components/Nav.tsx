@@ -266,7 +266,7 @@ export function Nav({
                   <Doodle name="punten" size={26} color="var(--color-pop-lilac)" />
                 )}
               </span>
-              <span className={`max-w-full truncate text-[12px] leading-none ${inMeer ? "font-extrabold text-on-pop" : "font-semibold text-ink"}`}>
+              <span className={`max-w-full whitespace-nowrap text-[12px] leading-none tracking-tight ${inMeer ? "text-[11px] font-extrabold text-on-pop" : "font-semibold text-ink"}`}>
                 {inMeer && active ? active.label : "Meer"}
               </span>
             </button>
