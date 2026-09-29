@@ -16,7 +16,7 @@ export const THEME_KEY = "hr-thema";
 
 export const THEME_SCRIPT = `(function(){try{var m=localStorage.getItem("${THEME_KEY}");var d=m==="dark"||(m!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.theme=d?"dark":"light";}catch(e){document.documentElement.dataset.theme="light";}})();`;
 
-export function ThemeToggle({ className = "" }: { className?: string }) {
+export function useThema() {
   const [dark, setDark] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -44,6 +44,11 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     setDark(next);
   };
 
+  return { dark, toggle };
+}
+
+export function ThemeToggle({ className = "" }: { className?: string }) {
+  const { dark, toggle } = useThema();
   const label = dark ? "Licht thema" : "Donker thema";
   return (
     <button

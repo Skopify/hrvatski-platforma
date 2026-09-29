@@ -89,14 +89,12 @@ export function Levensteken({ beheerd }: { beheerd: boolean }) {
   );
 }
 
-/** De knop onderin de zijbalk. Eerst een tweede klik ter bevestiging. */
-export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; compact?: boolean }) {
+/** Afsluiten kan alleen op de laptop zelf; op een telefoon of iPad is het er niet. */
+export function useAfsluiten(beheerd: boolean) {
   const [zeker, setZeker] = useState(false);
   const [bezig, setBezig] = useState(false);
-  // Afsluiten kan alleen op de laptop zelf; op een telefoon of iPad is de knop er niet.
   const [laptop, setLaptop] = useState(false);
   useEffect(() => setLaptop(["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)), []);
-  if (!beheerd || !laptop) return null;
 
   async function afsluiten() {
     setBezig(true);
@@ -106,7 +104,13 @@ export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; co
       window.dispatchEvent(new Event(AFGESLOTEN));
     }
   }
+  return { beschikbaar: beheerd && laptop, zeker, setZeker, bezig, afsluiten };
+}
 
+/** De knop onderin de zijbalk (telefoon: in het Meer-menu). Eerst een tweede klik ter bevestiging. */
+export function AfsluitKnop({ beheerd, compact = false }: { beheerd: boolean; compact?: boolean }) {
+  const { beschikbaar, zeker, setZeker, bezig, afsluiten } = useAfsluiten(beheerd);
+  if (!beschikbaar) return null;
   return zeker ? (
     <div className="flex items-center gap-1.5">
       <button type="button" onClick={afsluiten} disabled={bezig} className="pill h-8 bg-pop-coral px-3 text-[13px] text-on-pop active:scale-95">

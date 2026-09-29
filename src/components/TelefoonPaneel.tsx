@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Doodle } from "./doodles";
 
 /*
-  "Telefoon & iPad": de knop en het paneel op de laptop. Hier zet je het aan,
+  "Telefoon & iPad": het paneel op de laptop (geopend vanuit het instellingenmenu). Hier zet je het aan,
   zie je het adres en de koppelcode, en ontkoppel je alle apparaten. De app zelf
   blijft op de laptop; een poortwachter laat alleen gekoppelde apparaten door
   (src/lib/lan-proxy.ts).
@@ -20,27 +20,7 @@ interface Stand {
 
 const koppen = (actie: string) => ({ "x-hrvatski-actie": actie, "Content-Type": "application/json" });
 
-export function TelefoonKnop({ beheerd, compact = false }: { beheerd: boolean; compact?: boolean }) {
-  const [open, setOpen] = useState(false);
-  if (!beheerd) return null;
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        title="Telefoon & iPad"
-        aria-label="Telefoon en iPad"
-        className="pill h-8 gap-1.5 bg-surface px-3 text-[13px] text-ink active:scale-95"
-      >
-        <Doodle name="praat" size={16} color="var(--color-pop-aqua)" />
-        {compact ? null : "Telefoon"}
-      </button>
-      {open ? <Paneel sluit={() => setOpen(false)} /> : null}
-    </>
-  );
-}
-
-function Paneel({ sluit }: { sluit: () => void }) {
+export function Paneel({ sluit }: { sluit: () => void }) {
   const [stand, setStand] = useState<Stand | null>(null);
   const [bezig, setBezig] = useState(false);
   const [meld, setMeld] = useState("");

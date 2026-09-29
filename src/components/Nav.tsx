@@ -9,7 +9,7 @@ import { Doodle } from "./doodles";
 import { SECTIONS, type SectionKey } from "./sections";
 import { AfsluitKnop } from "./Levensteken";
 import { PillMeter } from "./PillMeter";
-import { TelefoonKnop } from "./TelefoonPaneel";
+import { InstellingenMenu } from "./InstellingenMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./ui";
 
@@ -210,20 +210,8 @@ export function Nav({
               <span className="num text-[14px]">{xp > 9999 ? `${Math.floor(xp / 1000)}k` : xp.toLocaleString("nl-NL")}</span>
             </span>
           </div>
-          <ThemeToggle />
+          <InstellingenMenu beheerd={beheerd} />
         </div>
-        {beheerd ? (
-          <>
-            <div className="mt-3 hidden flex-wrap justify-center gap-2 lg:flex">
-              <TelefoonKnop beheerd={beheerd} />
-              <AfsluitKnop beheerd={beheerd} />
-            </div>
-            <div className="mt-3 flex flex-col items-center gap-2 lg:hidden">
-              <TelefoonKnop beheerd={beheerd} compact />
-              <AfsluitKnop beheerd={beheerd} compact />
-            </div>
-          </>
-        ) : null}
       </nav>
 
       {/* ═══ Tabbalk (telefoon) ═══
