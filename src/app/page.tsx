@@ -178,15 +178,15 @@ export default function DashboardPage() {
             <span className="hand ml-2 text-[18px] font-bold">{profile.streakCurrent === 1 ? "dag" : "dagen"}</span>
           </p>
 
-          <div className="mt-auto flex justify-between gap-1 pt-6">
+          <div className="mt-auto grid grid-cols-7 gap-1 pt-6">
             {week.map((d, i) => {
               const did = d.xp > 0;
               const isToday = i === week.length - 1;
               return (
-                <div key={d.date} className="flex flex-col items-center gap-1.5">
+                <div key={d.date} className="flex min-w-0 flex-col items-center gap-1.5">
                   <span
                     title={`${d.date}: ${d.xp} XP`}
-                    className={`flex h-9 w-9 items-center justify-center rounded-full border-2 ${
+                    className={`flex aspect-square w-full max-w-9 items-center justify-center rounded-full border-2 ${
                       did
                         ? "border-outline bg-warm-bright"
                         : isToday
